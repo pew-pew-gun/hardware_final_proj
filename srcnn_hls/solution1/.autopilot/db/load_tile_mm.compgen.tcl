@@ -1,5 +1,30 @@
 # This script segment is generated automatically by AutoPilot
 
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler srcnn_fifo_w64_d2_S BINDTYPE {storage} TYPE {fifo} IMPL {srl} ALLOW_PRAGMA 1 INSTNAME {in_tile_0_offset_cast_loc_i_channel_U}
+}
+
+
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler srcnn_fifo_w10_d2_S BINDTYPE {storage} TYPE {fifo} IMPL {srl} ALLOW_PRAGMA 1 INSTNAME {w0_cast19_loc_i_channel_U}
+}
+
+
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler srcnn_fifo_w10_d2_S BINDTYPE {storage} TYPE {fifo} IMPL {srl} ALLOW_PRAGMA 1 INSTNAME {h0_cast10_loc_i_channel_U}
+}
+
+
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler srcnn_fifo_w9_d2_S BINDTYPE {storage} TYPE {fifo} IMPL {srl} ALLOW_PRAGMA 1 INSTNAME {sext_ln43_1_loc_i_channel_U}
+}
+
+
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler srcnn_fifo_w9_d2_S BINDTYPE {storage} TYPE {fifo} IMPL {srl} ALLOW_PRAGMA 1 INSTNAME {sext_ln43_3_loc_i_channel_U}
+}
+
+
 # clear list
 if {${::AESL::PGuard_autoexp_gen}} {
     cg_default_interface_gen_dc_begin
@@ -11,17 +36,55 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 36 \
-    name inbuf \
+    id 278 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13 \
     reset_level 1 \
     sync_rst true \
     dir O \
-    corename inbuf \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13 \
     op interface \
-    ports { inbuf_address0 { O 11 vector } inbuf_ce0 { O 1 bit } inbuf_we0 { O 1 bit } inbuf_d0 { O 32 vector } } \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_address0 { O 10 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_d0 { O 32 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_q0 { I 32 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_we0 { O 1 bit } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'inbuf'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 279 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12 \
+    reset_level 1 \
+    sync_rst true \
+    dir O \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_address0 { O 10 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_d0 { O 32 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_q0 { I 32 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_we0 { O 1 bit } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 280 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11 \
+    reset_level 1 \
+    sync_rst true \
+    dir O \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_address0 { O 10 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_d0 { O 32 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_q0 { I 32 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_we0 { O 1 bit } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11'"
 }
 }
 
@@ -29,7 +92,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 31 \
+    id 270 \
     name gmem_in \
     type other \
     dir I \
@@ -44,7 +107,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 32 \
+    id 271 \
     name input_ftmap \
     type other \
     dir I \
@@ -52,14 +115,14 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_input_ftmap \
     op interface \
-    ports { input_ftmap { I 64 vector } } \
+    ports { input_ftmap { I 64 vector } input_ftmap_ap_vld { I 1 bit } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 33 \
+    id 272 \
     name h0 \
     type other \
     dir I \
@@ -67,14 +130,14 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_h0 \
     op interface \
-    ports { h0 { I 9 vector } } \
+    ports { h0 { I 9 vector } h0_ap_vld { I 1 bit } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 34 \
+    id 273 \
     name w0 \
     type other \
     dir I \
@@ -82,14 +145,14 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_w0 \
     op interface \
-    ports { w0 { I 8 vector } } \
+    ports { w0 { I 8 vector } w0_ap_vld { I 1 bit } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 35 \
+    id 274 \
     name phase \
     type other \
     dir I \
@@ -97,7 +160,52 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_phase \
     op interface \
-    ports { phase { I 1 vector } } \
+    ports { phase { I 1 vector } phase_ap_vld { I 1 bit } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 275 \
+    name h0_c1 \
+    type fifo \
+    dir O \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_h0_c1 \
+    op interface \
+    ports { h0_c1_din { O 9 vector } h0_c1_full_n { I 1 bit } h0_c1_write { O 1 bit } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 276 \
+    name w0_c2 \
+    type fifo \
+    dir O \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_w0_c2 \
+    op interface \
+    ports { w0_c2_din { O 8 vector } w0_c2_full_n { I 1 bit } w0_c2_write { O 1 bit } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 277 \
+    name phase_c3 \
+    type fifo \
+    dir O \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_phase_c3 \
+    op interface \
+    ports { phase_c3_din { O 1 vector } phase_c3_full_n { I 1 bit } phase_c3_write { O 1 bit } } \
 } "
 }
 
@@ -115,20 +223,6 @@ eval "cg_default_interface_gen_dc { \
 } "
 }
 
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id -2 \
-    name ap_return \
-    type ap_return \
-    reset_level 1 \
-    sync_rst true \
-    corename ap_return \
-    op interface \
-    ports { ap_return { O 1 vector } } \
-} "
-}
-
 
 # Adapter definition:
 set PortName ap_clk
@@ -136,7 +230,7 @@ set DataWd 1
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc cg_default_interface_gen_clock] == "cg_default_interface_gen_clock"} {
 eval "cg_default_interface_gen_clock { \
-    id -3 \
+    id -2 \
     name ${PortName} \
     reset_level 1 \
     sync_rst true \
@@ -156,7 +250,7 @@ set DataWd 1
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc cg_default_interface_gen_reset] == "cg_default_interface_gen_reset"} {
 eval "cg_default_interface_gen_reset { \
-    id -4 \
+    id -3 \
     name ${PortName} \
     reset_level 1 \
     sync_rst true \

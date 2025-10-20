@@ -1,0 +1,126 @@
+
+
+================================================================
+== Vitis HLS Report for 'store_tile_mm_Block_entry23_proc'
+================================================================
+* Date:           Tue Oct 21 03:22:05 2025
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        srcnn_hls
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xck26-sfvc784-2LV-c
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  3.007 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        0|        0|      0 ns|      0 ns|    0|    0|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 0
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.00>
+ST_1 : Operation 2 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %phase, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0"   --->   Operation 2 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 3 [1/1] (1.83ns)   --->   "%w0_read = read i9 @_ssdm_op_Read.ap_auto.i9, i9 %w0" [src/srcnn.cpp:538]   --->   Operation 3 'read' 'w0_read' <Predicate = true> <Delay = 1.83> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_1 : Operation 4 [1/1] (1.83ns)   --->   "%h0_read = read i9 @_ssdm_op_Read.ap_auto.i9, i9 %h0" [src/srcnn.cpp:538]   --->   Operation 4 'read' 'h0_read' <Predicate = true> <Delay = 1.83> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_1 : Operation 5 [1/1] (1.83ns)   --->   "%phase_read = read i1 @_ssdm_op_Read.ap_fifo.i1P0A, i1 %phase" [src/srcnn.cpp:538]   --->   Operation 5 'read' 'phase_read' <Predicate = true> <Delay = 1.83> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 2> <FIFO>
+ST_1 : Operation 6 [1/1] (0.28ns)   --->   "%xor_ln538 = xor i1 %phase_read, i1 1" [src/srcnn.cpp:538]   --->   Operation 6 'xor' 'xor_ln538' <Predicate = true> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 7 [1/1] (0.77ns)   --->   "%add_ln532 = add i9 %w0_read, i9 16" [src/srcnn.cpp:532]   --->   Operation 7 'add' 'add_ln532' <Predicate = true> <Delay = 0.77> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 8 [1/1] (0.00ns) (grouped into LUT with out node select_ln532)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i9.i32, i9 %add_ln532, i32 8" [src/srcnn.cpp:532]   --->   Operation 8 'bitselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns) (grouped into LUT with out node select_ln532)   --->   "%trunc_ln531 = trunc i9 %w0_read" [src/srcnn.cpp:531]   --->   Operation 9 'trunc' 'trunc_ln531' <Predicate = (tmp)> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns) (grouped into LUT with out node select_ln532)   --->   "%xor_ln532 = xor i8 %trunc_ln531, i8 255" [src/srcnn.cpp:532]   --->   Operation 10 'xor' 'xor_ln532' <Predicate = (tmp)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 11 [1/1] (0.39ns) (out node of the LUT)   --->   "%select_ln532 = select i1 %tmp, i8 %xor_ln532, i8 16" [src/srcnn.cpp:532]   --->   Operation 11 'select' 'select_ln532' <Predicate = true> <Delay = 0.39> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.39> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%out_tile_offset_cast_loc_i_i_0 = zext i1 %xor_ln538" [src/srcnn.cpp:538]   --->   Operation 12 'zext' 'out_tile_offset_cast_loc_i_i_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%zext_ln333 = zext i9 %h0_read" [src/srcnn.cpp:333]   --->   Operation 13 'zext' 'zext_ln333' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%shl_ln = bitconcatenate i11 @_ssdm_op_BitConcatenate.i11.i9.i2, i9 %w0_read, i2 0" [src/srcnn.cpp:333]   --->   Operation 14 'bitconcatenate' 'shl_ln' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%shl_ln333_cast_loc_i_i_0 = zext i11 %shl_ln" [src/srcnn.cpp:333]   --->   Operation 15 'zext' 'shl_ln333_cast_loc_i_i_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%zext_ln333_6 = zext i8 %select_ln532" [src/srcnn.cpp:333]   --->   Operation 16 'zext' 'zext_ln333_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%mrv = insertvalue i170 <undef>, i64 %out_tile_offset_cast_loc_i_i_0" [src/srcnn.cpp:538]   --->   Operation 17 'insertvalue' 'mrv' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%mrv_1 = insertvalue i170 %mrv, i10 %zext_ln333" [src/srcnn.cpp:538]   --->   Operation 18 'insertvalue' 'mrv_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%mrv_2 = insertvalue i170 %mrv_1, i64 %shl_ln333_cast_loc_i_i_0" [src/srcnn.cpp:538]   --->   Operation 19 'insertvalue' 'mrv_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%mrv_3 = insertvalue i170 %mrv_2, i32 %zext_ln333_6" [src/srcnn.cpp:538]   --->   Operation 20 'insertvalue' 'mrv_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%ret_ln538 = ret i170 %mrv_3" [src/srcnn.cpp:538]   --->   Operation 21 'ret' 'ret_ln538' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 3.007ns
+The critical path consists of the following:
+	wire read operation ('w0_read', src/srcnn.cpp:538) on port 'w0' (src/srcnn.cpp:538) [5]  (1.838 ns)
+	'add' operation ('add_ln532', src/srcnn.cpp:532) [9]  (0.776 ns)
+	'select' operation ('select_ln532', src/srcnn.cpp:532) [13]  (0.393 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

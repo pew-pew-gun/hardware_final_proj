@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'store_tile_mm'" level="0">
-<item name = "Date">Tue Oct 21 00:22:28 2025
+<item name = "Date">Tue Oct 21 03:22:28 2025
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -24,19 +24,20 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">?, ?, ?, ?, ?, ?, no</column>
+<column name="">?, ?, ?, ?, ?, ?, dataflow</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="entry_proc_U0">entry_proc, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
+<column name="store_tile_mm_Block_entry23_proc_U0">store_tile_mm_Block_entry23_proc, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
+<column name="store_tile_mm_Loop_Out_writey_proc_U0">store_tile_mm_Loop_Out_writey_proc, ?, ?, ?, ?, ?, ?, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- Out_writey">?, ?, ?, -, -, ?, no</column>
-<column name=" + Out_writex">?, ?, 3, -, -, ?, no</column>
 </table>
 </item>
 </section>
@@ -49,20 +50,23 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="DSP">-, -, -, -, -</column>
-<column name="Expression">-, -, 0, 305, -</column>
-<column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 50, -</column>
+<column name="FIFO">-, -, 792, 536, -</column>
+<column name="Instance">-, 0, 434, 859, -</column>
 <column name="Memory">-, -, -, -, -</column>
-<column name="Multiplexer">-, -, -, 128, -</column>
-<column name="Register">-, -, 252, -, -</column>
+<column name="Multiplexer">-, -, -, 90, -</column>
+<column name="Register">-, -, 10, -, -</column>
 <specialColumn name="Available">288, 1248, 234240, 117120, 64</specialColumn>
-<specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, 1, 0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="entry_proc_U0">entry_proc, 0, 0, 36, 65, 0</column>
+<column name="store_tile_mm_Block_entry23_proc_U0">store_tile_mm_Block_entry23_proc, 0, 0, 29, 90, 0</column>
+<column name="store_tile_mm_Loop_Out_writey_proc_U0">store_tile_mm_Loop_Out_writey_proc, 0, 0, 369, 704, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -75,60 +79,71 @@
 </item>
 <item name = "FIFO"><table name="" hasTotal="1">
 <keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+<column name="h0_cast6_loc_i_i_channel_U">0, 99, 0, -, 2, 10, 20</column>
+<column name="out_tile_offset_cast_loc_i_i_channel_U">0, 99, 0, -, 2, 64, 128</column>
+<column name="p_cast_loc_i_i_channel_U">0, 99, 0, -, 2, 32, 64</column>
+<column name="shl_ln333_cast_loc_i_i_channel_U">0, 99, 0, -, 2, 64, 128</column>
+<column name="tmp_1_U">0, 99, 0, -, 3, 9, 27</column>
+<column name="tmp_2_U">0, 99, 0, -, 2, 9, 18</column>
+<column name="tmp_3_U">0, 99, 0, -, 2, 9, 18</column>
+<column name="tmp_4_U">0, 99, 0, -, 3, 9, 27</column>
 </table>
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln242_fu_309_p2">+, 0, 0, 15, 8, 1</column>
-<column name="add_ln245_fu_407_p2">+, 0, 0, 15, 8, 1</column>
-<column name="add_ln246_1_fu_392_p2">+, 0, 0, 16, 9, 9</column>
-<column name="add_ln246_fu_289_p2">+, 0, 0, 16, 9, 9</column>
-<column name="add_ln428_fu_181_p2">+, 0, 0, 16, 9, 5</column>
-<column name="add_ln431_fu_213_p2">+, 0, 0, 16, 9, 5</column>
-<column name="empty_63_fu_363_p2">+, 0, 0, 71, 64, 64</column>
-<column name="empty_fu_315_p2">+, 0, 0, 17, 10, 10</column>
-<column name="tmp_fu_354_p2">+, 0, 0, 29, 22, 22</column>
-<column name="empty_62_fu_344_p2">-, 0, 0, 28, 21, 21</column>
-<column name="icmp_ln242_fu_304_p2">icmp, 0, 0, 15, 8, 8</column>
-<column name="icmp_ln245_fu_402_p2">icmp, 0, 0, 15, 8, 8</column>
-<column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
-<column name="th_eff_fu_205_p3">select, 0, 0, 8, 1, 8</column>
-<column name="tw_eff_fu_237_p3">select, 0, 0, 8, 1, 8</column>
-<column name="xor_ln428_fu_199_p2">xor, 0, 0, 8, 8, 2</column>
-<column name="xor_ln431_fu_231_p2">xor, 0, 0, 8, 8, 2</column>
-<column name="xor_ln437_fu_175_p2">xor, 0, 0, 2, 1, 2</column>
+<column name="ap_channel_done_h0_cast6_loc_i_i_channel">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_out_tile_offset_cast_loc_i_i_channel">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_p_cast_loc_i_i_channel">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_shl_ln333_cast_loc_i_i_channel">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_tmp_1">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_tmp_2">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_tmp_3">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_tmp_4">and, 0, 0, 2, 1, 1</column>
+<column name="ap_idle">and, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_ready">and, 0, 0, 2, 1, 1</column>
+<column name="entry_proc_U0_ap_continue">and, 0, 0, 2, 1, 1</column>
+<column name="entry_proc_U0_ap_start">and, 0, 0, 2, 1, 1</column>
+<column name="store_tile_mm_Block_entry23_proc_U0_ap_continue">and, 0, 0, 2, 1, 1</column>
+<column name="store_tile_mm_Block_entry23_proc_U0_ap_start">and, 0, 0, 2, 1, 1</column>
+<column name="store_tile_mm_Loop_Out_writey_proc_U0_ap_start">and, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_h0_cast6_loc_i_i_channel">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_out_tile_offset_cast_loc_i_i_channel">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_p_cast_loc_i_i_channel">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_shl_ln333_cast_loc_i_i_channel">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_tmp_1">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_tmp_2">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_tmp_3">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_tmp_4">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_entry_proc_U0_ap_ready">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_store_tile_mm_Loop_Out_writey_proc_U0_ap_ready">or, 0, 0, 2, 1, 1</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
-<column name="ap_NS_fsm">65, 12, 1, 12</column>
-<column name="ap_done">9, 2, 1, 2</column>
-<column name="gmem_out_blk_n_AW">9, 2, 1, 2</column>
-<column name="gmem_out_blk_n_B">9, 2, 1, 2</column>
-<column name="gmem_out_blk_n_W">9, 2, 1, 2</column>
-<column name="output_ftmap_blk_n">9, 2, 1, 2</column>
-<column name="x_reg_164">9, 2, 8, 16</column>
-<column name="y_fu_108">9, 2, 8, 16</column>
+<column name="ap_sync_reg_channel_write_h0_cast6_loc_i_i_channel">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_out_tile_offset_cast_loc_i_i_channel">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_p_cast_loc_i_i_channel">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_shl_ln333_cast_loc_i_i_channel">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_tmp_1">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_tmp_2">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_tmp_3">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_tmp_4">9, 2, 1, 2</column>
+<column name="ap_sync_reg_entry_proc_U0_ap_ready">9, 2, 1, 2</column>
+<column name="ap_sync_reg_store_tile_mm_Loop_Out_writey_proc_U0_ap_ready">9, 2, 1, 2</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="add_ln242_reg_471">8, 0, 8, 0</column>
-<column name="add_ln245_reg_490">8, 0, 8, 0</column>
-<column name="ap_CS_fsm">11, 0, 11, 0</column>
-<column name="ap_done_reg">1, 0, 1, 0</column>
-<column name="gmem_out_addr_reg_476">64, 0, 64, 0</column>
-<column name="out_reg_428">64, 0, 64, 0</column>
-<column name="outbuf_load_reg_495">32, 0, 32, 0</column>
-<column name="shl_ln246_reg_463">5, 0, 9, 4</column>
-<column name="th_eff_reg_433">8, 0, 8, 0</column>
-<column name="tmp_1_cast_reg_443">1, 0, 9, 8</column>
-<column name="tw_eff_reg_438">8, 0, 8, 0</column>
-<column name="x_reg_164">8, 0, 8, 0</column>
-<column name="y_fu_108">8, 0, 8, 0</column>
-<column name="zext_ln242_1_reg_453">9, 0, 22, 13</column>
-<column name="zext_ln242_2_reg_458">8, 0, 32, 24</column>
-<column name="zext_ln242_reg_448">9, 0, 10, 1</column>
+<column name="ap_sync_reg_channel_write_h0_cast6_loc_i_i_channel">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_out_tile_offset_cast_loc_i_i_channel">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_p_cast_loc_i_i_channel">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_shl_ln333_cast_loc_i_i_channel">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_tmp_1">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_tmp_2">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_tmp_3">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_tmp_4">1, 0, 1, 0</column>
+<column name="ap_sync_reg_entry_proc_U0_ap_ready">1, 0, 1, 0</column>
+<column name="ap_sync_reg_store_tile_mm_Loop_Out_writey_proc_U0_ap_ready">1, 0, 1, 0</column>
 </table>
 </item>
 </section>
@@ -138,14 +153,9 @@
 <section name = "Interface" level="0">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
-<column name="ap_clk">in, 1, ap_ctrl_hs, store_tile_mm, return value</column>
-<column name="ap_rst">in, 1, ap_ctrl_hs, store_tile_mm, return value</column>
-<column name="ap_start">in, 1, ap_ctrl_hs, store_tile_mm, return value</column>
-<column name="ap_done">out, 1, ap_ctrl_hs, store_tile_mm, return value</column>
-<column name="ap_continue">in, 1, ap_ctrl_hs, store_tile_mm, return value</column>
-<column name="ap_idle">out, 1, ap_ctrl_hs, store_tile_mm, return value</column>
-<column name="ap_ready">out, 1, ap_ctrl_hs, store_tile_mm, return value</column>
-<column name="p_read">in, 1, ap_none, p_read, scalar</column>
+<column name="phase_dout">in, 1, ap_fifo, phase, pointer</column>
+<column name="phase_empty_n">in, 1, ap_fifo, phase, pointer</column>
+<column name="phase_read">out, 1, ap_fifo, phase, pointer</column>
 <column name="m_axi_gmem_out_AWVALID">out, 1, m_axi, gmem_out, pointer</column>
 <column name="m_axi_gmem_out_AWREADY">in, 1, m_axi, gmem_out, pointer</column>
 <column name="m_axi_gmem_out_AWADDR">out, 64, m_axi, gmem_out, pointer</column>
@@ -193,15 +203,28 @@
 <column name="m_axi_gmem_out_BID">in, 1, m_axi, gmem_out, pointer</column>
 <column name="m_axi_gmem_out_BUSER">in, 1, m_axi, gmem_out, pointer</column>
 <column name="output_ftmap_dout">in, 64, ap_fifo, output_ftmap, pointer</column>
-<column name="output_ftmap_num_data_valid">in, 3, ap_fifo, output_ftmap, pointer</column>
-<column name="output_ftmap_fifo_cap">in, 3, ap_fifo, output_ftmap, pointer</column>
 <column name="output_ftmap_empty_n">in, 1, ap_fifo, output_ftmap, pointer</column>
 <column name="output_ftmap_read">out, 1, ap_fifo, output_ftmap, pointer</column>
-<column name="p_read1">in, 9, ap_none, p_read1, scalar</column>
-<column name="p_read2">in, 9, ap_none, p_read2, scalar</column>
+<column name="h0_dout">in, 9, ap_fifo, h0, pointer</column>
+<column name="h0_empty_n">in, 1, ap_fifo, h0, pointer</column>
+<column name="h0_read">out, 1, ap_fifo, h0, pointer</column>
+<column name="w0_dout">in, 8, ap_fifo, w0, pointer</column>
+<column name="w0_empty_n">in, 1, ap_fifo, w0, pointer</column>
+<column name="w0_read">out, 1, ap_fifo, w0, pointer</column>
 <column name="outbuf_address0">out, 9, ap_memory, outbuf, array</column>
 <column name="outbuf_ce0">out, 1, ap_memory, outbuf, array</column>
+<column name="outbuf_d0">out, 32, ap_memory, outbuf, array</column>
 <column name="outbuf_q0">in, 32, ap_memory, outbuf, array</column>
+<column name="outbuf_we0">out, 1, ap_memory, outbuf, array</column>
+<column name="ap_clk">in, 1, ap_ctrl_hs, store_tile_mm, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, store_tile_mm, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, store_tile_mm, return value</column>
+<column name="outbuf_empty_n">in, 1, ap_ctrl_hs, store_tile_mm, return value</column>
+<column name="outbuf_read">out, 1, ap_ctrl_hs, store_tile_mm, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, store_tile_mm, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, store_tile_mm, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, store_tile_mm, return value</column>
+<column name="ap_continue">in, 1, ap_ctrl_hs, store_tile_mm, return value</column>
 </table>
 </item>
 </section>

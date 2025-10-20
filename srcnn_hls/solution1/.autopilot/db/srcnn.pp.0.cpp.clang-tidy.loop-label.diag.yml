@@ -3,47 +3,101 @@ MainSourceFile:  'C:/Users/redre/Desktop/Hardware_Accelerated_Computing/FinalPro
 Diagnostics:     
   - DiagnosticName:  clang-diagnostic-error
     Message:         'Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
-    FileOffset:      78
+    FileOffset:      82
+    FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\src\srcnn.cpp'
+    Replacements:    
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_153_1:  '
+    FileOffset:      153
+    FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\src\srcnn.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
+        Offset:          16773
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_153_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_172_2:  '
+    FileOffset:      172
+    FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\src\srcnn.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
+        Offset:          17174
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_172_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_276_3:  '
+    FileOffset:      276
+    FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\src\srcnn.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
+        Offset:          19009
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_276_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_277_4:  '
+    FileOffset:      277
+    FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\src\srcnn.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
+        Offset:          19048
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_277_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_304_5:  '
+    FileOffset:      304
+    FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\src\srcnn.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
+        Offset:          19711
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_304_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_305_6:  '
+    FileOffset:      305
+    FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\src\srcnn.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
+        Offset:          19752
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_305_6: '
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ram_1p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      400
     FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\src\srcnn.cpp'
     Replacements:    
   - DiagnosticName:  clang-diagnostic-error
     Message:         'Invalid Directive: for current device, ram_1p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
-    FileOffset:      302
+    FileOffset:      401
+    FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\src\srcnn.cpp'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Resource with core_name: RAM_1P_LUTRAM pragma is ignored, because this core doesn''t exist at all '
+    FileOffset:      421
     FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\src\srcnn.cpp'
     Replacements:    
   - DiagnosticName:  clang-diagnostic-error
     Message:         'Invalid Directive: for current device, ram_1p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
-    FileOffset:      303
+    FileOffset:      426
     FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\src\srcnn.cpp'
     Replacements:    
   - DiagnosticName:  clang-diagnostic-error
     Message:         'Resource with core_name: RAM_1P_LUTRAM pragma is ignored, because this core doesn''t exist at all '
-    FileOffset:      323
-    FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\src\srcnn.cpp'
-    Replacements:    
-  - DiagnosticName:  clang-diagnostic-error
-    Message:         'Invalid Directive: for current device, ram_1p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
-    FileOffset:      328
-    FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\src\srcnn.cpp'
-    Replacements:    
-  - DiagnosticName:  clang-diagnostic-error
-    Message:         'Invalid Directive: for current device, ram_1p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
-    FileOffset:      333
+    FileOffset:      432
     FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\src\srcnn.cpp'
     Replacements:    
   - DiagnosticName:  clang-diagnostic-error
     Message:         'Resource with core_name: RAM_1P_LUTRAM pragma is ignored, because this core doesn''t exist at all '
-    FileOffset:      341
+    FileOffset:      442
     FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\src\srcnn.cpp'
     Replacements:    
   - DiagnosticName:  clang-diagnostic-error
     Message:         'Resource with core_name: RAM_1P_LUTRAM pragma is ignored, because this core doesn''t exist at all '
-    FileOffset:      342
+    FileOffset:      443
     FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\src\srcnn.cpp'
     Replacements:    
   - DiagnosticName:  clang-diagnostic-error
     Message:         'Resource with core_name: RAM_1P_LUTRAM pragma is ignored, because this core doesn''t exist at all '
-    FileOffset:      343
+    FileOffset:      444
     FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\src\srcnn.cpp'
     Replacements:    
 ...

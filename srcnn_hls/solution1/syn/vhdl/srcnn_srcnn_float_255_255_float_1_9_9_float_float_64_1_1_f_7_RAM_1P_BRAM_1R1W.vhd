@@ -12,8 +12,8 @@ entity srcnn_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_7_RAM_1P_BRAM_
     generic(
         MEM_TYPE        : string    := "block"; 
         DataWidth       : integer   := 32; 
-        AddressWidth    : integer   := 7;
-        AddressRange    : integer   := 100
+        AddressWidth    : integer   := 8;
+        AddressRange    : integer   := 256
     ); 
     port (
         address0    : in std_logic_vector(AddressWidth-1 downto 0); 

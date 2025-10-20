@@ -1,27 +1,57 @@
-C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:369:48: error: Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:373:48: error: Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
 #pragma HLS BIND_STORAGE variable=linebuf type=ram_2p impl=bram
                                                ^
-C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:585:46: error: Invalid Directive: for current device, ram_1p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:418:2: warning: Added loop label VITIS_LOOP_153_1:   [xilinx-label-all-loops]
+ for (int i=0; i<9; ++i) {
+ ^~~
+ VITIS_LOOP_153_1: 
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:418:2: note: FIX-IT applied suggested code changes
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:437:3: warning: Added loop label VITIS_LOOP_172_2:   [xilinx-label-all-loops]
+  for (int i = 0;i < 9; ++i) {
+  ^~~
+  VITIS_LOOP_172_2: 
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:437:3: note: FIX-IT applied suggested code changes
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:516:2: warning: Added loop label VITIS_LOOP_276_3:   [xilinx-label-all-loops]
+ for (int i=0; i<5; ++i) {
+ ^~~
+ VITIS_LOOP_276_3: 
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:516:2: note: FIX-IT applied suggested code changes
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:517:14: warning: Added loop label VITIS_LOOP_277_4:   [xilinx-label-all-loops]
+             for (int j=0;j<5;++j) {
+             ^~~
+             VITIS_LOOP_277_4: 
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:517:14: note: FIX-IT applied suggested code changes
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:544:13: warning: Added loop label VITIS_LOOP_304_5:   [xilinx-label-all-loops]
+            for (int i=0; i < 5; ++i) {
+            ^~~
+            VITIS_LOOP_304_5: 
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:544:13: note: FIX-IT applied suggested code changes
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:545:14: warning: Added loop label VITIS_LOOP_305_6:   [xilinx-label-all-loops]
+             for (int j=0; j<5; ++j) {
+             ^~~
+             VITIS_LOOP_305_6: 
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:545:14: note: FIX-IT applied suggested code changes
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:640:46: error: Invalid Directive: for current device, ram_1p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
 #pragma HLS BIND_STORAGE variable=inbuf type=ram_1p impl=bram
                                              ^
-C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:586:47: error: Invalid Directive: for current device, ram_1p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:641:47: error: Invalid Directive: for current device, ram_1p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
 #pragma HLS BIND_STORAGE variable=outbuf type=ram_1p impl=bram
                                               ^
-C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:598:9: error: Resource with core_name: RAM_1P_LUTRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:653:9: error: Resource with core_name: RAM_1P_LUTRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
 #pragma HLS RESOURCE variable=w1_loc core=RAM_1P_LUTRAM
         ^
-C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:603:47: error: Invalid Directive: for current device, ram_1p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:658:47: error: Invalid Directive: for current device, ram_1p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
 #pragma HLS BIND_STORAGE variable=w2_loc type=ram_1p impl=bram
                                               ^
-C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:608:47: error: Invalid Directive: for current device, ram_1p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
-#pragma HLS BIND_STORAGE variable=w3_loc type=ram_1p impl=bram
-                                              ^
-C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:616:9: error: Resource with core_name: RAM_1P_LUTRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:664:9: error: Resource with core_name: RAM_1P_LUTRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
+#pragma HLS RESOURCE variable=w3_loc core=RAM_1P_LUTRAM
+        ^
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:674:9: error: Resource with core_name: RAM_1P_LUTRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
 #pragma HLS RESOURCE variable=b1_loc core=RAM_1P_LUTRAM
         ^
-C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:617:9: error: Resource with core_name: RAM_1P_LUTRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:675:9: error: Resource with core_name: RAM_1P_LUTRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
 #pragma HLS RESOURCE variable=b2_loc core=RAM_1P_LUTRAM
         ^
-C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:618:9: error: Resource with core_name: RAM_1P_LUTRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:676:9: error: Resource with core_name: RAM_1P_LUTRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
 #pragma HLS RESOURCE variable=b3_loc core=RAM_1P_LUTRAM
         ^

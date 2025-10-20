@@ -1,3 +1,4 @@
-6 warnings and 9 errors generated.
+5 warnings and 9 errors generated.
 Error while processing C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp.
-Suppressed 6 warnings (6 with check filters).
+clang-tidy applied 6 of 6 suggested fixes.
+Suppressed 5 warnings (5 with check filters).

@@ -1,0 +1,58 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'compute_tile_Loop_ITRowcomp_proc'" level="0">
+<item name = "Date">Tue Oct 21 03:22:04 2025
+</item>
+<item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
+<item name = "Project">srcnn_hls</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xck26-sfvc784-2LV-c</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.207 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, ?, ?, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_compute_tile_Loop_ITRowcomp_proc_Pipeline_Conv2Out_biases_fu_2119">compute_tile_Loop_ITRowcomp_proc_Pipeline_Conv2Out_biases, 6, 6, 60.000 ns, 60.000 ns, 6, 6, no</column>
+<column name="grp_compute_tile_Loop_ITRowcomp_proc_Pipeline_Conv1_ky_fu_2163">compute_tile_Loop_ITRowcomp_proc_Pipeline_Conv1_ky, 37, 37, 0.370 us, 0.370 us, 37, 37, no</column>
+<column name="grp_compute_tile_Loop_ITRowcomp_proc_Pipeline_Conv2_ReLU_fu_2201">compute_tile_Loop_ITRowcomp_proc_Pipeline_Conv2_ReLU, 7, 7, 70.000 ns, 70.000 ns, 7, 7, no</column>
+<column name="grp_compute_tile_Loop_ITRowcomp_proc_Pipeline_Conv2_dot32_fu_2221">compute_tile_Loop_ITRowcomp_proc_Pipeline_Conv2_dot32, 13, 13, 0.130 us, 0.130 us, 13, 13, no</column>
+<column name="grp_compute_tile_Loop_ITRowcomp_proc_Pipeline_Shift_win32_fu_2251">compute_tile_Loop_ITRowcomp_proc_Pipeline_Shift_win32, 6, 6, 60.000 ns, 60.000 ns, 6, 6, no</column>
+<column name="grp_compute_tile_Loop_ITRowcomp_proc_Pipeline_Update_linebuf32_fu_2496">compute_tile_Loop_ITRowcomp_proc_Pipeline_Update_linebuf32, 6, 6, 60.000 ns, 60.000 ns, 6, 6, no</column>
+<column name="grp_compute_tile_Loop_ITRowcomp_proc_Pipeline_Conv3_inputft_fu_2541">compute_tile_Loop_ITRowcomp_proc_Pipeline_Conv3_inputft, 105, 105, 1.050 us, 1.050 us, 105, 105, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- ITRowcomp">?, ?, ?, -, -, ?, no</column>
+<column name=" + ITColcomp">?, ?, 5988 ~ 6230, -, -, ?, no</column>
+<column name="  ++ Conv1_outftmaps">5888, 5888, 92, -, -, 64, no</column>
+<column name="   +++ VITIS_LOOP_172_2">36, 36, 4, -, -, 9, no</column>
+<column name="  ++ VITIS_LOOP_304_5">135, 135, 27, -, -, 5, no</column>
+<column name="   +++ VITIS_LOOP_305_6">25, 25, 5, -, -, 5, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

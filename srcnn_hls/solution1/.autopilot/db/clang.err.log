@@ -1,19 +1,16 @@
-src/srcnn.cpp:323:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+src/srcnn.cpp:421:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
 #pragma HLS RESOURCE variable=w1_loc core=RAM_1P_LUTRAM
         ^
-src/srcnn.cpp:341:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+src/srcnn.cpp:432:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+#pragma HLS RESOURCE variable=w3_loc core=RAM_1P_LUTRAM
+        ^
+src/srcnn.cpp:442:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
 #pragma HLS RESOURCE variable=b1_loc core=RAM_1P_LUTRAM
         ^
-src/srcnn.cpp:342:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+src/srcnn.cpp:443:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
 #pragma HLS RESOURCE variable=b2_loc core=RAM_1P_LUTRAM
         ^
-src/srcnn.cpp:343:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+src/srcnn.cpp:444:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
 #pragma HLS RESOURCE variable=b3_loc core=RAM_1P_LUTRAM
         ^
-src/srcnn.cpp:360:9: warning: Only for/while/do loop or function body support the pipeline pragma [-Wignored-hls-attributes]
-#pragma HLS PIPELINE
-        ^~~~~~~~~~~~
-src/srcnn.cpp:397:9: warning: Only for/while/do loop or function body support the pipeline pragma [-Wignored-hls-attributes]
-#pragma HLS PIPELINE
-        ^~~~~~~~~~~~
-6 warnings generated.
+5 warnings generated.

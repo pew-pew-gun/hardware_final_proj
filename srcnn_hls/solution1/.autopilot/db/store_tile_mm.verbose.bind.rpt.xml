@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'store_tile_mm'" level="0">
-<item name = "Date">Tue Oct 21 00:22:10 2025
+<item name = "Date">Tue Oct 21 03:22:07 2025
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -24,19 +24,20 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">?, ?, ?, ?, ?, ?, no</column>
+<column name="">?, ?, ?, ?, ?, ?, dataflow</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="tmp_entry_proc_fu_54">entry_proc, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
+<column name="call_ret_store_tile_mm_Block_entry23_proc_fu_62">store_tile_mm_Block_entry23_proc, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
+<column name="grp_store_tile_mm_Loop_Out_writey_proc_fu_70">store_tile_mm_Loop_Out_writey_proc, ?, ?, ?, ?, ?, ?, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- Out_writey">?, ?, ?, -, -, ?, no</column>
-<column name=" + Out_writex">?, ?, 3, -, -, ?, no</column>
 </table>
 </item>
 </section>

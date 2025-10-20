@@ -10,30 +10,30 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 29 \
-    name output_ftmap \
-    type other \
+    id 2316 \
+    name h0 \
+    type fifo \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_output_ftmap \
+    corename dc_h0 \
     op interface \
-    ports { output_ftmap { I 64 vector } } \
+    ports { h0_dout { I 9 vector } h0_num_data_valid { I 2 vector } h0_fifo_cap { I 2 vector } h0_empty_n { I 1 bit } h0_read { O 1 bit } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 30 \
-    name output_ftmap_c \
+    id 2317 \
+    name w0 \
     type fifo \
-    dir O \
+    dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_output_ftmap_c \
+    corename dc_w0 \
     op interface \
-    ports { output_ftmap_c_din { O 64 vector } output_ftmap_c_num_data_valid { I 3 vector } output_ftmap_c_fifo_cap { I 3 vector } output_ftmap_c_full_n { I 1 bit } output_ftmap_c_write { O 1 bit } } \
+    ports { w0_dout { I 8 vector } w0_num_data_valid { I 2 vector } w0_fifo_cap { I 2 vector } w0_empty_n { I 1 bit } w0_read { O 1 bit } } \
 } "
 }
 
@@ -51,6 +51,20 @@ eval "cg_default_interface_gen_dc { \
 } "
 }
 
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id -2 \
+    name ap_return \
+    type ap_return \
+    reset_level 1 \
+    sync_rst true \
+    corename ap_return \
+    op interface \
+    ports { ap_return { O 1 vector } } \
+} "
+}
+
 
 # Adapter definition:
 set PortName ap_clk
@@ -58,7 +72,7 @@ set DataWd 1
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc cg_default_interface_gen_clock] == "cg_default_interface_gen_clock"} {
 eval "cg_default_interface_gen_clock { \
-    id -2 \
+    id -3 \
     name ${PortName} \
     reset_level 1 \
     sync_rst true \
@@ -78,7 +92,7 @@ set DataWd 1
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc cg_default_interface_gen_reset] == "cg_default_interface_gen_reset"} {
 eval "cg_default_interface_gen_reset { \
-    id -3 \
+    id -4 \
     name ${PortName} \
     reset_level 1 \
     sync_rst true \

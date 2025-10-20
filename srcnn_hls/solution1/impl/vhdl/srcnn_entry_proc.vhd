@@ -17,12 +17,20 @@ port (
     ap_continue : IN STD_LOGIC;
     ap_idle : OUT STD_LOGIC;
     ap_ready : OUT STD_LOGIC;
-    output_ftmap : IN STD_LOGIC_VECTOR (63 downto 0);
-    output_ftmap_c_din : OUT STD_LOGIC_VECTOR (63 downto 0);
-    output_ftmap_c_num_data_valid : IN STD_LOGIC_VECTOR (2 downto 0);
-    output_ftmap_c_fifo_cap : IN STD_LOGIC_VECTOR (2 downto 0);
-    output_ftmap_c_full_n : IN STD_LOGIC;
-    output_ftmap_c_write : OUT STD_LOGIC );
+    h0_dout : IN STD_LOGIC_VECTOR (8 downto 0);
+    h0_num_data_valid : IN STD_LOGIC_VECTOR (1 downto 0);
+    h0_fifo_cap : IN STD_LOGIC_VECTOR (1 downto 0);
+    h0_empty_n : IN STD_LOGIC;
+    h0_read : OUT STD_LOGIC;
+    w0_dout : IN STD_LOGIC_VECTOR (7 downto 0);
+    w0_num_data_valid : IN STD_LOGIC_VECTOR (1 downto 0);
+    w0_fifo_cap : IN STD_LOGIC_VECTOR (1 downto 0);
+    w0_empty_n : IN STD_LOGIC;
+    w0_read : OUT STD_LOGIC;
+    ap_return_0 : OUT STD_LOGIC_VECTOR (8 downto 0);
+    ap_return_1 : OUT STD_LOGIC_VECTOR (8 downto 0);
+    ap_return_2 : OUT STD_LOGIC_VECTOR (8 downto 0);
+    ap_return_3 : OUT STD_LOGIC_VECTOR (8 downto 0) );
 end;
 
 
@@ -31,6 +39,7 @@ architecture behav of srcnn_entry_proc is
     constant ap_const_logic_0 : STD_LOGIC := '0';
     constant ap_ST_fsm_state1 : STD_LOGIC_VECTOR (0 downto 0) := "1";
     constant ap_const_lv32_0 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000000";
+    constant ap_const_lv9_0 : STD_LOGIC_VECTOR (8 downto 0) := "000000000";
     constant ap_const_boolean_1 : BOOLEAN := true;
 
 attribute shreg_extract : string;
@@ -40,8 +49,14 @@ attribute shreg_extract : string;
     attribute fsm_encoding of ap_CS_fsm : signal is "none";
     signal ap_CS_fsm_state1 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state1 : signal is "none";
-    signal output_ftmap_c_blk_n : STD_LOGIC;
+    signal h0_blk_n : STD_LOGIC;
+    signal w0_blk_n : STD_LOGIC;
     signal ap_block_state1 : BOOLEAN;
+    signal w0_load_cast_fu_38_p1 : STD_LOGIC_VECTOR (8 downto 0);
+    signal ap_return_0_preg : STD_LOGIC_VECTOR (8 downto 0) := "000000000";
+    signal ap_return_1_preg : STD_LOGIC_VECTOR (8 downto 0) := "000000000";
+    signal ap_return_2_preg : STD_LOGIC_VECTOR (8 downto 0) := "000000000";
+    signal ap_return_3_preg : STD_LOGIC_VECTOR (8 downto 0) := "000000000";
     signal ap_NS_fsm : STD_LOGIC_VECTOR (0 downto 0);
     signal ap_ST_fsm_state1_blk : STD_LOGIC;
     signal ap_ce_reg : STD_LOGIC;
@@ -72,7 +87,7 @@ begin
             else
                 if ((ap_continue = ap_const_logic_1)) then 
                     ap_done_reg <= ap_const_logic_0;
-                elsif ((not(((ap_start = ap_const_logic_0) or (output_ftmap_c_full_n = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1))) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
+                elsif ((not(((ap_start = ap_const_logic_0) or (w0_empty_n = ap_const_logic_0) or (h0_empty_n = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1))) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
                     ap_done_reg <= ap_const_logic_1;
                 end if; 
             end if;
@@ -80,7 +95,79 @@ begin
     end process;
 
 
-    ap_NS_fsm_assign_proc : process (ap_start, ap_done_reg, ap_CS_fsm, ap_CS_fsm_state1, output_ftmap_c_full_n)
+    ap_return_0_preg_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst = '1') then
+                ap_return_0_preg <= ap_const_lv9_0;
+            else
+                if ((not(((ap_start = ap_const_logic_0) or (w0_empty_n = ap_const_logic_0) or (h0_empty_n = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1))) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
+                    ap_return_0_preg <= h0_dout;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    ap_return_1_preg_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst = '1') then
+                ap_return_1_preg <= ap_const_lv9_0;
+            else
+                if ((not(((ap_start = ap_const_logic_0) or (w0_empty_n = ap_const_logic_0) or (h0_empty_n = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1))) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
+                    ap_return_1_preg <= h0_dout;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    ap_return_2_preg_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst = '1') then
+                ap_return_2_preg(0) <= '0';
+                ap_return_2_preg(1) <= '0';
+                ap_return_2_preg(2) <= '0';
+                ap_return_2_preg(3) <= '0';
+                ap_return_2_preg(4) <= '0';
+                ap_return_2_preg(5) <= '0';
+                ap_return_2_preg(6) <= '0';
+                ap_return_2_preg(7) <= '0';
+            else
+                if ((not(((ap_start = ap_const_logic_0) or (w0_empty_n = ap_const_logic_0) or (h0_empty_n = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1))) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
+                                        ap_return_2_preg(7 downto 0) <= w0_load_cast_fu_38_p1(7 downto 0);
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    ap_return_3_preg_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst = '1') then
+                ap_return_3_preg(0) <= '0';
+                ap_return_3_preg(1) <= '0';
+                ap_return_3_preg(2) <= '0';
+                ap_return_3_preg(3) <= '0';
+                ap_return_3_preg(4) <= '0';
+                ap_return_3_preg(5) <= '0';
+                ap_return_3_preg(6) <= '0';
+                ap_return_3_preg(7) <= '0';
+            else
+                if ((not(((ap_start = ap_const_logic_0) or (w0_empty_n = ap_const_logic_0) or (h0_empty_n = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1))) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
+                                        ap_return_3_preg(7 downto 0) <= w0_load_cast_fu_38_p1(7 downto 0);
+                end if; 
+            end if;
+        end if;
+    end process;
+
+    ap_return_2_preg(8) <= '0';
+    ap_return_3_preg(8) <= '0';
+
+    ap_NS_fsm_assign_proc : process (ap_start, ap_done_reg, ap_CS_fsm, ap_CS_fsm_state1, h0_empty_n, w0_empty_n)
     begin
         case ap_CS_fsm is
             when ap_ST_fsm_state1 => 
@@ -91,9 +178,9 @@ begin
     end process;
     ap_CS_fsm_state1 <= ap_CS_fsm(0);
 
-    ap_ST_fsm_state1_blk_assign_proc : process(ap_start, ap_done_reg, output_ftmap_c_full_n)
+    ap_ST_fsm_state1_blk_assign_proc : process(ap_start, ap_done_reg, h0_empty_n, w0_empty_n)
     begin
-        if (((ap_start = ap_const_logic_0) or (output_ftmap_c_full_n = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1))) then 
+        if (((ap_start = ap_const_logic_0) or (w0_empty_n = ap_const_logic_0) or (h0_empty_n = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1))) then 
             ap_ST_fsm_state1_blk <= ap_const_logic_1;
         else 
             ap_ST_fsm_state1_blk <= ap_const_logic_0;
@@ -101,15 +188,15 @@ begin
     end process;
 
 
-    ap_block_state1_assign_proc : process(ap_start, ap_done_reg, output_ftmap_c_full_n)
+    ap_block_state1_assign_proc : process(ap_start, ap_done_reg, h0_empty_n, w0_empty_n)
     begin
-                ap_block_state1 <= ((ap_start = ap_const_logic_0) or (output_ftmap_c_full_n = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1));
+                ap_block_state1 <= ((ap_start = ap_const_logic_0) or (w0_empty_n = ap_const_logic_0) or (h0_empty_n = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1));
     end process;
 
 
-    ap_done_assign_proc : process(ap_start, ap_done_reg, ap_CS_fsm_state1, output_ftmap_c_full_n)
+    ap_done_assign_proc : process(ap_start, ap_done_reg, ap_CS_fsm_state1, h0_empty_n, w0_empty_n)
     begin
-        if ((not(((ap_start = ap_const_logic_0) or (output_ftmap_c_full_n = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1))) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
+        if ((not(((ap_start = ap_const_logic_0) or (w0_empty_n = ap_const_logic_0) or (h0_empty_n = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1))) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
             ap_done <= ap_const_logic_1;
         else 
             ap_done <= ap_done_reg;
@@ -127,9 +214,9 @@ begin
     end process;
 
 
-    ap_ready_assign_proc : process(ap_start, ap_done_reg, ap_CS_fsm_state1, output_ftmap_c_full_n)
+    ap_ready_assign_proc : process(ap_start, ap_done_reg, ap_CS_fsm_state1, h0_empty_n, w0_empty_n)
     begin
-        if ((not(((ap_start = ap_const_logic_0) or (output_ftmap_c_full_n = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1))) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
+        if ((not(((ap_start = ap_const_logic_0) or (w0_empty_n = ap_const_logic_0) or (h0_empty_n = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1))) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
             ap_ready <= ap_const_logic_1;
         else 
             ap_ready <= ap_const_logic_0;
@@ -137,23 +224,83 @@ begin
     end process;
 
 
-    output_ftmap_c_blk_n_assign_proc : process(ap_start, ap_done_reg, ap_CS_fsm_state1, output_ftmap_c_full_n)
+    ap_return_0_assign_proc : process(ap_start, ap_done_reg, ap_CS_fsm_state1, h0_dout, h0_empty_n, w0_empty_n, ap_return_0_preg)
     begin
-        if ((not(((ap_start = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1))) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
-            output_ftmap_c_blk_n <= output_ftmap_c_full_n;
+        if ((not(((ap_start = ap_const_logic_0) or (w0_empty_n = ap_const_logic_0) or (h0_empty_n = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1))) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
+            ap_return_0 <= h0_dout;
         else 
-            output_ftmap_c_blk_n <= ap_const_logic_1;
+            ap_return_0 <= ap_return_0_preg;
         end if; 
     end process;
 
-    output_ftmap_c_din <= output_ftmap;
 
-    output_ftmap_c_write_assign_proc : process(ap_start, ap_done_reg, ap_CS_fsm_state1, output_ftmap_c_full_n)
+    ap_return_1_assign_proc : process(ap_start, ap_done_reg, ap_CS_fsm_state1, h0_dout, h0_empty_n, w0_empty_n, ap_return_1_preg)
     begin
-        if ((not(((ap_start = ap_const_logic_0) or (output_ftmap_c_full_n = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1))) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
-            output_ftmap_c_write <= ap_const_logic_1;
+        if ((not(((ap_start = ap_const_logic_0) or (w0_empty_n = ap_const_logic_0) or (h0_empty_n = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1))) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
+            ap_return_1 <= h0_dout;
         else 
-            output_ftmap_c_write <= ap_const_logic_0;
+            ap_return_1 <= ap_return_1_preg;
+        end if; 
+    end process;
+
+
+    ap_return_2_assign_proc : process(ap_start, ap_done_reg, ap_CS_fsm_state1, h0_empty_n, w0_empty_n, w0_load_cast_fu_38_p1, ap_return_2_preg)
+    begin
+        if ((not(((ap_start = ap_const_logic_0) or (w0_empty_n = ap_const_logic_0) or (h0_empty_n = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1))) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
+            ap_return_2 <= w0_load_cast_fu_38_p1;
+        else 
+            ap_return_2 <= ap_return_2_preg;
+        end if; 
+    end process;
+
+
+    ap_return_3_assign_proc : process(ap_start, ap_done_reg, ap_CS_fsm_state1, h0_empty_n, w0_empty_n, w0_load_cast_fu_38_p1, ap_return_3_preg)
+    begin
+        if ((not(((ap_start = ap_const_logic_0) or (w0_empty_n = ap_const_logic_0) or (h0_empty_n = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1))) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
+            ap_return_3 <= w0_load_cast_fu_38_p1;
+        else 
+            ap_return_3 <= ap_return_3_preg;
+        end if; 
+    end process;
+
+
+    h0_blk_n_assign_proc : process(ap_start, ap_done_reg, ap_CS_fsm_state1, h0_empty_n)
+    begin
+        if ((not(((ap_start = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1))) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
+            h0_blk_n <= h0_empty_n;
+        else 
+            h0_blk_n <= ap_const_logic_1;
+        end if; 
+    end process;
+
+
+    h0_read_assign_proc : process(ap_start, ap_done_reg, ap_CS_fsm_state1, h0_empty_n, w0_empty_n)
+    begin
+        if ((not(((ap_start = ap_const_logic_0) or (w0_empty_n = ap_const_logic_0) or (h0_empty_n = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1))) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
+            h0_read <= ap_const_logic_1;
+        else 
+            h0_read <= ap_const_logic_0;
+        end if; 
+    end process;
+
+
+    w0_blk_n_assign_proc : process(ap_start, ap_done_reg, ap_CS_fsm_state1, w0_empty_n)
+    begin
+        if ((not(((ap_start = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1))) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
+            w0_blk_n <= w0_empty_n;
+        else 
+            w0_blk_n <= ap_const_logic_1;
+        end if; 
+    end process;
+
+    w0_load_cast_fu_38_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(w0_dout),9));
+
+    w0_read_assign_proc : process(ap_start, ap_done_reg, ap_CS_fsm_state1, h0_empty_n, w0_empty_n)
+    begin
+        if ((not(((ap_start = ap_const_logic_0) or (w0_empty_n = ap_const_logic_0) or (h0_empty_n = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1))) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
+            w0_read <= ap_const_logic_1;
+        else 
+            w0_read <= ap_const_logic_0;
         end if; 
     end process;
 

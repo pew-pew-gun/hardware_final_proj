@@ -9,7 +9,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>323</integer>
+      <integer>421</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -25,7 +25,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>341</integer>
+      <integer>432</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -41,7 +41,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>342</integer>
+      <integer>442</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -57,7 +57,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>343</integer>
+      <integer>443</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -73,31 +73,15 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>360</integer>
+      <integer>444</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>Only for/while/do loop or function body support the pipeline pragma</string>
+      <string>&apos;Resource pragma&apos; is deprecated, use &apos;bind_op/bind_storage pragma&apos; instead</string>
       <key>ID</key>
-      <integer>5564</integer>
+      <integer>5531</integer>
       <key>WarningOption</key>
-      <string>ignored-hls-attributes</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/srcnn.cpp</string>
-      <key>line</key>
-      <integer>397</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>Only for/while/do loop or function body support the pipeline pragma</string>
-      <key>ID</key>
-      <integer>5564</integer>
-      <key>WarningOption</key>
-      <string>ignored-hls-attributes</string>
+      <string>ignored-hls-pragmas</string>
     </dict>
   </array>
 </dict>

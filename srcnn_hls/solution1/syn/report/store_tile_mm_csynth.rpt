@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'store_tile_mm'
 ================================================================
-* Date:           Tue Oct 21 00:22:28 2025
+* Date:           Tue Oct 21 03:22:28 2025
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -25,25 +25,26 @@
 
 + Latency: 
     * Summary: 
-    +---------+---------+----------+----------+-----+-----+---------+
-    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
-    |   min   |   max   |    min   |    max   | min | max |   Type  |
-    +---------+---------+----------+----------+-----+-----+---------+
-    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
-    +---------+---------+----------+----------+-----+-----+---------+
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|  dataflow|
+    +---------+---------+----------+----------+-----+-----+----------+
 
     + Detail: 
         * Instance: 
-        N/A
+        +---------------------------------------+------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |                                       |                                    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |                Instance               |               Module               |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +---------------------------------------+------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |entry_proc_U0                          |entry_proc                          |        0|        0|      0 ns|      0 ns|    0|    0|       no|
+        |store_tile_mm_Block_entry23_proc_U0    |store_tile_mm_Block_entry23_proc    |        0|        0|      0 ns|      0 ns|    0|    0|       no|
+        |store_tile_mm_Loop_Out_writey_proc_U0  |store_tile_mm_Loop_Out_writey_proc  |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        +---------------------------------------+------------------------------------+---------+---------+----------+----------+-----+-----+---------+
 
         * Loop: 
-        +---------------+---------+---------+----------+-----------+-----------+------+----------+
-        |               |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
-        |   Loop Name   |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
-        +---------------+---------+---------+----------+-----------+-----------+------+----------+
-        |- Out_writey   |        ?|        ?|         ?|          -|          -|     ?|        no|
-        | + Out_writex  |        ?|        ?|         3|          -|          -|     ?|        no|
-        +---------------+---------+---------+----------+-----------+-----------+------+----------+
+        N/A
 
 
 
@@ -55,23 +56,31 @@
 |       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
 +-----------------+---------+------+--------+--------+-----+
 |DSP              |        -|     -|       -|       -|    -|
-|Expression       |        -|     -|       0|     305|    -|
-|FIFO             |        -|     -|       -|       -|    -|
-|Instance         |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|      50|    -|
+|FIFO             |        -|     -|     792|     536|    -|
+|Instance         |        -|     0|     434|     859|    -|
 |Memory           |        -|     -|       -|       -|    -|
-|Multiplexer      |        -|     -|       -|     128|    -|
-|Register         |        -|     -|     252|       -|    -|
+|Multiplexer      |        -|     -|       -|      90|    -|
+|Register         |        -|     -|      10|       -|    -|
 +-----------------+---------+------+--------+--------+-----+
-|Total            |        0|     0|     252|     433|    0|
+|Total            |        0|     0|    1236|    1535|    0|
 +-----------------+---------+------+--------+--------+-----+
 |Available        |      288|  1248|  234240|  117120|   64|
 +-----------------+---------+------+--------+--------+-----+
-|Utilization (%)  |        0|     0|      ~0|      ~0|    0|
+|Utilization (%)  |        0|     0|      ~0|       1|    0|
 +-----------------+---------+------+--------+--------+-----+
 
 + Detail: 
     * Instance: 
-    N/A
+    +---------------------------------------+------------------------------------+---------+----+-----+-----+-----+
+    |                Instance               |               Module               | BRAM_18K| DSP|  FF | LUT | URAM|
+    +---------------------------------------+------------------------------------+---------+----+-----+-----+-----+
+    |entry_proc_U0                          |entry_proc                          |        0|   0|   36|   65|    0|
+    |store_tile_mm_Block_entry23_proc_U0    |store_tile_mm_Block_entry23_proc    |        0|   0|   29|   90|    0|
+    |store_tile_mm_Loop_Out_writey_proc_U0  |store_tile_mm_Loop_Out_writey_proc  |        0|   0|  369|  704|    0|
+    +---------------------------------------+------------------------------------+---------+----+-----+-----+-----+
+    |Total                                  |                                    |        0|   0|  434|  859|    0|
+    +---------------------------------------+------------------------------------+---------+----+-----+-----+-----+
 
     * DSP: 
     N/A
@@ -80,73 +89,89 @@
     N/A
 
     * FIFO: 
-    N/A
+    +----------------------------------------+---------+----+----+-----+------+-----+---------+
+    |                  Name                  | BRAM_18K| FF | LUT| URAM| Depth| Bits| Size:D*B|
+    +----------------------------------------+---------+----+----+-----+------+-----+---------+
+    |h0_cast6_loc_i_i_channel_U              |        0|  99|   0|    -|     2|   10|       20|
+    |out_tile_offset_cast_loc_i_i_channel_U  |        0|  99|   0|    -|     2|   64|      128|
+    |p_cast_loc_i_i_channel_U                |        0|  99|   0|    -|     2|   32|       64|
+    |shl_ln333_cast_loc_i_i_channel_U        |        0|  99|   0|    -|     2|   64|      128|
+    |tmp_1_U                                 |        0|  99|   0|    -|     3|    9|       27|
+    |tmp_2_U                                 |        0|  99|   0|    -|     2|    9|       18|
+    |tmp_3_U                                 |        0|  99|   0|    -|     2|    9|       18|
+    |tmp_4_U                                 |        0|  99|   0|    -|     3|    9|       27|
+    +----------------------------------------+---------+----+----+-----+------+-----+---------+
+    |Total                                   |        0| 792|   0|    0|    18|  206|      430|
+    +----------------------------------------+---------+----+----+-----+------+-----+---------+
 
     * Expression: 
-    +-----------------------+----------+----+---+----+------------+------------+
-    |     Variable Name     | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
-    +-----------------------+----------+----+---+----+------------+------------+
-    |add_ln242_fu_309_p2    |         +|   0|  0|  15|           8|           1|
-    |add_ln245_fu_407_p2    |         +|   0|  0|  15|           8|           1|
-    |add_ln246_1_fu_392_p2  |         +|   0|  0|  16|           9|           9|
-    |add_ln246_fu_289_p2    |         +|   0|  0|  16|           9|           9|
-    |add_ln428_fu_181_p2    |         +|   0|  0|  16|           9|           5|
-    |add_ln431_fu_213_p2    |         +|   0|  0|  16|           9|           5|
-    |empty_63_fu_363_p2     |         +|   0|  0|  71|          64|          64|
-    |empty_fu_315_p2        |         +|   0|  0|  17|          10|          10|
-    |tmp_fu_354_p2          |         +|   0|  0|  29|          22|          22|
-    |empty_62_fu_344_p2     |         -|   0|  0|  28|          21|          21|
-    |icmp_ln242_fu_304_p2   |      icmp|   0|  0|  15|           8|           8|
-    |icmp_ln245_fu_402_p2   |      icmp|   0|  0|  15|           8|           8|
-    |ap_block_state1        |        or|   0|  0|   2|           1|           1|
-    |th_eff_fu_205_p3       |    select|   0|  0|   8|           1|           8|
-    |tw_eff_fu_237_p3       |    select|   0|  0|   8|           1|           8|
-    |xor_ln428_fu_199_p2    |       xor|   0|  0|   8|           8|           2|
-    |xor_ln431_fu_231_p2    |       xor|   0|  0|   8|           8|           2|
-    |xor_ln437_fu_175_p2    |       xor|   0|  0|   2|           1|           2|
-    +-----------------------+----------+----+---+----+------------+------------+
-    |Total                  |          |   0|  0| 305|         205|         186|
-    +-----------------------+----------+----+---+----+------------+------------+
+    +------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |                        Variable Name                       | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |ap_channel_done_h0_cast6_loc_i_i_channel                    |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_out_tile_offset_cast_loc_i_i_channel        |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_p_cast_loc_i_i_channel                      |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_shl_ln333_cast_loc_i_i_channel              |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_tmp_1                                       |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_tmp_2                                       |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_tmp_3                                       |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_tmp_4                                       |       and|   0|  0|   2|           1|           1|
+    |ap_idle                                                     |       and|   0|  0|   2|           1|           1|
+    |ap_sync_ready                                               |       and|   0|  0|   2|           1|           1|
+    |entry_proc_U0_ap_continue                                   |       and|   0|  0|   2|           1|           1|
+    |entry_proc_U0_ap_start                                      |       and|   0|  0|   2|           1|           1|
+    |store_tile_mm_Block_entry23_proc_U0_ap_continue             |       and|   0|  0|   2|           1|           1|
+    |store_tile_mm_Block_entry23_proc_U0_ap_start                |       and|   0|  0|   2|           1|           1|
+    |store_tile_mm_Loop_Out_writey_proc_U0_ap_start              |       and|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_h0_cast6_loc_i_i_channel              |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_out_tile_offset_cast_loc_i_i_channel  |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_p_cast_loc_i_i_channel                |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_shl_ln333_cast_loc_i_i_channel        |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_tmp_1                                 |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_tmp_2                                 |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_tmp_3                                 |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_tmp_4                                 |        or|   0|  0|   2|           1|           1|
+    |ap_sync_entry_proc_U0_ap_ready                              |        or|   0|  0|   2|           1|           1|
+    |ap_sync_store_tile_mm_Loop_Out_writey_proc_U0_ap_ready      |        or|   0|  0|   2|           1|           1|
+    +------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                                       |          |   0|  0|  50|          25|          25|
+    +------------------------------------------------------------+----------+----+---+----+------------+------------+
 
     * Multiplexer: 
-    +--------------------+----+-----------+-----+-----------+
-    |        Name        | LUT| Input Size| Bits| Total Bits|
-    +--------------------+----+-----------+-----+-----------+
-    |ap_NS_fsm           |  65|         12|    1|         12|
-    |ap_done             |   9|          2|    1|          2|
-    |gmem_out_blk_n_AW   |   9|          2|    1|          2|
-    |gmem_out_blk_n_B    |   9|          2|    1|          2|
-    |gmem_out_blk_n_W    |   9|          2|    1|          2|
-    |output_ftmap_blk_n  |   9|          2|    1|          2|
-    |x_reg_164           |   9|          2|    8|         16|
-    |y_fu_108            |   9|          2|    8|         16|
-    +--------------------+----+-----------+-----+-----------+
-    |Total               | 128|         26|   22|         54|
-    +--------------------+----+-----------+-----+-----------+
+    +----------------------------------------------------------------+----+-----------+-----+-----------+
+    |                              Name                              | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------------------------------------+----+-----------+-----+-----------+
+    |ap_sync_reg_channel_write_h0_cast6_loc_i_i_channel              |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_out_tile_offset_cast_loc_i_i_channel  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_p_cast_loc_i_i_channel                |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_shl_ln333_cast_loc_i_i_channel        |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_tmp_1                                 |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_tmp_2                                 |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_tmp_3                                 |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_tmp_4                                 |   9|          2|    1|          2|
+    |ap_sync_reg_entry_proc_U0_ap_ready                              |   9|          2|    1|          2|
+    |ap_sync_reg_store_tile_mm_Loop_Out_writey_proc_U0_ap_ready      |   9|          2|    1|          2|
+    +----------------------------------------------------------------+----+-----------+-----+-----------+
+    |Total                                                           |  90|         20|   10|         20|
+    +----------------------------------------------------------------+----+-----------+-----+-----------+
 
     * Register: 
-    +-----------------------+----+----+-----+-----------+
-    |          Name         | FF | LUT| Bits| Const Bits|
-    +-----------------------+----+----+-----+-----------+
-    |add_ln242_reg_471      |   8|   0|    8|          0|
-    |add_ln245_reg_490      |   8|   0|    8|          0|
-    |ap_CS_fsm              |  11|   0|   11|          0|
-    |ap_done_reg            |   1|   0|    1|          0|
-    |gmem_out_addr_reg_476  |  64|   0|   64|          0|
-    |out_reg_428            |  64|   0|   64|          0|
-    |outbuf_load_reg_495    |  32|   0|   32|          0|
-    |shl_ln246_reg_463      |   5|   0|    9|          4|
-    |th_eff_reg_433         |   8|   0|    8|          0|
-    |tmp_1_cast_reg_443     |   1|   0|    9|          8|
-    |tw_eff_reg_438         |   8|   0|    8|          0|
-    |x_reg_164              |   8|   0|    8|          0|
-    |y_fu_108               |   8|   0|    8|          0|
-    |zext_ln242_1_reg_453   |   9|   0|   22|         13|
-    |zext_ln242_2_reg_458   |   8|   0|   32|         24|
-    |zext_ln242_reg_448     |   9|   0|   10|          1|
-    +-----------------------+----+----+-----+-----------+
-    |Total                  | 252|   0|  302|         50|
-    +-----------------------+----+----+-----+-----------+
+    +----------------------------------------------------------------+---+----+-----+-----------+
+    |                              Name                              | FF| LUT| Bits| Const Bits|
+    +----------------------------------------------------------------+---+----+-----+-----------+
+    |ap_sync_reg_channel_write_h0_cast6_loc_i_i_channel              |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_out_tile_offset_cast_loc_i_i_channel  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_p_cast_loc_i_i_channel                |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_shl_ln333_cast_loc_i_i_channel        |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_tmp_1                                 |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_tmp_2                                 |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_tmp_3                                 |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_tmp_4                                 |  1|   0|    1|          0|
+    |ap_sync_reg_entry_proc_U0_ap_ready                              |  1|   0|    1|          0|
+    |ap_sync_reg_store_tile_mm_Loop_Out_writey_proc_U0_ap_ready      |  1|   0|    1|          0|
+    +----------------------------------------------------------------+---+----+-----+-----------+
+    |Total                                                           | 10|   0|   10|          0|
+    +----------------------------------------------------------------+---+----+-----+-----------+
 
 
 
@@ -154,72 +179,80 @@
 == Interface
 ================================================================
 * Summary: 
-+-----------------------------+-----+-----+------------+---------------+--------------+
-|          RTL Ports          | Dir | Bits|  Protocol  | Source Object |    C Type    |
-+-----------------------------+-----+-----+------------+---------------+--------------+
-|ap_clk                       |   in|    1|  ap_ctrl_hs|  store_tile_mm|  return value|
-|ap_rst                       |   in|    1|  ap_ctrl_hs|  store_tile_mm|  return value|
-|ap_start                     |   in|    1|  ap_ctrl_hs|  store_tile_mm|  return value|
-|ap_done                      |  out|    1|  ap_ctrl_hs|  store_tile_mm|  return value|
-|ap_continue                  |   in|    1|  ap_ctrl_hs|  store_tile_mm|  return value|
-|ap_idle                      |  out|    1|  ap_ctrl_hs|  store_tile_mm|  return value|
-|ap_ready                     |  out|    1|  ap_ctrl_hs|  store_tile_mm|  return value|
-|p_read                       |   in|    1|     ap_none|         p_read|        scalar|
-|m_axi_gmem_out_AWVALID       |  out|    1|       m_axi|       gmem_out|       pointer|
-|m_axi_gmem_out_AWREADY       |   in|    1|       m_axi|       gmem_out|       pointer|
-|m_axi_gmem_out_AWADDR        |  out|   64|       m_axi|       gmem_out|       pointer|
-|m_axi_gmem_out_AWID          |  out|    1|       m_axi|       gmem_out|       pointer|
-|m_axi_gmem_out_AWLEN         |  out|   32|       m_axi|       gmem_out|       pointer|
-|m_axi_gmem_out_AWSIZE        |  out|    3|       m_axi|       gmem_out|       pointer|
-|m_axi_gmem_out_AWBURST       |  out|    2|       m_axi|       gmem_out|       pointer|
-|m_axi_gmem_out_AWLOCK        |  out|    2|       m_axi|       gmem_out|       pointer|
-|m_axi_gmem_out_AWCACHE       |  out|    4|       m_axi|       gmem_out|       pointer|
-|m_axi_gmem_out_AWPROT        |  out|    3|       m_axi|       gmem_out|       pointer|
-|m_axi_gmem_out_AWQOS         |  out|    4|       m_axi|       gmem_out|       pointer|
-|m_axi_gmem_out_AWREGION      |  out|    4|       m_axi|       gmem_out|       pointer|
-|m_axi_gmem_out_AWUSER        |  out|    1|       m_axi|       gmem_out|       pointer|
-|m_axi_gmem_out_WVALID        |  out|    1|       m_axi|       gmem_out|       pointer|
-|m_axi_gmem_out_WREADY        |   in|    1|       m_axi|       gmem_out|       pointer|
-|m_axi_gmem_out_WDATA         |  out|   32|       m_axi|       gmem_out|       pointer|
-|m_axi_gmem_out_WSTRB         |  out|    4|       m_axi|       gmem_out|       pointer|
-|m_axi_gmem_out_WLAST         |  out|    1|       m_axi|       gmem_out|       pointer|
-|m_axi_gmem_out_WID           |  out|    1|       m_axi|       gmem_out|       pointer|
-|m_axi_gmem_out_WUSER         |  out|    1|       m_axi|       gmem_out|       pointer|
-|m_axi_gmem_out_ARVALID       |  out|    1|       m_axi|       gmem_out|       pointer|
-|m_axi_gmem_out_ARREADY       |   in|    1|       m_axi|       gmem_out|       pointer|
-|m_axi_gmem_out_ARADDR        |  out|   64|       m_axi|       gmem_out|       pointer|
-|m_axi_gmem_out_ARID          |  out|    1|       m_axi|       gmem_out|       pointer|
-|m_axi_gmem_out_ARLEN         |  out|   32|       m_axi|       gmem_out|       pointer|
-|m_axi_gmem_out_ARSIZE        |  out|    3|       m_axi|       gmem_out|       pointer|
-|m_axi_gmem_out_ARBURST       |  out|    2|       m_axi|       gmem_out|       pointer|
-|m_axi_gmem_out_ARLOCK        |  out|    2|       m_axi|       gmem_out|       pointer|
-|m_axi_gmem_out_ARCACHE       |  out|    4|       m_axi|       gmem_out|       pointer|
-|m_axi_gmem_out_ARPROT        |  out|    3|       m_axi|       gmem_out|       pointer|
-|m_axi_gmem_out_ARQOS         |  out|    4|       m_axi|       gmem_out|       pointer|
-|m_axi_gmem_out_ARREGION      |  out|    4|       m_axi|       gmem_out|       pointer|
-|m_axi_gmem_out_ARUSER        |  out|    1|       m_axi|       gmem_out|       pointer|
-|m_axi_gmem_out_RVALID        |   in|    1|       m_axi|       gmem_out|       pointer|
-|m_axi_gmem_out_RREADY        |  out|    1|       m_axi|       gmem_out|       pointer|
-|m_axi_gmem_out_RDATA         |   in|   32|       m_axi|       gmem_out|       pointer|
-|m_axi_gmem_out_RLAST         |   in|    1|       m_axi|       gmem_out|       pointer|
-|m_axi_gmem_out_RID           |   in|    1|       m_axi|       gmem_out|       pointer|
-|m_axi_gmem_out_RFIFONUM      |   in|    9|       m_axi|       gmem_out|       pointer|
-|m_axi_gmem_out_RUSER         |   in|    1|       m_axi|       gmem_out|       pointer|
-|m_axi_gmem_out_RRESP         |   in|    2|       m_axi|       gmem_out|       pointer|
-|m_axi_gmem_out_BVALID        |   in|    1|       m_axi|       gmem_out|       pointer|
-|m_axi_gmem_out_BREADY        |  out|    1|       m_axi|       gmem_out|       pointer|
-|m_axi_gmem_out_BRESP         |   in|    2|       m_axi|       gmem_out|       pointer|
-|m_axi_gmem_out_BID           |   in|    1|       m_axi|       gmem_out|       pointer|
-|m_axi_gmem_out_BUSER         |   in|    1|       m_axi|       gmem_out|       pointer|
-|output_ftmap_dout            |   in|   64|     ap_fifo|   output_ftmap|       pointer|
-|output_ftmap_num_data_valid  |   in|    3|     ap_fifo|   output_ftmap|       pointer|
-|output_ftmap_fifo_cap        |   in|    3|     ap_fifo|   output_ftmap|       pointer|
-|output_ftmap_empty_n         |   in|    1|     ap_fifo|   output_ftmap|       pointer|
-|output_ftmap_read            |  out|    1|     ap_fifo|   output_ftmap|       pointer|
-|p_read1                      |   in|    9|     ap_none|        p_read1|        scalar|
-|p_read2                      |   in|    9|     ap_none|        p_read2|        scalar|
-|outbuf_address0              |  out|    9|   ap_memory|         outbuf|         array|
-|outbuf_ce0                   |  out|    1|   ap_memory|         outbuf|         array|
-|outbuf_q0                    |   in|   32|   ap_memory|         outbuf|         array|
-+-----------------------------+-----+-----+------------+---------------+--------------+
++-------------------------+-----+-----+------------+---------------+--------------+
+|        RTL Ports        | Dir | Bits|  Protocol  | Source Object |    C Type    |
++-------------------------+-----+-----+------------+---------------+--------------+
+|phase_dout               |   in|    1|     ap_fifo|          phase|       pointer|
+|phase_empty_n            |   in|    1|     ap_fifo|          phase|       pointer|
+|phase_read               |  out|    1|     ap_fifo|          phase|       pointer|
+|m_axi_gmem_out_AWVALID   |  out|    1|       m_axi|       gmem_out|       pointer|
+|m_axi_gmem_out_AWREADY   |   in|    1|       m_axi|       gmem_out|       pointer|
+|m_axi_gmem_out_AWADDR    |  out|   64|       m_axi|       gmem_out|       pointer|
+|m_axi_gmem_out_AWID      |  out|    1|       m_axi|       gmem_out|       pointer|
+|m_axi_gmem_out_AWLEN     |  out|   32|       m_axi|       gmem_out|       pointer|
+|m_axi_gmem_out_AWSIZE    |  out|    3|       m_axi|       gmem_out|       pointer|
+|m_axi_gmem_out_AWBURST   |  out|    2|       m_axi|       gmem_out|       pointer|
+|m_axi_gmem_out_AWLOCK    |  out|    2|       m_axi|       gmem_out|       pointer|
+|m_axi_gmem_out_AWCACHE   |  out|    4|       m_axi|       gmem_out|       pointer|
+|m_axi_gmem_out_AWPROT    |  out|    3|       m_axi|       gmem_out|       pointer|
+|m_axi_gmem_out_AWQOS     |  out|    4|       m_axi|       gmem_out|       pointer|
+|m_axi_gmem_out_AWREGION  |  out|    4|       m_axi|       gmem_out|       pointer|
+|m_axi_gmem_out_AWUSER    |  out|    1|       m_axi|       gmem_out|       pointer|
+|m_axi_gmem_out_WVALID    |  out|    1|       m_axi|       gmem_out|       pointer|
+|m_axi_gmem_out_WREADY    |   in|    1|       m_axi|       gmem_out|       pointer|
+|m_axi_gmem_out_WDATA     |  out|   32|       m_axi|       gmem_out|       pointer|
+|m_axi_gmem_out_WSTRB     |  out|    4|       m_axi|       gmem_out|       pointer|
+|m_axi_gmem_out_WLAST     |  out|    1|       m_axi|       gmem_out|       pointer|
+|m_axi_gmem_out_WID       |  out|    1|       m_axi|       gmem_out|       pointer|
+|m_axi_gmem_out_WUSER     |  out|    1|       m_axi|       gmem_out|       pointer|
+|m_axi_gmem_out_ARVALID   |  out|    1|       m_axi|       gmem_out|       pointer|
+|m_axi_gmem_out_ARREADY   |   in|    1|       m_axi|       gmem_out|       pointer|
+|m_axi_gmem_out_ARADDR    |  out|   64|       m_axi|       gmem_out|       pointer|
+|m_axi_gmem_out_ARID      |  out|    1|       m_axi|       gmem_out|       pointer|
+|m_axi_gmem_out_ARLEN     |  out|   32|       m_axi|       gmem_out|       pointer|
+|m_axi_gmem_out_ARSIZE    |  out|    3|       m_axi|       gmem_out|       pointer|
+|m_axi_gmem_out_ARBURST   |  out|    2|       m_axi|       gmem_out|       pointer|
+|m_axi_gmem_out_ARLOCK    |  out|    2|       m_axi|       gmem_out|       pointer|
+|m_axi_gmem_out_ARCACHE   |  out|    4|       m_axi|       gmem_out|       pointer|
+|m_axi_gmem_out_ARPROT    |  out|    3|       m_axi|       gmem_out|       pointer|
+|m_axi_gmem_out_ARQOS     |  out|    4|       m_axi|       gmem_out|       pointer|
+|m_axi_gmem_out_ARREGION  |  out|    4|       m_axi|       gmem_out|       pointer|
+|m_axi_gmem_out_ARUSER    |  out|    1|       m_axi|       gmem_out|       pointer|
+|m_axi_gmem_out_RVALID    |   in|    1|       m_axi|       gmem_out|       pointer|
+|m_axi_gmem_out_RREADY    |  out|    1|       m_axi|       gmem_out|       pointer|
+|m_axi_gmem_out_RDATA     |   in|   32|       m_axi|       gmem_out|       pointer|
+|m_axi_gmem_out_RLAST     |   in|    1|       m_axi|       gmem_out|       pointer|
+|m_axi_gmem_out_RID       |   in|    1|       m_axi|       gmem_out|       pointer|
+|m_axi_gmem_out_RFIFONUM  |   in|    9|       m_axi|       gmem_out|       pointer|
+|m_axi_gmem_out_RUSER     |   in|    1|       m_axi|       gmem_out|       pointer|
+|m_axi_gmem_out_RRESP     |   in|    2|       m_axi|       gmem_out|       pointer|
+|m_axi_gmem_out_BVALID    |   in|    1|       m_axi|       gmem_out|       pointer|
+|m_axi_gmem_out_BREADY    |  out|    1|       m_axi|       gmem_out|       pointer|
+|m_axi_gmem_out_BRESP     |   in|    2|       m_axi|       gmem_out|       pointer|
+|m_axi_gmem_out_BID       |   in|    1|       m_axi|       gmem_out|       pointer|
+|m_axi_gmem_out_BUSER     |   in|    1|       m_axi|       gmem_out|       pointer|
+|output_ftmap_dout        |   in|   64|     ap_fifo|   output_ftmap|       pointer|
+|output_ftmap_empty_n     |   in|    1|     ap_fifo|   output_ftmap|       pointer|
+|output_ftmap_read        |  out|    1|     ap_fifo|   output_ftmap|       pointer|
+|h0_dout                  |   in|    9|     ap_fifo|             h0|       pointer|
+|h0_empty_n               |   in|    1|     ap_fifo|             h0|       pointer|
+|h0_read                  |  out|    1|     ap_fifo|             h0|       pointer|
+|w0_dout                  |   in|    8|     ap_fifo|             w0|       pointer|
+|w0_empty_n               |   in|    1|     ap_fifo|             w0|       pointer|
+|w0_read                  |  out|    1|     ap_fifo|             w0|       pointer|
+|outbuf_address0          |  out|    9|   ap_memory|         outbuf|         array|
+|outbuf_ce0               |  out|    1|   ap_memory|         outbuf|         array|
+|outbuf_d0                |  out|   32|   ap_memory|         outbuf|         array|
+|outbuf_q0                |   in|   32|   ap_memory|         outbuf|         array|
+|outbuf_we0               |  out|    1|   ap_memory|         outbuf|         array|
+|ap_clk                   |   in|    1|  ap_ctrl_hs|  store_tile_mm|  return value|
+|ap_rst                   |   in|    1|  ap_ctrl_hs|  store_tile_mm|  return value|
+|ap_start                 |   in|    1|  ap_ctrl_hs|  store_tile_mm|  return value|
+|outbuf_empty_n           |   in|    1|  ap_ctrl_hs|  store_tile_mm|  return value|
+|outbuf_read              |  out|    1|  ap_ctrl_hs|  store_tile_mm|  return value|
+|ap_done                  |  out|    1|  ap_ctrl_hs|  store_tile_mm|  return value|
+|ap_ready                 |  out|    1|  ap_ctrl_hs|  store_tile_mm|  return value|
+|ap_idle                  |  out|    1|  ap_ctrl_hs|  store_tile_mm|  return value|
+|ap_continue              |   in|    1|  ap_ctrl_hs|  store_tile_mm|  return value|
++-------------------------+-----+-----+------------+---------------+--------------+
 

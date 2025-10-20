@@ -32,12 +32,13 @@ static void load_tile_mm(
   ftmap_t in_tile[TH + 2*R_TOTAL][TW + 2*R_TOTAL] )
 {
 #pragma HLS INLINE off
+#pragma HLS DATAFLOW
 
     const int PH = th_eff + 2*R_TOTAL;
     const int PW = tw_eff + 2*R_TOTAL;
 
     // Burst-friendly raster copy with replicate padding
-#pragma HLS PIPELINE
+//#pragma HLS PIPELINE
     InputTileHread:
     for (int py = 0; py < PH; ++py) {
 //    #pragma HLS PIPELINE
@@ -49,6 +50,8 @@ static void load_tile_mm(
         
         InputTileWread:
         for (int px = 0; px < PW; ++px) {
+//#pragma HLS UNROLL factor=UF_N2
+#pragma HLS PIPELINE
             // int xx = clampi(w0 + px - R_TOTAL, 0, W - 1);
             int ix = w0 + px - R_TOTAL;
             if (ix < 0)  ix = 0;
@@ -72,6 +75,7 @@ static void compute_tile(
   int h0, int w0, int th_eff, int tw_eff )
 {
 #pragma HLS INLINE off
+#pragma HLS DATAFLOW
 
   // ---- buffers for the 5x5 stage (per tile) ----
   ftmap_t linebuf[N2][F3-1][TW + 2*R3];
@@ -116,6 +120,7 @@ static void compute_tile(
       #pragma HLS ARRAY_PARTITION variable=acc2 cyclic factor=UF_N2 dim=1
       Conv2Out_biases:
       for (int n2 = 0; n2 < N2; ++n2) {
+#pragma HLS PIPELINE
       #pragma HLS UNROLL factor=UF_N2
         acc2[n2] = conv2_b[n2];
       }
@@ -123,30 +128,62 @@ static void compute_tile(
       // For each conv1 output channel c1:
       Conv1_outftmaps:
       for (int c1 = 0; c1 < N1; ++c1) { // N1 = 64 conv1 channels
-//#pragma HLS PIPELINE
+
+
+    	/************** This method introduces a true loop-carried dependency
+    	 * - must refactor with F1 interleaved accumulators
         param_t v = conv1_b[c1];
-        // #pragma HLS INLINE off 
-        // #pragma HLS DEPENDENCE variable=v inter false
         // 9x9 over in_tile around (y0,x0)
         Conv1_ky:
         for (int ky = 0; ky < F1; ++ky) {
-//            #pragma HLS UNROLL
-            // #pragma HLS PIPELINE off
         	Conv1_kx:
             for (int kx = 0; kx < F1; ++kx) {
-//                #pragma HLS UNROLL
                 #pragma HLS PIPELINE off
                 int py = (y0 - R1) + ky + R_TOTAL;
                 int px = (x0 - R1) + kx + R_TOTAL;
                 v += conv1_w[c1][0][ky][kx] * in_tile[py][px];
             }
         }
-        if (v < (param_t)0) v = (param_t)0;  // ReLU after conv1
+        */
+
+    	// Using F1 interleaved accumulators instead of just 1 accumulator 'v'
+    	param_t v[F1]; // F1 independent partial sums
+#pragma HLS ARRAY_PARTITION variable=v complete dim=1
+    	// initialise values to zero
+    	for (int i=0; i<F1; ++i) {
+//#pragma HLS UNROLL
+    		v[i] = 0;
+    	}
+
+
+    	// 9x9 over in_tile around (y0,x0)
+		Conv1_ky:
+		for (int ky = 0; ky < F1; ++ky) {
+#pragma HLS PIPELINE II=3
+			Conv1_kx:
+			for (int kx = 0; kx < F1; ++kx) {
+				#pragma HLS UNROLL
+				int py = (y0 - R1) + ky + R_TOTAL;
+				int px = (x0 - R1) + kx + R_TOTAL;
+				v[kx] += conv1_w[c1][0][ky][kx] * in_tile[py][px];
+			}
+		}
+		param_t acc1 = conv1_b[c1];
+		acc1:
+		for (int i = 0;i < F1; ++i) {
+#pragma HLS PIPELINE off
+			acc1 += v[i];
+		}
+
+
+
+        if (acc1 < (param_t)0) acc1 = (param_t)0;  // ReLU after conv1
 
         Conv2_dot32:
         for (int n2 = 0; n2 < N2; ++n2) { // generate all 32 output feature maps pixel by pixel
         #pragma HLS UNROLL factor=UF_N2
-          acc2[n2] += conv2_w[n2][c1][0][0] * v;   // 1x1 mix
+#pragma HLS PIPELINE
+          acc2[n2] += conv2_w[n2][c1][0][0] * acc1;   // 1x1 mix
         }
       }
 
@@ -154,6 +191,7 @@ static void compute_tile(
       #pragma HLS ARRAY_PARTITION variable=f2 cyclic factor=UF_N2 dim=1
       Conv2_ReLU:
       for (int n2 = 0; n2 < N2; ++n2) {
+#pragma HLS PIPELINE
       #pragma HLS UNROLL factor=UF_N2
         param_t t = acc2[n2];
         f2[n2] = (t > (param_t)0) ? (ftmap_t)t : (ftmap_t)0;
@@ -165,6 +203,7 @@ static void compute_tile(
       // Shift window left by 1 column
       Shift_win32:
       for (int n2 = 0; n2 < N2; ++n2) {
+#pragma HLS PIPELINE
       #pragma HLS UNROLL factor=UF_N2
         // Shift window left (use temps to avoid intra RAW)
     	Shift_win_row:
@@ -180,7 +219,8 @@ static void compute_tile(
         // Rightmost column: 4 rows from linebuf (oldest at top) + current f2 at bottom
         ReadLineInWin:
         for (int r = 0; r < F3-1; ++r) {
-        #pragma HLS UNROLL
+
+        #pragma HLS UNROLL factor=F3-1
           win[n2][r][F3-1] = linebuf[n2][F3-2 - r][col];
         }
         win[n2][F3-1][F3-1] = f2[n2];
@@ -189,10 +229,11 @@ static void compute_tile(
       // After filling the window, update line buffers at this column: roll rows down, insert current row on top
       Update_linebuf32:
       for (int n2 = 0; n2 < N2; ++n2) {
+#pragma HLS PIPELINE
       #pragma HLS UNROLL factor=UF_N2
     	Update_linebuf_row:
         for (int r = F3-2; r >= 1; --r) {
-//        #pragma HLS UNROLL
+        #pragma HLS UNROLL factor=F3-2
           linebuf[n2][r][col] = linebuf[n2][r-1][col];
         }
         linebuf[n2][0][col] = f2[n2];
@@ -203,16 +244,20 @@ static void compute_tile(
         int oy = y0 - R3;  // output coords inside tile
         int ox = x0 - R3;
         if (oy < th_eff && ox < tw_eff) {
+
+        	/*
           param_t acc3 = conv3_b[0];
           Conv3_inputft:
           for (int n2 = 0; n2 < N2; ++n2) {
-          #pragma HLS UNROLL factor=UF_N2
+//          #pragma HLS UNROLL factor=UF_N2
+//#pragma HLS PIPELINE
         	Conv3_ky:
             for (int ky = 0; ky < F3; ++ky) {
-        //    #pragma HLS UNROLL factor=F3
+//            #pragma HLS UNROLL factor=F3
               Conv3_kx:
               for (int kx = 0; kx < F3; ++kx) {
-             #pragma HLS UNROLL factor=F3
+//             #pragma HLS UNROLL factor=F3
+#pragma HLS PIPELINE off
                // 2. Clamp window coordinates to those thresholds
                  int wy = clampi(ky, R3-(h0+oy), R3-(h0+oy)+H-1);
                  int wx = clampi(kx, R3-(w0+ox), R3-(w0+ox)+W-1);
@@ -223,6 +268,54 @@ static void compute_tile(
           }
           // Double check the indexing on this one
           out_tile[oy][ox] = (ftmap_t)acc3;
+          */
+        	// Need to refactor code to use interleaved accumulators:
+            param_t acc3[F3][F3];
+#pragma HLS ARRAY_PARTITION variable=acc3 complete dim=1
+#pragma HLS ARRAY_PARTITION variable=acc3 complete dim=2
+            // Initialise values to zero
+            for (int i=0; i<F3; ++i) {
+            	for (int j=0;j<F3;++j) {
+#pragma HLS UNROLL
+            		acc3[i][j]=0;
+            	}
+            }
+
+
+            Conv3_inputft:
+            for (int n2 = 0; n2 < N2; ++n2) { // for each conv2 output ftmap
+#pragma HLS PIPELINE II=3
+          	Conv3_ky:
+              for (int ky = 0; ky < F3; ++ky) {
+#pragma HLS UNROLL
+                Conv3_kx:
+                for (int kx = 0; kx < F3; ++kx) {
+
+#pragma HLS UNROLL
+                 // 2. Clamp window coordinates to those thresholds
+                   int wy = clampi(ky, R3-(h0+oy), R3-(h0+oy)+H-1);
+                   int wx = clampi(kx, R3-(w0+ox), R3-(w0+ox)+W-1);
+
+                  acc3[ky][kx] += conv3_w[0][n2][ky][kx] * win[n2][wy][wx];
+                }
+              }
+            }
+
+            ftmap_t acc3_sum = conv3_b[0];
+            acc3row:
+            for (int i=0; i < F3; ++i) {
+            	acc3col:
+            	for (int j=0; j<F3; ++j) {
+#pragma HLS PIPELINE off
+            		acc3_sum += acc3[i][j];
+            	}
+            }
+
+            // Double check the indexing on this one
+            out_tile[oy][ox] = acc3_sum;
+
+
+
         }
       }
     } // x0
@@ -236,13 +329,16 @@ static void store_tile_mm(
   ftmap_t out[N3][H][W],
   int h0, int w0, int th_eff, int tw_eff )
 {
+#pragma HLS DATAFLOW
 #pragma HLS INLINE off
-#pragma HLS PIPELINE
+//#pragma HLS PIPELINE
 	Out_writey:
   for (int y = 0; y < th_eff; ++y) {
 //#pragma HLS PIPELINE
 	Out_writex:
     for (int x = 0; x < tw_eff; ++x) {
+//#pragma HLS UNROLL factor=UF_N2
+#pragma HLS PIPELINE
       out[0][h0 + y][w0 + x] = out_tile[y][x];
     }
   }
@@ -299,8 +395,13 @@ void srcnn(
   // Ping-pong BRAM tiles so LOAD/COMPUTE/STORE can overlap across tiles
   static ftmap_t inbuf [2][TH + 2*R_TOTAL][TW + 2*R_TOTAL];
   static ftmap_t outbuf[2][TH][TW];
-  #pragma HLS BIND_STORAGE variable=inbuf  type=ram_1p impl=bram
-  #pragma HLS BIND_STORAGE variable=outbuf type=ram_1p impl=bram
+//  #pragma HLS BIND_STORAGE variable=inbuf  type=ram_2p impl=bram
+//  #pragma HLS BIND_STORAGE variable=outbuf type=ram_2p impl=bram
+//#pragma HLS ARRAY_PARTITION variable=inbuf cyclic factor=UF_N2 dim=3
+//#pragma HLS ARRAY_PARTITION variable=outbuf cyclic factor=UF_N2 dim=3
+
+#pragma HLS BIND_STORAGE variable=inbuf  type=ram_1p impl=bram
+#pragma HLS BIND_STORAGE variable=outbuf type=ram_1p impl=bram
 
   ////////////////////////////////////////////////////////////////////////////////
   // Copying the weights into BRAM
@@ -329,9 +430,12 @@ void srcnn(
 #pragma HLS ARRAY_PARTITION variable=w2_loc cyclic factor=UF_N2 dim=1
 // (NO partition on dim=2; F2=1 so dim=3/4 don't matter)
 
-// 3) CONV3 weights (bank only across N2 to feed UF_N2 lanes)
-#pragma HLS BIND_STORAGE    variable=w3_loc type=ram_1p impl=bram
-#pragma HLS ARRAY_PARTITION variable=w3_loc cyclic factor=UF_N2 dim=2
+//// 3) CONV3 weights (bank only across N2 to feed UF_N2 lanes)
+//#pragma HLS BIND_STORAGE    variable=w3_loc type=ram_1p impl=bram
+#pragma HLS RESOURCE        variable=w3_loc core=RAM_1P_LUTRAM
+#pragma HLS ARRAY_PARTITION variable=w3_loc complete dim=3   // ky
+#pragma HLS ARRAY_PARTITION variable=w3_loc complete dim=4   // kx
+#pragma HLS ARRAY_PARTITION variable=w3_loc cyclic factor=UF_N2 dim=2  // N2
 // (NO partition on dim=3/4 unless you also unroll ky/kx)
 
 // Biases are tiny: keep in regs/LUTRAM (zero BRAM)
@@ -357,7 +461,7 @@ void srcnn(
 
 // ---------------- Copy ONCE from DRAM to on-chip ----------------
 //   CopyW1:
-#pragma HLS PIPELINE
+//#pragma HLS PIPELINE
 CopyW1_outft:
   for (int c1=0;c1<N1;++c1) {       // output_feature
 //#pragma HLS PIPELINE
@@ -394,7 +498,7 @@ CopyW1_outft:
 
     // for (int c3=0;c3<N3;++c3) {             // output feature
     b3_loc[0] = conv3_biases[0];
-#pragma HLS PIPELINE
+//#pragma HLS PIPELINE
     CopyW3_inft:
     for (int i3=0; i3<N2;++i3) {        // input feature
 //#pragma HLS PIPELINE

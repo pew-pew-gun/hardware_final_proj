@@ -1,40 +1,131 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1760966534556">
-  <ports id="1" name="output_ftmap" type="PortType" coreId="0" bitwidth="64">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1760977346446">
+  <ports id="1" name="h0" type="PortType" coreName="FIFO_SRL" coreId="1953391988" bitwidth="9" iftype="IfTypeRom">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="2" name="output_ftmap_c" type="PortType" coreName="FIFO_SRL" coreId="1631492192" bitwidth="64" direction="DirOut" iftype="IfTypeRom">
-    <dataInputObjs>write</dataInputObjs>
+  <ports id="2" name="w0" type="PortType" coreName="FIFO_SRL" coreId="1178345534" bitwidth="8" iftype="IfTypeRom">
+    <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <edges id="10" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.0"/>
-  <edges id="13" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@ports.1"/>
-  <edges id="14" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.1"/>
-  <blocks id="7" name="entry_proc" type="BlockType">
-    <node_objs xsi:type="cdfg:CdfgNode" id="4" name="output_ftmap_read" coreId="572669294" bitwidth="64" opcode="read" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
-      <dataInputObjs>output_ftmap</dataInputObjs>
-      <dataOutputObjs>write</dataOutputObjs>
+  <ports id="12" name="ap_return_0" direction="DirOut">
+    <dataInputObjs>ret</dataInputObjs>
+  </ports>
+  <ports id="13" name="ap_return_1" direction="DirOut">
+    <dataInputObjs>ret</dataInputObjs>
+  </ports>
+  <ports id="14" name="ap_return_2" direction="DirOut">
+    <dataInputObjs>ret</dataInputObjs>
+  </ports>
+  <ports id="15" name="ap_return_3" direction="DirOut">
+    <dataInputObjs>ret</dataInputObjs>
+  </ports>
+  <edges id="18" source_obj="//@ports.1" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="19" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="22" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="25" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="26" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="27" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="28" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.5"/>
+  <edges id="29" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.5"/>
+  <edges id="30" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.0/@node_objs.6"/>
+  <edges id="31" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.6"/>
+  <edges id="32" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges source_obj="//@blocks.0/@node_objs.7" sink_obj="//@ports.2"/>
+  <edges source_obj="//@blocks.0/@node_objs.7" sink_obj="//@ports.3"/>
+  <edges source_obj="//@blocks.0/@node_objs.7" sink_obj="//@ports.4"/>
+  <edges source_obj="//@blocks.0/@node_objs.7" sink_obj="//@ports.5"/>
+  <blocks id="15" name="entry_proc" type="BlockType">
+    <node_objs xsi:type="cdfg:CdfgNode" id="4" name="w0_read" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" bitwidth="8" opcode="read" m_display="0" m_delay="1.83" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataInputObjs>w0</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="5" name="output_ftmap_c_write_ln0" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" opcode="write" m_display="0" m_delay="1.83" m_topoIndex="2" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="5" name="w0_load_cast" rtlName="w0_load_cast_fu_38_p1" coreId="2003553632" bitwidth="9" opcode="zext" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
       <dataInputObjs>read</dataInputObjs>
-      <dataOutputObjs>output_ftmap_c</dataOutputObjs>
+      <dataOutputObjs>insertvalue</dataOutputObjs>
+      <dataOutputObjs>insertvalue</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="_ln0" coreId="1819113472" opcode="ret" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="h0_read" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" bitwidth="9" opcode="read" m_display="0" m_delay="1.83" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <dataInputObjs>h0</dataInputObjs>
+      <dataOutputObjs>insertvalue</dataOutputObjs>
+      <dataOutputObjs>insertvalue</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="tmp" coreId="0" bitwidth="36" opcode="insertvalue" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>insertvalue</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="tmp_5" coreId="2004598456" bitwidth="36" opcode="insertvalue" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <dataInputObjs>insertvalue</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>insertvalue</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="tmp_6" coreId="2004585808" bitwidth="36" opcode="insertvalue" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <dataInputObjs>insertvalue</dataInputObjs>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>insertvalue</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="tmp_7" coreId="2003550560" bitwidth="36" opcode="insertvalue" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <dataInputObjs>insertvalue</dataInputObjs>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>ret</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="_ln0" coreId="2004585648" opcode="ret" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <dataInputObjs>insertvalue</dataInputObjs>
+      <dataOutputObjs>ap_return_0</dataOutputObjs>
+      <dataOutputObjs>ap_return_1</dataOutputObjs>
+      <dataOutputObjs>ap_return_2</dataOutputObjs>
+      <dataOutputObjs>ap_return_3</dataOutputObjs>
+    </node_objs>
   </blocks>
   <ScheduleInfo time="0"/>
-  <ioNodes realName="write_ln0_write_fu_30">
+  <expressionNodes realName="tmp_5_fu_48">
+    <nodeIds>11</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="w0_load_cast_fu_38">
     <nodeIds>5</nodeIds>
-  </ioNodes>
-  <ioNodes realName="output_ftmap_read_read_fu_24">
+  </expressionNodes>
+  <expressionNodes realName="tmp_7_fu_60">
+    <nodeIds>13</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_6_fu_54">
+    <nodeIds>12</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_fu_42">
+    <nodeIds>10</nodeIds>
+  </expressionNodes>
+  <ioNodes realName="w0_read_read_fu_26">
     <nodeIds>4</nodeIds>
   </ioNodes>
-  <ioPorts name="output_ftmap">
+  <ioNodes realName="h0_read_read_fu_32">
+    <nodeIds>8</nodeIds>
+  </ioNodes>
+  <ioPorts name="h0">
+    <contents name="read">
+      <nodeIds>8</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="w0">
     <contents name="read">
       <nodeIds>4</nodeIds>
     </contents>
   </ioPorts>
-  <ioPorts name="output_ftmap_c">
-    <contents name="write">
-      <nodeIds>5</nodeIds>
+  <ioPorts name="ap_return_0">
+    <contents name="ret">
+      <nodeIds>14</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ap_return_1">
+    <contents name="ret">
+      <nodeIds>14</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ap_return_2">
+    <contents name="ret">
+      <nodeIds>14</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ap_return_3">
+    <contents name="ret">
+      <nodeIds>14</nodeIds>
     </contents>
   </ioPorts>
   <fsm>
@@ -43,11 +134,19 @@
       <operations id="4" stage="1" latency="1"/>
       <operations id="5" stage="1" latency="1"/>
       <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
     </states>
   </fsm>
   <CFGRegionsRoot>
     <cfgRegions mId="1" mTag="entry_proc" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
-      <basicBlocks>7</basicBlocks>
+      <basicBlocks>15</basicBlocks>
       <mDfPipe/>
     </cfgRegions>
   </CFGRegionsRoot>

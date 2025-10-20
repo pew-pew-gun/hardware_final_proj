@@ -13,8 +13,8 @@ module srcnn_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_7_RAM_1P_BRAM_
     reset, clk);
 
 parameter DataWidth = 32;
-parameter AddressWidth = 7;
-parameter AddressRange = 100;
+parameter AddressWidth = 8;
+parameter AddressRange = 256;
  
 input[AddressWidth-1:0] address0;
 input ce0;

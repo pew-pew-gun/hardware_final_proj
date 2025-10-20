@@ -1,70 +1,89 @@
 <pragmas>
-<pragma file="src/srcnn.cpp" line="239" pragmaType="inline" parentfunction="store_tile_mm" off="1" region="0" recursive="0"/>
-<pragma file="src/srcnn.cpp" line="240" pragmaType="pipeline" parentfunction="store_tile_mm" off="0" ii="-1" style=""/>
+<pragma file="src/srcnn.cpp" line="534" pragmaType="dataflow" parentfunction="srcnn" disable_start_propagation="0"/>
+<pragma file="src/srcnn.cpp" line="479" pragmaType="pipeline" parentfunction="srcnn" off="1" ii="0" rewind="0" style=""/>
+<pragma file="src/srcnn.cpp" line="483" pragmaType="pipeline" parentfunction="srcnn" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="src/srcnn.cpp" line="362" pragmaType="interface" parentfunction="srcnn" mode="s_axilite" port="" bundle="ctrl" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="src/srcnn.cpp" line="364" pragmaType="interface" parentfunction="srcnn" mode="s_axilite" port="reload_weights" bundle="ctrl" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="src/srcnn.cpp" line="367" pragmaType="interface" parentfunction="srcnn" mode="m_axi" port="input_ftmap" bundle="gmem_in" offset="slave" name="" depth="65025" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="src/srcnn.cpp" line="368" pragmaType="interface" parentfunction="srcnn" mode="s_axilite" port="input_ftmap" bundle="ctrl" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="src/srcnn.cpp" line="369" pragmaType="interface" parentfunction="srcnn" mode="m_axi" port="output_ftmap" bundle="gmem_out" offset="slave" name="" depth="65025" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="src/srcnn.cpp" line="370" pragmaType="interface" parentfunction="srcnn" mode="s_axilite" port="output_ftmap" bundle="ctrl" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="src/srcnn.cpp" line="373" pragmaType="interface" parentfunction="srcnn" mode="m_axi" port="conv1_weights" bundle="gmem_w1" offset="slave" name="" depth="5184" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="src/srcnn.cpp" line="374" pragmaType="interface" parentfunction="srcnn" mode="s_axilite" port="conv1_weights" bundle="ctrl" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="src/srcnn.cpp" line="375" pragmaType="interface" parentfunction="srcnn" mode="m_axi" port="conv1_biases" bundle="gmem_w1" offset="slave" name="" depth="64" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="src/srcnn.cpp" line="376" pragmaType="interface" parentfunction="srcnn" mode="s_axilite" port="conv1_biases" bundle="ctrl" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="src/srcnn.cpp" line="378" pragmaType="interface" parentfunction="srcnn" mode="m_axi" port="conv2_weights" bundle="gmem_w2" offset="slave" name="" depth="2048" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="src/srcnn.cpp" line="379" pragmaType="interface" parentfunction="srcnn" mode="s_axilite" port="conv2_weights" bundle="ctrl" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="src/srcnn.cpp" line="380" pragmaType="interface" parentfunction="srcnn" mode="m_axi" port="conv2_biases" bundle="gmem_w2" offset="slave" name="" depth="32" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="src/srcnn.cpp" line="381" pragmaType="interface" parentfunction="srcnn" mode="s_axilite" port="conv2_biases" bundle="ctrl" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="src/srcnn.cpp" line="383" pragmaType="interface" parentfunction="srcnn" mode="m_axi" port="conv3_weights" bundle="gmem_w3" offset="slave" name="" depth="800" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="src/srcnn.cpp" line="384" pragmaType="interface" parentfunction="srcnn" mode="s_axilite" port="conv3_weights" bundle="ctrl" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="src/srcnn.cpp" line="385" pragmaType="interface" parentfunction="srcnn" mode="m_axi" port="conv3_biases" bundle="gmem_w3" offset="slave" name="" depth="1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="src/srcnn.cpp" line="386" pragmaType="interface" parentfunction="srcnn" mode="s_axilite" port="conv3_biases" bundle="ctrl" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="src/srcnn.cpp" line="400" pragmaType="bind_storage" parentfunction="srcnn" op="666" impl="18" latency="-1" variable="_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE5inbuf"/>
+<pragma file="src/srcnn.cpp" line="401" pragmaType="bind_storage" parentfunction="srcnn" op="666" impl="18" latency="-1" variable="_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6outbuf"/>
+<pragma file="src/srcnn.cpp" line="421" pragmaType="bind_storage" parentfunction="srcnn" op="666" impl="19" latency="-1" variable="_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc"/>
+<pragma file="src/srcnn.cpp" line="426" pragmaType="bind_storage" parentfunction="srcnn" op="666" impl="18" latency="-1" variable="_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w2_loc"/>
+<pragma file="src/srcnn.cpp" line="427" pragmaType="array_partition" parentfunction="srcnn" dim="1" factor="8" mode="cyclic" dynamic="0" variable="_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w2_loc"/>
+<pragma file="src/srcnn.cpp" line="432" pragmaType="bind_storage" parentfunction="srcnn" op="666" impl="19" latency="-1" variable="_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc"/>
+<pragma file="src/srcnn.cpp" line="433" pragmaType="array_partition" parentfunction="srcnn" dim="3" factor="0" mode="complete" dynamic="0" variable="_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc"/>
+<pragma file="src/srcnn.cpp" line="434" pragmaType="array_partition" parentfunction="srcnn" dim="4" factor="0" mode="complete" dynamic="0" variable="_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc"/>
+<pragma file="src/srcnn.cpp" line="435" pragmaType="array_partition" parentfunction="srcnn" dim="2" factor="8" mode="cyclic" dynamic="0" variable="_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc"/>
+<pragma file="src/srcnn.cpp" line="439" pragmaType="array_partition" parentfunction="srcnn" dim="1" factor="0" mode="complete" dynamic="0" variable="_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc"/>
+<pragma file="src/srcnn.cpp" line="440" pragmaType="array_partition" parentfunction="srcnn" dim="1" factor="0" mode="complete" dynamic="0" variable="_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc"/>
+<pragma file="src/srcnn.cpp" line="441" pragmaType="array_partition" parentfunction="srcnn" dim="1" factor="0" mode="complete" dynamic="0" variable="_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b3_loc"/>
+<pragma file="src/srcnn.cpp" line="442" pragmaType="bind_storage" parentfunction="srcnn" op="666" impl="19" latency="-1" variable="_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc"/>
+<pragma file="src/srcnn.cpp" line="443" pragmaType="bind_storage" parentfunction="srcnn" op="666" impl="19" latency="-1" variable="_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc"/>
+<pragma file="src/srcnn.cpp" line="444" pragmaType="bind_storage" parentfunction="srcnn" op="666" impl="19" latency="-1" variable="_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b3_loc"/>
+<pragma file="src/srcnn.cpp" line="450" pragmaType="reset" parentfunction="srcnn" off="0" variable="_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE14weights_loaded"/>
+<pragma file="src/srcnn.cpp" line="518" pragmaType="stable" parentfunction="srcnn" variable="_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc"/>
+<pragma file="src/srcnn.cpp" line="519" pragmaType="stable" parentfunction="srcnn" variable="_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc"/>
+<pragma file="src/srcnn.cpp" line="520" pragmaType="stable" parentfunction="srcnn" variable="_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w2_loc"/>
+<pragma file="src/srcnn.cpp" line="521" pragmaType="stable" parentfunction="srcnn" variable="_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc"/>
+<pragma file="src/srcnn.cpp" line="522" pragmaType="stable" parentfunction="srcnn" variable="_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc"/>
+<pragma file="src/srcnn.cpp" line="523" pragmaType="stable" parentfunction="srcnn" variable="_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b3_loc"/>
+<pragma file="src/srcnn.cpp" line="330" pragmaType="inline" parentfunction="store_tile_mm" off="1" region="0" recursive="0"/>
+<pragma file="src/srcnn.cpp" line="329" pragmaType="dataflow" parentfunction="store_tile_mm" disable_start_propagation="0"/>
+<pragma file="src/srcnn.cpp" line="338" pragmaType="pipeline" parentfunction="store_tile_mm" off="0" ii="-1" rewind="0" style=""/>
 <pragma file="src/srcnn.cpp" line="34" pragmaType="inline" parentfunction="load_tile_mm" off="1" region="0" recursive="0"/>
-<pragma file="src/srcnn.cpp" line="40" pragmaType="pipeline" parentfunction="load_tile_mm" off="0" ii="-1" style=""/>
-<pragma file="src/srcnn.cpp" line="433" pragmaType="dataflow" parentfunction="srcnn" disable_start_propagation="0"/>
-<pragma file="src/srcnn.cpp" line="378" pragmaType="pipeline" parentfunction="srcnn" off="1" ii="0" rewind="0" style=""/>
-<pragma file="src/srcnn.cpp" line="382" pragmaType="pipeline" parentfunction="srcnn" off="0" ii="-1" rewind="0" style=""/>
-<pragma file="src/srcnn.cpp" line="269" pragmaType="interface" parentfunction="srcnn" mode="s_axilite" port="" bundle="ctrl" offset="-1" name="" clock="" impl="" register="0"/>
-<pragma file="src/srcnn.cpp" line="271" pragmaType="interface" parentfunction="srcnn" mode="s_axilite" port="reload_weights" bundle="ctrl" offset="-1" name="" clock="" impl="" register="0"/>
-<pragma file="src/srcnn.cpp" line="274" pragmaType="interface" parentfunction="srcnn" mode="m_axi" port="input_ftmap" bundle="gmem_in" offset="slave" name="" depth="65025" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
-<pragma file="src/srcnn.cpp" line="275" pragmaType="interface" parentfunction="srcnn" mode="s_axilite" port="input_ftmap" bundle="ctrl" offset="-1" name="" clock="" impl="" register="0"/>
-<pragma file="src/srcnn.cpp" line="276" pragmaType="interface" parentfunction="srcnn" mode="m_axi" port="output_ftmap" bundle="gmem_out" offset="slave" name="" depth="65025" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
-<pragma file="src/srcnn.cpp" line="277" pragmaType="interface" parentfunction="srcnn" mode="s_axilite" port="output_ftmap" bundle="ctrl" offset="-1" name="" clock="" impl="" register="0"/>
-<pragma file="src/srcnn.cpp" line="280" pragmaType="interface" parentfunction="srcnn" mode="m_axi" port="conv1_weights" bundle="gmem_w1" offset="slave" name="" depth="5184" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
-<pragma file="src/srcnn.cpp" line="281" pragmaType="interface" parentfunction="srcnn" mode="s_axilite" port="conv1_weights" bundle="ctrl" offset="-1" name="" clock="" impl="" register="0"/>
-<pragma file="src/srcnn.cpp" line="282" pragmaType="interface" parentfunction="srcnn" mode="m_axi" port="conv1_biases" bundle="gmem_w1" offset="slave" name="" depth="64" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
-<pragma file="src/srcnn.cpp" line="283" pragmaType="interface" parentfunction="srcnn" mode="s_axilite" port="conv1_biases" bundle="ctrl" offset="-1" name="" clock="" impl="" register="0"/>
-<pragma file="src/srcnn.cpp" line="285" pragmaType="interface" parentfunction="srcnn" mode="m_axi" port="conv2_weights" bundle="gmem_w2" offset="slave" name="" depth="2048" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
-<pragma file="src/srcnn.cpp" line="286" pragmaType="interface" parentfunction="srcnn" mode="s_axilite" port="conv2_weights" bundle="ctrl" offset="-1" name="" clock="" impl="" register="0"/>
-<pragma file="src/srcnn.cpp" line="287" pragmaType="interface" parentfunction="srcnn" mode="m_axi" port="conv2_biases" bundle="gmem_w2" offset="slave" name="" depth="32" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
-<pragma file="src/srcnn.cpp" line="288" pragmaType="interface" parentfunction="srcnn" mode="s_axilite" port="conv2_biases" bundle="ctrl" offset="-1" name="" clock="" impl="" register="0"/>
-<pragma file="src/srcnn.cpp" line="290" pragmaType="interface" parentfunction="srcnn" mode="m_axi" port="conv3_weights" bundle="gmem_w3" offset="slave" name="" depth="800" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
-<pragma file="src/srcnn.cpp" line="291" pragmaType="interface" parentfunction="srcnn" mode="s_axilite" port="conv3_weights" bundle="ctrl" offset="-1" name="" clock="" impl="" register="0"/>
-<pragma file="src/srcnn.cpp" line="292" pragmaType="interface" parentfunction="srcnn" mode="m_axi" port="conv3_biases" bundle="gmem_w3" offset="slave" name="" depth="1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
-<pragma file="src/srcnn.cpp" line="293" pragmaType="interface" parentfunction="srcnn" mode="s_axilite" port="conv3_biases" bundle="ctrl" offset="-1" name="" clock="" impl="" register="0"/>
-<pragma file="src/srcnn.cpp" line="302" pragmaType="bind_storage" parentfunction="srcnn" op="666" impl="18" latency="-1" variable="_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE5inbuf"/>
-<pragma file="src/srcnn.cpp" line="303" pragmaType="bind_storage" parentfunction="srcnn" op="666" impl="18" latency="-1" variable="_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6outbuf"/>
-<pragma file="src/srcnn.cpp" line="323" pragmaType="bind_storage" parentfunction="srcnn" op="666" impl="19" latency="-1" variable="_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc"/>
-<pragma file="src/srcnn.cpp" line="328" pragmaType="bind_storage" parentfunction="srcnn" op="666" impl="18" latency="-1" variable="_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w2_loc"/>
-<pragma file="src/srcnn.cpp" line="329" pragmaType="array_partition" parentfunction="srcnn" dim="1" factor="8" mode="cyclic" dynamic="0" variable="_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w2_loc"/>
-<pragma file="src/srcnn.cpp" line="333" pragmaType="bind_storage" parentfunction="srcnn" op="666" impl="18" latency="-1" variable="_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc"/>
-<pragma file="src/srcnn.cpp" line="334" pragmaType="array_partition" parentfunction="srcnn" dim="2" factor="8" mode="cyclic" dynamic="0" variable="_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc"/>
-<pragma file="src/srcnn.cpp" line="338" pragmaType="array_partition" parentfunction="srcnn" dim="1" factor="0" mode="complete" dynamic="0" variable="_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc"/>
-<pragma file="src/srcnn.cpp" line="339" pragmaType="array_partition" parentfunction="srcnn" dim="1" factor="0" mode="complete" dynamic="0" variable="_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc"/>
-<pragma file="src/srcnn.cpp" line="340" pragmaType="array_partition" parentfunction="srcnn" dim="1" factor="0" mode="complete" dynamic="0" variable="_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b3_loc"/>
-<pragma file="src/srcnn.cpp" line="341" pragmaType="bind_storage" parentfunction="srcnn" op="666" impl="19" latency="-1" variable="_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc"/>
-<pragma file="src/srcnn.cpp" line="342" pragmaType="bind_storage" parentfunction="srcnn" op="666" impl="19" latency="-1" variable="_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc"/>
-<pragma file="src/srcnn.cpp" line="343" pragmaType="bind_storage" parentfunction="srcnn" op="666" impl="19" latency="-1" variable="_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b3_loc"/>
-<pragma file="src/srcnn.cpp" line="349" pragmaType="reset" parentfunction="srcnn" off="0" variable="_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE14weights_loaded"/>
-<pragma file="src/srcnn.cpp" line="417" pragmaType="stable" parentfunction="srcnn" variable="_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc"/>
-<pragma file="src/srcnn.cpp" line="418" pragmaType="stable" parentfunction="srcnn" variable="_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc"/>
-<pragma file="src/srcnn.cpp" line="419" pragmaType="stable" parentfunction="srcnn" variable="_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w2_loc"/>
-<pragma file="src/srcnn.cpp" line="420" pragmaType="stable" parentfunction="srcnn" variable="_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc"/>
-<pragma file="src/srcnn.cpp" line="421" pragmaType="stable" parentfunction="srcnn" variable="_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc"/>
-<pragma file="src/srcnn.cpp" line="422" pragmaType="stable" parentfunction="srcnn" variable="_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b3_loc"/>
-<pragma file="src/srcnn.cpp" line="74" pragmaType="inline" parentfunction="compute_tile" off="1" region="0" recursive="0"/>
-<pragma file="src/srcnn.cpp" line="107" pragmaType="loop_flatten" parentfunction="compute_tile" off="1"/>
-<pragma file="src/srcnn.cpp" line="119" pragmaType="unroll" parentfunction="compute_tile" factor="8" skip_exit_check="0"/>
-<pragma file="src/srcnn.cpp" line="157" pragmaType="unroll" parentfunction="compute_tile" factor="8" skip_exit_check="0"/>
-<pragma file="src/srcnn.cpp" line="168" pragmaType="unroll" parentfunction="compute_tile" factor="8" skip_exit_check="0"/>
-<pragma file="src/srcnn.cpp" line="192" pragmaType="unroll" parentfunction="compute_tile" factor="8" skip_exit_check="0"/>
-<pragma file="src/srcnn.cpp" line="209" pragmaType="unroll" parentfunction="compute_tile" factor="8" skip_exit_check="0"/>
-<pragma file="src/srcnn.cpp" line="148" pragmaType="unroll" parentfunction="compute_tile" factor="8" skip_exit_check="0"/>
-<pragma file="src/srcnn.cpp" line="183" pragmaType="unroll" parentfunction="compute_tile" factor="-1" skip_exit_check="0"/>
-<pragma file="src/srcnn.cpp" line="138" pragmaType="pipeline" parentfunction="compute_tile" off="1" ii="0" rewind="0" style=""/>
-<pragma file="src/srcnn.cpp" line="215" pragmaType="unroll" parentfunction="compute_tile" factor="5" skip_exit_check="0"/>
-<pragma file="src/srcnn.cpp" line="78" pragmaType="bind_storage" parentfunction="compute_tile" op="666" impl="22" latency="-1" variable="linebuf"/>
-<pragma file="src/srcnn.cpp" line="79" pragmaType="array_partition" parentfunction="compute_tile" dim="2" factor="0" mode="complete" dynamic="0" variable="linebuf"/>
-<pragma file="src/srcnn.cpp" line="80" pragmaType="array_partition" parentfunction="compute_tile" dim="1" factor="8" mode="cyclic" dynamic="0" variable="linebuf"/>
-<pragma file="src/srcnn.cpp" line="83" pragmaType="array_partition" parentfunction="compute_tile" dim="2" factor="0" mode="complete" dynamic="0" variable="win"/>
-<pragma file="src/srcnn.cpp" line="84" pragmaType="array_partition" parentfunction="compute_tile" dim="3" factor="0" mode="complete" dynamic="0" variable="win"/>
-<pragma file="src/srcnn.cpp" line="85" pragmaType="array_partition" parentfunction="compute_tile" dim="1" factor="8" mode="cyclic" dynamic="0" variable="win"/>
-<pragma file="src/srcnn.cpp" line="94" pragmaType="allocation" parentfunction="compute_tile" type="0" limit="8" instances="mul "/>
-<pragma file="src/srcnn.cpp" line="95" pragmaType="allocation" parentfunction="compute_tile" type="0" limit="8" instances="add "/>
-<pragma file="src/srcnn.cpp" line="111" pragmaType="dependence" parentfunction="compute_tile" class="" direction="NODIR" type="inter" distance="0" variable="linebuf"/>
-<pragma file="src/srcnn.cpp" line="112" pragmaType="dependence" parentfunction="compute_tile" class="" direction="NODIR" type="inter" distance="0" variable="win"/>
-<pragma file="src/srcnn.cpp" line="116" pragmaType="array_partition" parentfunction="compute_tile" dim="1" factor="8" mode="cyclic" dynamic="0" variable="acc2"/>
-<pragma file="src/srcnn.cpp" line="154" pragmaType="array_partition" parentfunction="compute_tile" dim="1" factor="8" mode="cyclic" dynamic="0" variable="f2"/>
+<pragma file="src/srcnn.cpp" line="35" pragmaType="dataflow" parentfunction="load_tile_mm" disable_start_propagation="0"/>
+<pragma file="src/srcnn.cpp" line="54" pragmaType="pipeline" parentfunction="load_tile_mm" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="src/srcnn.cpp" line="77" pragmaType="inline" parentfunction="compute_tile" off="1" region="0" recursive="0"/>
+<pragma file="src/srcnn.cpp" line="78" pragmaType="dataflow" parentfunction="compute_tile" disable_start_propagation="0"/>
+<pragma file="src/srcnn.cpp" line="111" pragmaType="loop_flatten" parentfunction="compute_tile" off="1"/>
+<pragma file="src/srcnn.cpp" line="124" pragmaType="unroll" parentfunction="compute_tile" factor="8" skip_exit_check="0"/>
+<pragma file="src/srcnn.cpp" line="123" pragmaType="pipeline" parentfunction="compute_tile" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="src/srcnn.cpp" line="194" pragmaType="unroll" parentfunction="compute_tile" factor="8" skip_exit_check="0"/>
+<pragma file="src/srcnn.cpp" line="193" pragmaType="pipeline" parentfunction="compute_tile" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="src/srcnn.cpp" line="206" pragmaType="unroll" parentfunction="compute_tile" factor="8" skip_exit_check="0"/>
+<pragma file="src/srcnn.cpp" line="205" pragmaType="pipeline" parentfunction="compute_tile" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="src/srcnn.cpp" line="232" pragmaType="unroll" parentfunction="compute_tile" factor="8" skip_exit_check="0"/>
+<pragma file="src/srcnn.cpp" line="231" pragmaType="pipeline" parentfunction="compute_tile" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="src/srcnn.cpp" line="286" pragmaType="pipeline" parentfunction="compute_tile" off="0" ii="3" rewind="0" style=""/>
+<pragma file="src/srcnn.cpp" line="162" pragmaType="pipeline" parentfunction="compute_tile" off="0" ii="3" rewind="0" style=""/>
+<pragma file="src/srcnn.cpp" line="173" pragmaType="pipeline" parentfunction="compute_tile" off="1" ii="0" rewind="0" style=""/>
+<pragma file="src/srcnn.cpp" line="183" pragmaType="unroll" parentfunction="compute_tile" factor="8" skip_exit_check="0"/>
+<pragma file="src/srcnn.cpp" line="184" pragmaType="pipeline" parentfunction="compute_tile" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="src/srcnn.cpp" line="222" pragmaType="unroll" parentfunction="compute_tile" factor="4" skip_exit_check="0"/>
+<pragma file="src/srcnn.cpp" line="235" pragmaType="unroll" parentfunction="compute_tile" factor="3" skip_exit_check="0"/>
+<pragma file="src/srcnn.cpp" line="278" pragmaType="unroll" parentfunction="compute_tile" factor="-1" skip_exit_check="0"/>
+<pragma file="src/srcnn.cpp" line="289" pragmaType="unroll" parentfunction="compute_tile" factor="-1" skip_exit_check="0"/>
+<pragma file="src/srcnn.cpp" line="306" pragmaType="pipeline" parentfunction="compute_tile" off="1" ii="0" rewind="0" style=""/>
+<pragma file="src/srcnn.cpp" line="165" pragmaType="unroll" parentfunction="compute_tile" factor="-1" skip_exit_check="0"/>
+<pragma file="src/srcnn.cpp" line="293" pragmaType="unroll" parentfunction="compute_tile" factor="-1" skip_exit_check="0"/>
+<pragma file="src/srcnn.cpp" line="82" pragmaType="bind_storage" parentfunction="compute_tile" op="666" impl="22" latency="-1" variable="linebuf"/>
+<pragma file="src/srcnn.cpp" line="83" pragmaType="array_partition" parentfunction="compute_tile" dim="2" factor="0" mode="complete" dynamic="0" variable="linebuf"/>
+<pragma file="src/srcnn.cpp" line="84" pragmaType="array_partition" parentfunction="compute_tile" dim="1" factor="8" mode="cyclic" dynamic="0" variable="linebuf"/>
+<pragma file="src/srcnn.cpp" line="87" pragmaType="array_partition" parentfunction="compute_tile" dim="2" factor="0" mode="complete" dynamic="0" variable="win"/>
+<pragma file="src/srcnn.cpp" line="88" pragmaType="array_partition" parentfunction="compute_tile" dim="3" factor="0" mode="complete" dynamic="0" variable="win"/>
+<pragma file="src/srcnn.cpp" line="89" pragmaType="array_partition" parentfunction="compute_tile" dim="1" factor="8" mode="cyclic" dynamic="0" variable="win"/>
+<pragma file="src/srcnn.cpp" line="98" pragmaType="allocation" parentfunction="compute_tile" type="0" limit="8" instances="mul "/>
+<pragma file="src/srcnn.cpp" line="99" pragmaType="allocation" parentfunction="compute_tile" type="0" limit="8" instances="add "/>
+<pragma file="src/srcnn.cpp" line="115" pragmaType="dependence" parentfunction="compute_tile" class="" direction="NODIR" type="inter" distance="0" variable="linebuf"/>
+<pragma file="src/srcnn.cpp" line="116" pragmaType="dependence" parentfunction="compute_tile" class="" direction="NODIR" type="inter" distance="0" variable="win"/>
+<pragma file="src/srcnn.cpp" line="120" pragmaType="array_partition" parentfunction="compute_tile" dim="1" factor="8" mode="cyclic" dynamic="0" variable="acc2"/>
+<pragma file="src/srcnn.cpp" line="151" pragmaType="array_partition" parentfunction="compute_tile" dim="1" factor="0" mode="complete" dynamic="0" variable="v"/>
+<pragma file="src/srcnn.cpp" line="190" pragmaType="array_partition" parentfunction="compute_tile" dim="1" factor="8" mode="cyclic" dynamic="0" variable="f2"/>
+<pragma file="src/srcnn.cpp" line="273" pragmaType="array_partition" parentfunction="compute_tile" dim="1" factor="0" mode="complete" dynamic="0" variable="acc3"/>
+<pragma file="src/srcnn.cpp" line="274" pragmaType="array_partition" parentfunction="compute_tile" dim="2" factor="0" mode="complete" dynamic="0" variable="acc3"/>
 </pragmas>
