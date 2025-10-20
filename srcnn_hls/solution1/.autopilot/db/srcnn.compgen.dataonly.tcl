@@ -66,6 +66,14 @@ output_ftmap {
 	offset 100
 	offset_end 111
 }
+reload_weights { 
+	dir I
+	width 32
+	depth 1
+	mode ap_none
+	offset 112
+	offset_end 119
+}
 ap_start { }
 ap_done { }
 ap_ready { }

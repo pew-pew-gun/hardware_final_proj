@@ -57,25 +57,30 @@
 // 0x68 : Data signal of output_ftmap
 //        bit 31~0 - output_ftmap[63:32] (Read/Write)
 // 0x6c : reserved
+// 0x70 : Data signal of reload_weights
+//        bit 31~0 - reload_weights[31:0] (Read/Write)
+// 0x74 : reserved
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
-#define CTRL_ADDR_AP_CTRL            0x00
-#define CTRL_ADDR_GIE                0x04
-#define CTRL_ADDR_IER                0x08
-#define CTRL_ADDR_ISR                0x0c
-#define CTRL_ADDR_INPUT_FTMAP_DATA   0x10
-#define CTRL_BITS_INPUT_FTMAP_DATA   64
-#define CTRL_ADDR_CONV1_WEIGHTS_DATA 0x1c
-#define CTRL_BITS_CONV1_WEIGHTS_DATA 64
-#define CTRL_ADDR_CONV1_BIASES_DATA  0x28
-#define CTRL_BITS_CONV1_BIASES_DATA  64
-#define CTRL_ADDR_CONV2_WEIGHTS_DATA 0x34
-#define CTRL_BITS_CONV2_WEIGHTS_DATA 64
-#define CTRL_ADDR_CONV2_BIASES_DATA  0x40
-#define CTRL_BITS_CONV2_BIASES_DATA  64
-#define CTRL_ADDR_CONV3_WEIGHTS_DATA 0x4c
-#define CTRL_BITS_CONV3_WEIGHTS_DATA 64
-#define CTRL_ADDR_CONV3_BIASES_DATA  0x58
-#define CTRL_BITS_CONV3_BIASES_DATA  64
-#define CTRL_ADDR_OUTPUT_FTMAP_DATA  0x64
-#define CTRL_BITS_OUTPUT_FTMAP_DATA  64
+#define CTRL_ADDR_AP_CTRL             0x00
+#define CTRL_ADDR_GIE                 0x04
+#define CTRL_ADDR_IER                 0x08
+#define CTRL_ADDR_ISR                 0x0c
+#define CTRL_ADDR_INPUT_FTMAP_DATA    0x10
+#define CTRL_BITS_INPUT_FTMAP_DATA    64
+#define CTRL_ADDR_CONV1_WEIGHTS_DATA  0x1c
+#define CTRL_BITS_CONV1_WEIGHTS_DATA  64
+#define CTRL_ADDR_CONV1_BIASES_DATA   0x28
+#define CTRL_BITS_CONV1_BIASES_DATA   64
+#define CTRL_ADDR_CONV2_WEIGHTS_DATA  0x34
+#define CTRL_BITS_CONV2_WEIGHTS_DATA  64
+#define CTRL_ADDR_CONV2_BIASES_DATA   0x40
+#define CTRL_BITS_CONV2_BIASES_DATA   64
+#define CTRL_ADDR_CONV3_WEIGHTS_DATA  0x4c
+#define CTRL_BITS_CONV3_WEIGHTS_DATA  64
+#define CTRL_ADDR_CONV3_BIASES_DATA   0x58
+#define CTRL_BITS_CONV3_BIASES_DATA   64
+#define CTRL_ADDR_OUTPUT_FTMAP_DATA   0x64
+#define CTRL_BITS_OUTPUT_FTMAP_DATA   64
+#define CTRL_ADDR_RELOAD_WEIGHTS_DATA 0x70
+#define CTRL_BITS_RELOAD_WEIGHTS_DATA 32

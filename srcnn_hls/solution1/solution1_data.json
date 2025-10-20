@@ -246,6 +246,19 @@
           "direction": "in"
         }
       ]
+    },
+    "reload_weights": {
+      "index": "8",
+      "direction": "in",
+      "srcType": "int",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "register",
+          "interface": "s_axi_ctrl",
+          "name": "reload_weights",
+          "usage": "data",
+          "direction": "in"
+        }]
     }
   },
   "HlsSolution": {
@@ -281,60 +294,60 @@
       "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_29[*]]",
       "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_28[*]]",
       "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_27[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b1_loc_10[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b1_loc_11[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b1_loc_12[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b1_loc_13[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b1_loc_14[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b1_loc_15[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b1_loc_16[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b1_loc_17[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b1_loc_18[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b1_loc_19[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b1_loc_20[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b1_loc_21[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b1_loc_22[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b1_loc_23[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b1_loc_24[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b1_loc_25[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b1_loc_26[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b1_loc_27[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b1_loc_28[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b1_loc_29[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b1_loc_30[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b1_loc_31[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b1_loc_32[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b1_loc_33[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b1_loc_34[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b1_loc_35[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b1_loc_36[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b1_loc_37[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b1_loc_38[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b1_loc_39[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b1_loc_40[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b1_loc_41[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b1_loc_42[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b1_loc_43[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b1_loc_44[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b1_loc_45[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b1_loc_46[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b1_loc_47[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b1_loc_48[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b1_loc_49[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b1_loc_50[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b1_loc_51[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b1_loc_52[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b1_loc_53[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b1_loc_54[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b1_loc_55[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b1_loc_56[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b1_loc_57[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b1_loc_58[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b1_loc_59[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b1_loc_60[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b1_loc_61[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b1_loc_62[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b1_loc_63[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_10[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_11[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_12[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_13[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_14[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_15[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_16[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_17[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_18[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_19[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_20[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_21[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_22[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_23[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_24[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_25[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_26[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_27[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_28[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_29[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_30[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_31[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_32[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_33[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_34[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_35[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_36[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_37[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_38[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_39[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_40[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_41[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_42[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_43[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_44[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_45[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_46[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_47[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_48[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_49[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_50[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_51[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_52[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_53[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_54[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_55[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_56[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_57[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_58[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_59[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_60[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_61[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_62[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_63[*]]",
       "set_false_path -through [get_ports w1_loc[*]]",
       "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_26[*]]",
       "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_25[*]]",
@@ -346,28 +359,28 @@
       "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_19[*]]",
       "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_18[*]]",
       "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_17[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b2_loc_10[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b2_loc_11[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b2_loc_12[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b2_loc_13[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b2_loc_14[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b2_loc_15[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b2_loc_16[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b2_loc_17[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b2_loc_18[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b2_loc_19[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b2_loc_20[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b2_loc_21[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b2_loc_22[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b2_loc_23[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b2_loc_24[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b2_loc_25[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b2_loc_26[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b2_loc_27[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b2_loc_28[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b2_loc_29[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b2_loc_30[*]]",
-      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_E6b2_loc_31[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_10[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_11[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_12[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_13[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_14[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_15[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_16[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_17[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_18[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_19[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_20[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_21[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_22[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_23[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_24[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_25[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_26[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_27[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_28[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_29[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_30[*]]",
+      "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_31[*]]",
       "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_15[*]]",
       "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_14[*]]",
       "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13[*]]",
@@ -393,7 +406,7 @@
     "Name": "srcnn",
     "Version": "1.0",
     "DisplayName": "Srcnn",
-    "Revision": "2114311966",
+    "Revision": "2114312543",
     "Description": "An IP generated by Vitis HLS",
     "Taxonomy": "\/VITIS_HLS_IP",
     "AutoFamilySupport": "",
@@ -405,23 +418,22 @@
       "..\/..\/src\/srcnn.cpp"
     ],
     "Vhdl": [
-      "impl\/vhdl\/srcnn_am_addmul_8ns_4ns_9ns_17_4_1.vhd",
       "impl\/vhdl\/srcnn_compute_tile.vhd",
       "impl\/vhdl\/srcnn_compute_tile_linebuf_RAM_2P_BRAM_1R1W.vhd",
-      "impl\/vhdl\/srcnn_compute_tile_Pipeline_VITIS_LOOP_114_3.vhd",
-      "impl\/vhdl\/srcnn_compute_tile_Pipeline_VITIS_LOOP_139_7.vhd",
-      "impl\/vhdl\/srcnn_compute_tile_Pipeline_VITIS_LOOP_147_8.vhd",
-      "impl\/vhdl\/srcnn_compute_tile_Pipeline_VITIS_LOOP_157_9.vhd",
-      "impl\/vhdl\/srcnn_compute_tile_Pipeline_VITIS_LOOP_178_12.vhd",
-      "impl\/vhdl\/srcnn_compute_tile_Pipeline_VITIS_LOOP_193_14.vhd",
+      "impl\/vhdl\/srcnn_compute_tile_Pipeline_Conv2_dot32.vhd",
+      "impl\/vhdl\/srcnn_compute_tile_Pipeline_Conv2_ReLU.vhd",
+      "impl\/vhdl\/srcnn_compute_tile_Pipeline_Conv2Out_biases.vhd",
+      "impl\/vhdl\/srcnn_compute_tile_Pipeline_Conv3_inputft.vhd",
+      "impl\/vhdl\/srcnn_compute_tile_Pipeline_Shift_win32.vhd",
+      "impl\/vhdl\/srcnn_compute_tile_Pipeline_Update_linebuf32.vhd",
       "impl\/vhdl\/srcnn_compute_tile_win_1_RAM_AUTO_1R1W.vhd",
       "impl\/vhdl\/srcnn_compute_tile_win_RAM_AUTO_1R1W.vhd",
       "impl\/vhdl\/srcnn_ctrl_s_axi.vhd",
-      "impl\/vhdl\/srcnn_dataflow_in_loop_VITIS_LOOP_400_12.vhd",
-      "impl\/vhdl\/srcnn_dataflow_in_loop_VITIS_LOOP_400_12_inbuf_RAM_1P_BRAM_1R1W.vhd",
-      "impl\/vhdl\/srcnn_dataflow_in_loop_VITIS_LOOP_400_12_inbuf_RAM_1P_BRAM_1R1W_memcore.vhd",
-      "impl\/vhdl\/srcnn_dataflow_in_loop_VITIS_LOOP_400_12_outbuf_RAM_1P_BRAM_1R1W.vhd",
-      "impl\/vhdl\/srcnn_dataflow_in_loop_VITIS_LOOP_400_12_outbuf_RAM_1P_BRAM_1R1W_memcore.vhd",
+      "impl\/vhdl\/srcnn_dataflow_in_loop_IT_w0.vhd",
+      "impl\/vhdl\/srcnn_dataflow_in_loop_IT_w0_inbuf_RAM_1P_BRAM_1R1W.vhd",
+      "impl\/vhdl\/srcnn_dataflow_in_loop_IT_w0_inbuf_RAM_1P_BRAM_1R1W_memcore.vhd",
+      "impl\/vhdl\/srcnn_dataflow_in_loop_IT_w0_outbuf_RAM_1P_BRAM_1R1W.vhd",
+      "impl\/vhdl\/srcnn_dataflow_in_loop_IT_w0_outbuf_RAM_1P_BRAM_1R1W_memcore.vhd",
       "impl\/vhdl\/srcnn_entry_proc.vhd",
       "impl\/vhdl\/srcnn_fadd_32ns_32ns_32_4_full_dsp_1.vhd",
       "impl\/vhdl\/srcnn_fcmp_32ns_32ns_1_2_no_dsp_1.vhd",
@@ -436,41 +448,38 @@
       "impl\/vhdl\/srcnn_gmem_w2_m_axi.vhd",
       "impl\/vhdl\/srcnn_gmem_w3_m_axi.vhd",
       "impl\/vhdl\/srcnn_load_tile_mm.vhd",
-      "impl\/vhdl\/srcnn_load_tile_mm_Pipeline_VITIS_LOOP_40_1_VITIS_LOOP_48_2.vhd",
       "impl\/vhdl\/srcnn_mul_2ns_6ns_7_1_1.vhd",
-      "impl\/vhdl\/srcnn_mul_8ns_8ns_16_1_1.vhd",
       "impl\/vhdl\/srcnn_mux_5_3_32_1_1.vhd",
       "impl\/vhdl\/srcnn_mux_25_5_32_1_1.vhd",
       "impl\/vhdl\/srcnn_mux_64_6_32_1_1.vhd",
       "impl\/vhdl\/srcnn_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_7_RAM_1P_BRAM_1R1W.vhd",
       "impl\/vhdl\/srcnn_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_15_RAM_1P_BRAM_1R1W.vhd",
-      "impl\/vhdl\/srcnn_srcnn_Pipeline_VITIS_LOOP_346_2_VITIS_LOOP_348_3.vhd",
-      "impl\/vhdl\/srcnn_srcnn_Pipeline_VITIS_LOOP_374_8_VITIS_LOOP_375_9_VITIS_LOOP_377_10.vhd",
+      "impl\/vhdl\/srcnn_srcnn_Pipeline_CopyW1_ky_CopyW1_kx.vhd",
+      "impl\/vhdl\/srcnn_srcnn_Pipeline_CopyW2_inft.vhd",
+      "impl\/vhdl\/srcnn_srcnn_Pipeline_CopyW3_inft_CopyW3_ky_CopyW3_kx.vhd",
       "impl\/vhdl\/srcnn_store_tile_mm.vhd",
-      "impl\/vhdl\/srcnn_store_tile_mm_Pipeline_VITIS_LOOP_225_2.vhd",
       "impl\/vhdl\/srcnn_w1_loc_RAM_1P_LUTRAM_1R1W.vhd",
       "impl\/vhdl\/srcnn.vhd"
     ],
     "Verilog": [
-      "impl\/verilog\/srcnn_am_addmul_8ns_4ns_9ns_17_4_1.v",
       "impl\/verilog\/srcnn_compute_tile.v",
       "impl\/verilog\/srcnn_compute_tile_linebuf_RAM_2P_BRAM_1R1W.v",
-      "impl\/verilog\/srcnn_compute_tile_Pipeline_VITIS_LOOP_114_3.v",
-      "impl\/verilog\/srcnn_compute_tile_Pipeline_VITIS_LOOP_139_7.v",
-      "impl\/verilog\/srcnn_compute_tile_Pipeline_VITIS_LOOP_147_8.v",
-      "impl\/verilog\/srcnn_compute_tile_Pipeline_VITIS_LOOP_157_9.v",
-      "impl\/verilog\/srcnn_compute_tile_Pipeline_VITIS_LOOP_178_12.v",
-      "impl\/verilog\/srcnn_compute_tile_Pipeline_VITIS_LOOP_193_14.v",
+      "impl\/verilog\/srcnn_compute_tile_Pipeline_Conv2_dot32.v",
+      "impl\/verilog\/srcnn_compute_tile_Pipeline_Conv2_ReLU.v",
+      "impl\/verilog\/srcnn_compute_tile_Pipeline_Conv2Out_biases.v",
+      "impl\/verilog\/srcnn_compute_tile_Pipeline_Conv3_inputft.v",
+      "impl\/verilog\/srcnn_compute_tile_Pipeline_Shift_win32.v",
+      "impl\/verilog\/srcnn_compute_tile_Pipeline_Update_linebuf32.v",
       "impl\/verilog\/srcnn_compute_tile_win_1_RAM_AUTO_1R1W.v",
       "impl\/verilog\/srcnn_compute_tile_win_RAM_AUTO_1R1W.v",
       "impl\/verilog\/srcnn_ctrl_s_axi.v",
-      "impl\/verilog\/srcnn_dataflow_in_loop_VITIS_LOOP_400_12.v",
-      "impl\/verilog\/srcnn_dataflow_in_loop_VITIS_LOOP_400_12_inbuf_RAM_1P_BRAM_1R1W.v",
-      "impl\/verilog\/srcnn_dataflow_in_loop_VITIS_LOOP_400_12_inbuf_RAM_1P_BRAM_1R1W_memcore.dat",
-      "impl\/verilog\/srcnn_dataflow_in_loop_VITIS_LOOP_400_12_inbuf_RAM_1P_BRAM_1R1W_memcore.v",
-      "impl\/verilog\/srcnn_dataflow_in_loop_VITIS_LOOP_400_12_outbuf_RAM_1P_BRAM_1R1W.v",
-      "impl\/verilog\/srcnn_dataflow_in_loop_VITIS_LOOP_400_12_outbuf_RAM_1P_BRAM_1R1W_memcore.dat",
-      "impl\/verilog\/srcnn_dataflow_in_loop_VITIS_LOOP_400_12_outbuf_RAM_1P_BRAM_1R1W_memcore.v",
+      "impl\/verilog\/srcnn_dataflow_in_loop_IT_w0.v",
+      "impl\/verilog\/srcnn_dataflow_in_loop_IT_w0_inbuf_RAM_1P_BRAM_1R1W.v",
+      "impl\/verilog\/srcnn_dataflow_in_loop_IT_w0_inbuf_RAM_1P_BRAM_1R1W_memcore.dat",
+      "impl\/verilog\/srcnn_dataflow_in_loop_IT_w0_inbuf_RAM_1P_BRAM_1R1W_memcore.v",
+      "impl\/verilog\/srcnn_dataflow_in_loop_IT_w0_outbuf_RAM_1P_BRAM_1R1W.v",
+      "impl\/verilog\/srcnn_dataflow_in_loop_IT_w0_outbuf_RAM_1P_BRAM_1R1W_memcore.dat",
+      "impl\/verilog\/srcnn_dataflow_in_loop_IT_w0_outbuf_RAM_1P_BRAM_1R1W_memcore.v",
       "impl\/verilog\/srcnn_entry_proc.v",
       "impl\/verilog\/srcnn_fadd_32ns_32ns_32_4_full_dsp_1.v",
       "impl\/verilog\/srcnn_fcmp_32ns_32ns_1_2_no_dsp_1.v",
@@ -488,9 +497,7 @@
       "impl\/verilog\/srcnn_hls_deadlock_detector.vh",
       "impl\/verilog\/srcnn_hls_deadlock_report_unit.vh",
       "impl\/verilog\/srcnn_load_tile_mm.v",
-      "impl\/verilog\/srcnn_load_tile_mm_Pipeline_VITIS_LOOP_40_1_VITIS_LOOP_48_2.v",
       "impl\/verilog\/srcnn_mul_2ns_6ns_7_1_1.v",
-      "impl\/verilog\/srcnn_mul_8ns_8ns_16_1_1.v",
       "impl\/verilog\/srcnn_mux_5_3_32_1_1.v",
       "impl\/verilog\/srcnn_mux_25_5_32_1_1.v",
       "impl\/verilog\/srcnn_mux_64_6_32_1_1.v",
@@ -498,10 +505,10 @@
       "impl\/verilog\/srcnn_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_7_RAM_1P_BRAM_1R1W.v",
       "impl\/verilog\/srcnn_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_15_RAM_1P_BRAM_1R1W.dat",
       "impl\/verilog\/srcnn_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_15_RAM_1P_BRAM_1R1W.v",
-      "impl\/verilog\/srcnn_srcnn_Pipeline_VITIS_LOOP_346_2_VITIS_LOOP_348_3.v",
-      "impl\/verilog\/srcnn_srcnn_Pipeline_VITIS_LOOP_374_8_VITIS_LOOP_375_9_VITIS_LOOP_377_10.v",
+      "impl\/verilog\/srcnn_srcnn_Pipeline_CopyW1_ky_CopyW1_kx.v",
+      "impl\/verilog\/srcnn_srcnn_Pipeline_CopyW2_inft.v",
+      "impl\/verilog\/srcnn_srcnn_Pipeline_CopyW3_inft_CopyW3_ky_CopyW3_kx.v",
       "impl\/verilog\/srcnn_store_tile_mm.v",
-      "impl\/verilog\/srcnn_store_tile_mm_Pipeline_VITIS_LOOP_225_2.v",
       "impl\/verilog\/srcnn_w1_loc_RAM_1P_LUTRAM_1R1W.dat",
       "impl\/verilog\/srcnn_w1_loc_RAM_1P_LUTRAM_1R1W.v",
       "impl\/verilog\/srcnn.v"
@@ -958,6 +965,20 @@
               "access": "W",
               "description": "Bit 63 to 32 of output_ftmap"
             }]
+        },
+        {
+          "offset": "0x70",
+          "name": "reload_weights",
+          "access": "W",
+          "description": "Data signal of reload_weights",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "reload_weights",
+              "access": "W",
+              "description": "Bit 31 to 0 of reload_weights"
+            }]
         }
       ],
       "constraints": [
@@ -1016,6 +1037,13 @@
           "register_option": "0",
           "offset": "100",
           "argName": "output_ftmap"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "112",
+          "argName": "reload_weights"
         }
       ]
     },
@@ -2592,16 +2620,20 @@
       "ModuleName": "srcnn",
       "Instances": [
         {
-          "ModuleName": "srcnn_Pipeline_VITIS_LOOP_346_2_VITIS_LOOP_348_3",
-          "InstanceName": "grp_srcnn_Pipeline_VITIS_LOOP_346_2_VITIS_LOOP_348_3_fu_867"
+          "ModuleName": "srcnn_Pipeline_CopyW1_ky_CopyW1_kx",
+          "InstanceName": "grp_srcnn_Pipeline_CopyW1_ky_CopyW1_kx_fu_746"
         },
         {
-          "ModuleName": "srcnn_Pipeline_VITIS_LOOP_374_8_VITIS_LOOP_375_9_VITIS_LOOP_377_10",
-          "InstanceName": "grp_srcnn_Pipeline_VITIS_LOOP_374_8_VITIS_LOOP_375_9_VITIS_LOOP_377_10_fu_878"
+          "ModuleName": "srcnn_Pipeline_CopyW2_inft",
+          "InstanceName": "grp_srcnn_Pipeline_CopyW2_inft_fu_757"
         },
         {
-          "ModuleName": "dataflow_in_loop_VITIS_LOOP_400_12",
-          "InstanceName": "grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901",
+          "ModuleName": "srcnn_Pipeline_CopyW3_inft_CopyW3_ky_CopyW3_kx",
+          "InstanceName": "grp_srcnn_Pipeline_CopyW3_inft_CopyW3_ky_CopyW3_kx_fu_783"
+        },
+        {
+          "ModuleName": "dataflow_in_loop_IT_w0",
+          "InstanceName": "grp_dataflow_in_loop_IT_w0_fu_806",
           "Instances": [
             {
               "ModuleName": "entry_proc",
@@ -2609,63 +2641,62 @@
             },
             {
               "ModuleName": "load_tile_mm",
-              "InstanceName": "load_tile_mm_U0",
-              "Instances": [{
-                  "ModuleName": "load_tile_mm_Pipeline_VITIS_LOOP_40_1_VITIS_LOOP_48_2",
-                  "InstanceName": "grp_load_tile_mm_Pipeline_VITIS_LOOP_40_1_VITIS_LOOP_48_2_fu_94"
-                }]
+              "InstanceName": "load_tile_mm_U0"
             },
             {
               "ModuleName": "compute_tile",
               "InstanceName": "compute_tile_U0",
               "Instances": [
                 {
-                  "ModuleName": "compute_tile_Pipeline_VITIS_LOOP_114_3",
-                  "InstanceName": "grp_compute_tile_Pipeline_VITIS_LOOP_114_3_fu_2247"
+                  "ModuleName": "compute_tile_Pipeline_Conv2Out_biases",
+                  "InstanceName": "grp_compute_tile_Pipeline_Conv2Out_biases_fu_2247"
                 },
                 {
-                  "ModuleName": "compute_tile_Pipeline_VITIS_LOOP_147_8",
-                  "InstanceName": "grp_compute_tile_Pipeline_VITIS_LOOP_147_8_fu_2291"
+                  "ModuleName": "compute_tile_Pipeline_Conv2_ReLU",
+                  "InstanceName": "grp_compute_tile_Pipeline_Conv2_ReLU_fu_2291"
                 },
                 {
-                  "ModuleName": "compute_tile_Pipeline_VITIS_LOOP_139_7",
-                  "InstanceName": "grp_compute_tile_Pipeline_VITIS_LOOP_139_7_fu_2311"
+                  "ModuleName": "compute_tile_Pipeline_Conv2_dot32",
+                  "InstanceName": "grp_compute_tile_Pipeline_Conv2_dot32_fu_2311"
                 },
                 {
-                  "ModuleName": "compute_tile_Pipeline_VITIS_LOOP_157_9",
-                  "InstanceName": "grp_compute_tile_Pipeline_VITIS_LOOP_157_9_fu_2341"
+                  "ModuleName": "compute_tile_Pipeline_Shift_win32",
+                  "InstanceName": "grp_compute_tile_Pipeline_Shift_win32_fu_2341"
                 },
                 {
-                  "ModuleName": "compute_tile_Pipeline_VITIS_LOOP_178_12",
-                  "InstanceName": "grp_compute_tile_Pipeline_VITIS_LOOP_178_12_fu_2587"
+                  "ModuleName": "compute_tile_Pipeline_Update_linebuf32",
+                  "InstanceName": "grp_compute_tile_Pipeline_Update_linebuf32_fu_2587"
                 },
                 {
-                  "ModuleName": "compute_tile_Pipeline_VITIS_LOOP_193_14",
-                  "InstanceName": "grp_compute_tile_Pipeline_VITIS_LOOP_193_14_fu_2633"
+                  "ModuleName": "compute_tile_Pipeline_Conv3_inputft",
+                  "InstanceName": "grp_compute_tile_Pipeline_Conv3_inputft_fu_2633"
                 }
               ]
             },
             {
               "ModuleName": "store_tile_mm",
-              "InstanceName": "store_tile_mm_U0",
-              "Instances": [{
-                  "ModuleName": "store_tile_mm_Pipeline_VITIS_LOOP_225_2",
-                  "InstanceName": "grp_store_tile_mm_Pipeline_VITIS_LOOP_225_2_fu_98"
-                }]
+              "InstanceName": "store_tile_mm_U0"
             }
           ]
         }
       ]
     },
     "Info": {
-      "srcnn_Pipeline_VITIS_LOOP_346_2_VITIS_LOOP_348_3": {
+      "srcnn_Pipeline_CopyW1_ky_CopyW1_kx": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "0",
         "isPipelined": "1",
         "isCombinational": "0",
         "isOneStateSeq": "0"
       },
-      "srcnn_Pipeline_VITIS_LOOP_374_8_VITIS_LOOP_375_9_VITIS_LOOP_377_10": {
+      "srcnn_Pipeline_CopyW2_inft": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "srcnn_Pipeline_CopyW3_inft_CopyW3_ky_CopyW3_kx": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "0",
         "isPipelined": "1",
@@ -2679,13 +2710,6 @@
         "isCombinational": "0",
         "isOneStateSeq": "1"
       },
-      "load_tile_mm_Pipeline_VITIS_LOOP_40_1_VITIS_LOOP_48_2": {
-        "FunctionProtocol": "ap_ctrl_hs",
-        "isTaskLevelControl": "0",
-        "isPipelined": "1",
-        "isCombinational": "0",
-        "isOneStateSeq": "0"
-      },
       "load_tile_mm": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "0",
@@ -2693,42 +2717,42 @@
         "isCombinational": "0",
         "isOneStateSeq": "0"
       },
-      "compute_tile_Pipeline_VITIS_LOOP_114_3": {
+      "compute_tile_Pipeline_Conv2Out_biases": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "0",
         "isPipelined": "1",
         "isCombinational": "0",
         "isOneStateSeq": "0"
       },
-      "compute_tile_Pipeline_VITIS_LOOP_139_7": {
+      "compute_tile_Pipeline_Conv2_dot32": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "0",
         "isPipelined": "1",
         "isCombinational": "0",
         "isOneStateSeq": "0"
       },
-      "compute_tile_Pipeline_VITIS_LOOP_147_8": {
+      "compute_tile_Pipeline_Conv2_ReLU": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "0",
         "isPipelined": "1",
         "isCombinational": "0",
         "isOneStateSeq": "0"
       },
-      "compute_tile_Pipeline_VITIS_LOOP_157_9": {
+      "compute_tile_Pipeline_Shift_win32": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "0",
         "isPipelined": "1",
         "isCombinational": "0",
         "isOneStateSeq": "0"
       },
-      "compute_tile_Pipeline_VITIS_LOOP_178_12": {
+      "compute_tile_Pipeline_Update_linebuf32": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "0",
         "isPipelined": "1",
         "isCombinational": "0",
         "isOneStateSeq": "0"
       },
-      "compute_tile_Pipeline_VITIS_LOOP_193_14": {
+      "compute_tile_Pipeline_Conv3_inputft": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "0",
         "isPipelined": "0",
@@ -2742,13 +2766,6 @@
         "isCombinational": "0",
         "isOneStateSeq": "0"
       },
-      "store_tile_mm_Pipeline_VITIS_LOOP_225_2": {
-        "FunctionProtocol": "ap_ctrl_hs",
-        "isTaskLevelControl": "0",
-        "isPipelined": "1",
-        "isCombinational": "0",
-        "isOneStateSeq": "0"
-      },
       "store_tile_mm": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "0",
@@ -2756,7 +2773,7 @@
         "isCombinational": "0",
         "isOneStateSeq": "0"
       },
-      "dataflow_in_loop_VITIS_LOOP_400_12": {
+      "dataflow_in_loop_IT_w0": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "0",
         "isPipelined": "1",
@@ -2772,7 +2789,7 @@
       }
     },
     "Metrics": {
-      "srcnn_Pipeline_VITIS_LOOP_346_2_VITIS_LOOP_348_3": {
+      "srcnn_Pipeline_CopyW1_ky_CopyW1_kx": {
         "Latency": {
           "LatencyBest": "92",
           "LatencyAvg": "92",
@@ -2787,7 +2804,7 @@
           "Estimate": "7.300"
         },
         "Loops": [{
-            "Name": "VITIS_LOOP_346_2_VITIS_LOOP_348_3",
+            "Name": "CopyW1_ky_CopyW1_kx",
             "TripCount": "81",
             "Latency": "90",
             "PipelineII": "1",
@@ -2811,7 +2828,46 @@
           "UTIL_URAM": "0"
         }
       },
-      "srcnn_Pipeline_VITIS_LOOP_374_8_VITIS_LOOP_375_9_VITIS_LOOP_377_10": {
+      "srcnn_Pipeline_CopyW2_inft": {
+        "Latency": {
+          "LatencyBest": "75",
+          "LatencyAvg": "75",
+          "LatencyWorst": "75",
+          "PipelineII": "75",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "7.300"
+        },
+        "Loops": [{
+            "Name": "CopyW2_inft",
+            "TripCount": "64",
+            "Latency": "73",
+            "PipelineII": "1",
+            "PipelineDepth": "11"
+          }],
+        "Area": {
+          "FF": "195",
+          "AVAIL_FF": "234240",
+          "UTIL_FF": "~0",
+          "LUT": "223",
+          "AVAIL_LUT": "117120",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "288",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "1248",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "64",
+          "UTIL_URAM": "0"
+        }
+      },
+      "srcnn_Pipeline_CopyW3_inft_CopyW3_ky_CopyW3_kx": {
         "Latency": {
           "LatencyBest": "803",
           "LatencyAvg": "803",
@@ -2826,7 +2882,7 @@
           "Estimate": "7.300"
         },
         "Loops": [{
-            "Name": "VITIS_LOOP_374_8_VITIS_LOOP_375_9_VITIS_LOOP_377_10",
+            "Name": "CopyW3_inft_CopyW3_ky_CopyW3_kx",
             "TripCount": "800",
             "Latency": "801",
             "PipelineII": "1",
@@ -2882,14 +2938,12 @@
           "UTIL_URAM": "0"
         }
       },
-      "load_tile_mm_Pipeline_VITIS_LOOP_40_1_VITIS_LOOP_48_2": {
+      "load_tile_mm": {
         "Latency": {
-          "LatencyBest": "155",
+          "LatencyBest": "",
           "LatencyAvg": "",
-          "LatencyWorst": "71300",
-          "PipelineIIMin": "155",
-          "PipelineIIMax": "71300",
-          "PipelineII": "155 ~ 71300",
+          "LatencyWorst": "",
+          "PipelineII": "",
           "PipelineDepth": "",
           "PipelineType": "no"
         },
@@ -2899,19 +2953,24 @@
           "Estimate": "7.300"
         },
         "Loops": [{
-            "Name": "VITIS_LOOP_40_1_VITIS_LOOP_48_2",
+            "Name": "InputTileHread",
             "TripCount": "",
-            "LatencyMin": "153",
-            "LatencyMax": "71298",
-            "Latency": "153 ~ 71298",
-            "PipelineII": "1",
-            "PipelineDepth": "11"
+            "Latency": "",
+            "PipelineII": "",
+            "PipelineDepth": "",
+            "Loops": [{
+                "Name": "InputTileWread",
+                "TripCount": "",
+                "Latency": "",
+                "PipelineII": "",
+                "PipelineDepth": "11"
+              }]
           }],
         "Area": {
-          "FF": "265",
+          "FF": "272",
           "AVAIL_FF": "234240",
           "UTIL_FF": "~0",
-          "LUT": "650",
+          "LUT": "653",
           "AVAIL_LUT": "117120",
           "UTIL_LUT": "~0",
           "BRAM_18K": "0",
@@ -2925,41 +2984,7 @@
           "UTIL_URAM": "0"
         }
       },
-      "load_tile_mm": {
-        "Latency": {
-          "LatencyBest": "159",
-          "LatencyAvg": "",
-          "LatencyWorst": "71304",
-          "PipelineIIMin": "159",
-          "PipelineIIMax": "71304",
-          "PipelineII": "159 ~ 71304",
-          "PipelineDepth": "",
-          "PipelineType": "no"
-        },
-        "Timing": {
-          "Target": "10.00",
-          "Uncertainty": "2.70",
-          "Estimate": "7.300"
-        },
-        "Area": {
-          "DSP": "1",
-          "AVAIL_DSP": "1248",
-          "UTIL_DSP": "~0",
-          "FF": "344",
-          "AVAIL_FF": "234240",
-          "UTIL_FF": "~0",
-          "LUT": "854",
-          "AVAIL_LUT": "117120",
-          "UTIL_LUT": "~0",
-          "BRAM_18K": "0",
-          "AVAIL_BRAM": "288",
-          "UTIL_BRAM": "0",
-          "URAM": "0",
-          "AVAIL_URAM": "64",
-          "UTIL_URAM": "0"
-        }
-      },
-      "compute_tile_Pipeline_VITIS_LOOP_114_3": {
+      "compute_tile_Pipeline_Conv2Out_biases": {
         "Latency": {
           "LatencyBest": "6",
           "LatencyAvg": "6",
@@ -2974,7 +2999,7 @@
           "Estimate": "1.554"
         },
         "Loops": [{
-            "Name": "VITIS_LOOP_114_3",
+            "Name": "Conv2Out_biases",
             "TripCount": "4",
             "Latency": "4",
             "PipelineII": "1",
@@ -2998,7 +3023,7 @@
           "UTIL_URAM": "0"
         }
       },
-      "compute_tile_Pipeline_VITIS_LOOP_139_7": {
+      "compute_tile_Pipeline_Conv2_dot32": {
         "Latency": {
           "LatencyBest": "13",
           "LatencyAvg": "13",
@@ -3013,7 +3038,7 @@
           "Estimate": "7.114"
         },
         "Loops": [{
-            "Name": "VITIS_LOOP_139_7",
+            "Name": "Conv2_dot32",
             "TripCount": "4",
             "Latency": "11",
             "PipelineII": "1",
@@ -3037,7 +3062,7 @@
           "UTIL_URAM": "0"
         }
       },
-      "compute_tile_Pipeline_VITIS_LOOP_147_8": {
+      "compute_tile_Pipeline_Conv2_ReLU": {
         "Latency": {
           "LatencyBest": "7",
           "LatencyAvg": "7",
@@ -3052,7 +3077,7 @@
           "Estimate": "3.908"
         },
         "Loops": [{
-            "Name": "VITIS_LOOP_147_8",
+            "Name": "Conv2_ReLU",
             "TripCount": "4",
             "Latency": "5",
             "PipelineII": "1",
@@ -3076,7 +3101,7 @@
           "UTIL_URAM": "0"
         }
       },
-      "compute_tile_Pipeline_VITIS_LOOP_157_9": {
+      "compute_tile_Pipeline_Shift_win32": {
         "Latency": {
           "LatencyBest": "6",
           "LatencyAvg": "6",
@@ -3091,7 +3116,7 @@
           "Estimate": "2.010"
         },
         "Loops": [{
-            "Name": "VITIS_LOOP_157_9",
+            "Name": "Shift_win32",
             "TripCount": "4",
             "Latency": "4",
             "PipelineII": "1",
@@ -3115,7 +3140,7 @@
           "UTIL_URAM": "0"
         }
       },
-      "compute_tile_Pipeline_VITIS_LOOP_178_12": {
+      "compute_tile_Pipeline_Update_linebuf32": {
         "Latency": {
           "LatencyBest": "6",
           "LatencyAvg": "6",
@@ -3130,7 +3155,7 @@
           "Estimate": "2.474"
         },
         "Loops": [{
-            "Name": "VITIS_LOOP_178_12",
+            "Name": "Update_linebuf32",
             "TripCount": "4",
             "Latency": "4",
             "PipelineII": "1",
@@ -3154,7 +3179,7 @@
           "UTIL_URAM": "0"
         }
       },
-      "compute_tile_Pipeline_VITIS_LOOP_193_14": {
+      "compute_tile_Pipeline_Conv3_inputft": {
         "Latency": {
           "LatencyBest": "3221",
           "LatencyAvg": "3221",
@@ -3169,7 +3194,7 @@
           "Estimate": "7.774"
         },
         "Loops": [{
-            "Name": "VITIS_LOOP_193_14",
+            "Name": "Conv3_inputft",
             "TripCount": "4",
             "Latency": "3220",
             "PipelineII": "",
@@ -3210,7 +3235,7 @@
           "Estimate": "7.774"
         },
         "Loops": [{
-            "Name": "VITIS_LOOP_103_1",
+            "Name": "ITRowcomp",
             "TripCount": "",
             "LatencyMin": "782888",
             "LatencyMax": "3498408830",
@@ -3220,7 +3245,7 @@
             "PipelineDepthMax": "13507370",
             "PipelineDepth": "195722 ~ 13507370",
             "Loops": [{
-                "Name": "VITIS_LOOP_106_2",
+                "Name": "ITColcomp",
                 "TripCount": "",
                 "LatencyMin": "195720",
                 "LatencyMax": "13507368",
@@ -3230,19 +3255,19 @@
                 "PipelineDepthMax": "52152",
                 "PipelineDepth": "48930 ~ 52152",
                 "Loops": [{
-                    "Name": "VITIS_LOOP_120_4",
+                    "Name": "Conv1_outftmaps",
                     "TripCount": "64",
                     "Latency": "48896",
                     "PipelineII": "",
                     "PipelineDepth": "764",
                     "Loops": [{
-                        "Name": "VITIS_LOOP_126_5",
+                        "Name": "Conv1_ky",
                         "TripCount": "9",
                         "Latency": "747",
                         "PipelineII": "",
                         "PipelineDepth": "83",
                         "Loops": [{
-                            "Name": "VITIS_LOOP_129_6",
+                            "Name": "Conv1_kx",
                             "TripCount": "9",
                             "Latency": "81",
                             "PipelineII": "",
@@ -3270,45 +3295,6 @@
           "UTIL_URAM": "0"
         }
       },
-      "store_tile_mm_Pipeline_VITIS_LOOP_225_2": {
-        "Latency": {
-          "LatencyBest": "",
-          "LatencyAvg": "",
-          "LatencyWorst": "",
-          "PipelineII": "",
-          "PipelineDepth": "",
-          "PipelineType": "no"
-        },
-        "Timing": {
-          "Target": "10.00",
-          "Uncertainty": "2.70",
-          "Estimate": "7.300"
-        },
-        "Loops": [{
-            "Name": "VITIS_LOOP_223_1_VITIS_LOOP_225_2",
-            "TripCount": "",
-            "Latency": "",
-            "PipelineII": "1",
-            "PipelineDepth": "8"
-          }],
-        "Area": {
-          "FF": "216",
-          "AVAIL_FF": "234240",
-          "UTIL_FF": "~0",
-          "LUT": "517",
-          "AVAIL_LUT": "117120",
-          "UTIL_LUT": "~0",
-          "BRAM_18K": "0",
-          "AVAIL_BRAM": "288",
-          "UTIL_BRAM": "0",
-          "DSP": "0",
-          "AVAIL_DSP": "1248",
-          "UTIL_DSP": "0",
-          "URAM": "0",
-          "AVAIL_URAM": "64",
-          "UTIL_URAM": "0"
-        }
-      },
       "store_tile_mm": {
         "Latency": {
           "LatencyBest": "",
@@ -3323,25 +3309,39 @@
           "Uncertainty": "2.70",
           "Estimate": "7.300"
         },
+        "Loops": [{
+            "Name": "Out_writey",
+            "TripCount": "",
+            "Latency": "",
+            "PipelineII": "",
+            "PipelineDepth": "",
+            "Loops": [{
+                "Name": "Out_writex",
+                "TripCount": "",
+                "Latency": "",
+                "PipelineII": "",
+                "PipelineDepth": "3"
+              }]
+          }],
         "Area": {
-          "DSP": "0",
-          "AVAIL_DSP": "1248",
-          "UTIL_DSP": "0",
-          "FF": "327",
+          "FF": "252",
           "AVAIL_FF": "234240",
           "UTIL_FF": "~0",
-          "LUT": "690",
+          "LUT": "433",
           "AVAIL_LUT": "117120",
           "UTIL_LUT": "~0",
           "BRAM_18K": "0",
           "AVAIL_BRAM": "288",
           "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "1248",
+          "UTIL_DSP": "0",
           "URAM": "0",
           "AVAIL_URAM": "64",
           "UTIL_URAM": "0"
         }
       },
-      "dataflow_in_loop_VITIS_LOOP_400_12": {
+      "dataflow_in_loop_IT_w0": {
         "Latency": {
           "LatencyBest": "",
           "LatencyAvg": "",
@@ -3359,15 +3359,15 @@
           "BRAM_18K": "42",
           "AVAIL_BRAM": "288",
           "UTIL_BRAM": "14",
-          "DSP": "164",
+          "DSP": "163",
           "AVAIL_DSP": "1248",
           "UTIL_DSP": "13",
-          "FF": "38784",
+          "FF": "38637",
           "AVAIL_FF": "234240",
           "UTIL_FF": "16",
-          "LUT": "42416",
+          "LUT": "41958",
           "AVAIL_LUT": "117120",
-          "UTIL_LUT": "36",
+          "UTIL_LUT": "35",
           "URAM": "0",
           "AVAIL_URAM": "64",
           "UTIL_URAM": "0"
@@ -3389,34 +3389,27 @@
         },
         "Loops": [
           {
-            "Name": "VITIS_LOOP_344_1",
+            "Name": "CopyW1_outft",
             "TripCount": "64",
             "Latency": "6720",
             "PipelineII": "",
             "PipelineDepth": "105"
           },
           {
-            "Name": "VITIS_LOOP_356_4",
+            "Name": "CopyW2_outft",
             "TripCount": "32",
-            "Latency": "22880",
+            "Latency": "2816",
             "PipelineII": "",
-            "PipelineDepth": "715",
-            "Loops": [{
-                "Name": "VITIS_LOOP_359_5",
-                "TripCount": "64",
-                "Latency": "704",
-                "PipelineII": "",
-                "PipelineDepth": "11"
-              }]
+            "PipelineDepth": "88"
           },
           {
-            "Name": "VITIS_LOOP_398_11",
+            "Name": "IT_h0",
             "TripCount": "16",
             "Latency": "",
             "PipelineII": "",
             "PipelineDepth": "",
             "Loops": [{
-                "Name": "VITIS_LOOP_400_12",
+                "Name": "IT_w0",
                 "TripCount": "16",
                 "Latency": "",
                 "PipelineII": "",
@@ -3428,13 +3421,13 @@
           "BRAM_18K": "78",
           "AVAIL_BRAM": "288",
           "UTIL_BRAM": "27",
-          "DSP": "164",
+          "DSP": "163",
           "AVAIL_DSP": "1248",
           "UTIL_DSP": "13",
-          "FF": "48268",
+          "FF": "48166",
           "AVAIL_FF": "234240",
           "UTIL_FF": "20",
-          "LUT": "51782",
+          "LUT": "51588",
           "AVAIL_LUT": "117120",
           "UTIL_LUT": "44",
           "URAM": "0",
@@ -3447,7 +3440,7 @@
   "GenerateBdFiles": "0",
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2025-10-20 14:46:02 +1100",
+    "Time": "2025-10-21 00:23:36 +1100",
     "ToolName": "vitis_hls",
     "ToolVersion": "2023.1"
   }

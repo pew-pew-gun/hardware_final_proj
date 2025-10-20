@@ -169,7 +169,8 @@ void srcnn(ftmap_t input_ftmap[1][255][255],
            param_t conv2_biases[32],
            param_t conv3_weights[1][32][5][5],
            param_t conv3_biases[1],
-           ftmap_t output_ftmap[1][255][255]);
+           ftmap_t output_ftmap[1][255][255],
+     int reload_weights);
 
 
 void conv1(ftmap_t input_ftmap[1][255][255],

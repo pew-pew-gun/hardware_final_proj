@@ -350,8 +350,8 @@ class AESL_RUNTIME_BC {
     string mName;
 };
 using hls::sim::Byte;
-extern "C" void srcnn(Byte<4>*, Byte<4>*, Byte<4>*, Byte<4>*, Byte<4>*, int, int, int, int, int, int, int, int);
-extern "C" void apatb_srcnn_hw(volatile void * __xlx_apatb_param_input_ftmap, volatile void * __xlx_apatb_param_conv1_weights, volatile void * __xlx_apatb_param_conv1_biases, volatile void * __xlx_apatb_param_conv2_weights, volatile void * __xlx_apatb_param_conv2_biases, volatile void * __xlx_apatb_param_conv3_weights, volatile void * __xlx_apatb_param_conv3_biases, volatile void * __xlx_apatb_param_output_ftmap) {
+extern "C" void srcnn(Byte<4>*, Byte<4>*, Byte<4>*, Byte<4>*, Byte<4>*, int, int, int, int, int, int, int, int, int);
+extern "C" void apatb_srcnn_hw(volatile void * __xlx_apatb_param_input_ftmap, volatile void * __xlx_apatb_param_conv1_weights, volatile void * __xlx_apatb_param_conv1_biases, volatile void * __xlx_apatb_param_conv2_weights, volatile void * __xlx_apatb_param_conv2_biases, volatile void * __xlx_apatb_param_conv3_weights, volatile void * __xlx_apatb_param_conv3_biases, volatile void * __xlx_apatb_param_output_ftmap, int __xlx_apatb_param_reload_weights) {
 using hls::sim::createStream;
   // Collect __xlx_input_ftmap__tmp_vec
 std::vector<Byte<4>> __xlx_input_ftmap__tmp_vec;
@@ -412,7 +412,7 @@ __xlx_output_ftmap__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_output_ftmap)
   int __xlx_offset_param_output_ftmap = 0;
   int __xlx_offset_byte_param_output_ftmap = 0*4;
   // DUT call
-  srcnn(__xlx_input_ftmap__tmp_vec.data(), __xlx_conv1_weights_conv1_biases__tmp_vec.data(), __xlx_conv2_weights_conv2_biases__tmp_vec.data(), __xlx_conv3_weights_conv3_biases__tmp_vec.data(), __xlx_output_ftmap__tmp_vec.data(), __xlx_offset_byte_param_input_ftmap, __xlx_offset_byte_param_conv1_weights, __xlx_offset_byte_param_conv1_biases, __xlx_offset_byte_param_conv2_weights, __xlx_offset_byte_param_conv2_biases, __xlx_offset_byte_param_conv3_weights, __xlx_offset_byte_param_conv3_biases, __xlx_offset_byte_param_output_ftmap);
+  srcnn(__xlx_input_ftmap__tmp_vec.data(), __xlx_conv1_weights_conv1_biases__tmp_vec.data(), __xlx_conv2_weights_conv2_biases__tmp_vec.data(), __xlx_conv3_weights_conv3_biases__tmp_vec.data(), __xlx_output_ftmap__tmp_vec.data(), __xlx_offset_byte_param_input_ftmap, __xlx_offset_byte_param_conv1_weights, __xlx_offset_byte_param_conv1_biases, __xlx_offset_byte_param_conv2_weights, __xlx_offset_byte_param_conv2_biases, __xlx_offset_byte_param_conv3_weights, __xlx_offset_byte_param_conv3_biases, __xlx_offset_byte_param_output_ftmap, __xlx_apatb_param_reload_weights);
 // print __xlx_apatb_param_input_ftmap
 for (size_t i = 0; i < __xlx_size_param_input_ftmap; ++i) {
 ((Byte<4>*)__xlx_apatb_param_input_ftmap)[i] = __xlx_input_ftmap__tmp_vec[__xlx_offset_param_input_ftmap+i];

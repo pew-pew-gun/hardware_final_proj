@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'store_tile_mm'" level="0">
-<item name = "Date">Mon Oct 20 14:44:46 2025
+<item name = "Date">Tue Oct 21 00:22:28 2025
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -31,11 +31,12 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_store_tile_mm_Pipeline_VITIS_LOOP_225_2_fu_98">store_tile_mm_Pipeline_VITIS_LOOP_225_2, ?, ?, ?, ?, ?, ?, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Out_writey">?, ?, ?, -, -, ?, no</column>
+<column name=" + Out_writex">?, ?, 3, -, -, ?, no</column>
 </table>
 </item>
 </section>
@@ -48,12 +49,12 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="DSP">-, -, -, -, -</column>
-<column name="Expression">-, -, 0, 68, -</column>
+<column name="Expression">-, -, 0, 305, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">-, 0, 216, 557, -</column>
+<column name="Instance">-, -, -, -, -</column>
 <column name="Memory">-, -, -, -, -</column>
-<column name="Multiplexer">-, -, -, 65, -</column>
-<column name="Register">-, -, 111, -, -</column>
+<column name="Multiplexer">-, -, -, 128, -</column>
+<column name="Register">-, -, 252, -, -</column>
 <specialColumn name="Available">288, 1248, 234240, 117120, 64</specialColumn>
 <specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
 </table>
@@ -62,8 +63,6 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="mul_8ns_8ns_16_1_1_U1253">mul_8ns_8ns_16_1_1, 0, 0, 0, 40, 0</column>
-<column name="grp_store_tile_mm_Pipeline_VITIS_LOOP_225_2_fu_98">store_tile_mm_Pipeline_VITIS_LOOP_225_2, 0, 0, 216, 517, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -80,37 +79,56 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln399_fu_114_p2">+, 0, 0, 16, 9, 5</column>
-<column name="add_ln401_fu_146_p2">+, 0, 0, 16, 9, 5</column>
+<column name="add_ln242_fu_309_p2">+, 0, 0, 15, 8, 1</column>
+<column name="add_ln245_fu_407_p2">+, 0, 0, 15, 8, 1</column>
+<column name="add_ln246_1_fu_392_p2">+, 0, 0, 16, 9, 9</column>
+<column name="add_ln246_fu_289_p2">+, 0, 0, 16, 9, 9</column>
+<column name="add_ln428_fu_181_p2">+, 0, 0, 16, 9, 5</column>
+<column name="add_ln431_fu_213_p2">+, 0, 0, 16, 9, 5</column>
+<column name="empty_63_fu_363_p2">+, 0, 0, 71, 64, 64</column>
+<column name="empty_fu_315_p2">+, 0, 0, 17, 10, 10</column>
+<column name="tmp_fu_354_p2">+, 0, 0, 29, 22, 22</column>
+<column name="empty_62_fu_344_p2">-, 0, 0, 28, 21, 21</column>
+<column name="icmp_ln242_fu_304_p2">icmp, 0, 0, 15, 8, 8</column>
+<column name="icmp_ln245_fu_402_p2">icmp, 0, 0, 15, 8, 8</column>
 <column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
-<column name="th_eff_fu_138_p3">select, 0, 0, 8, 1, 8</column>
-<column name="tw_eff_fu_170_p3">select, 0, 0, 8, 1, 8</column>
-<column name="xor_ln399_fu_132_p2">xor, 0, 0, 8, 8, 2</column>
-<column name="xor_ln401_fu_164_p2">xor, 0, 0, 8, 8, 2</column>
-<column name="xor_ln417_fu_178_p2">xor, 0, 0, 2, 1, 2</column>
+<column name="th_eff_fu_205_p3">select, 0, 0, 8, 1, 8</column>
+<column name="tw_eff_fu_237_p3">select, 0, 0, 8, 1, 8</column>
+<column name="xor_ln428_fu_199_p2">xor, 0, 0, 8, 8, 2</column>
+<column name="xor_ln431_fu_231_p2">xor, 0, 0, 8, 8, 2</column>
+<column name="xor_ln437_fu_175_p2">xor, 0, 0, 2, 1, 2</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
-<column name="ap_NS_fsm">20, 4, 1, 4</column>
+<column name="ap_NS_fsm">65, 12, 1, 12</column>
 <column name="ap_done">9, 2, 1, 2</column>
-<column name="m_axi_gmem_out_AWVALID">9, 2, 1, 2</column>
-<column name="m_axi_gmem_out_BREADY">9, 2, 1, 2</column>
-<column name="m_axi_gmem_out_WVALID">9, 2, 1, 2</column>
+<column name="gmem_out_blk_n_AW">9, 2, 1, 2</column>
+<column name="gmem_out_blk_n_B">9, 2, 1, 2</column>
+<column name="gmem_out_blk_n_W">9, 2, 1, 2</column>
 <column name="output_ftmap_blk_n">9, 2, 1, 2</column>
+<column name="x_reg_164">9, 2, 8, 16</column>
+<column name="y_fu_108">9, 2, 8, 16</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="ap_CS_fsm">3, 0, 3, 0</column>
+<column name="add_ln242_reg_471">8, 0, 8, 0</column>
+<column name="add_ln245_reg_490">8, 0, 8, 0</column>
+<column name="ap_CS_fsm">11, 0, 11, 0</column>
 <column name="ap_done_reg">1, 0, 1, 0</column>
-<column name="bound_reg_251">16, 0, 16, 0</column>
-<column name="grp_store_tile_mm_Pipeline_VITIS_LOOP_225_2_fu_98_ap_start_reg">1, 0, 1, 0</column>
-<column name="out_reg_236">64, 0, 64, 0</column>
-<column name="th_eff_reg_224">8, 0, 8, 0</column>
-<column name="tmp_1_reg_246">9, 0, 11, 2</column>
-<column name="tmp_reg_241">1, 0, 5, 4</column>
-<column name="tw_eff_reg_229">8, 0, 8, 0</column>
+<column name="gmem_out_addr_reg_476">64, 0, 64, 0</column>
+<column name="out_reg_428">64, 0, 64, 0</column>
+<column name="outbuf_load_reg_495">32, 0, 32, 0</column>
+<column name="shl_ln246_reg_463">5, 0, 9, 4</column>
+<column name="th_eff_reg_433">8, 0, 8, 0</column>
+<column name="tmp_1_cast_reg_443">1, 0, 9, 8</column>
+<column name="tw_eff_reg_438">8, 0, 8, 0</column>
+<column name="x_reg_164">8, 0, 8, 0</column>
+<column name="y_fu_108">8, 0, 8, 0</column>
+<column name="zext_ln242_1_reg_453">9, 0, 22, 13</column>
+<column name="zext_ln242_2_reg_458">8, 0, 32, 24</column>
+<column name="zext_ln242_reg_448">9, 0, 10, 1</column>
 </table>
 </item>
 </section>

@@ -106,6 +106,8 @@ void XSrcnn_Set_conv3_biases(XSrcnn *InstancePtr, u64 Data);
 u64 XSrcnn_Get_conv3_biases(XSrcnn *InstancePtr);
 void XSrcnn_Set_output_ftmap(XSrcnn *InstancePtr, u64 Data);
 u64 XSrcnn_Get_output_ftmap(XSrcnn *InstancePtr);
+void XSrcnn_Set_reload_weights(XSrcnn *InstancePtr, u32 Data);
+u32 XSrcnn_Get_reload_weights(XSrcnn *InstancePtr);
 
 void XSrcnn_InterruptGlobalEnable(XSrcnn *InstancePtr);
 void XSrcnn_InterruptGlobalDisable(XSrcnn *InstancePtr);

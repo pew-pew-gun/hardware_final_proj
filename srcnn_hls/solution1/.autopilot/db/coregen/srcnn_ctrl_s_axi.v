@@ -40,6 +40,7 @@ module srcnn_ctrl_s_axi
     output wire [63:0]                   conv3_weights,
     output wire [63:0]                   conv3_biases,
     output wire [63:0]                   output_ftmap,
+    output wire [31:0]                   reload_weights,
     output wire                          ap_start,
     input  wire                          ap_done,
     input  wire                          ap_ready,
@@ -105,45 +106,50 @@ module srcnn_ctrl_s_axi
 // 0x68 : Data signal of output_ftmap
 //        bit 31~0 - output_ftmap[63:32] (Read/Write)
 // 0x6c : reserved
+// 0x70 : Data signal of reload_weights
+//        bit 31~0 - reload_weights[31:0] (Read/Write)
+// 0x74 : reserved
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 //------------------------Parameter----------------------
 localparam
-    ADDR_AP_CTRL              = 7'h00,
-    ADDR_GIE                  = 7'h04,
-    ADDR_IER                  = 7'h08,
-    ADDR_ISR                  = 7'h0c,
-    ADDR_INPUT_FTMAP_DATA_0   = 7'h10,
-    ADDR_INPUT_FTMAP_DATA_1   = 7'h14,
-    ADDR_INPUT_FTMAP_CTRL     = 7'h18,
-    ADDR_CONV1_WEIGHTS_DATA_0 = 7'h1c,
-    ADDR_CONV1_WEIGHTS_DATA_1 = 7'h20,
-    ADDR_CONV1_WEIGHTS_CTRL   = 7'h24,
-    ADDR_CONV1_BIASES_DATA_0  = 7'h28,
-    ADDR_CONV1_BIASES_DATA_1  = 7'h2c,
-    ADDR_CONV1_BIASES_CTRL    = 7'h30,
-    ADDR_CONV2_WEIGHTS_DATA_0 = 7'h34,
-    ADDR_CONV2_WEIGHTS_DATA_1 = 7'h38,
-    ADDR_CONV2_WEIGHTS_CTRL   = 7'h3c,
-    ADDR_CONV2_BIASES_DATA_0  = 7'h40,
-    ADDR_CONV2_BIASES_DATA_1  = 7'h44,
-    ADDR_CONV2_BIASES_CTRL    = 7'h48,
-    ADDR_CONV3_WEIGHTS_DATA_0 = 7'h4c,
-    ADDR_CONV3_WEIGHTS_DATA_1 = 7'h50,
-    ADDR_CONV3_WEIGHTS_CTRL   = 7'h54,
-    ADDR_CONV3_BIASES_DATA_0  = 7'h58,
-    ADDR_CONV3_BIASES_DATA_1  = 7'h5c,
-    ADDR_CONV3_BIASES_CTRL    = 7'h60,
-    ADDR_OUTPUT_FTMAP_DATA_0  = 7'h64,
-    ADDR_OUTPUT_FTMAP_DATA_1  = 7'h68,
-    ADDR_OUTPUT_FTMAP_CTRL    = 7'h6c,
-    WRIDLE                    = 2'd0,
-    WRDATA                    = 2'd1,
-    WRRESP                    = 2'd2,
-    WRRESET                   = 2'd3,
-    RDIDLE                    = 2'd0,
-    RDDATA                    = 2'd1,
-    RDRESET                   = 2'd2,
+    ADDR_AP_CTRL               = 7'h00,
+    ADDR_GIE                   = 7'h04,
+    ADDR_IER                   = 7'h08,
+    ADDR_ISR                   = 7'h0c,
+    ADDR_INPUT_FTMAP_DATA_0    = 7'h10,
+    ADDR_INPUT_FTMAP_DATA_1    = 7'h14,
+    ADDR_INPUT_FTMAP_CTRL      = 7'h18,
+    ADDR_CONV1_WEIGHTS_DATA_0  = 7'h1c,
+    ADDR_CONV1_WEIGHTS_DATA_1  = 7'h20,
+    ADDR_CONV1_WEIGHTS_CTRL    = 7'h24,
+    ADDR_CONV1_BIASES_DATA_0   = 7'h28,
+    ADDR_CONV1_BIASES_DATA_1   = 7'h2c,
+    ADDR_CONV1_BIASES_CTRL     = 7'h30,
+    ADDR_CONV2_WEIGHTS_DATA_0  = 7'h34,
+    ADDR_CONV2_WEIGHTS_DATA_1  = 7'h38,
+    ADDR_CONV2_WEIGHTS_CTRL    = 7'h3c,
+    ADDR_CONV2_BIASES_DATA_0   = 7'h40,
+    ADDR_CONV2_BIASES_DATA_1   = 7'h44,
+    ADDR_CONV2_BIASES_CTRL     = 7'h48,
+    ADDR_CONV3_WEIGHTS_DATA_0  = 7'h4c,
+    ADDR_CONV3_WEIGHTS_DATA_1  = 7'h50,
+    ADDR_CONV3_WEIGHTS_CTRL    = 7'h54,
+    ADDR_CONV3_BIASES_DATA_0   = 7'h58,
+    ADDR_CONV3_BIASES_DATA_1   = 7'h5c,
+    ADDR_CONV3_BIASES_CTRL     = 7'h60,
+    ADDR_OUTPUT_FTMAP_DATA_0   = 7'h64,
+    ADDR_OUTPUT_FTMAP_DATA_1   = 7'h68,
+    ADDR_OUTPUT_FTMAP_CTRL     = 7'h6c,
+    ADDR_RELOAD_WEIGHTS_DATA_0 = 7'h70,
+    ADDR_RELOAD_WEIGHTS_CTRL   = 7'h74,
+    WRIDLE                     = 2'd0,
+    WRDATA                     = 2'd1,
+    WRRESP                     = 2'd2,
+    WRRESET                    = 2'd3,
+    RDIDLE                     = 2'd0,
+    RDDATA                     = 2'd1,
+    RDRESET                    = 2'd2,
     ADDR_BITS                = 7;
 
 //------------------------Local signal-------------------
@@ -181,6 +187,7 @@ localparam
     reg  [63:0]                   int_conv3_weights = 'b0;
     reg  [63:0]                   int_conv3_biases = 'b0;
     reg  [63:0]                   int_output_ftmap = 'b0;
+    reg  [31:0]                   int_reload_weights = 'b0;
 
 //------------------------Instantiation------------------
 
@@ -338,6 +345,9 @@ always @(posedge ACLK) begin
                 ADDR_OUTPUT_FTMAP_DATA_1: begin
                     rdata <= int_output_ftmap[63:32];
                 end
+                ADDR_RELOAD_WEIGHTS_DATA_0: begin
+                    rdata <= int_reload_weights[31:0];
+                end
             endcase
         end
     end
@@ -358,6 +368,7 @@ assign conv2_biases      = int_conv2_biases;
 assign conv3_weights     = int_conv3_weights;
 assign conv3_biases      = int_conv3_biases;
 assign output_ftmap      = int_output_ftmap;
+assign reload_weights    = int_reload_weights;
 // int_interrupt
 always @(posedge ACLK) begin
     if (ARESET)
@@ -647,6 +658,16 @@ always @(posedge ACLK) begin
     else if (ACLK_EN) begin
         if (w_hs && waddr == ADDR_OUTPUT_FTMAP_DATA_1)
             int_output_ftmap[63:32] <= (WDATA[31:0] & wmask) | (int_output_ftmap[63:32] & ~wmask);
+    end
+end
+
+// int_reload_weights[31:0]
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_reload_weights[31:0] <= 0;
+    else if (ACLK_EN) begin
+        if (w_hs && waddr == ADDR_RELOAD_WEIGHTS_DATA_0)
+            int_reload_weights[31:0] <= (WDATA[31:0] & wmask) | (int_reload_weights[31:0] & ~wmask);
     end
 end
 

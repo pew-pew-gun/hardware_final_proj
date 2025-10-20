@@ -228,6 +228,23 @@ u64 XSrcnn_Get_output_ftmap(XSrcnn *InstancePtr) {
     return Data;
 }
 
+void XSrcnn_Set_reload_weights(XSrcnn *InstancePtr, u32 Data) {
+    Xil_AssertVoid(InstancePtr != NULL);
+    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    XSrcnn_WriteReg(InstancePtr->Ctrl_BaseAddress, XSRCNN_CTRL_ADDR_RELOAD_WEIGHTS_DATA, Data);
+}
+
+u32 XSrcnn_Get_reload_weights(XSrcnn *InstancePtr) {
+    u32 Data;
+
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    Data = XSrcnn_ReadReg(InstancePtr->Ctrl_BaseAddress, XSRCNN_CTRL_ADDR_RELOAD_WEIGHTS_DATA);
+    return Data;
+}
+
 void XSrcnn_InterruptGlobalEnable(XSrcnn *InstancePtr) {
     Xil_AssertVoid(InstancePtr != NULL);
     Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);

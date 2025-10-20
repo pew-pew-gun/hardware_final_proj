@@ -98,37 +98,37 @@
     wire token_clear;
     reg [3:0] origin;
 
-    reg ap_done_reg_0;// for module grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.load_tile_mm_U0
+    reg ap_done_reg_0;// for module grp_dataflow_in_loop_IT_w0_fu_806.load_tile_mm_U0
     always @ (negedge dl_reset or posedge dl_clock) begin
         if (~dl_reset) begin
             ap_done_reg_0 <= 'b0;
         end
         else begin
-            ap_done_reg_0 <= grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.load_tile_mm_U0.ap_done & ~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.load_tile_mm_U0.ap_continue;
+            ap_done_reg_0 <= grp_dataflow_in_loop_IT_w0_fu_806.load_tile_mm_U0.ap_done & ~grp_dataflow_in_loop_IT_w0_fu_806.load_tile_mm_U0.ap_continue;
         end
     end
 
-    reg ap_done_reg_1;// for module grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.compute_tile_U0
+    reg ap_done_reg_1;// for module grp_dataflow_in_loop_IT_w0_fu_806.compute_tile_U0
     always @ (negedge dl_reset or posedge dl_clock) begin
         if (~dl_reset) begin
             ap_done_reg_1 <= 'b0;
         end
         else begin
-            ap_done_reg_1 <= grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.compute_tile_U0.ap_done & ~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.compute_tile_U0.ap_continue;
+            ap_done_reg_1 <= grp_dataflow_in_loop_IT_w0_fu_806.compute_tile_U0.ap_done & ~grp_dataflow_in_loop_IT_w0_fu_806.compute_tile_U0.ap_continue;
         end
     end
 
-    reg ap_done_reg_2;// for module grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.store_tile_mm_U0
+    reg ap_done_reg_2;// for module grp_dataflow_in_loop_IT_w0_fu_806.store_tile_mm_U0
     always @ (negedge dl_reset or posedge dl_clock) begin
         if (~dl_reset) begin
             ap_done_reg_2 <= 'b0;
         end
         else begin
-            ap_done_reg_2 <= grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.store_tile_mm_U0.ap_done & ~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.store_tile_mm_U0.ap_continue;
+            ap_done_reg_2 <= grp_dataflow_in_loop_IT_w0_fu_806.store_tile_mm_U0.ap_done & ~grp_dataflow_in_loop_IT_w0_fu_806.store_tile_mm_U0.ap_continue;
         end
     end
 
-    // Process: grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.entry_proc_U0
+    // Process: grp_dataflow_in_loop_IT_w0_fu_806.entry_proc_U0
     srcnn_hls_deadlock_detect_unit #(4, 0, 3, 3) srcnn_hls_deadlock_detect_unit_0 (
         .reset(dl_reset),
         .clock(dl_clock),
@@ -144,7 +144,7 @@
         .token_out_vec(token_out_vec_0),
         .dl_detect_out(dl_in_vec[0]));
 
-    assign proc_0_data_FIFO_blk[0] = 1'b0 | (~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.entry_proc_U0.output_ftmap_c_blk_n);
+    assign proc_0_data_FIFO_blk[0] = 1'b0 | (~grp_dataflow_in_loop_IT_w0_fu_806.entry_proc_U0.output_ftmap_c_blk_n);
     assign proc_0_data_PIPO_blk[0] = 1'b0;
     assign proc_0_start_FIFO_blk[0] = 1'b0;
     assign proc_0_TLF_FIFO_blk[0] = 1'b0;
@@ -155,14 +155,14 @@
     assign proc_0_data_PIPO_blk[1] = 1'b0;
     assign proc_0_start_FIFO_blk[1] = 1'b0;
     assign proc_0_TLF_FIFO_blk[1] = 1'b0;
-    assign proc_0_input_sync_blk[1] = 1'b0 | (grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.ap_sync_entry_proc_U0_ap_ready & grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.entry_proc_U0.ap_idle & ~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.ap_sync_load_tile_mm_U0_ap_ready);
+    assign proc_0_input_sync_blk[1] = 1'b0 | (grp_dataflow_in_loop_IT_w0_fu_806.ap_sync_entry_proc_U0_ap_ready & grp_dataflow_in_loop_IT_w0_fu_806.entry_proc_U0.ap_idle & ~grp_dataflow_in_loop_IT_w0_fu_806.ap_sync_load_tile_mm_U0_ap_ready);
     assign proc_0_output_sync_blk[1] = 1'b0;
     assign proc_dep_vld_vec_0[1] = dl_detect_out ? proc_dep_vld_vec_0_reg[1] : (proc_0_data_FIFO_blk[1] | proc_0_data_PIPO_blk[1] | proc_0_start_FIFO_blk[1] | proc_0_TLF_FIFO_blk[1] | proc_0_input_sync_blk[1] | proc_0_output_sync_blk[1]);
     assign proc_0_data_FIFO_blk[2] = 1'b0;
     assign proc_0_data_PIPO_blk[2] = 1'b0;
     assign proc_0_start_FIFO_blk[2] = 1'b0;
     assign proc_0_TLF_FIFO_blk[2] = 1'b0;
-    assign proc_0_input_sync_blk[2] = 1'b0 | (grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.ap_sync_entry_proc_U0_ap_ready & grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.entry_proc_U0.ap_idle & ~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.ap_sync_compute_tile_U0_ap_ready);
+    assign proc_0_input_sync_blk[2] = 1'b0 | (grp_dataflow_in_loop_IT_w0_fu_806.ap_sync_entry_proc_U0_ap_ready & grp_dataflow_in_loop_IT_w0_fu_806.entry_proc_U0.ap_idle & ~grp_dataflow_in_loop_IT_w0_fu_806.ap_sync_compute_tile_U0_ap_ready);
     assign proc_0_output_sync_blk[2] = 1'b0;
     assign proc_dep_vld_vec_0[2] = dl_detect_out ? proc_dep_vld_vec_0_reg[2] : (proc_0_data_FIFO_blk[2] | proc_0_data_PIPO_blk[2] | proc_0_start_FIFO_blk[2] | proc_0_TLF_FIFO_blk[2] | proc_0_input_sync_blk[2] | proc_0_output_sync_blk[2]);
     always @ (negedge dl_reset or posedge dl_clock) begin
@@ -192,7 +192,7 @@
     assign dep_chan_data_0_2 = out_chan_dep_data_0;
     assign token_0_2 = token_out_vec_0[2];
 
-    // Process: grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.load_tile_mm_U0
+    // Process: grp_dataflow_in_loop_IT_w0_fu_806.load_tile_mm_U0
     srcnn_hls_deadlock_detect_unit #(4, 1, 2, 2) srcnn_hls_deadlock_detect_unit_1 (
         .reset(dl_reset),
         .clock(dl_clock),
@@ -209,17 +209,17 @@
         .dl_detect_out(dl_in_vec[1]));
 
     assign proc_1_data_FIFO_blk[0] = 1'b0;
-    assign proc_1_data_PIPO_blk[0] = 1'b0 | (~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.inbuf_U.i_full_n & grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.load_tile_mm_U0.ap_done & ap_done_reg_0 & ~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.inbuf_U.t_read);
+    assign proc_1_data_PIPO_blk[0] = 1'b0 | (~grp_dataflow_in_loop_IT_w0_fu_806.inbuf_U.i_full_n & grp_dataflow_in_loop_IT_w0_fu_806.load_tile_mm_U0.ap_done & ap_done_reg_0 & ~grp_dataflow_in_loop_IT_w0_fu_806.inbuf_U.t_read);
     assign proc_1_start_FIFO_blk[0] = 1'b0;
     assign proc_1_TLF_FIFO_blk[0] = 1'b0;
-    assign proc_1_input_sync_blk[0] = 1'b0 | (grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.ap_sync_load_tile_mm_U0_ap_ready & grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.load_tile_mm_U0.ap_idle & ~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.ap_sync_compute_tile_U0_ap_ready);
+    assign proc_1_input_sync_blk[0] = 1'b0 | (grp_dataflow_in_loop_IT_w0_fu_806.ap_sync_load_tile_mm_U0_ap_ready & grp_dataflow_in_loop_IT_w0_fu_806.load_tile_mm_U0.ap_idle & ~grp_dataflow_in_loop_IT_w0_fu_806.ap_sync_compute_tile_U0_ap_ready);
     assign proc_1_output_sync_blk[0] = 1'b0;
     assign proc_dep_vld_vec_1[0] = dl_detect_out ? proc_dep_vld_vec_1_reg[0] : (proc_1_data_FIFO_blk[0] | proc_1_data_PIPO_blk[0] | proc_1_start_FIFO_blk[0] | proc_1_TLF_FIFO_blk[0] | proc_1_input_sync_blk[0] | proc_1_output_sync_blk[0]);
     assign proc_1_data_FIFO_blk[1] = 1'b0;
     assign proc_1_data_PIPO_blk[1] = 1'b0;
     assign proc_1_start_FIFO_blk[1] = 1'b0;
     assign proc_1_TLF_FIFO_blk[1] = 1'b0;
-    assign proc_1_input_sync_blk[1] = 1'b0 | (grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.ap_sync_load_tile_mm_U0_ap_ready & grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.load_tile_mm_U0.ap_idle & ~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.ap_sync_entry_proc_U0_ap_ready);
+    assign proc_1_input_sync_blk[1] = 1'b0 | (grp_dataflow_in_loop_IT_w0_fu_806.ap_sync_load_tile_mm_U0_ap_ready & grp_dataflow_in_loop_IT_w0_fu_806.load_tile_mm_U0.ap_idle & ~grp_dataflow_in_loop_IT_w0_fu_806.ap_sync_entry_proc_U0_ap_ready);
     assign proc_1_output_sync_blk[1] = 1'b0;
     assign proc_dep_vld_vec_1[1] = dl_detect_out ? proc_dep_vld_vec_1_reg[1] : (proc_1_data_FIFO_blk[1] | proc_1_data_PIPO_blk[1] | proc_1_start_FIFO_blk[1] | proc_1_TLF_FIFO_blk[1] | proc_1_input_sync_blk[1] | proc_1_output_sync_blk[1]);
     always @ (negedge dl_reset or posedge dl_clock) begin
@@ -243,7 +243,7 @@
     assign dep_chan_data_1_0 = out_chan_dep_data_1;
     assign token_1_0 = token_out_vec_1[1];
 
-    // Process: grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.compute_tile_U0
+    // Process: grp_dataflow_in_loop_IT_w0_fu_806.compute_tile_U0
     srcnn_hls_deadlock_detect_unit #(4, 2, 3, 3) srcnn_hls_deadlock_detect_unit_2 (
         .reset(dl_reset),
         .clock(dl_clock),
@@ -260,14 +260,14 @@
         .dl_detect_out(dl_in_vec[2]));
 
     assign proc_2_data_FIFO_blk[0] = 1'b0;
-    assign proc_2_data_PIPO_blk[0] = 1'b0 | (~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.inbuf_U.t_empty_n & grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.compute_tile_U0.ap_idle & ~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.inbuf_U.i_write);
+    assign proc_2_data_PIPO_blk[0] = 1'b0 | (~grp_dataflow_in_loop_IT_w0_fu_806.inbuf_U.t_empty_n & grp_dataflow_in_loop_IT_w0_fu_806.compute_tile_U0.ap_idle & ~grp_dataflow_in_loop_IT_w0_fu_806.inbuf_U.i_write);
     assign proc_2_start_FIFO_blk[0] = 1'b0;
-    assign proc_2_TLF_FIFO_blk[0] = 1'b0 | (~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.phase_c3_channel_U.if_empty_n & grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.compute_tile_U0.ap_idle & ~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.phase_c3_channel_U.if_write) | (~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.h0_c1_channel_U.if_empty_n & grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.compute_tile_U0.ap_idle & ~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.h0_c1_channel_U.if_write) | (~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.w0_c2_channel_U.if_empty_n & grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.compute_tile_U0.ap_idle & ~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.w0_c2_channel_U.if_write);
-    assign proc_2_input_sync_blk[0] = 1'b0 | (grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.ap_sync_compute_tile_U0_ap_ready & grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.compute_tile_U0.ap_idle & ~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.ap_sync_load_tile_mm_U0_ap_ready);
+    assign proc_2_TLF_FIFO_blk[0] = 1'b0 | (~grp_dataflow_in_loop_IT_w0_fu_806.phase_c3_channel_U.if_empty_n & grp_dataflow_in_loop_IT_w0_fu_806.compute_tile_U0.ap_idle & ~grp_dataflow_in_loop_IT_w0_fu_806.phase_c3_channel_U.if_write) | (~grp_dataflow_in_loop_IT_w0_fu_806.h0_c1_channel_U.if_empty_n & grp_dataflow_in_loop_IT_w0_fu_806.compute_tile_U0.ap_idle & ~grp_dataflow_in_loop_IT_w0_fu_806.h0_c1_channel_U.if_write) | (~grp_dataflow_in_loop_IT_w0_fu_806.w0_c2_channel_U.if_empty_n & grp_dataflow_in_loop_IT_w0_fu_806.compute_tile_U0.ap_idle & ~grp_dataflow_in_loop_IT_w0_fu_806.w0_c2_channel_U.if_write);
+    assign proc_2_input_sync_blk[0] = 1'b0 | (grp_dataflow_in_loop_IT_w0_fu_806.ap_sync_compute_tile_U0_ap_ready & grp_dataflow_in_loop_IT_w0_fu_806.compute_tile_U0.ap_idle & ~grp_dataflow_in_loop_IT_w0_fu_806.ap_sync_load_tile_mm_U0_ap_ready);
     assign proc_2_output_sync_blk[0] = 1'b0;
     assign proc_dep_vld_vec_2[0] = dl_detect_out ? proc_dep_vld_vec_2_reg[0] : (proc_2_data_FIFO_blk[0] | proc_2_data_PIPO_blk[0] | proc_2_start_FIFO_blk[0] | proc_2_TLF_FIFO_blk[0] | proc_2_input_sync_blk[0] | proc_2_output_sync_blk[0]);
     assign proc_2_data_FIFO_blk[1] = 1'b0;
-    assign proc_2_data_PIPO_blk[1] = 1'b0 | (~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.outbuf_U.i_full_n & grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.compute_tile_U0.ap_done & ap_done_reg_1 & ~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.outbuf_U.t_read);
+    assign proc_2_data_PIPO_blk[1] = 1'b0 | (~grp_dataflow_in_loop_IT_w0_fu_806.outbuf_U.i_full_n & grp_dataflow_in_loop_IT_w0_fu_806.compute_tile_U0.ap_done & ap_done_reg_1 & ~grp_dataflow_in_loop_IT_w0_fu_806.outbuf_U.t_read);
     assign proc_2_start_FIFO_blk[1] = 1'b0;
     assign proc_2_TLF_FIFO_blk[1] = 1'b0;
     assign proc_2_input_sync_blk[1] = 1'b0;
@@ -277,7 +277,7 @@
     assign proc_2_data_PIPO_blk[2] = 1'b0;
     assign proc_2_start_FIFO_blk[2] = 1'b0;
     assign proc_2_TLF_FIFO_blk[2] = 1'b0;
-    assign proc_2_input_sync_blk[2] = 1'b0 | (grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.ap_sync_compute_tile_U0_ap_ready & grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.compute_tile_U0.ap_idle & ~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.ap_sync_entry_proc_U0_ap_ready);
+    assign proc_2_input_sync_blk[2] = 1'b0 | (grp_dataflow_in_loop_IT_w0_fu_806.ap_sync_compute_tile_U0_ap_ready & grp_dataflow_in_loop_IT_w0_fu_806.compute_tile_U0.ap_idle & ~grp_dataflow_in_loop_IT_w0_fu_806.ap_sync_entry_proc_U0_ap_ready);
     assign proc_2_output_sync_blk[2] = 1'b0;
     assign proc_dep_vld_vec_2[2] = dl_detect_out ? proc_dep_vld_vec_2_reg[2] : (proc_2_data_FIFO_blk[2] | proc_2_data_PIPO_blk[2] | proc_2_start_FIFO_blk[2] | proc_2_TLF_FIFO_blk[2] | proc_2_input_sync_blk[2] | proc_2_output_sync_blk[2]);
     always @ (negedge dl_reset or posedge dl_clock) begin
@@ -307,7 +307,7 @@
     assign dep_chan_data_2_0 = out_chan_dep_data_2;
     assign token_2_0 = token_out_vec_2[2];
 
-    // Process: grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.store_tile_mm_U0
+    // Process: grp_dataflow_in_loop_IT_w0_fu_806.store_tile_mm_U0
     srcnn_hls_deadlock_detect_unit #(4, 3, 2, 2) srcnn_hls_deadlock_detect_unit_3 (
         .reset(dl_reset),
         .clock(dl_clock),
@@ -324,13 +324,13 @@
         .dl_detect_out(dl_in_vec[3]));
 
     assign proc_3_data_FIFO_blk[0] = 1'b0;
-    assign proc_3_data_PIPO_blk[0] = 1'b0 | (~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.outbuf_U.t_empty_n & grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.store_tile_mm_U0.ap_idle & ~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.outbuf_U.i_write);
+    assign proc_3_data_PIPO_blk[0] = 1'b0 | (~grp_dataflow_in_loop_IT_w0_fu_806.outbuf_U.t_empty_n & grp_dataflow_in_loop_IT_w0_fu_806.store_tile_mm_U0.ap_idle & ~grp_dataflow_in_loop_IT_w0_fu_806.outbuf_U.i_write);
     assign proc_3_start_FIFO_blk[0] = 1'b0;
-    assign proc_3_TLF_FIFO_blk[0] = 1'b0 | (~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.phase_c_channel_U.if_empty_n & grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.store_tile_mm_U0.ap_idle & ~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.phase_c_channel_U.if_write) | (~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.h0_c_channel_U.if_empty_n & grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.store_tile_mm_U0.ap_idle & ~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.h0_c_channel_U.if_write) | (~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.w0_c_channel_U.if_empty_n & grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.store_tile_mm_U0.ap_idle & ~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.w0_c_channel_U.if_write);
+    assign proc_3_TLF_FIFO_blk[0] = 1'b0 | (~grp_dataflow_in_loop_IT_w0_fu_806.phase_c_channel_U.if_empty_n & grp_dataflow_in_loop_IT_w0_fu_806.store_tile_mm_U0.ap_idle & ~grp_dataflow_in_loop_IT_w0_fu_806.phase_c_channel_U.if_write) | (~grp_dataflow_in_loop_IT_w0_fu_806.h0_c_channel_U.if_empty_n & grp_dataflow_in_loop_IT_w0_fu_806.store_tile_mm_U0.ap_idle & ~grp_dataflow_in_loop_IT_w0_fu_806.h0_c_channel_U.if_write) | (~grp_dataflow_in_loop_IT_w0_fu_806.w0_c_channel_U.if_empty_n & grp_dataflow_in_loop_IT_w0_fu_806.store_tile_mm_U0.ap_idle & ~grp_dataflow_in_loop_IT_w0_fu_806.w0_c_channel_U.if_write);
     assign proc_3_input_sync_blk[0] = 1'b0;
     assign proc_3_output_sync_blk[0] = 1'b0;
     assign proc_dep_vld_vec_3[0] = dl_detect_out ? proc_dep_vld_vec_3_reg[0] : (proc_3_data_FIFO_blk[0] | proc_3_data_PIPO_blk[0] | proc_3_start_FIFO_blk[0] | proc_3_TLF_FIFO_blk[0] | proc_3_input_sync_blk[0] | proc_3_output_sync_blk[0]);
-    assign proc_3_data_FIFO_blk[1] = 1'b0 | (~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.store_tile_mm_U0.output_ftmap_blk_n);
+    assign proc_3_data_FIFO_blk[1] = 1'b0 | (~grp_dataflow_in_loop_IT_w0_fu_806.store_tile_mm_U0.output_ftmap_blk_n);
     assign proc_3_data_PIPO_blk[1] = 1'b0;
     assign proc_3_start_FIFO_blk[1] = 1'b0;
     assign proc_3_TLF_FIFO_blk[1] = 1'b0;

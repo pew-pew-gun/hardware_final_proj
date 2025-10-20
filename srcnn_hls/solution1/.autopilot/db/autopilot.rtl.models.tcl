@@ -1,35 +1,31 @@
 set SynModuleInfo {
-  {SRCNAME srcnn_Pipeline_VITIS_LOOP_346_2_VITIS_LOOP_348_3 MODELNAME srcnn_Pipeline_VITIS_LOOP_346_2_VITIS_LOOP_348_3 RTLNAME srcnn_srcnn_Pipeline_VITIS_LOOP_346_2_VITIS_LOOP_348_3
+  {SRCNAME srcnn_Pipeline_CopyW1_ky_CopyW1_kx MODELNAME srcnn_Pipeline_CopyW1_ky_CopyW1_kx RTLNAME srcnn_srcnn_Pipeline_CopyW1_ky_CopyW1_kx
     SUBMODULES {
       {MODELNAME srcnn_flow_control_loop_pipe_sequential_init RTLNAME srcnn_flow_control_loop_pipe_sequential_init BINDTYPE interface TYPE internal_upc_flow_control INSTNAME srcnn_flow_control_loop_pipe_sequential_init_U}
     }
   }
-  {SRCNAME srcnn_Pipeline_VITIS_LOOP_374_8_VITIS_LOOP_375_9_VITIS_LOOP_377_10 MODELNAME srcnn_Pipeline_VITIS_LOOP_374_8_VITIS_LOOP_375_9_VITIS_LOOP_377_10 RTLNAME srcnn_srcnn_Pipeline_VITIS_LOOP_374_8_VITIS_LOOP_375_9_VITIS_LOOP_377_10}
+  {SRCNAME srcnn_Pipeline_CopyW2_inft MODELNAME srcnn_Pipeline_CopyW2_inft RTLNAME srcnn_srcnn_Pipeline_CopyW2_inft}
+  {SRCNAME srcnn_Pipeline_CopyW3_inft_CopyW3_ky_CopyW3_kx MODELNAME srcnn_Pipeline_CopyW3_inft_CopyW3_ky_CopyW3_kx RTLNAME srcnn_srcnn_Pipeline_CopyW3_inft_CopyW3_ky_CopyW3_kx}
   {SRCNAME entry_proc MODELNAME entry_proc RTLNAME srcnn_entry_proc}
-  {SRCNAME load_tile_mm_Pipeline_VITIS_LOOP_40_1_VITIS_LOOP_48_2 MODELNAME load_tile_mm_Pipeline_VITIS_LOOP_40_1_VITIS_LOOP_48_2 RTLNAME srcnn_load_tile_mm_Pipeline_VITIS_LOOP_40_1_VITIS_LOOP_48_2}
-  {SRCNAME load_tile_mm MODELNAME load_tile_mm RTLNAME srcnn_load_tile_mm
-    SUBMODULES {
-      {MODELNAME srcnn_am_addmul_8ns_4ns_9ns_17_4_1 RTLNAME srcnn_am_addmul_8ns_4ns_9ns_17_4_1 BINDTYPE op TYPE all IMPL dsp48 LATENCY 3 ALLOW_PRAGMA 1}
-    }
-  }
-  {SRCNAME compute_tile_Pipeline_VITIS_LOOP_114_3 MODELNAME compute_tile_Pipeline_VITIS_LOOP_114_3 RTLNAME srcnn_compute_tile_Pipeline_VITIS_LOOP_114_3
+  {SRCNAME load_tile_mm MODELNAME load_tile_mm RTLNAME srcnn_load_tile_mm}
+  {SRCNAME compute_tile_Pipeline_Conv2Out_biases MODELNAME compute_tile_Pipeline_Conv2Out_biases RTLNAME srcnn_compute_tile_Pipeline_Conv2Out_biases
     SUBMODULES {
       {MODELNAME srcnn_mux_25_5_32_1_1 RTLNAME srcnn_mux_25_5_32_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
     }
   }
-  {SRCNAME compute_tile_Pipeline_VITIS_LOOP_139_7 MODELNAME compute_tile_Pipeline_VITIS_LOOP_139_7 RTLNAME srcnn_compute_tile_Pipeline_VITIS_LOOP_139_7
+  {SRCNAME compute_tile_Pipeline_Conv2_dot32 MODELNAME compute_tile_Pipeline_Conv2_dot32 RTLNAME srcnn_compute_tile_Pipeline_Conv2_dot32
     SUBMODULES {
       {MODELNAME srcnn_fadd_32ns_32ns_32_4_full_dsp_1 RTLNAME srcnn_fadd_32ns_32ns_32_4_full_dsp_1 BINDTYPE op TYPE fadd IMPL fulldsp LATENCY 3 ALLOW_PRAGMA 1}
     }
   }
-  {SRCNAME compute_tile_Pipeline_VITIS_LOOP_147_8 MODELNAME compute_tile_Pipeline_VITIS_LOOP_147_8 RTLNAME srcnn_compute_tile_Pipeline_VITIS_LOOP_147_8
+  {SRCNAME compute_tile_Pipeline_Conv2_ReLU MODELNAME compute_tile_Pipeline_Conv2_ReLU RTLNAME srcnn_compute_tile_Pipeline_Conv2_ReLU
     SUBMODULES {
       {MODELNAME srcnn_fcmp_32ns_32ns_1_2_no_dsp_1 RTLNAME srcnn_fcmp_32ns_32ns_1_2_no_dsp_1 BINDTYPE op TYPE fcmp IMPL auto LATENCY 1 ALLOW_PRAGMA 1}
     }
   }
-  {SRCNAME compute_tile_Pipeline_VITIS_LOOP_157_9 MODELNAME compute_tile_Pipeline_VITIS_LOOP_157_9 RTLNAME srcnn_compute_tile_Pipeline_VITIS_LOOP_157_9}
-  {SRCNAME compute_tile_Pipeline_VITIS_LOOP_178_12 MODELNAME compute_tile_Pipeline_VITIS_LOOP_178_12 RTLNAME srcnn_compute_tile_Pipeline_VITIS_LOOP_178_12}
-  {SRCNAME compute_tile_Pipeline_VITIS_LOOP_193_14 MODELNAME compute_tile_Pipeline_VITIS_LOOP_193_14 RTLNAME srcnn_compute_tile_Pipeline_VITIS_LOOP_193_14
+  {SRCNAME compute_tile_Pipeline_Shift_win32 MODELNAME compute_tile_Pipeline_Shift_win32 RTLNAME srcnn_compute_tile_Pipeline_Shift_win32}
+  {SRCNAME compute_tile_Pipeline_Update_linebuf32 MODELNAME compute_tile_Pipeline_Update_linebuf32 RTLNAME srcnn_compute_tile_Pipeline_Update_linebuf32}
+  {SRCNAME compute_tile_Pipeline_Conv3_inputft MODELNAME compute_tile_Pipeline_Conv3_inputft RTLNAME srcnn_compute_tile_Pipeline_Conv3_inputft
     SUBMODULES {
       {MODELNAME srcnn_mul_2ns_6ns_7_1_1 RTLNAME srcnn_mul_2ns_6ns_7_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
       {MODELNAME srcnn_mux_5_3_32_1_1 RTLNAME srcnn_mux_5_3_32_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
@@ -44,18 +40,13 @@ set SynModuleInfo {
       {MODELNAME srcnn_compute_tile_win_1_RAM_AUTO_1R1W RTLNAME srcnn_compute_tile_win_1_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
     }
   }
-  {SRCNAME store_tile_mm_Pipeline_VITIS_LOOP_225_2 MODELNAME store_tile_mm_Pipeline_VITIS_LOOP_225_2 RTLNAME srcnn_store_tile_mm_Pipeline_VITIS_LOOP_225_2}
-  {SRCNAME store_tile_mm MODELNAME store_tile_mm RTLNAME srcnn_store_tile_mm
+  {SRCNAME store_tile_mm MODELNAME store_tile_mm RTLNAME srcnn_store_tile_mm}
+  {SRCNAME dataflow_in_loop_IT_w0 MODELNAME dataflow_in_loop_IT_w0 RTLNAME srcnn_dataflow_in_loop_IT_w0
     SUBMODULES {
-      {MODELNAME srcnn_mul_8ns_8ns_16_1_1 RTLNAME srcnn_mul_8ns_8ns_16_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
-    }
-  }
-  {SRCNAME dataflow_in_loop_VITIS_LOOP_400_12 MODELNAME dataflow_in_loop_VITIS_LOOP_400_12 RTLNAME srcnn_dataflow_in_loop_VITIS_LOOP_400_12
-    SUBMODULES {
-      {MODELNAME srcnn_dataflow_in_loop_VITIS_LOOP_400_12_inbuf_RAM_1P_BRAM_1R1W_memcore RTLNAME srcnn_dataflow_in_loop_VITIS_LOOP_400_12_inbuf_RAM_1P_BRAM_1R1W_memcore BINDTYPE storage TYPE ram_1p IMPL bram LATENCY 2 ALLOW_PRAGMA 1}
-      {MODELNAME srcnn_dataflow_in_loop_VITIS_LOOP_400_12_inbuf_RAM_1P_BRAM_1R1W RTLNAME srcnn_dataflow_in_loop_VITIS_LOOP_400_12_inbuf_RAM_1P_BRAM_1R1W BINDTYPE storage TYPE ram_1p IMPL bram LATENCY 2 ALLOW_PRAGMA 1}
-      {MODELNAME srcnn_dataflow_in_loop_VITIS_LOOP_400_12_outbuf_RAM_1P_BRAM_1R1W_memcore RTLNAME srcnn_dataflow_in_loop_VITIS_LOOP_400_12_outbuf_RAM_1P_BRAM_1R1W_memcore BINDTYPE storage TYPE ram_1p IMPL bram LATENCY 2 ALLOW_PRAGMA 1}
-      {MODELNAME srcnn_dataflow_in_loop_VITIS_LOOP_400_12_outbuf_RAM_1P_BRAM_1R1W RTLNAME srcnn_dataflow_in_loop_VITIS_LOOP_400_12_outbuf_RAM_1P_BRAM_1R1W BINDTYPE storage TYPE ram_1p IMPL bram LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME srcnn_dataflow_in_loop_IT_w0_inbuf_RAM_1P_BRAM_1R1W_memcore RTLNAME srcnn_dataflow_in_loop_IT_w0_inbuf_RAM_1P_BRAM_1R1W_memcore BINDTYPE storage TYPE ram_1p IMPL bram LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME srcnn_dataflow_in_loop_IT_w0_inbuf_RAM_1P_BRAM_1R1W RTLNAME srcnn_dataflow_in_loop_IT_w0_inbuf_RAM_1P_BRAM_1R1W BINDTYPE storage TYPE ram_1p IMPL bram LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME srcnn_dataflow_in_loop_IT_w0_outbuf_RAM_1P_BRAM_1R1W_memcore RTLNAME srcnn_dataflow_in_loop_IT_w0_outbuf_RAM_1P_BRAM_1R1W_memcore BINDTYPE storage TYPE ram_1p IMPL bram LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME srcnn_dataflow_in_loop_IT_w0_outbuf_RAM_1P_BRAM_1R1W RTLNAME srcnn_dataflow_in_loop_IT_w0_outbuf_RAM_1P_BRAM_1R1W BINDTYPE storage TYPE ram_1p IMPL bram LATENCY 2 ALLOW_PRAGMA 1}
       {MODELNAME srcnn_fifo_w64_d4_S RTLNAME srcnn_fifo_w64_d4_S BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME output_ftmap_c_U}
       {MODELNAME srcnn_fifo_w9_d2_S RTLNAME srcnn_fifo_w9_d2_S BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME h0_c1_channel_U}
       {MODELNAME srcnn_fifo_w9_d2_S RTLNAME srcnn_fifo_w9_d2_S BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME w0_c2_channel_U}

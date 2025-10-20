@@ -1,30 +1,30 @@
-C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:3637:2: warning: Added loop label VITIS_LOOP_26_1:   [xilinx-label-all-loops]
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:3638:2: warning: Added loop label VITIS_LOOP_26_1:   [xilinx-label-all-loops]
  for (int of=0; of<64; of++) {
  ^~~
  VITIS_LOOP_26_1: 
-C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:3637:2: note: FIX-IT applied suggested code changes
-C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:3638:3: warning: Added loop label VITIS_LOOP_27_2:   [xilinx-label-all-loops]
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:3638:2: note: FIX-IT applied suggested code changes
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:3639:3: warning: Added loop label VITIS_LOOP_27_2:   [xilinx-label-all-loops]
   for (int oh=0; oh<255; oh++) {
   ^~~
   VITIS_LOOP_27_2: 
-C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:3638:3: note: FIX-IT applied suggested code changes
-C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:3639:4: warning: Added loop label VITIS_LOOP_28_3:   [xilinx-label-all-loops]
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:3639:3: note: FIX-IT applied suggested code changes
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:3640:4: warning: Added loop label VITIS_LOOP_28_3:   [xilinx-label-all-loops]
    for (int ow=0; ow<255; ow++) {
    ^~~
    VITIS_LOOP_28_3: 
-C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:3639:4: note: FIX-IT applied suggested code changes
-C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:3643:5: warning: Added loop label VITIS_LOOP_32_4:   [xilinx-label-all-loops]
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:3640:4: note: FIX-IT applied suggested code changes
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:3644:5: warning: Added loop label VITIS_LOOP_32_4:   [xilinx-label-all-loops]
     for (int ic=0; ic<1; ic++) {
     ^~~
     VITIS_LOOP_32_4: 
-C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:3643:5: note: FIX-IT applied suggested code changes
-C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:3645:6: warning: Added loop label VITIS_LOOP_34_5:   [xilinx-label-all-loops]
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:3644:5: note: FIX-IT applied suggested code changes
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:3646:6: warning: Added loop label VITIS_LOOP_34_5:   [xilinx-label-all-loops]
      for (int kh=0; kh<9; kh++) {
      ^~~
      VITIS_LOOP_34_5: 
-C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:3645:6: note: FIX-IT applied suggested code changes
-C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:3646:7: warning: Added loop label VITIS_LOOP_35_6:   [xilinx-label-all-loops]
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:3646:6: note: FIX-IT applied suggested code changes
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:3647:7: warning: Added loop label VITIS_LOOP_35_6:   [xilinx-label-all-loops]
       for (int kw=0; kw<9; kw++) {
       ^~~
       VITIS_LOOP_35_6: 
-C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:3646:7: note: FIX-IT applied suggested code changes
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:3647:7: note: FIX-IT applied suggested code changes

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'compute_tile'" level="0">
-<item name = "Date">Mon Oct 20 14:44:29 2025
+<item name = "Date">Tue Oct 21 00:22:09 2025
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -31,21 +31,21 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_compute_tile_Pipeline_VITIS_LOOP_114_3_fu_2247">compute_tile_Pipeline_VITIS_LOOP_114_3, 6, 6, 60.000 ns, 60.000 ns, 6, 6, no</column>
-<column name="grp_compute_tile_Pipeline_VITIS_LOOP_147_8_fu_2291">compute_tile_Pipeline_VITIS_LOOP_147_8, 7, 7, 70.000 ns, 70.000 ns, 7, 7, no</column>
-<column name="grp_compute_tile_Pipeline_VITIS_LOOP_139_7_fu_2311">compute_tile_Pipeline_VITIS_LOOP_139_7, 13, 13, 0.130 us, 0.130 us, 13, 13, no</column>
-<column name="grp_compute_tile_Pipeline_VITIS_LOOP_157_9_fu_2341">compute_tile_Pipeline_VITIS_LOOP_157_9, 6, 6, 60.000 ns, 60.000 ns, 6, 6, no</column>
-<column name="grp_compute_tile_Pipeline_VITIS_LOOP_178_12_fu_2587">compute_tile_Pipeline_VITIS_LOOP_178_12, 6, 6, 60.000 ns, 60.000 ns, 6, 6, no</column>
-<column name="grp_compute_tile_Pipeline_VITIS_LOOP_193_14_fu_2633">compute_tile_Pipeline_VITIS_LOOP_193_14, 3221, 3221, 32.210 us, 32.210 us, 3221, 3221, no</column>
+<column name="grp_compute_tile_Pipeline_Conv2Out_biases_fu_2247">compute_tile_Pipeline_Conv2Out_biases, 6, 6, 60.000 ns, 60.000 ns, 6, 6, no</column>
+<column name="grp_compute_tile_Pipeline_Conv2_ReLU_fu_2291">compute_tile_Pipeline_Conv2_ReLU, 7, 7, 70.000 ns, 70.000 ns, 7, 7, no</column>
+<column name="grp_compute_tile_Pipeline_Conv2_dot32_fu_2311">compute_tile_Pipeline_Conv2_dot32, 13, 13, 0.130 us, 0.130 us, 13, 13, no</column>
+<column name="grp_compute_tile_Pipeline_Shift_win32_fu_2341">compute_tile_Pipeline_Shift_win32, 6, 6, 60.000 ns, 60.000 ns, 6, 6, no</column>
+<column name="grp_compute_tile_Pipeline_Update_linebuf32_fu_2587">compute_tile_Pipeline_Update_linebuf32, 6, 6, 60.000 ns, 60.000 ns, 6, 6, no</column>
+<column name="grp_compute_tile_Pipeline_Conv3_inputft_fu_2633">compute_tile_Pipeline_Conv3_inputft, 3221, 3221, 32.210 us, 32.210 us, 3221, 3221, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- VITIS_LOOP_103_1">782888, 3498408830, 195722 ~ 13507370, -, -, 4 ~ 259, no</column>
-<column name=" + VITIS_LOOP_106_2">195720, 13507368, 48930 ~ 52152, -, -, 4 ~ 259, no</column>
-<column name="  ++ VITIS_LOOP_120_4">48896, 48896, 764, -, -, 64, no</column>
-<column name="   +++ VITIS_LOOP_126_5">747, 747, 83, -, -, 9, no</column>
-<column name="    ++++ VITIS_LOOP_129_6">81, 81, 9, -, -, 9, no</column>
+<column name="- ITRowcomp">782888, 3498408830, 195722 ~ 13507370, -, -, 4 ~ 259, no</column>
+<column name=" + ITColcomp">195720, 13507368, 48930 ~ 52152, -, -, 4 ~ 259, no</column>
+<column name="  ++ Conv1_outftmaps">48896, 48896, 764, -, -, 64, no</column>
+<column name="   +++ Conv1_ky">747, 747, 83, -, -, 9, no</column>
+<column name="    ++++ Conv1_kx">81, 81, 9, -, -, 9, no</column>
 </table>
 </item>
 </section>

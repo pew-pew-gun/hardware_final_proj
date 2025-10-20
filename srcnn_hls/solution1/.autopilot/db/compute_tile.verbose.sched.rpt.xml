@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'compute_tile'" level="0">
-<item name = "Date">Mon Oct 20 14:44:28 2025
+<item name = "Date">Tue Oct 21 00:22:08 2025
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -35,11 +35,11 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- VITIS_LOOP_103_1">782888, 3498408830, 195722 ~ 13507370, -, -, 4 ~ 259, no</column>
-<column name=" + VITIS_LOOP_106_2">195720, 13507368, 48930 ~ 52152, -, -, 4 ~ 259, no</column>
-<column name="  ++ VITIS_LOOP_120_4">48896, 48896, 764, -, -, 64, no</column>
-<column name="   +++ VITIS_LOOP_126_5">747, 747, 83, -, -, 9, no</column>
-<column name="    ++++ VITIS_LOOP_129_6">81, 81, 9, -, -, 9, no</column>
+<column name="- ITRowcomp">782888, 3498408830, 195722 ~ 13507370, -, -, 4 ~ 259, no</column>
+<column name=" + ITColcomp">195720, 13507368, 48930 ~ 52152, -, -, 4 ~ 259, no</column>
+<column name="  ++ Conv1_outftmaps">48896, 48896, 764, -, -, 64, no</column>
+<column name="   +++ Conv1_ky">747, 747, 83, -, -, 9, no</column>
+<column name="    ++++ Conv1_kx">81, 81, 9, -, -, 9, no</column>
 </table>
 </item>
 </section>

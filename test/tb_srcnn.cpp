@@ -58,7 +58,7 @@ int tb_srcnn()
           conv2_biases,
           conv3_weights,
           conv3_biases,
-          img_HR);
+          img_HR, 1);
 
     // compare high-resolution output to golden reference
     load_ftmap(fname_GR, &img_GR[0][0][0], N3*H*W);

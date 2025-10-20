@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'srcnn'
 ================================================================
 + General Information: 
-    * Date:           Mon Oct 20 14:44:53 2025
+    * Date:           Tue Oct 21 00:22:36 2025
     * Version:        2023.1 (Build 3854077 on May  4 2023)
     * Project:        srcnn_hls
     * Solution:       solution1 (Vivado IP Flow Target)
@@ -15,47 +15,48 @@
 + Performance & Resource Estimates: 
     
     PS: '+' for module; 'o' for loop; '*' for dataflow
-    +-----------------------------------------------------------------------+--------+-------+------------+-----------+----------+------------+-------+----------+----------+-----------+-------------+-------------+-----+
-    |                                Modules                                |  Issue |       |  Latency   |  Latency  | Iteration|            |  Trip |          |          |           |             |             |     |
-    |                                & Loops                                |  Type  | Slack |  (cycles)  |    (ns)   |  Latency |  Interval  | Count | Pipelined|   BRAM   |    DSP    |      FF     |     LUT     | URAM|
-    +-----------------------------------------------------------------------+--------+-------+------------+-----------+----------+------------+-------+----------+----------+-----------+-------------+-------------+-----+
-    |+ srcnn                                                                |  Timing|  -0.47|           -|          -|         -|           -|      -|        no|  78 (27%)|  164 (13%)|  48268 (20%)|  51782 (44%)|    -|
-    | + srcnn_Pipeline_VITIS_LOOP_374_8_VITIS_LOOP_375_9_VITIS_LOOP_377_10  |       -|   0.00|         803|  8.030e+03|         -|         803|      -|        no|         -|          -|     67 (~0%)|    261 (~0%)|    -|
-    |  o VITIS_LOOP_374_8_VITIS_LOOP_375_9_VITIS_LOOP_377_10                |       -|   7.30|         801|  8.010e+03|         3|           1|    800|       yes|         -|          -|            -|            -|    -|
-    | o VITIS_LOOP_344_1                                                    |       -|   7.30|        6720|  6.720e+04|       105|           -|     64|        no|         -|          -|            -|            -|    -|
-    |  + srcnn_Pipeline_VITIS_LOOP_346_2_VITIS_LOOP_348_3                   |       -|   0.00|          92|    920.000|         -|          92|      -|        no|         -|          -|    268 (~0%)|    458 (~0%)|    -|
-    |   o VITIS_LOOP_346_2_VITIS_LOOP_348_3                                 |       -|   7.30|          90|    900.000|        11|           1|     81|       yes|         -|          -|            -|            -|    -|
-    | o VITIS_LOOP_356_4                                                    |       -|   7.30|       22880|  2.288e+05|       715|           -|     32|        no|         -|          -|            -|            -|    -|
-    |  o VITIS_LOOP_359_5                                                   |       -|   7.30|         704|  7.040e+03|        11|           -|     64|        no|         -|          -|            -|            -|    -|
-    | o VITIS_LOOP_398_11                                                   |       -|   7.30|           -|          -|         -|           -|      -|        no|         -|          -|            -|            -|    -|
-    |  o VITIS_LOOP_400_12                                                  |       -|   7.30|           -|          -|         -|           -|      -|        no|         -|          -|            -|            -|    -|
-    |   + dataflow_in_loop_VITIS_LOOP_400_12*                               |  Timing|  -0.47|           -|          -|         -|           -|      -|  dataflow|  42 (14%)|  164 (13%)|  38784 (16%)|  42416 (36%)|    -|
-    |    + entry_proc                                                       |       -|   5.46|           0|      0.000|         -|           0|      -|        no|         -|          -|      2 (~0%)|     20 (~0%)|    -|
-    |    + load_tile_mm                                                     |       -|   0.00|       71304|  7.130e+05|         -|       71304|      -|        no|         -|    1 (~0%)|    344 (~0%)|    854 (~0%)|    -|
-    |     + load_tile_mm_Pipeline_VITIS_LOOP_40_1_VITIS_LOOP_48_2           |       -|   0.00|       71300|  7.130e+05|         -|       71300|      -|        no|         -|          -|    265 (~0%)|    650 (~0%)|    -|
-    |      o VITIS_LOOP_40_1_VITIS_LOOP_48_2                                |       -|   7.30|       71298|  7.130e+05|        11|           1|  71289|       yes|         -|          -|            -|            -|    -|
-    |    + compute_tile                                                     |  Timing|  -0.47|  3498408831|  3.498e+10|         -|  3498408831|      -|        no|  32 (11%)|  163 (13%)|  37407 (15%)|  40230 (34%)|    -|
-    |     o VITIS_LOOP_103_1                                                |       -|   7.30|  3498408830|  3.498e+10|  13507370|           -|    259|        no|         -|          -|            -|            -|    -|
-    |      o VITIS_LOOP_106_2                                               |       -|   7.30|    13507368|  1.351e+08|     52152|           -|    259|        no|         -|          -|            -|            -|    -|
-    |       + compute_tile_Pipeline_VITIS_LOOP_114_3                        |       -|   5.75|           6|     60.000|         -|           6|      -|        no|         -|          -|      8 (~0%)|   1040 (~0%)|    -|
-    |        o VITIS_LOOP_114_3                                             |       -|   7.30|           4|     40.000|         1|           1|      4|       yes|         -|          -|            -|            -|    -|
-    |       + compute_tile_Pipeline_VITIS_LOOP_147_8                        |       -|   3.39|           7|     70.000|         -|           7|      -|        no|         -|          -|    271 (~0%)|    699 (~0%)|    -|
-    |        o VITIS_LOOP_147_8                                             |       -|   7.30|           5|     50.000|         3|           1|      4|       yes|         -|          -|            -|            -|    -|
-    |       + compute_tile_Pipeline_VITIS_LOOP_157_9                        |       -|   5.29|           6|     60.000|         -|           6|      -|        no|         -|          -|    331 (~0%)|     71 (~0%)|    -|
-    |        o VITIS_LOOP_157_9                                             |       -|   7.30|           4|     40.000|         2|           1|      4|       yes|         -|          -|            -|            -|    -|
-    |       + compute_tile_Pipeline_VITIS_LOOP_178_12                       |       -|   4.83|           6|     60.000|         -|           6|      -|        no|         -|          -|    184 (~0%)|     65 (~0%)|    -|
-    |        o VITIS_LOOP_178_12                                            |       -|   7.30|           4|     40.000|         2|           1|      4|       yes|         -|          -|            -|            -|    -|
-    |       + compute_tile_Pipeline_VITIS_LOOP_193_14                       |  Timing|  -0.47|        3221|  3.221e+04|         -|        3221|      -|        no|         -|   123 (9%)|   19805 (8%)|  21597 (18%)|    -|
-    |        o VITIS_LOOP_193_14                                            |       -|   7.30|        3220|  3.220e+04|       805|           -|      4|        no|         -|          -|            -|            -|    -|
-    |       o VITIS_LOOP_120_4                                              |       -|   7.30|       48896|  4.890e+05|       764|           -|     64|        no|         -|          -|            -|            -|    -|
-    |        + compute_tile_Pipeline_VITIS_LOOP_139_7                       |       -|   0.19|          13|    130.000|         -|          13|      -|        no|         -|    14 (1%)|    2718 (1%)|    1837 (1%)|    -|
-    |         o VITIS_LOOP_139_7                                            |       -|   7.30|          11|    110.000|         9|           1|      4|       yes|         -|          -|            -|            -|    -|
-    |        o VITIS_LOOP_126_5                                             |       -|   7.30|         747|  7.470e+03|        83|           -|      9|        no|         -|          -|            -|            -|    -|
-    |         o VITIS_LOOP_129_6                                            |       -|   7.30|          81|    810.000|         9|           -|      9|        no|         -|          -|            -|            -|    -|
-    |    + store_tile_mm                                                    |       -|   0.00|           -|          -|         -|           -|      -|        no|         -|          -|    327 (~0%)|    690 (~0%)|    -|
-    |     + store_tile_mm_Pipeline_VITIS_LOOP_225_2                         |       -|   0.00|           -|          -|         -|           -|      -|        no|         -|          -|    216 (~0%)|    517 (~0%)|    -|
-    |      o VITIS_LOOP_223_1_VITIS_LOOP_225_2                              |       -|   7.30|           -|          -|         8|           1|      -|       yes|         -|          -|            -|            -|    -|
-    +-----------------------------------------------------------------------+--------+-------+------------+-----------+----------+------------+-------+----------+----------+-----------+-------------+-------------+-----+
+    +---------------------------------------------------+--------+-------+------------+-----------+----------+------------+------+----------+----------+-----------+-------------+-------------+-----+
+    |                      Modules                      |  Issue |       |  Latency   |  Latency  | Iteration|            | Trip |          |          |           |             |             |     |
+    |                      & Loops                      |  Type  | Slack |  (cycles)  |    (ns)   |  Latency |  Interval  | Count| Pipelined|   BRAM   |    DSP    |      FF     |     LUT     | URAM|
+    +---------------------------------------------------+--------+-------+------------+-----------+----------+------------+------+----------+----------+-----------+-------------+-------------+-----+
+    |+ srcnn                                            |  Timing|  -0.47|           -|          -|         -|           -|     -|        no|  78 (27%)|  163 (13%)|  48166 (20%)|  51588 (44%)|    -|
+    | + srcnn_Pipeline_CopyW3_inft_CopyW3_ky_CopyW3_kx  |       -|   0.00|         803|  8.030e+03|         -|         803|     -|        no|         -|          -|     67 (~0%)|    261 (~0%)|    -|
+    |  o CopyW3_inft_CopyW3_ky_CopyW3_kx                |       -|   7.30|         801|  8.010e+03|         3|           1|   800|       yes|         -|          -|            -|            -|    -|
+    | o CopyW1_outft                                    |       -|   7.30|        6720|  6.720e+04|       105|           -|    64|        no|         -|          -|            -|            -|    -|
+    |  + srcnn_Pipeline_CopyW1_ky_CopyW1_kx             |       -|   0.00|          92|    920.000|         -|          92|     -|        no|         -|          -|    268 (~0%)|    458 (~0%)|    -|
+    |   o CopyW1_ky_CopyW1_kx                           |       -|   7.30|          90|    900.000|        11|           1|    81|       yes|         -|          -|            -|            -|    -|
+    | o CopyW2_outft                                    |       -|   7.30|        2816|  2.816e+04|        88|           -|    32|        no|         -|          -|            -|            -|    -|
+    |  + srcnn_Pipeline_CopyW2_inft                     |       -|   0.00|          75|    750.000|         -|          75|     -|        no|         -|          -|    195 (~0%)|    223 (~0%)|    -|
+    |   o CopyW2_inft                                   |       -|   7.30|          73|    730.000|        11|           1|    64|       yes|         -|          -|            -|            -|    -|
+    | o IT_h0                                           |       -|   7.30|           -|          -|         -|           -|     -|        no|         -|          -|            -|            -|    -|
+    |  o IT_w0                                          |       -|   7.30|           -|          -|         -|           -|     -|        no|         -|          -|            -|            -|    -|
+    |   + dataflow_in_loop_IT_w0*                       |  Timing|  -0.47|           -|          -|         -|           -|     -|  dataflow|  42 (14%)|  163 (13%)|  38637 (16%)|  41958 (35%)|    -|
+    |    + entry_proc                                   |       -|   5.46|           0|      0.000|         -|           0|     -|        no|         -|          -|      2 (~0%)|     20 (~0%)|    -|
+    |    + load_tile_mm                                 |       -|   0.00|           -|          -|         -|           -|     -|        no|         -|          -|    272 (~0%)|    653 (~0%)|    -|
+    |     o InputTileHread                              |       -|   7.30|           -|          -|         -|           -|     -|        no|         -|          -|            -|            -|    -|
+    |      o InputTileWread                             |       -|   7.30|           -|          -|        11|           -|     -|        no|         -|          -|            -|            -|    -|
+    |    + compute_tile                                 |  Timing|  -0.47|  3498408831|  3.498e+10|         -|  3498408831|     -|        no|  32 (11%)|  163 (13%)|  37407 (15%)|  40230 (34%)|    -|
+    |     o ITRowcomp                                   |       -|   7.30|  3498408830|  3.498e+10|  13507370|           -|   259|        no|         -|          -|            -|            -|    -|
+    |      o ITColcomp                                  |       -|   7.30|    13507368|  1.351e+08|     52152|           -|   259|        no|         -|          -|            -|            -|    -|
+    |       + compute_tile_Pipeline_Conv2Out_biases     |       -|   5.75|           6|     60.000|         -|           6|     -|        no|         -|          -|      8 (~0%)|   1040 (~0%)|    -|
+    |        o Conv2Out_biases                          |       -|   7.30|           4|     40.000|         1|           1|     4|       yes|         -|          -|            -|            -|    -|
+    |       + compute_tile_Pipeline_Conv2_ReLU          |       -|   3.39|           7|     70.000|         -|           7|     -|        no|         -|          -|    271 (~0%)|    699 (~0%)|    -|
+    |        o Conv2_ReLU                               |       -|   7.30|           5|     50.000|         3|           1|     4|       yes|         -|          -|            -|            -|    -|
+    |       + compute_tile_Pipeline_Shift_win32         |       -|   5.29|           6|     60.000|         -|           6|     -|        no|         -|          -|    331 (~0%)|     71 (~0%)|    -|
+    |        o Shift_win32                              |       -|   7.30|           4|     40.000|         2|           1|     4|       yes|         -|          -|            -|            -|    -|
+    |       + compute_tile_Pipeline_Update_linebuf32    |       -|   4.83|           6|     60.000|         -|           6|     -|        no|         -|          -|    184 (~0%)|     65 (~0%)|    -|
+    |        o Update_linebuf32                         |       -|   7.30|           4|     40.000|         2|           1|     4|       yes|         -|          -|            -|            -|    -|
+    |       + compute_tile_Pipeline_Conv3_inputft       |  Timing|  -0.47|        3221|  3.221e+04|         -|        3221|     -|        no|         -|   123 (9%)|   19805 (8%)|  21597 (18%)|    -|
+    |        o Conv3_inputft                            |       -|   7.30|        3220|  3.220e+04|       805|           -|     4|        no|         -|          -|            -|            -|    -|
+    |       o Conv1_outftmaps                           |       -|   7.30|       48896|  4.890e+05|       764|           -|    64|        no|         -|          -|            -|            -|    -|
+    |        + compute_tile_Pipeline_Conv2_dot32        |       -|   0.19|          13|    130.000|         -|          13|     -|        no|         -|    14 (1%)|    2718 (1%)|    1837 (1%)|    -|
+    |         o Conv2_dot32                             |       -|   7.30|          11|    110.000|         9|           1|     4|       yes|         -|          -|            -|            -|    -|
+    |        o Conv1_ky                                 |       -|   7.30|         747|  7.470e+03|        83|           -|     9|        no|         -|          -|            -|            -|    -|
+    |         o Conv1_kx                                |       -|   7.30|          81|    810.000|         9|           -|     9|        no|         -|          -|            -|            -|    -|
+    |    + store_tile_mm                                |       -|   0.00|           -|          -|         -|           -|     -|        no|         -|          -|    252 (~0%)|    433 (~0%)|    -|
+    |     o Out_writey                                  |       -|   7.30|           -|          -|         -|           -|     -|        no|         -|          -|            -|            -|    -|
+    |      o Out_writex                                 |       -|   7.30|           -|          -|         3|           -|     -|        no|         -|          -|            -|            -|    -|
+    +---------------------------------------------------+--------+-------+------------+-----------+----------+------------+------+----------+----------+-----------+-------------+-------------+-----+
 
 
 ================================================================
@@ -104,6 +105,7 @@
 | s_axi_ctrl | conv3_biases_2  | 0x5c   | 32    | W      | Data signal of conv3_biases      |                                                                      |
 | s_axi_ctrl | output_ftmap_1  | 0x64   | 32    | W      | Data signal of output_ftmap      |                                                                      |
 | s_axi_ctrl | output_ftmap_2  | 0x68   | 32    | W      | Data signal of output_ftmap      |                                                                      |
+| s_axi_ctrl | reload_weights  | 0x70   | 32    | W      | Data signal of reload_weights    |                                                                      |
 +------------+-----------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
 
 * TOP LEVEL CONTROL
@@ -121,48 +123,50 @@
 == SW I/O Information
 ================================================================
 * Top Function Arguments
-+---------------+-----------+----------+
-| Argument      | Direction | Datatype |
-+---------------+-----------+----------+
-| input_ftmap   | in        | float*   |
-| conv1_weights | in        | float*   |
-| conv1_biases  | in        | float*   |
-| conv2_weights | in        | float*   |
-| conv2_biases  | in        | float*   |
-| conv3_weights | in        | float*   |
-| conv3_biases  | in        | float*   |
-| output_ftmap  | out       | float*   |
-+---------------+-----------+----------+
++----------------+-----------+----------+
+| Argument       | Direction | Datatype |
++----------------+-----------+----------+
+| input_ftmap    | in        | float*   |
+| conv1_weights  | in        | float*   |
+| conv1_biases   | in        | float*   |
+| conv2_weights  | in        | float*   |
+| conv2_biases   | in        | float*   |
+| conv3_weights  | in        | float*   |
+| conv3_biases   | in        | float*   |
+| output_ftmap   | out       | float*   |
+| reload_weights | in        | int      |
++----------------+-----------+----------+
 
 * SW-to-HW Mapping
-+---------------+----------------+-----------+----------+-------------------------------------------+
-| Argument      | HW Interface   | HW Type   | HW Usage | HW Info                                   |
-+---------------+----------------+-----------+----------+-------------------------------------------+
-| input_ftmap   | m_axi_gmem_in  | interface |          |                                           |
-| input_ftmap   | s_axi_ctrl     | register  | offset   | name=input_ftmap_1 offset=0x10 range=32   |
-| input_ftmap   | s_axi_ctrl     | register  | offset   | name=input_ftmap_2 offset=0x14 range=32   |
-| conv1_weights | m_axi_gmem_w1  | interface |          |                                           |
-| conv1_weights | s_axi_ctrl     | register  | offset   | name=conv1_weights_1 offset=0x1c range=32 |
-| conv1_weights | s_axi_ctrl     | register  | offset   | name=conv1_weights_2 offset=0x20 range=32 |
-| conv1_biases  | m_axi_gmem_w1  | interface |          |                                           |
-| conv1_biases  | s_axi_ctrl     | register  | offset   | name=conv1_biases_1 offset=0x28 range=32  |
-| conv1_biases  | s_axi_ctrl     | register  | offset   | name=conv1_biases_2 offset=0x2c range=32  |
-| conv2_weights | m_axi_gmem_w2  | interface |          |                                           |
-| conv2_weights | s_axi_ctrl     | register  | offset   | name=conv2_weights_1 offset=0x34 range=32 |
-| conv2_weights | s_axi_ctrl     | register  | offset   | name=conv2_weights_2 offset=0x38 range=32 |
-| conv2_biases  | m_axi_gmem_w2  | interface |          |                                           |
-| conv2_biases  | s_axi_ctrl     | register  | offset   | name=conv2_biases_1 offset=0x40 range=32  |
-| conv2_biases  | s_axi_ctrl     | register  | offset   | name=conv2_biases_2 offset=0x44 range=32  |
-| conv3_weights | m_axi_gmem_w3  | interface |          |                                           |
-| conv3_weights | s_axi_ctrl     | register  | offset   | name=conv3_weights_1 offset=0x4c range=32 |
-| conv3_weights | s_axi_ctrl     | register  | offset   | name=conv3_weights_2 offset=0x50 range=32 |
-| conv3_biases  | m_axi_gmem_w3  | interface |          |                                           |
-| conv3_biases  | s_axi_ctrl     | register  | offset   | name=conv3_biases_1 offset=0x58 range=32  |
-| conv3_biases  | s_axi_ctrl     | register  | offset   | name=conv3_biases_2 offset=0x5c range=32  |
-| output_ftmap  | m_axi_gmem_out | interface |          |                                           |
-| output_ftmap  | s_axi_ctrl     | register  | offset   | name=output_ftmap_1 offset=0x64 range=32  |
-| output_ftmap  | s_axi_ctrl     | register  | offset   | name=output_ftmap_2 offset=0x68 range=32  |
-+---------------+----------------+-----------+----------+-------------------------------------------+
++----------------+----------------+-----------+----------+-------------------------------------------+
+| Argument       | HW Interface   | HW Type   | HW Usage | HW Info                                   |
++----------------+----------------+-----------+----------+-------------------------------------------+
+| input_ftmap    | m_axi_gmem_in  | interface |          |                                           |
+| input_ftmap    | s_axi_ctrl     | register  | offset   | name=input_ftmap_1 offset=0x10 range=32   |
+| input_ftmap    | s_axi_ctrl     | register  | offset   | name=input_ftmap_2 offset=0x14 range=32   |
+| conv1_weights  | m_axi_gmem_w1  | interface |          |                                           |
+| conv1_weights  | s_axi_ctrl     | register  | offset   | name=conv1_weights_1 offset=0x1c range=32 |
+| conv1_weights  | s_axi_ctrl     | register  | offset   | name=conv1_weights_2 offset=0x20 range=32 |
+| conv1_biases   | m_axi_gmem_w1  | interface |          |                                           |
+| conv1_biases   | s_axi_ctrl     | register  | offset   | name=conv1_biases_1 offset=0x28 range=32  |
+| conv1_biases   | s_axi_ctrl     | register  | offset   | name=conv1_biases_2 offset=0x2c range=32  |
+| conv2_weights  | m_axi_gmem_w2  | interface |          |                                           |
+| conv2_weights  | s_axi_ctrl     | register  | offset   | name=conv2_weights_1 offset=0x34 range=32 |
+| conv2_weights  | s_axi_ctrl     | register  | offset   | name=conv2_weights_2 offset=0x38 range=32 |
+| conv2_biases   | m_axi_gmem_w2  | interface |          |                                           |
+| conv2_biases   | s_axi_ctrl     | register  | offset   | name=conv2_biases_1 offset=0x40 range=32  |
+| conv2_biases   | s_axi_ctrl     | register  | offset   | name=conv2_biases_2 offset=0x44 range=32  |
+| conv3_weights  | m_axi_gmem_w3  | interface |          |                                           |
+| conv3_weights  | s_axi_ctrl     | register  | offset   | name=conv3_weights_1 offset=0x4c range=32 |
+| conv3_weights  | s_axi_ctrl     | register  | offset   | name=conv3_weights_2 offset=0x50 range=32 |
+| conv3_biases   | m_axi_gmem_w3  | interface |          |                                           |
+| conv3_biases   | s_axi_ctrl     | register  | offset   | name=conv3_biases_1 offset=0x58 range=32  |
+| conv3_biases   | s_axi_ctrl     | register  | offset   | name=conv3_biases_2 offset=0x5c range=32  |
+| output_ftmap   | m_axi_gmem_out | interface |          |                                           |
+| output_ftmap   | s_axi_ctrl     | register  | offset   | name=output_ftmap_1 offset=0x64 range=32  |
+| output_ftmap   | s_axi_ctrl     | register  | offset   | name=output_ftmap_2 offset=0x68 range=32  |
+| reload_weights | s_axi_ctrl     | register  |          | name=reload_weights offset=0x70 range=32  |
++----------------+----------------+-----------+----------+-------------------------------------------+
 
 
 ================================================================
@@ -171,250 +175,242 @@
  Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
 
 * Inferred Burst Summary
-+----------------+-----------+----------+-------+------------------+----------------------+
-| HW Interface   | Direction | Length   | Width | Loop             | Loop Location        |
-+----------------+-----------+----------+-------+------------------+----------------------+
-| m_axi_gmem_out | write     | variable | 32    | VITIS_LOOP_225_2 | src/srcnn.cpp:225:20 |
-| m_axi_gmem_w3  | read      | 800      | 32    | VITIS_LOOP_374_8 | src/srcnn.cpp:374:23 |
-+----------------+-----------+----------+-------+------------------+----------------------+
++----------------+-----------+----------+-------+-------------+---------------------+
+| HW Interface   | Direction | Length   | Width | Loop        | Loop Location       |
++----------------+-----------+----------+-------+-------------+---------------------+
+| m_axi_gmem_out | write     | variable | 32    | Out_writex  | src/srcnn.cpp:245:5 |
+| m_axi_gmem_w3  | read      | 800      | 32    | CopyW3_inft | src/srcnn.cpp:399:5 |
++----------------+-----------+----------+-------+-------------+---------------------+
 
 * All M_AXI Variable Accesses
-+----------------+---------------+----------------------+-----------+--------------+----------+-------------------+----------------------+------------+---------------------------------------------------------------------------------------------------------+
-| HW Interface   | Variable      | Access Location      | Direction | Burst Status | Length   | Loop              | Loop Location        | Resolution | Problem                                                                                                 |
-+----------------+---------------+----------------------+-----------+--------------+----------+-------------------+----------------------+------------+---------------------------------------------------------------------------------------------------------+
-| m_axi_gmem_in  | in            | src/srcnn.cpp:53:31  | read      | Fail         |          | VITIS_LOOP_48_2   | src/srcnn.cpp:48:26  | 214-229    | Could not analyze pattern                                                                               |
-| m_axi_gmem_out | out           | src/srcnn.cpp:226:30 | write     | Widen Fail   |          | VITIS_LOOP_225_2  | src/srcnn.cpp:225:20 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
-| m_axi_gmem_out | out           | src/srcnn.cpp:226:30 | write     | Fail         |          | VITIS_LOOP_223_1  | src/srcnn.cpp:223:20 | 214-230    | Stride is incompatible                                                                                  |
-| m_axi_gmem_out | out           | src/srcnn.cpp:226:30 | write     | Inferred     | variable | VITIS_LOOP_225_2  | src/srcnn.cpp:225:20 |            |                                                                                                         |
-| m_axi_gmem_w1  |               | src/srcnn.cpp:344:21 | read      | Fail         |          |                   |                      | 214-224    | Could not burst due to multiple potential reads to the same bundle in the same region.                  |
-| m_axi_gmem_w1  | conv1_biases  | src/srcnn.cpp:345:18 | read      | Widen Fail   |          | VITIS_LOOP_344_1  | src/srcnn.cpp:344:21 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
-| m_axi_gmem_w1  | conv1_biases  | src/srcnn.cpp:345:18 | read      | Inferred     | 64       | VITIS_LOOP_344_1  | src/srcnn.cpp:344:21 |            |                                                                                                         |
-| m_axi_gmem_w1  | conv1_weights | src/srcnn.cpp:350:33 | read      | Widen Fail   |          | VITIS_LOOP_348_3  | src/srcnn.cpp:348:25 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
-| m_axi_gmem_w1  | conv1_weights | src/srcnn.cpp:350:33 | read      | Inferred     | 5184     | VITIS_LOOP_344_1  | src/srcnn.cpp:344:21 |            |                                                                                                         |
-| m_axi_gmem_w2  |               | src/srcnn.cpp:356:23 | read      | Fail         |          |                   |                      | 214-224    | Could not burst due to multiple potential reads to the same bundle in the same region.                  |
-| m_axi_gmem_w2  | conv2_biases  | src/srcnn.cpp:358:15 | read      | Widen Fail   |          | VITIS_LOOP_356_4  | src/srcnn.cpp:356:23 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
-| m_axi_gmem_w2  | conv2_biases  | src/srcnn.cpp:358:15 | read      | Inferred     | 32       | VITIS_LOOP_356_4  | src/srcnn.cpp:356:23 |            |                                                                                                         |
-| m_axi_gmem_w2  | conv2_weights | src/srcnn.cpp:364:46 | read      | Widen Fail   |          | VITIS_LOOP_359_5  | src/srcnn.cpp:359:27 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
-| m_axi_gmem_w2  | conv2_weights | src/srcnn.cpp:364:46 | read      | Inferred     | 2048     | VITIS_LOOP_356_4  | src/srcnn.cpp:356:23 |            |                                                                                                         |
-| m_axi_gmem_w3  | conv3_weights | src/srcnn.cpp:379:41 | read      | Widen Fail   |          | VITIS_LOOP_377_10 | src/srcnn.cpp:377:32 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
-| m_axi_gmem_w3  | conv3_weights | src/srcnn.cpp:379:41 | read      | Inferred     | 800      | VITIS_LOOP_374_8  | src/srcnn.cpp:374:23 |            |                                                                                                         |
-+----------------+---------------+----------------------+-----------+--------------+----------+-------------------+----------------------+------------+---------------------------------------------------------------------------------------------------------+
++----------------+---------------+----------------------+-----------+--------------+----------+----------------+----------------------+------------+---------------------------------------------------------------------------------------------------------+
+| HW Interface   | Variable      | Access Location      | Direction | Burst Status | Length   | Loop           | Loop Location        | Resolution | Problem                                                                                                 |
++----------------+---------------+----------------------+-----------+--------------+----------+----------------+----------------------+------------+---------------------------------------------------------------------------------------------------------+
+| m_axi_gmem_in  | in            | src/srcnn.cpp:56:31  | read      | Fail         |          | InputTileWread | src/srcnn.cpp:51:9   | 214-229    | Could not analyze pattern                                                                               |
+| m_axi_gmem_out | out           | src/srcnn.cpp:246:30 | write     | Widen Fail   |          | Out_writex     | src/srcnn.cpp:245:5  | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem_out | out           | src/srcnn.cpp:246:30 | write     | Fail         |          | Out_writey     | src/srcnn.cpp:242:3  | 214-230    | Stride is incompatible                                                                                  |
+| m_axi_gmem_out | out           | src/srcnn.cpp:246:30 | write     | Inferred     | variable | Out_writex     | src/srcnn.cpp:245:5  |            |                                                                                                         |
+| m_axi_gmem_w1  |               | src/srcnn.cpp:362:3  | read      | Fail         |          |                |                      | 214-224    | Could not burst due to multiple potential reads to the same bundle in the same region.                  |
+| m_axi_gmem_w1  | conv1_biases  | src/srcnn.cpp:364:18 | read      | Widen Fail   |          | CopyW1_outft   | src/srcnn.cpp:362:3  | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem_w1  | conv1_biases  | src/srcnn.cpp:364:18 | read      | Inferred     | 64       | CopyW1_outft   | src/srcnn.cpp:362:3  |            |                                                                                                         |
+| m_axi_gmem_w1  | conv1_weights | src/srcnn.cpp:371:33 | read      | Widen Fail   |          | CopyW1_kx      | src/srcnn.cpp:369:7  | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem_w1  | conv1_weights | src/srcnn.cpp:371:33 | read      | Inferred     | 5184     | CopyW1_outft   | src/srcnn.cpp:362:3  |            |                                                                                                         |
+| m_axi_gmem_w2  |               | src/srcnn.cpp:377:5  | read      | Fail         |          |                |                      | 214-224    | Could not burst due to multiple potential reads to the same bundle in the same region.                  |
+| m_axi_gmem_w2  | conv2_biases  | src/srcnn.cpp:379:15 | read      | Widen Fail   |          | CopyW2_outft   | src/srcnn.cpp:377:5  | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem_w2  | conv2_biases  | src/srcnn.cpp:379:15 | read      | Inferred     | 32       | CopyW2_outft   | src/srcnn.cpp:377:5  |            |                                                                                                         |
+| m_axi_gmem_w2  | conv2_weights | src/srcnn.cpp:387:46 | read      | Widen Fail   |          | CopyW2_inft    | src/srcnn.cpp:381:9  | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem_w2  | conv2_weights | src/srcnn.cpp:387:46 | read      | Inferred     | 2048     | CopyW2_outft   | src/srcnn.cpp:377:5  |            |                                                                                                         |
+| m_axi_gmem_w3  | conv3_weights | src/srcnn.cpp:407:41 | read      | Widen Fail   |          | CopyW3_kx      | src/srcnn.cpp:405:13 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem_w3  | conv3_weights | src/srcnn.cpp:407:41 | read      | Inferred     | 800      | CopyW3_inft    | src/srcnn.cpp:399:5  |            |                                                                                                         |
++----------------+---------------+----------------------+-----------+--------------+----------+----------------+----------------------+------------+---------------------------------------------------------------------------------------------------------+
 
     * Resolution URL: www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=XXX-YYY.html (replace XXX-YYY with column value)
 
 ================================================================
 == Bind Op Report
 ================================================================
-+-----------------------------------------------------------------------+-----+--------+------------------+------+---------+---------+
-| Name                                                                  | DSP | Pragma | Variable         | Op   | Impl    | Latency |
-+-----------------------------------------------------------------------+-----+--------+------------------+------+---------+---------+
-| + srcnn                                                               | 164 |        |                  |      |         |         |
-|   add_ln344_1_fu_1191_p2                                              | -   |        | add_ln344_1      | add  | fabric  | 0       |
-|   add_ln344_fu_1203_p2                                                | -   |        | add_ln344        | add  | fabric  | 0       |
-|   add_ln350_3_fu_1273_p2                                              | -   |        | add_ln350_3      | add  | fabric  | 0       |
-|   add_ln345_fu_1213_p2                                                | -   |        | add_ln345        | add  | fabric  | 0       |
-|   add_ln356_fu_1699_p2                                                | -   |        | add_ln356        | add  | fabric  | 0       |
-|   add_ln358_fu_1715_p2                                                | -   |        | add_ln358        | add  | fabric  | 0       |
-|   add_ln364_2_fu_1980_p2                                              | -   |        | add_ln364_2      | add  | fabric  | 0       |
-|   add_ln359_fu_2003_p2                                                | -   |        | add_ln359        | add  | fabric  | 0       |
-|   add_ln364_fu_2009_p2                                                | -   |        | add_ln364        | add  | fabric  | 0       |
-|   add_ln364_1_fu_2018_p2                                              | -   |        | add_ln364_1      | add  | fabric  | 0       |
-|   h0_3_fu_2081_p2                                                     | -   |        | h0_3             | add  | fabric  | 0       |
-|   w0_1_fu_2093_p2                                                     | -   |        | w0_1             | add  | fabric  | 0       |
-|  + srcnn_Pipeline_VITIS_LOOP_346_2_VITIS_LOOP_348_3                   | 0   |        |                  |      |         |         |
-|    add_ln348_fu_180_p2                                                | -   |        | add_ln348        | add  | fabric  | 0       |
-|    add_ln346_1_fu_192_p2                                              | -   |        | add_ln346_1      | add  | fabric  | 0       |
-|    add_ln346_fu_201_p2                                                | -   |        | add_ln346        | add  | fabric  | 0       |
-|    add_ln350_4_fu_319_p2                                              | -   |        | add_ln350_4      | add  | fabric  | 0       |
-|    add_ln348_2_fu_241_p2                                              | -   |        | add_ln348_2      | add  | fabric  | 0       |
-|    add_ln350_2_fu_269_p2                                              | -   |        | add_ln350_2      | add  | fabric  | 0       |
-|    add_ln348_1_fu_295_p2                                              | -   |        | add_ln348_1      | add  | fabric  | 0       |
-|  + srcnn_Pipeline_VITIS_LOOP_374_8_VITIS_LOOP_375_9_VITIS_LOOP_377_10 | 0   |        |                  |      |         |         |
-|    add_ln374_1_fu_285_p2                                              | -   |        | add_ln374_1      | add  | fabric  | 0       |
-|    add_ln374_fu_339_p2                                                | -   |        | add_ln374        | add  | fabric  | 0       |
-|    add_ln375_fu_402_p2                                                | -   |        | add_ln375        | add  | fabric  | 0       |
-|    add_ln379_fu_433_p2                                                | -   |        | add_ln379        | add  | fabric  | 0       |
-|    add_ln377_fu_490_p2                                                | -   |        | add_ln377        | add  | fabric  | 0       |
-|    add_ln375_1_fu_311_p2                                              | -   |        | add_ln375_1      | add  | fabric  | 0       |
-|  + dataflow_in_loop_VITIS_LOOP_400_12                                 | 164 |        |                  |      |         |         |
-|    h0_c1_channel_U                                                    | -   |        | h0_c1_channel    | fifo | srl     | 0       |
-|    w0_c2_channel_U                                                    | -   |        | w0_c2_channel    | fifo | srl     | 0       |
-|    phase_c3_channel_U                                                 | -   |        | phase_c3_channel | fifo | srl     | 0       |
-|    h0_c_channel_U                                                     | -   |        | h0_c_channel     | fifo | srl     | 0       |
-|    w0_c_channel_U                                                     | -   |        | w0_c_channel     | fifo | srl     | 0       |
-|    phase_c_channel_U                                                  | -   |        | phase_c_channel  | fifo | srl     | 0       |
-|   + load_tile_mm                                                      | 1   |        |                  |      |         |         |
-|     add_ln399_fu_115_p2                                               | -   |        | add_ln399        | add  | fabric  | 0       |
-|     add_ln401_fu_147_p2                                               | -   |        | add_ln401        | add  | fabric  | 0       |
-|     add_ln40_fu_179_p2                                                | -   |        | add_ln40         | add  | fabric  | 0       |
-|     am_addmul_8ns_4ns_9ns_17_4_1_U28                                  | 1   |        | add_ln40_1       | add  | dsp48   | 3       |
-|     add_ln44_fu_205_p2                                                | -   |        | add_ln44         | add  | fabric  | 0       |
-|     add_ln50_fu_213_p2                                                | -   |        | add_ln50         | add  | fabric  | 0       |
-|     am_addmul_8ns_4ns_9ns_17_4_1_U28                                  | 1   |        | mul_ln44         | mul  | dsp48   | 3       |
-|    + load_tile_mm_Pipeline_VITIS_LOOP_40_1_VITIS_LOOP_48_2            | 0   |        |                  |      |         |         |
-|      add_ln44_1_fu_248_p2                                             | -   |        | add_ln44_1       | add  | fabric  | 0       |
-|      add_ln45_fu_253_p2                                               | -   |        | add_ln45         | add  | fabric  | 0       |
-|      sub_ln53_fu_316_p2                                               | -   |        | sub_ln53         | sub  | fabric  | 0       |
-|      add_ln40_1_fu_327_p2                                             | -   |        | add_ln40_1       | add  | fabric  | 0       |
-|      add_ln40_2_fu_336_p2                                             | -   |        | add_ln40_2       | add  | fabric  | 0       |
-|      add_ln53_2_fu_367_p2                                             | -   |        | add_ln53_2       | add  | fabric  | 0       |
-|      add_ln44_2_fu_410_p2                                             | -   |        | add_ln44_2       | add  | fabric  | 0       |
-|      add_ln45_1_fu_415_p2                                             | -   |        | add_ln45_1       | add  | fabric  | 0       |
-|      sub_ln53_2_fu_478_p2                                             | -   |        | sub_ln53_2       | sub  | fabric  | 0       |
-|      add_ln50_fu_506_p2                                               | -   |        | add_ln50         | add  | fabric  | 0       |
-|      add_ln51_fu_511_p2                                               | -   |        | add_ln51         | add  | fabric  | 0       |
-|      add_ln53_fu_562_p2                                               | -   |        | add_ln53         | add  | fabric  | 0       |
-|      add_ln53_1_fu_572_p2                                             | -   |        | add_ln53_1       | add  | fabric  | 0       |
-|      add_ln48_fu_597_p2                                               | -   |        | add_ln48         | add  | fabric  | 0       |
-|   + compute_tile                                                      | 163 |        |                  |      |         |         |
-|     grp_fu_1560_p2                                                    | -   |        | add_ln399        | add  | fabric  | 0       |
-|     grp_fu_1566_p2                                                    | -   |        | add_ln401        | add  | fabric  | 0       |
-|     sub_ln103_fu_2987_p2                                              | -   |        | sub_ln103        | sub  | fabric  | 0       |
-|     sub_ln103_1_fu_2993_p2                                            | -   |        | sub_ln103_1      | sub  | fabric  | 0       |
-|     p_neg274_i_i_fu_3003_p2                                           | -   |        | p_neg274_i_i     | sub  | fabric  | 0       |
-|     grp_fu_1565_p2                                                    | -   |        | add_ln103        | add  | fabric  | 0       |
-|     grp_fu_1563_p2                                                    | -   |        | add_ln103_1      | add  | fabric  | 0       |
-|     grp_fu_1561_p2                                                    | -   |        | empty_95         | add  | fabric  | 0       |
-|     grp_fu_1562_p2                                                    | -   |        | p_cast21_i_i     | add  | fabric  | 0       |
-|     grp_fu_1566_p2                                                    | -   |        | add_ln208        | add  | fabric  | 0       |
-|     p_neg273_i_i_fu_3471_p2                                           | -   |        | p_neg273_i_i     | sub  | fabric  | 0       |
-|     grp_fu_1559_p2                                                    | -   |        | empty_97         | add  | fabric  | 0       |
-|     grp_fu_1564_p2                                                    | -   |        | empty_98         | add  | fabric  | 0       |
-|     grp_fu_1560_p2                                                    | -   |        | add_ln106_2      | add  | fabric  | 0       |
-|     grp_fu_1563_p2                                                    | -   |        | add_ln106        | add  | fabric  | 0       |
-|     grp_fu_1564_p2                                                    | -   |        | add_ln120        | add  | fabric  | 0       |
-|     grp_fu_1559_p2                                                    | -   |        | add_ln134        | add  | fabric  | 0       |
-|     grp_fu_1565_p2                                                    | -   |        | add_ln134_1      | add  | fabric  | 0       |
-|     grp_fu_1563_p2                                                    | -   |        | add_ln134_2      | add  | fabric  | 0       |
-|     fmul_32ns_32ns_32_3_max_dsp_1_U1101                               | -   |        | add_ln126        | add  | fabric  | 0       |
-|     fadd_32ns_32ns_32_4_full_dsp_1_U1100                              | -   |        | tmp6             | add  | fabric  | 0       |
-|     fmul_32ns_32ns_32_3_max_dsp_1_U1101                               | -   |        | empty_99         | add  | fabric  | 0       |
-|     grp_fu_1564_p2                                                    | -   |        | add_ln134_3      | add  | fabric  | 0       |
-|     sub_ln134_fu_3708_p2                                              | -   |        | sub_ln134        | sub  | fabric  | 0       |
-|     fmul_32ns_32ns_32_3_max_dsp_1_U1101                               | -   |        | add_ln134_4      | add  | fabric  | 0       |
-|     fmul_32ns_32ns_32_3_max_dsp_1_U1101                               | -   |        | add_ln129        | add  | fabric  | 0       |
-|     fadd_32ns_32ns_32_4_full_dsp_1_U1100                              | -   |        | add_ln133        | add  | fabric  | 0       |
-|     grp_fu_1560_p2                                                    | -   |        | add_ln133_1      | add  | fabric  | 0       |
-|     fadd_32ns_32ns_32_4_full_dsp_1_U1100                              | -   |        | add_ln134_5      | add  | fabric  | 0       |
-|     fmul_32ns_32ns_32_3_max_dsp_1_U1101                               | 3   |        | mul_i_i          | fmul | maxdsp  | 2       |
-|     fadd_32ns_32ns_32_4_full_dsp_1_U1100                              | 2   |        | v_3              | fadd | fulldsp | 3       |
-|     fmul_32ns_32ns_32_3_max_dsp_1_U1101                               | -   |        | add_ln154        | add  | fabric  | 0       |
-|     grp_fu_1559_p2                                                    | -   |        | add_ln190        | add  | fabric  | 0       |
-|     fmul_32ns_32ns_32_3_max_dsp_1_U1101                               | -   |        | add_ln191        | add  | fabric  | 0       |
-|     grp_fu_1563_p2                                                    | -   |        | add_ln208_1      | add  | fabric  | 0       |
-|     grp_fu_1561_p2                                                    | -   |        | empty_100        | add  | fabric  | 0       |
-|     fmul_32ns_32ns_32_3_max_dsp_1_U1101                               | -   |        | empty_101        | sub  | fabric  | 0       |
-|     grp_fu_1566_p2                                                    | -   |        | add_ln25         | add  | fabric  | 0       |
-|     grp_fu_1564_p2                                                    | -   |        | add_ln25_1       | add  | fabric  | 0       |
-|     grp_fu_1559_p2                                                    | -   |        | add_ln106_1      | add  | fabric  | 0       |
-|     grp_fu_1561_p2                                                    | -   |        | add_ln103_2      | add  | fabric  | 0       |
-|     grp_fu_1562_p2                                                    | -   |        | add_ln103_3      | add  | fabric  | 0       |
-|     grp_fu_1565_p2                                                    | -   |        | add_ln103_4      | add  | fabric  | 0       |
-|    + compute_tile_Pipeline_VITIS_LOOP_114_3                           | 0   |        |                  |      |         |         |
-|      add_ln114_fu_918_p2                                              | -   |        | add_ln114        | add  | fabric  | 0       |
-|    + compute_tile_Pipeline_VITIS_LOOP_147_8                           | 0   |        |                  |      |         |         |
-|      add_ln147_fu_376_p2                                              | -   |        | add_ln147        | add  | fabric  | 0       |
-|    + compute_tile_Pipeline_VITIS_LOOP_139_7                           | 14  |        |                  |      |         |         |
-|      fadd_32ns_32ns_32_4_full_dsp_1_U86                               | 2   |        | add64_1_i_i      | fadd | fulldsp | 3       |
-|      fadd_32ns_32ns_32_4_full_dsp_1_U87                               | 2   |        | add64_2_i_i      | fadd | fulldsp | 3       |
-|      fadd_32ns_32ns_32_4_full_dsp_1_U88                               | 2   |        | add64_3_i_i      | fadd | fulldsp | 3       |
-|      fadd_32ns_32ns_32_4_full_dsp_1_U89                               | 2   |        | add64_4_i_i      | fadd | fulldsp | 3       |
-|      fadd_32ns_32ns_32_4_full_dsp_1_U90                               | 2   |        | add64_5_i_i      | fadd | fulldsp | 3       |
-|      fadd_32ns_32ns_32_4_full_dsp_1_U91                               | 2   |        | add64_6_i_i      | fadd | fulldsp | 3       |
-|      fadd_32ns_32ns_32_4_full_dsp_1_U92                               | 2   |        | add64_7_i_i      | fadd | fulldsp | 3       |
-|      add_ln139_fu_466_p2                                              | -   |        | add_ln139        | add  | fabric  | 0       |
-|    + compute_tile_Pipeline_VITIS_LOOP_157_9                           | 0   |        |                  |      |         |         |
-|      add_ln172_fu_4712_p2                                             | -   |        | add_ln172        | add  | fabric  | 0       |
-|      add_ln157_fu_4754_p2                                             | -   |        | add_ln157        | add  | fabric  | 0       |
-|    + compute_tile_Pipeline_VITIS_LOOP_178_12                          | 0   |        |                  |      |         |         |
-|      add_ln182_fu_872_p2                                              | -   |        | add_ln182        | add  | fabric  | 0       |
-|      add_ln178_fu_906_p2                                              | -   |        | add_ln178        | add  | fabric  | 0       |
-|    + compute_tile_Pipeline_VITIS_LOOP_193_14                          | 123 |        |                  |      |         |         |
-|      mul_2ns_6ns_7_1_1_U477                                           | -   |        | mul_ln203        | mul  | auto    | 0       |
-|      add_ln203_fu_6351_p2                                             | -   |        | add_ln203        | add  | fabric  | 0       |
-|      add_ln203_1_fu_6361_p2                                           | -   |        | add_ln203_1      | add  | fabric  | 0       |
-|      add_ln203_2_fu_6371_p2                                           | -   |        | add_ln203_2      | add  | fabric  | 0       |
-|      add_ln203_3_fu_6381_p2                                           | -   |        | add_ln203_3      | add  | fabric  | 0       |
-|      add_ln203_4_fu_6391_p2                                           | -   |        | add_ln203_4      | add  | fabric  | 0       |
-|      add_ln203_5_fu_6401_p2                                           | -   |        | add_ln203_5      | add  | fabric  | 0       |
-|      add_ln203_6_fu_6411_p2                                           | -   |        | add_ln203_6      | add  | fabric  | 0       |
-|      add_ln203_7_fu_6421_p2                                           | -   |        | add_ln203_7      | add  | fabric  | 0       |
-|      add_ln203_8_fu_6431_p2                                           | -   |        | add_ln203_8      | add  | fabric  | 0       |
-|      add_ln203_9_fu_6441_p2                                           | -   |        | add_ln203_9      | add  | fabric  | 0       |
-|      add_ln203_10_fu_6451_p2                                          | -   |        | add_ln203_10     | add  | fabric  | 0       |
-|      add_ln203_11_fu_6461_p2                                          | -   |        | add_ln203_11     | add  | fabric  | 0       |
-|      add_ln203_12_fu_6471_p2                                          | -   |        | add_ln203_12     | add  | fabric  | 0       |
-|      add_ln203_13_fu_6481_p2                                          | -   |        | add_ln203_13     | add  | fabric  | 0       |
-|      add_ln203_14_fu_6491_p2                                          | -   |        | add_ln203_14     | add  | fabric  | 0       |
-|      add_ln203_15_fu_6501_p2                                          | -   |        | add_ln203_15     | add  | fabric  | 0       |
-|      add_ln203_16_fu_6511_p2                                          | -   |        | add_ln203_16     | add  | fabric  | 0       |
-|      add_ln203_17_fu_6521_p2                                          | -   |        | add_ln203_17     | add  | fabric  | 0       |
-|      add_ln203_18_fu_6531_p2                                          | -   |        | add_ln203_18     | add  | fabric  | 0       |
-|      add_ln203_19_fu_6541_p2                                          | -   |        | add_ln203_19     | add  | fabric  | 0       |
-|      add_ln203_20_fu_6551_p2                                          | -   |        | add_ln203_20     | add  | fabric  | 0       |
-|      add_ln203_21_fu_6561_p2                                          | -   |        | add_ln203_21     | add  | fabric  | 0       |
-|      add_ln203_22_fu_6571_p2                                          | -   |        | add_ln203_22     | add  | fabric  | 0       |
-|      add_ln203_23_fu_6581_p2                                          | -   |        | add_ln203_23     | add  | fabric  | 0       |
-|      add_ln25_fu_5821_p2                                              | -   |        | add_ln25         | add  | fabric  | 0       |
-|      fmul_32ns_32ns_32_3_max_dsp_1_U436                               | 3   |        | mul252_6_2_1_i_i | fmul | maxdsp  | 2       |
-|      fmul_32ns_32ns_32_3_max_dsp_1_U437                               | 3   |        | mul252_6_3_1_i_i | fmul | maxdsp  | 2       |
-|      fmul_32ns_32ns_32_3_max_dsp_1_U438                               | 3   |        | mul252_6_4_1_i_i | fmul | maxdsp  | 2       |
-|      fmul_32ns_32ns_32_3_max_dsp_1_U439                               | 3   |        | mul252_6_5_i_i   | fmul | maxdsp  | 2       |
-|      fmul_32ns_32ns_32_3_max_dsp_1_U440                               | 3   |        | mul252_6_1_2_i_i | fmul | maxdsp  | 2       |
-|      fmul_32ns_32ns_32_3_max_dsp_1_U441                               | 3   |        | mul252_6_2_2_i_i | fmul | maxdsp  | 2       |
-|      fmul_32ns_32ns_32_3_max_dsp_1_U442                               | 3   |        | mul252_6_3_2_i_i | fmul | maxdsp  | 2       |
-|      fmul_32ns_32ns_32_3_max_dsp_1_U443                               | 3   |        | mul252_6_4_2_i_i | fmul | maxdsp  | 2       |
-|      fmul_32ns_32ns_32_3_max_dsp_1_U444                               | 3   |        | mul252_6_6_i_i   | fmul | maxdsp  | 2       |
-|      fmul_32ns_32ns_32_3_max_dsp_1_U445                               | 3   |        | mul252_6_1_3_i_i | fmul | maxdsp  | 2       |
-|      fmul_32ns_32ns_32_3_max_dsp_1_U446                               | 3   |        | mul252_6_2_3_i_i | fmul | maxdsp  | 2       |
-|      fmul_32ns_32ns_32_3_max_dsp_1_U447                               | 3   |        | mul252_6_3_3_i_i | fmul | maxdsp  | 2       |
-|      fmul_32ns_32ns_32_3_max_dsp_1_U448                               | 3   |        | mul252_6_4_3_i_i | fmul | maxdsp  | 2       |
-|      fmul_32ns_32ns_32_3_max_dsp_1_U449                               | 3   |        | mul252_6_7_i_i   | fmul | maxdsp  | 2       |
-|      fmul_32ns_32ns_32_3_max_dsp_1_U450                               | 3   |        | mul252_6_1_4_i_i | fmul | maxdsp  | 2       |
-|      fmul_32ns_32ns_32_3_max_dsp_1_U451                               | 3   |        | mul252_6_2_4_i_i | fmul | maxdsp  | 2       |
-|      fmul_32ns_32ns_32_3_max_dsp_1_U452                               | 3   |        | mul252_6_3_4_i_i | fmul | maxdsp  | 2       |
-|      fmul_32ns_32ns_32_3_max_dsp_1_U453                               | 3   |        | mul252_7_i_i     | fmul | maxdsp  | 2       |
-|      fmul_32ns_32ns_32_3_max_dsp_1_U454                               | 3   |        | mul252_7_1_i_i   | fmul | maxdsp  | 2       |
-|      fmul_32ns_32ns_32_3_max_dsp_1_U455                               | 3   |        | mul252_7_2_i_i   | fmul | maxdsp  | 2       |
-|      fmul_32ns_32ns_32_3_max_dsp_1_U456                               | 3   |        | mul252_7_3_i_i   | fmul | maxdsp  | 2       |
-|      fmul_32ns_32ns_32_3_max_dsp_1_U457                               | 3   |        | mul252_7_4_i_i   | fmul | maxdsp  | 2       |
-|      fmul_32ns_32ns_32_3_max_dsp_1_U458                               | 3   |        | mul252_7_i_i_74  | fmul | maxdsp  | 2       |
-|      fmul_32ns_32ns_32_3_max_dsp_1_U459                               | 3   |        | mul252_7_1_1_i_i | fmul | maxdsp  | 2       |
-|      fmul_32ns_32ns_32_3_max_dsp_1_U460                               | 3   |        | mul252_7_2_1_i_i | fmul | maxdsp  | 2       |
-|      fmul_32ns_32ns_32_3_max_dsp_1_U461                               | 3   |        | mul252_7_3_1_i_i | fmul | maxdsp  | 2       |
-|      fmul_32ns_32ns_32_3_max_dsp_1_U462                               | 3   |        | mul252_7_4_1_i_i | fmul | maxdsp  | 2       |
-|      fmul_32ns_32ns_32_3_max_dsp_1_U463                               | 3   |        | mul252_7_5_i_i   | fmul | maxdsp  | 2       |
-|      fmul_32ns_32ns_32_3_max_dsp_1_U464                               | 3   |        | mul252_7_1_2_i_i | fmul | maxdsp  | 2       |
-|      fmul_32ns_32ns_32_3_max_dsp_1_U465                               | 3   |        | mul252_7_2_2_i_i | fmul | maxdsp  | 2       |
-|      fmul_32ns_32ns_32_3_max_dsp_1_U466                               | 3   |        | mul252_7_3_2_i_i | fmul | maxdsp  | 2       |
-|      fmul_32ns_32ns_32_3_max_dsp_1_U467                               | 3   |        | mul252_7_4_2_i_i | fmul | maxdsp  | 2       |
-|      fmul_32ns_32ns_32_3_max_dsp_1_U468                               | 3   |        | mul252_7_6_i_i   | fmul | maxdsp  | 2       |
-|      fmul_32ns_32ns_32_3_max_dsp_1_U469                               | 3   |        | mul252_7_1_3_i_i | fmul | maxdsp  | 2       |
-|      fmul_32ns_32ns_32_3_max_dsp_1_U470                               | 3   |        | mul252_7_2_3_i_i | fmul | maxdsp  | 2       |
-|      fmul_32ns_32ns_32_3_max_dsp_1_U471                               | 3   |        | mul252_7_3_3_i_i | fmul | maxdsp  | 2       |
-|      fmul_32ns_32ns_32_3_max_dsp_1_U472                               | 3   |        | mul252_7_4_3_i_i | fmul | maxdsp  | 2       |
-|      fmul_32ns_32ns_32_3_max_dsp_1_U473                               | 3   |        | mul252_7_7_i_i   | fmul | maxdsp  | 2       |
-|      fmul_32ns_32ns_32_3_max_dsp_1_U474                               | 3   |        | mul252_7_1_4_i_i | fmul | maxdsp  | 2       |
-|      fmul_32ns_32ns_32_3_max_dsp_1_U475                               | 3   |        | mul252_7_2_4_i_i | fmul | maxdsp  | 2       |
-|      fmul_32ns_32ns_32_3_max_dsp_1_U476                               | 3   |        | mul252_7_3_4_i_i | fmul | maxdsp  | 2       |
-|      add_ln193_fu_5435_p2                                             | -   |        | add_ln193        | add  | fabric  | 0       |
-|   + store_tile_mm                                                     | 0   |        |                  |      |         |         |
-|     add_ln399_fu_114_p2                                               | -   |        | add_ln399        | add  | fabric  | 0       |
-|     add_ln401_fu_146_p2                                               | -   |        | add_ln401        | add  | fabric  | 0       |
-|     mul_8ns_8ns_16_1_1_U1253                                          | -   |        | bound            | mul  | auto    | 0       |
-|    + store_tile_mm_Pipeline_VITIS_LOOP_225_2                          | 0   |        |                  |      |         |         |
-|      empty_fu_245_p2                                                  | -   |        | empty            | add  | fabric  | 0       |
-|      empty_61_fu_275_p2                                               | -   |        | empty_61         | sub  | fabric  | 0       |
-|      add_ln223_3_fu_287_p2                                            | -   |        | add_ln223_3      | add  | fabric  | 0       |
-|      add_ln223_fu_293_p2                                              | -   |        | add_ln223        | add  | fabric  | 0       |
-|      add_ln226_fu_323_p2                                              | -   |        | add_ln226        | add  | fabric  | 0       |
-|      p_mid1_fu_339_p2                                                 | -   |        | p_mid1           | add  | fabric  | 0       |
-|      p_mid17_fu_369_p2                                                | -   |        | p_mid17          | sub  | fabric  | 0       |
-|      add_ln223_1_fu_387_p2                                            | -   |        | add_ln223_1      | add  | fabric  | 0       |
-|      add_ln223_2_fu_397_p2                                            | -   |        | add_ln223_2      | add  | fabric  | 0       |
-|      add_ln226_1_fu_425_p2                                            | -   |        | add_ln226_1      | add  | fabric  | 0       |
-|      add_ln225_fu_436_p2                                              | -   |        | add_ln225        | add  | fabric  | 0       |
-+-----------------------------------------------------------------------+-----+--------+------------------+------+---------+---------+
++---------------------------------------------------+-----+--------+------------------+------+---------+---------+
+| Name                                              | DSP | Pragma | Variable         | Op   | Impl    | Latency |
++---------------------------------------------------+-----+--------+------------------+------+---------+---------+
+| + srcnn                                           | 163 |        |                  |      |         |         |
+|   add_ln362_1_fu_1102_p2                          | -   |        | add_ln362_1      | add  | fabric  | 0       |
+|   add_ln362_fu_1114_p2                            | -   |        | add_ln362        | add  | fabric  | 0       |
+|   add_ln371_3_fu_1180_p2                          | -   |        | add_ln371_3      | add  | fabric  | 0       |
+|   add_ln364_fu_1124_p2                            | -   |        | add_ln364        | add  | fabric  | 0       |
+|   add_ln377_fu_1594_p2                            | -   |        | add_ln377        | add  | fabric  | 0       |
+|   add_ln379_fu_1604_p2                            | -   |        | add_ln379        | add  | fabric  | 0       |
+|   h0_3_fu_1918_p2                                 | -   |        | h0_3             | add  | fabric  | 0       |
+|   w0_1_fu_1930_p2                                 | -   |        | w0_1             | add  | fabric  | 0       |
+|  + srcnn_Pipeline_CopyW1_ky_CopyW1_kx             | 0   |        |                  |      |         |         |
+|    add_ln369_fu_180_p2                            | -   |        | add_ln369        | add  | fabric  | 0       |
+|    add_ln366_1_fu_192_p2                          | -   |        | add_ln366_1      | add  | fabric  | 0       |
+|    add_ln366_fu_201_p2                            | -   |        | add_ln366        | add  | fabric  | 0       |
+|    add_ln371_4_fu_319_p2                          | -   |        | add_ln371_4      | add  | fabric  | 0       |
+|    add_ln369_2_fu_241_p2                          | -   |        | add_ln369_2      | add  | fabric  | 0       |
+|    add_ln371_2_fu_269_p2                          | -   |        | add_ln371_2      | add  | fabric  | 0       |
+|    add_ln369_1_fu_295_p2                          | -   |        | add_ln369_1      | add  | fabric  | 0       |
+|  + srcnn_Pipeline_CopyW2_inft                     | 0   |        |                  |      |         |         |
+|    add_ln381_fu_266_p2                            | -   |        | add_ln381        | add  | fabric  | 0       |
+|    add_ln387_2_fu_314_p2                          | -   |        | add_ln387_2      | add  | fabric  | 0       |
+|    add_ln387_1_fu_276_p2                          | -   |        | add_ln387_1      | add  | fabric  | 0       |
+|    add_ln387_fu_286_p2                            | -   |        | add_ln387        | add  | fabric  | 0       |
+|  + srcnn_Pipeline_CopyW3_inft_CopyW3_ky_CopyW3_kx | 0   |        |                  |      |         |         |
+|    add_ln399_1_fu_285_p2                          | -   |        | add_ln399_1      | add  | fabric  | 0       |
+|    add_ln399_fu_339_p2                            | -   |        | add_ln399        | add  | fabric  | 0       |
+|    add_ln402_fu_402_p2                            | -   |        | add_ln402        | add  | fabric  | 0       |
+|    add_ln407_fu_433_p2                            | -   |        | add_ln407        | add  | fabric  | 0       |
+|    add_ln405_fu_490_p2                            | -   |        | add_ln405        | add  | fabric  | 0       |
+|    add_ln402_1_fu_311_p2                          | -   |        | add_ln402_1      | add  | fabric  | 0       |
+|  + dataflow_in_loop_IT_w0                         | 163 |        |                  |      |         |         |
+|    h0_c1_channel_U                                | -   |        | h0_c1_channel    | fifo | srl     | 0       |
+|    w0_c2_channel_U                                | -   |        | w0_c2_channel    | fifo | srl     | 0       |
+|    phase_c3_channel_U                             | -   |        | phase_c3_channel | fifo | srl     | 0       |
+|    h0_c_channel_U                                 | -   |        | h0_c_channel     | fifo | srl     | 0       |
+|    w0_c_channel_U                                 | -   |        | w0_c_channel     | fifo | srl     | 0       |
+|    phase_c_channel_U                              | -   |        | phase_c_channel  | fifo | srl     | 0       |
+|   + load_tile_mm                                  | 0   |        |                  |      |         |         |
+|     add_ln428_fu_181_p2                           | -   |        | add_ln428        | add  | fabric  | 0       |
+|     add_ln431_fu_213_p2                           | -   |        | add_ln431        | add  | fabric  | 0       |
+|     add_ln42_fu_257_p2                            | -   |        | add_ln42         | add  | fabric  | 0       |
+|     add_ln42_1_fu_267_p2                          | -   |        | add_ln42_1       | add  | fabric  | 0       |
+|     add_ln46_fu_273_p2                            | -   |        | add_ln46         | add  | fabric  | 0       |
+|     add_ln53_fu_283_p2                            | -   |        | add_ln53         | add  | fabric  | 0       |
+|     add_ln56_2_fu_309_p2                          | -   |        | add_ln56_2       | add  | fabric  | 0       |
+|     sub_ln56_1_fu_338_p2                          | -   |        | sub_ln56_1       | sub  | fabric  | 0       |
+|     add_ln42_2_fu_353_p2                          | -   |        | add_ln42_2       | add  | fabric  | 0       |
+|     add_ln46_1_fu_359_p2                          | -   |        | add_ln46_1       | add  | fabric  | 0       |
+|     add_ln47_fu_364_p2                            | -   |        | add_ln47         | add  | fabric  | 0       |
+|     sub_ln56_fu_427_p2                            | -   |        | sub_ln56         | sub  | fabric  | 0       |
+|     add_ln56_3_fu_452_p2                          | -   |        | add_ln56_3       | add  | fabric  | 0       |
+|     add_ln51_fu_467_p2                            | -   |        | add_ln51         | add  | fabric  | 0       |
+|     add_ln53_1_fu_477_p2                          | -   |        | add_ln53_1       | add  | fabric  | 0       |
+|     add_ln54_fu_482_p2                            | -   |        | add_ln54         | add  | fabric  | 0       |
+|     add_ln56_fu_533_p2                            | -   |        | add_ln56         | add  | fabric  | 0       |
+|     add_ln56_1_fu_542_p2                          | -   |        | add_ln56_1       | add  | fabric  | 0       |
+|   + compute_tile                                  | 163 |        |                  |      |         |         |
+|     grp_fu_1560_p2                                | -   |        | add_ln428        | add  | fabric  | 0       |
+|     grp_fu_1566_p2                                | -   |        | add_ln431        | add  | fabric  | 0       |
+|     sub_ln106_fu_2987_p2                          | -   |        | sub_ln106        | sub  | fabric  | 0       |
+|     sub_ln106_1_fu_2993_p2                        | -   |        | sub_ln106_1      | sub  | fabric  | 0       |
+|     p_neg274_i_i_fu_3003_p2                       | -   |        | p_neg274_i_i     | sub  | fabric  | 0       |
+|     grp_fu_1565_p2                                | -   |        | add_ln106        | add  | fabric  | 0       |
+|     grp_fu_1563_p2                                | -   |        | add_ln106_1      | add  | fabric  | 0       |
+|     grp_fu_1561_p2                                | -   |        | empty_88         | add  | fabric  | 0       |
+|     grp_fu_1562_p2                                | -   |        | p_cast21_i_i     | add  | fabric  | 0       |
+|     grp_fu_1566_p2                                | -   |        | add_ln225        | add  | fabric  | 0       |
+|     p_neg273_i_i_fu_3471_p2                       | -   |        | p_neg273_i_i     | sub  | fabric  | 0       |
+|     grp_fu_1559_p2                                | -   |        | empty_90         | add  | fabric  | 0       |
+|     grp_fu_1564_p2                                | -   |        | empty_91         | add  | fabric  | 0       |
+|     grp_fu_1560_p2                                | -   |        | add_ln109_2      | add  | fabric  | 0       |
+|     grp_fu_1563_p2                                | -   |        | add_ln109        | add  | fabric  | 0       |
+|     grp_fu_1564_p2                                | -   |        | add_ln125        | add  | fabric  | 0       |
+|     grp_fu_1559_p2                                | -   |        | add_ln141        | add  | fabric  | 0       |
+|     grp_fu_1565_p2                                | -   |        | add_ln141_1      | add  | fabric  | 0       |
+|     grp_fu_1563_p2                                | -   |        | add_ln141_2      | add  | fabric  | 0       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U1102           | -   |        | add_ln132        | add  | fabric  | 0       |
+|     fadd_32ns_32ns_32_4_full_dsp_1_U1101          | -   |        | tmp6             | add  | fabric  | 0       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U1102           | -   |        | empty_92         | add  | fabric  | 0       |
+|     grp_fu_1564_p2                                | -   |        | add_ln141_3      | add  | fabric  | 0       |
+|     sub_ln141_fu_3708_p2                          | -   |        | sub_ln141        | sub  | fabric  | 0       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U1102           | -   |        | add_ln141_4      | add  | fabric  | 0       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U1102           | -   |        | add_ln136        | add  | fabric  | 0       |
+|     fadd_32ns_32ns_32_4_full_dsp_1_U1101          | -   |        | add_ln140        | add  | fabric  | 0       |
+|     grp_fu_1560_p2                                | -   |        | add_ln140_1      | add  | fabric  | 0       |
+|     fadd_32ns_32ns_32_4_full_dsp_1_U1101          | -   |        | add_ln141_5      | add  | fabric  | 0       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U1102           | 3   |        | mul_i_i          | fmul | maxdsp  | 2       |
+|     fadd_32ns_32ns_32_4_full_dsp_1_U1101          | 2   |        | v_3              | fadd | fulldsp | 3       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U1102           | -   |        | add_ln163        | add  | fabric  | 0       |
+|     grp_fu_1559_p2                                | -   |        | add_ln204        | add  | fabric  | 0       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U1102           | -   |        | add_ln205        | add  | fabric  | 0       |
+|     grp_fu_1563_p2                                | -   |        | add_ln225_1      | add  | fabric  | 0       |
+|     grp_fu_1561_p2                                | -   |        | empty_93         | add  | fabric  | 0       |
+|     fmul_32ns_32ns_32_3_max_dsp_1_U1102           | -   |        | empty_94         | sub  | fabric  | 0       |
+|     grp_fu_1566_p2                                | -   |        | add_ln25         | add  | fabric  | 0       |
+|     grp_fu_1564_p2                                | -   |        | add_ln25_1       | add  | fabric  | 0       |
+|     grp_fu_1559_p2                                | -   |        | add_ln109_1      | add  | fabric  | 0       |
+|     grp_fu_1561_p2                                | -   |        | add_ln106_2      | add  | fabric  | 0       |
+|     grp_fu_1562_p2                                | -   |        | add_ln106_3      | add  | fabric  | 0       |
+|     grp_fu_1565_p2                                | -   |        | add_ln106_4      | add  | fabric  | 0       |
+|    + compute_tile_Pipeline_Conv2Out_biases        | 0   |        |                  |      |         |         |
+|      add_ln118_fu_918_p2                          | -   |        | add_ln118        | add  | fabric  | 0       |
+|    + compute_tile_Pipeline_Conv2_ReLU             | 0   |        |                  |      |         |         |
+|      add_ln156_fu_376_p2                          | -   |        | add_ln156        | add  | fabric  | 0       |
+|    + compute_tile_Pipeline_Conv2_dot32            | 14  |        |                  |      |         |         |
+|      fadd_32ns_32ns_32_4_full_dsp_1_U87           | 2   |        | add64_1_i_i      | fadd | fulldsp | 3       |
+|      fadd_32ns_32ns_32_4_full_dsp_1_U88           | 2   |        | add64_2_i_i      | fadd | fulldsp | 3       |
+|      fadd_32ns_32ns_32_4_full_dsp_1_U89           | 2   |        | add64_3_i_i      | fadd | fulldsp | 3       |
+|      fadd_32ns_32ns_32_4_full_dsp_1_U90           | 2   |        | add64_4_i_i      | fadd | fulldsp | 3       |
+|      fadd_32ns_32ns_32_4_full_dsp_1_U91           | 2   |        | add64_5_i_i      | fadd | fulldsp | 3       |
+|      fadd_32ns_32ns_32_4_full_dsp_1_U92           | 2   |        | add64_6_i_i      | fadd | fulldsp | 3       |
+|      fadd_32ns_32ns_32_4_full_dsp_1_U93           | 2   |        | add64_7_i_i      | fadd | fulldsp | 3       |
+|      add_ln147_fu_466_p2                          | -   |        | add_ln147        | add  | fabric  | 0       |
+|    + compute_tile_Pipeline_Shift_win32            | 0   |        |                  |      |         |         |
+|      add_ln184_fu_4712_p2                         | -   |        | add_ln184        | add  | fabric  | 0       |
+|      add_ln167_fu_4754_p2                         | -   |        | add_ln167        | add  | fabric  | 0       |
+|    + compute_tile_Pipeline_Update_linebuf32       | 0   |        |                  |      |         |         |
+|      add_ln196_fu_872_p2                          | -   |        | add_ln196        | add  | fabric  | 0       |
+|      add_ln191_fu_906_p2                          | -   |        | add_ln191        | add  | fabric  | 0       |
+|    + compute_tile_Pipeline_Conv3_inputft          | 123 |        |                  |      |         |         |
+|      mul_2ns_6ns_7_1_1_U478                       | -   |        | mul_ln220        | mul  | auto    | 0       |
+|      add_ln220_fu_6351_p2                         | -   |        | add_ln220        | add  | fabric  | 0       |
+|      add_ln220_1_fu_6361_p2                       | -   |        | add_ln220_1      | add  | fabric  | 0       |
+|      add_ln220_2_fu_6371_p2                       | -   |        | add_ln220_2      | add  | fabric  | 0       |
+|      add_ln220_3_fu_6381_p2                       | -   |        | add_ln220_3      | add  | fabric  | 0       |
+|      add_ln220_4_fu_6391_p2                       | -   |        | add_ln220_4      | add  | fabric  | 0       |
+|      add_ln220_5_fu_6401_p2                       | -   |        | add_ln220_5      | add  | fabric  | 0       |
+|      add_ln220_6_fu_6411_p2                       | -   |        | add_ln220_6      | add  | fabric  | 0       |
+|      add_ln220_7_fu_6421_p2                       | -   |        | add_ln220_7      | add  | fabric  | 0       |
+|      add_ln220_8_fu_6431_p2                       | -   |        | add_ln220_8      | add  | fabric  | 0       |
+|      add_ln220_9_fu_6441_p2                       | -   |        | add_ln220_9      | add  | fabric  | 0       |
+|      add_ln220_10_fu_6451_p2                      | -   |        | add_ln220_10     | add  | fabric  | 0       |
+|      add_ln220_11_fu_6461_p2                      | -   |        | add_ln220_11     | add  | fabric  | 0       |
+|      add_ln220_12_fu_6471_p2                      | -   |        | add_ln220_12     | add  | fabric  | 0       |
+|      add_ln220_13_fu_6481_p2                      | -   |        | add_ln220_13     | add  | fabric  | 0       |
+|      add_ln220_14_fu_6491_p2                      | -   |        | add_ln220_14     | add  | fabric  | 0       |
+|      add_ln220_15_fu_6501_p2                      | -   |        | add_ln220_15     | add  | fabric  | 0       |
+|      add_ln220_16_fu_6511_p2                      | -   |        | add_ln220_16     | add  | fabric  | 0       |
+|      add_ln220_17_fu_6521_p2                      | -   |        | add_ln220_17     | add  | fabric  | 0       |
+|      add_ln220_18_fu_6531_p2                      | -   |        | add_ln220_18     | add  | fabric  | 0       |
+|      add_ln220_19_fu_6541_p2                      | -   |        | add_ln220_19     | add  | fabric  | 0       |
+|      add_ln220_20_fu_6551_p2                      | -   |        | add_ln220_20     | add  | fabric  | 0       |
+|      add_ln220_21_fu_6561_p2                      | -   |        | add_ln220_21     | add  | fabric  | 0       |
+|      add_ln220_22_fu_6571_p2                      | -   |        | add_ln220_22     | add  | fabric  | 0       |
+|      add_ln220_23_fu_6581_p2                      | -   |        | add_ln220_23     | add  | fabric  | 0       |
+|      add_ln25_fu_5821_p2                          | -   |        | add_ln25         | add  | fabric  | 0       |
+|      fmul_32ns_32ns_32_3_max_dsp_1_U437           | 3   |        | mul252_6_2_1_i_i | fmul | maxdsp  | 2       |
+|      fmul_32ns_32ns_32_3_max_dsp_1_U438           | 3   |        | mul252_6_3_1_i_i | fmul | maxdsp  | 2       |
+|      fmul_32ns_32ns_32_3_max_dsp_1_U439           | 3   |        | mul252_6_4_1_i_i | fmul | maxdsp  | 2       |
+|      fmul_32ns_32ns_32_3_max_dsp_1_U440           | 3   |        | mul252_6_5_i_i   | fmul | maxdsp  | 2       |
+|      fmul_32ns_32ns_32_3_max_dsp_1_U441           | 3   |        | mul252_6_1_2_i_i | fmul | maxdsp  | 2       |
+|      fmul_32ns_32ns_32_3_max_dsp_1_U442           | 3   |        | mul252_6_2_2_i_i | fmul | maxdsp  | 2       |
+|      fmul_32ns_32ns_32_3_max_dsp_1_U443           | 3   |        | mul252_6_3_2_i_i | fmul | maxdsp  | 2       |
+|      fmul_32ns_32ns_32_3_max_dsp_1_U444           | 3   |        | mul252_6_4_2_i_i | fmul | maxdsp  | 2       |
+|      fmul_32ns_32ns_32_3_max_dsp_1_U445           | 3   |        | mul252_6_6_i_i   | fmul | maxdsp  | 2       |
+|      fmul_32ns_32ns_32_3_max_dsp_1_U446           | 3   |        | mul252_6_1_3_i_i | fmul | maxdsp  | 2       |
+|      fmul_32ns_32ns_32_3_max_dsp_1_U447           | 3   |        | mul252_6_2_3_i_i | fmul | maxdsp  | 2       |
+|      fmul_32ns_32ns_32_3_max_dsp_1_U448           | 3   |        | mul252_6_3_3_i_i | fmul | maxdsp  | 2       |
+|      fmul_32ns_32ns_32_3_max_dsp_1_U449           | 3   |        | mul252_6_4_3_i_i | fmul | maxdsp  | 2       |
+|      fmul_32ns_32ns_32_3_max_dsp_1_U450           | 3   |        | mul252_6_7_i_i   | fmul | maxdsp  | 2       |
+|      fmul_32ns_32ns_32_3_max_dsp_1_U451           | 3   |        | mul252_6_1_4_i_i | fmul | maxdsp  | 2       |
+|      fmul_32ns_32ns_32_3_max_dsp_1_U452           | 3   |        | mul252_6_2_4_i_i | fmul | maxdsp  | 2       |
+|      fmul_32ns_32ns_32_3_max_dsp_1_U453           | 3   |        | mul252_6_3_4_i_i | fmul | maxdsp  | 2       |
+|      fmul_32ns_32ns_32_3_max_dsp_1_U454           | 3   |        | mul252_7_i_i     | fmul | maxdsp  | 2       |
+|      fmul_32ns_32ns_32_3_max_dsp_1_U455           | 3   |        | mul252_7_1_i_i   | fmul | maxdsp  | 2       |
+|      fmul_32ns_32ns_32_3_max_dsp_1_U456           | 3   |        | mul252_7_2_i_i   | fmul | maxdsp  | 2       |
+|      fmul_32ns_32ns_32_3_max_dsp_1_U457           | 3   |        | mul252_7_3_i_i   | fmul | maxdsp  | 2       |
+|      fmul_32ns_32ns_32_3_max_dsp_1_U458           | 3   |        | mul252_7_4_i_i   | fmul | maxdsp  | 2       |
+|      fmul_32ns_32ns_32_3_max_dsp_1_U459           | 3   |        | mul252_7_i_i_76  | fmul | maxdsp  | 2       |
+|      fmul_32ns_32ns_32_3_max_dsp_1_U460           | 3   |        | mul252_7_1_1_i_i | fmul | maxdsp  | 2       |
+|      fmul_32ns_32ns_32_3_max_dsp_1_U461           | 3   |        | mul252_7_2_1_i_i | fmul | maxdsp  | 2       |
+|      fmul_32ns_32ns_32_3_max_dsp_1_U462           | 3   |        | mul252_7_3_1_i_i | fmul | maxdsp  | 2       |
+|      fmul_32ns_32ns_32_3_max_dsp_1_U463           | 3   |        | mul252_7_4_1_i_i | fmul | maxdsp  | 2       |
+|      fmul_32ns_32ns_32_3_max_dsp_1_U464           | 3   |        | mul252_7_5_i_i   | fmul | maxdsp  | 2       |
+|      fmul_32ns_32ns_32_3_max_dsp_1_U465           | 3   |        | mul252_7_1_2_i_i | fmul | maxdsp  | 2       |
+|      fmul_32ns_32ns_32_3_max_dsp_1_U466           | 3   |        | mul252_7_2_2_i_i | fmul | maxdsp  | 2       |
+|      fmul_32ns_32ns_32_3_max_dsp_1_U467           | 3   |        | mul252_7_3_2_i_i | fmul | maxdsp  | 2       |
+|      fmul_32ns_32ns_32_3_max_dsp_1_U468           | 3   |        | mul252_7_4_2_i_i | fmul | maxdsp  | 2       |
+|      fmul_32ns_32ns_32_3_max_dsp_1_U469           | 3   |        | mul252_7_6_i_i   | fmul | maxdsp  | 2       |
+|      fmul_32ns_32ns_32_3_max_dsp_1_U470           | 3   |        | mul252_7_1_3_i_i | fmul | maxdsp  | 2       |
+|      fmul_32ns_32ns_32_3_max_dsp_1_U471           | 3   |        | mul252_7_2_3_i_i | fmul | maxdsp  | 2       |
+|      fmul_32ns_32ns_32_3_max_dsp_1_U472           | 3   |        | mul252_7_3_3_i_i | fmul | maxdsp  | 2       |
+|      fmul_32ns_32ns_32_3_max_dsp_1_U473           | 3   |        | mul252_7_4_3_i_i | fmul | maxdsp  | 2       |
+|      fmul_32ns_32ns_32_3_max_dsp_1_U474           | 3   |        | mul252_7_7_i_i   | fmul | maxdsp  | 2       |
+|      fmul_32ns_32ns_32_3_max_dsp_1_U475           | 3   |        | mul252_7_1_4_i_i | fmul | maxdsp  | 2       |
+|      fmul_32ns_32ns_32_3_max_dsp_1_U476           | 3   |        | mul252_7_2_4_i_i | fmul | maxdsp  | 2       |
+|      fmul_32ns_32ns_32_3_max_dsp_1_U477           | 3   |        | mul252_7_3_4_i_i | fmul | maxdsp  | 2       |
+|      add_ln208_fu_5435_p2                         | -   |        | add_ln208        | add  | fabric  | 0       |
+|   + store_tile_mm                                 | 0   |        |                  |      |         |         |
+|     add_ln428_fu_181_p2                           | -   |        | add_ln428        | add  | fabric  | 0       |
+|     add_ln431_fu_213_p2                           | -   |        | add_ln431        | add  | fabric  | 0       |
+|     add_ln246_fu_289_p2                           | -   |        | add_ln246        | add  | fabric  | 0       |
+|     add_ln242_fu_309_p2                           | -   |        | add_ln242        | add  | fabric  | 0       |
+|     empty_fu_315_p2                               | -   |        | empty            | add  | fabric  | 0       |
+|     empty_62_fu_344_p2                            | -   |        | empty_62         | sub  | fabric  | 0       |
+|     tmp_fu_354_p2                                 | -   |        | tmp              | add  | fabric  | 0       |
+|     empty_63_fu_363_p2                            | -   |        | empty_63         | add  | fabric  | 0       |
+|     add_ln246_1_fu_392_p2                         | -   |        | add_ln246_1      | add  | fabric  | 0       |
+|     add_ln245_fu_407_p2                           | -   |        | add_ln245        | add  | fabric  | 0       |
++---------------------------------------------------+-----+--------+------------------+------+---------+---------+
 
 
 ================================================================
@@ -441,7 +437,7 @@
 |   srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_4_U  | 1    | -    | pragma | srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_4  | ram_1p  | bram   | 1       |
 |   srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_3_U  | 1    | -    | pragma | srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_3  | ram_1p  | bram   | 1       |
 |   srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_2_U  | 1    | -    | pragma | srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_2  | ram_1p  | bram   | 1       |
-|  + dataflow_in_loop_VITIS_LOOP_400_12                       | 42   | 0    |        |                                                         |         |        |         |
+|  + dataflow_in_loop_IT_w0                                   | 42   | 0    |        |                                                         |         |        |         |
 |    output_ftmap_c_U                                         | -    | -    |        | output_ftmap_c                                          | fifo    | srl    | 0       |
 |   + compute_tile                                            | 32   | 0    |        |                                                         |         |        |         |
 |     linebuf_U                                               | 1    | -    | yes    | linebuf                                                 | ram_2p  | bram   | 1       |
@@ -699,85 +695,88 @@
 == Pragma Report
 ================================================================
 * Pragmas with Warnings
-+-----------+-------------------------------------------+--------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Type      | Options                                   | Location                                   | Messages                                                                                                                                                                                                                                                                                                                        |
-+-----------+-------------------------------------------+--------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| resource  | variable=w1_loc core=RAM_1P_LUTRAM        | src/srcnn.cpp:301 in srcnn, w1_loc         | 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead                                                                                                                                                                                                                                                      |
-| resource  | variable=b1_loc core=RAM_1P_LUTRAM        | src/srcnn.cpp:319 in srcnn, b1_loc         | 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead                                                                                                                                                                                                                                                      |
-|           |                                           |                                            | Unsuported scalar variable on pragma 'Resource/Bind_Storage', ignore it.                                                                                                                                                                                                                                                        |
-| resource  | variable=b2_loc core=RAM_1P_LUTRAM        | src/srcnn.cpp:320 in srcnn, b2_loc         | 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead                                                                                                                                                                                                                                                      |
-|           |                                           |                                            | Unsuported scalar variable on pragma 'Resource/Bind_Storage', ignore it.                                                                                                                                                                                                                                                        |
-| resource  | variable=b3_loc core=RAM_1P_LUTRAM        | src/srcnn.cpp:321 in srcnn, b3_loc         | 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead                                                                                                                                                                                                                                                      |
-|           |                                           |                                            | Unsuported scalar variable on pragma 'Resource/Bind_Storage', ignore it.                                                                                                                                                                                                                                                        |
-| interface | s_axilite port=reload_weights bundle=ctrl | src/srcnn.cpp:328 in srcnn, reload_weights | Unable to apply INTERFACE pragma options on a pass by value struct member field. Consider changing the signature of the struct to a pass by reference or as a pointer. In function 'srcnn(float (*) [255][255], float (*) [1][9][9], float*, float (*) [64][1][1], float*, float (*) [32][5][5], float*, float (*) [255][255])' |
-| dataflow  |                                           | src/srcnn.cpp:403 in srcnn                 | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region                                                                                                                                              |
-+-----------+-------------------------------------------+--------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++----------+------------------------------------+------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Type     | Options                            | Location                           | Messages                                                                                                                                                                           |
++----------+------------------------------------+------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| resource | variable=w1_loc core=RAM_1P_LUTRAM | src/srcnn.cpp:323 in srcnn, w1_loc | 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead                                                                                                         |
+| resource | variable=b1_loc core=RAM_1P_LUTRAM | src/srcnn.cpp:341 in srcnn, b1_loc | 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead                                                                                                         |
+|          |                                    |                                    | Unsuported scalar variable on pragma 'Resource/Bind_Storage', ignore it.                                                                                                           |
+| resource | variable=b2_loc core=RAM_1P_LUTRAM | src/srcnn.cpp:342 in srcnn, b2_loc | 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead                                                                                                         |
+|          |                                    |                                    | Unsuported scalar variable on pragma 'Resource/Bind_Storage', ignore it.                                                                                                           |
+| resource | variable=b3_loc core=RAM_1P_LUTRAM | src/srcnn.cpp:343 in srcnn, b3_loc | 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead                                                                                                         |
+|          |                                    |                                    | Unsuported scalar variable on pragma 'Resource/Bind_Storage', ignore it.                                                                                                           |
+| pipeline |                                    | src/srcnn.cpp:360 in srcnn         | Only for/while/do loop or function body support the pipeline pragma                                                                                                                |
+| pipeline |                                    | src/srcnn.cpp:397 in srcnn         | Only for/while/do loop or function body support the pipeline pragma                                                                                                                |
+| dataflow |                                    | src/srcnn.cpp:433 in srcnn         | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region |
++----------+------------------------------------+------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 * Valid Pragma Syntax
 +-----------------+------------------------------------------------------------------------+--------------------------------------------+
 | Type            | Options                                                                | Location                                   |
 +-----------------+------------------------------------------------------------------------+--------------------------------------------+
 | inline          | off                                                                    | src/srcnn.cpp:34 in load_tile_mm           |
-| pipeline        |                                                                        | src/srcnn.cpp:41 in load_tile_mm           |
-| inline          | off                                                                    | src/srcnn.cpp:71 in compute_tile           |
-| bind_storage    | variable=linebuf type=ram_2p impl=bram                                 | src/srcnn.cpp:75 in compute_tile, linebuf  |
-| array_partition | variable=linebuf complete dim=2                                        | src/srcnn.cpp:76 in compute_tile, linebuf  |
-| array_partition | variable=linebuf cyclic factor=8 dim=1                                 | src/srcnn.cpp:77 in compute_tile, linebuf  |
-| array_partition | variable=win complete dim=2                                            | src/srcnn.cpp:80 in compute_tile, win      |
-| array_partition | variable=win complete dim=3                                            | src/srcnn.cpp:81 in compute_tile, win      |
-| array_partition | variable=win cyclic factor=8 dim=1                                     | src/srcnn.cpp:82 in compute_tile, win      |
-| allocation      | operation instances=mul limit=8                                        | src/srcnn.cpp:91 in compute_tile           |
-| allocation      | operation instances=add limit=8                                        | src/srcnn.cpp:92 in compute_tile           |
-| loop_flatten    | off                                                                    | src/srcnn.cpp:104 in compute_tile          |
-| dependence      | variable=linebuf inter false                                           | src/srcnn.cpp:108 in compute_tile, linebuf |
-| dependence      | variable=win inter false                                               | src/srcnn.cpp:109 in compute_tile, win     |
-| array_partition | variable=acc2 cyclic factor=8 dim=1                                    | src/srcnn.cpp:113 in compute_tile, acc2    |
-| unroll          | factor=8                                                               | src/srcnn.cpp:115 in compute_tile          |
-| pipeline        | off                                                                    | src/srcnn.cpp:131 in compute_tile          |
-| unroll          | factor=8                                                               | src/srcnn.cpp:140 in compute_tile          |
-| array_partition | variable=f2 cyclic factor=8 dim=1                                      | src/srcnn.cpp:146 in compute_tile, f2      |
+| pipeline        |                                                                        | src/srcnn.cpp:40 in load_tile_mm           |
+| inline          | off                                                                    | src/srcnn.cpp:74 in compute_tile           |
+| bind_storage    | variable=linebuf type=ram_2p impl=bram                                 | src/srcnn.cpp:78 in compute_tile, linebuf  |
+| array_partition | variable=linebuf complete dim=2                                        | src/srcnn.cpp:79 in compute_tile, linebuf  |
+| array_partition | variable=linebuf cyclic factor=8 dim=1                                 | src/srcnn.cpp:80 in compute_tile, linebuf  |
+| array_partition | variable=win complete dim=2                                            | src/srcnn.cpp:83 in compute_tile, win      |
+| array_partition | variable=win complete dim=3                                            | src/srcnn.cpp:84 in compute_tile, win      |
+| array_partition | variable=win cyclic factor=8 dim=1                                     | src/srcnn.cpp:85 in compute_tile, win      |
+| allocation      | operation instances=mul limit=8                                        | src/srcnn.cpp:94 in compute_tile           |
+| allocation      | operation instances=add limit=8                                        | src/srcnn.cpp:95 in compute_tile           |
+| loop_flatten    | off                                                                    | src/srcnn.cpp:107 in compute_tile          |
+| dependence      | variable=linebuf inter false                                           | src/srcnn.cpp:111 in compute_tile, linebuf |
+| dependence      | variable=win inter false                                               | src/srcnn.cpp:112 in compute_tile, win     |
+| array_partition | variable=acc2 cyclic factor=8 dim=1                                    | src/srcnn.cpp:116 in compute_tile, acc2    |
+| unroll          | factor=8                                                               | src/srcnn.cpp:119 in compute_tile          |
+| pipeline        | off                                                                    | src/srcnn.cpp:138 in compute_tile          |
 | unroll          | factor=8                                                               | src/srcnn.cpp:148 in compute_tile          |
-| unroll          | factor=8                                                               | src/srcnn.cpp:158 in compute_tile          |
-| unroll          |                                                                        | src/srcnn.cpp:171 in compute_tile          |
-| unroll          | factor=8                                                               | src/srcnn.cpp:179 in compute_tile          |
-| unroll          | factor=8                                                               | src/srcnn.cpp:194 in compute_tile          |
-| unroll          | factor=5                                                               | src/srcnn.cpp:198 in compute_tile          |
-| inline          | off                                                                    | src/srcnn.cpp:222 in store_tile_mm         |
-| pipeline        |                                                                        | src/srcnn.cpp:224 in store_tile_mm         |
-| interface       | s_axilite port=return bundle=ctrl                                      | src/srcnn.cpp:249 in srcnn, return         |
-| interface       | m_axi port=input_ftmap bundle=gmem_in offset=slave depth=(1*255*255)   | src/srcnn.cpp:252 in srcnn, input_ftmap    |
-| interface       | s_axilite port=input_ftmap bundle=ctrl                                 | src/srcnn.cpp:253 in srcnn, input_ftmap    |
-| interface       | m_axi port=output_ftmap bundle=gmem_out offset=slave depth=(1*255*255) | src/srcnn.cpp:254 in srcnn, output_ftmap   |
-| interface       | s_axilite port=output_ftmap bundle=ctrl                                | src/srcnn.cpp:255 in srcnn, output_ftmap   |
-| interface       | m_axi port=conv1_weights bundle=gmem_w1 offset=slave depth=(64*1*9*9)  | src/srcnn.cpp:258 in srcnn, conv1_weights  |
-| interface       | s_axilite port=conv1_weights bundle=ctrl                               | src/srcnn.cpp:259 in srcnn, conv1_weights  |
-| interface       | m_axi port=conv1_biases bundle=gmem_w1 offset=slave depth=(64)         | src/srcnn.cpp:260 in srcnn, conv1_biases   |
-| interface       | s_axilite port=conv1_biases bundle=ctrl                                | src/srcnn.cpp:261 in srcnn, conv1_biases   |
-| interface       | m_axi port=conv2_weights bundle=gmem_w2 offset=slave depth=(32*64*1*1) | src/srcnn.cpp:263 in srcnn, conv2_weights  |
-| interface       | s_axilite port=conv2_weights bundle=ctrl                               | src/srcnn.cpp:264 in srcnn, conv2_weights  |
-| interface       | m_axi port=conv2_biases bundle=gmem_w2 offset=slave depth=(32)         | src/srcnn.cpp:265 in srcnn, conv2_biases   |
-| interface       | s_axilite port=conv2_biases bundle=ctrl                                | src/srcnn.cpp:266 in srcnn, conv2_biases   |
-| interface       | m_axi port=conv3_weights bundle=gmem_w3 offset=slave depth=(1*32*5*5)  | src/srcnn.cpp:268 in srcnn, conv3_weights  |
-| interface       | s_axilite port=conv3_weights bundle=ctrl                               | src/srcnn.cpp:269 in srcnn, conv3_weights  |
-| interface       | m_axi port=conv3_biases bundle=gmem_w3 offset=slave depth=(1)          | src/srcnn.cpp:270 in srcnn, conv3_biases   |
-| interface       | s_axilite port=conv3_biases bundle=ctrl                                | src/srcnn.cpp:271 in srcnn, conv3_biases   |
-| bind_storage    | variable=inbuf type=ram_1p impl=bram                                   | src/srcnn.cpp:280 in srcnn, inbuf          |
-| bind_storage    | variable=outbuf type=ram_1p impl=bram                                  | src/srcnn.cpp:281 in srcnn, outbuf         |
-| bind_storage    | variable=w2_loc type=ram_1p impl=bram                                  | src/srcnn.cpp:306 in srcnn, w2_loc         |
-| array_partition | variable=w2_loc cyclic factor=8 dim=1                                  | src/srcnn.cpp:307 in srcnn, w2_loc         |
-| bind_storage    | variable=w3_loc type=ram_1p impl=bram                                  | src/srcnn.cpp:311 in srcnn, w3_loc         |
-| array_partition | variable=w3_loc cyclic factor=8 dim=2                                  | src/srcnn.cpp:312 in srcnn, w3_loc         |
-| array_partition | variable=b1_loc complete dim=1                                         | src/srcnn.cpp:316 in srcnn, b1_loc         |
-| array_partition | variable=b2_loc complete dim=1                                         | src/srcnn.cpp:317 in srcnn, b2_loc         |
-| array_partition | variable=b3_loc complete dim=1                                         | src/srcnn.cpp:318 in srcnn, b3_loc         |
-| reset           | variable=weights_loaded                                                | src/srcnn.cpp:333 in srcnn, weights_loaded |
-| pipeline        | off                                                                    | src/srcnn.cpp:357 in srcnn                 |
-| stable          | variable=w1_loc                                                        | src/srcnn.cpp:389 in srcnn, w1_loc         |
-| stable          | variable=b1_loc                                                        | src/srcnn.cpp:390 in srcnn, b1_loc         |
-| stable          | variable=w2_loc                                                        | src/srcnn.cpp:391 in srcnn, w2_loc         |
-| stable          | variable=b2_loc                                                        | src/srcnn.cpp:392 in srcnn, b2_loc         |
-| stable          | variable=w3_loc                                                        | src/srcnn.cpp:393 in srcnn, w3_loc         |
-| stable          | variable=b3_loc                                                        | src/srcnn.cpp:394 in srcnn, b3_loc         |
+| array_partition | variable=f2 cyclic factor=8 dim=1                                      | src/srcnn.cpp:154 in compute_tile, f2      |
+| unroll          | factor=8                                                               | src/srcnn.cpp:157 in compute_tile          |
+| unroll          | factor=8                                                               | src/srcnn.cpp:168 in compute_tile          |
+| unroll          |                                                                        | src/srcnn.cpp:183 in compute_tile          |
+| unroll          | factor=8                                                               | src/srcnn.cpp:192 in compute_tile          |
+| unroll          | factor=8                                                               | src/srcnn.cpp:209 in compute_tile          |
+| unroll          | factor=5                                                               | src/srcnn.cpp:215 in compute_tile          |
+| inline          | off                                                                    | src/srcnn.cpp:239 in store_tile_mm         |
+| pipeline        |                                                                        | src/srcnn.cpp:240 in store_tile_mm         |
+| interface       | s_axilite port=return bundle=ctrl                                      | src/srcnn.cpp:269 in srcnn, return         |
+| interface       | s_axilite port=reload_weights bundle=ctrl                              | src/srcnn.cpp:271 in srcnn, reload_weights |
+| interface       | m_axi port=input_ftmap bundle=gmem_in offset=slave depth=(1*255*255)   | src/srcnn.cpp:274 in srcnn, input_ftmap    |
+| interface       | s_axilite port=input_ftmap bundle=ctrl                                 | src/srcnn.cpp:275 in srcnn, input_ftmap    |
+| interface       | m_axi port=output_ftmap bundle=gmem_out offset=slave depth=(1*255*255) | src/srcnn.cpp:276 in srcnn, output_ftmap   |
+| interface       | s_axilite port=output_ftmap bundle=ctrl                                | src/srcnn.cpp:277 in srcnn, output_ftmap   |
+| interface       | m_axi port=conv1_weights bundle=gmem_w1 offset=slave depth=(64*1*9*9)  | src/srcnn.cpp:280 in srcnn, conv1_weights  |
+| interface       | s_axilite port=conv1_weights bundle=ctrl                               | src/srcnn.cpp:281 in srcnn, conv1_weights  |
+| interface       | m_axi port=conv1_biases bundle=gmem_w1 offset=slave depth=(64)         | src/srcnn.cpp:282 in srcnn, conv1_biases   |
+| interface       | s_axilite port=conv1_biases bundle=ctrl                                | src/srcnn.cpp:283 in srcnn, conv1_biases   |
+| interface       | m_axi port=conv2_weights bundle=gmem_w2 offset=slave depth=(32*64*1*1) | src/srcnn.cpp:285 in srcnn, conv2_weights  |
+| interface       | s_axilite port=conv2_weights bundle=ctrl                               | src/srcnn.cpp:286 in srcnn, conv2_weights  |
+| interface       | m_axi port=conv2_biases bundle=gmem_w2 offset=slave depth=(32)         | src/srcnn.cpp:287 in srcnn, conv2_biases   |
+| interface       | s_axilite port=conv2_biases bundle=ctrl                                | src/srcnn.cpp:288 in srcnn, conv2_biases   |
+| interface       | m_axi port=conv3_weights bundle=gmem_w3 offset=slave depth=(1*32*5*5)  | src/srcnn.cpp:290 in srcnn, conv3_weights  |
+| interface       | s_axilite port=conv3_weights bundle=ctrl                               | src/srcnn.cpp:291 in srcnn, conv3_weights  |
+| interface       | m_axi port=conv3_biases bundle=gmem_w3 offset=slave depth=(1)          | src/srcnn.cpp:292 in srcnn, conv3_biases   |
+| interface       | s_axilite port=conv3_biases bundle=ctrl                                | src/srcnn.cpp:293 in srcnn, conv3_biases   |
+| bind_storage    | variable=inbuf type=ram_1p impl=bram                                   | src/srcnn.cpp:302 in srcnn, inbuf          |
+| bind_storage    | variable=outbuf type=ram_1p impl=bram                                  | src/srcnn.cpp:303 in srcnn, outbuf         |
+| bind_storage    | variable=w2_loc type=ram_1p impl=bram                                  | src/srcnn.cpp:328 in srcnn, w2_loc         |
+| array_partition | variable=w2_loc cyclic factor=8 dim=1                                  | src/srcnn.cpp:329 in srcnn, w2_loc         |
+| bind_storage    | variable=w3_loc type=ram_1p impl=bram                                  | src/srcnn.cpp:333 in srcnn, w3_loc         |
+| array_partition | variable=w3_loc cyclic factor=8 dim=2                                  | src/srcnn.cpp:334 in srcnn, w3_loc         |
+| array_partition | variable=b1_loc complete dim=1                                         | src/srcnn.cpp:338 in srcnn, b1_loc         |
+| array_partition | variable=b2_loc complete dim=1                                         | src/srcnn.cpp:339 in srcnn, b2_loc         |
+| array_partition | variable=b3_loc complete dim=1                                         | src/srcnn.cpp:340 in srcnn, b3_loc         |
+| reset           | variable=weights_loaded                                                | src/srcnn.cpp:349 in srcnn, weights_loaded |
+| pipeline        | off                                                                    | src/srcnn.cpp:378 in srcnn                 |
+| pipeline        |                                                                        | src/srcnn.cpp:382 in srcnn                 |
+| stable          | variable=w1_loc                                                        | src/srcnn.cpp:417 in srcnn, w1_loc         |
+| stable          | variable=b1_loc                                                        | src/srcnn.cpp:418 in srcnn, b1_loc         |
+| stable          | variable=w2_loc                                                        | src/srcnn.cpp:419 in srcnn, w2_loc         |
+| stable          | variable=b2_loc                                                        | src/srcnn.cpp:420 in srcnn, b2_loc         |
+| stable          | variable=w3_loc                                                        | src/srcnn.cpp:421 in srcnn, w3_loc         |
+| stable          | variable=b3_loc                                                        | src/srcnn.cpp:422 in srcnn, b3_loc         |
 +-----------------+------------------------------------------------------------------------+--------------------------------------------+
 
 

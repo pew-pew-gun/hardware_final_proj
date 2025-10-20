@@ -3012,6 +3012,29 @@
             <spirit:testable spirit:testConstraint="unconstrained">false</spirit:testable>
           </spirit:field>
         </spirit:register>
+        <spirit:register>
+          <spirit:name>reload_weights</spirit:name>
+          <spirit:displayName>reload_weights</spirit:displayName>
+          <spirit:description>Data signal of reload_weights</spirit:description>
+          <spirit:addressOffset>112</spirit:addressOffset>
+          <spirit:size spirit:format="long">32</spirit:size>
+          <spirit:access>write-only</spirit:access>
+          <spirit:reset>
+            <spirit:value spirit:format="long">0</spirit:value>
+          </spirit:reset>
+          <spirit:field>
+            <spirit:name>reload_weights</spirit:name>
+            <spirit:description>Bit 31 to 0 of reload_weights</spirit:description>
+            <spirit:bitOffset>0</spirit:bitOffset>
+            <spirit:bitWidth spirit:format="long">32</spirit:bitWidth>
+            <spirit:access>write-only</spirit:access>
+            <spirit:writeValueConstraint>
+              <spirit:minimum>0</spirit:minimum>
+              <spirit:maximum>0</spirit:maximum>
+            </spirit:writeValueConstraint>
+            <spirit:testable spirit:testConstraint="unconstrained">false</spirit:testable>
+          </spirit:field>
+        </spirit:register>
       </spirit:addressBlock>
     </spirit:memoryMap>
   </spirit:memoryMaps>
@@ -3032,7 +3055,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>f489e8de</spirit:value>
+            <spirit:value>1ce9668e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -3051,7 +3074,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>5e014c8c</spirit:value>
+            <spirit:value>5cc2d7af</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -3070,7 +3093,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>cc9fb49c</spirit:value>
+            <spirit:value>ca4f376f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -3089,7 +3112,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>0f118fb2</spirit:value>
+            <spirit:value>bad5301b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -3103,7 +3126,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>402d97ba</spirit:value>
+            <spirit:value>b5bc2cdc</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -7927,10 +7950,6 @@
         <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_am_addmul_8ns_4ns_9ns_17_4_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>hdl/verilog/srcnn_compute_tile.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
@@ -7939,27 +7958,27 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_compute_tile_Pipeline_VITIS_LOOP_114_3.v</spirit:name>
+        <spirit:name>hdl/verilog/srcnn_compute_tile_Pipeline_Conv2_dot32.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_compute_tile_Pipeline_VITIS_LOOP_139_7.v</spirit:name>
+        <spirit:name>hdl/verilog/srcnn_compute_tile_Pipeline_Conv2_ReLU.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_compute_tile_Pipeline_VITIS_LOOP_147_8.v</spirit:name>
+        <spirit:name>hdl/verilog/srcnn_compute_tile_Pipeline_Conv2Out_biases.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_compute_tile_Pipeline_VITIS_LOOP_157_9.v</spirit:name>
+        <spirit:name>hdl/verilog/srcnn_compute_tile_Pipeline_Conv3_inputft.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_compute_tile_Pipeline_VITIS_LOOP_178_12.v</spirit:name>
+        <spirit:name>hdl/verilog/srcnn_compute_tile_Pipeline_Shift_win32.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_compute_tile_Pipeline_VITIS_LOOP_193_14.v</spirit:name>
+        <spirit:name>hdl/verilog/srcnn_compute_tile_Pipeline_Update_linebuf32.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -7975,31 +7994,31 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_dataflow_in_loop_VITIS_LOOP_400_12.v</spirit:name>
+        <spirit:name>hdl/verilog/srcnn_dataflow_in_loop_IT_w0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_dataflow_in_loop_VITIS_LOOP_400_12_inbuf_RAM_1P_BRAM_1R1W.v</spirit:name>
+        <spirit:name>hdl/verilog/srcnn_dataflow_in_loop_IT_w0_inbuf_RAM_1P_BRAM_1R1W.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_dataflow_in_loop_VITIS_LOOP_400_12_inbuf_RAM_1P_BRAM_1R1W_memcore.dat</spirit:name>
+        <spirit:name>hdl/verilog/srcnn_dataflow_in_loop_IT_w0_inbuf_RAM_1P_BRAM_1R1W_memcore.dat</spirit:name>
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_dataflow_in_loop_VITIS_LOOP_400_12_inbuf_RAM_1P_BRAM_1R1W_memcore.v</spirit:name>
+        <spirit:name>hdl/verilog/srcnn_dataflow_in_loop_IT_w0_inbuf_RAM_1P_BRAM_1R1W_memcore.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_dataflow_in_loop_VITIS_LOOP_400_12_outbuf_RAM_1P_BRAM_1R1W.v</spirit:name>
+        <spirit:name>hdl/verilog/srcnn_dataflow_in_loop_IT_w0_outbuf_RAM_1P_BRAM_1R1W.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_dataflow_in_loop_VITIS_LOOP_400_12_outbuf_RAM_1P_BRAM_1R1W_memcore.dat</spirit:name>
+        <spirit:name>hdl/verilog/srcnn_dataflow_in_loop_IT_w0_outbuf_RAM_1P_BRAM_1R1W_memcore.dat</spirit:name>
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_dataflow_in_loop_VITIS_LOOP_400_12_outbuf_RAM_1P_BRAM_1R1W_memcore.v</spirit:name>
+        <spirit:name>hdl/verilog/srcnn_dataflow_in_loop_IT_w0_outbuf_RAM_1P_BRAM_1R1W_memcore.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -8071,15 +8090,7 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_load_tile_mm_Pipeline_VITIS_LOOP_40_1_VITIS_LOOP_48_2.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>hdl/verilog/srcnn_mul_2ns_6ns_7_1_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_mul_8ns_8ns_16_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -8111,19 +8122,19 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_srcnn_Pipeline_VITIS_LOOP_346_2_VITIS_LOOP_348_3.v</spirit:name>
+        <spirit:name>hdl/verilog/srcnn_srcnn_Pipeline_CopyW1_ky_CopyW1_kx.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_srcnn_Pipeline_VITIS_LOOP_374_8_VITIS_LOOP_375_9_VITIS_LOOP_377_10.v</spirit:name>
+        <spirit:name>hdl/verilog/srcnn_srcnn_Pipeline_CopyW2_inft.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/srcnn_srcnn_Pipeline_CopyW3_inft_CopyW3_ky_CopyW3_kx.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/verilog/srcnn_store_tile_mm.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_store_tile_mm_Pipeline_VITIS_LOOP_225_2.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -8152,11 +8163,6 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_am_addmul_8ns_4ns_9ns_17_4_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>hdl/verilog/srcnn_compute_tile.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
@@ -8167,32 +8173,32 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_compute_tile_Pipeline_VITIS_LOOP_114_3.v</spirit:name>
+        <spirit:name>hdl/verilog/srcnn_compute_tile_Pipeline_Conv2_dot32.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_compute_tile_Pipeline_VITIS_LOOP_139_7.v</spirit:name>
+        <spirit:name>hdl/verilog/srcnn_compute_tile_Pipeline_Conv2_ReLU.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_compute_tile_Pipeline_VITIS_LOOP_147_8.v</spirit:name>
+        <spirit:name>hdl/verilog/srcnn_compute_tile_Pipeline_Conv2Out_biases.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_compute_tile_Pipeline_VITIS_LOOP_157_9.v</spirit:name>
+        <spirit:name>hdl/verilog/srcnn_compute_tile_Pipeline_Conv3_inputft.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_compute_tile_Pipeline_VITIS_LOOP_178_12.v</spirit:name>
+        <spirit:name>hdl/verilog/srcnn_compute_tile_Pipeline_Shift_win32.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_compute_tile_Pipeline_VITIS_LOOP_193_14.v</spirit:name>
+        <spirit:name>hdl/verilog/srcnn_compute_tile_Pipeline_Update_linebuf32.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -8212,35 +8218,35 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_dataflow_in_loop_VITIS_LOOP_400_12.v</spirit:name>
+        <spirit:name>hdl/verilog/srcnn_dataflow_in_loop_IT_w0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_dataflow_in_loop_VITIS_LOOP_400_12_inbuf_RAM_1P_BRAM_1R1W.v</spirit:name>
+        <spirit:name>hdl/verilog/srcnn_dataflow_in_loop_IT_w0_inbuf_RAM_1P_BRAM_1R1W.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_dataflow_in_loop_VITIS_LOOP_400_12_inbuf_RAM_1P_BRAM_1R1W_memcore.dat</spirit:name>
+        <spirit:name>hdl/verilog/srcnn_dataflow_in_loop_IT_w0_inbuf_RAM_1P_BRAM_1R1W_memcore.dat</spirit:name>
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_dataflow_in_loop_VITIS_LOOP_400_12_inbuf_RAM_1P_BRAM_1R1W_memcore.v</spirit:name>
+        <spirit:name>hdl/verilog/srcnn_dataflow_in_loop_IT_w0_inbuf_RAM_1P_BRAM_1R1W_memcore.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_dataflow_in_loop_VITIS_LOOP_400_12_outbuf_RAM_1P_BRAM_1R1W.v</spirit:name>
+        <spirit:name>hdl/verilog/srcnn_dataflow_in_loop_IT_w0_outbuf_RAM_1P_BRAM_1R1W.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_dataflow_in_loop_VITIS_LOOP_400_12_outbuf_RAM_1P_BRAM_1R1W_memcore.dat</spirit:name>
+        <spirit:name>hdl/verilog/srcnn_dataflow_in_loop_IT_w0_outbuf_RAM_1P_BRAM_1R1W_memcore.dat</spirit:name>
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_dataflow_in_loop_VITIS_LOOP_400_12_outbuf_RAM_1P_BRAM_1R1W_memcore.v</spirit:name>
+        <spirit:name>hdl/verilog/srcnn_dataflow_in_loop_IT_w0_outbuf_RAM_1P_BRAM_1R1W_memcore.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -8330,17 +8336,7 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_load_tile_mm_Pipeline_VITIS_LOOP_40_1_VITIS_LOOP_48_2.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>hdl/verilog/srcnn_mul_2ns_6ns_7_1_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_mul_8ns_8ns_16_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -8378,22 +8374,22 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_srcnn_Pipeline_VITIS_LOOP_346_2_VITIS_LOOP_348_3.v</spirit:name>
+        <spirit:name>hdl/verilog/srcnn_srcnn_Pipeline_CopyW1_ky_CopyW1_kx.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_srcnn_Pipeline_VITIS_LOOP_374_8_VITIS_LOOP_375_9_VITIS_LOOP_377_10.v</spirit:name>
+        <spirit:name>hdl/verilog/srcnn_srcnn_Pipeline_CopyW2_inft.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/srcnn_srcnn_Pipeline_CopyW3_inft_CopyW3_ky_CopyW3_kx.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/verilog/srcnn_store_tile_mm.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_store_tile_mm_Pipeline_VITIS_LOOP_225_2.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -8463,10 +8459,6 @@
         <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/srcnn_am_addmul_8ns_4ns_9ns_17_4_1.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>hdl/vhdl/srcnn_compute_tile.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
@@ -8475,27 +8467,27 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/srcnn_compute_tile_Pipeline_VITIS_LOOP_114_3.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/srcnn_compute_tile_Pipeline_Conv2_dot32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/srcnn_compute_tile_Pipeline_VITIS_LOOP_139_7.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/srcnn_compute_tile_Pipeline_Conv2_ReLU.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/srcnn_compute_tile_Pipeline_VITIS_LOOP_147_8.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/srcnn_compute_tile_Pipeline_Conv2Out_biases.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/srcnn_compute_tile_Pipeline_VITIS_LOOP_157_9.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/srcnn_compute_tile_Pipeline_Conv3_inputft.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/srcnn_compute_tile_Pipeline_VITIS_LOOP_178_12.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/srcnn_compute_tile_Pipeline_Shift_win32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/srcnn_compute_tile_Pipeline_VITIS_LOOP_193_14.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/srcnn_compute_tile_Pipeline_Update_linebuf32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -8511,23 +8503,23 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/srcnn_dataflow_in_loop_VITIS_LOOP_400_12.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/srcnn_dataflow_in_loop_IT_w0.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/srcnn_dataflow_in_loop_VITIS_LOOP_400_12_inbuf_RAM_1P_BRAM_1R1W.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/srcnn_dataflow_in_loop_IT_w0_inbuf_RAM_1P_BRAM_1R1W.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/srcnn_dataflow_in_loop_VITIS_LOOP_400_12_inbuf_RAM_1P_BRAM_1R1W_memcore.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/srcnn_dataflow_in_loop_IT_w0_inbuf_RAM_1P_BRAM_1R1W_memcore.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/srcnn_dataflow_in_loop_VITIS_LOOP_400_12_outbuf_RAM_1P_BRAM_1R1W.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/srcnn_dataflow_in_loop_IT_w0_outbuf_RAM_1P_BRAM_1R1W.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/srcnn_dataflow_in_loop_VITIS_LOOP_400_12_outbuf_RAM_1P_BRAM_1R1W_memcore.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/srcnn_dataflow_in_loop_IT_w0_outbuf_RAM_1P_BRAM_1R1W_memcore.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -8587,15 +8579,7 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/srcnn_load_tile_mm_Pipeline_VITIS_LOOP_40_1_VITIS_LOOP_48_2.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>hdl/vhdl/srcnn_mul_2ns_6ns_7_1_1.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/srcnn_mul_8ns_8ns_16_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -8619,19 +8603,19 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/srcnn_srcnn_Pipeline_VITIS_LOOP_346_2_VITIS_LOOP_348_3.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/srcnn_srcnn_Pipeline_CopyW1_ky_CopyW1_kx.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/srcnn_srcnn_Pipeline_VITIS_LOOP_374_8_VITIS_LOOP_375_9_VITIS_LOOP_377_10.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/srcnn_srcnn_Pipeline_CopyW2_inft.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/srcnn_srcnn_Pipeline_CopyW3_inft_CopyW3_ky_CopyW3_kx.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/vhdl/srcnn_store_tile_mm.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/srcnn_store_tile_mm_Pipeline_VITIS_LOOP_225_2.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -8641,7 +8625,7 @@
       <spirit:file>
         <spirit:name>hdl/vhdl/srcnn.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_a433c621</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_37bd2f14</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -8657,11 +8641,6 @@
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>hdl/vhdl/srcnn_am_addmul_8ns_4ns_9ns_17_4_1.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>hdl/vhdl/srcnn_compute_tile.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
@@ -8672,32 +8651,32 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/srcnn_compute_tile_Pipeline_VITIS_LOOP_114_3.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/srcnn_compute_tile_Pipeline_Conv2_dot32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/srcnn_compute_tile_Pipeline_VITIS_LOOP_139_7.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/srcnn_compute_tile_Pipeline_Conv2_ReLU.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/srcnn_compute_tile_Pipeline_VITIS_LOOP_147_8.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/srcnn_compute_tile_Pipeline_Conv2Out_biases.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/srcnn_compute_tile_Pipeline_VITIS_LOOP_157_9.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/srcnn_compute_tile_Pipeline_Conv3_inputft.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/srcnn_compute_tile_Pipeline_VITIS_LOOP_178_12.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/srcnn_compute_tile_Pipeline_Shift_win32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/srcnn_compute_tile_Pipeline_VITIS_LOOP_193_14.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/srcnn_compute_tile_Pipeline_Update_linebuf32.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -8717,27 +8696,27 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/srcnn_dataflow_in_loop_VITIS_LOOP_400_12.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/srcnn_dataflow_in_loop_IT_w0.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/srcnn_dataflow_in_loop_VITIS_LOOP_400_12_inbuf_RAM_1P_BRAM_1R1W.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/srcnn_dataflow_in_loop_IT_w0_inbuf_RAM_1P_BRAM_1R1W.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/srcnn_dataflow_in_loop_VITIS_LOOP_400_12_inbuf_RAM_1P_BRAM_1R1W_memcore.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/srcnn_dataflow_in_loop_IT_w0_inbuf_RAM_1P_BRAM_1R1W_memcore.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/srcnn_dataflow_in_loop_VITIS_LOOP_400_12_outbuf_RAM_1P_BRAM_1R1W.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/srcnn_dataflow_in_loop_IT_w0_outbuf_RAM_1P_BRAM_1R1W.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/srcnn_dataflow_in_loop_VITIS_LOOP_400_12_outbuf_RAM_1P_BRAM_1R1W_memcore.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/srcnn_dataflow_in_loop_IT_w0_outbuf_RAM_1P_BRAM_1R1W_memcore.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -8812,17 +8791,7 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/srcnn_load_tile_mm_Pipeline_VITIS_LOOP_40_1_VITIS_LOOP_48_2.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>hdl/vhdl/srcnn_mul_2ns_6ns_7_1_1.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/srcnn_mul_8ns_8ns_16_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -8852,22 +8821,22 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/srcnn_srcnn_Pipeline_VITIS_LOOP_346_2_VITIS_LOOP_348_3.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/srcnn_srcnn_Pipeline_CopyW1_ky_CopyW1_kx.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/srcnn_srcnn_Pipeline_VITIS_LOOP_374_8_VITIS_LOOP_375_9_VITIS_LOOP_377_10.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/srcnn_srcnn_Pipeline_CopyW2_inft.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/srcnn_srcnn_Pipeline_CopyW3_inft_CopyW3_ky_CopyW3_kx.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/vhdl/srcnn_store_tile_mm.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>hdl/vhdl/srcnn_store_tile_mm_Pipeline_VITIS_LOOP_225_2.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -9556,8 +9525,8 @@
       </xilinx:taxonomies>
       <xilinx:displayName>Srcnn</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>2114311966</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2025-10-20T03:46:39Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>2114312543</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2025-10-20T13:24:07Z</xilinx:coreCreationDateTime>
       <xilinx:sdxKernelAttributes>
         <xilinx:sdx_kernel>true</xilinx:sdx_kernel>
         <xilinx:sdx_kernel_type>hls</xilinx:sdx_kernel_type>
@@ -9567,8 +9536,8 @@
       <xilinx:xilinxVersion>2023.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="bba2d44c"/>
       <xilinx:checksum xilinx:scope="addressSpaces" xilinx:value="4225efad"/>
-      <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="c06434c7"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="e8c91b1c"/>
+      <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="3ff14f0b"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="f332495b"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="47243525"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="f14c59ac"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="04059cc4"/>

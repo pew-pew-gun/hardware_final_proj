@@ -43,6 +43,7 @@ port (
     conv3_weights         :out  STD_LOGIC_VECTOR(63 downto 0);
     conv3_biases          :out  STD_LOGIC_VECTOR(63 downto 0);
     output_ftmap          :out  STD_LOGIC_VECTOR(63 downto 0);
+    reload_weights        :out  STD_LOGIC_VECTOR(31 downto 0);
     ap_start              :out  STD_LOGIC;
     ap_done               :in   STD_LOGIC;
     ap_ready              :in   STD_LOGIC;
@@ -110,6 +111,9 @@ end entity srcnn_ctrl_s_axi;
 -- 0x68 : Data signal of output_ftmap
 --        bit 31~0 - output_ftmap[63:32] (Read/Write)
 -- 0x6c : reserved
+-- 0x70 : Data signal of reload_weights
+--        bit 31~0 - reload_weights[31:0] (Read/Write)
+-- 0x74 : reserved
 -- (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 architecture behave of srcnn_ctrl_s_axi is
@@ -117,34 +121,36 @@ architecture behave of srcnn_ctrl_s_axi is
     signal wstate  : states := wrreset;
     signal rstate  : states := rdreset;
     signal wnext, rnext: states;
-    constant ADDR_AP_CTRL              : INTEGER := 16#00#;
-    constant ADDR_GIE                  : INTEGER := 16#04#;
-    constant ADDR_IER                  : INTEGER := 16#08#;
-    constant ADDR_ISR                  : INTEGER := 16#0c#;
-    constant ADDR_INPUT_FTMAP_DATA_0   : INTEGER := 16#10#;
-    constant ADDR_INPUT_FTMAP_DATA_1   : INTEGER := 16#14#;
-    constant ADDR_INPUT_FTMAP_CTRL     : INTEGER := 16#18#;
-    constant ADDR_CONV1_WEIGHTS_DATA_0 : INTEGER := 16#1c#;
-    constant ADDR_CONV1_WEIGHTS_DATA_1 : INTEGER := 16#20#;
-    constant ADDR_CONV1_WEIGHTS_CTRL   : INTEGER := 16#24#;
-    constant ADDR_CONV1_BIASES_DATA_0  : INTEGER := 16#28#;
-    constant ADDR_CONV1_BIASES_DATA_1  : INTEGER := 16#2c#;
-    constant ADDR_CONV1_BIASES_CTRL    : INTEGER := 16#30#;
-    constant ADDR_CONV2_WEIGHTS_DATA_0 : INTEGER := 16#34#;
-    constant ADDR_CONV2_WEIGHTS_DATA_1 : INTEGER := 16#38#;
-    constant ADDR_CONV2_WEIGHTS_CTRL   : INTEGER := 16#3c#;
-    constant ADDR_CONV2_BIASES_DATA_0  : INTEGER := 16#40#;
-    constant ADDR_CONV2_BIASES_DATA_1  : INTEGER := 16#44#;
-    constant ADDR_CONV2_BIASES_CTRL    : INTEGER := 16#48#;
-    constant ADDR_CONV3_WEIGHTS_DATA_0 : INTEGER := 16#4c#;
-    constant ADDR_CONV3_WEIGHTS_DATA_1 : INTEGER := 16#50#;
-    constant ADDR_CONV3_WEIGHTS_CTRL   : INTEGER := 16#54#;
-    constant ADDR_CONV3_BIASES_DATA_0  : INTEGER := 16#58#;
-    constant ADDR_CONV3_BIASES_DATA_1  : INTEGER := 16#5c#;
-    constant ADDR_CONV3_BIASES_CTRL    : INTEGER := 16#60#;
-    constant ADDR_OUTPUT_FTMAP_DATA_0  : INTEGER := 16#64#;
-    constant ADDR_OUTPUT_FTMAP_DATA_1  : INTEGER := 16#68#;
-    constant ADDR_OUTPUT_FTMAP_CTRL    : INTEGER := 16#6c#;
+    constant ADDR_AP_CTRL               : INTEGER := 16#00#;
+    constant ADDR_GIE                   : INTEGER := 16#04#;
+    constant ADDR_IER                   : INTEGER := 16#08#;
+    constant ADDR_ISR                   : INTEGER := 16#0c#;
+    constant ADDR_INPUT_FTMAP_DATA_0    : INTEGER := 16#10#;
+    constant ADDR_INPUT_FTMAP_DATA_1    : INTEGER := 16#14#;
+    constant ADDR_INPUT_FTMAP_CTRL      : INTEGER := 16#18#;
+    constant ADDR_CONV1_WEIGHTS_DATA_0  : INTEGER := 16#1c#;
+    constant ADDR_CONV1_WEIGHTS_DATA_1  : INTEGER := 16#20#;
+    constant ADDR_CONV1_WEIGHTS_CTRL    : INTEGER := 16#24#;
+    constant ADDR_CONV1_BIASES_DATA_0   : INTEGER := 16#28#;
+    constant ADDR_CONV1_BIASES_DATA_1   : INTEGER := 16#2c#;
+    constant ADDR_CONV1_BIASES_CTRL     : INTEGER := 16#30#;
+    constant ADDR_CONV2_WEIGHTS_DATA_0  : INTEGER := 16#34#;
+    constant ADDR_CONV2_WEIGHTS_DATA_1  : INTEGER := 16#38#;
+    constant ADDR_CONV2_WEIGHTS_CTRL    : INTEGER := 16#3c#;
+    constant ADDR_CONV2_BIASES_DATA_0   : INTEGER := 16#40#;
+    constant ADDR_CONV2_BIASES_DATA_1   : INTEGER := 16#44#;
+    constant ADDR_CONV2_BIASES_CTRL     : INTEGER := 16#48#;
+    constant ADDR_CONV3_WEIGHTS_DATA_0  : INTEGER := 16#4c#;
+    constant ADDR_CONV3_WEIGHTS_DATA_1  : INTEGER := 16#50#;
+    constant ADDR_CONV3_WEIGHTS_CTRL    : INTEGER := 16#54#;
+    constant ADDR_CONV3_BIASES_DATA_0   : INTEGER := 16#58#;
+    constant ADDR_CONV3_BIASES_DATA_1   : INTEGER := 16#5c#;
+    constant ADDR_CONV3_BIASES_CTRL     : INTEGER := 16#60#;
+    constant ADDR_OUTPUT_FTMAP_DATA_0   : INTEGER := 16#64#;
+    constant ADDR_OUTPUT_FTMAP_DATA_1   : INTEGER := 16#68#;
+    constant ADDR_OUTPUT_FTMAP_CTRL     : INTEGER := 16#6c#;
+    constant ADDR_RELOAD_WEIGHTS_DATA_0 : INTEGER := 16#70#;
+    constant ADDR_RELOAD_WEIGHTS_CTRL   : INTEGER := 16#74#;
     constant ADDR_BITS         : INTEGER := 7;
 
     signal waddr               : UNSIGNED(ADDR_BITS-1 downto 0);
@@ -181,6 +187,7 @@ architecture behave of srcnn_ctrl_s_axi is
     signal int_conv3_weights   : UNSIGNED(63 downto 0) := (others => '0');
     signal int_conv3_biases    : UNSIGNED(63 downto 0) := (others => '0');
     signal int_output_ftmap    : UNSIGNED(63 downto 0) := (others => '0');
+    signal int_reload_weights  : UNSIGNED(31 downto 0) := (others => '0');
 
 
 begin
@@ -341,6 +348,8 @@ begin
                         rdata_data <= RESIZE(int_output_ftmap(31 downto 0), 32);
                     when ADDR_OUTPUT_FTMAP_DATA_1 =>
                         rdata_data <= RESIZE(int_output_ftmap(63 downto 32), 32);
+                    when ADDR_RELOAD_WEIGHTS_DATA_0 =>
+                        rdata_data <= RESIZE(int_reload_weights(31 downto 0), 32);
                     when others =>
                         NULL;
                     end case;
@@ -363,6 +372,7 @@ begin
     conv3_weights        <= STD_LOGIC_VECTOR(int_conv3_weights);
     conv3_biases         <= STD_LOGIC_VECTOR(int_conv3_biases);
     output_ftmap         <= STD_LOGIC_VECTOR(int_output_ftmap);
+    reload_weights       <= STD_LOGIC_VECTOR(int_reload_weights);
 
     process (ACLK)
     begin
@@ -705,6 +715,17 @@ begin
             if (ACLK_EN = '1') then
                 if (w_hs = '1' and waddr = ADDR_OUTPUT_FTMAP_DATA_1) then
                     int_output_ftmap(63 downto 32) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_output_ftmap(63 downto 32));
+                end if;
+            end if;
+        end if;
+    end process;
+
+    process (ACLK)
+    begin
+        if (ACLK'event and ACLK = '1') then
+            if (ACLK_EN = '1') then
+                if (w_hs = '1' and waddr = ADDR_RELOAD_WEIGHTS_DATA_0) then
+                    int_reload_weights(31 downto 0) <= (UNSIGNED(WDATA(31 downto 0)) and wmask(31 downto 0)) or ((not wmask(31 downto 0)) and int_reload_weights(31 downto 0));
                 end if;
             end if;
         end if;

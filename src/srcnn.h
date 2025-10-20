@@ -27,7 +27,8 @@ void srcnn(ftmap_t input_ftmap[N0][H][W],
            param_t conv2_biases[N2],
            param_t conv3_weights[N3][N2][F3][F3],
            param_t conv3_biases[N3],
-           ftmap_t output_ftmap[N3][H][W]);
+           ftmap_t output_ftmap[N3][H][W],
+		   int reload_weights);
 
 // implements first convolutional layer of SRCNN
 void conv1(ftmap_t input_ftmap[N0][H][W],

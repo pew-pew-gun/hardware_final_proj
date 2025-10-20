@@ -185,22 +185,22 @@
     endfunction
 
     // get the proc path based on dl vector
-    function [632:0] proc_path(input [PROC_NUM - 1:0] dl_vec);
+    function [536:0] proc_path(input [PROC_NUM - 1:0] dl_vec);
         integer index;
         begin
             index = proc_index(dl_vec);
             case (index)
                 0 : begin
-                    proc_path = "srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.entry_proc_U0";
+                    proc_path = "srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.entry_proc_U0";
                 end
                 1 : begin
-                    proc_path = "srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.load_tile_mm_U0";
+                    proc_path = "srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.load_tile_mm_U0";
                 end
                 2 : begin
-                    proc_path = "srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.compute_tile_U0";
+                    proc_path = "srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.compute_tile_U0";
                 end
                 3 : begin
-                    proc_path = "srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.store_tile_mm_U0";
+                    proc_path = "srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.store_tile_mm_U0";
                 end
                 default : begin
                     proc_path = "unknown";
@@ -220,7 +220,7 @@
     endtask
 
     // print the start of a cycle
-    task print_cycle_start(input reg [632:0] proc_path, input integer cycle_id);
+    task print_cycle_start(input reg [536:0] proc_path, input integer cycle_id);
         begin
             $display("/////////////////////////");
             $display("// Dependence cycle %0d:", cycle_id);
@@ -245,7 +245,7 @@
     endtask
 
     // print one proc component in the cycle
-    task print_cycle_proc_comp(input reg [632:0] proc_path, input integer cycle_comp_id);
+    task print_cycle_proc_comp(input reg [536:0] proc_path, input integer cycle_comp_id);
         begin
             $display("// (%0d): Process: %0s", cycle_comp_id, proc_path);
             $fdisplay(fp, "Dependence_Process_ID %0d", cycle_comp_id);
@@ -255,7 +255,7 @@
 
     // print one channel component in the cycle
     task print_cycle_chan_comp(input [PROC_NUM - 1:0] dl_vec1, input [PROC_NUM - 1:0] dl_vec2);
-        reg [648:0] chan_path;
+        reg [552:0] chan_path;
         integer index1;
         integer index2;
         begin
@@ -265,27 +265,27 @@
                 0 : begin
                     case(index2)
                     3: begin
-                        if (~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.entry_proc_U0.output_ftmap_c_blk_n) begin
-                            if (~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.output_ftmap_c_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.output_ftmap_c_U' written by process 'srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.store_tile_mm_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.output_ftmap_c_U");
+                        if (~grp_dataflow_in_loop_IT_w0_fu_806.entry_proc_U0.output_ftmap_c_blk_n) begin
+                            if (~grp_dataflow_in_loop_IT_w0_fu_806.output_ftmap_c_U.if_empty_n) begin
+                                $display("//      Blocked by empty input FIFO 'srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.output_ftmap_c_U' written by process 'srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.store_tile_mm_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.output_ftmap_c_U");
                                 $fdisplay(fp, "Dependence_Channel_status EMPTY");
                             end
-                            else if (~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.output_ftmap_c_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.output_ftmap_c_U' read by process 'srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.store_tile_mm_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.output_ftmap_c_U");
+                            else if (~grp_dataflow_in_loop_IT_w0_fu_806.output_ftmap_c_U.if_full_n) begin
+                                $display("//      Blocked by full output FIFO 'srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.output_ftmap_c_U' read by process 'srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.store_tile_mm_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.output_ftmap_c_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
                         end
                     end
                     1: begin
-                        if (grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.ap_sync_entry_proc_U0_ap_ready & grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.entry_proc_U0.ap_idle & ~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.ap_sync_load_tile_mm_U0_ap_ready) begin
-                            $display("//      Blocked by input sync logic with process : 'srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.load_tile_mm_U0'");
+                        if (grp_dataflow_in_loop_IT_w0_fu_806.ap_sync_entry_proc_U0_ap_ready & grp_dataflow_in_loop_IT_w0_fu_806.entry_proc_U0.ap_idle & ~grp_dataflow_in_loop_IT_w0_fu_806.ap_sync_load_tile_mm_U0_ap_ready) begin
+                            $display("//      Blocked by input sync logic with process : 'srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.load_tile_mm_U0'");
                         end
                     end
                     2: begin
-                        if (grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.ap_sync_entry_proc_U0_ap_ready & grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.entry_proc_U0.ap_idle & ~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.ap_sync_compute_tile_U0_ap_ready) begin
-                            $display("//      Blocked by input sync logic with process : 'srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.compute_tile_U0'");
+                        if (grp_dataflow_in_loop_IT_w0_fu_806.ap_sync_entry_proc_U0_ap_ready & grp_dataflow_in_loop_IT_w0_fu_806.entry_proc_U0.ap_idle & ~grp_dataflow_in_loop_IT_w0_fu_806.ap_sync_compute_tile_U0_ap_ready) begin
+                            $display("//      Blocked by input sync logic with process : 'srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.compute_tile_U0'");
                         end
                     end
                     endcase
@@ -293,25 +293,25 @@
                 1 : begin
                     case(index2)
                     2: begin
-                        if (~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.inbuf_U.i_full_n & grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.load_tile_mm_U0.ap_done & ap_done_reg_0 & ~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.inbuf_U.t_read) begin
-                            if (~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.inbuf_U.t_empty_n) begin
-                                $display("//      Blocked by empty input PIPO 'srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.inbuf_U' written by process 'srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.compute_tile_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.inbuf_U");
+                        if (~grp_dataflow_in_loop_IT_w0_fu_806.inbuf_U.i_full_n & grp_dataflow_in_loop_IT_w0_fu_806.load_tile_mm_U0.ap_done & ap_done_reg_0 & ~grp_dataflow_in_loop_IT_w0_fu_806.inbuf_U.t_read) begin
+                            if (~grp_dataflow_in_loop_IT_w0_fu_806.inbuf_U.t_empty_n) begin
+                                $display("//      Blocked by empty input PIPO 'srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.inbuf_U' written by process 'srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.compute_tile_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.inbuf_U");
                                 $fdisplay(fp, "Dependence_Channel_status EMPTY");
                             end
-                            else if (~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.inbuf_U.i_full_n) begin
-                                $display("//      Blocked by full output PIPO 'srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.inbuf_U' read by process 'srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.compute_tile_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.inbuf_U");
+                            else if (~grp_dataflow_in_loop_IT_w0_fu_806.inbuf_U.i_full_n) begin
+                                $display("//      Blocked by full output PIPO 'srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.inbuf_U' read by process 'srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.compute_tile_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.inbuf_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
                         end
-                        if (grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.ap_sync_load_tile_mm_U0_ap_ready & grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.load_tile_mm_U0.ap_idle & ~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.ap_sync_compute_tile_U0_ap_ready) begin
-                            $display("//      Blocked by input sync logic with process : 'srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.compute_tile_U0'");
+                        if (grp_dataflow_in_loop_IT_w0_fu_806.ap_sync_load_tile_mm_U0_ap_ready & grp_dataflow_in_loop_IT_w0_fu_806.load_tile_mm_U0.ap_idle & ~grp_dataflow_in_loop_IT_w0_fu_806.ap_sync_compute_tile_U0_ap_ready) begin
+                            $display("//      Blocked by input sync logic with process : 'srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.compute_tile_U0'");
                         end
                     end
                     0: begin
-                        if (grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.ap_sync_load_tile_mm_U0_ap_ready & grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.load_tile_mm_U0.ap_idle & ~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.ap_sync_entry_proc_U0_ap_ready) begin
-                            $display("//      Blocked by input sync logic with process : 'srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.entry_proc_U0'");
+                        if (grp_dataflow_in_loop_IT_w0_fu_806.ap_sync_load_tile_mm_U0_ap_ready & grp_dataflow_in_loop_IT_w0_fu_806.load_tile_mm_U0.ap_idle & ~grp_dataflow_in_loop_IT_w0_fu_806.ap_sync_entry_proc_U0_ap_ready) begin
+                            $display("//      Blocked by input sync logic with process : 'srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.entry_proc_U0'");
                         end
                     end
                     endcase
@@ -319,75 +319,75 @@
                 2 : begin
                     case(index2)
                     1: begin
-                        if (~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.phase_c3_channel_U.if_empty_n & grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.compute_tile_U0.ap_idle & ~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.phase_c3_channel_U.if_write) begin
-                            if (~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.phase_c3_channel_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.phase_c3_channel_U' written by process 'srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.load_tile_mm_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.phase_c3_channel_U");
+                        if (~grp_dataflow_in_loop_IT_w0_fu_806.phase_c3_channel_U.if_empty_n & grp_dataflow_in_loop_IT_w0_fu_806.compute_tile_U0.ap_idle & ~grp_dataflow_in_loop_IT_w0_fu_806.phase_c3_channel_U.if_write) begin
+                            if (~grp_dataflow_in_loop_IT_w0_fu_806.phase_c3_channel_U.if_empty_n) begin
+                                $display("//      Blocked by empty input FIFO 'srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.phase_c3_channel_U' written by process 'srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.load_tile_mm_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.phase_c3_channel_U");
                                 $fdisplay(fp, "Dependence_Channel_status EMPTY");
                             end
-                            else if (~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.phase_c3_channel_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.phase_c3_channel_U' read by process 'srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.load_tile_mm_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.phase_c3_channel_U");
+                            else if (~grp_dataflow_in_loop_IT_w0_fu_806.phase_c3_channel_U.if_full_n) begin
+                                $display("//      Blocked by full output FIFO 'srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.phase_c3_channel_U' read by process 'srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.load_tile_mm_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.phase_c3_channel_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
                         end
-                        if (~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.h0_c1_channel_U.if_empty_n & grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.compute_tile_U0.ap_idle & ~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.h0_c1_channel_U.if_write) begin
-                            if (~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.h0_c1_channel_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.h0_c1_channel_U' written by process 'srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.load_tile_mm_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.h0_c1_channel_U");
+                        if (~grp_dataflow_in_loop_IT_w0_fu_806.h0_c1_channel_U.if_empty_n & grp_dataflow_in_loop_IT_w0_fu_806.compute_tile_U0.ap_idle & ~grp_dataflow_in_loop_IT_w0_fu_806.h0_c1_channel_U.if_write) begin
+                            if (~grp_dataflow_in_loop_IT_w0_fu_806.h0_c1_channel_U.if_empty_n) begin
+                                $display("//      Blocked by empty input FIFO 'srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.h0_c1_channel_U' written by process 'srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.load_tile_mm_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.h0_c1_channel_U");
                                 $fdisplay(fp, "Dependence_Channel_status EMPTY");
                             end
-                            else if (~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.h0_c1_channel_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.h0_c1_channel_U' read by process 'srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.load_tile_mm_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.h0_c1_channel_U");
+                            else if (~grp_dataflow_in_loop_IT_w0_fu_806.h0_c1_channel_U.if_full_n) begin
+                                $display("//      Blocked by full output FIFO 'srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.h0_c1_channel_U' read by process 'srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.load_tile_mm_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.h0_c1_channel_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
                         end
-                        if (~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.w0_c2_channel_U.if_empty_n & grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.compute_tile_U0.ap_idle & ~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.w0_c2_channel_U.if_write) begin
-                            if (~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.w0_c2_channel_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.w0_c2_channel_U' written by process 'srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.load_tile_mm_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.w0_c2_channel_U");
+                        if (~grp_dataflow_in_loop_IT_w0_fu_806.w0_c2_channel_U.if_empty_n & grp_dataflow_in_loop_IT_w0_fu_806.compute_tile_U0.ap_idle & ~grp_dataflow_in_loop_IT_w0_fu_806.w0_c2_channel_U.if_write) begin
+                            if (~grp_dataflow_in_loop_IT_w0_fu_806.w0_c2_channel_U.if_empty_n) begin
+                                $display("//      Blocked by empty input FIFO 'srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.w0_c2_channel_U' written by process 'srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.load_tile_mm_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.w0_c2_channel_U");
                                 $fdisplay(fp, "Dependence_Channel_status EMPTY");
                             end
-                            else if (~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.w0_c2_channel_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.w0_c2_channel_U' read by process 'srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.load_tile_mm_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.w0_c2_channel_U");
+                            else if (~grp_dataflow_in_loop_IT_w0_fu_806.w0_c2_channel_U.if_full_n) begin
+                                $display("//      Blocked by full output FIFO 'srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.w0_c2_channel_U' read by process 'srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.load_tile_mm_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.w0_c2_channel_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
                         end
-                        if (~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.inbuf_U.t_empty_n & grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.compute_tile_U0.ap_idle & ~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.inbuf_U.i_write) begin
-                            if (~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.inbuf_U.t_empty_n) begin
-                                $display("//      Blocked by empty input PIPO 'srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.inbuf_U' written by process 'srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.load_tile_mm_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.inbuf_U");
+                        if (~grp_dataflow_in_loop_IT_w0_fu_806.inbuf_U.t_empty_n & grp_dataflow_in_loop_IT_w0_fu_806.compute_tile_U0.ap_idle & ~grp_dataflow_in_loop_IT_w0_fu_806.inbuf_U.i_write) begin
+                            if (~grp_dataflow_in_loop_IT_w0_fu_806.inbuf_U.t_empty_n) begin
+                                $display("//      Blocked by empty input PIPO 'srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.inbuf_U' written by process 'srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.load_tile_mm_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.inbuf_U");
                                 $fdisplay(fp, "Dependence_Channel_status EMPTY");
                             end
-                            else if (~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.inbuf_U.i_full_n) begin
-                                $display("//      Blocked by full output PIPO 'srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.inbuf_U' read by process 'srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.load_tile_mm_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.inbuf_U");
+                            else if (~grp_dataflow_in_loop_IT_w0_fu_806.inbuf_U.i_full_n) begin
+                                $display("//      Blocked by full output PIPO 'srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.inbuf_U' read by process 'srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.load_tile_mm_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.inbuf_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
                         end
-                        if (grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.ap_sync_compute_tile_U0_ap_ready & grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.compute_tile_U0.ap_idle & ~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.ap_sync_load_tile_mm_U0_ap_ready) begin
-                            $display("//      Blocked by input sync logic with process : 'srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.load_tile_mm_U0'");
+                        if (grp_dataflow_in_loop_IT_w0_fu_806.ap_sync_compute_tile_U0_ap_ready & grp_dataflow_in_loop_IT_w0_fu_806.compute_tile_U0.ap_idle & ~grp_dataflow_in_loop_IT_w0_fu_806.ap_sync_load_tile_mm_U0_ap_ready) begin
+                            $display("//      Blocked by input sync logic with process : 'srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.load_tile_mm_U0'");
                         end
                     end
                     3: begin
-                        if (~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.outbuf_U.i_full_n & grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.compute_tile_U0.ap_done & ap_done_reg_1 & ~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.outbuf_U.t_read) begin
-                            if (~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.outbuf_U.t_empty_n) begin
-                                $display("//      Blocked by empty input PIPO 'srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.outbuf_U' written by process 'srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.store_tile_mm_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.outbuf_U");
+                        if (~grp_dataflow_in_loop_IT_w0_fu_806.outbuf_U.i_full_n & grp_dataflow_in_loop_IT_w0_fu_806.compute_tile_U0.ap_done & ap_done_reg_1 & ~grp_dataflow_in_loop_IT_w0_fu_806.outbuf_U.t_read) begin
+                            if (~grp_dataflow_in_loop_IT_w0_fu_806.outbuf_U.t_empty_n) begin
+                                $display("//      Blocked by empty input PIPO 'srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.outbuf_U' written by process 'srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.store_tile_mm_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.outbuf_U");
                                 $fdisplay(fp, "Dependence_Channel_status EMPTY");
                             end
-                            else if (~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.outbuf_U.i_full_n) begin
-                                $display("//      Blocked by full output PIPO 'srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.outbuf_U' read by process 'srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.store_tile_mm_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.outbuf_U");
+                            else if (~grp_dataflow_in_loop_IT_w0_fu_806.outbuf_U.i_full_n) begin
+                                $display("//      Blocked by full output PIPO 'srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.outbuf_U' read by process 'srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.store_tile_mm_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.outbuf_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
                         end
                     end
                     0: begin
-                        if (grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.ap_sync_compute_tile_U0_ap_ready & grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.compute_tile_U0.ap_idle & ~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.ap_sync_entry_proc_U0_ap_ready) begin
-                            $display("//      Blocked by input sync logic with process : 'srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.entry_proc_U0'");
+                        if (grp_dataflow_in_loop_IT_w0_fu_806.ap_sync_compute_tile_U0_ap_ready & grp_dataflow_in_loop_IT_w0_fu_806.compute_tile_U0.ap_idle & ~grp_dataflow_in_loop_IT_w0_fu_806.ap_sync_entry_proc_U0_ap_ready) begin
+                            $display("//      Blocked by input sync logic with process : 'srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.entry_proc_U0'");
                         end
                     end
                     endcase
@@ -395,65 +395,65 @@
                 3 : begin
                     case(index2)
                     2: begin
-                        if (~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.phase_c_channel_U.if_empty_n & grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.store_tile_mm_U0.ap_idle & ~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.phase_c_channel_U.if_write) begin
-                            if (~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.phase_c_channel_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.phase_c_channel_U' written by process 'srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.compute_tile_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.phase_c_channel_U");
+                        if (~grp_dataflow_in_loop_IT_w0_fu_806.phase_c_channel_U.if_empty_n & grp_dataflow_in_loop_IT_w0_fu_806.store_tile_mm_U0.ap_idle & ~grp_dataflow_in_loop_IT_w0_fu_806.phase_c_channel_U.if_write) begin
+                            if (~grp_dataflow_in_loop_IT_w0_fu_806.phase_c_channel_U.if_empty_n) begin
+                                $display("//      Blocked by empty input FIFO 'srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.phase_c_channel_U' written by process 'srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.compute_tile_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.phase_c_channel_U");
                                 $fdisplay(fp, "Dependence_Channel_status EMPTY");
                             end
-                            else if (~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.phase_c_channel_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.phase_c_channel_U' read by process 'srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.compute_tile_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.phase_c_channel_U");
+                            else if (~grp_dataflow_in_loop_IT_w0_fu_806.phase_c_channel_U.if_full_n) begin
+                                $display("//      Blocked by full output FIFO 'srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.phase_c_channel_U' read by process 'srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.compute_tile_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.phase_c_channel_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
                         end
-                        if (~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.h0_c_channel_U.if_empty_n & grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.store_tile_mm_U0.ap_idle & ~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.h0_c_channel_U.if_write) begin
-                            if (~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.h0_c_channel_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.h0_c_channel_U' written by process 'srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.compute_tile_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.h0_c_channel_U");
+                        if (~grp_dataflow_in_loop_IT_w0_fu_806.h0_c_channel_U.if_empty_n & grp_dataflow_in_loop_IT_w0_fu_806.store_tile_mm_U0.ap_idle & ~grp_dataflow_in_loop_IT_w0_fu_806.h0_c_channel_U.if_write) begin
+                            if (~grp_dataflow_in_loop_IT_w0_fu_806.h0_c_channel_U.if_empty_n) begin
+                                $display("//      Blocked by empty input FIFO 'srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.h0_c_channel_U' written by process 'srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.compute_tile_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.h0_c_channel_U");
                                 $fdisplay(fp, "Dependence_Channel_status EMPTY");
                             end
-                            else if (~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.h0_c_channel_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.h0_c_channel_U' read by process 'srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.compute_tile_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.h0_c_channel_U");
+                            else if (~grp_dataflow_in_loop_IT_w0_fu_806.h0_c_channel_U.if_full_n) begin
+                                $display("//      Blocked by full output FIFO 'srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.h0_c_channel_U' read by process 'srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.compute_tile_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.h0_c_channel_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
                         end
-                        if (~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.w0_c_channel_U.if_empty_n & grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.store_tile_mm_U0.ap_idle & ~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.w0_c_channel_U.if_write) begin
-                            if (~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.w0_c_channel_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.w0_c_channel_U' written by process 'srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.compute_tile_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.w0_c_channel_U");
+                        if (~grp_dataflow_in_loop_IT_w0_fu_806.w0_c_channel_U.if_empty_n & grp_dataflow_in_loop_IT_w0_fu_806.store_tile_mm_U0.ap_idle & ~grp_dataflow_in_loop_IT_w0_fu_806.w0_c_channel_U.if_write) begin
+                            if (~grp_dataflow_in_loop_IT_w0_fu_806.w0_c_channel_U.if_empty_n) begin
+                                $display("//      Blocked by empty input FIFO 'srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.w0_c_channel_U' written by process 'srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.compute_tile_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.w0_c_channel_U");
                                 $fdisplay(fp, "Dependence_Channel_status EMPTY");
                             end
-                            else if (~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.w0_c_channel_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.w0_c_channel_U' read by process 'srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.compute_tile_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.w0_c_channel_U");
+                            else if (~grp_dataflow_in_loop_IT_w0_fu_806.w0_c_channel_U.if_full_n) begin
+                                $display("//      Blocked by full output FIFO 'srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.w0_c_channel_U' read by process 'srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.compute_tile_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.w0_c_channel_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
                         end
-                        if (~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.outbuf_U.t_empty_n & grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.store_tile_mm_U0.ap_idle & ~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.outbuf_U.i_write) begin
-                            if (~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.outbuf_U.t_empty_n) begin
-                                $display("//      Blocked by empty input PIPO 'srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.outbuf_U' written by process 'srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.compute_tile_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.outbuf_U");
+                        if (~grp_dataflow_in_loop_IT_w0_fu_806.outbuf_U.t_empty_n & grp_dataflow_in_loop_IT_w0_fu_806.store_tile_mm_U0.ap_idle & ~grp_dataflow_in_loop_IT_w0_fu_806.outbuf_U.i_write) begin
+                            if (~grp_dataflow_in_loop_IT_w0_fu_806.outbuf_U.t_empty_n) begin
+                                $display("//      Blocked by empty input PIPO 'srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.outbuf_U' written by process 'srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.compute_tile_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.outbuf_U");
                                 $fdisplay(fp, "Dependence_Channel_status EMPTY");
                             end
-                            else if (~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.outbuf_U.i_full_n) begin
-                                $display("//      Blocked by full output PIPO 'srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.outbuf_U' read by process 'srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.compute_tile_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.outbuf_U");
+                            else if (~grp_dataflow_in_loop_IT_w0_fu_806.outbuf_U.i_full_n) begin
+                                $display("//      Blocked by full output PIPO 'srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.outbuf_U' read by process 'srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.compute_tile_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.outbuf_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
                         end
                     end
                     0: begin
-                        if (~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.store_tile_mm_U0.output_ftmap_blk_n) begin
-                            if (~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.output_ftmap_c_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.output_ftmap_c_U' written by process 'srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.entry_proc_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.output_ftmap_c_U");
+                        if (~grp_dataflow_in_loop_IT_w0_fu_806.store_tile_mm_U0.output_ftmap_blk_n) begin
+                            if (~grp_dataflow_in_loop_IT_w0_fu_806.output_ftmap_c_U.if_empty_n) begin
+                                $display("//      Blocked by empty input FIFO 'srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.output_ftmap_c_U' written by process 'srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.entry_proc_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.output_ftmap_c_U");
                                 $fdisplay(fp, "Dependence_Channel_status EMPTY");
                             end
-                            else if (~grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.output_ftmap_c_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.output_ftmap_c_U' read by process 'srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.entry_proc_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path srcnn_srcnn.grp_dataflow_in_loop_VITIS_LOOP_400_12_fu_901.output_ftmap_c_U");
+                            else if (~grp_dataflow_in_loop_IT_w0_fu_806.output_ftmap_c_U.if_full_n) begin
+                                $display("//      Blocked by full output FIFO 'srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.output_ftmap_c_U' read by process 'srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.entry_proc_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path srcnn_srcnn.grp_dataflow_in_loop_IT_w0_fu_806.output_ftmap_c_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
                         end

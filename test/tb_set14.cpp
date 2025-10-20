@@ -117,7 +117,7 @@ int tb_set14()
 					  conv2_biases_set14,
 					  conv3_weights_set14,
 					  conv3_biases_set14,
-					  img_HR_set14);
+					  img_HR_set14, 1);
 
                 std::cout << std::setw(15) << std::left << filename.substr(0,(filename).find("_")) 
                     << std::setw(20) << std::left <<  calculate_PSNR(&img_GT_set14[0][0][0], &img_HR_set14[0][0][0], H*W)

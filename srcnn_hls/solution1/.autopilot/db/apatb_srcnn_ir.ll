@@ -4,7 +4,7 @@ target datalayout = "e-m:e-i64:64-i128:128-i256:256-i512:512-i1024:1024-i2048:20
 target triple = "fpga64-xilinx-none"
 
 ; Function Attrs: noinline
-define void @apatb_srcnn_ir([255 x [255 x float]]* noalias nocapture nonnull readonly "fpga.decayed.dim.hint"="1" "maxi" %input_ftmap, [1 x [9 x [9 x float]]]* noalias nocapture nonnull readonly "fpga.decayed.dim.hint"="64" "maxi" %conv1_weights, float* noalias nocapture nonnull readonly "fpga.decayed.dim.hint"="64" "maxi" %conv1_biases, [64 x [1 x [1 x float]]]* noalias nocapture nonnull readonly "fpga.decayed.dim.hint"="32" "maxi" %conv2_weights, float* noalias nocapture nonnull readonly "fpga.decayed.dim.hint"="32" "maxi" %conv2_biases, [32 x [5 x [5 x float]]]* noalias nocapture nonnull readonly "fpga.decayed.dim.hint"="1" "maxi" %conv3_weights, float* noalias nocapture nonnull readonly "fpga.decayed.dim.hint"="1" "maxi" %conv3_biases, [255 x [255 x float]]* noalias nocapture nonnull "fpga.decayed.dim.hint"="1" "maxi" %output_ftmap) local_unnamed_addr #0 {
+define void @apatb_srcnn_ir([255 x [255 x float]]* noalias nocapture nonnull readonly "fpga.decayed.dim.hint"="1" "maxi" %input_ftmap, [1 x [9 x [9 x float]]]* noalias nocapture nonnull readonly "fpga.decayed.dim.hint"="64" "maxi" %conv1_weights, float* noalias nocapture nonnull readonly "fpga.decayed.dim.hint"="64" "maxi" %conv1_biases, [64 x [1 x [1 x float]]]* noalias nocapture nonnull readonly "fpga.decayed.dim.hint"="32" "maxi" %conv2_weights, float* noalias nocapture nonnull readonly "fpga.decayed.dim.hint"="32" "maxi" %conv2_biases, [32 x [5 x [5 x float]]]* noalias nocapture nonnull readonly "fpga.decayed.dim.hint"="1" "maxi" %conv3_weights, float* noalias nocapture nonnull readonly "fpga.decayed.dim.hint"="1" "maxi" %conv3_biases, [255 x [255 x float]]* noalias nocapture nonnull "fpga.decayed.dim.hint"="1" "maxi" %output_ftmap, i32 %reload_weights) local_unnamed_addr #0 {
 entry:
   %malloccall = tail call i8* @malloc(i64 260100)
   %input_ftmap_copy = bitcast i8* %malloccall to [1 x [255 x [255 x float]]]*
@@ -27,7 +27,7 @@ entry:
   %6 = bitcast float* %conv3_biases to [1 x float]*
   %7 = bitcast [255 x [255 x float]]* %output_ftmap to [1 x [255 x [255 x float]]]*
   call fastcc void @copy_in([1 x [255 x [255 x float]]]* nonnull %0, [1 x [255 x [255 x float]]]* %input_ftmap_copy, [64 x [1 x [9 x [9 x float]]]]* nonnull %1, [64 x [1 x [9 x [9 x float]]]]* %conv1_weights_copy, [64 x float]* nonnull %2, [64 x float]* nonnull align 512 %conv1_biases_copy, [32 x [64 x [1 x [1 x float]]]]* nonnull %3, [32 x [64 x [1 x [1 x float]]]]* %conv2_weights_copy, [32 x float]* nonnull %4, [32 x float]* nonnull align 512 %conv2_biases_copy, [1 x [32 x [5 x [5 x float]]]]* nonnull %5, [1 x [32 x [5 x [5 x float]]]]* nonnull align 512 %conv3_weights_copy, [1 x float]* nonnull %6, [1 x float]* nonnull align 512 %conv3_biases_copy, [1 x [255 x [255 x float]]]* nonnull %7, [1 x [255 x [255 x float]]]* %output_ftmap_copy)
-  call void @apatb_srcnn_hw([1 x [255 x [255 x float]]]* %input_ftmap_copy, [64 x [1 x [9 x [9 x float]]]]* %conv1_weights_copy, [64 x float]* %conv1_biases_copy, [32 x [64 x [1 x [1 x float]]]]* %conv2_weights_copy, [32 x float]* %conv2_biases_copy, [1 x [32 x [5 x [5 x float]]]]* %conv3_weights_copy, [1 x float]* %conv3_biases_copy, [1 x [255 x [255 x float]]]* %output_ftmap_copy)
+  call void @apatb_srcnn_hw([1 x [255 x [255 x float]]]* %input_ftmap_copy, [64 x [1 x [9 x [9 x float]]]]* %conv1_weights_copy, [64 x float]* %conv1_biases_copy, [32 x [64 x [1 x [1 x float]]]]* %conv2_weights_copy, [32 x float]* %conv2_biases_copy, [1 x [32 x [5 x [5 x float]]]]* %conv3_weights_copy, [1 x float]* %conv3_biases_copy, [1 x [255 x [255 x float]]]* %output_ftmap_copy, i32 %reload_weights)
   call void @copy_back([1 x [255 x [255 x float]]]* %0, [1 x [255 x [255 x float]]]* %input_ftmap_copy, [64 x [1 x [9 x [9 x float]]]]* %1, [64 x [1 x [9 x [9 x float]]]]* %conv1_weights_copy, [64 x float]* %2, [64 x float]* %conv1_biases_copy, [32 x [64 x [1 x [1 x float]]]]* %3, [32 x [64 x [1 x [1 x float]]]]* %conv2_weights_copy, [32 x float]* %4, [32 x float]* %conv2_biases_copy, [1 x [32 x [5 x [5 x float]]]]* %5, [1 x [32 x [5 x [5 x float]]]]* %conv3_weights_copy, [1 x float]* %6, [1 x float]* %conv3_biases_copy, [1 x [255 x [255 x float]]]* %7, [1 x [255 x [255 x float]]]* %output_ftmap_copy)
   tail call void @free(i8* %malloccall)
   tail call void @free(i8* %malloccall1)
@@ -713,7 +713,7 @@ entry:
 
 declare void @free(i8*) local_unnamed_addr
 
-declare void @apatb_srcnn_hw([1 x [255 x [255 x float]]]*, [64 x [1 x [9 x [9 x float]]]]*, [64 x float]*, [32 x [64 x [1 x [1 x float]]]]*, [32 x float]*, [1 x [32 x [5 x [5 x float]]]]*, [1 x float]*, [1 x [255 x [255 x float]]]*)
+declare void @apatb_srcnn_hw([1 x [255 x [255 x float]]]*, [64 x [1 x [9 x [9 x float]]]]*, [64 x float]*, [32 x [64 x [1 x [1 x float]]]]*, [32 x float]*, [1 x [32 x [5 x [5 x float]]]]*, [1 x float]*, [1 x [255 x [255 x float]]]*, i32)
 
 ; Function Attrs: argmemonly noinline norecurse
 define internal fastcc void @copy_back([1 x [255 x [255 x float]]]* noalias, [1 x [255 x [255 x float]]]* noalias readonly, [64 x [1 x [9 x [9 x float]]]]* noalias, [64 x [1 x [9 x [9 x float]]]]* noalias readonly, [64 x float]* noalias, [64 x float]* noalias readonly align 512, [32 x [64 x [1 x [1 x float]]]]* noalias, [32 x [64 x [1 x [1 x float]]]]* noalias readonly, [32 x float]* noalias, [32 x float]* noalias readonly align 512, [1 x [32 x [5 x [5 x float]]]]* noalias, [1 x [32 x [5 x [5 x float]]]]* noalias readonly align 512, [1 x float]* noalias, [1 x float]* noalias readonly align 512, [1 x [255 x [255 x float]]]* noalias, [1 x [255 x [255 x float]]]* noalias readonly) unnamed_addr #4 {
@@ -722,23 +722,23 @@ entry:
   ret void
 }
 
-define void @srcnn_hw_stub_wrapper([1 x [255 x [255 x float]]]*, [64 x [1 x [9 x [9 x float]]]]*, [64 x float]*, [32 x [64 x [1 x [1 x float]]]]*, [32 x float]*, [1 x [32 x [5 x [5 x float]]]]*, [1 x float]*, [1 x [255 x [255 x float]]]*) #5 {
+define void @srcnn_hw_stub_wrapper([1 x [255 x [255 x float]]]*, [64 x [1 x [9 x [9 x float]]]]*, [64 x float]*, [32 x [64 x [1 x [1 x float]]]]*, [32 x float]*, [1 x [32 x [5 x [5 x float]]]]*, [1 x float]*, [1 x [255 x [255 x float]]]*, i32) #5 {
 entry:
   call void @copy_out([1 x [255 x [255 x float]]]* null, [1 x [255 x [255 x float]]]* %0, [64 x [1 x [9 x [9 x float]]]]* null, [64 x [1 x [9 x [9 x float]]]]* %1, [64 x float]* null, [64 x float]* %2, [32 x [64 x [1 x [1 x float]]]]* null, [32 x [64 x [1 x [1 x float]]]]* %3, [32 x float]* null, [32 x float]* %4, [1 x [32 x [5 x [5 x float]]]]* null, [1 x [32 x [5 x [5 x float]]]]* %5, [1 x float]* null, [1 x float]* %6, [1 x [255 x [255 x float]]]* null, [1 x [255 x [255 x float]]]* %7)
-  %8 = bitcast [1 x [255 x [255 x float]]]* %0 to [255 x [255 x float]]*
-  %9 = bitcast [64 x [1 x [9 x [9 x float]]]]* %1 to [1 x [9 x [9 x float]]]*
-  %10 = bitcast [64 x float]* %2 to float*
-  %11 = bitcast [32 x [64 x [1 x [1 x float]]]]* %3 to [64 x [1 x [1 x float]]]*
-  %12 = bitcast [32 x float]* %4 to float*
-  %13 = bitcast [1 x [32 x [5 x [5 x float]]]]* %5 to [32 x [5 x [5 x float]]]*
-  %14 = bitcast [1 x float]* %6 to float*
-  %15 = bitcast [1 x [255 x [255 x float]]]* %7 to [255 x [255 x float]]*
-  call void @srcnn_hw_stub([255 x [255 x float]]* %8, [1 x [9 x [9 x float]]]* %9, float* %10, [64 x [1 x [1 x float]]]* %11, float* %12, [32 x [5 x [5 x float]]]* %13, float* %14, [255 x [255 x float]]* %15)
+  %9 = bitcast [1 x [255 x [255 x float]]]* %0 to [255 x [255 x float]]*
+  %10 = bitcast [64 x [1 x [9 x [9 x float]]]]* %1 to [1 x [9 x [9 x float]]]*
+  %11 = bitcast [64 x float]* %2 to float*
+  %12 = bitcast [32 x [64 x [1 x [1 x float]]]]* %3 to [64 x [1 x [1 x float]]]*
+  %13 = bitcast [32 x float]* %4 to float*
+  %14 = bitcast [1 x [32 x [5 x [5 x float]]]]* %5 to [32 x [5 x [5 x float]]]*
+  %15 = bitcast [1 x float]* %6 to float*
+  %16 = bitcast [1 x [255 x [255 x float]]]* %7 to [255 x [255 x float]]*
+  call void @srcnn_hw_stub([255 x [255 x float]]* %9, [1 x [9 x [9 x float]]]* %10, float* %11, [64 x [1 x [1 x float]]]* %12, float* %13, [32 x [5 x [5 x float]]]* %14, float* %15, [255 x [255 x float]]* %16, i32 %8)
   call void @copy_in([1 x [255 x [255 x float]]]* null, [1 x [255 x [255 x float]]]* %0, [64 x [1 x [9 x [9 x float]]]]* null, [64 x [1 x [9 x [9 x float]]]]* %1, [64 x float]* null, [64 x float]* %2, [32 x [64 x [1 x [1 x float]]]]* null, [32 x [64 x [1 x [1 x float]]]]* %3, [32 x float]* null, [32 x float]* %4, [1 x [32 x [5 x [5 x float]]]]* null, [1 x [32 x [5 x [5 x float]]]]* %5, [1 x float]* null, [1 x float]* %6, [1 x [255 x [255 x float]]]* null, [1 x [255 x [255 x float]]]* %7)
   ret void
 }
 
-declare void @srcnn_hw_stub([255 x [255 x float]]*, [1 x [9 x [9 x float]]]*, float*, [64 x [1 x [1 x float]]]*, float*, [32 x [5 x [5 x float]]]*, float*, [255 x [255 x float]]*)
+declare void @srcnn_hw_stub([255 x [255 x float]]*, [1 x [9 x [9 x float]]]*, float*, [64 x [1 x [1 x float]]]*, float*, [32 x [5 x [5 x float]]]*, float*, [255 x [255 x float]]*, i32)
 
 attributes #0 = { noinline "fpga.wrapper.func"="wrapper" }
 attributes #1 = { argmemonly noinline norecurse "fpga.wrapper.func"="copyin" }

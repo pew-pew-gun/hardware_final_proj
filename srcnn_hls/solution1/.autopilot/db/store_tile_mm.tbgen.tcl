@@ -165,7 +165,7 @@ set NewPortList {[
  	{ "name": "outbuf_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "outbuf", "role": "q0" }}  ]}
 
 set RtlHierarchyInfo {[
-	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "3"],
+	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "",
 		"CDFG" : "store_tile_mm",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1", "real_start" : "0",
@@ -182,69 +182,31 @@ set RtlHierarchyInfo {[
 		"Port" : [
 			{"Name" : "p_read", "Type" : "None", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "2", "DependentChanType" : "1"},
 			{"Name" : "gmem_out", "Type" : "MAXI", "Direction" : "O",
-				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_store_tile_mm_Pipeline_VITIS_LOOP_225_2_fu_98", "Port" : "gmem_out", "Inst_start_state" : "2", "Inst_end_state" : "3"}]},
+				"BlockSignal" : [
+					{"Name" : "gmem_out_blk_n_AW", "Type" : "RtlSignal"},
+					{"Name" : "gmem_out_blk_n_W", "Type" : "RtlSignal"},
+					{"Name" : "gmem_out_blk_n_B", "Type" : "RtlSignal"}]},
 			{"Name" : "output_ftmap", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "4", "DependentChanType" : "2",
 				"BlockSignal" : [
 					{"Name" : "output_ftmap_blk_n", "Type" : "RtlSignal"}]},
 			{"Name" : "p_read1", "Type" : "None", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "2", "DependentChanType" : "1"},
 			{"Name" : "p_read2", "Type" : "None", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "2", "DependentChanType" : "1"},
-			{"Name" : "outbuf", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
-				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_store_tile_mm_Pipeline_VITIS_LOOP_225_2_fu_98", "Port" : "outbuf", "Inst_start_state" : "2", "Inst_end_state" : "3"}]}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_store_tile_mm_Pipeline_VITIS_LOOP_225_2_fu_98", "Parent" : "0", "Child" : ["2"],
-		"CDFG" : "store_tile_mm_Pipeline_VITIS_LOOP_225_2",
-		"Protocol" : "ap_ctrl_hs",
-		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
-		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
-		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "-1", "EstimateLatencyMax" : "-1",
-		"Combinational" : "0",
-		"Datapath" : "0",
-		"ClockEnable" : "0",
-		"HasSubDataflow" : "0",
-		"InDataflowNetwork" : "0",
-		"HasNonBlockingOperation" : "0",
-		"IsBlackBox" : "0",
-		"Port" : [
-			{"Name" : "zext_ln223", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bound", "Type" : "None", "Direction" : "I"},
-			{"Name" : "gmem_out", "Type" : "MAXI", "Direction" : "O",
-				"BlockSignal" : [
-					{"Name" : "gmem_out_blk_n_B", "Type" : "RtlSignal"},
-					{"Name" : "gmem_out_blk_n_W", "Type" : "RtlSignal"},
-					{"Name" : "gmem_out_blk_n_AW", "Type" : "RtlSignal"}]},
-			{"Name" : "tw_eff", "Type" : "None", "Direction" : "I"},
-			{"Name" : "zext_ln225", "Type" : "None", "Direction" : "I"},
-			{"Name" : "zext_ln226", "Type" : "None", "Direction" : "I"},
-			{"Name" : "p_cast3", "Type" : "None", "Direction" : "I"},
-			{"Name" : "out_r", "Type" : "None", "Direction" : "I"},
-			{"Name" : "outbuf", "Type" : "Memory", "Direction" : "I"}],
+			{"Name" : "outbuf", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0"}],
 		"Loop" : [
-			{"Name" : "VITIS_LOOP_223_1_VITIS_LOOP_225_2", "PipelineType" : "UPC",
-				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter7", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter7", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "2", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_store_tile_mm_Pipeline_VITIS_LOOP_225_2_fu_98.flow_control_loop_pipe_sequential_init_U", "Parent" : "1"},
-	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_8ns_8ns_16_1_1_U1253", "Parent" : "0"}]}
+			{"Name" : "Out_writex", "PipelineType" : "no",
+				"LoopDec" : {"FSMBitwidth" : "11", "FirstState" : "ap_ST_fsm_state4", "LastState" : ["ap_ST_fsm_state6"], "QuitState" : ["ap_ST_fsm_state4"], "PreState" : ["ap_ST_fsm_state3"], "PostState" : ["ap_ST_fsm_state7"], "OneDepthLoop" : "0", "OneStateBlock": ""}},
+			{"Name" : "Out_writey", "PipelineType" : "no",
+				"LoopDec" : {"FSMBitwidth" : "11", "FirstState" : "ap_ST_fsm_state2", "LastState" : ["ap_ST_fsm_state11"], "QuitState" : ["ap_ST_fsm_state2"], "PreState" : ["ap_ST_fsm_state1"], "PostState" : ["ap_ST_fsm_state1"], "OneDepthLoop" : "0", "OneStateBlock": ""}}]}]}
 
 
 set ArgLastReadFirstWriteLatency {
 	store_tile_mm {
-		p_read {Type I LastRead 1 FirstWrite -1}
-		gmem_out {Type O LastRead 3 FirstWrite 2}
-		output_ftmap {Type I LastRead 1 FirstWrite -1}
+		p_read {Type I LastRead 0 FirstWrite -1}
+		gmem_out {Type O LastRead 4 FirstWrite 5}
+		output_ftmap {Type I LastRead 0 FirstWrite -1}
 		p_read1 {Type I LastRead 0 FirstWrite -1}
 		p_read2 {Type I LastRead 0 FirstWrite -1}
-		outbuf {Type I LastRead 0 FirstWrite -1}}
-	store_tile_mm_Pipeline_VITIS_LOOP_225_2 {
-		zext_ln223 {Type I LastRead 0 FirstWrite -1}
-		bound {Type I LastRead 0 FirstWrite -1}
-		gmem_out {Type O LastRead 3 FirstWrite 2}
-		tw_eff {Type I LastRead 0 FirstWrite -1}
-		zext_ln225 {Type I LastRead 0 FirstWrite -1}
-		zext_ln226 {Type I LastRead 0 FirstWrite -1}
-		p_cast3 {Type I LastRead 0 FirstWrite -1}
-		out_r {Type I LastRead 0 FirstWrite -1}
-		outbuf {Type I LastRead 0 FirstWrite -1}}}
+		outbuf {Type I LastRead 3 FirstWrite -1}}}
 
 set hasDtUnsupportedChannel 0
 

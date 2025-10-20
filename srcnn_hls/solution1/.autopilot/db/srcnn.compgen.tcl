@@ -113,6 +113,14 @@ output_ftmap {
 	offset 100
 	offset_end 111
 }
+reload_weights { 
+	dir I
+	width 32
+	depth 1
+	mode ap_none
+	offset 112
+	offset_end 119
+}
 ap_start { }
 ap_done { }
 ap_ready { }
@@ -127,7 +135,7 @@ dict set axilite_register_dict ctrl $port_ctrl
 if {${::AESL::PGuard_simmodel_gen}} {
 	if {[info proc ::AESL_LIB_XILADAPTER::s_axilite_gen] == "::AESL_LIB_XILADAPTER::s_axilite_gen"} {
 		eval "::AESL_LIB_XILADAPTER::s_axilite_gen { \
-			id 1394 \
+			id 1384 \
 			corename srcnn_ctrl_axilite \
 			name srcnn_ctrl_s_axi \
 			ports {$port_ctrl} \

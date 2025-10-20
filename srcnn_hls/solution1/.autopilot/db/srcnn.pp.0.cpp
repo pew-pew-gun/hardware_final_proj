@@ -170,7 +170,8 @@ __attribute__((sdx_kernel("srcnn", 0))) void srcnn(ftmap_t input_ftmap[1][255][2
            param_t conv2_biases[32],
            param_t conv3_weights[1][32][5][5],
            param_t conv3_biases[1],
-           ftmap_t output_ftmap[1][255][255]);
+           ftmap_t output_ftmap[1][255][255],
+     int reload_weights);
 
 
 void conv1(ftmap_t input_ftmap[1][255][255],
@@ -327,15 +328,18 @@ static void load_tile_mm(
     const int PW = tw_eff + 2*((9/2) + (1/2) + (5/2));
 
 
-    VITIS_LOOP_40_1: for (int py = 0; py < PH; ++py) {
 #pragma HLS PIPELINE
+ InputTileHread:
+    for (int py = 0; py < PH; ++py) {
 
 
- int iy = h0 + py - ((9/2) + (1/2) + (5/2));
+
+        int iy = h0 + py - ((9/2) + (1/2) + (5/2));
         if (iy < 0) iy = 0;
         if (iy >= 255) iy = 255 - 1;
 
-        VITIS_LOOP_48_2: for (int px = 0; px < PW; ++px) {
+        InputTileWread:
+        for (int px = 0; px < PW; ++px) {
 
             int ix = w0 + px - ((9/2) + (1/2) + (5/2));
             if (ix < 0) ix = 0;
@@ -380,11 +384,12 @@ static void compute_tile(
 
 #pragma HLS ALLOCATION operation instances=mul limit=8
 #pragma HLS ALLOCATION operation instances=add limit=8
-# 103 "src/srcnn.cpp"
- VITIS_LOOP_103_1: for (int y0 = -(5/2); y0 < th_eff + (5/2); ++y0) {
+# 105 "src/srcnn.cpp"
+ ITRowcomp:
+  for (int y0 = -(5/2); y0 < th_eff + (5/2); ++y0) {
 #pragma HLS LOOP_FLATTEN off
-
- VITIS_LOOP_106_2: for (int x0 = -(5/2); x0 < tw_eff + (5/2); ++x0) {
+ ITColcomp:
+    for (int x0 = -(5/2); x0 < tw_eff + (5/2); ++x0) {
 
 #pragma HLS DEPENDENCE variable=linebuf inter false
 #pragma HLS DEPENDENCE variable=win inter false
@@ -392,22 +397,26 @@ static void compute_tile(
 
  param_t acc2[32];
 #pragma HLS ARRAY_PARTITION variable=acc2 cyclic factor=8 dim=1
- VITIS_LOOP_114_3: for (int n2 = 0; n2 < 32; ++n2) {
+ Conv2Out_biases:
+      for (int n2 = 0; n2 < 32; ++n2) {
 #pragma HLS UNROLL factor=8
  acc2[n2] = conv2_b[n2];
       }
 
 
-      VITIS_LOOP_120_4: for (int c1 = 0; c1 < 64; ++c1) {
+      Conv1_outftmaps:
+      for (int c1 = 0; c1 < 64; ++c1) {
 
         param_t v = conv1_b[c1];
 
 
 
-        VITIS_LOOP_126_5: for (int ky = 0; ky < 9; ++ky) {
+        Conv1_ky:
+        for (int ky = 0; ky < 9; ++ky) {
 
 
-            VITIS_LOOP_129_6: for (int kx = 0; kx < 9; ++kx) {
+         Conv1_kx:
+            for (int kx = 0; kx < 9; ++kx) {
 
 #pragma HLS PIPELINE off
  int py = (y0 - (9/2)) + ky + ((9/2) + (1/2) + (5/2));
@@ -417,7 +426,8 @@ static void compute_tile(
         }
         if (v < (param_t)0) v = (param_t)0;
 
-        VITIS_LOOP_139_7: for (int n2 = 0; n2 < 32; ++n2) {
+        Conv2_dot32:
+        for (int n2 = 0; n2 < 32; ++n2) {
 #pragma HLS UNROLL factor=8
  acc2[n2] += conv2_w[n2][c1][0][0] * v;
         }
@@ -425,7 +435,8 @@ static void compute_tile(
 
       ftmap_t f2[32];
 #pragma HLS ARRAY_PARTITION variable=f2 cyclic factor=8 dim=1
- VITIS_LOOP_147_8: for (int n2 = 0; n2 < 32; ++n2) {
+ Conv2_ReLU:
+      for (int n2 = 0; n2 < 32; ++n2) {
 #pragma HLS UNROLL factor=8
  param_t t = acc2[n2];
         f2[n2] = (t > (param_t)0) ? (ftmap_t)t : (ftmap_t)0;
@@ -435,10 +446,12 @@ static void compute_tile(
       const int col = x0 + (5/2);
 
 
-      VITIS_LOOP_157_9: for (int n2 = 0; n2 < 32; ++n2) {
+      Shift_win32:
+      for (int n2 = 0; n2 < 32; ++n2) {
 #pragma HLS UNROLL factor=8
 
- VITIS_LOOP_160_10: for (int r = 0; r < 5; ++r) {
+ Shift_win_row:
+        for (int r = 0; r < 5; ++r) {
 
           ftmap_t a = win[n2][r][1], b = win[n2][r][2],
                   c = win[n2][r][3], d = win[n2][r][4];
@@ -448,7 +461,8 @@ static void compute_tile(
           win[n2][r][3]=d;
         }
 
-        VITIS_LOOP_170_11: for (int r = 0; r < 5 -1; ++r) {
+        ReadLineInWin:
+        for (int r = 0; r < 5 -1; ++r) {
 #pragma HLS UNROLL
  win[n2][r][5 -1] = linebuf[n2][5 -2 - r][col];
         }
@@ -456,9 +470,11 @@ static void compute_tile(
       }
 
 
-      VITIS_LOOP_178_12: for (int n2 = 0; n2 < 32; ++n2) {
+      Update_linebuf32:
+      for (int n2 = 0; n2 < 32; ++n2) {
 #pragma HLS UNROLL factor=8
- VITIS_LOOP_180_13: for (int r = 5 -2; r >= 1; --r) {
+ Update_linebuf_row:
+        for (int r = 5 -2; r >= 1; --r) {
 
           linebuf[n2][r][col] = linebuf[n2][r-1][col];
         }
@@ -471,11 +487,14 @@ static void compute_tile(
         int ox = x0 - (5/2);
         if (oy < th_eff && ox < tw_eff) {
           param_t acc3 = conv3_b[0];
-          VITIS_LOOP_193_14: for (int n2 = 0; n2 < 32; ++n2) {
+          Conv3_inputft:
+          for (int n2 = 0; n2 < 32; ++n2) {
 #pragma HLS UNROLL factor=8
- VITIS_LOOP_195_15: for (int ky = 0; ky < 5; ++ky) {
+ Conv3_ky:
+            for (int ky = 0; ky < 5; ++ky) {
 
-              VITIS_LOOP_197_16: for (int kx = 0; kx < 5; ++kx) {
+              Conv3_kx:
+              for (int kx = 0; kx < 5; ++kx) {
 #pragma HLS UNROLL factor=5
 
  int wy = clampi(ky, (5/2)-(h0+oy), (5/2)-(h0+oy)+255 -1);
@@ -501,9 +520,12 @@ static void store_tile_mm(
   int h0, int w0, int th_eff, int tw_eff )
 {
 #pragma HLS INLINE off
- VITIS_LOOP_223_1: for (int y = 0; y < th_eff; ++y) {
 #pragma HLS PIPELINE
- VITIS_LOOP_225_2: for (int x = 0; x < tw_eff; ++x) {
+ Out_writey:
+  for (int y = 0; y < th_eff; ++y) {
+
+ Out_writex:
+    for (int x = 0; x < tw_eff; ++x) {
       out[0][h0 + y][w0 + x] = out_tile[y][x];
     }
   }
@@ -516,18 +538,20 @@ __attribute__((sdx_kernel("srcnn", 0))) void srcnn(
   param_t conv1_weights[64][1][9][9], param_t conv1_biases[64],
   param_t conv2_weights[32][64][1][1], param_t conv2_biases[32],
   param_t conv3_weights[1][32][5][5], param_t conv3_biases[1],
-  ftmap_t output_ftmap[1][255][255] )
+  ftmap_t output_ftmap[1][255][255], int reload_weights )
 {
 #line 27 "C:/Users/redre/Desktop/Hardware_Accelerated_Computing/FinalProject/golden/srcnn_hls/solution1/csynth.tcl"
 #pragma HLSDIRECTIVE TOP name=srcnn
-# 239 "src/srcnn.cpp"
+# 259 "src/srcnn.cpp"
 
 #line 7 "C:/Users/redre/Desktop/Hardware_Accelerated_Computing/FinalProject/golden/srcnn_hls/solution1/directives.tcl"
 #pragma HLSDIRECTIVE TOP name=srcnn
-# 239 "src/srcnn.cpp"
+# 259 "src/srcnn.cpp"
 
-# 249 "src/srcnn.cpp"
+# 269 "src/srcnn.cpp"
 #pragma HLS INTERFACE s_axilite port=return bundle=ctrl
+
+#pragma HLS INTERFACE s_axilite port=reload_weights bundle=ctrl
 
 
 #pragma HLS INTERFACE m_axi port=input_ftmap bundle=gmem_in offset=slave depth=(1*255*255)
@@ -560,7 +584,7 @@ __attribute__((sdx_kernel("srcnn", 0))) void srcnn(
   static ftmap_t outbuf[2][16][16];
 #pragma HLS BIND_STORAGE variable=inbuf type=ram_1p impl=bram
 #pragma HLS BIND_STORAGE variable=outbuf type=ram_1p impl=bram
-# 291 "src/srcnn.cpp"
+# 313 "src/srcnn.cpp"
  static param_t w1_loc[64][1][9][9];
   static param_t b1_loc[64];
   static param_t w2_loc[32][64][1][1];
@@ -595,38 +619,46 @@ __attribute__((sdx_kernel("srcnn", 0))) void srcnn(
 
 
 
-
-
- int reload_weights;
-#pragma HLS INTERFACE s_axilite port=reload_weights bundle=ctrl
-
-
  static bool weights_loaded = false;
 
 #pragma HLS reset variable=weights_loaded
 
  if (reload_weights || !weights_loaded) {
-# 344 "src/srcnn.cpp"
-  VITIS_LOOP_344_1: for (int c1=0;c1<64;++c1) {
-    b1_loc[c1] = conv1_biases[c1];
-    VITIS_LOOP_346_2: for (int ky=0;ky<9;++ky){
 
-      VITIS_LOOP_348_3: for (int kx=0;kx<9;++kx){
+
+
+
+
+
+
+
+#pragma HLS PIPELINE
+CopyW1_outft:
+  for (int c1=0;c1<64;++c1) {
+
+    b1_loc[c1] = conv1_biases[c1];
+    CopyW1_ky:
+    for (int ky=0;ky<9;++ky){
+
+     CopyW1_kx:
+      for (int kx=0;kx<9;++kx){
 
         w1_loc[c1][0][ky][kx] = conv1_weights[c1][0][ky][kx];
       }
     }
   }
 
-
-    VITIS_LOOP_356_4: for (int c2=0;c2<32;++c2) {
+   CopyW2_outft:
+    for (int c2=0;c2<32;++c2) {
 #pragma HLS PIPELINE off
  b2_loc[c2] = conv2_biases[c2];
-        VITIS_LOOP_359_5: for (int i2=0; i2<64;++i2) {
-            VITIS_LOOP_360_6: for (int ky=0;ky<1;++ky){
-
-                VITIS_LOOP_362_7: for (int kx=0;kx<1;++kx){
-
+        CopyW2_inft:
+        for (int i2=0; i2<64;++i2) {
+#pragma HLS PIPELINE
+ CopyW2_ky:
+            for (int ky=0;ky<1;++ky){
+             CopyW2_kx:
+                for (int kx=0;kx<1;++kx){
                     w2_loc[c2][i2][ky][kx] = conv2_weights[c2][i2][ky][kx];
                 }
             }
@@ -637,10 +669,15 @@ __attribute__((sdx_kernel("srcnn", 0))) void srcnn(
 
 
     b3_loc[0] = conv3_biases[0];
-    VITIS_LOOP_374_8: for (int i3=0; i3<32;++i3) {
-        VITIS_LOOP_375_9: for (int ky=0;ky<5;++ky){
+#pragma HLS PIPELINE
+ CopyW3_inft:
+    for (int i3=0; i3<32;++i3) {
 
-            VITIS_LOOP_377_10: for (int kx=0;kx<5;++kx){
+     CopyW3_ky:
+        for (int ky=0;ky<5;++ky){
+
+         CopyW3_kx:
+            for (int kx=0;kx<5;++kx){
 
                 w3_loc[0][i3][ky][kx] = conv3_weights[0][i3][ky][kx];
             }
@@ -661,13 +698,16 @@ __attribute__((sdx_kernel("srcnn", 0))) void srcnn(
 
  bool phase = false;
 
-  VITIS_LOOP_398_11: for (int h0 = 0; h0 < 255; h0 += 16) {
+  IT_h0:
+  for (int h0 = 0; h0 < 255; h0 += 16) {
     const int th_eff = (h0 + 16 <= 255) ? 16 : (255 - h0);
-    VITIS_LOOP_400_12: for (int w0 = 0; w0 < 255; w0 += 16) {
+    IT_w0:
+    for (int w0 = 0; w0 < 255; w0 += 16) {
       const int tw_eff = (w0 + 16 <= 255) ? 16 : (255 - w0);
 
 #pragma HLS DATAFLOW
-# 416 "src/srcnn.cpp"
+
+
  load_tile_mm (input_ftmap, h0, w0, th_eff, tw_eff, inbuf[ phase]);
       compute_tile (inbuf[ phase], outbuf[!phase],
                     w1_loc, b1_loc,
