@@ -1,0 +1,187 @@
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:330:5: warning: Added loop label VITIS_LOOP_40_1:   [xilinx-label-all-loops]
+    for (int py = 0; py < PH; ++py) {
+    ^~~
+    VITIS_LOOP_40_1: 
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:330:5: note: FIX-IT applied suggested code changes
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:338:9: warning: Added loop label VITIS_LOOP_48_2:   [xilinx-label-all-loops]
+        for (int px = 0; px < PW; ++px) {
+        ^~~
+        VITIS_LOOP_48_2: 
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:338:9: note: FIX-IT applied suggested code changes
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:365:48: error: Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=linebuf type=ram_2p impl=bram
+                                               ^
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:384:2: warning: Added loop label VITIS_LOOP_103_1:   [xilinx-label-all-loops]
+ for (int y0 = -(5/2); y0 < th_eff + (5/2); ++y0) {
+ ^~~
+ VITIS_LOOP_103_1: 
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:384:2: note: FIX-IT applied suggested code changes
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:387:2: warning: Added loop label VITIS_LOOP_106_2:   [xilinx-label-all-loops]
+ for (int x0 = -(5/2); x0 < tw_eff + (5/2); ++x0) {
+ ^~~
+ VITIS_LOOP_106_2: 
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:387:2: note: FIX-IT applied suggested code changes
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:395:2: warning: Added loop label VITIS_LOOP_114_3:   [xilinx-label-all-loops]
+ for (int n2 = 0; n2 < 32; ++n2) {
+ ^~~
+ VITIS_LOOP_114_3: 
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:395:2: note: FIX-IT applied suggested code changes
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:401:7: warning: Added loop label VITIS_LOOP_120_4:   [xilinx-label-all-loops]
+      for (int c1 = 0; c1 < 64; ++c1) {
+      ^~~
+      VITIS_LOOP_120_4: 
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:401:7: note: FIX-IT applied suggested code changes
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:407:9: warning: Added loop label VITIS_LOOP_126_5:   [xilinx-label-all-loops]
+        for (int ky = 0; ky < 9; ++ky) {
+        ^~~
+        VITIS_LOOP_126_5: 
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:407:9: note: FIX-IT applied suggested code changes
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:410:13: warning: Added loop label VITIS_LOOP_129_6:   [xilinx-label-all-loops]
+            for (int kx = 0; kx < 9; ++kx) {
+            ^~~
+            VITIS_LOOP_129_6: 
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:410:13: note: FIX-IT applied suggested code changes
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:420:9: warning: Added loop label VITIS_LOOP_139_7:   [xilinx-label-all-loops]
+        for (int n2 = 0; n2 < 32; ++n2) {
+        ^~~
+        VITIS_LOOP_139_7: 
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:420:9: note: FIX-IT applied suggested code changes
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:428:2: warning: Added loop label VITIS_LOOP_147_8:   [xilinx-label-all-loops]
+ for (int n2 = 0; n2 < 32; ++n2) {
+ ^~~
+ VITIS_LOOP_147_8: 
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:428:2: note: FIX-IT applied suggested code changes
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:438:7: warning: Added loop label VITIS_LOOP_157_9:   [xilinx-label-all-loops]
+      for (int n2 = 0; n2 < 32; ++n2) {
+      ^~~
+      VITIS_LOOP_157_9: 
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:438:7: note: FIX-IT applied suggested code changes
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:441:2: warning: Added loop label VITIS_LOOP_160_10:   [xilinx-label-all-loops]
+ for (int r = 0; r < 5; ++r) {
+ ^~~
+ VITIS_LOOP_160_10: 
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:441:2: note: FIX-IT applied suggested code changes
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:451:9: warning: Added loop label VITIS_LOOP_170_11:   [xilinx-label-all-loops]
+        for (int r = 0; r < 5 -1; ++r) {
+        ^~~
+        VITIS_LOOP_170_11: 
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:451:9: note: FIX-IT applied suggested code changes
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:459:7: warning: Added loop label VITIS_LOOP_178_12:   [xilinx-label-all-loops]
+      for (int n2 = 0; n2 < 32; ++n2) {
+      ^~~
+      VITIS_LOOP_178_12: 
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:459:7: note: FIX-IT applied suggested code changes
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:461:2: warning: Added loop label VITIS_LOOP_180_13:   [xilinx-label-all-loops]
+ for (int r = 5 -2; r >= 1; --r) {
+ ^~~
+ VITIS_LOOP_180_13: 
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:461:2: note: FIX-IT applied suggested code changes
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:474:11: warning: Added loop label VITIS_LOOP_193_14:   [xilinx-label-all-loops]
+          for (int n2 = 0; n2 < 32; ++n2) {
+          ^~~
+          VITIS_LOOP_193_14: 
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:474:11: note: FIX-IT applied suggested code changes
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:476:2: warning: Added loop label VITIS_LOOP_195_15:   [xilinx-label-all-loops]
+ for (int ky = 0; ky < 5; ++ky) {
+ ^~~
+ VITIS_LOOP_195_15: 
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:476:2: note: FIX-IT applied suggested code changes
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:478:15: warning: Added loop label VITIS_LOOP_197_16:   [xilinx-label-all-loops]
+              for (int kx = 0; kx < 5; ++kx) {
+              ^~~
+              VITIS_LOOP_197_16: 
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:478:15: note: FIX-IT applied suggested code changes
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:504:2: warning: Added loop label VITIS_LOOP_223_1:   [xilinx-label-all-loops]
+ for (int y = 0; y < th_eff; ++y) {
+ ^~~
+ VITIS_LOOP_223_1: 
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:504:2: note: FIX-IT applied suggested code changes
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:506:2: warning: Added loop label VITIS_LOOP_225_2:   [xilinx-label-all-loops]
+ for (int x = 0; x < tw_eff; ++x) {
+ ^~~
+ VITIS_LOOP_225_2: 
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:506:2: note: FIX-IT applied suggested code changes
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:561:46: error: Invalid Directive: for current device, ram_1p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=inbuf type=ram_1p impl=bram
+                                             ^
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:562:47: error: Invalid Directive: for current device, ram_1p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=outbuf type=ram_1p impl=bram
+                                              ^
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:574:9: error: Resource with core_name: RAM_1P_LUTRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
+#pragma HLS RESOURCE variable=w1_loc core=RAM_1P_LUTRAM
+        ^
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:579:47: error: Invalid Directive: for current device, ram_1p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=w2_loc type=ram_1p impl=bram
+                                              ^
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:584:47: error: Invalid Directive: for current device, ram_1p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=w3_loc type=ram_1p impl=bram
+                                              ^
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:592:9: error: Resource with core_name: RAM_1P_LUTRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
+#pragma HLS RESOURCE variable=b1_loc core=RAM_1P_LUTRAM
+        ^
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:593:9: error: Resource with core_name: RAM_1P_LUTRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
+#pragma HLS RESOURCE variable=b2_loc core=RAM_1P_LUTRAM
+        ^
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:594:9: error: Resource with core_name: RAM_1P_LUTRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
+#pragma HLS RESOURCE variable=b3_loc core=RAM_1P_LUTRAM
+        ^
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:610:3: warning: Added loop label VITIS_LOOP_344_1:   [xilinx-label-all-loops]
+  for (int c1=0;c1<64;++c1) {
+  ^~~
+  VITIS_LOOP_344_1: 
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:610:3: note: FIX-IT applied suggested code changes
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:612:5: warning: Added loop label VITIS_LOOP_346_2:   [xilinx-label-all-loops]
+    for (int ky=0;ky<9;++ky){
+    ^~~
+    VITIS_LOOP_346_2: 
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:612:5: note: FIX-IT applied suggested code changes
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:614:7: warning: Added loop label VITIS_LOOP_348_3:   [xilinx-label-all-loops]
+      for (int kx=0;kx<9;++kx){
+      ^~~
+      VITIS_LOOP_348_3: 
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:614:7: note: FIX-IT applied suggested code changes
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:622:5: warning: Added loop label VITIS_LOOP_356_4:   [xilinx-label-all-loops]
+    for (int c2=0;c2<32;++c2) {
+    ^~~
+    VITIS_LOOP_356_4: 
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:622:5: note: FIX-IT applied suggested code changes
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:625:9: warning: Added loop label VITIS_LOOP_359_5:   [xilinx-label-all-loops]
+        for (int i2=0; i2<64;++i2) {
+        ^~~
+        VITIS_LOOP_359_5: 
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:625:9: note: FIX-IT applied suggested code changes
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:626:13: warning: Added loop label VITIS_LOOP_360_6:   [xilinx-label-all-loops]
+            for (int ky=0;ky<1;++ky){
+            ^~~
+            VITIS_LOOP_360_6: 
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:626:13: note: FIX-IT applied suggested code changes
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:628:17: warning: Added loop label VITIS_LOOP_362_7:   [xilinx-label-all-loops]
+                for (int kx=0;kx<1;++kx){
+                ^~~
+                VITIS_LOOP_362_7: 
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:628:17: note: FIX-IT applied suggested code changes
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:640:5: warning: Added loop label VITIS_LOOP_374_8:   [xilinx-label-all-loops]
+    for (int i3=0; i3<32;++i3) {
+    ^~~
+    VITIS_LOOP_374_8: 
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:640:5: note: FIX-IT applied suggested code changes
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:641:9: warning: Added loop label VITIS_LOOP_375_9:   [xilinx-label-all-loops]
+        for (int ky=0;ky<5;++ky){
+        ^~~
+        VITIS_LOOP_375_9: 
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:641:9: note: FIX-IT applied suggested code changes
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:643:13: warning: Added loop label VITIS_LOOP_377_10:   [xilinx-label-all-loops]
+            for (int kx=0;kx<5;++kx){
+            ^~~
+            VITIS_LOOP_377_10: 
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:643:13: note: FIX-IT applied suggested code changes
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:664:3: warning: Added loop label VITIS_LOOP_398_11:   [xilinx-label-all-loops]
+  for (int h0 = 0; h0 < 255; h0 += 16) {
+  ^~~
+  VITIS_LOOP_398_11: 
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:664:3: note: FIX-IT applied suggested code changes
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:666:5: warning: Added loop label VITIS_LOOP_400_12:   [xilinx-label-all-loops]
+    for (int w0 = 0; w0 < 255; w0 += 16) {
+    ^~~
+    VITIS_LOOP_400_12: 
+C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:666:5: note: FIX-IT applied suggested code changes

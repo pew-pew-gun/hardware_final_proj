@@ -1,0 +1,72 @@
+% [A0,m0] = imread("butterfly_3x_CONV1_flp.bin", 'bin');
+% [A1,m1] = imread("butterfly_3x_GR_flp.bin", 'bin');
+% [A2,m2] = imread("butterfly_3x_GT_u8.bin", 'bin');
+% [A3,m3] = imread("butterfly_3x_LR_u8.bin", 'bin');
+
+% imwrite(A0,m0,"butterfly_3x_CONV1_flp.png")
+% imwrite(A1,m1,"butterfly_3x_GR_flp.png")
+% imwrite(A2,m2,"butterfly_3x_GT_u8.png")
+% imwrite(A3,m3,"butterfly_3x_LR_u8.png")
+
+% Golden Reference for conv1
+figure(1); hold on;
+fid = fopen('butterfly_3x_CONV1_flp.bin','r');
+img = fread(fid, [255, 255], 'float32', 0, 'l'); % 'l' little-endian
+fclose(fid);
+img = img';                 % transpose (MATLAB reads column-major)
+imagesc(img)                % imagesc() automatically rescales Y values
+colormap gray; axis image off; colorbar
+hold off;
+
+% Golden Reference for SRCNN
+figure(2); hold on;
+fid = fopen('butterfly_3x_GR_flp.bin','r');
+img = fread(fid, [255, 255], 'float32', 0, 'l'); % 'l' little-endian
+fclose(fid);
+img = img';                  % transpose (MATLAB reads column-major)
+imagesc(img)                % imagesc() automatically rescales Y values
+colormap gray; axis image off; colorbar
+hold off;
+% img = img .* 255
+
+% I think this is the Super Resolution Golden Reference? idk
+% Or maybe it's the bicubic baseline?
+figure(3); hold on;
+fid = fopen('butterfly_3x_GT_u8.bin','r');
+img = fread(fid, [255, 255], 'uint8', 0, 'l'); % 'l' little-endian
+fclose(fid);
+img = img';                  % transpose (MATLAB reads column-major)
+imagesc(img)                % imagesc() automatically rescales Y values
+colormap gray; axis image off; colorbar
+hold off;
+
+% Input LR image for SRCNN
+figure(4); hold on;
+fid = fopen('butterfly_3x_LR_u8.bin','r');
+img = fread(fid, [255, 255], 'uint8', 0, 'l'); % 'l' little-endian
+fclose(fid);
+img = img';                 % transpose (MATLAB reads column-major)
+imagesc(img)                % imagesc() automatically rescales Y values
+colormap gray; axis image off; colorbar
+hold off;
+
+
+% Golden Reference SRCNN
+figure(5); hold on;
+fid = fopen('SRCNN_GR.bin','r');
+img = fread(fid, [255, 255], 'float32', 0, 'l'); % 'l' little-endian
+fclose(fid);
+img = img';                  % transpose (MATLAB reads column-major)
+imagesc(img)                % imagesc() automatically rescales Y values
+colormap gray; axis image off; colorbar
+hold off;
+
+% SRCNN Output
+figure(6); hold on;
+fid = fopen('SRCNN_output.bin','r');
+img = fread(fid, [255, 255], 'float32', 0, 'l'); % 'l' little-endian
+fclose(fid);
+img = img';                 % transpose (MATLAB reads column-major)
+imagesc(img)                % imagesc() automatically rescales Y values
+colormap gray; axis image off; colorbar
+hold off;

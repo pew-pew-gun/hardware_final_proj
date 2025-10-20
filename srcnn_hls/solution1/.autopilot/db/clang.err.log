@@ -1,0 +1,13 @@
+src/srcnn.cpp:301:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+#pragma HLS RESOURCE variable=w1_loc core=RAM_1P_LUTRAM
+        ^
+src/srcnn.cpp:319:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+#pragma HLS RESOURCE variable=b1_loc core=RAM_1P_LUTRAM
+        ^
+src/srcnn.cpp:320:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+#pragma HLS RESOURCE variable=b2_loc core=RAM_1P_LUTRAM
+        ^
+src/srcnn.cpp:321:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+#pragma HLS RESOURCE variable=b3_loc core=RAM_1P_LUTRAM
+        ^
+4 warnings generated.

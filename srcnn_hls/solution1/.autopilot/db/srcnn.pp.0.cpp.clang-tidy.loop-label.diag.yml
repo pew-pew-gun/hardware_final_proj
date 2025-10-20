@@ -1,0 +1,337 @@
+---
+MainSourceFile:  'C:/Users/redre/Desktop/Hardware_Accelerated_Computing/FinalProject/golden/srcnn_hls/solution1/.autopilot/db/srcnn.pp.0.cpp'
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_40_1:  '
+    FileOffset:      40
+    FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\src\srcnn.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
+        Offset:          14666
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_40_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_48_2:  '
+    FileOffset:      48
+    FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\src\srcnn.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
+        Offset:          14842
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_48_2: '
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      75
+    FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\src\srcnn.cpp'
+    Replacements:    
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_103_1:  '
+    FileOffset:      103
+    FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\src\srcnn.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
+        Offset:          16015
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_103_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_106_2:  '
+    FileOffset:      106
+    FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\src\srcnn.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
+        Offset:          16097
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_106_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_114_3:  '
+    FileOffset:      114
+    FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\src\srcnn.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
+        Offset:          16335
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_114_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_120_4:  '
+    FileOffset:      120
+    FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\src\srcnn.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
+        Offset:          16438
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_120_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_126_5:  '
+    FileOffset:      126
+    FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\src\srcnn.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
+        Offset:          16517
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_126_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_129_6:  '
+    FileOffset:      129
+    FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\src\srcnn.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
+        Offset:          16564
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_129_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_139_7:  '
+    FileOffset:      139
+    FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\src\srcnn.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
+        Offset:          16888
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_139_7: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_147_8:  '
+    FileOffset:      147
+    FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\src\srcnn.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
+        Offset:          17094
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_147_8: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_157_9:  '
+    FileOffset:      157
+    FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\src\srcnn.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
+        Offset:          17292
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_157_9: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_160_10:  '
+    FileOffset:      160
+    FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\src\srcnn.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
+        Offset:          17356
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_160_10: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_170_11:  '
+    FileOffset:      170
+    FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\src\srcnn.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
+        Offset:          17626
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_170_11: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_178_12:  '
+    FileOffset:      178
+    FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\src\srcnn.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
+        Offset:          17790
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_178_12: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_180_13:  '
+    FileOffset:      180
+    FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\src\srcnn.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
+        Offset:          17853
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_180_13: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_193_14:  '
+    FileOffset:      193
+    FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\src\srcnn.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
+        Offset:          18188
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_193_14: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_195_15:  '
+    FileOffset:      195
+    FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\src\srcnn.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
+        Offset:          18251
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_195_15: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_197_16:  '
+    FileOffset:      197
+    FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\src\srcnn.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
+        Offset:          18299
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_197_16: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_223_1:  '
+    FileOffset:      223
+    FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\src\srcnn.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
+        Offset:          18834
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_223_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_225_2:  '
+    FileOffset:      225
+    FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\src\srcnn.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
+        Offset:          18891
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_225_2: '
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ram_1p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      280
+    FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\src\srcnn.cpp'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ram_1p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      281
+    FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\src\srcnn.cpp'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Resource with core_name: RAM_1P_LUTRAM pragma is ignored, because this core doesn''t exist at all '
+    FileOffset:      301
+    FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\src\srcnn.cpp'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ram_1p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      306
+    FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\src\srcnn.cpp'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ram_1p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      311
+    FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\src\srcnn.cpp'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Resource with core_name: RAM_1P_LUTRAM pragma is ignored, because this core doesn''t exist at all '
+    FileOffset:      319
+    FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\src\srcnn.cpp'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Resource with core_name: RAM_1P_LUTRAM pragma is ignored, because this core doesn''t exist at all '
+    FileOffset:      320
+    FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\src\srcnn.cpp'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Resource with core_name: RAM_1P_LUTRAM pragma is ignored, because this core doesn''t exist at all '
+    FileOffset:      321
+    FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\src\srcnn.cpp'
+    Replacements:    
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_344_1:  '
+    FileOffset:      344
+    FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\src\srcnn.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
+        Offset:          22351
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_344_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_346_2:  '
+    FileOffset:      346
+    FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\src\srcnn.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
+        Offset:          22418
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_346_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_348_3:  '
+    FileOffset:      348
+    FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\src\srcnn.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
+        Offset:          22451
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_348_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_356_4:  '
+    FileOffset:      356
+    FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\src\srcnn.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
+        Offset:          22564
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_356_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_359_5:  '
+    FileOffset:      359
+    FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\src\srcnn.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
+        Offset:          22657
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_359_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_360_6:  '
+    FileOffset:      360
+    FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\src\srcnn.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
+        Offset:          22698
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_360_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_362_7:  '
+    FileOffset:      362
+    FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\src\srcnn.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
+        Offset:          22741
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_362_7: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_374_8:  '
+    FileOffset:      374
+    FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\src\srcnn.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
+        Offset:          22933
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_374_8: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_375_9:  '
+    FileOffset:      375
+    FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\src\srcnn.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
+        Offset:          22970
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_375_9: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_377_10:  '
+    FileOffset:      377
+    FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\src\srcnn.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
+        Offset:          23009
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_377_10: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_398_11:  '
+    FileOffset:      398
+    FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\src\srcnn.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
+        Offset:          23410
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_398_11: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_400_12:  '
+    FileOffset:      400
+    FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\src\srcnn.cpp'
+    Replacements:    
+      - FilePath:        'C:\Users\redre\Desktop\Hardware_Accelerated_Computing\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
+        Offset:          23512
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_400_12: '
+...
