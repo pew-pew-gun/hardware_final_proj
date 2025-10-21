@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'srcnn_Pipeline_CopyW1_ky_CopyW1_kx'
 ================================================================
-* Date:           Tue Oct 21 03:22:09 2025
+* Date:           Tue Oct 21 05:58:34 2025
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -92,23 +92,23 @@
     +---------------------------+----------+----+---+----+------------+------------+
     |       Variable Name       | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +---------------------------+----------+----+---+----+------------+------------+
-    |add_ln467_1_fu_236_p2      |         +|   0|  0|  14|           7|           1|
-    |add_ln467_fu_245_p2        |         +|   0|  0|  12|           4|           1|
-    |add_ln470_1_fu_365_p2      |         +|   0|  0|  12|           4|           1|
-    |add_ln470_2_fu_285_p2      |         +|   0|  0|  14|           7|           7|
-    |add_ln470_fu_224_p2        |         +|   0|  0|  14|           7|           7|
-    |add_ln472_1_fu_349_p2      |         +|   0|  0|  63|          63|          63|
-    |add_ln472_2_fu_339_p2      |         +|   0|  0|  15|           8|           8|
-    |add_ln472_4_fu_397_p2      |         +|   0|  0|  18|          11|          11|
-    |add_ln472_5_fu_417_p2      |         +|   0|  0|  17|          11|          11|
-    |add_ln472_fu_333_p2        |         +|   0|  0|  63|          63|          63|
-    |sub_ln472_fu_408_p2        |         -|   0|  0|  17|          11|          11|
-    |icmp_ln467_fu_230_p2       |      icmp|   0|  0|  14|           7|           7|
-    |icmp_ln470_fu_251_p2       |      icmp|   0|  0|  12|           4|           4|
+    |add_ln472_1_fu_236_p2      |         +|   0|  0|  14|           7|           1|
+    |add_ln472_fu_245_p2        |         +|   0|  0|  12|           4|           1|
+    |add_ln475_1_fu_365_p2      |         +|   0|  0|  12|           4|           1|
+    |add_ln475_2_fu_285_p2      |         +|   0|  0|  14|           7|           7|
+    |add_ln475_fu_224_p2        |         +|   0|  0|  14|           7|           7|
+    |add_ln477_1_fu_349_p2      |         +|   0|  0|  63|          63|          63|
+    |add_ln477_2_fu_339_p2      |         +|   0|  0|  15|           8|           8|
+    |add_ln477_4_fu_397_p2      |         +|   0|  0|  18|          11|          11|
+    |add_ln477_5_fu_417_p2      |         +|   0|  0|  17|          11|          11|
+    |add_ln477_fu_333_p2        |         +|   0|  0|  63|          63|          63|
+    |sub_ln477_fu_408_p2        |         -|   0|  0|  17|          11|          11|
+    |icmp_ln472_fu_230_p2       |      icmp|   0|  0|  14|           7|           7|
+    |icmp_ln475_fu_251_p2       |      icmp|   0|  0|  12|           4|           4|
     |ap_block_pp0_stage0_11001  |        or|   0|  0|   2|           1|           1|
-    |select_ln467_1_fu_269_p3   |    select|   0|  0|   4|           1|           4|
-    |select_ln467_2_fu_291_p3   |    select|   0|  0|   7|           1|           7|
-    |select_ln467_fu_257_p3     |    select|   0|  0|   4|           1|           1|
+    |select_ln472_1_fu_269_p3   |    select|   0|  0|   4|           1|           4|
+    |select_ln472_2_fu_291_p3   |    select|   0|  0|   7|           1|           7|
+    |select_ln472_fu_257_p3     |    select|   0|  0|   4|           1|           1|
     |ap_enable_pp0              |       xor|   0|  0|   2|           1|           2|
     +---------------------------+----------+----+---+----+------------+------------+
     |Total                      |          |   0|  0| 304|         212|         210|
@@ -157,17 +157,17 @@
     |ap_loop_exit_ready_pp0_iter7_reg  |   1|   0|    1|          0|
     |ap_loop_exit_ready_pp0_iter8_reg  |   1|   0|    1|          0|
     |ap_loop_exit_ready_pp0_iter9_reg  |   1|   0|    1|          0|
-    |bitcast_ln472_reg_485             |  32|   0|   32|          0|
+    |bitcast_ln477_reg_485             |  32|   0|   32|          0|
     |gmem_w1_addr_reg_475              |  64|   0|   64|          0|
     |indvar_flatten_fu_110             |   7|   0|    7|          0|
     |kx_fu_102                         |   4|   0|    4|          0|
     |ky_fu_106                         |   4|   0|    4|          0|
-    |select_ln467_1_reg_465            |   4|   0|    4|          0|
+    |select_ln472_1_reg_465            |   4|   0|    4|          0|
     |tmp_reg_470                       |   3|   0|    3|          0|
-    |trunc_ln470_reg_481               |   2|   0|    2|          0|
-    |select_ln467_1_reg_465            |  64|  32|    4|          0|
+    |trunc_ln475_reg_481               |   2|   0|    2|          0|
+    |select_ln472_1_reg_465            |  64|  32|    4|          0|
     |tmp_reg_470                       |  64|  32|    3|          0|
-    |trunc_ln470_reg_481               |  64|  32|    2|          0|
+    |trunc_ln475_reg_481               |  64|  32|    2|          0|
     +----------------------------------+----+----+-----+-----------+
     |Total                             | 333|  96|  150|          0|
     +----------------------------------+----+----+-----+-----------+
@@ -233,9 +233,9 @@
 |m_axi_gmem_w1_BRESP                                               |   in|    2|       m_axi|                                                  gmem_w1|       pointer|
 |m_axi_gmem_w1_BID                                                 |   in|    1|       m_axi|                                                  gmem_w1|       pointer|
 |m_axi_gmem_w1_BUSER                                               |   in|    1|       m_axi|                                                  gmem_w1|       pointer|
-|add_ln472_3                                                       |   in|   11|     ap_none|                                              add_ln472_3|        scalar|
-|sext_ln463                                                        |   in|   62|     ap_none|                                               sext_ln463|        scalar|
-|zext_ln463_3                                                      |   in|   13|     ap_none|                                             zext_ln463_3|        scalar|
+|add_ln477_3                                                       |   in|   11|     ap_none|                                              add_ln477_3|        scalar|
+|sext_ln468                                                        |   in|   62|     ap_none|                                               sext_ln468|        scalar|
+|zext_ln468_3                                                      |   in|   13|     ap_none|                                             zext_ln468_3|        scalar|
 |srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10_address0  |  out|   11|   ap_memory|  srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10|         array|
 |srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10_ce0       |  out|    1|   ap_memory|  srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10|         array|
 |srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10_we0       |  out|    1|   ap_memory|  srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10|         array|

@@ -1,9 +1,9 @@
 {
   "0": {
     "basicblocks": 41,
-    "calls": "1 3 4",
+    "calls": "4 2 1",
     "file": "srcnn.cpp",
-    "fileloc": 346,
+    "fileloc": 351,
     "instructions": 191,
     "loads": {
       "G": 1,
@@ -13,38 +13,29 @@
     "stores": {
       "G": 7
     },
-    "total_instructions": 2796
+    "total_instructions": 2794
   },
   "1": {
-    "basicblocks": 18,
+    "basicblocks": 11,
     "calls": "",
     "file": "srcnn.cpp",
-    "fileloc": 29,
-    "instructions": 55,
+    "fileloc": 329,
+    "instructions": 33,
     "loads": {
       "L": 1
     },
-    "name": "load_tile_mm",
+    "name": "store_tile_mm",
     "stores": {
       "L": 1
     },
-    "total_instructions": 55
+    "total_instructions": 33
   },
   "2": {
-    "basicblocks": 7,
-    "calls": "",
+    "basicblocks": 101,
+    "calls": "3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3",
     "file": "srcnn.cpp",
-    "fileloc": 24,
-    "instructions": 11,
-    "name": "clampi",
-    "total_instructions": 11
-  },
-  "3": {
-    "basicblocks": 100,
-    "calls": "2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2",
-    "file": "srcnn.cpp",
-    "fileloc": 68,
-    "instructions": 1969,
+    "fileloc": 69,
+    "instructions": 1967,
     "loads": {
       "G": 52,
       "L": 318
@@ -53,21 +44,30 @@
     "stores": {
       "L": 297
     },
-    "total_instructions": 2519
+    "total_instructions": 2517
   },
-  "4": {
-    "basicblocks": 10,
+  "3": {
+    "basicblocks": 7,
     "calls": "",
     "file": "srcnn.cpp",
-    "fileloc": 324,
-    "instructions": 31,
+    "fileloc": 24,
+    "instructions": 11,
+    "name": "clampi",
+    "total_instructions": 11
+  },
+  "4": {
+    "basicblocks": 19,
+    "calls": "",
+    "file": "srcnn.cpp",
+    "fileloc": 29,
+    "instructions": 53,
     "loads": {
       "L": 1
     },
-    "name": "store_tile_mm",
+    "name": "load_tile_mm",
     "stores": {
       "L": 1
     },
-    "total_instructions": 31
+    "total_instructions": 53
   }
 }

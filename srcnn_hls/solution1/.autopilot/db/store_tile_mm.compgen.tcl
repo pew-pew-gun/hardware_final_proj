@@ -1,42 +1,8 @@
 # This script segment is generated automatically by AutoPilot
 
+set name srcnn_mul_8ns_8ns_16_1_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler srcnn_fifo_w9_d3_S BINDTYPE {storage} TYPE {fifo} IMPL {srl} ALLOW_PRAGMA 1 INSTNAME {tmp_1_U}
-}
-
-
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler srcnn_fifo_w9_d2_S_x0 BINDTYPE {storage} TYPE {fifo} IMPL {srl} ALLOW_PRAGMA 1 INSTNAME {tmp_2_U}
-}
-
-
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler srcnn_fifo_w9_d2_S_x0 BINDTYPE {storage} TYPE {fifo} IMPL {srl} ALLOW_PRAGMA 1 INSTNAME {tmp_3_U}
-}
-
-
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler srcnn_fifo_w9_d3_S BINDTYPE {storage} TYPE {fifo} IMPL {srl} ALLOW_PRAGMA 1 INSTNAME {tmp_4_U}
-}
-
-
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler srcnn_fifo_w64_d2_S_x0 BINDTYPE {storage} TYPE {fifo} IMPL {srl} ALLOW_PRAGMA 1 INSTNAME {out_tile_offset_cast_loc_i_i_channel_U}
-}
-
-
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler srcnn_fifo_w10_d2_S_x0 BINDTYPE {storage} TYPE {fifo} IMPL {srl} ALLOW_PRAGMA 1 INSTNAME {h0_cast6_loc_i_i_channel_U}
-}
-
-
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler srcnn_fifo_w64_d2_S_x0 BINDTYPE {storage} TYPE {fifo} IMPL {srl} ALLOW_PRAGMA 1 INSTNAME {shl_ln333_cast_loc_i_i_channel_U}
-}
-
-
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler srcnn_fifo_w32_d2_S_x BINDTYPE {storage} TYPE {fifo} IMPL {srl} ALLOW_PRAGMA 1 INSTNAME {p_cast_loc_i_i_channel_U}
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 0 ALLOW_PRAGMA 1
 }
 
 
@@ -51,14 +17,14 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 2354 \
+    id 1966 \
     name outbuf \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename outbuf \
     op interface \
-    ports { outbuf_address0 { O 9 vector } outbuf_ce0 { O 1 bit } outbuf_d0 { O 32 vector } outbuf_q0 { I 32 vector } outbuf_we0 { O 1 bit } } \
+    ports { outbuf_address0 { O 9 vector } outbuf_ce0 { O 1 bit } outbuf_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'outbuf'"
@@ -69,22 +35,22 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 2349 \
-    name phase \
-    type fifo \
+    id 1961 \
+    name p_read \
+    type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_phase \
+    corename dc_p_read \
     op interface \
-    ports { phase_dout { I 1 vector } phase_empty_n { I 1 bit } phase_read { O 1 bit } } \
+    ports { p_read { I 1 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 2350 \
+    id 1962 \
     name gmem_out \
     type other \
     dir O \
@@ -99,7 +65,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 2351 \
+    id 1963 \
     name output_ftmap \
     type fifo \
     dir I \
@@ -107,37 +73,37 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_output_ftmap \
     op interface \
-    ports { output_ftmap_dout { I 64 vector } output_ftmap_empty_n { I 1 bit } output_ftmap_read { O 1 bit } } \
+    ports { output_ftmap_dout { I 64 vector } output_ftmap_num_data_valid { I 3 vector } output_ftmap_fifo_cap { I 3 vector } output_ftmap_empty_n { I 1 bit } output_ftmap_read { O 1 bit } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 2352 \
-    name h0 \
-    type fifo \
+    id 1964 \
+    name p_read1 \
+    type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_h0 \
+    corename dc_p_read1 \
     op interface \
-    ports { h0_dout { I 9 vector } h0_empty_n { I 1 bit } h0_read { O 1 bit } } \
+    ports { p_read1 { I 9 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 2353 \
-    name w0 \
-    type fifo \
+    id 1965 \
+    name p_read2 \
+    type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_w0 \
+    corename dc_p_read2 \
     op interface \
-    ports { w0_dout { I 8 vector } w0_empty_n { I 1 bit } w0_read { O 1 bit } } \
+    ports { p_read2 { I 9 vector } } \
 } "
 }
 

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'compute_tile'" level="0">
-<item name = "Date">Tue Oct 21 03:22:05 2025
+<item name = "Date">Tue Oct 21 05:58:30 2025
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -24,19 +24,30 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">?, ?, ?, ?, ?, ?, dataflow</column>
+<column name="">95817, 417915149, 0.958 ms, 4.179 sec, 95817, 417915149, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="call_ret_compute_tile_Block_entry87_proc_fu_678">compute_tile_Block_entry87_proc, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
-<column name="grp_compute_tile_Loop_ITRowcomp_proc_fu_696">compute_tile_Loop_ITRowcomp_proc, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_compute_tile_Pipeline_Conv2Out_biases_fu_3255">compute_tile_Pipeline_Conv2Out_biases, 6, 6, 60.000 ns, 60.000 ns, 6, 6, no</column>
+<column name="grp_compute_tile_Pipeline_Conv1_ky_fu_3299">compute_tile_Pipeline_Conv1_ky, 37, 37, 0.370 us, 0.370 us, 37, 37, no</column>
+<column name="grp_compute_tile_Pipeline_Conv2_ReLU_fu_3338">compute_tile_Pipeline_Conv2_ReLU, 7, 7, 70.000 ns, 70.000 ns, 7, 7, no</column>
+<column name="grp_compute_tile_Pipeline_Conv2_dot32_fu_3358">compute_tile_Pipeline_Conv2_dot32, 13, 13, 0.130 us, 0.130 us, 13, 13, no</column>
+<column name="grp_compute_tile_Pipeline_Shift_win32_fu_3388">compute_tile_Pipeline_Shift_win32, 6, 6, 60.000 ns, 60.000 ns, 6, 6, no</column>
+<column name="grp_compute_tile_Pipeline_Update_linebuf32_fu_3634">compute_tile_Pipeline_Update_linebuf32, 6, 6, 60.000 ns, 60.000 ns, 6, 6, no</column>
+<column name="grp_compute_tile_Pipeline_Conv3_inputft_fu_3680">compute_tile_Pipeline_Conv3_inputft, 105, 105, 1.050 us, 1.050 us, 105, 105, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- ITRowcomp">95816, 417915148, 23954 ~ 1613572, -, -, 4 ~ 259, no</column>
+<column name=" + ITColcomp">23952, 1613570, 5988 ~ 6230, -, -, 4 ~ 259, no</column>
+<column name="  ++ Conv1_outftmaps">5888, 5888, 92, -, -, 64, no</column>
+<column name="   +++ acc1">36, 36, 4, -, -, 9, no</column>
+<column name="  ++ acc3row">135, 135, 27, -, -, 5, no</column>
+<column name="   +++ acc3col">25, 25, 5, -, -, 5, no</column>
 </table>
 </item>
 </section>

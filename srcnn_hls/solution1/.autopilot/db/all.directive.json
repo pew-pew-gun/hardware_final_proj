@@ -16,7 +16,7 @@
       ]
     },
     "slx": false,
-    "sourceFile": "C:/Users/redre/Desktop/Hardware_Accelerated_Computing/FinalProject/golden/srcnn_hls/solution1/directives.tcl",
+    "sourceFile": "C:/Users/redre/Desktop/HAC/FinalProject/golden/srcnn_hls/solution1/directives.tcl",
     "sourceLine": 7,
     "success": true
   },
@@ -37,7 +37,7 @@
       ]
     },
     "slx": false,
-    "sourceFile": "C:/Users/redre/Desktop/Hardware_Accelerated_Computing/FinalProject/golden/srcnn_hls/solution1/csynth.tcl",
+    "sourceFile": "C:/Users/redre/Desktop/HAC/FinalProject/golden/srcnn_hls/solution1/csynth.tcl",
     "sourceLine": 27,
     "success": true
   }

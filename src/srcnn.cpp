@@ -32,7 +32,7 @@ static void load_tile_mm(
   ftmap_t in_tile[TH + 2*R_TOTAL][TW + 2*R_TOTAL] )
 {
 #pragma HLS INLINE off
-#pragma HLS DATAFLOW
+//#pragma HLS DATAFLOW
 
     const int PH = th_eff + 2*R_TOTAL;
     const int PW = tw_eff + 2*R_TOTAL;
@@ -42,6 +42,7 @@ static void load_tile_mm(
     InputTileHread:
     for (int py = 0; py < PH; ++py) {
 //    #pragma HLS PIPELINE
+//#pragma HLS DATAFLOW
 
         // int iy = clampi(h0 + py - R_TOTAL, 0, H - 1);  
         int iy = h0 + py - R_TOTAL;
@@ -75,7 +76,7 @@ static void compute_tile(
   int h0, int w0, int th_eff, int tw_eff )
 {
 #pragma HLS INLINE off
-#pragma HLS DATAFLOW
+//#pragma HLS DATAFLOW
 
   // ---- buffers for the 5x5 stage (per tile) ----
   ftmap_t linebuf[N2][F3-1][TW + 2*R3];
@@ -128,7 +129,7 @@ static void compute_tile(
       // For each conv1 output channel c1:
       Conv1_outftmaps:
       for (int c1 = 0; c1 < N1; ++c1) { // N1 = 64 conv1 channels
-
+//#pragma HLS DATAFLOW
 
     	/************** This method introduces a true loop-carried dependency
     	 * - must refactor with F1 interleaved accumulators
@@ -284,6 +285,7 @@ static void compute_tile(
 
             Conv3_inputft:
             for (int n2 = 0; n2 < N2; ++n2) { // for each conv2 output ftmap
+//#pragma HLS DATAFLOW
 #pragma HLS PIPELINE II=3
           	Conv3_ky:
               for (int ky = 0; ky < F3; ++ky) {
@@ -329,7 +331,7 @@ static void store_tile_mm(
   ftmap_t out[N3][H][W],
   int h0, int w0, int th_eff, int tw_eff )
 {
-#pragma HLS DATAFLOW
+//#pragma HLS DATAFLOW
 #pragma HLS INLINE off
 //#pragma HLS PIPELINE
 	Out_writey:

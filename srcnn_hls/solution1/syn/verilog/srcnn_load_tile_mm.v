@@ -7,6 +7,13 @@
 `timescale 1 ns / 1 ps 
 
 module srcnn_load_tile_mm (
+        ap_clk,
+        ap_rst,
+        ap_start,
+        ap_done,
+        ap_continue,
+        ap_idle,
+        ap_ready,
         m_axi_gmem_in_AWVALID,
         m_axi_gmem_in_AWREADY,
         m_axi_gmem_in_AWADDR,
@@ -57,50 +64,37 @@ module srcnn_load_tile_mm (
         h0,
         w0,
         phase,
-        h0_c1_din,
-        h0_c1_full_n,
-        h0_c1_write,
-        w0_c2_din,
-        w0_c2_full_n,
-        w0_c2_write,
-        phase_c3_din,
-        phase_c3_full_n,
-        phase_c3_write,
         srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_address0,
         srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_ce0,
-        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_d0,
-        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_q0,
         srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_we0,
+        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_d0,
         srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_address0,
         srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_ce0,
-        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_d0,
-        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_q0,
         srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_we0,
+        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_d0,
         srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_address0,
         srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_ce0,
-        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_d0,
-        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_q0,
         srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_we0,
-        ap_clk,
-        ap_rst,
-        phase_ap_vld,
-        w0_ap_vld,
-        h0_ap_vld,
-        ap_start,
-        input_ftmap_ap_vld,
-        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_full_n,
-        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_write,
-        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_full_n,
-        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_write,
-        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_full_n,
-        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_write,
-        ap_done,
-        ap_ready,
-        ap_idle,
-        ap_continue
+        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_d0,
+        ap_return_0,
+        ap_return_1,
+        ap_return_2
 );
 
+parameter    ap_ST_fsm_state1 = 6'd1;
+parameter    ap_ST_fsm_state2 = 6'd2;
+parameter    ap_ST_fsm_state3 = 6'd4;
+parameter    ap_ST_fsm_state4 = 6'd8;
+parameter    ap_ST_fsm_state5 = 6'd16;
+parameter    ap_ST_fsm_state6 = 6'd32;
 
+input   ap_clk;
+input   ap_rst;
+input   ap_start;
+output   ap_done;
+input   ap_continue;
+output   ap_idle;
+output   ap_ready;
 output   m_axi_gmem_in_AWVALID;
 input   m_axi_gmem_in_AWREADY;
 output  [63:0] m_axi_gmem_in_AWADDR;
@@ -151,256 +145,182 @@ input  [63:0] input_ftmap;
 input  [8:0] h0;
 input  [7:0] w0;
 input  [0:0] phase;
-output  [8:0] h0_c1_din;
-input   h0_c1_full_n;
-output   h0_c1_write;
-output  [7:0] w0_c2_din;
-input   w0_c2_full_n;
-output   w0_c2_write;
-output  [0:0] phase_c3_din;
-input   phase_c3_full_n;
-output   phase_c3_write;
 output  [9:0] srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_address0;
 output   srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_ce0;
-output  [31:0] srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_d0;
-input  [31:0] srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_q0;
 output   srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_we0;
+output  [31:0] srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_d0;
 output  [9:0] srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_address0;
 output   srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_ce0;
-output  [31:0] srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_d0;
-input  [31:0] srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_q0;
 output   srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_we0;
+output  [31:0] srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_d0;
 output  [9:0] srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_address0;
 output   srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_ce0;
-output  [31:0] srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_d0;
-input  [31:0] srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_q0;
 output   srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_we0;
-input   ap_clk;
-input   ap_rst;
-input   phase_ap_vld;
-input   w0_ap_vld;
-input   h0_ap_vld;
-input   ap_start;
-input   input_ftmap_ap_vld;
-input   srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_full_n;
-output   srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_write;
-input   srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_full_n;
-output   srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_write;
-input   srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_full_n;
-output   srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_write;
-output   ap_done;
-output   ap_ready;
-output   ap_idle;
-input   ap_continue;
+output  [31:0] srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_d0;
+output  [8:0] ap_return_0;
+output  [8:0] ap_return_1;
+output  [0:0] ap_return_2;
 
-wire    load_tile_mm_Block_entry38_proc_U0_ap_start;
-wire    load_tile_mm_Block_entry38_proc_U0_ap_done;
-wire    load_tile_mm_Block_entry38_proc_U0_ap_continue;
-wire    load_tile_mm_Block_entry38_proc_U0_ap_idle;
-wire    load_tile_mm_Block_entry38_proc_U0_ap_ready;
-wire   [8:0] load_tile_mm_Block_entry38_proc_U0_h0_c1_din;
-wire    load_tile_mm_Block_entry38_proc_U0_h0_c1_write;
-wire   [7:0] load_tile_mm_Block_entry38_proc_U0_w0_c2_din;
-wire    load_tile_mm_Block_entry38_proc_U0_w0_c2_write;
-wire   [0:0] load_tile_mm_Block_entry38_proc_U0_phase_c3_din;
-wire    load_tile_mm_Block_entry38_proc_U0_phase_c3_write;
-wire   [63:0] load_tile_mm_Block_entry38_proc_U0_ap_return_0;
-wire   [9:0] load_tile_mm_Block_entry38_proc_U0_ap_return_1;
-wire   [9:0] load_tile_mm_Block_entry38_proc_U0_ap_return_2;
-wire   [8:0] load_tile_mm_Block_entry38_proc_U0_ap_return_3;
-wire   [8:0] load_tile_mm_Block_entry38_proc_U0_ap_return_4;
-wire    ap_channel_done_sext_ln43_3_loc_i_channel;
-wire    sext_ln43_3_loc_i_channel_full_n;
-reg    ap_sync_reg_channel_write_sext_ln43_3_loc_i_channel;
-wire    ap_sync_channel_write_sext_ln43_3_loc_i_channel;
-wire    ap_channel_done_sext_ln43_1_loc_i_channel;
-wire    sext_ln43_1_loc_i_channel_full_n;
-reg    ap_sync_reg_channel_write_sext_ln43_1_loc_i_channel;
-wire    ap_sync_channel_write_sext_ln43_1_loc_i_channel;
-wire    ap_channel_done_h0_cast10_loc_i_channel;
-wire    h0_cast10_loc_i_channel_full_n;
-reg    ap_sync_reg_channel_write_h0_cast10_loc_i_channel;
-wire    ap_sync_channel_write_h0_cast10_loc_i_channel;
-wire    ap_channel_done_w0_cast19_loc_i_channel;
-wire    w0_cast19_loc_i_channel_full_n;
-reg    ap_sync_reg_channel_write_w0_cast19_loc_i_channel;
-wire    ap_sync_channel_write_w0_cast19_loc_i_channel;
-wire    ap_channel_done_in_tile_0_offset_cast_loc_i_channel;
-wire    in_tile_0_offset_cast_loc_i_channel_full_n;
-reg    ap_sync_reg_channel_write_in_tile_0_offset_cast_loc_i_channel;
-wire    ap_sync_channel_write_in_tile_0_offset_cast_loc_i_channel;
-wire    load_tile_mm_Loop_InputTileHread_proc_U0_ap_start;
-wire    load_tile_mm_Loop_InputTileHread_proc_U0_ap_done;
-wire    load_tile_mm_Loop_InputTileHread_proc_U0_ap_continue;
-wire    load_tile_mm_Loop_InputTileHread_proc_U0_ap_idle;
-wire    load_tile_mm_Loop_InputTileHread_proc_U0_ap_ready;
-wire    load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_AWVALID;
-wire   [63:0] load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_AWADDR;
-wire   [0:0] load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_AWID;
-wire   [31:0] load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_AWLEN;
-wire   [2:0] load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_AWSIZE;
-wire   [1:0] load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_AWBURST;
-wire   [1:0] load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_AWLOCK;
-wire   [3:0] load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_AWCACHE;
-wire   [2:0] load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_AWPROT;
-wire   [3:0] load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_AWQOS;
-wire   [3:0] load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_AWREGION;
-wire   [0:0] load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_AWUSER;
-wire    load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_WVALID;
-wire   [31:0] load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_WDATA;
-wire   [3:0] load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_WSTRB;
-wire    load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_WLAST;
-wire   [0:0] load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_WID;
-wire   [0:0] load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_WUSER;
-wire    load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_ARVALID;
-wire   [63:0] load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_ARADDR;
-wire   [0:0] load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_ARID;
-wire   [31:0] load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_ARLEN;
-wire   [2:0] load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_ARSIZE;
-wire   [1:0] load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_ARBURST;
-wire   [1:0] load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_ARLOCK;
-wire   [3:0] load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_ARCACHE;
-wire   [2:0] load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_ARPROT;
-wire   [3:0] load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_ARQOS;
-wire   [3:0] load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_ARREGION;
-wire   [0:0] load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_ARUSER;
-wire    load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_RREADY;
-wire    load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_BREADY;
-wire   [9:0] load_tile_mm_Loop_InputTileHread_proc_U0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_address0;
-wire    load_tile_mm_Loop_InputTileHread_proc_U0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_ce0;
-wire    load_tile_mm_Loop_InputTileHread_proc_U0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_we0;
-wire   [31:0] load_tile_mm_Loop_InputTileHread_proc_U0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_d0;
-wire   [9:0] load_tile_mm_Loop_InputTileHread_proc_U0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_address0;
-wire    load_tile_mm_Loop_InputTileHread_proc_U0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_ce0;
-wire    load_tile_mm_Loop_InputTileHread_proc_U0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_we0;
-wire   [31:0] load_tile_mm_Loop_InputTileHread_proc_U0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_d0;
-wire   [9:0] load_tile_mm_Loop_InputTileHread_proc_U0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_address0;
-wire    load_tile_mm_Loop_InputTileHread_proc_U0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_ce0;
-wire    load_tile_mm_Loop_InputTileHread_proc_U0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_we0;
-wire   [31:0] load_tile_mm_Loop_InputTileHread_proc_U0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_d0;
-wire    load_tile_mm_Loop_InputTileHread_proc_U0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_write;
-wire    load_tile_mm_Loop_InputTileHread_proc_U0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_write;
-wire    load_tile_mm_Loop_InputTileHread_proc_U0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_write;
-wire   [63:0] in_tile_0_offset_cast_loc_i_channel_dout;
-wire   [1:0] in_tile_0_offset_cast_loc_i_channel_num_data_valid;
-wire   [1:0] in_tile_0_offset_cast_loc_i_channel_fifo_cap;
-wire    in_tile_0_offset_cast_loc_i_channel_empty_n;
-wire   [9:0] w0_cast19_loc_i_channel_dout;
-wire   [1:0] w0_cast19_loc_i_channel_num_data_valid;
-wire   [1:0] w0_cast19_loc_i_channel_fifo_cap;
-wire    w0_cast19_loc_i_channel_empty_n;
-wire   [9:0] h0_cast10_loc_i_channel_dout;
-wire   [1:0] h0_cast10_loc_i_channel_num_data_valid;
-wire   [1:0] h0_cast10_loc_i_channel_fifo_cap;
-wire    h0_cast10_loc_i_channel_empty_n;
-wire   [8:0] sext_ln43_1_loc_i_channel_dout;
-wire   [1:0] sext_ln43_1_loc_i_channel_num_data_valid;
-wire   [1:0] sext_ln43_1_loc_i_channel_fifo_cap;
-wire    sext_ln43_1_loc_i_channel_empty_n;
-wire   [8:0] sext_ln43_3_loc_i_channel_dout;
-wire   [1:0] sext_ln43_3_loc_i_channel_num_data_valid;
-wire   [1:0] sext_ln43_3_loc_i_channel_fifo_cap;
-wire    sext_ln43_3_loc_i_channel_empty_n;
-wire    ap_sync_ready;
-reg    ap_sync_reg_load_tile_mm_Block_entry38_proc_U0_ap_ready;
-wire    ap_sync_load_tile_mm_Block_entry38_proc_U0_ap_ready;
-reg    ap_sync_reg_load_tile_mm_Loop_InputTileHread_proc_U0_ap_ready;
-wire    ap_sync_load_tile_mm_Loop_InputTileHread_proc_U0_ap_ready;
+reg ap_done;
+reg ap_idle;
+reg ap_ready;
+reg m_axi_gmem_in_ARVALID;
+reg m_axi_gmem_in_RREADY;
+reg[8:0] ap_return_0;
+reg[8:0] ap_return_1;
+reg[0:0] ap_return_2;
+
+reg    ap_done_reg;
+(* fsm_encoding = "none" *) reg   [5:0] ap_CS_fsm;
+wire    ap_CS_fsm_state1;
+reg    ap_block_state1;
+wire   [8:0] w0_cast2_fu_123_p1;
+reg   [8:0] w0_cast2_reg_282;
+wire   [8:0] add_ln43_fu_191_p2;
+reg   [8:0] add_ln43_reg_287;
+wire  signed [16:0] grp_fu_263_p3;
+reg   [16:0] mul_ln43_reg_297;
+wire    ap_CS_fsm_state4;
+wire    ap_CS_fsm_state5;
+wire   [2:0] select_ln60_fu_205_p3;
+reg   [2:0] select_ln60_reg_312;
+wire   [8:0] add_ln60_2_fu_230_p2;
+reg   [8:0] add_ln60_2_reg_317;
+wire   [9:0] add_ln48_fu_240_p2;
+reg   [9:0] add_ln48_reg_322;
+wire    grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_ap_start;
+wire    grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_ap_done;
+wire    grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_ap_idle;
+wire    grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_ap_ready;
+wire    grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_AWVALID;
+wire   [63:0] grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_AWADDR;
+wire   [0:0] grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_AWID;
+wire   [31:0] grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_AWLEN;
+wire   [2:0] grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_AWSIZE;
+wire   [1:0] grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_AWBURST;
+wire   [1:0] grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_AWLOCK;
+wire   [3:0] grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_AWCACHE;
+wire   [2:0] grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_AWPROT;
+wire   [3:0] grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_AWQOS;
+wire   [3:0] grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_AWREGION;
+wire   [0:0] grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_AWUSER;
+wire    grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_WVALID;
+wire   [31:0] grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_WDATA;
+wire   [3:0] grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_WSTRB;
+wire    grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_WLAST;
+wire   [0:0] grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_WID;
+wire   [0:0] grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_WUSER;
+wire    grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_ARVALID;
+wire   [63:0] grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_ARADDR;
+wire   [0:0] grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_ARID;
+wire   [31:0] grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_ARLEN;
+wire   [2:0] grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_ARSIZE;
+wire   [1:0] grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_ARBURST;
+wire   [1:0] grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_ARLOCK;
+wire   [3:0] grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_ARCACHE;
+wire   [2:0] grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_ARPROT;
+wire   [3:0] grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_ARQOS;
+wire   [3:0] grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_ARREGION;
+wire   [0:0] grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_ARUSER;
+wire    grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_RREADY;
+wire    grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_BREADY;
+wire   [9:0] grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_address0;
+wire    grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_ce0;
+wire    grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_we0;
+wire   [31:0] grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_d0;
+wire   [9:0] grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_address0;
+wire    grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_ce0;
+wire    grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_we0;
+wire   [31:0] grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_d0;
+wire   [9:0] grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_address0;
+wire    grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_ce0;
+wire    grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_we0;
+wire   [31:0] grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_d0;
+reg    grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_ap_start_reg;
+wire    ap_CS_fsm_state6;
+wire   [8:0] add_ln534_fu_127_p2;
+wire   [7:0] trunc_ln533_fu_141_p1;
+wire   [0:0] tmp_fu_133_p3;
+wire   [7:0] xor_ln534_fu_145_p2;
+wire   [8:0] add_ln537_fu_159_p2;
+wire   [0:0] tmp_7_fu_165_p3;
+wire   [7:0] xor_ln537_fu_173_p2;
+wire   [7:0] tw_eff_fu_179_p3;
+wire   [8:0] tw_eff_cast_fu_187_p1;
+wire   [7:0] th_eff_fu_151_p3;
+wire   [8:0] select_ln60_1_fu_214_p3;
+wire   [8:0] select_ln60_2_fu_222_p3;
+wire   [9:0] h0_cast10_i_fu_237_p1;
+wire   [7:0] grp_fu_263_p0;
+wire   [3:0] grp_fu_263_p1;
+wire   [8:0] grp_fu_263_p2;
+reg    grp_fu_263_ce;
+reg   [8:0] ap_return_0_preg;
+reg   [8:0] ap_return_1_preg;
+reg   [0:0] ap_return_2_preg;
+reg   [5:0] ap_NS_fsm;
+reg    ap_ST_fsm_state1_blk;
+wire    ap_ST_fsm_state2_blk;
+wire    ap_ST_fsm_state3_blk;
+wire    ap_ST_fsm_state4_blk;
+wire    ap_ST_fsm_state5_blk;
+reg    ap_ST_fsm_state6_blk;
+wire   [8:0] grp_fu_263_p00;
+wire   [16:0] grp_fu_263_p20;
 wire    ap_ce_reg;
 
 // power-on initialization
 initial begin
-#0 ap_sync_reg_channel_write_sext_ln43_3_loc_i_channel = 1'b0;
-#0 ap_sync_reg_channel_write_sext_ln43_1_loc_i_channel = 1'b0;
-#0 ap_sync_reg_channel_write_h0_cast10_loc_i_channel = 1'b0;
-#0 ap_sync_reg_channel_write_w0_cast19_loc_i_channel = 1'b0;
-#0 ap_sync_reg_channel_write_in_tile_0_offset_cast_loc_i_channel = 1'b0;
-#0 ap_sync_reg_load_tile_mm_Block_entry38_proc_U0_ap_ready = 1'b0;
-#0 ap_sync_reg_load_tile_mm_Loop_InputTileHread_proc_U0_ap_ready = 1'b0;
+#0 ap_done_reg = 1'b0;
+#0 ap_CS_fsm = 6'd1;
+#0 grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_ap_start_reg = 1'b0;
+#0 ap_return_0_preg = 9'd0;
+#0 ap_return_1_preg = 9'd0;
+#0 ap_return_2_preg = 1'd0;
 end
 
-srcnn_load_tile_mm_Block_entry38_proc load_tile_mm_Block_entry38_proc_U0(
+srcnn_load_tile_mm_Pipeline_InputTileHread_InputTileWread grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst),
-    .ap_start(load_tile_mm_Block_entry38_proc_U0_ap_start),
-    .ap_done(load_tile_mm_Block_entry38_proc_U0_ap_done),
-    .ap_continue(load_tile_mm_Block_entry38_proc_U0_ap_continue),
-    .ap_idle(load_tile_mm_Block_entry38_proc_U0_ap_idle),
-    .ap_ready(load_tile_mm_Block_entry38_proc_U0_ap_ready),
-    .phase(phase),
-    .w0(w0),
-    .h0(h0),
-    .h0_c1_din(load_tile_mm_Block_entry38_proc_U0_h0_c1_din),
-    .h0_c1_num_data_valid(2'd0),
-    .h0_c1_fifo_cap(2'd0),
-    .h0_c1_full_n(h0_c1_full_n),
-    .h0_c1_write(load_tile_mm_Block_entry38_proc_U0_h0_c1_write),
-    .w0_c2_din(load_tile_mm_Block_entry38_proc_U0_w0_c2_din),
-    .w0_c2_num_data_valid(2'd0),
-    .w0_c2_fifo_cap(2'd0),
-    .w0_c2_full_n(w0_c2_full_n),
-    .w0_c2_write(load_tile_mm_Block_entry38_proc_U0_w0_c2_write),
-    .phase_c3_din(load_tile_mm_Block_entry38_proc_U0_phase_c3_din),
-    .phase_c3_num_data_valid(2'd0),
-    .phase_c3_fifo_cap(2'd0),
-    .phase_c3_full_n(phase_c3_full_n),
-    .phase_c3_write(load_tile_mm_Block_entry38_proc_U0_phase_c3_write),
-    .ap_return_0(load_tile_mm_Block_entry38_proc_U0_ap_return_0),
-    .ap_return_1(load_tile_mm_Block_entry38_proc_U0_ap_return_1),
-    .ap_return_2(load_tile_mm_Block_entry38_proc_U0_ap_return_2),
-    .ap_return_3(load_tile_mm_Block_entry38_proc_U0_ap_return_3),
-    .ap_return_4(load_tile_mm_Block_entry38_proc_U0_ap_return_4)
-);
-
-srcnn_load_tile_mm_Loop_InputTileHread_proc load_tile_mm_Loop_InputTileHread_proc_U0(
-    .ap_clk(ap_clk),
-    .ap_rst(ap_rst),
-    .ap_start(load_tile_mm_Loop_InputTileHread_proc_U0_ap_start),
-    .ap_done(load_tile_mm_Loop_InputTileHread_proc_U0_ap_done),
-    .ap_continue(load_tile_mm_Loop_InputTileHread_proc_U0_ap_continue),
-    .ap_idle(load_tile_mm_Loop_InputTileHread_proc_U0_ap_idle),
-    .ap_ready(load_tile_mm_Loop_InputTileHread_proc_U0_ap_ready),
-    .p_read(in_tile_0_offset_cast_loc_i_channel_dout),
-    .p_read1(sext_ln43_1_loc_i_channel_dout),
-    .p_read2(sext_ln43_3_loc_i_channel_dout),
-    .p_read3(h0_cast10_loc_i_channel_dout),
-    .p_read4(w0_cast19_loc_i_channel_dout),
-    .in_r(input_ftmap),
-    .m_axi_gmem_in_AWVALID(load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_AWVALID),
+    .ap_start(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_ap_start),
+    .ap_done(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_ap_done),
+    .ap_idle(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_ap_idle),
+    .ap_ready(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_ap_ready),
+    .m_axi_gmem_in_AWVALID(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_AWVALID),
     .m_axi_gmem_in_AWREADY(1'b0),
-    .m_axi_gmem_in_AWADDR(load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_AWADDR),
-    .m_axi_gmem_in_AWID(load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_AWID),
-    .m_axi_gmem_in_AWLEN(load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_AWLEN),
-    .m_axi_gmem_in_AWSIZE(load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_AWSIZE),
-    .m_axi_gmem_in_AWBURST(load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_AWBURST),
-    .m_axi_gmem_in_AWLOCK(load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_AWLOCK),
-    .m_axi_gmem_in_AWCACHE(load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_AWCACHE),
-    .m_axi_gmem_in_AWPROT(load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_AWPROT),
-    .m_axi_gmem_in_AWQOS(load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_AWQOS),
-    .m_axi_gmem_in_AWREGION(load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_AWREGION),
-    .m_axi_gmem_in_AWUSER(load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_AWUSER),
-    .m_axi_gmem_in_WVALID(load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_WVALID),
+    .m_axi_gmem_in_AWADDR(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_AWADDR),
+    .m_axi_gmem_in_AWID(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_AWID),
+    .m_axi_gmem_in_AWLEN(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_AWLEN),
+    .m_axi_gmem_in_AWSIZE(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_AWSIZE),
+    .m_axi_gmem_in_AWBURST(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_AWBURST),
+    .m_axi_gmem_in_AWLOCK(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_AWLOCK),
+    .m_axi_gmem_in_AWCACHE(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_AWCACHE),
+    .m_axi_gmem_in_AWPROT(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_AWPROT),
+    .m_axi_gmem_in_AWQOS(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_AWQOS),
+    .m_axi_gmem_in_AWREGION(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_AWREGION),
+    .m_axi_gmem_in_AWUSER(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_AWUSER),
+    .m_axi_gmem_in_WVALID(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_WVALID),
     .m_axi_gmem_in_WREADY(1'b0),
-    .m_axi_gmem_in_WDATA(load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_WDATA),
-    .m_axi_gmem_in_WSTRB(load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_WSTRB),
-    .m_axi_gmem_in_WLAST(load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_WLAST),
-    .m_axi_gmem_in_WID(load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_WID),
-    .m_axi_gmem_in_WUSER(load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_WUSER),
-    .m_axi_gmem_in_ARVALID(load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_ARVALID),
+    .m_axi_gmem_in_WDATA(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_WDATA),
+    .m_axi_gmem_in_WSTRB(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_WSTRB),
+    .m_axi_gmem_in_WLAST(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_WLAST),
+    .m_axi_gmem_in_WID(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_WID),
+    .m_axi_gmem_in_WUSER(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_WUSER),
+    .m_axi_gmem_in_ARVALID(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_ARVALID),
     .m_axi_gmem_in_ARREADY(m_axi_gmem_in_ARREADY),
-    .m_axi_gmem_in_ARADDR(load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_ARADDR),
-    .m_axi_gmem_in_ARID(load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_ARID),
-    .m_axi_gmem_in_ARLEN(load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_ARLEN),
-    .m_axi_gmem_in_ARSIZE(load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_ARSIZE),
-    .m_axi_gmem_in_ARBURST(load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_ARBURST),
-    .m_axi_gmem_in_ARLOCK(load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_ARLOCK),
-    .m_axi_gmem_in_ARCACHE(load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_ARCACHE),
-    .m_axi_gmem_in_ARPROT(load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_ARPROT),
-    .m_axi_gmem_in_ARQOS(load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_ARQOS),
-    .m_axi_gmem_in_ARREGION(load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_ARREGION),
-    .m_axi_gmem_in_ARUSER(load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_ARUSER),
+    .m_axi_gmem_in_ARADDR(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_ARADDR),
+    .m_axi_gmem_in_ARID(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_ARID),
+    .m_axi_gmem_in_ARLEN(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_ARLEN),
+    .m_axi_gmem_in_ARSIZE(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_ARSIZE),
+    .m_axi_gmem_in_ARBURST(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_ARBURST),
+    .m_axi_gmem_in_ARLOCK(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_ARLOCK),
+    .m_axi_gmem_in_ARCACHE(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_ARCACHE),
+    .m_axi_gmem_in_ARPROT(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_ARPROT),
+    .m_axi_gmem_in_ARQOS(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_ARQOS),
+    .m_axi_gmem_in_ARREGION(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_ARREGION),
+    .m_axi_gmem_in_ARUSER(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_ARUSER),
     .m_axi_gmem_in_RVALID(m_axi_gmem_in_RVALID),
-    .m_axi_gmem_in_RREADY(load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_RREADY),
+    .m_axi_gmem_in_RREADY(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_RREADY),
     .m_axi_gmem_in_RDATA(m_axi_gmem_in_RDATA),
     .m_axi_gmem_in_RLAST(m_axi_gmem_in_RLAST),
     .m_axi_gmem_in_RID(m_axi_gmem_in_RID),
@@ -408,256 +328,326 @@ srcnn_load_tile_mm_Loop_InputTileHread_proc load_tile_mm_Loop_InputTileHread_pro
     .m_axi_gmem_in_RUSER(m_axi_gmem_in_RUSER),
     .m_axi_gmem_in_RRESP(m_axi_gmem_in_RRESP),
     .m_axi_gmem_in_BVALID(1'b0),
-    .m_axi_gmem_in_BREADY(load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_BREADY),
+    .m_axi_gmem_in_BREADY(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_BREADY),
     .m_axi_gmem_in_BRESP(2'd0),
     .m_axi_gmem_in_BID(1'd0),
     .m_axi_gmem_in_BUSER(1'd0),
-    .srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_address0(load_tile_mm_Loop_InputTileHread_proc_U0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_address0),
-    .srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_ce0(load_tile_mm_Loop_InputTileHread_proc_U0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_ce0),
-    .srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_we0(load_tile_mm_Loop_InputTileHread_proc_U0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_we0),
-    .srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_d0(load_tile_mm_Loop_InputTileHread_proc_U0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_d0),
-    .srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_address0(load_tile_mm_Loop_InputTileHread_proc_U0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_address0),
-    .srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_ce0(load_tile_mm_Loop_InputTileHread_proc_U0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_ce0),
-    .srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_we0(load_tile_mm_Loop_InputTileHread_proc_U0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_we0),
-    .srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_d0(load_tile_mm_Loop_InputTileHread_proc_U0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_d0),
-    .srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_address0(load_tile_mm_Loop_InputTileHread_proc_U0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_address0),
-    .srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_ce0(load_tile_mm_Loop_InputTileHread_proc_U0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_ce0),
-    .srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_we0(load_tile_mm_Loop_InputTileHread_proc_U0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_we0),
-    .srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_d0(load_tile_mm_Loop_InputTileHread_proc_U0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_d0)
+    .add_ln60_2(add_ln60_2_reg_317),
+    .sext_ln48(add_ln48_reg_322),
+    .add_ln48(add_ln48_reg_322),
+    .bound(mul_ln43_reg_297),
+    .add_ln43(add_ln43_reg_287),
+    .select_ln60(select_ln60_reg_312),
+    .w0_cast2(w0),
+    .input_ftmap(input_ftmap),
+    .srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_address0(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_address0),
+    .srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_ce0(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_ce0),
+    .srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_we0(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_we0),
+    .srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_d0(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_d0),
+    .srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_address0(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_address0),
+    .srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_ce0(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_ce0),
+    .srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_we0(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_we0),
+    .srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_d0(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_d0),
+    .srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_address0(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_address0),
+    .srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_ce0(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_ce0),
+    .srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_we0(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_we0),
+    .srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_d0(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_d0)
 );
 
-srcnn_fifo_w64_d2_S in_tile_0_offset_cast_loc_i_channel_U(
+srcnn_am_addmul_8ns_4ns_9ns_17_4_1 #(
+    .ID( 1 ),
+    .NUM_STAGE( 4 ),
+    .din0_WIDTH( 8 ),
+    .din1_WIDTH( 4 ),
+    .din2_WIDTH( 9 ),
+    .dout_WIDTH( 17 ))
+am_addmul_8ns_4ns_9ns_17_4_1_U245(
     .clk(ap_clk),
     .reset(ap_rst),
-    .if_read_ce(1'b1),
-    .if_write_ce(1'b1),
-    .if_din(load_tile_mm_Block_entry38_proc_U0_ap_return_0),
-    .if_full_n(in_tile_0_offset_cast_loc_i_channel_full_n),
-    .if_write(ap_channel_done_in_tile_0_offset_cast_loc_i_channel),
-    .if_dout(in_tile_0_offset_cast_loc_i_channel_dout),
-    .if_num_data_valid(in_tile_0_offset_cast_loc_i_channel_num_data_valid),
-    .if_fifo_cap(in_tile_0_offset_cast_loc_i_channel_fifo_cap),
-    .if_empty_n(in_tile_0_offset_cast_loc_i_channel_empty_n),
-    .if_read(load_tile_mm_Loop_InputTileHread_proc_U0_ap_ready)
-);
-
-srcnn_fifo_w10_d2_S w0_cast19_loc_i_channel_U(
-    .clk(ap_clk),
-    .reset(ap_rst),
-    .if_read_ce(1'b1),
-    .if_write_ce(1'b1),
-    .if_din(load_tile_mm_Block_entry38_proc_U0_ap_return_1),
-    .if_full_n(w0_cast19_loc_i_channel_full_n),
-    .if_write(ap_channel_done_w0_cast19_loc_i_channel),
-    .if_dout(w0_cast19_loc_i_channel_dout),
-    .if_num_data_valid(w0_cast19_loc_i_channel_num_data_valid),
-    .if_fifo_cap(w0_cast19_loc_i_channel_fifo_cap),
-    .if_empty_n(w0_cast19_loc_i_channel_empty_n),
-    .if_read(load_tile_mm_Loop_InputTileHread_proc_U0_ap_ready)
-);
-
-srcnn_fifo_w10_d2_S h0_cast10_loc_i_channel_U(
-    .clk(ap_clk),
-    .reset(ap_rst),
-    .if_read_ce(1'b1),
-    .if_write_ce(1'b1),
-    .if_din(load_tile_mm_Block_entry38_proc_U0_ap_return_2),
-    .if_full_n(h0_cast10_loc_i_channel_full_n),
-    .if_write(ap_channel_done_h0_cast10_loc_i_channel),
-    .if_dout(h0_cast10_loc_i_channel_dout),
-    .if_num_data_valid(h0_cast10_loc_i_channel_num_data_valid),
-    .if_fifo_cap(h0_cast10_loc_i_channel_fifo_cap),
-    .if_empty_n(h0_cast10_loc_i_channel_empty_n),
-    .if_read(load_tile_mm_Loop_InputTileHread_proc_U0_ap_ready)
-);
-
-srcnn_fifo_w9_d2_S sext_ln43_1_loc_i_channel_U(
-    .clk(ap_clk),
-    .reset(ap_rst),
-    .if_read_ce(1'b1),
-    .if_write_ce(1'b1),
-    .if_din(load_tile_mm_Block_entry38_proc_U0_ap_return_3),
-    .if_full_n(sext_ln43_1_loc_i_channel_full_n),
-    .if_write(ap_channel_done_sext_ln43_1_loc_i_channel),
-    .if_dout(sext_ln43_1_loc_i_channel_dout),
-    .if_num_data_valid(sext_ln43_1_loc_i_channel_num_data_valid),
-    .if_fifo_cap(sext_ln43_1_loc_i_channel_fifo_cap),
-    .if_empty_n(sext_ln43_1_loc_i_channel_empty_n),
-    .if_read(load_tile_mm_Loop_InputTileHread_proc_U0_ap_ready)
-);
-
-srcnn_fifo_w9_d2_S sext_ln43_3_loc_i_channel_U(
-    .clk(ap_clk),
-    .reset(ap_rst),
-    .if_read_ce(1'b1),
-    .if_write_ce(1'b1),
-    .if_din(load_tile_mm_Block_entry38_proc_U0_ap_return_4),
-    .if_full_n(sext_ln43_3_loc_i_channel_full_n),
-    .if_write(ap_channel_done_sext_ln43_3_loc_i_channel),
-    .if_dout(sext_ln43_3_loc_i_channel_dout),
-    .if_num_data_valid(sext_ln43_3_loc_i_channel_num_data_valid),
-    .if_fifo_cap(sext_ln43_3_loc_i_channel_fifo_cap),
-    .if_empty_n(sext_ln43_3_loc_i_channel_empty_n),
-    .if_read(load_tile_mm_Loop_InputTileHread_proc_U0_ap_ready)
+    .din0(grp_fu_263_p0),
+    .din1(grp_fu_263_p1),
+    .din2(grp_fu_263_p2),
+    .ce(grp_fu_263_ce),
+    .dout(grp_fu_263_p3)
 );
 
 always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
-        ap_sync_reg_channel_write_h0_cast10_loc_i_channel <= 1'b0;
+        ap_CS_fsm <= ap_ST_fsm_state1;
     end else begin
-        if (((load_tile_mm_Block_entry38_proc_U0_ap_done & load_tile_mm_Block_entry38_proc_U0_ap_continue) == 1'b1)) begin
-            ap_sync_reg_channel_write_h0_cast10_loc_i_channel <= 1'b0;
-        end else begin
-            ap_sync_reg_channel_write_h0_cast10_loc_i_channel <= ap_sync_channel_write_h0_cast10_loc_i_channel;
+        ap_CS_fsm <= ap_NS_fsm;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst == 1'b1) begin
+        ap_done_reg <= 1'b0;
+    end else begin
+        if ((ap_continue == 1'b1)) begin
+            ap_done_reg <= 1'b0;
+        end else if (((1'b1 == ap_CS_fsm_state6) & (grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_ap_done == 1'b1))) begin
+            ap_done_reg <= 1'b1;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
-        ap_sync_reg_channel_write_in_tile_0_offset_cast_loc_i_channel <= 1'b0;
+        ap_return_0_preg <= 9'd0;
     end else begin
-        if (((load_tile_mm_Block_entry38_proc_U0_ap_done & load_tile_mm_Block_entry38_proc_U0_ap_continue) == 1'b1)) begin
-            ap_sync_reg_channel_write_in_tile_0_offset_cast_loc_i_channel <= 1'b0;
-        end else begin
-            ap_sync_reg_channel_write_in_tile_0_offset_cast_loc_i_channel <= ap_sync_channel_write_in_tile_0_offset_cast_loc_i_channel;
+        if (((1'b1 == ap_CS_fsm_state6) & (grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_ap_done == 1'b1))) begin
+            ap_return_0_preg <= h0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
-        ap_sync_reg_channel_write_sext_ln43_1_loc_i_channel <= 1'b0;
+                ap_return_1_preg[0] <= 1'b0;
+        ap_return_1_preg[1] <= 1'b0;
+        ap_return_1_preg[2] <= 1'b0;
+        ap_return_1_preg[3] <= 1'b0;
+        ap_return_1_preg[4] <= 1'b0;
+        ap_return_1_preg[5] <= 1'b0;
+        ap_return_1_preg[6] <= 1'b0;
+        ap_return_1_preg[7] <= 1'b0;
     end else begin
-        if (((load_tile_mm_Block_entry38_proc_U0_ap_done & load_tile_mm_Block_entry38_proc_U0_ap_continue) == 1'b1)) begin
-            ap_sync_reg_channel_write_sext_ln43_1_loc_i_channel <= 1'b0;
-        end else begin
-            ap_sync_reg_channel_write_sext_ln43_1_loc_i_channel <= ap_sync_channel_write_sext_ln43_1_loc_i_channel;
+        if (((1'b1 == ap_CS_fsm_state6) & (grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_ap_done == 1'b1))) begin
+                        ap_return_1_preg[7 : 0] <= w0_cast2_reg_282[7 : 0];
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
-        ap_sync_reg_channel_write_sext_ln43_3_loc_i_channel <= 1'b0;
+        ap_return_2_preg <= 1'd0;
     end else begin
-        if (((load_tile_mm_Block_entry38_proc_U0_ap_done & load_tile_mm_Block_entry38_proc_U0_ap_continue) == 1'b1)) begin
-            ap_sync_reg_channel_write_sext_ln43_3_loc_i_channel <= 1'b0;
-        end else begin
-            ap_sync_reg_channel_write_sext_ln43_3_loc_i_channel <= ap_sync_channel_write_sext_ln43_3_loc_i_channel;
+        if (((1'b1 == ap_CS_fsm_state6) & (grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_ap_done == 1'b1))) begin
+            ap_return_2_preg <= phase;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
-        ap_sync_reg_channel_write_w0_cast19_loc_i_channel <= 1'b0;
+        grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_ap_start_reg <= 1'b0;
     end else begin
-        if (((load_tile_mm_Block_entry38_proc_U0_ap_done & load_tile_mm_Block_entry38_proc_U0_ap_continue) == 1'b1)) begin
-            ap_sync_reg_channel_write_w0_cast19_loc_i_channel <= 1'b0;
-        end else begin
-            ap_sync_reg_channel_write_w0_cast19_loc_i_channel <= ap_sync_channel_write_w0_cast19_loc_i_channel;
+        if ((1'b1 == ap_CS_fsm_state5)) begin
+            grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_ap_start_reg <= 1'b1;
+        end else if ((grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_ap_ready == 1'b1)) begin
+            grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_ap_start_reg <= 1'b0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (ap_rst == 1'b1) begin
-        ap_sync_reg_load_tile_mm_Block_entry38_proc_U0_ap_ready <= 1'b0;
-    end else begin
-        if (((ap_sync_ready & ap_start) == 1'b1)) begin
-            ap_sync_reg_load_tile_mm_Block_entry38_proc_U0_ap_ready <= 1'b0;
-        end else begin
-            ap_sync_reg_load_tile_mm_Block_entry38_proc_U0_ap_ready <= ap_sync_load_tile_mm_Block_entry38_proc_U0_ap_ready;
-        end
+    if ((~((ap_done_reg == 1'b1) | (ap_start == 1'b0)) & (1'b1 == ap_CS_fsm_state1))) begin
+        add_ln43_reg_287 <= add_ln43_fu_191_p2;
+        w0_cast2_reg_282[7 : 0] <= w0_cast2_fu_123_p1[7 : 0];
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (ap_rst == 1'b1) begin
-        ap_sync_reg_load_tile_mm_Loop_InputTileHread_proc_U0_ap_ready <= 1'b0;
-    end else begin
-        if (((ap_sync_ready & ap_start) == 1'b1)) begin
-            ap_sync_reg_load_tile_mm_Loop_InputTileHread_proc_U0_ap_ready <= 1'b0;
-        end else begin
-            ap_sync_reg_load_tile_mm_Loop_InputTileHread_proc_U0_ap_ready <= ap_sync_load_tile_mm_Loop_InputTileHread_proc_U0_ap_ready;
-        end
+    if ((1'b1 == ap_CS_fsm_state5)) begin
+        add_ln48_reg_322 <= add_ln48_fu_240_p2;
+        add_ln60_2_reg_317[8 : 3] <= add_ln60_2_fu_230_p2[8 : 3];
+        select_ln60_reg_312[2] <= select_ln60_fu_205_p3[2];
     end
 end
 
-assign ap_channel_done_h0_cast10_loc_i_channel = (load_tile_mm_Block_entry38_proc_U0_ap_done & (ap_sync_reg_channel_write_h0_cast10_loc_i_channel ^ 1'b1));
+always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_CS_fsm_state4)) begin
+        mul_ln43_reg_297 <= grp_fu_263_p3;
+    end
+end
 
-assign ap_channel_done_in_tile_0_offset_cast_loc_i_channel = (load_tile_mm_Block_entry38_proc_U0_ap_done & (ap_sync_reg_channel_write_in_tile_0_offset_cast_loc_i_channel ^ 1'b1));
+always @ (*) begin
+    if (((ap_done_reg == 1'b1) | (ap_start == 1'b0))) begin
+        ap_ST_fsm_state1_blk = 1'b1;
+    end else begin
+        ap_ST_fsm_state1_blk = 1'b0;
+    end
+end
 
-assign ap_channel_done_sext_ln43_1_loc_i_channel = (load_tile_mm_Block_entry38_proc_U0_ap_done & (ap_sync_reg_channel_write_sext_ln43_1_loc_i_channel ^ 1'b1));
+assign ap_ST_fsm_state2_blk = 1'b0;
 
-assign ap_channel_done_sext_ln43_3_loc_i_channel = (load_tile_mm_Block_entry38_proc_U0_ap_done & (ap_sync_reg_channel_write_sext_ln43_3_loc_i_channel ^ 1'b1));
+assign ap_ST_fsm_state3_blk = 1'b0;
 
-assign ap_channel_done_w0_cast19_loc_i_channel = (load_tile_mm_Block_entry38_proc_U0_ap_done & (ap_sync_reg_channel_write_w0_cast19_loc_i_channel ^ 1'b1));
+assign ap_ST_fsm_state4_blk = 1'b0;
 
-assign ap_done = load_tile_mm_Loop_InputTileHread_proc_U0_ap_done;
+assign ap_ST_fsm_state5_blk = 1'b0;
 
-assign ap_idle = (load_tile_mm_Loop_InputTileHread_proc_U0_ap_idle & load_tile_mm_Block_entry38_proc_U0_ap_idle & (sext_ln43_3_loc_i_channel_empty_n ^ 1'b1) & (sext_ln43_1_loc_i_channel_empty_n ^ 1'b1) & (h0_cast10_loc_i_channel_empty_n ^ 1'b1) & (w0_cast19_loc_i_channel_empty_n ^ 1'b1) & (in_tile_0_offset_cast_loc_i_channel_empty_n ^ 1'b1));
+always @ (*) begin
+    if ((grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_ap_done == 1'b0)) begin
+        ap_ST_fsm_state6_blk = 1'b1;
+    end else begin
+        ap_ST_fsm_state6_blk = 1'b0;
+    end
+end
 
-assign ap_ready = ap_sync_ready;
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state6) & (grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_ap_done == 1'b1))) begin
+        ap_done = 1'b1;
+    end else begin
+        ap_done = ap_done_reg;
+    end
+end
 
-assign ap_sync_channel_write_h0_cast10_loc_i_channel = ((h0_cast10_loc_i_channel_full_n & ap_channel_done_h0_cast10_loc_i_channel) | ap_sync_reg_channel_write_h0_cast10_loc_i_channel);
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b0))) begin
+        ap_idle = 1'b1;
+    end else begin
+        ap_idle = 1'b0;
+    end
+end
 
-assign ap_sync_channel_write_in_tile_0_offset_cast_loc_i_channel = ((in_tile_0_offset_cast_loc_i_channel_full_n & ap_channel_done_in_tile_0_offset_cast_loc_i_channel) | ap_sync_reg_channel_write_in_tile_0_offset_cast_loc_i_channel);
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state6) & (grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_ap_done == 1'b1))) begin
+        ap_ready = 1'b1;
+    end else begin
+        ap_ready = 1'b0;
+    end
+end
 
-assign ap_sync_channel_write_sext_ln43_1_loc_i_channel = ((sext_ln43_1_loc_i_channel_full_n & ap_channel_done_sext_ln43_1_loc_i_channel) | ap_sync_reg_channel_write_sext_ln43_1_loc_i_channel);
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state6) & (grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_ap_done == 1'b1))) begin
+        ap_return_0 = h0;
+    end else begin
+        ap_return_0 = ap_return_0_preg;
+    end
+end
 
-assign ap_sync_channel_write_sext_ln43_3_loc_i_channel = ((sext_ln43_3_loc_i_channel_full_n & ap_channel_done_sext_ln43_3_loc_i_channel) | ap_sync_reg_channel_write_sext_ln43_3_loc_i_channel);
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state6) & (grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_ap_done == 1'b1))) begin
+        ap_return_1 = w0_cast2_reg_282;
+    end else begin
+        ap_return_1 = ap_return_1_preg;
+    end
+end
 
-assign ap_sync_channel_write_w0_cast19_loc_i_channel = ((w0_cast19_loc_i_channel_full_n & ap_channel_done_w0_cast19_loc_i_channel) | ap_sync_reg_channel_write_w0_cast19_loc_i_channel);
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state6) & (grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_ap_done == 1'b1))) begin
+        ap_return_2 = phase;
+    end else begin
+        ap_return_2 = ap_return_2_preg;
+    end
+end
 
-assign ap_sync_load_tile_mm_Block_entry38_proc_U0_ap_ready = (load_tile_mm_Block_entry38_proc_U0_ap_ready | ap_sync_reg_load_tile_mm_Block_entry38_proc_U0_ap_ready);
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state6) | (1'b1 == ap_CS_fsm_state5) | ((1'b1 == ap_CS_fsm_state1) & ((ap_done_reg == 1'b1) | (ap_start == 1'b0))))) begin
+        grp_fu_263_ce = 1'b0;
+    end else begin
+        grp_fu_263_ce = 1'b1;
+    end
+end
 
-assign ap_sync_load_tile_mm_Loop_InputTileHread_proc_U0_ap_ready = (load_tile_mm_Loop_InputTileHread_proc_U0_ap_ready | ap_sync_reg_load_tile_mm_Loop_InputTileHread_proc_U0_ap_ready);
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state6) | (1'b1 == ap_CS_fsm_state5))) begin
+        m_axi_gmem_in_ARVALID = grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_ARVALID;
+    end else begin
+        m_axi_gmem_in_ARVALID = 1'b0;
+    end
+end
 
-assign ap_sync_ready = (ap_sync_load_tile_mm_Loop_InputTileHread_proc_U0_ap_ready & ap_sync_load_tile_mm_Block_entry38_proc_U0_ap_ready);
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state6) | (1'b1 == ap_CS_fsm_state5))) begin
+        m_axi_gmem_in_RREADY = grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_RREADY;
+    end else begin
+        m_axi_gmem_in_RREADY = 1'b0;
+    end
+end
 
-assign h0_c1_din = load_tile_mm_Block_entry38_proc_U0_h0_c1_din;
+always @ (*) begin
+    case (ap_CS_fsm)
+        ap_ST_fsm_state1 : begin
+            if ((~((ap_done_reg == 1'b1) | (ap_start == 1'b0)) & (1'b1 == ap_CS_fsm_state1))) begin
+                ap_NS_fsm = ap_ST_fsm_state2;
+            end else begin
+                ap_NS_fsm = ap_ST_fsm_state1;
+            end
+        end
+        ap_ST_fsm_state2 : begin
+            ap_NS_fsm = ap_ST_fsm_state3;
+        end
+        ap_ST_fsm_state3 : begin
+            ap_NS_fsm = ap_ST_fsm_state4;
+        end
+        ap_ST_fsm_state4 : begin
+            ap_NS_fsm = ap_ST_fsm_state5;
+        end
+        ap_ST_fsm_state5 : begin
+            ap_NS_fsm = ap_ST_fsm_state6;
+        end
+        ap_ST_fsm_state6 : begin
+            if (((1'b1 == ap_CS_fsm_state6) & (grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_ap_done == 1'b1))) begin
+                ap_NS_fsm = ap_ST_fsm_state1;
+            end else begin
+                ap_NS_fsm = ap_ST_fsm_state6;
+            end
+        end
+        default : begin
+            ap_NS_fsm = 'bx;
+        end
+    endcase
+end
 
-assign h0_c1_write = load_tile_mm_Block_entry38_proc_U0_h0_c1_write;
+assign add_ln43_fu_191_p2 = (tw_eff_cast_fu_187_p1 + 9'd12);
 
-assign load_tile_mm_Block_entry38_proc_U0_ap_continue = (ap_sync_channel_write_w0_cast19_loc_i_channel & ap_sync_channel_write_sext_ln43_3_loc_i_channel & ap_sync_channel_write_sext_ln43_1_loc_i_channel & ap_sync_channel_write_in_tile_0_offset_cast_loc_i_channel & ap_sync_channel_write_h0_cast10_loc_i_channel);
+assign add_ln48_fu_240_p2 = ($signed(h0_cast10_i_fu_237_p1) + $signed(10'd1018));
 
-assign load_tile_mm_Block_entry38_proc_U0_ap_start = ((ap_sync_reg_load_tile_mm_Block_entry38_proc_U0_ap_ready ^ 1'b1) & ap_start);
+assign add_ln534_fu_127_p2 = (h0 + 9'd16);
 
-assign load_tile_mm_Loop_InputTileHread_proc_U0_ap_continue = ap_continue;
+assign add_ln537_fu_159_p2 = (w0_cast2_fu_123_p1 + 9'd16);
 
-assign load_tile_mm_Loop_InputTileHread_proc_U0_ap_start = (w0_cast19_loc_i_channel_empty_n & sext_ln43_3_loc_i_channel_empty_n & sext_ln43_1_loc_i_channel_empty_n & in_tile_0_offset_cast_loc_i_channel_empty_n & h0_cast10_loc_i_channel_empty_n & (ap_sync_reg_load_tile_mm_Loop_InputTileHread_proc_U0_ap_ready ^ 1'b1) & ap_start);
+assign add_ln60_2_fu_230_p2 = (select_ln60_1_fu_214_p3 + select_ln60_2_fu_222_p3);
 
-assign load_tile_mm_Loop_InputTileHread_proc_U0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_write = 1'b0;
+assign ap_CS_fsm_state1 = ap_CS_fsm[32'd0];
 
-assign load_tile_mm_Loop_InputTileHread_proc_U0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_write = 1'b0;
+assign ap_CS_fsm_state4 = ap_CS_fsm[32'd3];
 
-assign load_tile_mm_Loop_InputTileHread_proc_U0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_write = 1'b0;
+assign ap_CS_fsm_state5 = ap_CS_fsm[32'd4];
 
-assign m_axi_gmem_in_ARADDR = load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_ARADDR;
+assign ap_CS_fsm_state6 = ap_CS_fsm[32'd5];
 
-assign m_axi_gmem_in_ARBURST = load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_ARBURST;
+always @ (*) begin
+    ap_block_state1 = ((ap_done_reg == 1'b1) | (ap_start == 1'b0));
+end
 
-assign m_axi_gmem_in_ARCACHE = load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_ARCACHE;
+assign grp_fu_263_p0 = grp_fu_263_p00;
 
-assign m_axi_gmem_in_ARID = load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_ARID;
+assign grp_fu_263_p00 = th_eff_fu_151_p3;
 
-assign m_axi_gmem_in_ARLEN = load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_ARLEN;
+assign grp_fu_263_p1 = 9'd12;
 
-assign m_axi_gmem_in_ARLOCK = load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_ARLOCK;
+assign grp_fu_263_p2 = grp_fu_263_p20;
 
-assign m_axi_gmem_in_ARPROT = load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_ARPROT;
+assign grp_fu_263_p20 = add_ln43_fu_191_p2;
 
-assign m_axi_gmem_in_ARQOS = load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_ARQOS;
+assign grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_ap_start = grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_ap_start_reg;
 
-assign m_axi_gmem_in_ARREGION = load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_ARREGION;
+assign h0_cast10_i_fu_237_p1 = h0;
 
-assign m_axi_gmem_in_ARSIZE = load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_ARSIZE;
+assign m_axi_gmem_in_ARADDR = grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_ARADDR;
 
-assign m_axi_gmem_in_ARUSER = load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_ARUSER;
+assign m_axi_gmem_in_ARBURST = grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_ARBURST;
 
-assign m_axi_gmem_in_ARVALID = load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_ARVALID;
+assign m_axi_gmem_in_ARCACHE = grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_ARCACHE;
+
+assign m_axi_gmem_in_ARID = grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_ARID;
+
+assign m_axi_gmem_in_ARLEN = grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_ARLEN;
+
+assign m_axi_gmem_in_ARLOCK = grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_ARLOCK;
+
+assign m_axi_gmem_in_ARPROT = grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_ARPROT;
+
+assign m_axi_gmem_in_ARQOS = grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_ARQOS;
+
+assign m_axi_gmem_in_ARREGION = grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_ARREGION;
+
+assign m_axi_gmem_in_ARSIZE = grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_ARSIZE;
+
+assign m_axi_gmem_in_ARUSER = grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_ARUSER;
 
 assign m_axi_gmem_in_AWADDR = 64'd0;
 
@@ -685,8 +675,6 @@ assign m_axi_gmem_in_AWVALID = 1'b0;
 
 assign m_axi_gmem_in_BREADY = 1'b0;
 
-assign m_axi_gmem_in_RREADY = load_tile_mm_Loop_InputTileHread_proc_U0_m_axi_gmem_in_RREADY;
-
 assign m_axi_gmem_in_WDATA = 32'd0;
 
 assign m_axi_gmem_in_WID = 1'd0;
@@ -699,42 +687,59 @@ assign m_axi_gmem_in_WUSER = 1'd0;
 
 assign m_axi_gmem_in_WVALID = 1'b0;
 
-assign phase_c3_din = load_tile_mm_Block_entry38_proc_U0_phase_c3_din;
+assign select_ln60_1_fu_214_p3 = ((phase[0:0] == 1'b1) ? 9'd224 : 9'd0);
 
-assign phase_c3_write = load_tile_mm_Block_entry38_proc_U0_phase_c3_write;
+assign select_ln60_2_fu_222_p3 = ((phase[0:0] == 1'b1) ? 9'd56 : 9'd0);
 
-assign srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_address0 = load_tile_mm_Loop_InputTileHread_proc_U0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_address0;
+assign select_ln60_fu_205_p3 = ((phase[0:0] == 1'b1) ? 3'd4 : 3'd0);
 
-assign srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_ce0 = load_tile_mm_Loop_InputTileHread_proc_U0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_ce0;
+assign srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_address0 = grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_address0;
 
-assign srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_d0 = load_tile_mm_Loop_InputTileHread_proc_U0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_d0;
+assign srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_ce0 = grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_ce0;
 
-assign srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_we0 = load_tile_mm_Loop_InputTileHread_proc_U0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_we0;
+assign srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_d0 = grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_d0;
 
-assign srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_write = load_tile_mm_Loop_InputTileHread_proc_U0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_write;
+assign srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_we0 = grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_we0;
 
-assign srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_address0 = load_tile_mm_Loop_InputTileHread_proc_U0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_address0;
+assign srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_address0 = grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_address0;
 
-assign srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_ce0 = load_tile_mm_Loop_InputTileHread_proc_U0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_ce0;
+assign srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_ce0 = grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_ce0;
 
-assign srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_d0 = load_tile_mm_Loop_InputTileHread_proc_U0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_d0;
+assign srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_d0 = grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_d0;
 
-assign srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_we0 = load_tile_mm_Loop_InputTileHread_proc_U0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_we0;
+assign srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_we0 = grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_we0;
 
-assign srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_write = load_tile_mm_Loop_InputTileHread_proc_U0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_write;
+assign srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_address0 = grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_address0;
 
-assign srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_address0 = load_tile_mm_Loop_InputTileHread_proc_U0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_address0;
+assign srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_ce0 = grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_ce0;
 
-assign srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_ce0 = load_tile_mm_Loop_InputTileHread_proc_U0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_ce0;
+assign srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_d0 = grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_d0;
 
-assign srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_d0 = load_tile_mm_Loop_InputTileHread_proc_U0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_d0;
+assign srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_we0 = grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_we0;
 
-assign srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_we0 = load_tile_mm_Loop_InputTileHread_proc_U0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_we0;
+assign th_eff_fu_151_p3 = ((tmp_fu_133_p3[0:0] == 1'b1) ? xor_ln534_fu_145_p2 : 8'd16);
 
-assign srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_write = load_tile_mm_Loop_InputTileHread_proc_U0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_write;
+assign tmp_7_fu_165_p3 = add_ln537_fu_159_p2[32'd8];
 
-assign w0_c2_din = load_tile_mm_Block_entry38_proc_U0_w0_c2_din;
+assign tmp_fu_133_p3 = add_ln534_fu_127_p2[32'd8];
 
-assign w0_c2_write = load_tile_mm_Block_entry38_proc_U0_w0_c2_write;
+assign trunc_ln533_fu_141_p1 = h0[7:0];
+
+assign tw_eff_cast_fu_187_p1 = tw_eff_fu_179_p3;
+
+assign tw_eff_fu_179_p3 = ((tmp_7_fu_165_p3[0:0] == 1'b1) ? xor_ln537_fu_173_p2 : 8'd16);
+
+assign w0_cast2_fu_123_p1 = w0;
+
+assign xor_ln534_fu_145_p2 = (trunc_ln533_fu_141_p1 ^ 8'd255);
+
+assign xor_ln537_fu_173_p2 = (w0 ^ 8'd255);
+
+always @ (posedge ap_clk) begin
+    w0_cast2_reg_282[8] <= 1'b0;
+    select_ln60_reg_312[1:0] <= 2'b00;
+    add_ln60_2_reg_317[2:0] <= 3'b000;
+    ap_return_1_preg[8] <= 1'b0;
+end
 
 endmodule //srcnn_load_tile_mm

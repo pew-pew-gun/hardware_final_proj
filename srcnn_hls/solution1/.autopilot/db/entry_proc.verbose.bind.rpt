@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'entry_proc'
 ================================================================
-* Date:           Tue Oct 21 03:22:05 2025
+* Date:           Tue Oct 21 05:58:13 2025
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -75,18 +75,10 @@ IsGatedGlobalClock: 0
 * FSM state operations: 
 
 State 1 <SV = 0> <Delay = 1.83>
-ST_1 : Operation 2 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %w0, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0"   --->   Operation 2 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 3 [1/1] (1.83ns)   --->   "%w0_read = read i8 @_ssdm_op_Read.ap_fifo.i8P0A, i8 %w0"   --->   Operation 3 'read' 'w0_read' <Predicate = true> <Delay = 1.83> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 2> <FIFO>
-ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%w0_load_cast = zext i8 %w0_read"   --->   Operation 4 'zext' 'w0_load_cast' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %w0, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0"   --->   Operation 5 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i9 %h0, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0"   --->   Operation 6 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 7 [1/1] (1.83ns)   --->   "%h0_read = read i9 @_ssdm_op_Read.ap_fifo.i9P0A, i9 %h0"   --->   Operation 7 'read' 'h0_read' <Predicate = true> <Delay = 1.83> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 9> <Depth = 2> <FIFO>
-ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i9 %h0, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0"   --->   Operation 8 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%tmp = insertvalue i36 <undef>, i9 %h0_read"   --->   Operation 9 'insertvalue' 'tmp' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%tmp_5 = insertvalue i36 %tmp, i9 %h0_read"   --->   Operation 10 'insertvalue' 'tmp_5' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%tmp_6 = insertvalue i36 %tmp_5, i9 %w0_load_cast"   --->   Operation 11 'insertvalue' 'tmp_6' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%tmp_7 = insertvalue i36 %tmp_6, i9 %w0_load_cast"   --->   Operation 12 'insertvalue' 'tmp_7' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%ret_ln0 = ret i36 %tmp_7"   --->   Operation 13 'ret' 'ret_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 2 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %output_ftmap_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0"   --->   Operation 2 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%output_ftmap_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %output_ftmap"   --->   Operation 3 'read' 'output_ftmap_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (1.83ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_fifo.i64P0A, i64 %output_ftmap_c, i64 %output_ftmap_read"   --->   Operation 4 'write' 'write_ln0' <Predicate = true> <Delay = 1.83> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 4> <FIFO>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 5 'ret' 'ret_ln0' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
@@ -100,8 +92,8 @@ STG Binding:
 - Is pipelined: 0
 - Is top level: 0
 Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
-Port [ h0]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
-Port [ w0]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ output_ftmap]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ output_ftmap_c]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
 ---------------- STG Properties END ------------------
 
 ---------------- Datapath Model BEGIN ----------------
@@ -109,37 +101,29 @@ Port [ w0]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=
 <LifeTime>
 <method=bitvector/>
 specinterface_ln0 (specinterface) [ 00]
-w0_read           (read         ) [ 00]
-w0_load_cast      (zext         ) [ 00]
-specinterface_ln0 (specinterface) [ 00]
-specinterface_ln0 (specinterface) [ 00]
-h0_read           (read         ) [ 00]
-specinterface_ln0 (specinterface) [ 00]
-tmp               (insertvalue  ) [ 00]
-tmp_5             (insertvalue  ) [ 00]
-tmp_6             (insertvalue  ) [ 00]
-tmp_7             (insertvalue  ) [ 00]
+output_ftmap_read (read         ) [ 00]
+write_ln0         (write        ) [ 00]
 ret_ln0           (ret          ) [ 00]
 </LifeTime>
 
 <model>
 
 <comp_list>
-<comp id="0" class="1000" name="h0">
+<comp id="0" class="1000" name="output_ftmap">
 <pin_list>
 <pin id="1" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="h0"/></StgValue>
+<StgValue><ssdm name="output_ftmap"/></StgValue>
 </bind>
 </comp>
 
-<comp id="2" class="1000" name="w0">
+<comp id="2" class="1000" name="output_ftmap_c">
 <pin_list>
 <pin id="3" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="w0"/></StgValue>
+<StgValue><ssdm name="output_ftmap_c"/></StgValue>
 </bind>
 </comp>
 
@@ -220,7 +204,7 @@ ret_ln0           (ret          ) [ 00]
 <pin id="21" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="_ssdm_op_Read.ap_fifo.i8P0A"/></StgValue>
+<StgValue><ssdm name="_ssdm_op_Read.ap_auto.i64"/></StgValue>
 </bind>
 </comp>
 
@@ -229,130 +213,47 @@ ret_ln0           (ret          ) [ 00]
 <pin id="23" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="_ssdm_op_Read.ap_fifo.i9P0A"/></StgValue>
+<StgValue><ssdm name="_ssdm_op_Write.ap_fifo.i64P0A"/></StgValue>
 </bind>
 </comp>
 
-<comp id="24" class="1001" name="const_24">
+<comp id="24" class="1004" name="output_ftmap_read_read_fu_24">
 <pin_list>
-<pin id="25" dir="1" index="0" bw="1" slack="0"/>
-</pin_list>
-<bind>
-<StgValue><ssdm name=""/></StgValue>
-</bind>
-</comp>
-
-<comp id="26" class="1004" name="w0_read_read_fu_26">
-<pin_list>
-<pin id="27" dir="0" index="0" bw="8" slack="0"/>
-<pin id="28" dir="0" index="1" bw="8" slack="0"/>
-<pin id="29" dir="1" index="2" bw="8" slack="0"/>
+<pin id="25" dir="0" index="0" bw="64" slack="0"/>
+<pin id="26" dir="0" index="1" bw="64" slack="0"/>
+<pin id="27" dir="1" index="2" bw="64" slack="0"/>
 </pin_list>
 <bind>
 <opcode="read(1150) " fcode="read"/>
-<opset="w0_read/1 "/>
+<opset="output_ftmap_read/1 "/>
 </bind>
 </comp>
 
-<comp id="32" class="1004" name="h0_read_read_fu_32">
+<comp id="30" class="1004" name="write_ln0_write_fu_30">
 <pin_list>
-<pin id="33" dir="0" index="0" bw="9" slack="0"/>
-<pin id="34" dir="0" index="1" bw="9" slack="0"/>
-<pin id="35" dir="1" index="2" bw="9" slack="0"/>
+<pin id="31" dir="0" index="0" bw="0" slack="0"/>
+<pin id="32" dir="0" index="1" bw="64" slack="0"/>
+<pin id="33" dir="0" index="2" bw="64" slack="0"/>
+<pin id="34" dir="1" index="3" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
-<opcode="read(1150) " fcode="read"/>
-<opset="h0_read/1 "/>
-</bind>
-</comp>
-
-<comp id="38" class="1004" name="w0_load_cast_fu_38">
-<pin_list>
-<pin id="39" dir="0" index="0" bw="8" slack="0"/>
-<pin id="40" dir="1" index="1" bw="9" slack="0"/>
-</pin_list>
-<bind>
-<opcode="zext(34) " fcode="zext"/>
-<opset="w0_load_cast/1 "/>
-</bind>
-</comp>
-
-<comp id="42" class="1004" name="tmp_fu_42">
-<pin_list>
-<pin id="43" dir="0" index="0" bw="36" slack="0"/>
-<pin id="44" dir="0" index="1" bw="9" slack="0"/>
-<pin id="45" dir="1" index="2" bw="36" slack="0"/>
-</pin_list>
-<bind>
-<opcode="insertvalue(57) " fcode="insertvalue"/>
-<opset="tmp/1 "/>
-</bind>
-</comp>
-
-<comp id="48" class="1004" name="tmp_5_fu_48">
-<pin_list>
-<pin id="49" dir="0" index="0" bw="36" slack="0"/>
-<pin id="50" dir="0" index="1" bw="9" slack="0"/>
-<pin id="51" dir="1" index="2" bw="36" slack="0"/>
-</pin_list>
-<bind>
-<opcode="insertvalue(57) " fcode="insertvalue"/>
-<opset="tmp_5/1 "/>
-</bind>
-</comp>
-
-<comp id="54" class="1004" name="tmp_6_fu_54">
-<pin_list>
-<pin id="55" dir="0" index="0" bw="36" slack="0"/>
-<pin id="56" dir="0" index="1" bw="8" slack="0"/>
-<pin id="57" dir="1" index="2" bw="36" slack="0"/>
-</pin_list>
-<bind>
-<opcode="insertvalue(57) " fcode="insertvalue"/>
-<opset="tmp_6/1 "/>
-</bind>
-</comp>
-
-<comp id="60" class="1004" name="tmp_7_fu_60">
-<pin_list>
-<pin id="61" dir="0" index="0" bw="36" slack="0"/>
-<pin id="62" dir="0" index="1" bw="8" slack="0"/>
-<pin id="63" dir="1" index="2" bw="36" slack="2147483647"/>
-</pin_list>
-<bind>
-<opcode="insertvalue(57) " fcode="insertvalue"/>
-<opset="tmp_7/1 "/>
+<opcode="write(1151) " fcode="write"/>
+<opset="write_ln0/1 "/>
 </bind>
 </comp>
 
 </comp_list>
 
 <net_list>
-<net id="30"><net_src comp="20" pin="0"/><net_sink comp="26" pin=0"/></net>
+<net id="28"><net_src comp="20" pin="0"/><net_sink comp="24" pin=0"/></net>
 
-<net id="31"><net_src comp="2" pin="0"/><net_sink comp="26" pin=1"/></net>
+<net id="29"><net_src comp="0" pin="0"/><net_sink comp="24" pin=1"/></net>
 
-<net id="36"><net_src comp="22" pin="0"/><net_sink comp="32" pin=0"/></net>
+<net id="35"><net_src comp="22" pin="0"/><net_sink comp="30" pin=0"/></net>
 
-<net id="37"><net_src comp="0" pin="0"/><net_sink comp="32" pin=1"/></net>
+<net id="36"><net_src comp="2" pin="0"/><net_sink comp="30" pin=1"/></net>
 
-<net id="41"><net_src comp="26" pin="2"/><net_sink comp="38" pin=0"/></net>
-
-<net id="46"><net_src comp="24" pin="0"/><net_sink comp="42" pin=0"/></net>
-
-<net id="47"><net_src comp="32" pin="2"/><net_sink comp="42" pin=1"/></net>
-
-<net id="52"><net_src comp="42" pin="2"/><net_sink comp="48" pin=0"/></net>
-
-<net id="53"><net_src comp="32" pin="2"/><net_sink comp="48" pin=1"/></net>
-
-<net id="58"><net_src comp="48" pin="2"/><net_sink comp="54" pin=0"/></net>
-
-<net id="59"><net_src comp="38" pin="1"/><net_sink comp="54" pin=1"/></net>
-
-<net id="64"><net_src comp="54" pin="2"/><net_sink comp="60" pin=0"/></net>
-
-<net id="65"><net_src comp="38" pin="1"/><net_sink comp="60" pin=1"/></net>
+<net id="37"><net_src comp="24" pin="2"/><net_sink comp="30" pin=2"/></net>
 
 </net_list>
 
@@ -361,15 +262,11 @@ ret_ln0           (ret          ) [ 00]
 
 * FSMD analyzer results:
   - Output states:
+	Port: output_ftmap_c | {1 }
  - Input state : 
-	Port: entry_proc : h0 | {1 }
-	Port: entry_proc : w0 | {1 }
+	Port: entry_proc : output_ftmap | {1 }
   - Chain level:
 	State 1
-		tmp_5 : 1
-		tmp_6 : 2
-		tmp_7 : 3
-		ret_ln0 : 4
 
 
 ============================================================
@@ -377,21 +274,15 @@ ret_ln0           (ret          ) [ 00]
 ============================================================
 
 * Functional unit list:
-|----------|--------------------|
-| Operation|   Functional Unit  |
-|----------|--------------------|
-|   read   | w0_read_read_fu_26 |
-|          | h0_read_read_fu_32 |
-|----------|--------------------|
-|   zext   | w0_load_cast_fu_38 |
-|----------|--------------------|
-|          |      tmp_fu_42     |
-|insertvalue|     tmp_5_fu_48    |
-|          |     tmp_6_fu_54    |
-|          |     tmp_7_fu_60    |
-|----------|--------------------|
-|   Total  |                    |
-|----------|--------------------|
+|----------|------------------------------|
+| Operation|        Functional Unit       |
+|----------|------------------------------|
+|   read   | output_ftmap_read_read_fu_24 |
+|----------|------------------------------|
+|   write  |     write_ln0_write_fu_30    |
+|----------|------------------------------|
+|   Total  |                              |
+|----------|------------------------------|
 
 Memories:
 N/A

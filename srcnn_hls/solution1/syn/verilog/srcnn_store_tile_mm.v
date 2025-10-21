@@ -7,9 +7,14 @@
 `timescale 1 ns / 1 ps 
 
 module srcnn_store_tile_mm (
-        phase_dout,
-        phase_empty_n,
-        phase_read,
+        ap_clk,
+        ap_rst,
+        ap_start,
+        ap_done,
+        ap_continue,
+        ap_idle,
+        ap_ready,
+        p_read,
         m_axi_gmem_out_AWVALID,
         m_axi_gmem_out_AWREADY,
         m_axi_gmem_out_AWADDR,
@@ -57,34 +62,29 @@ module srcnn_store_tile_mm (
         m_axi_gmem_out_BID,
         m_axi_gmem_out_BUSER,
         output_ftmap_dout,
+        output_ftmap_num_data_valid,
+        output_ftmap_fifo_cap,
         output_ftmap_empty_n,
         output_ftmap_read,
-        h0_dout,
-        h0_empty_n,
-        h0_read,
-        w0_dout,
-        w0_empty_n,
-        w0_read,
+        p_read1,
+        p_read2,
         outbuf_address0,
         outbuf_ce0,
-        outbuf_d0,
-        outbuf_q0,
-        outbuf_we0,
-        ap_clk,
-        ap_rst,
-        ap_start,
-        outbuf_empty_n,
-        outbuf_read,
-        ap_done,
-        ap_ready,
-        ap_idle,
-        ap_continue
+        outbuf_q0
 );
 
+parameter    ap_ST_fsm_state1 = 3'd1;
+parameter    ap_ST_fsm_state2 = 3'd2;
+parameter    ap_ST_fsm_state3 = 3'd4;
 
-input  [0:0] phase_dout;
-input   phase_empty_n;
-output   phase_read;
+input   ap_clk;
+input   ap_rst;
+input   ap_start;
+output   ap_done;
+input   ap_continue;
+output   ap_idle;
+output   ap_ready;
+input  [0:0] p_read;
 output   m_axi_gmem_out_AWVALID;
 input   m_axi_gmem_out_AWREADY;
 output  [63:0] m_axi_gmem_out_AWADDR;
@@ -132,273 +132,149 @@ input  [1:0] m_axi_gmem_out_BRESP;
 input  [0:0] m_axi_gmem_out_BID;
 input  [0:0] m_axi_gmem_out_BUSER;
 input  [63:0] output_ftmap_dout;
+input  [2:0] output_ftmap_num_data_valid;
+input  [2:0] output_ftmap_fifo_cap;
 input   output_ftmap_empty_n;
 output   output_ftmap_read;
-input  [8:0] h0_dout;
-input   h0_empty_n;
-output   h0_read;
-input  [7:0] w0_dout;
-input   w0_empty_n;
-output   w0_read;
+input  [8:0] p_read1;
+input  [8:0] p_read2;
 output  [8:0] outbuf_address0;
 output   outbuf_ce0;
-output  [31:0] outbuf_d0;
 input  [31:0] outbuf_q0;
-output   outbuf_we0;
-input   ap_clk;
-input   ap_rst;
-input   ap_start;
-input   outbuf_empty_n;
-output   outbuf_read;
-output   ap_done;
-output   ap_ready;
-output   ap_idle;
-input   ap_continue;
 
-wire    entry_proc_U0_ap_start;
-wire    entry_proc_U0_ap_done;
-wire    entry_proc_U0_ap_continue;
-wire    entry_proc_U0_ap_idle;
-wire    entry_proc_U0_ap_ready;
-wire    entry_proc_U0_h0_read;
-wire    entry_proc_U0_w0_read;
-wire   [8:0] entry_proc_U0_ap_return_0;
-wire   [8:0] entry_proc_U0_ap_return_1;
-wire   [8:0] entry_proc_U0_ap_return_2;
-wire   [8:0] entry_proc_U0_ap_return_3;
-wire    ap_channel_done_tmp_4;
-wire    tmp_4_full_n;
-reg    ap_sync_reg_channel_write_tmp_4;
-wire    ap_sync_channel_write_tmp_4;
-wire    ap_channel_done_tmp_3;
-wire    tmp_3_full_n;
-reg    ap_sync_reg_channel_write_tmp_3;
-wire    ap_sync_channel_write_tmp_3;
-wire    ap_channel_done_tmp_2;
-wire    tmp_2_full_n;
-reg    ap_sync_reg_channel_write_tmp_2;
-wire    ap_sync_channel_write_tmp_2;
-wire    ap_channel_done_tmp_1;
-wire    tmp_1_full_n;
-reg    ap_sync_reg_channel_write_tmp_1;
-wire    ap_sync_channel_write_tmp_1;
-wire    store_tile_mm_Block_entry23_proc_U0_ap_start;
-wire    store_tile_mm_Block_entry23_proc_U0_ap_done;
-wire    store_tile_mm_Block_entry23_proc_U0_ap_continue;
-wire    store_tile_mm_Block_entry23_proc_U0_ap_idle;
-wire    store_tile_mm_Block_entry23_proc_U0_ap_ready;
-wire    store_tile_mm_Block_entry23_proc_U0_phase_read;
-wire   [63:0] store_tile_mm_Block_entry23_proc_U0_ap_return_0;
-wire   [9:0] store_tile_mm_Block_entry23_proc_U0_ap_return_1;
-wire   [63:0] store_tile_mm_Block_entry23_proc_U0_ap_return_2;
-wire   [31:0] store_tile_mm_Block_entry23_proc_U0_ap_return_3;
-wire    ap_channel_done_p_cast_loc_i_i_channel;
-wire    p_cast_loc_i_i_channel_full_n;
-reg    ap_sync_reg_channel_write_p_cast_loc_i_i_channel;
-wire    ap_sync_channel_write_p_cast_loc_i_i_channel;
-wire    ap_channel_done_shl_ln333_cast_loc_i_i_channel;
-wire    shl_ln333_cast_loc_i_i_channel_full_n;
-reg    ap_sync_reg_channel_write_shl_ln333_cast_loc_i_i_channel;
-wire    ap_sync_channel_write_shl_ln333_cast_loc_i_i_channel;
-wire    ap_channel_done_h0_cast6_loc_i_i_channel;
-wire    h0_cast6_loc_i_i_channel_full_n;
-reg    ap_sync_reg_channel_write_h0_cast6_loc_i_i_channel;
-wire    ap_sync_channel_write_h0_cast6_loc_i_i_channel;
-wire    ap_channel_done_out_tile_offset_cast_loc_i_i_channel;
-wire    out_tile_offset_cast_loc_i_i_channel_full_n;
-reg    ap_sync_reg_channel_write_out_tile_offset_cast_loc_i_i_channel;
-wire    ap_sync_channel_write_out_tile_offset_cast_loc_i_i_channel;
-wire    store_tile_mm_Loop_Out_writey_proc_U0_ap_start;
-wire    store_tile_mm_Loop_Out_writey_proc_U0_ap_done;
-wire    store_tile_mm_Loop_Out_writey_proc_U0_ap_continue;
-wire    store_tile_mm_Loop_Out_writey_proc_U0_ap_idle;
-wire    store_tile_mm_Loop_Out_writey_proc_U0_ap_ready;
-wire    store_tile_mm_Loop_Out_writey_proc_U0_output_ftmap_read;
-wire    store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_AWVALID;
-wire   [63:0] store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_AWADDR;
-wire   [0:0] store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_AWID;
-wire   [31:0] store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_AWLEN;
-wire   [2:0] store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_AWSIZE;
-wire   [1:0] store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_AWBURST;
-wire   [1:0] store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_AWLOCK;
-wire   [3:0] store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_AWCACHE;
-wire   [2:0] store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_AWPROT;
-wire   [3:0] store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_AWQOS;
-wire   [3:0] store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_AWREGION;
-wire   [0:0] store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_AWUSER;
-wire    store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_WVALID;
-wire   [31:0] store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_WDATA;
-wire   [3:0] store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_WSTRB;
-wire    store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_WLAST;
-wire   [0:0] store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_WID;
-wire   [0:0] store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_WUSER;
-wire    store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_ARVALID;
-wire   [63:0] store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_ARADDR;
-wire   [0:0] store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_ARID;
-wire   [31:0] store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_ARLEN;
-wire   [2:0] store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_ARSIZE;
-wire   [1:0] store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_ARBURST;
-wire   [1:0] store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_ARLOCK;
-wire   [3:0] store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_ARCACHE;
-wire   [2:0] store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_ARPROT;
-wire   [3:0] store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_ARQOS;
-wire   [3:0] store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_ARREGION;
-wire   [0:0] store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_ARUSER;
-wire    store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_RREADY;
-wire    store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_BREADY;
-wire   [8:0] store_tile_mm_Loop_Out_writey_proc_U0_outbuf_address0;
-wire    store_tile_mm_Loop_Out_writey_proc_U0_outbuf_ce0;
-wire    store_tile_mm_Loop_Out_writey_proc_U0_outbuf_write;
-wire   [8:0] tmp_1_dout;
-wire   [2:0] tmp_1_num_data_valid;
-wire   [2:0] tmp_1_fifo_cap;
-wire    tmp_1_empty_n;
-wire   [8:0] tmp_2_dout;
-wire   [1:0] tmp_2_num_data_valid;
-wire   [1:0] tmp_2_fifo_cap;
-wire    tmp_2_empty_n;
-wire   [8:0] tmp_3_dout;
-wire   [1:0] tmp_3_num_data_valid;
-wire   [1:0] tmp_3_fifo_cap;
-wire    tmp_3_empty_n;
-wire   [8:0] tmp_4_dout;
-wire   [2:0] tmp_4_num_data_valid;
-wire   [2:0] tmp_4_fifo_cap;
-wire    tmp_4_empty_n;
-wire   [63:0] out_tile_offset_cast_loc_i_i_channel_dout;
-wire   [1:0] out_tile_offset_cast_loc_i_i_channel_num_data_valid;
-wire   [1:0] out_tile_offset_cast_loc_i_i_channel_fifo_cap;
-wire    out_tile_offset_cast_loc_i_i_channel_empty_n;
-wire   [9:0] h0_cast6_loc_i_i_channel_dout;
-wire   [1:0] h0_cast6_loc_i_i_channel_num_data_valid;
-wire   [1:0] h0_cast6_loc_i_i_channel_fifo_cap;
-wire    h0_cast6_loc_i_i_channel_empty_n;
-wire   [63:0] shl_ln333_cast_loc_i_i_channel_dout;
-wire   [1:0] shl_ln333_cast_loc_i_i_channel_num_data_valid;
-wire   [1:0] shl_ln333_cast_loc_i_i_channel_fifo_cap;
-wire    shl_ln333_cast_loc_i_i_channel_empty_n;
-wire   [31:0] p_cast_loc_i_i_channel_dout;
-wire   [1:0] p_cast_loc_i_i_channel_num_data_valid;
-wire   [1:0] p_cast_loc_i_i_channel_fifo_cap;
-wire    p_cast_loc_i_i_channel_empty_n;
-wire    ap_sync_ready;
-reg    ap_sync_reg_entry_proc_U0_ap_ready;
-wire    ap_sync_entry_proc_U0_ap_ready;
-reg    ap_sync_reg_store_tile_mm_Loop_Out_writey_proc_U0_ap_ready;
-wire    ap_sync_store_tile_mm_Loop_Out_writey_proc_U0_ap_ready;
+reg ap_done;
+reg ap_idle;
+reg ap_ready;
+reg m_axi_gmem_out_AWVALID;
+reg m_axi_gmem_out_WVALID;
+reg m_axi_gmem_out_BREADY;
+reg output_ftmap_read;
+
+reg    ap_done_reg;
+(* fsm_encoding = "none" *) reg   [2:0] ap_CS_fsm;
+wire    ap_CS_fsm_state1;
+reg    output_ftmap_blk_n;
+wire    ap_CS_fsm_state2;
+reg    ap_block_state1;
+wire   [7:0] th_eff_fu_138_p3;
+reg   [7:0] th_eff_reg_224;
+wire   [7:0] tw_eff_fu_170_p3;
+reg   [7:0] tw_eff_reg_229;
+reg   [63:0] out_reg_236;
+wire   [4:0] tmp_fu_184_p3;
+reg   [4:0] tmp_reg_241;
+wire   [10:0] tmp_1_fu_193_p3;
+reg   [10:0] tmp_1_reg_246;
+wire   [15:0] bound_fu_207_p2;
+reg   [15:0] bound_reg_251;
+wire    grp_store_tile_mm_Pipeline_Out_writex_fu_98_ap_start;
+wire    grp_store_tile_mm_Pipeline_Out_writex_fu_98_ap_done;
+wire    grp_store_tile_mm_Pipeline_Out_writex_fu_98_ap_idle;
+wire    grp_store_tile_mm_Pipeline_Out_writex_fu_98_ap_ready;
+wire    grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_AWVALID;
+wire   [63:0] grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_AWADDR;
+wire   [0:0] grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_AWID;
+wire   [31:0] grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_AWLEN;
+wire   [2:0] grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_AWSIZE;
+wire   [1:0] grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_AWBURST;
+wire   [1:0] grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_AWLOCK;
+wire   [3:0] grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_AWCACHE;
+wire   [2:0] grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_AWPROT;
+wire   [3:0] grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_AWQOS;
+wire   [3:0] grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_AWREGION;
+wire   [0:0] grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_AWUSER;
+wire    grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_WVALID;
+wire   [31:0] grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_WDATA;
+wire   [3:0] grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_WSTRB;
+wire    grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_WLAST;
+wire   [0:0] grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_WID;
+wire   [0:0] grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_WUSER;
+wire    grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_ARVALID;
+wire   [63:0] grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_ARADDR;
+wire   [0:0] grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_ARID;
+wire   [31:0] grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_ARLEN;
+wire   [2:0] grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_ARSIZE;
+wire   [1:0] grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_ARBURST;
+wire   [1:0] grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_ARLOCK;
+wire   [3:0] grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_ARCACHE;
+wire   [2:0] grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_ARPROT;
+wire   [3:0] grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_ARQOS;
+wire   [3:0] grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_ARREGION;
+wire   [0:0] grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_ARUSER;
+wire    grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_RREADY;
+wire    grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_BREADY;
+wire   [8:0] grp_store_tile_mm_Pipeline_Out_writex_fu_98_outbuf_address0;
+wire    grp_store_tile_mm_Pipeline_Out_writex_fu_98_outbuf_ce0;
+reg    grp_store_tile_mm_Pipeline_Out_writex_fu_98_ap_start_reg;
+wire    ap_CS_fsm_state3;
+wire   [8:0] add_ln534_fu_114_p2;
+wire   [7:0] trunc_ln533_fu_128_p1;
+wire   [0:0] tmp_2_fu_120_p3;
+wire   [7:0] xor_ln534_fu_132_p2;
+wire   [8:0] add_ln537_fu_146_p2;
+wire   [7:0] trunc_ln536_fu_160_p1;
+wire   [0:0] tmp_3_fu_152_p3;
+wire   [7:0] xor_ln537_fu_164_p2;
+wire   [0:0] xor_ln543_fu_178_p2;
+wire   [7:0] bound_fu_207_p0;
+wire   [7:0] bound_fu_207_p1;
+reg   [2:0] ap_NS_fsm;
+reg    ap_ST_fsm_state1_blk;
+reg    ap_ST_fsm_state2_blk;
+reg    ap_ST_fsm_state3_blk;
+wire   [15:0] bound_fu_207_p00;
+wire   [15:0] bound_fu_207_p10;
 wire    ap_ce_reg;
 
 // power-on initialization
 initial begin
-#0 ap_sync_reg_channel_write_tmp_4 = 1'b0;
-#0 ap_sync_reg_channel_write_tmp_3 = 1'b0;
-#0 ap_sync_reg_channel_write_tmp_2 = 1'b0;
-#0 ap_sync_reg_channel_write_tmp_1 = 1'b0;
-#0 ap_sync_reg_channel_write_p_cast_loc_i_i_channel = 1'b0;
-#0 ap_sync_reg_channel_write_shl_ln333_cast_loc_i_i_channel = 1'b0;
-#0 ap_sync_reg_channel_write_h0_cast6_loc_i_i_channel = 1'b0;
-#0 ap_sync_reg_channel_write_out_tile_offset_cast_loc_i_i_channel = 1'b0;
-#0 ap_sync_reg_entry_proc_U0_ap_ready = 1'b0;
-#0 ap_sync_reg_store_tile_mm_Loop_Out_writey_proc_U0_ap_ready = 1'b0;
+#0 ap_done_reg = 1'b0;
+#0 ap_CS_fsm = 3'd1;
+#0 grp_store_tile_mm_Pipeline_Out_writex_fu_98_ap_start_reg = 1'b0;
 end
 
-srcnn_entry_proc entry_proc_U0(
+srcnn_store_tile_mm_Pipeline_Out_writex grp_store_tile_mm_Pipeline_Out_writex_fu_98(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst),
-    .ap_start(entry_proc_U0_ap_start),
-    .ap_done(entry_proc_U0_ap_done),
-    .ap_continue(entry_proc_U0_ap_continue),
-    .ap_idle(entry_proc_U0_ap_idle),
-    .ap_ready(entry_proc_U0_ap_ready),
-    .h0_dout(h0_dout),
-    .h0_num_data_valid(2'd0),
-    .h0_fifo_cap(2'd0),
-    .h0_empty_n(h0_empty_n),
-    .h0_read(entry_proc_U0_h0_read),
-    .w0_dout(w0_dout),
-    .w0_num_data_valid(2'd0),
-    .w0_fifo_cap(2'd0),
-    .w0_empty_n(w0_empty_n),
-    .w0_read(entry_proc_U0_w0_read),
-    .ap_return_0(entry_proc_U0_ap_return_0),
-    .ap_return_1(entry_proc_U0_ap_return_1),
-    .ap_return_2(entry_proc_U0_ap_return_2),
-    .ap_return_3(entry_proc_U0_ap_return_3)
-);
-
-srcnn_store_tile_mm_Block_entry23_proc store_tile_mm_Block_entry23_proc_U0(
-    .ap_clk(ap_clk),
-    .ap_rst(ap_rst),
-    .ap_start(store_tile_mm_Block_entry23_proc_U0_ap_start),
-    .ap_done(store_tile_mm_Block_entry23_proc_U0_ap_done),
-    .ap_continue(store_tile_mm_Block_entry23_proc_U0_ap_continue),
-    .ap_idle(store_tile_mm_Block_entry23_proc_U0_ap_idle),
-    .ap_ready(store_tile_mm_Block_entry23_proc_U0_ap_ready),
-    .phase_dout(phase_dout),
-    .phase_num_data_valid(2'd0),
-    .phase_fifo_cap(2'd0),
-    .phase_empty_n(phase_empty_n),
-    .phase_read(store_tile_mm_Block_entry23_proc_U0_phase_read),
-    .h0(tmp_3_dout),
-    .w0(tmp_2_dout),
-    .ap_return_0(store_tile_mm_Block_entry23_proc_U0_ap_return_0),
-    .ap_return_1(store_tile_mm_Block_entry23_proc_U0_ap_return_1),
-    .ap_return_2(store_tile_mm_Block_entry23_proc_U0_ap_return_2),
-    .ap_return_3(store_tile_mm_Block_entry23_proc_U0_ap_return_3)
-);
-
-srcnn_store_tile_mm_Loop_Out_writey_proc store_tile_mm_Loop_Out_writey_proc_U0(
-    .ap_clk(ap_clk),
-    .ap_rst(ap_rst),
-    .ap_start(store_tile_mm_Loop_Out_writey_proc_U0_ap_start),
-    .ap_done(store_tile_mm_Loop_Out_writey_proc_U0_ap_done),
-    .ap_continue(store_tile_mm_Loop_Out_writey_proc_U0_ap_continue),
-    .ap_idle(store_tile_mm_Loop_Out_writey_proc_U0_ap_idle),
-    .ap_ready(store_tile_mm_Loop_Out_writey_proc_U0_ap_ready),
-    .p_read(h0_cast6_loc_i_i_channel_dout),
-    .p_read1(shl_ln333_cast_loc_i_i_channel_dout),
-    .output_ftmap_dout(output_ftmap_dout),
-    .output_ftmap_num_data_valid(3'd0),
-    .output_ftmap_fifo_cap(3'd0),
-    .output_ftmap_empty_n(output_ftmap_empty_n),
-    .output_ftmap_read(store_tile_mm_Loop_Out_writey_proc_U0_output_ftmap_read),
-    .h0(tmp_4_dout),
-    .w0(tmp_1_dout),
-    .m_axi_gmem_out_AWVALID(store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_AWVALID),
+    .ap_start(grp_store_tile_mm_Pipeline_Out_writex_fu_98_ap_start),
+    .ap_done(grp_store_tile_mm_Pipeline_Out_writex_fu_98_ap_done),
+    .ap_idle(grp_store_tile_mm_Pipeline_Out_writex_fu_98_ap_idle),
+    .ap_ready(grp_store_tile_mm_Pipeline_Out_writex_fu_98_ap_ready),
+    .m_axi_gmem_out_AWVALID(grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_AWVALID),
     .m_axi_gmem_out_AWREADY(m_axi_gmem_out_AWREADY),
-    .m_axi_gmem_out_AWADDR(store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_AWADDR),
-    .m_axi_gmem_out_AWID(store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_AWID),
-    .m_axi_gmem_out_AWLEN(store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_AWLEN),
-    .m_axi_gmem_out_AWSIZE(store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_AWSIZE),
-    .m_axi_gmem_out_AWBURST(store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_AWBURST),
-    .m_axi_gmem_out_AWLOCK(store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_AWLOCK),
-    .m_axi_gmem_out_AWCACHE(store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_AWCACHE),
-    .m_axi_gmem_out_AWPROT(store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_AWPROT),
-    .m_axi_gmem_out_AWQOS(store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_AWQOS),
-    .m_axi_gmem_out_AWREGION(store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_AWREGION),
-    .m_axi_gmem_out_AWUSER(store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_AWUSER),
-    .m_axi_gmem_out_WVALID(store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_WVALID),
+    .m_axi_gmem_out_AWADDR(grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_AWADDR),
+    .m_axi_gmem_out_AWID(grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_AWID),
+    .m_axi_gmem_out_AWLEN(grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_AWLEN),
+    .m_axi_gmem_out_AWSIZE(grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_AWSIZE),
+    .m_axi_gmem_out_AWBURST(grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_AWBURST),
+    .m_axi_gmem_out_AWLOCK(grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_AWLOCK),
+    .m_axi_gmem_out_AWCACHE(grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_AWCACHE),
+    .m_axi_gmem_out_AWPROT(grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_AWPROT),
+    .m_axi_gmem_out_AWQOS(grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_AWQOS),
+    .m_axi_gmem_out_AWREGION(grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_AWREGION),
+    .m_axi_gmem_out_AWUSER(grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_AWUSER),
+    .m_axi_gmem_out_WVALID(grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_WVALID),
     .m_axi_gmem_out_WREADY(m_axi_gmem_out_WREADY),
-    .m_axi_gmem_out_WDATA(store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_WDATA),
-    .m_axi_gmem_out_WSTRB(store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_WSTRB),
-    .m_axi_gmem_out_WLAST(store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_WLAST),
-    .m_axi_gmem_out_WID(store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_WID),
-    .m_axi_gmem_out_WUSER(store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_WUSER),
-    .m_axi_gmem_out_ARVALID(store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_ARVALID),
+    .m_axi_gmem_out_WDATA(grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_WDATA),
+    .m_axi_gmem_out_WSTRB(grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_WSTRB),
+    .m_axi_gmem_out_WLAST(grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_WLAST),
+    .m_axi_gmem_out_WID(grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_WID),
+    .m_axi_gmem_out_WUSER(grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_WUSER),
+    .m_axi_gmem_out_ARVALID(grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_ARVALID),
     .m_axi_gmem_out_ARREADY(1'b0),
-    .m_axi_gmem_out_ARADDR(store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_ARADDR),
-    .m_axi_gmem_out_ARID(store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_ARID),
-    .m_axi_gmem_out_ARLEN(store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_ARLEN),
-    .m_axi_gmem_out_ARSIZE(store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_ARSIZE),
-    .m_axi_gmem_out_ARBURST(store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_ARBURST),
-    .m_axi_gmem_out_ARLOCK(store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_ARLOCK),
-    .m_axi_gmem_out_ARCACHE(store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_ARCACHE),
-    .m_axi_gmem_out_ARPROT(store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_ARPROT),
-    .m_axi_gmem_out_ARQOS(store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_ARQOS),
-    .m_axi_gmem_out_ARREGION(store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_ARREGION),
-    .m_axi_gmem_out_ARUSER(store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_ARUSER),
+    .m_axi_gmem_out_ARADDR(grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_ARADDR),
+    .m_axi_gmem_out_ARID(grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_ARID),
+    .m_axi_gmem_out_ARLEN(grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_ARLEN),
+    .m_axi_gmem_out_ARSIZE(grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_ARSIZE),
+    .m_axi_gmem_out_ARBURST(grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_ARBURST),
+    .m_axi_gmem_out_ARLOCK(grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_ARLOCK),
+    .m_axi_gmem_out_ARCACHE(grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_ARCACHE),
+    .m_axi_gmem_out_ARPROT(grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_ARPROT),
+    .m_axi_gmem_out_ARQOS(grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_ARQOS),
+    .m_axi_gmem_out_ARREGION(grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_ARREGION),
+    .m_axi_gmem_out_ARUSER(grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_ARUSER),
     .m_axi_gmem_out_RVALID(1'b0),
-    .m_axi_gmem_out_RREADY(store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_RREADY),
+    .m_axi_gmem_out_RREADY(grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_RREADY),
     .m_axi_gmem_out_RDATA(32'd0),
     .m_axi_gmem_out_RLAST(1'b0),
     .m_axi_gmem_out_RID(1'd0),
@@ -406,306 +282,222 @@ srcnn_store_tile_mm_Loop_Out_writey_proc store_tile_mm_Loop_Out_writey_proc_U0(
     .m_axi_gmem_out_RUSER(1'd0),
     .m_axi_gmem_out_RRESP(2'd0),
     .m_axi_gmem_out_BVALID(m_axi_gmem_out_BVALID),
-    .m_axi_gmem_out_BREADY(store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_BREADY),
+    .m_axi_gmem_out_BREADY(grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_BREADY),
     .m_axi_gmem_out_BRESP(m_axi_gmem_out_BRESP),
     .m_axi_gmem_out_BID(m_axi_gmem_out_BID),
     .m_axi_gmem_out_BUSER(m_axi_gmem_out_BUSER),
-    .p_read2(p_cast_loc_i_i_channel_dout),
-    .p_read3(out_tile_offset_cast_loc_i_i_channel_dout),
-    .outbuf_address0(store_tile_mm_Loop_Out_writey_proc_U0_outbuf_address0),
-    .outbuf_ce0(store_tile_mm_Loop_Out_writey_proc_U0_outbuf_ce0),
+    .zext_ln338(p_read1),
+    .bound(bound_reg_251),
+    .tw_eff(tw_eff_reg_229),
+    .zext_ln338_2(tw_eff_reg_229),
+    .zext_ln344(tmp_reg_241),
+    .zext_ln338_1(tmp_1_reg_246),
+    .out_r(out_reg_236),
+    .outbuf_address0(grp_store_tile_mm_Pipeline_Out_writex_fu_98_outbuf_address0),
+    .outbuf_ce0(grp_store_tile_mm_Pipeline_Out_writex_fu_98_outbuf_ce0),
     .outbuf_q0(outbuf_q0)
 );
 
-srcnn_fifo_w9_d3_S tmp_1_U(
-    .clk(ap_clk),
-    .reset(ap_rst),
-    .if_read_ce(1'b1),
-    .if_write_ce(1'b1),
-    .if_din(entry_proc_U0_ap_return_3),
-    .if_full_n(tmp_1_full_n),
-    .if_write(ap_channel_done_tmp_1),
-    .if_dout(tmp_1_dout),
-    .if_num_data_valid(tmp_1_num_data_valid),
-    .if_fifo_cap(tmp_1_fifo_cap),
-    .if_empty_n(tmp_1_empty_n),
-    .if_read(store_tile_mm_Loop_Out_writey_proc_U0_ap_ready)
-);
-
-srcnn_fifo_w9_d2_S_x0 tmp_2_U(
-    .clk(ap_clk),
-    .reset(ap_rst),
-    .if_read_ce(1'b1),
-    .if_write_ce(1'b1),
-    .if_din(entry_proc_U0_ap_return_2),
-    .if_full_n(tmp_2_full_n),
-    .if_write(ap_channel_done_tmp_2),
-    .if_dout(tmp_2_dout),
-    .if_num_data_valid(tmp_2_num_data_valid),
-    .if_fifo_cap(tmp_2_fifo_cap),
-    .if_empty_n(tmp_2_empty_n),
-    .if_read(store_tile_mm_Block_entry23_proc_U0_ap_ready)
-);
-
-srcnn_fifo_w9_d2_S_x0 tmp_3_U(
-    .clk(ap_clk),
-    .reset(ap_rst),
-    .if_read_ce(1'b1),
-    .if_write_ce(1'b1),
-    .if_din(entry_proc_U0_ap_return_1),
-    .if_full_n(tmp_3_full_n),
-    .if_write(ap_channel_done_tmp_3),
-    .if_dout(tmp_3_dout),
-    .if_num_data_valid(tmp_3_num_data_valid),
-    .if_fifo_cap(tmp_3_fifo_cap),
-    .if_empty_n(tmp_3_empty_n),
-    .if_read(store_tile_mm_Block_entry23_proc_U0_ap_ready)
-);
-
-srcnn_fifo_w9_d3_S tmp_4_U(
-    .clk(ap_clk),
-    .reset(ap_rst),
-    .if_read_ce(1'b1),
-    .if_write_ce(1'b1),
-    .if_din(entry_proc_U0_ap_return_0),
-    .if_full_n(tmp_4_full_n),
-    .if_write(ap_channel_done_tmp_4),
-    .if_dout(tmp_4_dout),
-    .if_num_data_valid(tmp_4_num_data_valid),
-    .if_fifo_cap(tmp_4_fifo_cap),
-    .if_empty_n(tmp_4_empty_n),
-    .if_read(store_tile_mm_Loop_Out_writey_proc_U0_ap_ready)
-);
-
-srcnn_fifo_w64_d2_S_x0 out_tile_offset_cast_loc_i_i_channel_U(
-    .clk(ap_clk),
-    .reset(ap_rst),
-    .if_read_ce(1'b1),
-    .if_write_ce(1'b1),
-    .if_din(store_tile_mm_Block_entry23_proc_U0_ap_return_0),
-    .if_full_n(out_tile_offset_cast_loc_i_i_channel_full_n),
-    .if_write(ap_channel_done_out_tile_offset_cast_loc_i_i_channel),
-    .if_dout(out_tile_offset_cast_loc_i_i_channel_dout),
-    .if_num_data_valid(out_tile_offset_cast_loc_i_i_channel_num_data_valid),
-    .if_fifo_cap(out_tile_offset_cast_loc_i_i_channel_fifo_cap),
-    .if_empty_n(out_tile_offset_cast_loc_i_i_channel_empty_n),
-    .if_read(store_tile_mm_Loop_Out_writey_proc_U0_ap_ready)
-);
-
-srcnn_fifo_w10_d2_S_x0 h0_cast6_loc_i_i_channel_U(
-    .clk(ap_clk),
-    .reset(ap_rst),
-    .if_read_ce(1'b1),
-    .if_write_ce(1'b1),
-    .if_din(store_tile_mm_Block_entry23_proc_U0_ap_return_1),
-    .if_full_n(h0_cast6_loc_i_i_channel_full_n),
-    .if_write(ap_channel_done_h0_cast6_loc_i_i_channel),
-    .if_dout(h0_cast6_loc_i_i_channel_dout),
-    .if_num_data_valid(h0_cast6_loc_i_i_channel_num_data_valid),
-    .if_fifo_cap(h0_cast6_loc_i_i_channel_fifo_cap),
-    .if_empty_n(h0_cast6_loc_i_i_channel_empty_n),
-    .if_read(store_tile_mm_Loop_Out_writey_proc_U0_ap_ready)
-);
-
-srcnn_fifo_w64_d2_S_x0 shl_ln333_cast_loc_i_i_channel_U(
-    .clk(ap_clk),
-    .reset(ap_rst),
-    .if_read_ce(1'b1),
-    .if_write_ce(1'b1),
-    .if_din(store_tile_mm_Block_entry23_proc_U0_ap_return_2),
-    .if_full_n(shl_ln333_cast_loc_i_i_channel_full_n),
-    .if_write(ap_channel_done_shl_ln333_cast_loc_i_i_channel),
-    .if_dout(shl_ln333_cast_loc_i_i_channel_dout),
-    .if_num_data_valid(shl_ln333_cast_loc_i_i_channel_num_data_valid),
-    .if_fifo_cap(shl_ln333_cast_loc_i_i_channel_fifo_cap),
-    .if_empty_n(shl_ln333_cast_loc_i_i_channel_empty_n),
-    .if_read(store_tile_mm_Loop_Out_writey_proc_U0_ap_ready)
-);
-
-srcnn_fifo_w32_d2_S_x p_cast_loc_i_i_channel_U(
-    .clk(ap_clk),
-    .reset(ap_rst),
-    .if_read_ce(1'b1),
-    .if_write_ce(1'b1),
-    .if_din(store_tile_mm_Block_entry23_proc_U0_ap_return_3),
-    .if_full_n(p_cast_loc_i_i_channel_full_n),
-    .if_write(ap_channel_done_p_cast_loc_i_i_channel),
-    .if_dout(p_cast_loc_i_i_channel_dout),
-    .if_num_data_valid(p_cast_loc_i_i_channel_num_data_valid),
-    .if_fifo_cap(p_cast_loc_i_i_channel_fifo_cap),
-    .if_empty_n(p_cast_loc_i_i_channel_empty_n),
-    .if_read(store_tile_mm_Loop_Out_writey_proc_U0_ap_ready)
+srcnn_mul_8ns_8ns_16_1_1 #(
+    .ID( 1 ),
+    .NUM_STAGE( 1 ),
+    .din0_WIDTH( 8 ),
+    .din1_WIDTH( 8 ),
+    .dout_WIDTH( 16 ))
+mul_8ns_8ns_16_1_1_U1959(
+    .din0(bound_fu_207_p0),
+    .din1(bound_fu_207_p1),
+    .dout(bound_fu_207_p2)
 );
 
 always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
-        ap_sync_reg_channel_write_h0_cast6_loc_i_i_channel <= 1'b0;
+        ap_CS_fsm <= ap_ST_fsm_state1;
     end else begin
-        if (((store_tile_mm_Block_entry23_proc_U0_ap_done & store_tile_mm_Block_entry23_proc_U0_ap_continue) == 1'b1)) begin
-            ap_sync_reg_channel_write_h0_cast6_loc_i_i_channel <= 1'b0;
-        end else begin
-            ap_sync_reg_channel_write_h0_cast6_loc_i_i_channel <= ap_sync_channel_write_h0_cast6_loc_i_i_channel;
+        ap_CS_fsm <= ap_NS_fsm;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst == 1'b1) begin
+        ap_done_reg <= 1'b0;
+    end else begin
+        if ((ap_continue == 1'b1)) begin
+            ap_done_reg <= 1'b0;
+        end else if (((1'b1 == ap_CS_fsm_state3) & (grp_store_tile_mm_Pipeline_Out_writex_fu_98_ap_done == 1'b1))) begin
+            ap_done_reg <= 1'b1;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
-        ap_sync_reg_channel_write_out_tile_offset_cast_loc_i_i_channel <= 1'b0;
+        grp_store_tile_mm_Pipeline_Out_writex_fu_98_ap_start_reg <= 1'b0;
     end else begin
-        if (((store_tile_mm_Block_entry23_proc_U0_ap_done & store_tile_mm_Block_entry23_proc_U0_ap_continue) == 1'b1)) begin
-            ap_sync_reg_channel_write_out_tile_offset_cast_loc_i_i_channel <= 1'b0;
-        end else begin
-            ap_sync_reg_channel_write_out_tile_offset_cast_loc_i_i_channel <= ap_sync_channel_write_out_tile_offset_cast_loc_i_i_channel;
+        if (((output_ftmap_empty_n == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
+            grp_store_tile_mm_Pipeline_Out_writex_fu_98_ap_start_reg <= 1'b1;
+        end else if ((grp_store_tile_mm_Pipeline_Out_writex_fu_98_ap_ready == 1'b1)) begin
+            grp_store_tile_mm_Pipeline_Out_writex_fu_98_ap_start_reg <= 1'b0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (ap_rst == 1'b1) begin
-        ap_sync_reg_channel_write_p_cast_loc_i_i_channel <= 1'b0;
-    end else begin
-        if (((store_tile_mm_Block_entry23_proc_U0_ap_done & store_tile_mm_Block_entry23_proc_U0_ap_continue) == 1'b1)) begin
-            ap_sync_reg_channel_write_p_cast_loc_i_i_channel <= 1'b0;
-        end else begin
-            ap_sync_reg_channel_write_p_cast_loc_i_i_channel <= ap_sync_channel_write_p_cast_loc_i_i_channel;
-        end
+    if (((output_ftmap_empty_n == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
+        bound_reg_251 <= bound_fu_207_p2;
+        out_reg_236 <= output_ftmap_dout;
+        tmp_1_reg_246[10 : 2] <= tmp_1_fu_193_p3[10 : 2];
+        tmp_reg_241[4] <= tmp_fu_184_p3[4];
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (ap_rst == 1'b1) begin
-        ap_sync_reg_channel_write_shl_ln333_cast_loc_i_i_channel <= 1'b0;
-    end else begin
-        if (((store_tile_mm_Block_entry23_proc_U0_ap_done & store_tile_mm_Block_entry23_proc_U0_ap_continue) == 1'b1)) begin
-            ap_sync_reg_channel_write_shl_ln333_cast_loc_i_i_channel <= 1'b0;
-        end else begin
-            ap_sync_reg_channel_write_shl_ln333_cast_loc_i_i_channel <= ap_sync_channel_write_shl_ln333_cast_loc_i_i_channel;
-        end
+    if ((~((ap_start == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
+        th_eff_reg_224 <= th_eff_fu_138_p3;
+        tw_eff_reg_229 <= tw_eff_fu_170_p3;
     end
 end
 
-always @ (posedge ap_clk) begin
-    if (ap_rst == 1'b1) begin
-        ap_sync_reg_channel_write_tmp_1 <= 1'b0;
+always @ (*) begin
+    if (((ap_start == 1'b0) | (ap_done_reg == 1'b1))) begin
+        ap_ST_fsm_state1_blk = 1'b1;
     end else begin
-        if (((entry_proc_U0_ap_done & entry_proc_U0_ap_continue) == 1'b1)) begin
-            ap_sync_reg_channel_write_tmp_1 <= 1'b0;
-        end else begin
-            ap_sync_reg_channel_write_tmp_1 <= ap_sync_channel_write_tmp_1;
-        end
+        ap_ST_fsm_state1_blk = 1'b0;
     end
 end
 
-always @ (posedge ap_clk) begin
-    if (ap_rst == 1'b1) begin
-        ap_sync_reg_channel_write_tmp_2 <= 1'b0;
+always @ (*) begin
+    if ((output_ftmap_empty_n == 1'b0)) begin
+        ap_ST_fsm_state2_blk = 1'b1;
     end else begin
-        if (((entry_proc_U0_ap_done & entry_proc_U0_ap_continue) == 1'b1)) begin
-            ap_sync_reg_channel_write_tmp_2 <= 1'b0;
-        end else begin
-            ap_sync_reg_channel_write_tmp_2 <= ap_sync_channel_write_tmp_2;
-        end
+        ap_ST_fsm_state2_blk = 1'b0;
     end
 end
 
-always @ (posedge ap_clk) begin
-    if (ap_rst == 1'b1) begin
-        ap_sync_reg_channel_write_tmp_3 <= 1'b0;
+always @ (*) begin
+    if ((grp_store_tile_mm_Pipeline_Out_writex_fu_98_ap_done == 1'b0)) begin
+        ap_ST_fsm_state3_blk = 1'b1;
     end else begin
-        if (((entry_proc_U0_ap_done & entry_proc_U0_ap_continue) == 1'b1)) begin
-            ap_sync_reg_channel_write_tmp_3 <= 1'b0;
-        end else begin
-            ap_sync_reg_channel_write_tmp_3 <= ap_sync_channel_write_tmp_3;
-        end
+        ap_ST_fsm_state3_blk = 1'b0;
     end
 end
 
-always @ (posedge ap_clk) begin
-    if (ap_rst == 1'b1) begin
-        ap_sync_reg_channel_write_tmp_4 <= 1'b0;
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state3) & (grp_store_tile_mm_Pipeline_Out_writex_fu_98_ap_done == 1'b1))) begin
+        ap_done = 1'b1;
     end else begin
-        if (((entry_proc_U0_ap_done & entry_proc_U0_ap_continue) == 1'b1)) begin
-            ap_sync_reg_channel_write_tmp_4 <= 1'b0;
-        end else begin
-            ap_sync_reg_channel_write_tmp_4 <= ap_sync_channel_write_tmp_4;
-        end
+        ap_done = ap_done_reg;
     end
 end
 
-always @ (posedge ap_clk) begin
-    if (ap_rst == 1'b1) begin
-        ap_sync_reg_entry_proc_U0_ap_ready <= 1'b0;
+always @ (*) begin
+    if (((ap_start == 1'b0) & (1'b1 == ap_CS_fsm_state1))) begin
+        ap_idle = 1'b1;
     end else begin
-        if (((ap_sync_ready & ap_start) == 1'b1)) begin
-            ap_sync_reg_entry_proc_U0_ap_ready <= 1'b0;
-        end else begin
-            ap_sync_reg_entry_proc_U0_ap_ready <= ap_sync_entry_proc_U0_ap_ready;
-        end
+        ap_idle = 1'b0;
     end
 end
 
-always @ (posedge ap_clk) begin
-    if (ap_rst == 1'b1) begin
-        ap_sync_reg_store_tile_mm_Loop_Out_writey_proc_U0_ap_ready <= 1'b0;
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state3) & (grp_store_tile_mm_Pipeline_Out_writex_fu_98_ap_done == 1'b1))) begin
+        ap_ready = 1'b1;
     end else begin
-        if (((ap_sync_ready & ap_start) == 1'b1)) begin
-            ap_sync_reg_store_tile_mm_Loop_Out_writey_proc_U0_ap_ready <= 1'b0;
-        end else begin
-            ap_sync_reg_store_tile_mm_Loop_Out_writey_proc_U0_ap_ready <= ap_sync_store_tile_mm_Loop_Out_writey_proc_U0_ap_ready;
-        end
+        ap_ready = 1'b0;
     end
 end
 
-assign ap_channel_done_h0_cast6_loc_i_i_channel = (store_tile_mm_Block_entry23_proc_U0_ap_done & (ap_sync_reg_channel_write_h0_cast6_loc_i_i_channel ^ 1'b1));
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state3) | (1'b1 == ap_CS_fsm_state2))) begin
+        m_axi_gmem_out_AWVALID = grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_AWVALID;
+    end else begin
+        m_axi_gmem_out_AWVALID = 1'b0;
+    end
+end
 
-assign ap_channel_done_out_tile_offset_cast_loc_i_i_channel = (store_tile_mm_Block_entry23_proc_U0_ap_done & (ap_sync_reg_channel_write_out_tile_offset_cast_loc_i_i_channel ^ 1'b1));
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state3) | (1'b1 == ap_CS_fsm_state2))) begin
+        m_axi_gmem_out_BREADY = grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_BREADY;
+    end else begin
+        m_axi_gmem_out_BREADY = 1'b0;
+    end
+end
 
-assign ap_channel_done_p_cast_loc_i_i_channel = (store_tile_mm_Block_entry23_proc_U0_ap_done & (ap_sync_reg_channel_write_p_cast_loc_i_i_channel ^ 1'b1));
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state3) | (1'b1 == ap_CS_fsm_state2))) begin
+        m_axi_gmem_out_WVALID = grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_WVALID;
+    end else begin
+        m_axi_gmem_out_WVALID = 1'b0;
+    end
+end
 
-assign ap_channel_done_shl_ln333_cast_loc_i_i_channel = (store_tile_mm_Block_entry23_proc_U0_ap_done & (ap_sync_reg_channel_write_shl_ln333_cast_loc_i_i_channel ^ 1'b1));
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        output_ftmap_blk_n = output_ftmap_empty_n;
+    end else begin
+        output_ftmap_blk_n = 1'b1;
+    end
+end
 
-assign ap_channel_done_tmp_1 = ((ap_sync_reg_channel_write_tmp_1 ^ 1'b1) & entry_proc_U0_ap_done);
+always @ (*) begin
+    if (((output_ftmap_empty_n == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
+        output_ftmap_read = 1'b1;
+    end else begin
+        output_ftmap_read = 1'b0;
+    end
+end
 
-assign ap_channel_done_tmp_2 = ((ap_sync_reg_channel_write_tmp_2 ^ 1'b1) & entry_proc_U0_ap_done);
+always @ (*) begin
+    case (ap_CS_fsm)
+        ap_ST_fsm_state1 : begin
+            if ((~((ap_start == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
+                ap_NS_fsm = ap_ST_fsm_state2;
+            end else begin
+                ap_NS_fsm = ap_ST_fsm_state1;
+            end
+        end
+        ap_ST_fsm_state2 : begin
+            if (((output_ftmap_empty_n == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
+                ap_NS_fsm = ap_ST_fsm_state3;
+            end else begin
+                ap_NS_fsm = ap_ST_fsm_state2;
+            end
+        end
+        ap_ST_fsm_state3 : begin
+            if (((1'b1 == ap_CS_fsm_state3) & (grp_store_tile_mm_Pipeline_Out_writex_fu_98_ap_done == 1'b1))) begin
+                ap_NS_fsm = ap_ST_fsm_state1;
+            end else begin
+                ap_NS_fsm = ap_ST_fsm_state3;
+            end
+        end
+        default : begin
+            ap_NS_fsm = 'bx;
+        end
+    endcase
+end
 
-assign ap_channel_done_tmp_3 = ((ap_sync_reg_channel_write_tmp_3 ^ 1'b1) & entry_proc_U0_ap_done);
+assign add_ln534_fu_114_p2 = (p_read1 + 9'd16);
 
-assign ap_channel_done_tmp_4 = ((ap_sync_reg_channel_write_tmp_4 ^ 1'b1) & entry_proc_U0_ap_done);
+assign add_ln537_fu_146_p2 = (p_read2 + 9'd16);
 
-assign ap_done = store_tile_mm_Loop_Out_writey_proc_U0_ap_done;
+assign ap_CS_fsm_state1 = ap_CS_fsm[32'd0];
 
-assign ap_idle = (store_tile_mm_Loop_Out_writey_proc_U0_ap_idle & store_tile_mm_Block_entry23_proc_U0_ap_idle & (p_cast_loc_i_i_channel_empty_n ^ 1'b1) & (shl_ln333_cast_loc_i_i_channel_empty_n ^ 1'b1) & (h0_cast6_loc_i_i_channel_empty_n ^ 1'b1) & (out_tile_offset_cast_loc_i_i_channel_empty_n ^ 1'b1) & (tmp_4_empty_n ^ 1'b1) & (tmp_3_empty_n ^ 1'b1) & (tmp_2_empty_n ^ 1'b1) & (tmp_1_empty_n ^ 1'b1) & entry_proc_U0_ap_idle);
+assign ap_CS_fsm_state2 = ap_CS_fsm[32'd1];
 
-assign ap_ready = ap_sync_ready;
+assign ap_CS_fsm_state3 = ap_CS_fsm[32'd2];
 
-assign ap_sync_channel_write_h0_cast6_loc_i_i_channel = ((h0_cast6_loc_i_i_channel_full_n & ap_channel_done_h0_cast6_loc_i_i_channel) | ap_sync_reg_channel_write_h0_cast6_loc_i_i_channel);
+always @ (*) begin
+    ap_block_state1 = ((ap_start == 1'b0) | (ap_done_reg == 1'b1));
+end
 
-assign ap_sync_channel_write_out_tile_offset_cast_loc_i_i_channel = ((out_tile_offset_cast_loc_i_i_channel_full_n & ap_channel_done_out_tile_offset_cast_loc_i_i_channel) | ap_sync_reg_channel_write_out_tile_offset_cast_loc_i_i_channel);
+assign bound_fu_207_p0 = bound_fu_207_p00;
 
-assign ap_sync_channel_write_p_cast_loc_i_i_channel = ((p_cast_loc_i_i_channel_full_n & ap_channel_done_p_cast_loc_i_i_channel) | ap_sync_reg_channel_write_p_cast_loc_i_i_channel);
+assign bound_fu_207_p00 = th_eff_reg_224;
 
-assign ap_sync_channel_write_shl_ln333_cast_loc_i_i_channel = ((shl_ln333_cast_loc_i_i_channel_full_n & ap_channel_done_shl_ln333_cast_loc_i_i_channel) | ap_sync_reg_channel_write_shl_ln333_cast_loc_i_i_channel);
+assign bound_fu_207_p1 = bound_fu_207_p10;
 
-assign ap_sync_channel_write_tmp_1 = ((tmp_1_full_n & ap_channel_done_tmp_1) | ap_sync_reg_channel_write_tmp_1);
+assign bound_fu_207_p10 = tw_eff_reg_229;
 
-assign ap_sync_channel_write_tmp_2 = ((tmp_2_full_n & ap_channel_done_tmp_2) | ap_sync_reg_channel_write_tmp_2);
-
-assign ap_sync_channel_write_tmp_3 = ((tmp_3_full_n & ap_channel_done_tmp_3) | ap_sync_reg_channel_write_tmp_3);
-
-assign ap_sync_channel_write_tmp_4 = ((tmp_4_full_n & ap_channel_done_tmp_4) | ap_sync_reg_channel_write_tmp_4);
-
-assign ap_sync_entry_proc_U0_ap_ready = (entry_proc_U0_ap_ready | ap_sync_reg_entry_proc_U0_ap_ready);
-
-assign ap_sync_ready = (ap_sync_store_tile_mm_Loop_Out_writey_proc_U0_ap_ready & ap_sync_entry_proc_U0_ap_ready);
-
-assign ap_sync_store_tile_mm_Loop_Out_writey_proc_U0_ap_ready = (store_tile_mm_Loop_Out_writey_proc_U0_ap_ready | ap_sync_reg_store_tile_mm_Loop_Out_writey_proc_U0_ap_ready);
-
-assign entry_proc_U0_ap_continue = (ap_sync_channel_write_tmp_4 & ap_sync_channel_write_tmp_3 & ap_sync_channel_write_tmp_2 & ap_sync_channel_write_tmp_1);
-
-assign entry_proc_U0_ap_start = ((ap_sync_reg_entry_proc_U0_ap_ready ^ 1'b1) & ap_start);
-
-assign h0_read = entry_proc_U0_h0_read;
+assign grp_store_tile_mm_Pipeline_Out_writex_fu_98_ap_start = grp_store_tile_mm_Pipeline_Out_writex_fu_98_ap_start_reg;
 
 assign m_axi_gmem_out_ARADDR = 64'd0;
 
@@ -731,70 +523,69 @@ assign m_axi_gmem_out_ARUSER = 1'd0;
 
 assign m_axi_gmem_out_ARVALID = 1'b0;
 
-assign m_axi_gmem_out_AWADDR = store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_AWADDR;
+assign m_axi_gmem_out_AWADDR = grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_AWADDR;
 
-assign m_axi_gmem_out_AWBURST = store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_AWBURST;
+assign m_axi_gmem_out_AWBURST = grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_AWBURST;
 
-assign m_axi_gmem_out_AWCACHE = store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_AWCACHE;
+assign m_axi_gmem_out_AWCACHE = grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_AWCACHE;
 
-assign m_axi_gmem_out_AWID = store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_AWID;
+assign m_axi_gmem_out_AWID = grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_AWID;
 
-assign m_axi_gmem_out_AWLEN = store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_AWLEN;
+assign m_axi_gmem_out_AWLEN = grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_AWLEN;
 
-assign m_axi_gmem_out_AWLOCK = store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_AWLOCK;
+assign m_axi_gmem_out_AWLOCK = grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_AWLOCK;
 
-assign m_axi_gmem_out_AWPROT = store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_AWPROT;
+assign m_axi_gmem_out_AWPROT = grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_AWPROT;
 
-assign m_axi_gmem_out_AWQOS = store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_AWQOS;
+assign m_axi_gmem_out_AWQOS = grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_AWQOS;
 
-assign m_axi_gmem_out_AWREGION = store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_AWREGION;
+assign m_axi_gmem_out_AWREGION = grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_AWREGION;
 
-assign m_axi_gmem_out_AWSIZE = store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_AWSIZE;
+assign m_axi_gmem_out_AWSIZE = grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_AWSIZE;
 
-assign m_axi_gmem_out_AWUSER = store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_AWUSER;
-
-assign m_axi_gmem_out_AWVALID = store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_AWVALID;
-
-assign m_axi_gmem_out_BREADY = store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_BREADY;
+assign m_axi_gmem_out_AWUSER = grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_AWUSER;
 
 assign m_axi_gmem_out_RREADY = 1'b0;
 
-assign m_axi_gmem_out_WDATA = store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_WDATA;
+assign m_axi_gmem_out_WDATA = grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_WDATA;
 
-assign m_axi_gmem_out_WID = store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_WID;
+assign m_axi_gmem_out_WID = grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_WID;
 
-assign m_axi_gmem_out_WLAST = store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_WLAST;
+assign m_axi_gmem_out_WLAST = grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_WLAST;
 
-assign m_axi_gmem_out_WSTRB = store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_WSTRB;
+assign m_axi_gmem_out_WSTRB = grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_WSTRB;
 
-assign m_axi_gmem_out_WUSER = store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_WUSER;
+assign m_axi_gmem_out_WUSER = grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_WUSER;
 
-assign m_axi_gmem_out_WVALID = store_tile_mm_Loop_Out_writey_proc_U0_m_axi_gmem_out_WVALID;
+assign outbuf_address0 = grp_store_tile_mm_Pipeline_Out_writex_fu_98_outbuf_address0;
 
-assign outbuf_address0 = store_tile_mm_Loop_Out_writey_proc_U0_outbuf_address0;
+assign outbuf_ce0 = grp_store_tile_mm_Pipeline_Out_writex_fu_98_outbuf_ce0;
 
-assign outbuf_ce0 = store_tile_mm_Loop_Out_writey_proc_U0_outbuf_ce0;
+assign th_eff_fu_138_p3 = ((tmp_2_fu_120_p3[0:0] == 1'b1) ? xor_ln534_fu_132_p2 : 8'd16);
 
-assign outbuf_d0 = 32'd0;
+assign tmp_1_fu_193_p3 = {{p_read2}, {2'd0}};
 
-assign outbuf_read = store_tile_mm_Loop_Out_writey_proc_U0_outbuf_write;
+assign tmp_2_fu_120_p3 = add_ln534_fu_114_p2[32'd8];
 
-assign outbuf_we0 = 1'b0;
+assign tmp_3_fu_152_p3 = add_ln537_fu_146_p2[32'd8];
 
-assign output_ftmap_read = store_tile_mm_Loop_Out_writey_proc_U0_output_ftmap_read;
+assign tmp_fu_184_p3 = {{xor_ln543_fu_178_p2}, {4'd0}};
 
-assign phase_read = store_tile_mm_Block_entry23_proc_U0_phase_read;
+assign trunc_ln533_fu_128_p1 = p_read1[7:0];
 
-assign store_tile_mm_Block_entry23_proc_U0_ap_continue = (ap_sync_channel_write_shl_ln333_cast_loc_i_i_channel & ap_sync_channel_write_p_cast_loc_i_i_channel & ap_sync_channel_write_out_tile_offset_cast_loc_i_i_channel & ap_sync_channel_write_h0_cast6_loc_i_i_channel);
+assign trunc_ln536_fu_160_p1 = p_read2[7:0];
 
-assign store_tile_mm_Block_entry23_proc_U0_ap_start = (tmp_3_empty_n & tmp_2_empty_n);
+assign tw_eff_fu_170_p3 = ((tmp_3_fu_152_p3[0:0] == 1'b1) ? xor_ln537_fu_164_p2 : 8'd16);
 
-assign store_tile_mm_Loop_Out_writey_proc_U0_ap_continue = ap_continue;
+assign xor_ln534_fu_132_p2 = (trunc_ln533_fu_128_p1 ^ 8'd255);
 
-assign store_tile_mm_Loop_Out_writey_proc_U0_ap_start = (tmp_4_empty_n & tmp_1_empty_n & shl_ln333_cast_loc_i_i_channel_empty_n & p_cast_loc_i_i_channel_empty_n & out_tile_offset_cast_loc_i_i_channel_empty_n & h0_cast6_loc_i_i_channel_empty_n & (ap_sync_reg_store_tile_mm_Loop_Out_writey_proc_U0_ap_ready ^ 1'b1) & ap_start);
+assign xor_ln537_fu_164_p2 = (trunc_ln536_fu_160_p1 ^ 8'd255);
 
-assign store_tile_mm_Loop_Out_writey_proc_U0_outbuf_write = 1'b0;
+assign xor_ln543_fu_178_p2 = (p_read ^ 1'd1);
 
-assign w0_read = entry_proc_U0_w0_read;
+always @ (posedge ap_clk) begin
+    tmp_reg_241[3:0] <= 4'b0000;
+    tmp_1_reg_246[1:0] <= 2'b00;
+end
 
 endmodule //srcnn_store_tile_mm

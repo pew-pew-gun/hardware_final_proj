@@ -135,7 +135,7 @@ dict set axilite_register_dict ctrl $port_ctrl
 if {${::AESL::PGuard_simmodel_gen}} {
 	if {[info proc ::AESL_LIB_XILADAPTER::s_axilite_gen] == "::AESL_LIB_XILADAPTER::s_axilite_gen"} {
 		eval "::AESL_LIB_XILADAPTER::s_axilite_gen { \
-			id 2682 \
+			id 2294 \
 			corename srcnn_ctrl_axilite \
 			name srcnn_ctrl_s_axi \
 			ports {$port_ctrl} \

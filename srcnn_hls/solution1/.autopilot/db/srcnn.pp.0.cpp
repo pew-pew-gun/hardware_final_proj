@@ -323,7 +323,7 @@ static void load_tile_mm(
   ftmap_t in_tile[16 + 2*((9/2) + (1/2) + (5/2))][16 + 2*((9/2) + (1/2) + (5/2))] )
 {
 #pragma HLS INLINE off
-#pragma HLS DATAFLOW
+
 
  const int PH = th_eff + 2*((9/2) + (1/2) + (5/2));
     const int PW = tw_eff + 2*((9/2) + (1/2) + (5/2));
@@ -332,6 +332,7 @@ static void load_tile_mm(
 
     InputTileHread:
     for (int py = 0; py < PH; ++py) {
+
 
 
 
@@ -366,7 +367,7 @@ static void compute_tile(
   int h0, int w0, int th_eff, int tw_eff )
 {
 #pragma HLS INLINE off
-#pragma HLS DATAFLOW
+
 
 
  ftmap_t linebuf[32][5 -1][16 + 2*(5/2)];
@@ -388,7 +389,7 @@ static void compute_tile(
 
 #pragma HLS ALLOCATION operation instances=mul limit=8
 #pragma HLS ALLOCATION operation instances=add limit=8
-# 109 "src/srcnn.cpp"
+# 110 "src/srcnn.cpp"
  ITRowcomp:
   for (int y0 = -(5/2); y0 < th_eff + (5/2); ++y0) {
 #pragma HLS LOOP_FLATTEN off
@@ -411,11 +412,11 @@ static void compute_tile(
 
       Conv1_outftmaps:
       for (int c1 = 0; c1 < 64; ++c1) {
-# 150 "src/srcnn.cpp"
+# 151 "src/srcnn.cpp"
      param_t v[9];
 #pragma HLS ARRAY_PARTITION variable=v complete dim=1
 
- VITIS_LOOP_153_1: for (int i=0; i<9; ++i) {
+ VITIS_LOOP_154_1: for (int i=0; i<9; ++i) {
 
       v[i] = 0;
      }
@@ -434,7 +435,8 @@ static void compute_tile(
    }
   }
   param_t acc1 = conv1_b[c1];
-  VITIS_LOOP_172_2: for (int i = 0;i < 9; ++i) {
+  acc1:
+  for (int i = 0;i < 9; ++i) {
 #pragma HLS PIPELINE off
  acc1 += v[i];
   }
@@ -508,13 +510,13 @@ static void compute_tile(
         int oy = y0 - (5/2);
         int ox = x0 - (5/2);
         if (oy < th_eff && ox < tw_eff) {
-# 272 "src/srcnn.cpp"
+# 274 "src/srcnn.cpp"
             param_t acc3[5][5];
 #pragma HLS ARRAY_PARTITION variable=acc3 complete dim=1
 #pragma HLS ARRAY_PARTITION variable=acc3 complete dim=2
 
- VITIS_LOOP_276_3: for (int i=0; i<5; ++i) {
-             VITIS_LOOP_277_4: for (int j=0;j<5;++j) {
+ VITIS_LOOP_278_2: for (int i=0; i<5; ++i) {
+             VITIS_LOOP_279_3: for (int j=0;j<5;++j) {
 #pragma HLS UNROLL
  acc3[i][j]=0;
              }
@@ -523,6 +525,7 @@ static void compute_tile(
 
             Conv3_inputft:
             for (int n2 = 0; n2 < 32; ++n2) {
+
 #pragma HLS PIPELINE II=3
  Conv3_ky:
               for (int ky = 0; ky < 5; ++ky) {
@@ -541,8 +544,10 @@ static void compute_tile(
             }
 
             ftmap_t acc3_sum = conv3_b[0];
-            VITIS_LOOP_304_5: for (int i=0; i < 5; ++i) {
-             VITIS_LOOP_305_6: for (int j=0; j<5; ++j) {
+            acc3row:
+            for (int i=0; i < 5; ++i) {
+             acc3col:
+             for (int j=0; j<5; ++j) {
 #pragma HLS PIPELINE off
  acc3_sum += acc3[i][j];
              }
@@ -566,7 +571,7 @@ static void store_tile_mm(
   ftmap_t out[1][255][255],
   int h0, int w0, int th_eff, int tw_eff )
 {
-#pragma HLS DATAFLOW
+
 #pragma HLS INLINE off
 
  Out_writey:
@@ -590,15 +595,15 @@ __attribute__((sdx_kernel("srcnn", 0))) void srcnn(
   param_t conv3_weights[1][32][5][5], param_t conv3_biases[1],
   ftmap_t output_ftmap[1][255][255], int reload_weights )
 {
-#line 27 "C:/Users/redre/Desktop/Hardware_Accelerated_Computing/FinalProject/golden/srcnn_hls/solution1/csynth.tcl"
+#line 27 "C:/Users/redre/Desktop/HAC/FinalProject/golden/srcnn_hls/solution1/csynth.tcl"
 #pragma HLSDIRECTIVE TOP name=srcnn
-# 352 "src/srcnn.cpp"
+# 357 "src/srcnn.cpp"
 
-#line 7 "C:/Users/redre/Desktop/Hardware_Accelerated_Computing/FinalProject/golden/srcnn_hls/solution1/directives.tcl"
+#line 7 "C:/Users/redre/Desktop/HAC/FinalProject/golden/srcnn_hls/solution1/directives.tcl"
 #pragma HLSDIRECTIVE TOP name=srcnn
-# 352 "src/srcnn.cpp"
+# 357 "src/srcnn.cpp"
 
-# 362 "src/srcnn.cpp"
+# 367 "src/srcnn.cpp"
 #pragma HLS INTERFACE s_axilite port=return bundle=ctrl
 
 #pragma HLS INTERFACE s_axilite port=reload_weights bundle=ctrl
@@ -639,7 +644,7 @@ __attribute__((sdx_kernel("srcnn", 0))) void srcnn(
 
 #pragma HLS BIND_STORAGE variable=inbuf type=ram_1p impl=bram
 #pragma HLS BIND_STORAGE variable=outbuf type=ram_1p impl=bram
-# 411 "src/srcnn.cpp"
+# 416 "src/srcnn.cpp"
  static param_t w1_loc[64][1][9][9];
   static param_t b1_loc[64];
   static param_t w2_loc[32][64][1][1];
@@ -682,7 +687,7 @@ __attribute__((sdx_kernel("srcnn", 0))) void srcnn(
 #pragma HLS reset variable=weights_loaded
 
  if (reload_weights || !weights_loaded) {
-# 462 "src/srcnn.cpp"
+# 467 "src/srcnn.cpp"
 CopyW1_outft:
   for (int c1=0;c1<64;++c1) {
 

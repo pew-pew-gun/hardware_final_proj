@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'srcnn_Pipeline_CopyW2_inft'
 ================================================================
-* Date:           Tue Oct 21 03:22:10 2025
+* Date:           Tue Oct 21 05:58:35 2025
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -85,11 +85,11 @@
     +---------------------------+----------+----+---+----+------------+------------+
     |       Variable Name       | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +---------------------------+----------+----+---+----+------------+------------+
-    |add_ln482_fu_266_p2        |         +|   0|  0|  14|           7|           1|
-    |add_ln488_1_fu_276_p2      |         +|   0|  0|  19|          12|          12|
-    |add_ln488_2_fu_314_p2      |         +|   0|  0|  15|           8|           8|
-    |add_ln488_fu_286_p2        |         +|   0|  0|  70|          63|          63|
-    |icmp_ln482_fu_260_p2       |      icmp|   0|  0|  15|           7|           8|
+    |add_ln487_fu_266_p2        |         +|   0|  0|  14|           7|           1|
+    |add_ln493_1_fu_276_p2      |         +|   0|  0|  19|          12|          12|
+    |add_ln493_2_fu_314_p2      |         +|   0|  0|  15|           8|           8|
+    |add_ln493_fu_286_p2        |         +|   0|  0|  70|          63|          63|
+    |icmp_ln487_fu_260_p2       |      icmp|   0|  0|  15|           7|           8|
     |ap_block_pp0_stage0_11001  |        or|   0|  0|   2|           1|           1|
     |ap_enable_pp0              |       xor|   0|  0|   2|           1|           2|
     +---------------------------+----------+----+---+----+------------+------------+
@@ -135,7 +135,7 @@
     |ap_loop_exit_ready_pp0_iter7_reg  |   1|   0|    1|          0|
     |ap_loop_exit_ready_pp0_iter8_reg  |   1|   0|    1|          0|
     |ap_loop_exit_ready_pp0_iter9_reg  |   1|   0|    1|          0|
-    |bitcast_ln488_reg_362             |  32|   0|   32|          0|
+    |bitcast_ln493_reg_362             |  32|   0|   32|          0|
     |gmem_w2_addr_reg_356              |  64|   0|   64|          0|
     |i2_1_reg_347                      |   7|   0|    7|          0|
     |i2_fu_100                         |   7|   0|    7|          0|
@@ -205,10 +205,10 @@
 |m_axi_gmem_w2_BRESP                                              |   in|    2|       m_axi|                                                 gmem_w2|       pointer|
 |m_axi_gmem_w2_BID                                                |   in|    1|       m_axi|                                                 gmem_w2|       pointer|
 |m_axi_gmem_w2_BUSER                                              |   in|    1|       m_axi|                                                 gmem_w2|       pointer|
-|zext_ln488_1                                                     |   in|    8|     ap_none|                                            zext_ln488_1|        scalar|
-|zext_ln478_1                                                     |   in|   11|     ap_none|                                            zext_ln478_1|        scalar|
-|sext_ln478                                                       |   in|   62|     ap_none|                                              sext_ln478|        scalar|
-|trunc_ln478_3                                                    |   in|    3|     ap_none|                                           trunc_ln478_3|        scalar|
+|zext_ln493_1                                                     |   in|    8|     ap_none|                                            zext_ln493_1|        scalar|
+|zext_ln483_1                                                     |   in|   11|     ap_none|                                            zext_ln483_1|        scalar|
+|sext_ln483                                                       |   in|   62|     ap_none|                                              sext_ln483|        scalar|
+|trunc_ln483_3                                                    |   in|    3|     ap_none|                                           trunc_ln483_3|        scalar|
 |srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_7_address0  |  out|    8|   ap_memory|  srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_7|         array|
 |srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_7_ce0       |  out|    1|   ap_memory|  srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_7|         array|
 |srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_7_we0       |  out|    1|   ap_memory|  srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_7|         array|

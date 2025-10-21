@@ -1,6 +1,3 @@
-Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region
-Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region
-Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region
 As the loop counter is not increased by 1, the compiler may not successfully process the dataflow loop
 Either use an argument of the function or declare the variable inside the dataflow loop body
 Either use an argument of the function or declare the variable inside the dataflow loop body
@@ -19,4 +16,4 @@ Either use an argument of the function or declare the variable inside the datafl
 Either use an argument of the function or declare the variable inside the dataflow loop body
 Either use an argument of the function or declare the variable inside the dataflow loop body
 Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region
-21 warnings generated.
+18 warnings generated.

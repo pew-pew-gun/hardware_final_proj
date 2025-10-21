@@ -14,20 +14,12 @@ module srcnn_entry_proc (
         ap_continue,
         ap_idle,
         ap_ready,
-        h0_dout,
-        h0_num_data_valid,
-        h0_fifo_cap,
-        h0_empty_n,
-        h0_read,
-        w0_dout,
-        w0_num_data_valid,
-        w0_fifo_cap,
-        w0_empty_n,
-        w0_read,
-        ap_return_0,
-        ap_return_1,
-        ap_return_2,
-        ap_return_3
+        output_ftmap,
+        output_ftmap_c_din,
+        output_ftmap_c_num_data_valid,
+        output_ftmap_c_fifo_cap,
+        output_ftmap_c_full_n,
+        output_ftmap_c_write
 );
 
 parameter    ap_ST_fsm_state1 = 1'd1;
@@ -39,42 +31,23 @@ output   ap_done;
 input   ap_continue;
 output   ap_idle;
 output   ap_ready;
-input  [8:0] h0_dout;
-input  [1:0] h0_num_data_valid;
-input  [1:0] h0_fifo_cap;
-input   h0_empty_n;
-output   h0_read;
-input  [7:0] w0_dout;
-input  [1:0] w0_num_data_valid;
-input  [1:0] w0_fifo_cap;
-input   w0_empty_n;
-output   w0_read;
-output  [8:0] ap_return_0;
-output  [8:0] ap_return_1;
-output  [8:0] ap_return_2;
-output  [8:0] ap_return_3;
+input  [63:0] output_ftmap;
+output  [63:0] output_ftmap_c_din;
+input  [2:0] output_ftmap_c_num_data_valid;
+input  [2:0] output_ftmap_c_fifo_cap;
+input   output_ftmap_c_full_n;
+output   output_ftmap_c_write;
 
 reg ap_done;
 reg ap_idle;
 reg ap_ready;
-reg h0_read;
-reg w0_read;
-reg[8:0] ap_return_0;
-reg[8:0] ap_return_1;
-reg[8:0] ap_return_2;
-reg[8:0] ap_return_3;
+reg output_ftmap_c_write;
 
 reg    ap_done_reg;
 (* fsm_encoding = "none" *) reg   [0:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
-reg    h0_blk_n;
-reg    w0_blk_n;
+reg    output_ftmap_c_blk_n;
 reg    ap_block_state1;
-wire   [8:0] w0_load_cast_fu_38_p1;
-reg   [8:0] ap_return_0_preg;
-reg   [8:0] ap_return_1_preg;
-reg   [8:0] ap_return_2_preg;
-reg   [8:0] ap_return_3_preg;
 reg   [0:0] ap_NS_fsm;
 reg    ap_ST_fsm_state1_blk;
 wire    ap_ce_reg;
@@ -83,10 +56,6 @@ wire    ap_ce_reg;
 initial begin
 #0 ap_done_reg = 1'b0;
 #0 ap_CS_fsm = 1'd1;
-#0 ap_return_0_preg = 9'd0;
-#0 ap_return_1_preg = 9'd0;
-#0 ap_return_2_preg = 9'd0;
-#0 ap_return_3_preg = 9'd0;
 end
 
 always @ (posedge ap_clk) begin
@@ -103,68 +72,14 @@ always @ (posedge ap_clk) begin
     end else begin
         if ((ap_continue == 1'b1)) begin
             ap_done_reg <= 1'b0;
-        end else if ((~((ap_start == 1'b0) | (w0_empty_n == 1'b0) | (h0_empty_n == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
+        end else if ((~((ap_start == 1'b0) | (output_ftmap_c_full_n == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
             ap_done_reg <= 1'b1;
         end
     end
 end
 
-always @ (posedge ap_clk) begin
-    if (ap_rst == 1'b1) begin
-        ap_return_0_preg <= 9'd0;
-    end else begin
-        if ((~((ap_start == 1'b0) | (w0_empty_n == 1'b0) | (h0_empty_n == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
-            ap_return_0_preg <= h0_dout;
-        end
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (ap_rst == 1'b1) begin
-        ap_return_1_preg <= 9'd0;
-    end else begin
-        if ((~((ap_start == 1'b0) | (w0_empty_n == 1'b0) | (h0_empty_n == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
-            ap_return_1_preg <= h0_dout;
-        end
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (ap_rst == 1'b1) begin
-                ap_return_2_preg[0] <= 1'b0;
-        ap_return_2_preg[1] <= 1'b0;
-        ap_return_2_preg[2] <= 1'b0;
-        ap_return_2_preg[3] <= 1'b0;
-        ap_return_2_preg[4] <= 1'b0;
-        ap_return_2_preg[5] <= 1'b0;
-        ap_return_2_preg[6] <= 1'b0;
-        ap_return_2_preg[7] <= 1'b0;
-    end else begin
-        if ((~((ap_start == 1'b0) | (w0_empty_n == 1'b0) | (h0_empty_n == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
-                        ap_return_2_preg[7 : 0] <= w0_load_cast_fu_38_p1[7 : 0];
-        end
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (ap_rst == 1'b1) begin
-                ap_return_3_preg[0] <= 1'b0;
-        ap_return_3_preg[1] <= 1'b0;
-        ap_return_3_preg[2] <= 1'b0;
-        ap_return_3_preg[3] <= 1'b0;
-        ap_return_3_preg[4] <= 1'b0;
-        ap_return_3_preg[5] <= 1'b0;
-        ap_return_3_preg[6] <= 1'b0;
-        ap_return_3_preg[7] <= 1'b0;
-    end else begin
-        if ((~((ap_start == 1'b0) | (w0_empty_n == 1'b0) | (h0_empty_n == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
-                        ap_return_3_preg[7 : 0] <= w0_load_cast_fu_38_p1[7 : 0];
-        end
-    end
-end
-
 always @ (*) begin
-    if (((ap_start == 1'b0) | (w0_empty_n == 1'b0) | (h0_empty_n == 1'b0) | (ap_done_reg == 1'b1))) begin
+    if (((ap_start == 1'b0) | (output_ftmap_c_full_n == 1'b0) | (ap_done_reg == 1'b1))) begin
         ap_ST_fsm_state1_blk = 1'b1;
     end else begin
         ap_ST_fsm_state1_blk = 1'b0;
@@ -172,7 +87,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((~((ap_start == 1'b0) | (w0_empty_n == 1'b0) | (h0_empty_n == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
+    if ((~((ap_start == 1'b0) | (output_ftmap_c_full_n == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
         ap_done = 1'b1;
     end else begin
         ap_done = ap_done_reg;
@@ -188,7 +103,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((~((ap_start == 1'b0) | (w0_empty_n == 1'b0) | (h0_empty_n == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
+    if ((~((ap_start == 1'b0) | (output_ftmap_c_full_n == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
         ap_ready = 1'b1;
     end else begin
         ap_ready = 1'b0;
@@ -196,66 +111,18 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((~((ap_start == 1'b0) | (w0_empty_n == 1'b0) | (h0_empty_n == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
-        ap_return_0 = h0_dout;
-    end else begin
-        ap_return_0 = ap_return_0_preg;
-    end
-end
-
-always @ (*) begin
-    if ((~((ap_start == 1'b0) | (w0_empty_n == 1'b0) | (h0_empty_n == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
-        ap_return_1 = h0_dout;
-    end else begin
-        ap_return_1 = ap_return_1_preg;
-    end
-end
-
-always @ (*) begin
-    if ((~((ap_start == 1'b0) | (w0_empty_n == 1'b0) | (h0_empty_n == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
-        ap_return_2 = w0_load_cast_fu_38_p1;
-    end else begin
-        ap_return_2 = ap_return_2_preg;
-    end
-end
-
-always @ (*) begin
-    if ((~((ap_start == 1'b0) | (w0_empty_n == 1'b0) | (h0_empty_n == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
-        ap_return_3 = w0_load_cast_fu_38_p1;
-    end else begin
-        ap_return_3 = ap_return_3_preg;
-    end
-end
-
-always @ (*) begin
     if ((~((ap_start == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
-        h0_blk_n = h0_empty_n;
+        output_ftmap_c_blk_n = output_ftmap_c_full_n;
     end else begin
-        h0_blk_n = 1'b1;
+        output_ftmap_c_blk_n = 1'b1;
     end
 end
 
 always @ (*) begin
-    if ((~((ap_start == 1'b0) | (w0_empty_n == 1'b0) | (h0_empty_n == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
-        h0_read = 1'b1;
+    if ((~((ap_start == 1'b0) | (output_ftmap_c_full_n == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
+        output_ftmap_c_write = 1'b1;
     end else begin
-        h0_read = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((~((ap_start == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
-        w0_blk_n = w0_empty_n;
-    end else begin
-        w0_blk_n = 1'b1;
-    end
-end
-
-always @ (*) begin
-    if ((~((ap_start == 1'b0) | (w0_empty_n == 1'b0) | (h0_empty_n == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
-        w0_read = 1'b1;
-    end else begin
-        w0_read = 1'b0;
+        output_ftmap_c_write = 1'b0;
     end
 end
 
@@ -273,14 +140,9 @@ end
 assign ap_CS_fsm_state1 = ap_CS_fsm[32'd0];
 
 always @ (*) begin
-    ap_block_state1 = ((ap_start == 1'b0) | (w0_empty_n == 1'b0) | (h0_empty_n == 1'b0) | (ap_done_reg == 1'b1));
+    ap_block_state1 = ((ap_start == 1'b0) | (output_ftmap_c_full_n == 1'b0) | (ap_done_reg == 1'b1));
 end
 
-assign w0_load_cast_fu_38_p1 = w0_dout;
-
-always @ (posedge ap_clk) begin
-    ap_return_2_preg[8] <= 1'b0;
-    ap_return_3_preg[8] <= 1'b0;
-end
+assign output_ftmap_c_din = output_ftmap;
 
 endmodule //srcnn_entry_proc
