@@ -651,8 +651,8 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>add_ln60_2</name>
-<Object>add_ln60_2</Object>
+<name>add_ln67_2</name>
+<Object>add_ln67_2</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
@@ -662,8 +662,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>sext_ln48</name>
-<Object>sext_ln48</Object>
+<name>sext_ln55</name>
+<Object>sext_ln55</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
@@ -673,8 +673,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>add_ln48</name>
-<Object>add_ln48</Object>
+<name>add_ln55</name>
+<Object>add_ln55</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
@@ -695,8 +695,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>add_ln43</name>
-<Object>add_ln43</Object>
+<name>add_ln50</name>
+<Object>add_ln50</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
@@ -706,8 +706,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>select_ln60</name>
-<Object>select_ln60</Object>
+<name>select_ln67</name>
+<Object>select_ln67</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>

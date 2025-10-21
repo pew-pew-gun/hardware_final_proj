@@ -1,0 +1,168 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'conv3_5x5_Pipeline_acc3row'" level="0">
+<item name = "Date">Tue Oct 21 14:52:48 2025
+</item>
+<item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
+<item name = "Project">srcnn_hls</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xck26-sfvc784-2LV-c</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.355 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">102, 102, 1.020 us, 1.020 us, 102, 102, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- acc3row">100, 100, 20, 20, 1, 5, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 22, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, 0, 130, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 205, -</column>
+<column name="Register">-, -, 218, -, -</column>
+<specialColumn name="Available">288, 1248, 234240, 117120, 64</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="mux_5_3_32_1_1_U1748">mux_5_3_32_1_1, 0, 0, 0, 26, 0</column>
+<column name="mux_5_3_32_1_1_U1749">mux_5_3_32_1_1, 0, 0, 0, 26, 0</column>
+<column name="mux_5_3_32_1_1_U1750">mux_5_3_32_1_1, 0, 0, 0, 26, 0</column>
+<column name="mux_5_3_32_1_1_U1751">mux_5_3_32_1_1, 0, 0, 0, 26, 0</column>
+<column name="mux_5_3_32_1_1_U1752">mux_5_3_32_1_1, 0, 0, 0, 26, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln246_fu_283_p2">+, 0, 0, 10, 3, 1</column>
+<column name="icmp_ln246_fu_277_p2">icmp, 0, 0, 10, 3, 3</column>
+<column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">106, 21, 1, 21</column>
+<column name="ap_done_int">9, 2, 1, 2</column>
+<column name="ap_enable_reg_pp0_iter0">9, 2, 1, 2</column>
+<column name="ap_enable_reg_pp0_iter0_reg">9, 2, 1, 2</column>
+<column name="ap_enable_reg_pp0_iter1">9, 2, 1, 2</column>
+<column name="grp_fu_255_p0">14, 3, 32, 96</column>
+<column name="grp_fu_255_p1">31, 6, 32, 192</column>
+<column name="i_fu_88">9, 2, 3, 6</column>
+<column name="sum_1_fu_84">9, 2, 32, 64</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">20, 0, 20, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter0_reg">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
+<column name="i_fu_88">3, 0, 3, 0</column>
+<column name="reg_259">32, 0, 32, 0</column>
+<column name="sum_1_fu_84">32, 0, 32, 0</column>
+<column name="tmp_497_i_reg_516">32, 0, 32, 0</column>
+<column name="tmp_498_i_reg_521">32, 0, 32, 0</column>
+<column name="tmp_499_i_reg_526">32, 0, 32, 0</column>
+<column name="tmp_500_i_reg_531">32, 0, 32, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, conv3_5x5_Pipeline_acc3row, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, conv3_5x5_Pipeline_acc3row, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, conv3_5x5_Pipeline_acc3row, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, conv3_5x5_Pipeline_acc3row, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, conv3_5x5_Pipeline_acc3row, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, conv3_5x5_Pipeline_acc3row, return value</column>
+<column name="grp_fu_5280_p_din0">out, 32, ap_ctrl_hs, conv3_5x5_Pipeline_acc3row, return value</column>
+<column name="grp_fu_5280_p_din1">out, 32, ap_ctrl_hs, conv3_5x5_Pipeline_acc3row, return value</column>
+<column name="grp_fu_5280_p_opcode">out, 2, ap_ctrl_hs, conv3_5x5_Pipeline_acc3row, return value</column>
+<column name="grp_fu_5280_p_dout0">in, 32, ap_ctrl_hs, conv3_5x5_Pipeline_acc3row, return value</column>
+<column name="grp_fu_5280_p_ce">out, 1, ap_ctrl_hs, conv3_5x5_Pipeline_acc3row, return value</column>
+<column name="sum">in, 32, ap_stable, sum, scalar</column>
+<column name="p_reload">in, 32, ap_none, p_reload, scalar</column>
+<column name="add186_1231_i_reload">in, 32, ap_none, add186_1231_i_reload, scalar</column>
+<column name="add186_2236_i_reload">in, 32, ap_none, add186_2236_i_reload, scalar</column>
+<column name="add186_3241_i_reload">in, 32, ap_none, add186_3241_i_reload, scalar</column>
+<column name="add186_4246_i_reload">in, 32, ap_none, add186_4246_i_reload, scalar</column>
+<column name="add186_1194227_i_reload">in, 32, ap_none, add186_1194227_i_reload, scalar</column>
+<column name="add186_1_1232_i_reload">in, 32, ap_none, add186_1_1232_i_reload, scalar</column>
+<column name="add186_2_1237_i_reload">in, 32, ap_none, add186_2_1237_i_reload, scalar</column>
+<column name="add186_3_1242_i_reload">in, 32, ap_none, add186_3_1242_i_reload, scalar</column>
+<column name="add186_4_1247_i_reload">in, 32, ap_none, add186_4_1247_i_reload, scalar</column>
+<column name="add186_2204228_i_reload">in, 32, ap_none, add186_2204228_i_reload, scalar</column>
+<column name="add186_1_2233_i_reload">in, 32, ap_none, add186_1_2233_i_reload, scalar</column>
+<column name="add186_2_2238_i_reload">in, 32, ap_none, add186_2_2238_i_reload, scalar</column>
+<column name="add186_3_2243_i_reload">in, 32, ap_none, add186_3_2243_i_reload, scalar</column>
+<column name="add186_4_2248_i_reload">in, 32, ap_none, add186_4_2248_i_reload, scalar</column>
+<column name="add186_3214229_i_reload">in, 32, ap_none, add186_3214229_i_reload, scalar</column>
+<column name="add186_1_3234_i_reload">in, 32, ap_none, add186_1_3234_i_reload, scalar</column>
+<column name="add186_2_3239_i_reload">in, 32, ap_none, add186_2_3239_i_reload, scalar</column>
+<column name="add186_3_3244_i_reload">in, 32, ap_none, add186_3_3244_i_reload, scalar</column>
+<column name="add186_4_3249_i_reload">in, 32, ap_none, add186_4_3249_i_reload, scalar</column>
+<column name="add186_4224230_i_reload">in, 32, ap_none, add186_4224230_i_reload, scalar</column>
+<column name="add186_1_4235_i_reload">in, 32, ap_none, add186_1_4235_i_reload, scalar</column>
+<column name="add186_2_4240_i_reload">in, 32, ap_none, add186_2_4240_i_reload, scalar</column>
+<column name="add186_3_4245_i_reload">in, 32, ap_none, add186_3_4245_i_reload, scalar</column>
+<column name="add186_4_4250_i_reload">in, 32, ap_none, add186_4_4250_i_reload, scalar</column>
+<column name="sum_1_out">out, 32, ap_vld, sum_1_out, pointer</column>
+<column name="sum_1_out_ap_vld">out, 1, ap_vld, sum_1_out, pointer</column>
+</table>
+</item>
+</section>
+</profile>

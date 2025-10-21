@@ -11,7 +11,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1958 \
+    id 2325 \
     name outbuf \
     reset_level 1 \
     sync_rst true \
@@ -29,22 +29,22 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1950 \
-    name zext_ln338 \
+    id 2317 \
+    name zext_ln558 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_zext_ln338 \
+    corename dc_zext_ln558 \
     op interface \
-    ports { zext_ln338 { I 9 vector } } \
+    ports { zext_ln558 { I 9 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1951 \
+    id 2318 \
     name bound \
     type other \
     dir I \
@@ -59,7 +59,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1952 \
+    id 2319 \
     name gmem_out \
     type other \
     dir O \
@@ -74,7 +74,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1953 \
+    id 2320 \
     name tw_eff \
     type other \
     dir I \
@@ -89,52 +89,52 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1954 \
-    name zext_ln338_2 \
+    id 2321 \
+    name zext_ln558_2 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_zext_ln338_2 \
+    corename dc_zext_ln558_2 \
     op interface \
-    ports { zext_ln338_2 { I 8 vector } } \
+    ports { zext_ln558_2 { I 8 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1955 \
-    name zext_ln344 \
+    id 2322 \
+    name zext_ln564 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_zext_ln344 \
+    corename dc_zext_ln564 \
     op interface \
-    ports { zext_ln344 { I 5 vector } } \
+    ports { zext_ln564 { I 5 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1956 \
-    name zext_ln338_1 \
+    id 2323 \
+    name zext_ln558_1 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_zext_ln338_1 \
+    corename dc_zext_ln558_1 \
     op interface \
-    ports { zext_ln338_1 { I 11 vector } } \
+    ports { zext_ln558_1 { I 11 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1957 \
+    id 2324 \
     name out_r \
     type other \
     dir I \

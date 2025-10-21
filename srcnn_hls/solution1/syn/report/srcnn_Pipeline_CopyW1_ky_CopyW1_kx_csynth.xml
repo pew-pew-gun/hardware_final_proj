@@ -636,8 +636,8 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>add_ln477_3</name>
-<Object>add_ln477_3</Object>
+<name>add_ln697_3</name>
+<Object>add_ln697_3</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
@@ -647,8 +647,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>sext_ln468</name>
-<Object>sext_ln468</Object>
+<name>sext_ln688</name>
+<Object>sext_ln688</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
@@ -658,8 +658,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>zext_ln468_3</name>
-<Object>zext_ln468_3</Object>
+<name>zext_ln688_3</name>
+<Object>zext_ln688_3</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>

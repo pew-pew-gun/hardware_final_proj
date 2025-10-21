@@ -21,6 +21,13 @@
 #define R_TOTAL (R1 + R2 + R3)  // 6
 
 
+struct vecN2 {
+  ftmap_t v[N2];
+};
+// Let HLS keep it as flops/LUTs; you can also pack if using fixed-pt.
+//#pragma HLS aggregate variable=vecN2
+
+
  static inline int clampi(int v, int lo, int hi) {
      return v < lo ? lo : (v > hi ? hi : v);
  }
@@ -62,267 +69,483 @@ static void load_tile_mm(
     }
 }
 
-
-// -------------------------- COMPUTE --------------------------
-// BRAM-BRAM: conv1(9x9) + conv2(1x1) fused per pixel,
-// then conv3(5x5) using line buffers + 5x5 window.
-static void compute_tile(
+static void fuse_9x9_1x1(
   ftmap_t in_tile[TH + 2*R_TOTAL][TW + 2*R_TOTAL],
-  ftmap_t out_tile[TH][TW],
-  // weights/biases
-  param_t conv1_w[N1][N0][F1][F1], param_t conv1_b[N1],
-  param_t conv2_w[N2][N1][F2][F2], param_t conv2_b[N2],
-  param_t conv3_w[N3][N2][F3][F3], param_t conv3_b[N3],
-  int h0, int w0, int th_eff, int tw_eff )
+  // weights
+  const param_t conv1_w[N1][N0][F1][F1], const param_t conv1_b[N1],
+  const param_t conv2_w[N2][N1][F2][F2], const param_t conv2_b[N2],
+  int th_eff, int tw_eff,
+  hls::stream<vecN2> &s_f2)
 {
 #pragma HLS INLINE off
-//#pragma HLS DATAFLOW
+#pragma HLS DEPENDENCE variable=in_tile inter false
+#pragma HLS stream variable=s_f2 depth=64
 
-  // ---- buffers for the 5x5 stage (per tile) ----
-  ftmap_t linebuf[N2][F3-1][TW + 2*R3];
-  #pragma HLS BIND_STORAGE    variable=linebuf type=ram_2p impl=bram
-  #pragma HLS ARRAY_PARTITION variable=linebuf complete dim=2
-  #pragma HLS ARRAY_PARTITION variable=linebuf cyclic factor=UF_N2 dim=1
-
-  ftmap_t win[N2][F3][F3];
-  #pragma HLS ARRAY_PARTITION variable=win complete dim=2
-  #pragma HLS ARRAY_PARTITION variable=win complete dim=3
-  #pragma HLS ARRAY_PARTITION variable=win cyclic factor=UF_N2 dim=1
-
-  // // Weight banking to feed the unrolled N2 lanes
-  // #pragma HLS ARRAY_PARTITION variable=conv2_w cyclic factor=UF_N2 dim=1
-  // #pragma HLS ARRAY_PARTITION variable=conv3_w cyclic factor=UF_N2 dim=2
-  // #pragma HLS ARRAY_PARTITION variable=conv3_w complete dim=3
-  // #pragma HLS ARRAY_PARTITION variable=conv3_w complete dim=4
-
-  // Limit operator replication so scheduling doesn't explode
-  #pragma HLS ALLOCATION operation instances=mul limit=UF_N2
-  #pragma HLS ALLOCATION operation instances=add limit=UF_N2
-
-//#pragma HLS ALLOCATION operation instances=fmul limit=UF_N2
-//#pragma HLS ALLOCATION operation instances=fadd limit=UF_N2
-
-
-//   const int C2H = th_eff + 2*R3;   // conv2 band height needed for 5x5
-//   const int C2W = tw_eff + 2*R3;   // conv2 band width  needed for 5x5
-
-  // Canonical 0-N loops; pipeline the inner spatial (x) loop only
-   ITRowcomp:
+  // Scan the same enlarged band as before so conv3 has its halo
+    ITRowcomp:
   for (int y0 = -R3; y0 < th_eff + R3; ++y0) {
-  #pragma HLS LOOP_FLATTEN off
-     ITColcomp:
+      ITColcomp:
     for (int x0 = -R3; x0 < tw_eff + R3; ++x0) {
-//   #pragma HLS PIPELINE II=1
-    #pragma HLS DEPENDENCE variable=linebuf inter false
-    #pragma HLS DEPENDENCE variable=win     inter false
+// #pragma HLS PIPELINE II=1
 
-      // ---------------- conv1 + conv2 (fused) at (y0,x0) ----------------
+      // ----- conv1 + conv2 fusion -----
+      // (use your interleaved F1 accumulators to break the RAW on 'v')
       param_t acc2[N2];
-      #pragma HLS ARRAY_PARTITION variable=acc2 cyclic factor=UF_N2 dim=1
-      Conv2Out_biases:
-      for (int n2 = 0; n2 < N2; ++n2) {
-#pragma HLS PIPELINE
-      #pragma HLS UNROLL factor=UF_N2
+#pragma HLS ARRAY_PARTITION variable=acc2 cyclic factor=UF_N2 dim=1
+      for (int n2 = 0; n2 < N2; ++n2) {    // biases of conv2
+        #pragma HLS PIPELINE
+#pragma HLS UNROLL factor=UF_N2
         acc2[n2] = conv2_b[n2];
       }
 
-      // For each conv1 output channel c1:
+ // For each conv1 output channel c1:
       Conv1_outftmaps:
-      for (int c1 = 0; c1 < N1; ++c1) { // N1 = 64 conv1 channels
-//#pragma HLS DATAFLOW
-
-    	/************** This method introduces a true loop-carried dependency
-    	 * - must refactor with F1 interleaved accumulators
-        param_t v = conv1_b[c1];
-        // 9x9 over in_tile around (y0,x0)
-        Conv1_ky:
-        for (int ky = 0; ky < F1; ++ky) {
-        	Conv1_kx:
-            for (int kx = 0; kx < F1; ++kx) {
-                #pragma HLS PIPELINE off
-                int py = (y0 - R1) + ky + R_TOTAL;
-                int px = (x0 - R1) + kx + R_TOTAL;
-                v += conv1_w[c1][0][ky][kx] * in_tile[py][px];
-            }
+      for (int c1 = 0; c1 < N1; ++c1) {
+        // Interleaved F1 partial sums for conv1
+        param_t v1[F1];
+#pragma HLS ARRAY_PARTITION variable=v1 complete dim=1
+        for (int i=0;i<F1;++i) {
+#pragma HLS UNROLL
+          v1[i]=0;
         }
-        */
 
-    	// Using F1 interleaved accumulators instead of just 1 accumulator 'v'
-    	param_t v[F1]; // F1 independent partial sums
-#pragma HLS ARRAY_PARTITION variable=v complete dim=1
-    	// initialise values to zero
-    	for (int i=0; i<F1; ++i) {
-//#pragma HLS UNROLL
-    		v[i] = 0;
-    	}
-
-
-    	// 9x9 over in_tile around (y0,x0)
+        // 9x9 over in_tile around (y0,x0)
 		Conv1_ky:
-		for (int ky = 0; ky < F1; ++ky) {
+        for (int ky = 0; ky < F1; ++ky) {
 #pragma HLS PIPELINE II=3
-			Conv1_kx:
-			for (int kx = 0; kx < F1; ++kx) {
-				#pragma HLS UNROLL
-				int py = (y0 - R1) + ky + R_TOTAL;
-				int px = (x0 - R1) + kx + R_TOTAL;
-				v[kx] += conv1_w[c1][0][ky][kx] * in_tile[py][px];
-			}
-		}
-		param_t acc1 = conv1_b[c1];
-		acc1:
-		for (int i = 0;i < F1; ++i) {
-#pragma HLS PIPELINE off
-			acc1 += v[i];
-		}
-
-
-
-        if (acc1 < (param_t)0) acc1 = (param_t)0;  // ReLU after conv1
-
-        Conv2_dot32:
-        for (int n2 = 0; n2 < N2; ++n2) { // generate all 32 output feature maps pixel by pixel
-        #pragma HLS UNROLL factor=UF_N2
+Conv1_kx:
+          for (int kx = 0; kx < F1; ++kx) {
+#pragma HLS UNROLL
+            int py = (y0 - R1) + ky + R_TOTAL;
+            int px = (x0 - R1) + kx + R_TOTAL;
+            v1[kx] += conv1_w[c1][0][ky][kx] * in_tile[py][px];
+          }
+        }
+        param_t acc1 = conv1_b[c1];
+        acc1:
+        for (int i=0;i<F1;++i){
+#pragma HLS PIPELINE II=3
+        	acc1 += v1[i];
+        }
+        if (acc1 < (param_t)0) acc1 = (param_t)0;
+Conv2_dot32:
+        for (int n2 = 0; n2 < N2; ++n2) {
+#pragma HLS UNROLL factor=UF_N2
 #pragma HLS PIPELINE
-          acc2[n2] += conv2_w[n2][c1][0][0] * acc1;   // 1x1 mix
+          acc2[n2] += conv2_w[n2][c1][0][0] * acc1;
         }
       }
 
-      ftmap_t f2[N2];   // ReLU after conv2
+      vecN2 f2;
       #pragma HLS ARRAY_PARTITION variable=f2 cyclic factor=UF_N2 dim=1
       Conv2_ReLU:
       for (int n2 = 0; n2 < N2; ++n2) {
-#pragma HLS PIPELINE
-      #pragma HLS UNROLL factor=UF_N2
+        #pragma HLS PIPELINE
+#pragma HLS UNROLL factor=UF_N2
         param_t t = acc2[n2];
-        f2[n2] = (t > (param_t)0) ? (ftmap_t)t : (ftmap_t)0;
+        f2.v[n2] = (t > (param_t)0) ? (ftmap_t)t : (ftmap_t)0;
       }
+      s_f2.write(f2);
+    }
+  }
+}
 
-      // -------------- update 5x5 window & line buffers ---------------
-      const int col = x0 + R3; // [0..C2W-1]
+static void conv3_5x5(
+  hls::stream<vecN2> &s_f2,
+  const param_t conv3_w[N3][N2][F3][F3], const param_t conv3_b[N3],
+  int h0, int w0, int th_eff, int tw_eff,
+  ftmap_t out_tile[TH][TW])
+{
+#pragma HLS INLINE off
+#pragma HLS stream variable=s_f2 depth=64
 
-      // Shift window left by 1 column
+  // Line buffers & window like your current code
+  ftmap_t linebuf[N2][F3-1][TW + 2*R3];
+#pragma HLS BIND_STORAGE    variable=linebuf type=ram_2p impl=bram
+#pragma HLS ARRAY_PARTITION variable=linebuf complete dim=2
+#pragma HLS ARRAY_PARTITION variable=linebuf cyclic factor=UF_N2 dim=1
+
+  ftmap_t win[N2][F3][F3];
+#pragma HLS ARRAY_PARTITION variable=win complete dim=2
+#pragma HLS ARRAY_PARTITION variable=win complete dim=3
+#pragma HLS ARRAY_PARTITION variable=win cyclic factor=UF_N2 dim=1
+
+  for (int y0 = -R3; y0 < th_eff + R3; ++y0) {
+    for (int x0 = -R3; x0 < tw_eff + R3; ++x0) {
+// #pragma HLS PIPELINE II=1
+      vecN2 f2 = s_f2.read();
+
+      // Update window from linebuf + f2
+      const int col = x0 + R3;
       Shift_win32:
-      for (int n2 = 0; n2 < N2; ++n2) {
+      for (int n2=0;n2<N2;++n2){
 #pragma HLS PIPELINE
-      #pragma HLS UNROLL factor=UF_N2
-        // Shift window left (use temps to avoid intra RAW)
-    	Shift_win_row:
-        for (int r = 0; r < F3; ++r) {
-//        #pragma HLS UNROLL
-          ftmap_t a = win[n2][r][1], b = win[n2][r][2],
-                  c = win[n2][r][3], d = win[n2][r][4];
+#pragma HLS UNROLL factor=UF_N2
+        // shift window left
+        Shift_win_row:
+        for (int r=0;r<F3;++r){
+          ftmap_t a=win[n2][r][1], b=win[n2][r][2],
+                  c=win[n2][r][3], d=win[n2][r][4];
           win[n2][r][0]=a; 
           win[n2][r][1]=b; 
           win[n2][r][2]=c; 
           win[n2][r][3]=d;
         }
-        // Rightmost column: 4 rows from linebuf (oldest at top) + current f2 at bottom
-        ReadLineInWin:
-        for (int r = 0; r < F3-1; ++r) {
 
-        #pragma HLS UNROLL factor=F3-1
-          win[n2][r][F3-1] = linebuf[n2][F3-2 - r][col];
+        // Rightmost column: 4 rows from linebuf (oldest at top) + current f2 at bottom
+       ReadLineInWin:
+        for (int r=0;r<F3-1;++r){
+#pragma HLS UNROLL
+          win[n2][r][F3-1] = linebuf[n2][F3-2-r][col];
         }
-        win[n2][F3-1][F3-1] = f2[n2];
+        win[n2][F3-1][F3-1] = f2.v[n2];
       }
+      
 
       // After filling the window, update line buffers at this column: roll rows down, insert current row on top
-      Update_linebuf32:
-      for (int n2 = 0; n2 < N2; ++n2) {
+     Update_linebuf32:
+      for (int n2=0;n2<N2;++n2){
 #pragma HLS PIPELINE
-      #pragma HLS UNROLL factor=UF_N2
-    	Update_linebuf_row:
-        for (int r = F3-2; r >= 1; --r) {
-        #pragma HLS UNROLL factor=F3-2
+#pragma HLS UNROLL factor=UF_N2
+Update_linebuf_row:
+        for (int r=F3-2; r>=1; --r){
+#pragma HLS UNROLL
           linebuf[n2][r][col] = linebuf[n2][r-1][col];
         }
-        linebuf[n2][0][col] = f2[n2];
+        linebuf[n2][0][col] = f2.v[n2];
       }
 
-      // ---------------- conv3 (5x5) when window is valid ----------------
+      // When valid, do conv3 MAC and write to out_tile
       if (y0 >= R3 && x0 >= R3) {
-        int oy = y0 - R3;  // output coords inside tile
+        int oy = y0 - R3;
         int ox = x0 - R3;
         if (oy < th_eff && ox < tw_eff) {
+          // interleaved accumulators for 5x5
+          param_t acc3[F3][F3];
+#pragma HLS ARRAY_PARTITION variable=acc3 complete dim=1
+#pragma HLS ARRAY_PARTITION variable=acc3 complete dim=2
+          for (int i=0;i<F3;++i){
+        	  for (int j=0;j<F3;++j){
+        		  #pragma HLS UNROLL
+        		  acc3[i][j]=0;
+        	  }
+          }
 
-        	/*
-          param_t acc3 = conv3_b[0];
           Conv3_inputft:
-          for (int n2 = 0; n2 < N2; ++n2) {
-//          #pragma HLS UNROLL factor=UF_N2
-//#pragma HLS PIPELINE
-        	Conv3_ky:
-            for (int ky = 0; ky < F3; ++ky) {
-//            #pragma HLS UNROLL factor=F3
-              Conv3_kx:
-              for (int kx = 0; kx < F3; ++kx) {
-//             #pragma HLS UNROLL factor=F3
-#pragma HLS PIPELINE off
-               // 2. Clamp window coordinates to those thresholds
-                 int wy = clampi(ky, R3-(h0+oy), R3-(h0+oy)+H-1);
-                 int wx = clampi(kx, R3-(w0+ox), R3-(w0+ox)+W-1);
-
-                acc3 += conv3_w[0][n2][ky][kx] * win[n2][wy][wx];
+          for (int n2=0;n2<N2;++n2){
+#pragma HLS PIPELINE II=3
+            for (int ky=0;ky<F3;++ky){
+#pragma HLS UNROLL
+              for (int kx=0;kx<F3;++kx){
+#pragma HLS UNROLL
+                int wy = clampi(ky, R3-(h0+oy), R3-(h0+oy)+H-1);
+                int wx = clampi(kx, R3-(w0+ox), R3-(w0+ox)+W-1);
+                acc3[ky][kx] += conv3_w[0][n2][ky][kx] * win[n2][wy][wx];
               }
             }
           }
-          // Double check the indexing on this one
-          out_tile[oy][ox] = (ftmap_t)acc3;
-          */
-        	// Need to refactor code to use interleaved accumulators:
-            param_t acc3[F3][F3];
-#pragma HLS ARRAY_PARTITION variable=acc3 complete dim=1
-#pragma HLS ARRAY_PARTITION variable=acc3 complete dim=2
-            // Initialise values to zero
-            for (int i=0; i<F3; ++i) {
-            	for (int j=0;j<F3;++j) {
-#pragma HLS UNROLL
-            		acc3[i][j]=0;
-            	}
-            }
-
-
-            Conv3_inputft:
-            for (int n2 = 0; n2 < N2; ++n2) { // for each conv2 output ftmap
-//#pragma HLS DATAFLOW
-#pragma HLS PIPELINE II=3
-          	Conv3_ky:
-              for (int ky = 0; ky < F3; ++ky) {
-#pragma HLS UNROLL
-                Conv3_kx:
-                for (int kx = 0; kx < F3; ++kx) {
-
-#pragma HLS UNROLL
-                 // 2. Clamp window coordinates to those thresholds
-                   int wy = clampi(ky, R3-(h0+oy), R3-(h0+oy)+H-1);
-                   int wx = clampi(kx, R3-(w0+ox), R3-(w0+ox)+W-1);
-
-                  acc3[ky][kx] += conv3_w[0][n2][ky][kx] * win[n2][wy][wx];
-                }
-              }
-            }
-
-            ftmap_t acc3_sum = conv3_b[0];
-            acc3row:
-            for (int i=0; i < F3; ++i) {
-            	acc3col:
-            	for (int j=0; j<F3; ++j) {
-#pragma HLS PIPELINE off
-            		acc3_sum += acc3[i][j];
-            	}
-            }
-
-            // Double check the indexing on this one
-            out_tile[oy][ox] = acc3_sum;
-
-
-
+          param_t sum = conv3_b[0];
+          acc3row:
+          for (int i=0;i<F3;++i){
+            acc3col:
+        	  for (int j=0;j<F3;++j){
+        		  #pragma HLS UNROLL
+        		  sum+=acc3[i][j];
+        	  }
+          }
+          out_tile[oy][ox] = (ftmap_t)sum;
         }
       }
-    } // x0
-  }   // y0
+    }
+  }
 }
+
+static void compute_tile_df(
+  ftmap_t in_tile[TH + 2*R_TOTAL][TW + 2*R_TOTAL],
+  ftmap_t out_tile[TH][TW],
+  const param_t conv1_w[N1][N0][F1][F1], const param_t conv1_b[N1],
+  const param_t conv2_w[N2][N1][F2][F2], const param_t conv2_b[N2],
+  const param_t conv3_w[N3][N2][F3][F3], const param_t conv3_b[N3],
+  int h0, int w0, int th_eff, int tw_eff)
+{
+#pragma HLS INLINE off
+#pragma HLS DATAFLOW
+
+  hls::stream<vecN2> s_f2("s_f2");
+#pragma HLS stream variable=s_f2 depth=64
+
+  fuse_9x9_1x1(in_tile, conv1_w, conv1_b,
+               conv2_w, conv2_b,
+               th_eff, tw_eff,
+               s_f2);
+
+  conv3_5x5(s_f2, conv3_w, conv3_b,
+            h0, w0, th_eff, tw_eff,
+            out_tile);
+}
+
+
+
+// // -------------------------- COMPUTE --------------------------
+// // BRAM-BRAM: conv1(9x9) + conv2(1x1) fused per pixel,
+// // then conv3(5x5) using line buffers + 5x5 window.
+// static void compute_tile(
+//  ftmap_t in_tile[TH + 2*R_TOTAL][TW + 2*R_TOTAL],
+//  ftmap_t out_tile[TH][TW],
+//  // weights/biases
+//  param_t conv1_w[N1][N0][F1][F1], param_t conv1_b[N1],
+//  param_t conv2_w[N2][N1][F2][F2], param_t conv2_b[N2],
+//  param_t conv3_w[N3][N2][F3][F3], param_t conv3_b[N3],
+//  int h0, int w0, int th_eff, int tw_eff )
+// {
+// #pragma HLS INLINE off
+// //#pragma HLS DATAFLOW
+
+//  // ---- buffers for the 5x5 stage (per tile) ----
+//  ftmap_t linebuf[N2][F3-1][TW + 2*R3];
+//  #pragma HLS BIND_STORAGE    variable=linebuf type=ram_2p impl=bram
+//  #pragma HLS ARRAY_PARTITION variable=linebuf complete dim=2
+//  #pragma HLS ARRAY_PARTITION variable=linebuf cyclic factor=UF_N2 dim=1
+
+//  ftmap_t win[N2][F3][F3];
+//  #pragma HLS ARRAY_PARTITION variable=win complete dim=2
+//  #pragma HLS ARRAY_PARTITION variable=win complete dim=3
+//  #pragma HLS ARRAY_PARTITION variable=win cyclic factor=UF_N2 dim=1
+
+//  // // Weight banking to feed the unrolled N2 lanes
+//  // #pragma HLS ARRAY_PARTITION variable=conv2_w cyclic factor=UF_N2 dim=1
+//  // #pragma HLS ARRAY_PARTITION variable=conv3_w cyclic factor=UF_N2 dim=2
+//  // #pragma HLS ARRAY_PARTITION variable=conv3_w complete dim=3
+//  // #pragma HLS ARRAY_PARTITION variable=conv3_w complete dim=4
+
+//  // Limit operator replication so scheduling doesn't explode
+//  #pragma HLS ALLOCATION operation instances=mul limit=UF_N2
+//  #pragma HLS ALLOCATION operation instances=add limit=UF_N2
+
+// //#pragma HLS ALLOCATION operation instances=fmul limit=UF_N2
+// //#pragma HLS ALLOCATION operation instances=fadd limit=UF_N2
+
+
+// //   const int C2H = th_eff + 2*R3;   // conv2 band height needed for 5x5
+// //   const int C2W = tw_eff + 2*R3;   // conv2 band width  needed for 5x5
+
+//  // Canonical 0-N loops; pipeline the inner spatial (x) loop only
+//   ITRowcomp:
+//  for (int y0 = -R3; y0 < th_eff + R3; ++y0) {
+//  #pragma HLS LOOP_FLATTEN off
+//     ITColcomp:
+//    for (int x0 = -R3; x0 < tw_eff + R3; ++x0) {
+// //   #pragma HLS PIPELINE II=1
+//    #pragma HLS DEPENDENCE variable=linebuf inter false
+//    #pragma HLS DEPENDENCE variable=win     inter false
+
+//      // ---------------- conv1 + conv2 (fused) at (y0,x0) ----------------
+//      param_t acc2[N2];
+//      #pragma HLS ARRAY_PARTITION variable=acc2 cyclic factor=UF_N2 dim=1
+//      Conv2Out_biases:
+//      for (int n2 = 0; n2 < N2; ++n2) {
+// #pragma HLS PIPELINE
+//      #pragma HLS UNROLL factor=UF_N2
+//        acc2[n2] = conv2_b[n2];
+//      }
+
+//      // For each conv1 output channel c1:
+//      Conv1_outftmaps:
+//      for (int c1 = 0; c1 < N1; ++c1) { // N1 = 64 conv1 channels
+// //#pragma HLS DATAFLOW
+
+//    	/************** This method introduces a true loop-carried dependency
+//    	 * - must refactor with F1 interleaved accumulators
+//        param_t v = conv1_b[c1];
+//        // 9x9 over in_tile around (y0,x0)
+//        Conv1_ky:
+//        for (int ky = 0; ky < F1; ++ky) {
+//        	Conv1_kx:
+//            for (int kx = 0; kx < F1; ++kx) {
+//                #pragma HLS PIPELINE off
+//                int py = (y0 - R1) + ky + R_TOTAL;
+//                int px = (x0 - R1) + kx + R_TOTAL;
+//                v += conv1_w[c1][0][ky][kx] * in_tile[py][px];
+//            }
+//        }
+//        */
+
+//    	// Using F1 interleaved accumulators instead of just 1 accumulator 'v'
+//    	param_t v[F1]; // F1 independent partial sums
+// #pragma HLS ARRAY_PARTITION variable=v complete dim=1
+//    	// initialise values to zero
+//    	for (int i=0; i<F1; ++i) {
+// #pragma HLS UNROLL
+//    		v[i] = 0;
+//    	}
+
+
+//    	// 9x9 over in_tile around (y0,x0)
+// 		Conv1_ky:
+// 		for (int ky = 0; ky < F1; ++ky) {
+// #pragma HLS PIPELINE II=3
+// 			Conv1_kx:
+// 			for (int kx = 0; kx < F1; ++kx) {
+// 				#pragma HLS UNROLL
+// 				int py = (y0 - R1) + ky + R_TOTAL;
+// 				int px = (x0 - R1) + kx + R_TOTAL;
+// 				v[kx] += conv1_w[c1][0][ky][kx] * in_tile[py][px];
+// 			}
+// 		}
+// 		param_t acc1 = conv1_b[c1];
+// 		acc1:
+// 		for (int i = 0;i < F1; ++i) {
+// #pragma HLS PIPELINE off
+// 			acc1 += v[i];
+// 		}
+
+
+
+//        if (acc1 < (param_t)0) acc1 = (param_t)0;  // ReLU after conv1
+
+//        Conv2_dot32:
+//        for (int n2 = 0; n2 < N2; ++n2) { // generate all 32 output feature maps pixel by pixel
+//        #pragma HLS UNROLL factor=UF_N2
+// #pragma HLS PIPELINE
+//          acc2[n2] += conv2_w[n2][c1][0][0] * acc1;   // 1x1 mix
+//        }
+//      }
+
+//      ftmap_t f2[N2];   // ReLU after conv2
+//      #pragma HLS ARRAY_PARTITION variable=f2 cyclic factor=UF_N2 dim=1
+//      Conv2_ReLU:
+//      for (int n2 = 0; n2 < N2; ++n2) {
+// #pragma HLS PIPELINE
+//      #pragma HLS UNROLL factor=UF_N2
+//        param_t t = acc2[n2];
+//        f2[n2] = (t > (param_t)0) ? (ftmap_t)t : (ftmap_t)0;
+//      }
+
+//      // -------------- update 5x5 window & line buffers ---------------
+//      const int col = x0 + R3; // [0..C2W-1]
+
+//      // Shift window left by 1 column
+//      Shift_win32:
+//      for (int n2 = 0; n2 < N2; ++n2) {
+// #pragma HLS PIPELINE
+//      #pragma HLS UNROLL factor=UF_N2
+//        // Shift window left (use temps to avoid intra RAW)
+//    	Shift_win_row:
+//        for (int r = 0; r < F3; ++r) {
+// //        #pragma HLS UNROLL
+//          ftmap_t a = win[n2][r][1], b = win[n2][r][2],
+//                  c = win[n2][r][3], d = win[n2][r][4];
+//          win[n2][r][0]=a;
+//          win[n2][r][1]=b;
+//          win[n2][r][2]=c;
+//          win[n2][r][3]=d;
+//        }
+//        // Rightmost column: 4 rows from linebuf (oldest at top) + current f2 at bottom
+//        ReadLineInWin:
+//        for (int r = 0; r < F3-1; ++r) {
+
+//        #pragma HLS UNROLL factor=F3-1
+//          win[n2][r][F3-1] = linebuf[n2][F3-2 - r][col];
+//        }
+//        win[n2][F3-1][F3-1] = f2[n2];
+//      }
+
+//      // After filling the window, update line buffers at this column: roll rows down, insert current row on top
+//      Update_linebuf32:
+//      for (int n2 = 0; n2 < N2; ++n2) {
+// #pragma HLS PIPELINE
+//      #pragma HLS UNROLL factor=UF_N2
+//    	Update_linebuf_row:
+//        for (int r = F3-2; r >= 1; --r) {
+//        #pragma HLS UNROLL factor=F3-2
+//          linebuf[n2][r][col] = linebuf[n2][r-1][col];
+//        }
+//        linebuf[n2][0][col] = f2[n2];
+//      }
+
+//      // ---------------- conv3 (5x5) when window is valid ----------------
+//      if (y0 >= R3 && x0 >= R3) {
+//        int oy = y0 - R3;  // output coords inside tile
+//        int ox = x0 - R3;
+//        if (oy < th_eff && ox < tw_eff) {
+
+//        	/*
+//          param_t acc3 = conv3_b[0];
+//          Conv3_inputft:
+//          for (int n2 = 0; n2 < N2; ++n2) {
+// //          #pragma HLS UNROLL factor=UF_N2
+// //#pragma HLS PIPELINE
+//        	Conv3_ky:
+//            for (int ky = 0; ky < F3; ++ky) {
+// //            #pragma HLS UNROLL factor=F3
+//              Conv3_kx:
+//              for (int kx = 0; kx < F3; ++kx) {
+// //             #pragma HLS UNROLL factor=F3
+// #pragma HLS PIPELINE off
+//               // 2. Clamp window coordinates to those thresholds
+//                 int wy = clampi(ky, R3-(h0+oy), R3-(h0+oy)+H-1);
+//                 int wx = clampi(kx, R3-(w0+ox), R3-(w0+ox)+W-1);
+
+//                acc3 += conv3_w[0][n2][ky][kx] * win[n2][wy][wx];
+//              }
+//            }
+//          }
+//          // Double check the indexing on this one
+//          out_tile[oy][ox] = (ftmap_t)acc3;
+//          */
+//        	// Need to refactor code to use interleaved accumulators:
+//            param_t acc3[F3][F3];
+// #pragma HLS ARRAY_PARTITION variable=acc3 complete dim=1
+// #pragma HLS ARRAY_PARTITION variable=acc3 complete dim=2
+//            // Initialise values to zero
+//            for (int i=0; i<F3; ++i) {
+//            	for (int j=0;j<F3;++j) {
+// #pragma HLS UNROLL
+//            		acc3[i][j]=0;
+//            	}
+//            }
+
+
+//            Conv3_inputft:
+//            for (int n2 = 0; n2 < N2; ++n2) { // for each conv2 output ftmap
+// //#pragma HLS DATAFLOW
+// #pragma HLS PIPELINE II=3
+//          	Conv3_ky:
+//              for (int ky = 0; ky < F3; ++ky) {
+// #pragma HLS UNROLL
+//                Conv3_kx:
+//                for (int kx = 0; kx < F3; ++kx) {
+
+// #pragma HLS UNROLL
+//                 // 2. Clamp window coordinates to those thresholds
+//                   int wy = clampi(ky, R3-(h0+oy), R3-(h0+oy)+H-1);
+//                   int wx = clampi(kx, R3-(w0+ox), R3-(w0+ox)+W-1);
+
+//                  acc3[ky][kx] += conv3_w[0][n2][ky][kx] * win[n2][wy][wx];
+//                }
+//              }
+//            }
+
+//            ftmap_t acc3_sum = conv3_b[0];
+//            acc3row:
+//            for (int i=0; i < F3; ++i) {
+//            	acc3col:
+//            	for (int j=0; j<F3; ++j) {
+// #pragma HLS PIPELINE off
+//            		acc3_sum += acc3[i][j];
+//            	}
+//            }
+
+//            // Double check the indexing on this one
+//            out_tile[oy][ox] = acc3_sum;
+
+
+
+//        }
+//      }
+//    } // x0
+//  }   // y0
+// }
 
 
 // --------------------------- STORE ---------------------------
@@ -540,10 +763,17 @@ CopyW1_outft:
 
       // T(n): load compute store, while T(1) is computing and T(2) storing
       load_tile_mm (input_ftmap, h0, w0, th_eff, tw_eff, inbuf[ phase]);
-      compute_tile (inbuf[ phase], outbuf[!phase],
-                    w1_loc, b1_loc,
-                    w2_loc, b2_loc,
-                    w3_loc, b3_loc,
+//      compute_tile (inbuf[ phase], outbuf[!phase],
+//                    w1_loc, b1_loc,
+//                    w2_loc, b2_loc,
+//                    w3_loc, b3_loc,
+//					h0, w0, th_eff, tw_eff);
+
+
+		compute_tile_df(inbuf[ phase], outbuf[!phase],
+					  w1_loc, b1_loc,
+					  w2_loc, b2_loc,
+					  w3_loc, b3_loc,
 					h0, w0, th_eff, tw_eff);
       store_tile_mm(outbuf[!phase], output_ftmap, h0, w0, th_eff, tw_eff);
 

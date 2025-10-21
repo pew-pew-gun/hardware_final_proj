@@ -232,12 +232,12 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
-			{"Name" : "add_ln60_2", "Type" : "None", "Direction" : "I"},
-			{"Name" : "sext_ln48", "Type" : "None", "Direction" : "I"},
-			{"Name" : "add_ln48", "Type" : "None", "Direction" : "I"},
+			{"Name" : "add_ln67_2", "Type" : "None", "Direction" : "I"},
+			{"Name" : "sext_ln55", "Type" : "None", "Direction" : "I"},
+			{"Name" : "add_ln55", "Type" : "None", "Direction" : "I"},
 			{"Name" : "bound", "Type" : "None", "Direction" : "I"},
-			{"Name" : "add_ln43", "Type" : "None", "Direction" : "I"},
-			{"Name" : "select_ln60", "Type" : "None", "Direction" : "I"},
+			{"Name" : "add_ln50", "Type" : "None", "Direction" : "I"},
+			{"Name" : "select_ln67", "Type" : "None", "Direction" : "I"},
 			{"Name" : "w0_cast2", "Type" : "None", "Direction" : "I"},
 			{"Name" : "input_ftmap", "Type" : "None", "Direction" : "I"},
 			{"Name" : "gmem_in", "Type" : "MAXI", "Direction" : "I",
@@ -267,12 +267,12 @@ set ArgLastReadFirstWriteLatency {
 		srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12 {Type O LastRead -1 FirstWrite 13}
 		srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11 {Type O LastRead -1 FirstWrite 13}}
 	load_tile_mm_Pipeline_InputTileHread_InputTileWread {
-		add_ln60_2 {Type I LastRead 0 FirstWrite -1}
-		sext_ln48 {Type I LastRead 0 FirstWrite -1}
-		add_ln48 {Type I LastRead 0 FirstWrite -1}
+		add_ln67_2 {Type I LastRead 0 FirstWrite -1}
+		sext_ln55 {Type I LastRead 0 FirstWrite -1}
+		add_ln55 {Type I LastRead 0 FirstWrite -1}
 		bound {Type I LastRead 0 FirstWrite -1}
-		add_ln43 {Type I LastRead 0 FirstWrite -1}
-		select_ln60 {Type I LastRead 0 FirstWrite -1}
+		add_ln50 {Type I LastRead 0 FirstWrite -1}
+		select_ln67 {Type I LastRead 0 FirstWrite -1}
 		w0_cast2 {Type I LastRead 0 FirstWrite -1}
 		input_ftmap {Type I LastRead 0 FirstWrite -1}
 		gmem_in {Type I LastRead 10 FirstWrite -1}

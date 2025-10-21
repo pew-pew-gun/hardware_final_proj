@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'srcnn_Pipeline_CopyW1_ky_CopyW1_kx'" level="0">
-<item name = "Date">Tue Oct 21 05:58:34 2025
+<item name = "Date">Tue Oct 21 14:52:36 2025
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -80,23 +80,23 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln472_1_fu_236_p2">+, 0, 0, 14, 7, 1</column>
-<column name="add_ln472_fu_245_p2">+, 0, 0, 12, 4, 1</column>
-<column name="add_ln475_1_fu_365_p2">+, 0, 0, 12, 4, 1</column>
-<column name="add_ln475_2_fu_285_p2">+, 0, 0, 14, 7, 7</column>
-<column name="add_ln475_fu_224_p2">+, 0, 0, 14, 7, 7</column>
-<column name="add_ln477_1_fu_349_p2">+, 0, 0, 63, 63, 63</column>
-<column name="add_ln477_2_fu_339_p2">+, 0, 0, 15, 8, 8</column>
-<column name="add_ln477_4_fu_397_p2">+, 0, 0, 18, 11, 11</column>
-<column name="add_ln477_5_fu_417_p2">+, 0, 0, 17, 11, 11</column>
-<column name="add_ln477_fu_333_p2">+, 0, 0, 63, 63, 63</column>
-<column name="sub_ln477_fu_408_p2">-, 0, 0, 17, 11, 11</column>
-<column name="icmp_ln472_fu_230_p2">icmp, 0, 0, 14, 7, 7</column>
-<column name="icmp_ln475_fu_251_p2">icmp, 0, 0, 12, 4, 4</column>
+<column name="add_ln692_1_fu_236_p2">+, 0, 0, 14, 7, 1</column>
+<column name="add_ln692_fu_245_p2">+, 0, 0, 12, 4, 1</column>
+<column name="add_ln695_1_fu_365_p2">+, 0, 0, 12, 4, 1</column>
+<column name="add_ln695_2_fu_285_p2">+, 0, 0, 14, 7, 7</column>
+<column name="add_ln695_fu_224_p2">+, 0, 0, 14, 7, 7</column>
+<column name="add_ln697_1_fu_349_p2">+, 0, 0, 63, 63, 63</column>
+<column name="add_ln697_2_fu_339_p2">+, 0, 0, 15, 8, 8</column>
+<column name="add_ln697_4_fu_397_p2">+, 0, 0, 18, 11, 11</column>
+<column name="add_ln697_5_fu_417_p2">+, 0, 0, 17, 11, 11</column>
+<column name="add_ln697_fu_333_p2">+, 0, 0, 63, 63, 63</column>
+<column name="sub_ln697_fu_408_p2">-, 0, 0, 17, 11, 11</column>
+<column name="icmp_ln692_fu_230_p2">icmp, 0, 0, 14, 7, 7</column>
+<column name="icmp_ln695_fu_251_p2">icmp, 0, 0, 12, 4, 4</column>
 <column name="ap_block_pp0_stage0_11001">or, 0, 0, 2, 1, 1</column>
-<column name="select_ln472_1_fu_269_p3">select, 0, 0, 4, 1, 4</column>
-<column name="select_ln472_2_fu_291_p3">select, 0, 0, 7, 1, 7</column>
-<column name="select_ln472_fu_257_p3">select, 0, 0, 4, 1, 1</column>
+<column name="select_ln692_1_fu_269_p3">select, 0, 0, 4, 1, 4</column>
+<column name="select_ln692_2_fu_291_p3">select, 0, 0, 7, 1, 7</column>
+<column name="select_ln692_fu_257_p3">select, 0, 0, 4, 1, 1</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
 </table>
 </item>
@@ -137,17 +137,17 @@
 <column name="ap_loop_exit_ready_pp0_iter7_reg">1, 0, 1, 0</column>
 <column name="ap_loop_exit_ready_pp0_iter8_reg">1, 0, 1, 0</column>
 <column name="ap_loop_exit_ready_pp0_iter9_reg">1, 0, 1, 0</column>
-<column name="bitcast_ln477_reg_485">32, 0, 32, 0</column>
+<column name="bitcast_ln697_reg_485">32, 0, 32, 0</column>
 <column name="gmem_w1_addr_reg_475">64, 0, 64, 0</column>
 <column name="indvar_flatten_fu_110">7, 0, 7, 0</column>
 <column name="kx_fu_102">4, 0, 4, 0</column>
 <column name="ky_fu_106">4, 0, 4, 0</column>
-<column name="select_ln472_1_reg_465">4, 0, 4, 0</column>
+<column name="select_ln692_1_reg_465">4, 0, 4, 0</column>
 <column name="tmp_reg_470">3, 0, 3, 0</column>
-<column name="trunc_ln475_reg_481">2, 0, 2, 0</column>
-<column name="select_ln472_1_reg_465">64, 32, 4, 0</column>
+<column name="trunc_ln695_reg_481">2, 0, 2, 0</column>
+<column name="select_ln692_1_reg_465">64, 32, 4, 0</column>
 <column name="tmp_reg_470">64, 32, 3, 0</column>
-<column name="trunc_ln475_reg_481">64, 32, 2, 0</column>
+<column name="trunc_ln695_reg_481">64, 32, 2, 0</column>
 </table>
 </item>
 </section>
@@ -209,9 +209,9 @@
 <column name="m_axi_gmem_w1_BRESP">in, 2, m_axi, gmem_w1, pointer</column>
 <column name="m_axi_gmem_w1_BID">in, 1, m_axi, gmem_w1, pointer</column>
 <column name="m_axi_gmem_w1_BUSER">in, 1, m_axi, gmem_w1, pointer</column>
-<column name="add_ln477_3">in, 11, ap_none, add_ln477_3, scalar</column>
-<column name="sext_ln468">in, 62, ap_none, sext_ln468, scalar</column>
-<column name="zext_ln468_3">in, 13, ap_none, zext_ln468_3, scalar</column>
+<column name="add_ln697_3">in, 11, ap_none, add_ln697_3, scalar</column>
+<column name="sext_ln688">in, 62, ap_none, sext_ln688, scalar</column>
+<column name="zext_ln688_3">in, 13, ap_none, zext_ln688_3, scalar</column>
 <column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10_address0">out, 11, ap_memory, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10, array</column>
 <column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10_ce0">out, 1, ap_memory, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10, array</column>
 <column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10_we0">out, 1, ap_memory, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10, array</column>

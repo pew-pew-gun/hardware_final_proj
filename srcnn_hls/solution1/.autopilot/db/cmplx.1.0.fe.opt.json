@@ -1,9 +1,9 @@
 {
   "0": {
     "basicblocks": 82,
-    "calls": "4 2 1",
+    "calls": "5 4 2",
     "file": "srcnn.cpp",
-    "fileloc": 351,
+    "fileloc": 571,
     "instructions": 263,
     "loads": {
       "G": 1,
@@ -13,13 +13,22 @@
     "stores": {
       "G": 7
     },
-    "total_instructions": 849
+    "total_instructions": 908
   },
   "1": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "srcnn.cpp",
+    "fileloc": 31,
+    "instructions": 11,
+    "name": "clampi",
+    "total_instructions": 11
+  },
+  "2": {
     "basicblocks": 13,
     "calls": "",
     "file": "srcnn.cpp",
-    "fileloc": 329,
+    "fileloc": 549,
     "instructions": 32,
     "loads": {
       "L": 1
@@ -30,35 +39,35 @@
     },
     "total_instructions": 32
   },
-  "2": {
-    "basicblocks": 144,
-    "calls": "3 3",
-    "file": "srcnn.cpp",
-    "fileloc": 69,
-    "instructions": 480,
-    "loads": {
-      "L": 22
-    },
-    "name": "compute_tile",
-    "stores": {
-      "L": 16
-    },
-    "total_instructions": 502
-  },
   "3": {
-    "basicblocks": 7,
+    "basicblocks": 66,
     "calls": "",
     "file": "srcnn.cpp",
-    "fileloc": 24,
-    "instructions": 11,
-    "name": "clampi",
-    "total_instructions": 11
+    "fileloc": 72,
+    "instructions": 185,
+    "loads": {
+      "L": 9
+    },
+    "name": "fuse_9x9_1x1",
+    "stores": {
+      "L": 5
+    },
+    "total_instructions": 189
   },
   "4": {
+    "basicblocks": 1,
+    "calls": "3 6",
+    "file": "srcnn.cpp",
+    "fileloc": 260,
+    "instructions": 16,
+    "name": "compute_tile_df",
+    "total_instructions": 561
+  },
+  "5": {
     "basicblocks": 21,
     "calls": "",
     "file": "srcnn.cpp",
-    "fileloc": 29,
+    "fileloc": 36,
     "instructions": 52,
     "loads": {
       "L": 1
@@ -68,5 +77,20 @@
       "L": 1
     },
     "total_instructions": 52
+  },
+  "6": {
+    "basicblocks": 91,
+    "calls": "1 1",
+    "file": "srcnn.cpp",
+    "fileloc": 150,
+    "instructions": 325,
+    "loads": {
+      "L": 13
+    },
+    "name": "conv3_5x5",
+    "stores": {
+      "L": 11
+    },
+    "total_instructions": 353
   }
 }

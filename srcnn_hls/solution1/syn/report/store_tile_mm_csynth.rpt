@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'store_tile_mm'
 ================================================================
-* Date:           Tue Oct 21 05:58:52 2025
+* Date:           Tue Oct 21 14:52:51 2025
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -58,10 +58,10 @@
 |FIFO             |        -|     -|       -|       -|    -|
 |Instance         |        -|     0|     216|     549|    -|
 |Memory           |        -|     -|       -|       -|    -|
-|Multiplexer      |        -|     -|       -|      65|    -|
-|Register         |        -|     -|     111|       -|    -|
+|Multiplexer      |        -|     -|       -|      92|    -|
+|Register         |        -|     -|     130|       -|    -|
 +-----------------+---------+------+--------+--------+-----+
-|Total            |        0|     0|     327|     682|    0|
+|Total            |        0|     0|     346|     709|    0|
 +-----------------+---------+------+--------+--------+-----+
 |Available        |      288|  1248|  234240|  117120|   64|
 +-----------------+---------+------+--------+--------+-----+
@@ -73,7 +73,7 @@
     +---------------------------------------------+-----------------------------------+---------+----+-----+-----+-----+
     |                   Instance                  |               Module              | BRAM_18K| DSP|  FF | LUT | URAM|
     +---------------------------------------------+-----------------------------------+---------+----+-----+-----+-----+
-    |mul_8ns_8ns_16_1_1_U1959                     |mul_8ns_8ns_16_1_1                 |        0|   0|    0|   40|    0|
+    |mul_8ns_8ns_16_1_1_U2326                     |mul_8ns_8ns_16_1_1                 |        0|   0|    0|   40|    0|
     |grp_store_tile_mm_Pipeline_Out_writex_fu_98  |store_tile_mm_Pipeline_Out_writex  |        0|   0|  216|  509|    0|
     +---------------------------------------------+-----------------------------------+---------+----+-----+-----+-----+
     |Total                                        |                                   |        0|   0|  216|  549|    0|
@@ -92,14 +92,14 @@
     +---------------------+----------+----+---+----+------------+------------+
     |    Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +---------------------+----------+----+---+----+------------+------------+
-    |add_ln534_fu_114_p2  |         +|   0|  0|  16|           9|           5|
-    |add_ln537_fu_146_p2  |         +|   0|  0|  16|           9|           5|
+    |add_ln754_fu_113_p2  |         +|   0|  0|  16|           9|           5|
+    |add_ln757_fu_145_p2  |         +|   0|  0|  16|           9|           5|
     |ap_block_state1      |        or|   0|  0|   2|           1|           1|
-    |th_eff_fu_138_p3     |    select|   0|  0|   8|           1|           8|
-    |tw_eff_fu_170_p3     |    select|   0|  0|   8|           1|           8|
-    |xor_ln534_fu_132_p2  |       xor|   0|  0|   8|           8|           2|
-    |xor_ln537_fu_164_p2  |       xor|   0|  0|   8|           8|           2|
-    |xor_ln543_fu_178_p2  |       xor|   0|  0|   2|           1|           2|
+    |th_eff_fu_137_p3     |    select|   0|  0|   8|           1|           8|
+    |tw_eff_fu_169_p3     |    select|   0|  0|   8|           1|           8|
+    |xor_ln754_fu_131_p2  |       xor|   0|  0|   8|           8|           2|
+    |xor_ln757_fu_163_p2  |       xor|   0|  0|   8|           8|           2|
+    |xor_ln770_fu_177_p2  |       xor|   0|  0|   2|           1|           2|
     +---------------------+----------+----+---+----+------------+------------+
     |Total                |          |   0|  0|  68|          38|          33|
     +---------------------+----------+----+---+----+------------+------------+
@@ -110,12 +110,15 @@
     +------------------------+----+-----------+-----+-----------+
     |ap_NS_fsm               |  20|          4|    1|          4|
     |ap_done                 |   9|          2|    1|          2|
+    |h0_blk_n                |   9|          2|    1|          2|
     |m_axi_gmem_out_AWVALID  |   9|          2|    1|          2|
     |m_axi_gmem_out_BREADY   |   9|          2|    1|          2|
     |m_axi_gmem_out_WVALID   |   9|          2|    1|          2|
     |output_ftmap_blk_n      |   9|          2|    1|          2|
+    |phase_blk_n             |   9|          2|    1|          2|
+    |w0_blk_n                |   9|          2|    1|          2|
     +------------------------+----+-----------+-----+-----------+
-    |Total                   |  65|         14|    6|         14|
+    |Total                   |  92|         20|    9|         20|
     +------------------------+----+-----------+-----+-----------+
 
     * Register: 
@@ -124,15 +127,18 @@
     +----------------------------------------------------------+----+----+-----+-----------+
     |ap_CS_fsm                                                 |   3|   0|    3|          0|
     |ap_done_reg                                               |   1|   0|    1|          0|
-    |bound_reg_251                                             |  16|   0|   16|          0|
+    |bound_reg_254                                             |  16|   0|   16|          0|
     |grp_store_tile_mm_Pipeline_Out_writex_fu_98_ap_start_reg  |   1|   0|    1|          0|
-    |out_reg_236                                               |  64|   0|   64|          0|
-    |th_eff_reg_224                                            |   8|   0|    8|          0|
-    |tmp_1_reg_246                                             |   9|   0|   11|          2|
-    |tmp_reg_241                                               |   1|   0|    5|          4|
-    |tw_eff_reg_229                                            |   8|   0|    8|          0|
+    |h0_1_reg_227                                              |   9|   0|    9|          0|
+    |out_reg_212                                               |  64|   0|   64|          0|
+    |phase_read_reg_217                                        |   1|   0|    1|          0|
+    |th_eff_reg_232                                            |   8|   0|    8|          0|
+    |tmp_1_reg_249                                             |   9|   0|   11|          2|
+    |tmp_reg_244                                               |   1|   0|    5|          4|
+    |tw_eff_reg_237                                            |   8|   0|    8|          0|
+    |w0_1_reg_222                                              |   9|   0|    9|          0|
     +----------------------------------------------------------+----+----+-----+-----------+
-    |Total                                                     | 111|   0|  117|          6|
+    |Total                                                     | 130|   0|  136|          6|
     +----------------------------------------------------------+----+----+-----+-----------+
 
 
@@ -151,7 +157,11 @@
 |ap_continue                  |   in|    1|  ap_ctrl_hs|  store_tile_mm|  return value|
 |ap_idle                      |  out|    1|  ap_ctrl_hs|  store_tile_mm|  return value|
 |ap_ready                     |  out|    1|  ap_ctrl_hs|  store_tile_mm|  return value|
-|p_read                       |   in|    1|     ap_none|         p_read|        scalar|
+|phase_dout                   |   in|    1|     ap_fifo|          phase|       pointer|
+|phase_num_data_valid         |   in|    2|     ap_fifo|          phase|       pointer|
+|phase_fifo_cap               |   in|    2|     ap_fifo|          phase|       pointer|
+|phase_empty_n                |   in|    1|     ap_fifo|          phase|       pointer|
+|phase_read                   |  out|    1|     ap_fifo|          phase|       pointer|
 |m_axi_gmem_out_AWVALID       |  out|    1|       m_axi|       gmem_out|       pointer|
 |m_axi_gmem_out_AWREADY       |   in|    1|       m_axi|       gmem_out|       pointer|
 |m_axi_gmem_out_AWADDR        |  out|   64|       m_axi|       gmem_out|       pointer|
@@ -203,8 +213,16 @@
 |output_ftmap_fifo_cap        |   in|    3|     ap_fifo|   output_ftmap|       pointer|
 |output_ftmap_empty_n         |   in|    1|     ap_fifo|   output_ftmap|       pointer|
 |output_ftmap_read            |  out|    1|     ap_fifo|   output_ftmap|       pointer|
-|p_read1                      |   in|    9|     ap_none|        p_read1|        scalar|
-|p_read2                      |   in|    9|     ap_none|        p_read2|        scalar|
+|h0_dout                      |   in|    9|     ap_fifo|             h0|       pointer|
+|h0_num_data_valid            |   in|    2|     ap_fifo|             h0|       pointer|
+|h0_fifo_cap                  |   in|    2|     ap_fifo|             h0|       pointer|
+|h0_empty_n                   |   in|    1|     ap_fifo|             h0|       pointer|
+|h0_read                      |  out|    1|     ap_fifo|             h0|       pointer|
+|w0_dout                      |   in|    9|     ap_fifo|             w0|       pointer|
+|w0_num_data_valid            |   in|    2|     ap_fifo|             w0|       pointer|
+|w0_fifo_cap                  |   in|    2|     ap_fifo|             w0|       pointer|
+|w0_empty_n                   |   in|    1|     ap_fifo|             w0|       pointer|
+|w0_read                      |  out|    1|     ap_fifo|             w0|       pointer|
 |outbuf_address0              |  out|    9|   ap_memory|         outbuf|         array|
 |outbuf_ce0                   |  out|    1|   ap_memory|         outbuf|         array|
 |outbuf_q0                    |   in|   32|   ap_memory|         outbuf|         array|

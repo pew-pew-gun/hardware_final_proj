@@ -1,9 +1,9 @@
 {
   "0": {
     "basicblocks": 544,
-    "calls": "3 1 2",
+    "calls": "1 4 3",
     "file": "srcnn.cpp",
-    "fileloc": 351,
+    "fileloc": 571,
     "instructions": 2275,
     "loads": {
       "G": 1,
@@ -13,41 +13,13 @@
     "stores": {
       "G": 309
     },
-    "total_instructions": 6338
+    "total_instructions": 6733
   },
   "1": {
-    "basicblocks": 58,
-    "calls": "",
-    "file": "srcnn.cpp",
-    "fileloc": 69,
-    "instructions": 3958,
-    "loads": {
-      "G": 314,
-      "L": 475
-    },
-    "name": "compute_tile",
-    "stores": {
-      "L": 257
-    },
-    "total_instructions": 3958
-  },
-  "2": {
-    "basicblocks": 7,
-    "calls": "",
-    "file": "srcnn.cpp",
-    "fileloc": 329,
-    "instructions": 36,
-    "loads": {
-      "L": 1
-    },
-    "name": "store_tile_mm",
-    "total_instructions": 36
-  },
-  "3": {
     "basicblocks": 13,
     "calls": "",
     "file": "srcnn.cpp",
-    "fileloc": 29,
+    "fileloc": 36,
     "instructions": 69,
     "loads": {
       "L": 1
@@ -57,5 +29,58 @@
       "L": 3
     },
     "total_instructions": 69
+  },
+  "2": {
+    "basicblocks": 25,
+    "calls": "",
+    "file": "srcnn.cpp",
+    "fileloc": 72,
+    "instructions": 840,
+    "loads": {
+      "G": 113,
+      "L": 75
+    },
+    "name": "fuse_9x9_1x1",
+    "stores": {
+      "L": 25
+    },
+    "total_instructions": 840
+  },
+  "3": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "srcnn.cpp",
+    "fileloc": 549,
+    "instructions": 36,
+    "loads": {
+      "L": 1
+    },
+    "name": "store_tile_mm",
+    "total_instructions": 36
+  },
+  "4": {
+    "basicblocks": 1,
+    "calls": "2 5",
+    "file": "srcnn.cpp",
+    "fileloc": 260,
+    "instructions": 11,
+    "name": "compute_tile_df",
+    "total_instructions": 4353
+  },
+  "5": {
+    "basicblocks": 30,
+    "calls": "",
+    "file": "srcnn.cpp",
+    "fileloc": 150,
+    "instructions": 3502,
+    "loads": {
+      "G": 201,
+      "L": 433
+    },
+    "name": "conv3_5x5",
+    "stores": {
+      "L": 265
+    },
+    "total_instructions": 3502
   }
 }

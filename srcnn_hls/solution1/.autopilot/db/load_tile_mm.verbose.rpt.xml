@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'load_tile_mm'" level="0">
-<item name = "Date">Tue Oct 21 05:58:39 2025
+<item name = "Date">Tue Oct 21 14:52:39 2025
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -80,19 +80,19 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln43_fu_191_p2">+, 0, 0, 16, 9, 4</column>
-<column name="add_ln48_fu_240_p2">+, 0, 0, 17, 10, 4</column>
-<column name="add_ln534_fu_127_p2">+, 0, 0, 16, 9, 5</column>
-<column name="add_ln537_fu_159_p2">+, 0, 0, 16, 9, 5</column>
-<column name="add_ln60_2_fu_230_p2">+, 0, 0, 16, 9, 9</column>
+<column name="add_ln50_fu_191_p2">+, 0, 0, 16, 9, 4</column>
+<column name="add_ln55_fu_240_p2">+, 0, 0, 17, 10, 4</column>
+<column name="add_ln67_2_fu_230_p2">+, 0, 0, 16, 9, 9</column>
+<column name="add_ln754_fu_127_p2">+, 0, 0, 16, 9, 5</column>
+<column name="add_ln757_fu_159_p2">+, 0, 0, 16, 9, 5</column>
 <column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
-<column name="select_ln60_1_fu_214_p3">select, 0, 0, 8, 1, 8</column>
-<column name="select_ln60_2_fu_222_p3">select, 0, 0, 6, 1, 6</column>
-<column name="select_ln60_fu_205_p3">select, 0, 0, 4, 1, 4</column>
+<column name="select_ln67_1_fu_214_p3">select, 0, 0, 8, 1, 8</column>
+<column name="select_ln67_2_fu_222_p3">select, 0, 0, 6, 1, 6</column>
+<column name="select_ln67_fu_205_p3">select, 0, 0, 4, 1, 4</column>
 <column name="th_eff_fu_151_p3">select, 0, 0, 8, 1, 8</column>
 <column name="tw_eff_fu_179_p3">select, 0, 0, 8, 1, 8</column>
-<column name="xor_ln534_fu_145_p2">xor, 0, 0, 8, 8, 2</column>
-<column name="xor_ln537_fu_173_p2">xor, 0, 0, 8, 8, 2</column>
+<column name="xor_ln754_fu_145_p2">xor, 0, 0, 8, 8, 2</column>
+<column name="xor_ln757_fu_173_p2">xor, 0, 0, 8, 8, 2</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
@@ -108,17 +108,17 @@
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="add_ln43_reg_287">9, 0, 9, 0</column>
-<column name="add_ln48_reg_322">10, 0, 10, 0</column>
-<column name="add_ln60_2_reg_317">6, 0, 9, 3</column>
+<column name="add_ln50_reg_287">9, 0, 9, 0</column>
+<column name="add_ln55_reg_322">10, 0, 10, 0</column>
+<column name="add_ln67_2_reg_317">6, 0, 9, 3</column>
 <column name="ap_CS_fsm">6, 0, 6, 0</column>
 <column name="ap_done_reg">1, 0, 1, 0</column>
 <column name="ap_return_0_preg">9, 0, 9, 0</column>
 <column name="ap_return_1_preg">8, 0, 9, 1</column>
 <column name="ap_return_2_preg">1, 0, 1, 0</column>
 <column name="grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_ap_start_reg">1, 0, 1, 0</column>
-<column name="mul_ln43_reg_297">17, 0, 17, 0</column>
-<column name="select_ln60_reg_312">1, 0, 3, 2</column>
+<column name="mul_ln50_reg_297">17, 0, 17, 0</column>
+<column name="select_ln67_reg_312">1, 0, 3, 2</column>
 <column name="w0_cast2_reg_282">8, 0, 9, 1</column>
 </table>
 </item>

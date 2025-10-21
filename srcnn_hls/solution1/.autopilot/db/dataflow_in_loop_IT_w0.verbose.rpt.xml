@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'dataflow_in_loop_IT_w0'" level="0">
-<item name = "Date">Tue Oct 21 05:58:54 2025
+<item name = "Date">Tue Oct 21 14:52:53 2025
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 7.300 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 8.237 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -31,9 +31,9 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="entry_proc_U0">entry_proc, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
 <column name="load_tile_mm_U0">load_tile_mm, 162, 71307, 1.620 us, 0.713 ms, 162, 71307, no</column>
-<column name="compute_tile_U0">compute_tile, 95817, 417915149, 0.958 ms, 4.179 sec, 95817, 417915149, no</column>
+<column name="compute_tile_df_U0">compute_tile_df, 89445, 374982795, 0.894 ms, 3.750 sec, 89445, 374982795, dataflow</column>
+<column name="entry_proc15_U0">entry_proc15, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
 <column name="store_tile_mm_U0">store_tile_mm, ?, ?, ?, ?, ?, ?, no</column>
 </table>
 </item>
@@ -51,24 +51,24 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="DSP">-, -, -, -, -</column>
-<column name="Expression">-, -, 0, 62, -</column>
+<column name="Expression">-, -, 0, 42, -</column>
 <column name="FIFO">-, -, 693, 469, -</column>
-<column name="Instance">32, 55, 24341, 37108, 0</column>
+<column name="Instance">89, 98, 30066, 41699, 0</column>
 <column name="Memory">14, -, 0, 0, -</column>
-<column name="Multiplexer">-, -, -, 117, -</column>
-<column name="Register">-, -, 13, -, -</column>
+<column name="Multiplexer">-, -, -, 81, -</column>
+<column name="Register">-, -, 9, -, -</column>
 <specialColumn name="Available">288, 1248, 234240, 117120, 64</specialColumn>
-<specialColumn name="Utilization (%)">15, 4, 10, 32, 0</specialColumn>
+<specialColumn name="Utilization (%)">35, 7, 13, 36, 0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="compute_tile_U0">compute_tile, 32, 53, 23381, 35377, 0</column>
-<column name="entry_proc_U0">entry_proc, 0, 0, 2, 20, 0</column>
+<column name="compute_tile_df_U0">compute_tile_df, 89, 96, 29087, 39941, 0</column>
+<column name="entry_proc15_U0">entry_proc15, 0, 0, 2, 20, 0</column>
 <column name="load_tile_mm_U0">load_tile_mm, 0, 2, 631, 1029, 0</column>
-<column name="store_tile_mm_U0">store_tile_mm, 0, 0, 327, 682, 0</column>
+<column name="store_tile_mm_U0">store_tile_mm, 0, 0, 346, 709, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -86,80 +86,62 @@
 <item name = "FIFO"><table name="" hasTotal="1">
 <keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
 <column name="h0_c1_channel_U">0, 99, 0, -, 2, 9, 18</column>
-<column name="h0_c_channel_U">0, 99, 0, -, 2, 9, 18</column>
+<column name="h0_c_U">0, 99, 0, -, 2, 9, 18</column>
 <column name="output_ftmap_c_U">0, 99, 0, -, 4, 64, 256</column>
 <column name="phase_c3_channel_U">0, 99, 0, -, 2, 1, 2</column>
-<column name="phase_c_channel_U">0, 99, 0, -, 2, 1, 2</column>
+<column name="phase_c_U">0, 99, 0, -, 2, 1, 2</column>
 <column name="w0_c2_channel_U">0, 99, 0, -, 2, 9, 18</column>
-<column name="w0_c_channel_U">0, 99, 0, -, 2, 9, 18</column>
+<column name="w0_c_U">0, 99, 0, -, 2, 9, 18</column>
 </table>
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
 <column name="ap_channel_done_h0_c1_channel">and, 0, 0, 2, 1, 1</column>
-<column name="ap_channel_done_h0_c_channel">and, 0, 0, 2, 1, 1</column>
-<column name="ap_channel_done_outbuf">and, 0, 0, 2, 1, 1</column>
 <column name="ap_channel_done_phase_c3_channel">and, 0, 0, 2, 1, 1</column>
-<column name="ap_channel_done_phase_c_channel">and, 0, 0, 2, 1, 1</column>
 <column name="ap_channel_done_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11">and, 0, 0, 2, 1, 1</column>
 <column name="ap_channel_done_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12">and, 0, 0, 2, 1, 1</column>
 <column name="ap_channel_done_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13">and, 0, 0, 2, 1, 1</column>
 <column name="ap_channel_done_w0_c2_channel">and, 0, 0, 2, 1, 1</column>
-<column name="ap_channel_done_w0_c_channel">and, 0, 0, 2, 1, 1</column>
 <column name="ap_idle">and, 0, 0, 2, 1, 1</column>
 <column name="ap_sync_ready">and, 0, 0, 2, 1, 1</column>
-<column name="compute_tile_U0_ap_continue">and, 0, 0, 2, 1, 1</column>
-<column name="compute_tile_U0_ap_start">and, 0, 0, 2, 1, 1</column>
-<column name="entry_proc_U0_ap_start">and, 0, 0, 2, 1, 1</column>
+<column name="compute_tile_df_U0_ap_start">and, 0, 0, 2, 1, 1</column>
+<column name="entry_proc15_U0_ap_start">and, 0, 0, 2, 1, 1</column>
 <column name="load_tile_mm_U0_ap_continue">and, 0, 0, 2, 1, 1</column>
 <column name="load_tile_mm_U0_ap_start">and, 0, 0, 2, 1, 1</column>
-<column name="store_tile_mm_U0_ap_start">and, 0, 0, 2, 1, 1</column>
 <column name="ap_sync_channel_write_h0_c1_channel">or, 0, 0, 2, 1, 1</column>
-<column name="ap_sync_channel_write_h0_c_channel">or, 0, 0, 2, 1, 1</column>
-<column name="ap_sync_channel_write_outbuf">or, 0, 0, 2, 1, 1</column>
 <column name="ap_sync_channel_write_phase_c3_channel">or, 0, 0, 2, 1, 1</column>
-<column name="ap_sync_channel_write_phase_c_channel">or, 0, 0, 2, 1, 1</column>
 <column name="ap_sync_channel_write_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11">or, 0, 0, 2, 1, 1</column>
 <column name="ap_sync_channel_write_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12">or, 0, 0, 2, 1, 1</column>
 <column name="ap_sync_channel_write_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13">or, 0, 0, 2, 1, 1</column>
 <column name="ap_sync_channel_write_w0_c2_channel">or, 0, 0, 2, 1, 1</column>
-<column name="ap_sync_channel_write_w0_c_channel">or, 0, 0, 2, 1, 1</column>
-<column name="ap_sync_compute_tile_U0_ap_ready">or, 0, 0, 2, 1, 1</column>
-<column name="ap_sync_entry_proc_U0_ap_ready">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_compute_tile_df_U0_ap_ready">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_entry_proc15_U0_ap_ready">or, 0, 0, 2, 1, 1</column>
 <column name="ap_sync_load_tile_mm_U0_ap_ready">or, 0, 0, 2, 1, 1</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
 <column name="ap_sync_reg_channel_write_h0_c1_channel">9, 2, 1, 2</column>
-<column name="ap_sync_reg_channel_write_h0_c_channel">9, 2, 1, 2</column>
-<column name="ap_sync_reg_channel_write_outbuf">9, 2, 1, 2</column>
 <column name="ap_sync_reg_channel_write_phase_c3_channel">9, 2, 1, 2</column>
-<column name="ap_sync_reg_channel_write_phase_c_channel">9, 2, 1, 2</column>
 <column name="ap_sync_reg_channel_write_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11">9, 2, 1, 2</column>
 <column name="ap_sync_reg_channel_write_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12">9, 2, 1, 2</column>
 <column name="ap_sync_reg_channel_write_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13">9, 2, 1, 2</column>
 <column name="ap_sync_reg_channel_write_w0_c2_channel">9, 2, 1, 2</column>
-<column name="ap_sync_reg_channel_write_w0_c_channel">9, 2, 1, 2</column>
-<column name="ap_sync_reg_compute_tile_U0_ap_ready">9, 2, 1, 2</column>
-<column name="ap_sync_reg_entry_proc_U0_ap_ready">9, 2, 1, 2</column>
+<column name="ap_sync_reg_compute_tile_df_U0_ap_ready">9, 2, 1, 2</column>
+<column name="ap_sync_reg_entry_proc15_U0_ap_ready">9, 2, 1, 2</column>
 <column name="ap_sync_reg_load_tile_mm_U0_ap_ready">9, 2, 1, 2</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
 <column name="ap_sync_reg_channel_write_h0_c1_channel">1, 0, 1, 0</column>
-<column name="ap_sync_reg_channel_write_h0_c_channel">1, 0, 1, 0</column>
-<column name="ap_sync_reg_channel_write_outbuf">1, 0, 1, 0</column>
 <column name="ap_sync_reg_channel_write_phase_c3_channel">1, 0, 1, 0</column>
-<column name="ap_sync_reg_channel_write_phase_c_channel">1, 0, 1, 0</column>
 <column name="ap_sync_reg_channel_write_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11">1, 0, 1, 0</column>
 <column name="ap_sync_reg_channel_write_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12">1, 0, 1, 0</column>
 <column name="ap_sync_reg_channel_write_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13">1, 0, 1, 0</column>
 <column name="ap_sync_reg_channel_write_w0_c2_channel">1, 0, 1, 0</column>
-<column name="ap_sync_reg_channel_write_w0_c_channel">1, 0, 1, 0</column>
-<column name="ap_sync_reg_compute_tile_U0_ap_ready">1, 0, 1, 0</column>
-<column name="ap_sync_reg_entry_proc_U0_ap_ready">1, 0, 1, 0</column>
+<column name="ap_sync_reg_compute_tile_df_U0_ap_ready">1, 0, 1, 0</column>
+<column name="ap_sync_reg_entry_proc15_U0_ap_ready">1, 0, 1, 0</column>
 <column name="ap_sync_reg_load_tile_mm_U0_ap_ready">1, 0, 1, 0</column>
 </table>
 </item>
@@ -272,8 +254,6 @@
 <column name="m_axi_gmem_out_BUSER">in, 1, m_axi, gmem_out, pointer</column>
 <column name="output_ftmap">in, 64, ap_none, output_ftmap, scalar</column>
 <column name="output_ftmap_ap_vld">in, 1, ap_none, output_ftmap, scalar</column>
-<column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_14">in, 32, ap_stable, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_14, pointer</column>
-<column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_14_ap_vld">in, 1, ap_stable, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_14, pointer</column>
 <column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_24">in, 32, ap_stable, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_24, pointer</column>
 <column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_24_ap_vld">in, 1, ap_stable, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_24, pointer</column>
 <column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_16">in, 32, ap_stable, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_16, pointer</column>
@@ -521,6 +501,8 @@
 <column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_5_d0">out, 32, ap_stable, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_5, array</column>
 <column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_5_q0">in, 32, ap_stable, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_5, array</column>
 <column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_5_we0">out, 1, ap_stable, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_5, array</column>
+<column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_14">in, 32, ap_stable, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_14, pointer</column>
+<column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_14_ap_vld">in, 1, ap_stable, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_14, pointer</column>
 <column name="p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0_4_address0">out, 2, ap_stable, p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0_4, array</column>
 <column name="p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0_4_ce0">out, 1, ap_stable, p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0_4, array</column>
 <column name="p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0_4_d0">out, 32, ap_stable, p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0_4, array</column>

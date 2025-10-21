@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'store_tile_mm_Pipeline_Out_writex'" level="0">
-<item name = "Date">Tue Oct 21 05:58:51 2025
+<item name = "Date">Tue Oct 21 14:52:51 2025
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -78,29 +78,29 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln338_1_fu_395_p2">+, 0, 0, 29, 22, 22</column>
-<column name="add_ln338_2_fu_405_p2">+, 0, 0, 71, 64, 64</column>
-<column name="add_ln338_3_fu_284_p2">+, 0, 0, 23, 16, 1</column>
-<column name="add_ln338_fu_293_p2">+, 0, 0, 15, 8, 1</column>
-<column name="add_ln341_fu_436_p2">+, 0, 0, 15, 8, 1</column>
-<column name="add_ln344_1_fu_425_p2">+, 0, 0, 16, 9, 9</column>
-<column name="add_ln344_fu_331_p2">+, 0, 0, 16, 9, 9</column>
+<column name="add_ln558_1_fu_395_p2">+, 0, 0, 29, 22, 22</column>
+<column name="add_ln558_2_fu_405_p2">+, 0, 0, 71, 64, 64</column>
+<column name="add_ln558_3_fu_284_p2">+, 0, 0, 23, 16, 1</column>
+<column name="add_ln558_fu_293_p2">+, 0, 0, 15, 8, 1</column>
+<column name="add_ln561_fu_436_p2">+, 0, 0, 15, 8, 1</column>
+<column name="add_ln564_1_fu_425_p2">+, 0, 0, 16, 9, 9</column>
+<column name="add_ln564_fu_331_p2">+, 0, 0, 16, 9, 9</column>
 <column name="empty_fu_242_p2">+, 0, 0, 17, 10, 10</column>
 <column name="p_mid1_fu_347_p2">+, 0, 0, 17, 10, 10</column>
-<column name="empty_69_fu_272_p2">-, 0, 0, 28, 21, 21</column>
+<column name="empty_68_fu_272_p2">-, 0, 0, 28, 21, 21</column>
 <column name="p_mid17_fu_377_p2">-, 0, 0, 28, 21, 21</column>
 <column name="ap_block_pp0_stage0_01001">and, 0, 0, 2, 1, 1</column>
 <column name="ap_block_state2_io">and, 0, 0, 2, 1, 1</column>
 <column name="ap_block_state8_pp0_stage0_iter7">and, 0, 0, 2, 1, 1</column>
 <column name="ap_condition_454">and, 0, 0, 2, 1, 1</column>
-<column name="icmp_ln338_fu_278_p2">icmp, 0, 0, 23, 16, 16</column>
-<column name="icmp_ln341_1_fu_442_p2">icmp, 0, 0, 15, 8, 8</column>
-<column name="icmp_ln341_fu_299_p2">icmp, 0, 0, 15, 8, 8</column>
+<column name="icmp_ln558_fu_278_p2">icmp, 0, 0, 23, 16, 16</column>
+<column name="icmp_ln561_1_fu_442_p2">icmp, 0, 0, 15, 8, 8</column>
+<column name="icmp_ln561_fu_299_p2">icmp, 0, 0, 15, 8, 8</column>
 <column name="ap_block_pp0_stage0_11001">or, 0, 0, 2, 1, 1</column>
-<column name="or_ln338_fu_305_p2">or, 0, 0, 2, 1, 1</column>
-<column name="select_ln338_1_fu_319_p3">select, 0, 0, 8, 1, 8</column>
-<column name="select_ln338_2_fu_383_p3">select, 0, 0, 20, 1, 21</column>
-<column name="select_ln338_fu_311_p3">select, 0, 0, 8, 1, 1</column>
+<column name="or_ln558_fu_305_p2">or, 0, 0, 2, 1, 1</column>
+<column name="select_ln558_1_fu_319_p3">select, 0, 0, 8, 1, 8</column>
+<column name="select_ln558_2_fu_383_p3">select, 0, 0, 20, 1, 21</column>
+<column name="select_ln558_fu_311_p3">select, 0, 0, 8, 1, 1</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
 </table>
 </item>
@@ -136,16 +136,16 @@
 <column name="ap_loop_exit_ready_pp0_iter4_reg">1, 0, 1, 0</column>
 <column name="ap_loop_exit_ready_pp0_iter5_reg">1, 0, 1, 0</column>
 <column name="ap_loop_exit_ready_pp0_iter6_reg">1, 0, 1, 0</column>
-<column name="icmp_ln338_reg_509">1, 0, 1, 0</column>
-<column name="icmp_ln341_1_reg_527">1, 0, 1, 0</column>
+<column name="icmp_ln558_reg_509">1, 0, 1, 0</column>
+<column name="icmp_ln561_1_reg_527">1, 0, 1, 0</column>
 <column name="indvar_flatten_fu_112">16, 0, 16, 0</column>
-<column name="or_ln338_reg_513">1, 0, 1, 0</column>
+<column name="or_ln558_reg_513">1, 0, 1, 0</column>
 <column name="outbuf_load_reg_531">32, 0, 32, 0</column>
-<column name="sext_ln341_mid2_v_reg_517">62, 0, 62, 0</column>
+<column name="sext_ln561_mid2_v_reg_517">62, 0, 62, 0</column>
 <column name="x_fu_104">8, 0, 8, 0</column>
 <column name="y_fu_108">8, 0, 8, 0</column>
-<column name="zext_ln338_2_cast_reg_504">8, 0, 32, 24</column>
-<column name="icmp_ln341_1_reg_527">64, 32, 1, 0</column>
+<column name="zext_ln558_2_cast_reg_504">8, 0, 32, 24</column>
+<column name="icmp_ln561_1_reg_527">64, 32, 1, 0</column>
 </table>
 </item>
 </section>
@@ -207,12 +207,12 @@
 <column name="m_axi_gmem_out_BRESP">in, 2, m_axi, gmem_out, pointer</column>
 <column name="m_axi_gmem_out_BID">in, 1, m_axi, gmem_out, pointer</column>
 <column name="m_axi_gmem_out_BUSER">in, 1, m_axi, gmem_out, pointer</column>
-<column name="zext_ln338">in, 9, ap_none, zext_ln338, scalar</column>
+<column name="zext_ln558">in, 9, ap_none, zext_ln558, scalar</column>
 <column name="bound">in, 16, ap_none, bound, scalar</column>
 <column name="tw_eff">in, 8, ap_none, tw_eff, scalar</column>
-<column name="zext_ln338_2">in, 8, ap_none, zext_ln338_2, scalar</column>
-<column name="zext_ln344">in, 5, ap_none, zext_ln344, scalar</column>
-<column name="zext_ln338_1">in, 11, ap_none, zext_ln338_1, scalar</column>
+<column name="zext_ln558_2">in, 8, ap_none, zext_ln558_2, scalar</column>
+<column name="zext_ln564">in, 5, ap_none, zext_ln564, scalar</column>
+<column name="zext_ln558_1">in, 11, ap_none, zext_ln558_1, scalar</column>
 <column name="out_r">in, 64, ap_none, out_r, scalar</column>
 <column name="outbuf_address0">out, 9, ap_memory, outbuf, array</column>
 <column name="outbuf_ce0">out, 1, ap_memory, outbuf, array</column>

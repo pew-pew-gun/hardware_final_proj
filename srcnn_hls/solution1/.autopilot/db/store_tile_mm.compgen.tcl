@@ -17,7 +17,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1966 \
+    id 2333 \
     name outbuf \
     reset_level 1 \
     sync_rst true \
@@ -35,22 +35,22 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1961 \
-    name p_read \
-    type other \
+    id 2328 \
+    name phase \
+    type fifo \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_p_read \
+    corename dc_phase \
     op interface \
-    ports { p_read { I 1 vector } } \
+    ports { phase_dout { I 1 vector } phase_num_data_valid { I 2 vector } phase_fifo_cap { I 2 vector } phase_empty_n { I 1 bit } phase_read { O 1 bit } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1962 \
+    id 2329 \
     name gmem_out \
     type other \
     dir O \
@@ -65,7 +65,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1963 \
+    id 2330 \
     name output_ftmap \
     type fifo \
     dir I \
@@ -80,30 +80,30 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1964 \
-    name p_read1 \
-    type other \
+    id 2331 \
+    name h0 \
+    type fifo \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_p_read1 \
+    corename dc_h0 \
     op interface \
-    ports { p_read1 { I 9 vector } } \
+    ports { h0_dout { I 9 vector } h0_num_data_valid { I 2 vector } h0_fifo_cap { I 2 vector } h0_empty_n { I 1 bit } h0_read { O 1 bit } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1965 \
-    name p_read2 \
-    type other \
+    id 2332 \
+    name w0 \
+    type fifo \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_p_read2 \
+    corename dc_w0 \
     op interface \
-    ports { p_read2 { I 9 vector } } \
+    ports { w0_dout { I 9 vector } w0_num_data_valid { I 2 vector } w0_fifo_cap { I 2 vector } w0_empty_n { I 1 bit } w0_read { O 1 bit } } \
 } "
 }
 

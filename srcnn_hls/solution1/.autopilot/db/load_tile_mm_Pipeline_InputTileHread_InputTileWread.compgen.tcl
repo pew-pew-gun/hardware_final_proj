@@ -80,14 +80,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 233 \
-    name add_ln60_2 \
+    name add_ln67_2 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_add_ln60_2 \
+    corename dc_add_ln67_2 \
     op interface \
-    ports { add_ln60_2 { I 9 vector } } \
+    ports { add_ln67_2 { I 9 vector } } \
 } "
 }
 
@@ -95,14 +95,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 234 \
-    name sext_ln48 \
+    name sext_ln55 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_sext_ln48 \
+    corename dc_sext_ln55 \
     op interface \
-    ports { sext_ln48 { I 10 vector } } \
+    ports { sext_ln55 { I 10 vector } } \
 } "
 }
 
@@ -110,14 +110,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 235 \
-    name add_ln48 \
+    name add_ln55 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_add_ln48 \
+    corename dc_add_ln55 \
     op interface \
-    ports { add_ln48 { I 10 vector } } \
+    ports { add_ln55 { I 10 vector } } \
 } "
 }
 
@@ -140,14 +140,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 237 \
-    name add_ln43 \
+    name add_ln50 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_add_ln43 \
+    corename dc_add_ln50 \
     op interface \
-    ports { add_ln43 { I 9 vector } } \
+    ports { add_ln50 { I 9 vector } } \
 } "
 }
 
@@ -155,14 +155,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 238 \
-    name select_ln60 \
+    name select_ln67 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_select_ln60 \
+    corename dc_select_ln67 \
     op interface \
-    ports { select_ln60 { I 3 vector } } \
+    ports { select_ln67 { I 3 vector } } \
 } "
 }
 

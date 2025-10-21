@@ -34,7 +34,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1953391988</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -70,7 +70,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1953391988</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -106,7 +106,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1884240928</coreId>
+						<coreId>1953391988</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -142,7 +142,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>540876915</coreId>
+						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -214,7 +214,7 @@
 						<coreName>RAM_1P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1953391988</coreId>
+						<coreId>1869902631</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -250,7 +250,7 @@
 						<coreName>RAM_1P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1953391988</coreId>
+						<coreId>1769109287</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -286,7 +286,7 @@
 						<coreName>RAM_1P_BRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1953391988</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -326,7 +326,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2769</coreId>
+						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -369,7 +369,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>544108393</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -412,7 +412,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>7056</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -455,7 +455,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>645426015</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -498,7 +498,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>875639328</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -522,10 +522,10 @@
 					<Obj>
 						<type>0</type>
 						<id>14</id>
-						<name>add_ln534</name>
+						<name>add_ln754</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>C:\Users\redre\Desktop\HAC\FinalProject\golden</fileDirectory>
-						<lineNumber>534</lineNumber>
+						<lineNumber>754</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -541,7 +541,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>534</second>
+										<second>754</second>
 									</item>
 								</second>
 							</item>
@@ -582,7 +582,7 @@
 						<name>tmp</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>C:\Users\redre\Desktop\HAC\FinalProject\golden</fileDirectory>
-						<lineNumber>534</lineNumber>
+						<lineNumber>754</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -598,7 +598,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>534</second>
+										<second>754</second>
 									</item>
 								</second>
 							</item>
@@ -637,10 +637,10 @@
 					<Obj>
 						<type>0</type>
 						<id>16</id>
-						<name>trunc_ln533</name>
+						<name>trunc_ln753</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>C:\Users\redre\Desktop\HAC\FinalProject\golden</fileDirectory>
-						<lineNumber>533</lineNumber>
+						<lineNumber>753</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -656,7 +656,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>533</second>
+										<second>753</second>
 									</item>
 								</second>
 							</item>
@@ -669,7 +669,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>544826479</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -693,10 +693,10 @@
 					<Obj>
 						<type>0</type>
 						<id>17</id>
-						<name>xor_ln534</name>
+						<name>xor_ln754</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>C:\Users\redre\Desktop\HAC\FinalProject\golden</fileDirectory>
-						<lineNumber>534</lineNumber>
+						<lineNumber>754</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -712,7 +712,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>534</second>
+										<second>754</second>
 									</item>
 								</second>
 							</item>
@@ -753,7 +753,7 @@
 						<name>th_eff</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>C:\Users\redre\Desktop\HAC\FinalProject\golden</fileDirectory>
-						<lineNumber>534</lineNumber>
+						<lineNumber>754</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -769,7 +769,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>534</second>
+										<second>754</second>
 									</item>
 								</second>
 							</item>
@@ -808,10 +808,10 @@
 					<Obj>
 						<type>0</type>
 						<id>19</id>
-						<name>add_ln537</name>
+						<name>add_ln757</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>C:\Users\redre\Desktop\HAC\FinalProject\golden</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>757</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -827,7 +827,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>537</second>
+										<second>757</second>
 									</item>
 								</second>
 							</item>
@@ -868,7 +868,7 @@
 						<name>tmp_7</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>C:\Users\redre\Desktop\HAC\FinalProject\golden</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>757</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -884,7 +884,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>537</second>
+										<second>757</second>
 									</item>
 								</second>
 							</item>
@@ -897,7 +897,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>544108393</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -923,10 +923,10 @@
 					<Obj>
 						<type>0</type>
 						<id>21</id>
-						<name>xor_ln537</name>
+						<name>xor_ln757</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>C:\Users\redre\Desktop\HAC\FinalProject\golden</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>757</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -942,7 +942,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>537</second>
+										<second>757</second>
 									</item>
 								</second>
 							</item>
@@ -983,7 +983,7 @@
 						<name>tw_eff</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>C:\Users\redre\Desktop\HAC\FinalProject\golden</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>757</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -999,7 +999,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>537</second>
+										<second>757</second>
 									</item>
 								</second>
 							</item>
@@ -1038,10 +1038,10 @@
 					<Obj>
 						<type>0</type>
 						<id>23</id>
-						<name>select_ln60</name>
+						<name>select_ln67</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>C:\Users\redre\Desktop\HAC\FinalProject\golden</fileDirectory>
-						<lineNumber>60</lineNumber>
+						<lineNumber>67</lineNumber>
 						<contextFuncName>load_tile_mm</contextFuncName>
 						<contextNormFuncName>load_tile_mm</contextNormFuncName>
 						<inlineStackInfo>
@@ -1057,14 +1057,14 @@
 											<first>src/srcnn.cpp</first>
 											<second>load_tile_mm</second>
 										</first>
-										<second>60</second>
+										<second>67</second>
 									</item>
 									<item>
 										<first>
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>542</second>
+										<second>762</second>
 									</item>
 								</second>
 							</item>
@@ -1103,10 +1103,10 @@
 					<Obj>
 						<type>0</type>
 						<id>24</id>
-						<name>select_ln60_1</name>
+						<name>select_ln67_1</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>C:\Users\redre\Desktop\HAC\FinalProject\golden</fileDirectory>
-						<lineNumber>60</lineNumber>
+						<lineNumber>67</lineNumber>
 						<contextFuncName>load_tile_mm</contextFuncName>
 						<contextNormFuncName>load_tile_mm</contextNormFuncName>
 						<inlineStackInfo>
@@ -1122,14 +1122,14 @@
 											<first>src/srcnn.cpp</first>
 											<second>load_tile_mm</second>
 										</first>
-										<second>60</second>
+										<second>67</second>
 									</item>
 									<item>
 										<first>
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>542</second>
+										<second>762</second>
 									</item>
 								</second>
 							</item>
@@ -1168,10 +1168,10 @@
 					<Obj>
 						<type>0</type>
 						<id>25</id>
-						<name>select_ln60_2</name>
+						<name>select_ln67_2</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>C:\Users\redre\Desktop\HAC\FinalProject\golden</fileDirectory>
-						<lineNumber>60</lineNumber>
+						<lineNumber>67</lineNumber>
 						<contextFuncName>load_tile_mm</contextFuncName>
 						<contextNormFuncName>load_tile_mm</contextNormFuncName>
 						<inlineStackInfo>
@@ -1187,14 +1187,14 @@
 											<first>src/srcnn.cpp</first>
 											<second>load_tile_mm</second>
 										</first>
-										<second>60</second>
+										<second>67</second>
 									</item>
 									<item>
 										<first>
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>542</second>
+										<second>762</second>
 									</item>
 								</second>
 							</item>
@@ -1233,10 +1233,10 @@
 					<Obj>
 						<type>0</type>
 						<id>26</id>
-						<name>add_ln60_2</name>
+						<name>add_ln67_2</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>C:\Users\redre\Desktop\HAC\FinalProject\golden</fileDirectory>
-						<lineNumber>60</lineNumber>
+						<lineNumber>67</lineNumber>
 						<contextFuncName>load_tile_mm</contextFuncName>
 						<contextNormFuncName>load_tile_mm</contextNormFuncName>
 						<inlineStackInfo>
@@ -1252,14 +1252,14 @@
 											<first>src/srcnn.cpp</first>
 											<second>load_tile_mm</second>
 										</first>
-										<second>60</second>
+										<second>67</second>
 									</item>
 									<item>
 										<first>
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>542</second>
+										<second>762</second>
 									</item>
 								</second>
 							</item>
@@ -1315,7 +1315,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>543518313</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>10</bitwidth>
@@ -1342,7 +1342,7 @@
 						<name>tw_eff_cast</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>C:\Users\redre\Desktop\HAC\FinalProject\golden</fileDirectory>
-						<lineNumber>537</lineNumber>
+						<lineNumber>757</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -1358,7 +1358,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>537</second>
+										<second>757</second>
 									</item>
 								</second>
 							</item>
@@ -1371,7 +1371,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>796091247</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -1395,10 +1395,10 @@
 					<Obj>
 						<type>0</type>
 						<id>33</id>
-						<name>add_ln43</name>
+						<name>add_ln50</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>C:\Users\redre\Desktop\HAC\FinalProject\golden</fileDirectory>
-						<lineNumber>43</lineNumber>
+						<lineNumber>50</lineNumber>
 						<contextFuncName>load_tile_mm</contextFuncName>
 						<contextNormFuncName>load_tile_mm</contextNormFuncName>
 						<inlineStackInfo>
@@ -1414,14 +1414,14 @@
 											<first>src/srcnn.cpp</first>
 											<second>load_tile_mm</second>
 										</first>
-										<second>43</second>
+										<second>50</second>
 									</item>
 									<item>
 										<first>
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>542</second>
+										<second>762</second>
 									</item>
 								</second>
 							</item>
@@ -1462,7 +1462,7 @@
 						<name>th_eff_cast</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>C:\Users\redre\Desktop\HAC\FinalProject\golden</fileDirectory>
-						<lineNumber>534</lineNumber>
+						<lineNumber>754</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -1478,7 +1478,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>534</second>
+										<second>754</second>
 									</item>
 								</second>
 							</item>
@@ -1491,7 +1491,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -1515,10 +1515,10 @@
 					<Obj>
 						<type>0</type>
 						<id>35</id>
-						<name>add_ln43_1</name>
+						<name>add_ln50_1</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>C:\Users\redre\Desktop\HAC\FinalProject\golden</fileDirectory>
-						<lineNumber>43</lineNumber>
+						<lineNumber>50</lineNumber>
 						<contextFuncName>load_tile_mm</contextFuncName>
 						<contextNormFuncName>load_tile_mm</contextNormFuncName>
 						<inlineStackInfo>
@@ -1534,14 +1534,14 @@
 											<first>src/srcnn.cpp</first>
 											<second>load_tile_mm</second>
 										</first>
-										<second>43</second>
+										<second>50</second>
 									</item>
 									<item>
 										<first>
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>542</second>
+										<second>762</second>
 									</item>
 								</second>
 							</item>
@@ -1579,10 +1579,10 @@
 					<Obj>
 						<type>0</type>
 						<id>36</id>
-						<name>add_ln48</name>
+						<name>add_ln55</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>C:\Users\redre\Desktop\HAC\FinalProject\golden</fileDirectory>
-						<lineNumber>48</lineNumber>
+						<lineNumber>55</lineNumber>
 						<contextFuncName>load_tile_mm</contextFuncName>
 						<contextNormFuncName>load_tile_mm</contextNormFuncName>
 						<inlineStackInfo>
@@ -1598,14 +1598,14 @@
 											<first>src/srcnn.cpp</first>
 											<second>load_tile_mm</second>
 										</first>
-										<second>48</second>
+										<second>55</second>
 									</item>
 									<item>
 										<first>
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>542</second>
+										<second>762</second>
 									</item>
 								</second>
 							</item>
@@ -1643,10 +1643,10 @@
 					<Obj>
 						<type>0</type>
 						<id>37</id>
-						<name>zext_ln43</name>
+						<name>zext_ln50</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>C:\Users\redre\Desktop\HAC\FinalProject\golden</fileDirectory>
-						<lineNumber>43</lineNumber>
+						<lineNumber>50</lineNumber>
 						<contextFuncName>load_tile_mm</contextFuncName>
 						<contextNormFuncName>load_tile_mm</contextNormFuncName>
 						<inlineStackInfo>
@@ -1662,14 +1662,14 @@
 											<first>src/srcnn.cpp</first>
 											<second>load_tile_mm</second>
 										</first>
-										<second>43</second>
+										<second>50</second>
 									</item>
 									<item>
 										<first>
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>542</second>
+										<second>762</second>
 									</item>
 								</second>
 							</item>
@@ -1706,10 +1706,10 @@
 					<Obj>
 						<type>0</type>
 						<id>38</id>
-						<name>zext_ln43_2</name>
+						<name>zext_ln50_2</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>C:\Users\redre\Desktop\HAC\FinalProject\golden</fileDirectory>
-						<lineNumber>43</lineNumber>
+						<lineNumber>50</lineNumber>
 						<contextFuncName>load_tile_mm</contextFuncName>
 						<contextNormFuncName>load_tile_mm</contextNormFuncName>
 						<inlineStackInfo>
@@ -1725,14 +1725,14 @@
 											<first>src/srcnn.cpp</first>
 											<second>load_tile_mm</second>
 										</first>
-										<second>43</second>
+										<second>50</second>
 									</item>
 									<item>
 										<first>
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>542</second>
+										<second>762</second>
 									</item>
 								</second>
 							</item>
@@ -1745,7 +1745,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1936683105</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>17</bitwidth>
@@ -1769,10 +1769,10 @@
 					<Obj>
 						<type>0</type>
 						<id>39</id>
-						<name>mul_ln43</name>
+						<name>mul_ln50</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>C:\Users\redre\Desktop\HAC\FinalProject\golden</fileDirectory>
-						<lineNumber>43</lineNumber>
+						<lineNumber>50</lineNumber>
 						<contextFuncName>load_tile_mm</contextFuncName>
 						<contextNormFuncName>load_tile_mm</contextNormFuncName>
 						<inlineStackInfo>
@@ -1788,14 +1788,14 @@
 											<first>src/srcnn.cpp</first>
 											<second>load_tile_mm</second>
 										</first>
-										<second>43</second>
+										<second>50</second>
 									</item>
 									<item>
 										<first>
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>542</second>
+										<second>762</second>
 									</item>
 								</second>
 							</item>
@@ -1833,10 +1833,10 @@
 					<Obj>
 						<type>0</type>
 						<id>40</id>
-						<name>_ln60</name>
+						<name>_ln67</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>C:\Users\redre\Desktop\HAC\FinalProject\golden</fileDirectory>
-						<lineNumber>60</lineNumber>
+						<lineNumber>67</lineNumber>
 						<contextFuncName>load_tile_mm</contextFuncName>
 						<contextNormFuncName>load_tile_mm</contextNormFuncName>
 						<inlineStackInfo>
@@ -1852,14 +1852,14 @@
 											<first>src/srcnn.cpp</first>
 											<second>load_tile_mm</second>
 										</first>
-										<second>60</second>
+										<second>67</second>
 									</item>
 									<item>
 										<first>
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>542</second>
+										<second>762</second>
 									</item>
 								</second>
 							</item>
@@ -1872,7 +1872,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>134217728</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1911,7 +1911,7 @@
 						<name>mrv</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>C:\Users\redre\Desktop\HAC\FinalProject\golden</fileDirectory>
-						<lineNumber>542</lineNumber>
+						<lineNumber>762</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -1927,7 +1927,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>542</second>
+										<second>762</second>
 									</item>
 								</second>
 							</item>
@@ -1968,7 +1968,7 @@
 						<name>mrv_1</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>C:\Users\redre\Desktop\HAC\FinalProject\golden</fileDirectory>
-						<lineNumber>542</lineNumber>
+						<lineNumber>762</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -1984,7 +1984,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>542</second>
+										<second>762</second>
 									</item>
 								</second>
 							</item>
@@ -1997,7 +1997,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>7559</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>19</bitwidth>
@@ -2025,7 +2025,7 @@
 						<name>mrv_2</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>C:\Users\redre\Desktop\HAC\FinalProject\golden</fileDirectory>
-						<lineNumber>542</lineNumber>
+						<lineNumber>762</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -2041,7 +2041,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>542</second>
+										<second>762</second>
 									</item>
 								</second>
 							</item>
@@ -2054,7 +2054,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>7259</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>19</bitwidth>
@@ -2079,10 +2079,10 @@
 					<Obj>
 						<type>0</type>
 						<id>44</id>
-						<name>_ln542</name>
+						<name>_ln762</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>C:\Users\redre\Desktop\HAC\FinalProject\golden</fileDirectory>
-						<lineNumber>542</lineNumber>
+						<lineNumber>762</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -2098,7 +2098,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>542</second>
+										<second>762</second>
 									</item>
 								</second>
 							</item>
@@ -2157,7 +2157,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1852793695</coreId>
+						<coreId>1884240928</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -2188,7 +2188,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2250,7 +2250,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>6</coreId>
+						<coreId>1869902631</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -2281,7 +2281,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1769109287</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>3</bitwidth>
@@ -2312,7 +2312,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1869902631</coreId>
+						<coreId>1953391988</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>3</bitwidth>
@@ -2343,7 +2343,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1769109287</coreId>
+						<coreId>1953391988</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -2405,7 +2405,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1717920800</coreId>
+						<coreId>1769109287</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -2436,7 +2436,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1769109287</coreId>
+						<coreId>540947232</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -2467,7 +2467,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>544433525</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>10</bitwidth>
@@ -2498,7 +2498,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1884240928</coreId>
+						<coreId>1769109287</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -2563,7 +2563,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>1688662681</coreId>
+					<coreId>1869902631</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -3929,7 +3929,7 @@
 		<count>23</count>
 		<item_version>0</item_version>
 		<item class_id="46" tracking_level="0" version="0">
-			<first>add_ln43_fu_191</first>
+			<first>add_ln50_fu_191</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3937,7 +3937,7 @@
 			</second>
 		</item>
 		<item>
-			<first>add_ln48_fu_240</first>
+			<first>add_ln55_fu_240</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3945,7 +3945,15 @@
 			</second>
 		</item>
 		<item>
-			<first>add_ln534_fu_127</first>
+			<first>add_ln67_2_fu_230</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>26</item>
+			</second>
+		</item>
+		<item>
+			<first>add_ln754_fu_127</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3953,19 +3961,11 @@
 			</second>
 		</item>
 		<item>
-			<first>add_ln537_fu_159</first>
+			<first>add_ln757_fu_159</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
 				<item>19</item>
-			</second>
-		</item>
-		<item>
-			<first>add_ln60_2_fu_230</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>26</item>
 			</second>
 		</item>
 		<item>
@@ -4001,7 +4001,7 @@
 			</second>
 		</item>
 		<item>
-			<first>select_ln60_1_fu_214</first>
+			<first>select_ln67_1_fu_214</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -4009,7 +4009,7 @@
 			</second>
 		</item>
 		<item>
-			<first>select_ln60_2_fu_222</first>
+			<first>select_ln67_2_fu_222</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -4017,7 +4017,7 @@
 			</second>
 		</item>
 		<item>
-			<first>select_ln60_fu_205</first>
+			<first>select_ln67_fu_205</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -4057,7 +4057,7 @@
 			</second>
 		</item>
 		<item>
-			<first>trunc_ln533_fu_141</first>
+			<first>trunc_ln753_fu_141</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -4089,7 +4089,7 @@
 			</second>
 		</item>
 		<item>
-			<first>xor_ln534_fu_145</first>
+			<first>xor_ln754_fu_145</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -4097,7 +4097,7 @@
 			</second>
 		</item>
 		<item>
-			<first>xor_ln537_fu_173</first>
+			<first>xor_ln757_fu_173</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -4105,7 +4105,7 @@
 			</second>
 		</item>
 		<item>
-			<first>zext_ln43_2_fu_201</first>
+			<first>zext_ln50_2_fu_201</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -4279,7 +4279,7 @@
 		<count>11</count>
 		<item_version>0</item_version>
 		<item>
-			<first>add_ln43_reg_287</first>
+			<first>add_ln50_reg_287</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -4287,7 +4287,7 @@
 			</second>
 		</item>
 		<item>
-			<first>add_ln48_reg_322</first>
+			<first>add_ln55_reg_322</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -4295,7 +4295,7 @@
 			</second>
 		</item>
 		<item>
-			<first>add_ln60_2_reg_317</first>
+			<first>add_ln67_2_reg_317</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -4319,7 +4319,7 @@
 			</second>
 		</item>
 		<item>
-			<first>mul_ln43_reg_297</first>
+			<first>mul_ln50_reg_297</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -4335,7 +4335,7 @@
 			</second>
 		</item>
 		<item>
-			<first>select_ln60_reg_312</first>
+			<first>select_ln67_reg_312</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -4359,7 +4359,7 @@
 			</second>
 		</item>
 		<item>
-			<first>zext_ln43_2_reg_292</first>
+			<first>zext_ln50_2_reg_292</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>

@@ -636,8 +636,8 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>zext_ln338</name>
-<Object>zext_ln338</Object>
+<name>zext_ln558</name>
+<Object>zext_ln558</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
@@ -669,8 +669,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>zext_ln338_2</name>
-<Object>zext_ln338_2</Object>
+<name>zext_ln558_2</name>
+<Object>zext_ln558_2</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
@@ -680,8 +680,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>zext_ln344</name>
-<Object>zext_ln344</Object>
+<name>zext_ln564</name>
+<Object>zext_ln564</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
@@ -691,8 +691,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>zext_ln338_1</name>
-<Object>zext_ln338_1</Object>
+<name>zext_ln558_1</name>
+<Object>zext_ln558_1</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>

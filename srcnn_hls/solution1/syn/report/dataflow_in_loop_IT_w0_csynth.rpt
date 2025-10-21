@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'dataflow_in_loop_IT_w0'
 ================================================================
-* Date:           Tue Oct 21 05:58:54 2025
+* Date:           Tue Oct 21 14:52:53 2025
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -20,7 +20,7 @@
     +--------+----------+----------+------------+
     |  Clock |  Target  | Estimated| Uncertainty|
     +--------+----------+----------+------------+
-    |ap_clk  |  10.00 ns|  7.300 ns|     2.70 ns|
+    |ap_clk  |  10.00 ns|  8.237 ns|     2.70 ns|
     +--------+----------+----------+------------+
 
 + Latency: 
@@ -34,15 +34,15 @@
 
     + Detail: 
         * Instance: 
-        +------------------+---------------+---------+-----------+----------+-----------+-------+-----------+---------+
-        |                  |               |   Latency (cycles)  |  Latency (absolute)  |      Interval     | Pipeline|
-        |     Instance     |     Module    |   min   |    max    |    min   |    max    |  min  |    max    |   Type  |
-        +------------------+---------------+---------+-----------+----------+-----------+-------+-----------+---------+
-        |entry_proc_U0     |entry_proc     |        0|          0|      0 ns|       0 ns|      0|          0|       no|
-        |load_tile_mm_U0   |load_tile_mm   |      162|      71307|  1.620 us|   0.713 ms|    162|      71307|       no|
-        |compute_tile_U0   |compute_tile   |    95817|  417915149|  0.958 ms|  4.179 sec|  95817|  417915149|       no|
-        |store_tile_mm_U0  |store_tile_mm  |        ?|          ?|         ?|          ?|      ?|          ?|       no|
-        +------------------+---------------+---------+-----------+----------+-----------+-------+-----------+---------+
+        +--------------------+-----------------+---------+-----------+----------+-----------+-------+-----------+----------+
+        |                    |                 |   Latency (cycles)  |  Latency (absolute)  |      Interval     | Pipeline |
+        |      Instance      |      Module     |   min   |    max    |    min   |    max    |  min  |    max    |   Type   |
+        +--------------------+-----------------+---------+-----------+----------+-----------+-------+-----------+----------+
+        |load_tile_mm_U0     |load_tile_mm     |      162|      71307|  1.620 us|   0.713 ms|    162|      71307|        no|
+        |compute_tile_df_U0  |compute_tile_df  |    89445|  374982795|  0.894 ms|  3.750 sec|  89445|  374982795|  dataflow|
+        |entry_proc15_U0     |entry_proc15     |        0|          0|      0 ns|       0 ns|      0|          0|        no|
+        |store_tile_mm_U0    |store_tile_mm    |        ?|          ?|         ?|          ?|      ?|          ?|        no|
+        +--------------------+-----------------+---------+-----------+----------+-----------+-------+-----------+----------+
 
         * Loop: 
         N/A
@@ -57,32 +57,32 @@
 |       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
 +-----------------+---------+------+--------+--------+-----+
 |DSP              |        -|     -|       -|       -|    -|
-|Expression       |        -|     -|       0|      62|    -|
+|Expression       |        -|     -|       0|      42|    -|
 |FIFO             |        -|     -|     693|     469|    -|
-|Instance         |       32|    55|   24341|   37108|    0|
+|Instance         |       89|    98|   30066|   41699|    0|
 |Memory           |       14|     -|       0|       0|    -|
-|Multiplexer      |        -|     -|       -|     117|    -|
-|Register         |        -|     -|      13|       -|    -|
+|Multiplexer      |        -|     -|       -|      81|    -|
+|Register         |        -|     -|       9|       -|    -|
 +-----------------+---------+------+--------+--------+-----+
-|Total            |       46|    55|   25047|   37756|    0|
+|Total            |      103|    98|   30768|   42291|    0|
 +-----------------+---------+------+--------+--------+-----+
 |Available        |      288|  1248|  234240|  117120|   64|
 +-----------------+---------+------+--------+--------+-----+
-|Utilization (%)  |       15|     4|      10|      32|    0|
+|Utilization (%)  |       35|     7|      13|      36|    0|
 +-----------------+---------+------+--------+--------+-----+
 
 + Detail: 
     * Instance: 
-    +------------------+---------------+---------+----+-------+-------+-----+
-    |     Instance     |     Module    | BRAM_18K| DSP|   FF  |  LUT  | URAM|
-    +------------------+---------------+---------+----+-------+-------+-----+
-    |compute_tile_U0   |compute_tile   |       32|  53|  23381|  35377|    0|
-    |entry_proc_U0     |entry_proc     |        0|   0|      2|     20|    0|
-    |load_tile_mm_U0   |load_tile_mm   |        0|   2|    631|   1029|    0|
-    |store_tile_mm_U0  |store_tile_mm  |        0|   0|    327|    682|    0|
-    +------------------+---------------+---------+----+-------+-------+-----+
-    |Total             |               |       32|  55|  24341|  37108|    0|
-    +------------------+---------------+---------+----+-------+-------+-----+
+    +--------------------+-----------------+---------+----+-------+-------+-----+
+    |      Instance      |      Module     | BRAM_18K| DSP|   FF  |  LUT  | URAM|
+    +--------------------+-----------------+---------+----+-------+-------+-----+
+    |compute_tile_df_U0  |compute_tile_df  |       89|  96|  29087|  39941|    0|
+    |entry_proc15_U0     |entry_proc15     |        0|   0|      2|     20|    0|
+    |load_tile_mm_U0     |load_tile_mm     |        0|   2|    631|   1029|    0|
+    |store_tile_mm_U0    |store_tile_mm    |        0|   0|    346|    709|    0|
+    +--------------------+-----------------+---------+----+-------+-------+-----+
+    |Total               |                 |       89|  98|  30066|  41699|    0|
+    +--------------------+-----------------+---------+----+-------+-------+-----+
 
     * DSP: 
     N/A
@@ -104,12 +104,12 @@
     |        Name        | BRAM_18K| FF | LUT| URAM| Depth| Bits| Size:D*B|
     +--------------------+---------+----+----+-----+------+-----+---------+
     |h0_c1_channel_U     |        0|  99|   0|    -|     2|    9|       18|
-    |h0_c_channel_U      |        0|  99|   0|    -|     2|    9|       18|
+    |h0_c_U              |        0|  99|   0|    -|     2|    9|       18|
     |output_ftmap_c_U    |        0|  99|   0|    -|     4|   64|      256|
     |phase_c3_channel_U  |        0|  99|   0|    -|     2|    1|        2|
-    |phase_c_channel_U   |        0|  99|   0|    -|     2|    1|        2|
+    |phase_c_U           |        0|  99|   0|    -|     2|    1|        2|
     |w0_c2_channel_U     |        0|  99|   0|    -|     2|    9|       18|
-    |w0_c_channel_U      |        0|  99|   0|    -|     2|    9|       18|
+    |w0_c_U              |        0|  99|   0|    -|     2|    9|       18|
     +--------------------+---------+----+----+-----+------+-----+---------+
     |Total               |        0| 693|   0|    0|    16|  102|      332|
     +--------------------+---------+----+----+-----+------+-----+---------+
@@ -119,38 +119,28 @@
     |                                 Variable Name                                 | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +-------------------------------------------------------------------------------+----------+----+---+----+------------+------------+
     |ap_channel_done_h0_c1_channel                                                  |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_h0_c_channel                                                   |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_outbuf                                                         |       and|   0|  0|   2|           1|           1|
     |ap_channel_done_phase_c3_channel                                               |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_phase_c_channel                                                |       and|   0|  0|   2|           1|           1|
     |ap_channel_done_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11        |       and|   0|  0|   2|           1|           1|
     |ap_channel_done_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12        |       and|   0|  0|   2|           1|           1|
     |ap_channel_done_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13        |       and|   0|  0|   2|           1|           1|
     |ap_channel_done_w0_c2_channel                                                  |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_w0_c_channel                                                   |       and|   0|  0|   2|           1|           1|
     |ap_idle                                                                        |       and|   0|  0|   2|           1|           1|
     |ap_sync_ready                                                                  |       and|   0|  0|   2|           1|           1|
-    |compute_tile_U0_ap_continue                                                    |       and|   0|  0|   2|           1|           1|
-    |compute_tile_U0_ap_start                                                       |       and|   0|  0|   2|           1|           1|
-    |entry_proc_U0_ap_start                                                         |       and|   0|  0|   2|           1|           1|
+    |compute_tile_df_U0_ap_start                                                    |       and|   0|  0|   2|           1|           1|
+    |entry_proc15_U0_ap_start                                                       |       and|   0|  0|   2|           1|           1|
     |load_tile_mm_U0_ap_continue                                                    |       and|   0|  0|   2|           1|           1|
     |load_tile_mm_U0_ap_start                                                       |       and|   0|  0|   2|           1|           1|
-    |store_tile_mm_U0_ap_start                                                      |       and|   0|  0|   2|           1|           1|
     |ap_sync_channel_write_h0_c1_channel                                            |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_h0_c_channel                                             |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_outbuf                                                   |        or|   0|  0|   2|           1|           1|
     |ap_sync_channel_write_phase_c3_channel                                         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_phase_c_channel                                          |        or|   0|  0|   2|           1|           1|
     |ap_sync_channel_write_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11  |        or|   0|  0|   2|           1|           1|
     |ap_sync_channel_write_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12  |        or|   0|  0|   2|           1|           1|
     |ap_sync_channel_write_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13  |        or|   0|  0|   2|           1|           1|
     |ap_sync_channel_write_w0_c2_channel                                            |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_w0_c_channel                                             |        or|   0|  0|   2|           1|           1|
-    |ap_sync_compute_tile_U0_ap_ready                                               |        or|   0|  0|   2|           1|           1|
-    |ap_sync_entry_proc_U0_ap_ready                                                 |        or|   0|  0|   2|           1|           1|
+    |ap_sync_compute_tile_df_U0_ap_ready                                            |        or|   0|  0|   2|           1|           1|
+    |ap_sync_entry_proc15_U0_ap_ready                                               |        or|   0|  0|   2|           1|           1|
     |ap_sync_load_tile_mm_U0_ap_ready                                               |        or|   0|  0|   2|           1|           1|
     +-------------------------------------------------------------------------------+----------+----+---+----+------------+------------+
-    |Total                                                                          |          |   0|  0|  62|          31|          31|
+    |Total                                                                          |          |   0|  0|  42|          21|          21|
     +-------------------------------------------------------------------------------+----------+----+---+----+------------+------------+
 
     * Multiplexer: 
@@ -158,20 +148,16 @@
     |                                        Name                                       | LUT| Input Size| Bits| Total Bits|
     +-----------------------------------------------------------------------------------+----+-----------+-----+-----------+
     |ap_sync_reg_channel_write_h0_c1_channel                                            |   9|          2|    1|          2|
-    |ap_sync_reg_channel_write_h0_c_channel                                             |   9|          2|    1|          2|
-    |ap_sync_reg_channel_write_outbuf                                                   |   9|          2|    1|          2|
     |ap_sync_reg_channel_write_phase_c3_channel                                         |   9|          2|    1|          2|
-    |ap_sync_reg_channel_write_phase_c_channel                                          |   9|          2|    1|          2|
     |ap_sync_reg_channel_write_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11  |   9|          2|    1|          2|
     |ap_sync_reg_channel_write_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12  |   9|          2|    1|          2|
     |ap_sync_reg_channel_write_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13  |   9|          2|    1|          2|
     |ap_sync_reg_channel_write_w0_c2_channel                                            |   9|          2|    1|          2|
-    |ap_sync_reg_channel_write_w0_c_channel                                             |   9|          2|    1|          2|
-    |ap_sync_reg_compute_tile_U0_ap_ready                                               |   9|          2|    1|          2|
-    |ap_sync_reg_entry_proc_U0_ap_ready                                                 |   9|          2|    1|          2|
+    |ap_sync_reg_compute_tile_df_U0_ap_ready                                            |   9|          2|    1|          2|
+    |ap_sync_reg_entry_proc15_U0_ap_ready                                               |   9|          2|    1|          2|
     |ap_sync_reg_load_tile_mm_U0_ap_ready                                               |   9|          2|    1|          2|
     +-----------------------------------------------------------------------------------+----+-----------+-----+-----------+
-    |Total                                                                              | 117|         26|   13|         26|
+    |Total                                                                              |  81|         18|    9|         18|
     +-----------------------------------------------------------------------------------+----+-----------+-----+-----------+
 
     * Register: 
@@ -179,20 +165,16 @@
     |                                        Name                                       | FF| LUT| Bits| Const Bits|
     +-----------------------------------------------------------------------------------+---+----+-----+-----------+
     |ap_sync_reg_channel_write_h0_c1_channel                                            |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_h0_c_channel                                             |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_outbuf                                                   |  1|   0|    1|          0|
     |ap_sync_reg_channel_write_phase_c3_channel                                         |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_phase_c_channel                                          |  1|   0|    1|          0|
     |ap_sync_reg_channel_write_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11  |  1|   0|    1|          0|
     |ap_sync_reg_channel_write_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12  |  1|   0|    1|          0|
     |ap_sync_reg_channel_write_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13  |  1|   0|    1|          0|
     |ap_sync_reg_channel_write_w0_c2_channel                                            |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_w0_c_channel                                             |  1|   0|    1|          0|
-    |ap_sync_reg_compute_tile_U0_ap_ready                                               |  1|   0|    1|          0|
-    |ap_sync_reg_entry_proc_U0_ap_ready                                                 |  1|   0|    1|          0|
+    |ap_sync_reg_compute_tile_df_U0_ap_ready                                            |  1|   0|    1|          0|
+    |ap_sync_reg_entry_proc15_U0_ap_ready                                               |  1|   0|    1|          0|
     |ap_sync_reg_load_tile_mm_U0_ap_ready                                               |  1|   0|    1|          0|
     +-----------------------------------------------------------------------------------+---+----+-----+-----------+
-    |Total                                                                              | 13|   0|   13|          0|
+    |Total                                                                              |  9|   0|    9|          0|
     +-----------------------------------------------------------------------------------+---+----+-----+-----------+
 
 
@@ -306,8 +288,6 @@
 |m_axi_gmem_out_BUSER                                                                          |   in|    1|       m_axi|                                                                             gmem_out|       pointer|
 |output_ftmap                                                                                  |   in|   64|     ap_none|                                                                         output_ftmap|        scalar|
 |output_ftmap_ap_vld                                                                           |   in|    1|     ap_none|                                                                         output_ftmap|        scalar|
-|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_14                                       |   in|   32|   ap_stable|                              srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_14|       pointer|
-|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_14_ap_vld                                |   in|    1|   ap_stable|                              srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_14|       pointer|
 |srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_24                                       |   in|   32|   ap_stable|                              srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_24|       pointer|
 |srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_24_ap_vld                                |   in|    1|   ap_stable|                              srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_24|       pointer|
 |srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_16                                       |   in|   32|   ap_stable|                              srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_16|       pointer|
@@ -555,6 +535,8 @@
 |srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_5_d0                                     |  out|   32|   ap_stable|                               srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_5|         array|
 |srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_5_q0                                     |   in|   32|   ap_stable|                               srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_5|         array|
 |srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_5_we0                                    |  out|    1|   ap_stable|                               srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_5|         array|
+|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_14                                       |   in|   32|   ap_stable|                              srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_14|       pointer|
+|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_14_ap_vld                                |   in|    1|   ap_stable|                              srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_14|       pointer|
 |p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0_4_address0  |  out|    2|   ap_stable|  p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0_4|         array|
 |p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0_4_ce0       |  out|    1|   ap_stable|  p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0_4|         array|
 |p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0_4_d0        |  out|   32|   ap_stable|  p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0_4|         array|

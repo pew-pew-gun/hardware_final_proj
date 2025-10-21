@@ -176,18 +176,18 @@ wire    ap_CS_fsm_state1;
 reg    ap_block_state1;
 wire   [8:0] w0_cast2_fu_123_p1;
 reg   [8:0] w0_cast2_reg_282;
-wire   [8:0] add_ln43_fu_191_p2;
-reg   [8:0] add_ln43_reg_287;
+wire   [8:0] add_ln50_fu_191_p2;
+reg   [8:0] add_ln50_reg_287;
 wire  signed [16:0] grp_fu_263_p3;
-reg   [16:0] mul_ln43_reg_297;
+reg   [16:0] mul_ln50_reg_297;
 wire    ap_CS_fsm_state4;
 wire    ap_CS_fsm_state5;
-wire   [2:0] select_ln60_fu_205_p3;
-reg   [2:0] select_ln60_reg_312;
-wire   [8:0] add_ln60_2_fu_230_p2;
-reg   [8:0] add_ln60_2_reg_317;
-wire   [9:0] add_ln48_fu_240_p2;
-reg   [9:0] add_ln48_reg_322;
+wire   [2:0] select_ln67_fu_205_p3;
+reg   [2:0] select_ln67_reg_312;
+wire   [8:0] add_ln67_2_fu_230_p2;
+reg   [8:0] add_ln67_2_reg_317;
+wire   [9:0] add_ln55_fu_240_p2;
+reg   [9:0] add_ln55_reg_322;
 wire    grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_ap_start;
 wire    grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_ap_done;
 wire    grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_ap_idle;
@@ -238,18 +238,18 @@ wire    grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_flo
 wire   [31:0] grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_d0;
 reg    grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_ap_start_reg;
 wire    ap_CS_fsm_state6;
-wire   [8:0] add_ln534_fu_127_p2;
-wire   [7:0] trunc_ln533_fu_141_p1;
+wire   [8:0] add_ln754_fu_127_p2;
+wire   [7:0] trunc_ln753_fu_141_p1;
 wire   [0:0] tmp_fu_133_p3;
-wire   [7:0] xor_ln534_fu_145_p2;
-wire   [8:0] add_ln537_fu_159_p2;
+wire   [7:0] xor_ln754_fu_145_p2;
+wire   [8:0] add_ln757_fu_159_p2;
 wire   [0:0] tmp_7_fu_165_p3;
-wire   [7:0] xor_ln537_fu_173_p2;
+wire   [7:0] xor_ln757_fu_173_p2;
 wire   [7:0] tw_eff_fu_179_p3;
 wire   [8:0] tw_eff_cast_fu_187_p1;
 wire   [7:0] th_eff_fu_151_p3;
-wire   [8:0] select_ln60_1_fu_214_p3;
-wire   [8:0] select_ln60_2_fu_222_p3;
+wire   [8:0] select_ln67_1_fu_214_p3;
+wire   [8:0] select_ln67_2_fu_222_p3;
 wire   [9:0] h0_cast10_i_fu_237_p1;
 wire   [7:0] grp_fu_263_p0;
 wire   [3:0] grp_fu_263_p1;
@@ -332,12 +332,12 @@ srcnn_load_tile_mm_Pipeline_InputTileHread_InputTileWread grp_load_tile_mm_Pipel
     .m_axi_gmem_in_BRESP(2'd0),
     .m_axi_gmem_in_BID(1'd0),
     .m_axi_gmem_in_BUSER(1'd0),
-    .add_ln60_2(add_ln60_2_reg_317),
-    .sext_ln48(add_ln48_reg_322),
-    .add_ln48(add_ln48_reg_322),
-    .bound(mul_ln43_reg_297),
-    .add_ln43(add_ln43_reg_287),
-    .select_ln60(select_ln60_reg_312),
+    .add_ln67_2(add_ln67_2_reg_317),
+    .sext_ln55(add_ln55_reg_322),
+    .add_ln55(add_ln55_reg_322),
+    .bound(mul_ln50_reg_297),
+    .add_ln50(add_ln50_reg_287),
+    .select_ln67(select_ln67_reg_312),
     .w0_cast2(w0),
     .input_ftmap(input_ftmap),
     .srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_address0(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_address0),
@@ -442,22 +442,22 @@ end
 
 always @ (posedge ap_clk) begin
     if ((~((ap_done_reg == 1'b1) | (ap_start == 1'b0)) & (1'b1 == ap_CS_fsm_state1))) begin
-        add_ln43_reg_287 <= add_ln43_fu_191_p2;
+        add_ln50_reg_287 <= add_ln50_fu_191_p2;
         w0_cast2_reg_282[7 : 0] <= w0_cast2_fu_123_p1[7 : 0];
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state5)) begin
-        add_ln48_reg_322 <= add_ln48_fu_240_p2;
-        add_ln60_2_reg_317[8 : 3] <= add_ln60_2_fu_230_p2[8 : 3];
-        select_ln60_reg_312[2] <= select_ln60_fu_205_p3[2];
+        add_ln55_reg_322 <= add_ln55_fu_240_p2;
+        add_ln67_2_reg_317[8 : 3] <= add_ln67_2_fu_230_p2[8 : 3];
+        select_ln67_reg_312[2] <= select_ln67_fu_205_p3[2];
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state4)) begin
-        mul_ln43_reg_297 <= grp_fu_263_p3;
+        mul_ln50_reg_297 <= grp_fu_263_p3;
     end
 end
 
@@ -591,15 +591,15 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln43_fu_191_p2 = (tw_eff_cast_fu_187_p1 + 9'd12);
+assign add_ln50_fu_191_p2 = (tw_eff_cast_fu_187_p1 + 9'd12);
 
-assign add_ln48_fu_240_p2 = ($signed(h0_cast10_i_fu_237_p1) + $signed(10'd1018));
+assign add_ln55_fu_240_p2 = ($signed(h0_cast10_i_fu_237_p1) + $signed(10'd1018));
 
-assign add_ln534_fu_127_p2 = (h0 + 9'd16);
+assign add_ln67_2_fu_230_p2 = (select_ln67_1_fu_214_p3 + select_ln67_2_fu_222_p3);
 
-assign add_ln537_fu_159_p2 = (w0_cast2_fu_123_p1 + 9'd16);
+assign add_ln754_fu_127_p2 = (h0 + 9'd16);
 
-assign add_ln60_2_fu_230_p2 = (select_ln60_1_fu_214_p3 + select_ln60_2_fu_222_p3);
+assign add_ln757_fu_159_p2 = (w0_cast2_fu_123_p1 + 9'd16);
 
 assign ap_CS_fsm_state1 = ap_CS_fsm[32'd0];
 
@@ -621,7 +621,7 @@ assign grp_fu_263_p1 = 9'd12;
 
 assign grp_fu_263_p2 = grp_fu_263_p20;
 
-assign grp_fu_263_p20 = add_ln43_fu_191_p2;
+assign grp_fu_263_p20 = add_ln50_fu_191_p2;
 
 assign grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_ap_start = grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_ap_start_reg;
 
@@ -687,11 +687,11 @@ assign m_axi_gmem_in_WUSER = 1'd0;
 
 assign m_axi_gmem_in_WVALID = 1'b0;
 
-assign select_ln60_1_fu_214_p3 = ((phase[0:0] == 1'b1) ? 9'd224 : 9'd0);
+assign select_ln67_1_fu_214_p3 = ((phase[0:0] == 1'b1) ? 9'd224 : 9'd0);
 
-assign select_ln60_2_fu_222_p3 = ((phase[0:0] == 1'b1) ? 9'd56 : 9'd0);
+assign select_ln67_2_fu_222_p3 = ((phase[0:0] == 1'b1) ? 9'd56 : 9'd0);
 
-assign select_ln60_fu_205_p3 = ((phase[0:0] == 1'b1) ? 3'd4 : 3'd0);
+assign select_ln67_fu_205_p3 = ((phase[0:0] == 1'b1) ? 3'd4 : 3'd0);
 
 assign srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_address0 = grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_address0;
 
@@ -717,28 +717,28 @@ assign srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_d0 = grp_load_til
 
 assign srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_we0 = grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_we0;
 
-assign th_eff_fu_151_p3 = ((tmp_fu_133_p3[0:0] == 1'b1) ? xor_ln534_fu_145_p2 : 8'd16);
+assign th_eff_fu_151_p3 = ((tmp_fu_133_p3[0:0] == 1'b1) ? xor_ln754_fu_145_p2 : 8'd16);
 
-assign tmp_7_fu_165_p3 = add_ln537_fu_159_p2[32'd8];
+assign tmp_7_fu_165_p3 = add_ln757_fu_159_p2[32'd8];
 
-assign tmp_fu_133_p3 = add_ln534_fu_127_p2[32'd8];
+assign tmp_fu_133_p3 = add_ln754_fu_127_p2[32'd8];
 
-assign trunc_ln533_fu_141_p1 = h0[7:0];
+assign trunc_ln753_fu_141_p1 = h0[7:0];
 
 assign tw_eff_cast_fu_187_p1 = tw_eff_fu_179_p3;
 
-assign tw_eff_fu_179_p3 = ((tmp_7_fu_165_p3[0:0] == 1'b1) ? xor_ln537_fu_173_p2 : 8'd16);
+assign tw_eff_fu_179_p3 = ((tmp_7_fu_165_p3[0:0] == 1'b1) ? xor_ln757_fu_173_p2 : 8'd16);
 
 assign w0_cast2_fu_123_p1 = w0;
 
-assign xor_ln534_fu_145_p2 = (trunc_ln533_fu_141_p1 ^ 8'd255);
+assign xor_ln754_fu_145_p2 = (trunc_ln753_fu_141_p1 ^ 8'd255);
 
-assign xor_ln537_fu_173_p2 = (w0 ^ 8'd255);
+assign xor_ln757_fu_173_p2 = (w0 ^ 8'd255);
 
 always @ (posedge ap_clk) begin
     w0_cast2_reg_282[8] <= 1'b0;
-    select_ln60_reg_312[1:0] <= 2'b00;
-    add_ln60_2_reg_317[2:0] <= 3'b000;
+    select_ln67_reg_312[1:0] <= 2'b00;
+    add_ln67_2_reg_317[2:0] <= 3'b000;
     ap_return_1_preg[8] <= 1'b0;
 end
 

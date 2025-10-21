@@ -14,7 +14,11 @@ module srcnn_store_tile_mm (
         ap_continue,
         ap_idle,
         ap_ready,
-        p_read,
+        phase_dout,
+        phase_num_data_valid,
+        phase_fifo_cap,
+        phase_empty_n,
+        phase_read,
         m_axi_gmem_out_AWVALID,
         m_axi_gmem_out_AWREADY,
         m_axi_gmem_out_AWADDR,
@@ -66,8 +70,16 @@ module srcnn_store_tile_mm (
         output_ftmap_fifo_cap,
         output_ftmap_empty_n,
         output_ftmap_read,
-        p_read1,
-        p_read2,
+        h0_dout,
+        h0_num_data_valid,
+        h0_fifo_cap,
+        h0_empty_n,
+        h0_read,
+        w0_dout,
+        w0_num_data_valid,
+        w0_fifo_cap,
+        w0_empty_n,
+        w0_read,
         outbuf_address0,
         outbuf_ce0,
         outbuf_q0
@@ -84,7 +96,11 @@ output   ap_done;
 input   ap_continue;
 output   ap_idle;
 output   ap_ready;
-input  [0:0] p_read;
+input  [0:0] phase_dout;
+input  [1:0] phase_num_data_valid;
+input  [1:0] phase_fifo_cap;
+input   phase_empty_n;
+output   phase_read;
 output   m_axi_gmem_out_AWVALID;
 input   m_axi_gmem_out_AWREADY;
 output  [63:0] m_axi_gmem_out_AWADDR;
@@ -136,8 +152,16 @@ input  [2:0] output_ftmap_num_data_valid;
 input  [2:0] output_ftmap_fifo_cap;
 input   output_ftmap_empty_n;
 output   output_ftmap_read;
-input  [8:0] p_read1;
-input  [8:0] p_read2;
+input  [8:0] h0_dout;
+input  [1:0] h0_num_data_valid;
+input  [1:0] h0_fifo_cap;
+input   h0_empty_n;
+output   h0_read;
+input  [8:0] w0_dout;
+input  [1:0] w0_num_data_valid;
+input  [1:0] w0_fifo_cap;
+input   w0_empty_n;
+output   w0_read;
 output  [8:0] outbuf_address0;
 output   outbuf_ce0;
 input  [31:0] outbuf_q0;
@@ -145,28 +169,37 @@ input  [31:0] outbuf_q0;
 reg ap_done;
 reg ap_idle;
 reg ap_ready;
+reg phase_read;
 reg m_axi_gmem_out_AWVALID;
 reg m_axi_gmem_out_WVALID;
 reg m_axi_gmem_out_BREADY;
 reg output_ftmap_read;
+reg h0_read;
+reg w0_read;
 
 reg    ap_done_reg;
 (* fsm_encoding = "none" *) reg   [2:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
+reg    phase_blk_n;
 reg    output_ftmap_blk_n;
-wire    ap_CS_fsm_state2;
+reg    h0_blk_n;
+reg    w0_blk_n;
+reg   [63:0] out_reg_212;
 reg    ap_block_state1;
-wire   [7:0] th_eff_fu_138_p3;
-reg   [7:0] th_eff_reg_224;
-wire   [7:0] tw_eff_fu_170_p3;
-reg   [7:0] tw_eff_reg_229;
-reg   [63:0] out_reg_236;
-wire   [4:0] tmp_fu_184_p3;
-reg   [4:0] tmp_reg_241;
-wire   [10:0] tmp_1_fu_193_p3;
-reg   [10:0] tmp_1_reg_246;
-wire   [15:0] bound_fu_207_p2;
-reg   [15:0] bound_reg_251;
+reg   [0:0] phase_read_reg_217;
+reg   [8:0] w0_1_reg_222;
+reg   [8:0] h0_1_reg_227;
+wire   [7:0] th_eff_fu_137_p3;
+reg   [7:0] th_eff_reg_232;
+wire   [7:0] tw_eff_fu_169_p3;
+reg   [7:0] tw_eff_reg_237;
+wire   [4:0] tmp_fu_182_p3;
+reg   [4:0] tmp_reg_244;
+wire    ap_CS_fsm_state2;
+wire   [10:0] tmp_1_fu_191_p3;
+reg   [10:0] tmp_1_reg_249;
+wire   [15:0] bound_fu_205_p2;
+reg   [15:0] bound_reg_254;
 wire    grp_store_tile_mm_Pipeline_Out_writex_fu_98_ap_start;
 wire    grp_store_tile_mm_Pipeline_Out_writex_fu_98_ap_done;
 wire    grp_store_tile_mm_Pipeline_Out_writex_fu_98_ap_idle;
@@ -207,23 +240,23 @@ wire   [8:0] grp_store_tile_mm_Pipeline_Out_writex_fu_98_outbuf_address0;
 wire    grp_store_tile_mm_Pipeline_Out_writex_fu_98_outbuf_ce0;
 reg    grp_store_tile_mm_Pipeline_Out_writex_fu_98_ap_start_reg;
 wire    ap_CS_fsm_state3;
-wire   [8:0] add_ln534_fu_114_p2;
-wire   [7:0] trunc_ln533_fu_128_p1;
-wire   [0:0] tmp_2_fu_120_p3;
-wire   [7:0] xor_ln534_fu_132_p2;
-wire   [8:0] add_ln537_fu_146_p2;
-wire   [7:0] trunc_ln536_fu_160_p1;
-wire   [0:0] tmp_3_fu_152_p3;
-wire   [7:0] xor_ln537_fu_164_p2;
-wire   [0:0] xor_ln543_fu_178_p2;
-wire   [7:0] bound_fu_207_p0;
-wire   [7:0] bound_fu_207_p1;
+wire   [8:0] add_ln754_fu_113_p2;
+wire   [7:0] trunc_ln753_fu_127_p1;
+wire   [0:0] tmp_2_fu_119_p3;
+wire   [7:0] xor_ln754_fu_131_p2;
+wire   [8:0] add_ln757_fu_145_p2;
+wire   [7:0] trunc_ln756_fu_159_p1;
+wire   [0:0] tmp_3_fu_151_p3;
+wire   [7:0] xor_ln757_fu_163_p2;
+wire   [0:0] xor_ln770_fu_177_p2;
+wire   [7:0] bound_fu_205_p0;
+wire   [7:0] bound_fu_205_p1;
 reg   [2:0] ap_NS_fsm;
 reg    ap_ST_fsm_state1_blk;
-reg    ap_ST_fsm_state2_blk;
+wire    ap_ST_fsm_state2_blk;
 reg    ap_ST_fsm_state3_blk;
-wire   [15:0] bound_fu_207_p00;
-wire   [15:0] bound_fu_207_p10;
+wire   [15:0] bound_fu_205_p00;
+wire   [15:0] bound_fu_205_p10;
 wire    ap_ce_reg;
 
 // power-on initialization
@@ -286,13 +319,13 @@ srcnn_store_tile_mm_Pipeline_Out_writex grp_store_tile_mm_Pipeline_Out_writex_fu
     .m_axi_gmem_out_BRESP(m_axi_gmem_out_BRESP),
     .m_axi_gmem_out_BID(m_axi_gmem_out_BID),
     .m_axi_gmem_out_BUSER(m_axi_gmem_out_BUSER),
-    .zext_ln338(p_read1),
-    .bound(bound_reg_251),
-    .tw_eff(tw_eff_reg_229),
-    .zext_ln338_2(tw_eff_reg_229),
-    .zext_ln344(tmp_reg_241),
-    .zext_ln338_1(tmp_1_reg_246),
-    .out_r(out_reg_236),
+    .zext_ln558(h0_1_reg_227),
+    .bound(bound_reg_254),
+    .tw_eff(tw_eff_reg_237),
+    .zext_ln558_2(tw_eff_reg_237),
+    .zext_ln564(tmp_reg_244),
+    .zext_ln558_1(tmp_1_reg_249),
+    .out_r(out_reg_212),
     .outbuf_address0(grp_store_tile_mm_Pipeline_Out_writex_fu_98_outbuf_address0),
     .outbuf_ce0(grp_store_tile_mm_Pipeline_Out_writex_fu_98_outbuf_ce0),
     .outbuf_q0(outbuf_q0)
@@ -304,10 +337,10 @@ srcnn_mul_8ns_8ns_16_1_1 #(
     .din0_WIDTH( 8 ),
     .din1_WIDTH( 8 ),
     .dout_WIDTH( 16 ))
-mul_8ns_8ns_16_1_1_U1959(
-    .din0(bound_fu_207_p0),
-    .din1(bound_fu_207_p1),
-    .dout(bound_fu_207_p2)
+mul_8ns_8ns_16_1_1_U2326(
+    .din0(bound_fu_205_p0),
+    .din1(bound_fu_205_p1),
+    .dout(bound_fu_205_p2)
 );
 
 always @ (posedge ap_clk) begin
@@ -334,7 +367,7 @@ always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
         grp_store_tile_mm_Pipeline_Out_writex_fu_98_ap_start_reg <= 1'b0;
     end else begin
-        if (((output_ftmap_empty_n == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
+        if ((1'b1 == ap_CS_fsm_state2)) begin
             grp_store_tile_mm_Pipeline_Out_writex_fu_98_ap_start_reg <= 1'b1;
         end else if ((grp_store_tile_mm_Pipeline_Out_writex_fu_98_ap_ready == 1'b1)) begin
             grp_store_tile_mm_Pipeline_Out_writex_fu_98_ap_start_reg <= 1'b0;
@@ -343,36 +376,33 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((output_ftmap_empty_n == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
-        bound_reg_251 <= bound_fu_207_p2;
-        out_reg_236 <= output_ftmap_dout;
-        tmp_1_reg_246[10 : 2] <= tmp_1_fu_193_p3[10 : 2];
-        tmp_reg_241[4] <= tmp_fu_184_p3[4];
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        bound_reg_254 <= bound_fu_205_p2;
+        tmp_1_reg_249[10 : 2] <= tmp_1_fu_191_p3[10 : 2];
+        tmp_reg_244[4] <= tmp_fu_182_p3[4];
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((~((ap_start == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
-        th_eff_reg_224 <= th_eff_fu_138_p3;
-        tw_eff_reg_229 <= tw_eff_fu_170_p3;
+    if ((~((h0_empty_n == 1'b0) | (output_ftmap_empty_n == 1'b0) | (ap_start == 1'b0) | (phase_empty_n == 1'b0) | (ap_done_reg == 1'b1) | (w0_empty_n == 1'b0)) & (1'b1 == ap_CS_fsm_state1))) begin
+        h0_1_reg_227 <= h0_dout;
+        out_reg_212 <= output_ftmap_dout;
+        phase_read_reg_217 <= phase_dout;
+        th_eff_reg_232 <= th_eff_fu_137_p3;
+        tw_eff_reg_237 <= tw_eff_fu_169_p3;
+        w0_1_reg_222 <= w0_dout;
     end
 end
 
 always @ (*) begin
-    if (((ap_start == 1'b0) | (ap_done_reg == 1'b1))) begin
+    if (((h0_empty_n == 1'b0) | (output_ftmap_empty_n == 1'b0) | (ap_start == 1'b0) | (phase_empty_n == 1'b0) | (ap_done_reg == 1'b1) | (w0_empty_n == 1'b0))) begin
         ap_ST_fsm_state1_blk = 1'b1;
     end else begin
         ap_ST_fsm_state1_blk = 1'b0;
     end
 end
 
-always @ (*) begin
-    if ((output_ftmap_empty_n == 1'b0)) begin
-        ap_ST_fsm_state2_blk = 1'b1;
-    end else begin
-        ap_ST_fsm_state2_blk = 1'b0;
-    end
-end
+assign ap_ST_fsm_state2_blk = 1'b0;
 
 always @ (*) begin
     if ((grp_store_tile_mm_Pipeline_Out_writex_fu_98_ap_done == 1'b0)) begin
@@ -407,6 +437,22 @@ always @ (*) begin
 end
 
 always @ (*) begin
+    if ((~((ap_start == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
+        h0_blk_n = h0_empty_n;
+    end else begin
+        h0_blk_n = 1'b1;
+    end
+end
+
+always @ (*) begin
+    if ((~((h0_empty_n == 1'b0) | (output_ftmap_empty_n == 1'b0) | (ap_start == 1'b0) | (phase_empty_n == 1'b0) | (ap_done_reg == 1'b1) | (w0_empty_n == 1'b0)) & (1'b1 == ap_CS_fsm_state1))) begin
+        h0_read = 1'b1;
+    end else begin
+        h0_read = 1'b0;
+    end
+end
+
+always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state3) | (1'b1 == ap_CS_fsm_state2))) begin
         m_axi_gmem_out_AWVALID = grp_store_tile_mm_Pipeline_Out_writex_fu_98_m_axi_gmem_out_AWVALID;
     end else begin
@@ -431,7 +477,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state2)) begin
+    if ((~((ap_start == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
         output_ftmap_blk_n = output_ftmap_empty_n;
     end else begin
         output_ftmap_blk_n = 1'b1;
@@ -439,7 +485,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((output_ftmap_empty_n == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
+    if ((~((h0_empty_n == 1'b0) | (output_ftmap_empty_n == 1'b0) | (ap_start == 1'b0) | (phase_empty_n == 1'b0) | (ap_done_reg == 1'b1) | (w0_empty_n == 1'b0)) & (1'b1 == ap_CS_fsm_state1))) begin
         output_ftmap_read = 1'b1;
     end else begin
         output_ftmap_read = 1'b0;
@@ -447,20 +493,48 @@ always @ (*) begin
 end
 
 always @ (*) begin
+    if ((~((ap_start == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
+        phase_blk_n = phase_empty_n;
+    end else begin
+        phase_blk_n = 1'b1;
+    end
+end
+
+always @ (*) begin
+    if ((~((h0_empty_n == 1'b0) | (output_ftmap_empty_n == 1'b0) | (ap_start == 1'b0) | (phase_empty_n == 1'b0) | (ap_done_reg == 1'b1) | (w0_empty_n == 1'b0)) & (1'b1 == ap_CS_fsm_state1))) begin
+        phase_read = 1'b1;
+    end else begin
+        phase_read = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((~((ap_start == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
+        w0_blk_n = w0_empty_n;
+    end else begin
+        w0_blk_n = 1'b1;
+    end
+end
+
+always @ (*) begin
+    if ((~((h0_empty_n == 1'b0) | (output_ftmap_empty_n == 1'b0) | (ap_start == 1'b0) | (phase_empty_n == 1'b0) | (ap_done_reg == 1'b1) | (w0_empty_n == 1'b0)) & (1'b1 == ap_CS_fsm_state1))) begin
+        w0_read = 1'b1;
+    end else begin
+        w0_read = 1'b0;
+    end
+end
+
+always @ (*) begin
     case (ap_CS_fsm)
         ap_ST_fsm_state1 : begin
-            if ((~((ap_start == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
+            if ((~((h0_empty_n == 1'b0) | (output_ftmap_empty_n == 1'b0) | (ap_start == 1'b0) | (phase_empty_n == 1'b0) | (ap_done_reg == 1'b1) | (w0_empty_n == 1'b0)) & (1'b1 == ap_CS_fsm_state1))) begin
                 ap_NS_fsm = ap_ST_fsm_state2;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state1;
             end
         end
         ap_ST_fsm_state2 : begin
-            if (((output_ftmap_empty_n == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
-                ap_NS_fsm = ap_ST_fsm_state3;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_state2;
-            end
+            ap_NS_fsm = ap_ST_fsm_state3;
         end
         ap_ST_fsm_state3 : begin
             if (((1'b1 == ap_CS_fsm_state3) & (grp_store_tile_mm_Pipeline_Out_writex_fu_98_ap_done == 1'b1))) begin
@@ -475,9 +549,9 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln534_fu_114_p2 = (p_read1 + 9'd16);
+assign add_ln754_fu_113_p2 = (h0_dout + 9'd16);
 
-assign add_ln537_fu_146_p2 = (p_read2 + 9'd16);
+assign add_ln757_fu_145_p2 = (w0_dout + 9'd16);
 
 assign ap_CS_fsm_state1 = ap_CS_fsm[32'd0];
 
@@ -486,16 +560,16 @@ assign ap_CS_fsm_state2 = ap_CS_fsm[32'd1];
 assign ap_CS_fsm_state3 = ap_CS_fsm[32'd2];
 
 always @ (*) begin
-    ap_block_state1 = ((ap_start == 1'b0) | (ap_done_reg == 1'b1));
+    ap_block_state1 = ((h0_empty_n == 1'b0) | (output_ftmap_empty_n == 1'b0) | (ap_start == 1'b0) | (phase_empty_n == 1'b0) | (ap_done_reg == 1'b1) | (w0_empty_n == 1'b0));
 end
 
-assign bound_fu_207_p0 = bound_fu_207_p00;
+assign bound_fu_205_p0 = bound_fu_205_p00;
 
-assign bound_fu_207_p00 = th_eff_reg_224;
+assign bound_fu_205_p00 = th_eff_reg_232;
 
-assign bound_fu_207_p1 = bound_fu_207_p10;
+assign bound_fu_205_p1 = bound_fu_205_p10;
 
-assign bound_fu_207_p10 = tw_eff_reg_229;
+assign bound_fu_205_p10 = tw_eff_reg_237;
 
 assign grp_store_tile_mm_Pipeline_Out_writex_fu_98_ap_start = grp_store_tile_mm_Pipeline_Out_writex_fu_98_ap_start_reg;
 
@@ -561,31 +635,31 @@ assign outbuf_address0 = grp_store_tile_mm_Pipeline_Out_writex_fu_98_outbuf_addr
 
 assign outbuf_ce0 = grp_store_tile_mm_Pipeline_Out_writex_fu_98_outbuf_ce0;
 
-assign th_eff_fu_138_p3 = ((tmp_2_fu_120_p3[0:0] == 1'b1) ? xor_ln534_fu_132_p2 : 8'd16);
+assign th_eff_fu_137_p3 = ((tmp_2_fu_119_p3[0:0] == 1'b1) ? xor_ln754_fu_131_p2 : 8'd16);
 
-assign tmp_1_fu_193_p3 = {{p_read2}, {2'd0}};
+assign tmp_1_fu_191_p3 = {{w0_1_reg_222}, {2'd0}};
 
-assign tmp_2_fu_120_p3 = add_ln534_fu_114_p2[32'd8];
+assign tmp_2_fu_119_p3 = add_ln754_fu_113_p2[32'd8];
 
-assign tmp_3_fu_152_p3 = add_ln537_fu_146_p2[32'd8];
+assign tmp_3_fu_151_p3 = add_ln757_fu_145_p2[32'd8];
 
-assign tmp_fu_184_p3 = {{xor_ln543_fu_178_p2}, {4'd0}};
+assign tmp_fu_182_p3 = {{xor_ln770_fu_177_p2}, {4'd0}};
 
-assign trunc_ln533_fu_128_p1 = p_read1[7:0];
+assign trunc_ln753_fu_127_p1 = h0_dout[7:0];
 
-assign trunc_ln536_fu_160_p1 = p_read2[7:0];
+assign trunc_ln756_fu_159_p1 = w0_dout[7:0];
 
-assign tw_eff_fu_170_p3 = ((tmp_3_fu_152_p3[0:0] == 1'b1) ? xor_ln537_fu_164_p2 : 8'd16);
+assign tw_eff_fu_169_p3 = ((tmp_3_fu_151_p3[0:0] == 1'b1) ? xor_ln757_fu_163_p2 : 8'd16);
 
-assign xor_ln534_fu_132_p2 = (trunc_ln533_fu_128_p1 ^ 8'd255);
+assign xor_ln754_fu_131_p2 = (trunc_ln753_fu_127_p1 ^ 8'd255);
 
-assign xor_ln537_fu_164_p2 = (trunc_ln536_fu_160_p1 ^ 8'd255);
+assign xor_ln757_fu_163_p2 = (trunc_ln756_fu_159_p1 ^ 8'd255);
 
-assign xor_ln543_fu_178_p2 = (p_read ^ 1'd1);
+assign xor_ln770_fu_177_p2 = (phase_read_reg_217 ^ 1'd1);
 
 always @ (posedge ap_clk) begin
-    tmp_reg_241[3:0] <= 4'b0000;
-    tmp_1_reg_246[1:0] <= 2'b00;
+    tmp_reg_244[3:0] <= 4'b0000;
+    tmp_1_reg_249[1:0] <= 2'b00;
 end
 
 endmodule //srcnn_store_tile_mm

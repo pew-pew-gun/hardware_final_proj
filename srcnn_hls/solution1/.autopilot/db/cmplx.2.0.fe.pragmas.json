@@ -1,9 +1,9 @@
 {
   "0": {
     "basicblocks": 41,
-    "calls": "4 2 1",
+    "calls": "5 4 2",
     "file": "srcnn.cpp",
-    "fileloc": 351,
+    "fileloc": 571,
     "instructions": 191,
     "loads": {
       "G": 1,
@@ -13,13 +13,22 @@
     "stores": {
       "G": 7
     },
-    "total_instructions": 2794
+    "total_instructions": 3047
   },
   "1": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "srcnn.cpp",
+    "fileloc": 31,
+    "instructions": 11,
+    "name": "clampi",
+    "total_instructions": 11
+  },
+  "2": {
     "basicblocks": 11,
     "calls": "",
     "file": "srcnn.cpp",
-    "fileloc": 329,
+    "fileloc": 549,
     "instructions": 33,
     "loads": {
       "L": 1
@@ -30,36 +39,36 @@
     },
     "total_instructions": 33
   },
-  "2": {
-    "basicblocks": 101,
-    "calls": "3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3",
-    "file": "srcnn.cpp",
-    "fileloc": 69,
-    "instructions": 1967,
-    "loads": {
-      "G": 52,
-      "L": 318
-    },
-    "name": "compute_tile",
-    "stores": {
-      "L": 297
-    },
-    "total_instructions": 2517
-  },
   "3": {
-    "basicblocks": 7,
+    "basicblocks": 51,
     "calls": "",
     "file": "srcnn.cpp",
-    "fileloc": 24,
-    "instructions": 11,
-    "name": "clampi",
-    "total_instructions": 11
+    "fileloc": 72,
+    "instructions": 548,
+    "loads": {
+      "G": 26,
+      "L": 67
+    },
+    "name": "fuse_9x9_1x1",
+    "stores": {
+      "L": 42
+    },
+    "total_instructions": 548
   },
   "4": {
+    "basicblocks": 1,
+    "calls": "3 6",
+    "file": "srcnn.cpp",
+    "fileloc": 260,
+    "instructions": 14,
+    "name": "compute_tile_df",
+    "total_instructions": 2770
+  },
+  "5": {
     "basicblocks": 19,
     "calls": "",
     "file": "srcnn.cpp",
-    "fileloc": 29,
+    "fileloc": 36,
     "instructions": 53,
     "loads": {
       "L": 1
@@ -69,5 +78,21 @@
       "L": 1
     },
     "total_instructions": 53
+  },
+  "6": {
+    "basicblocks": 59,
+    "calls": "1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1",
+    "file": "srcnn.cpp",
+    "fileloc": 150,
+    "instructions": 1658,
+    "loads": {
+      "G": 26,
+      "L": 287
+    },
+    "name": "conv3_5x5",
+    "stores": {
+      "L": 295
+    },
+    "total_instructions": 2208
   }
 }

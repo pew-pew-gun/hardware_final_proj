@@ -8,7 +8,7 @@ set SynModuleInfo {
   }
   {SRCNAME srcnn_Pipeline_CopyW2_inft MODELNAME srcnn_Pipeline_CopyW2_inft RTLNAME srcnn_srcnn_Pipeline_CopyW2_inft}
   {SRCNAME srcnn_Pipeline_CopyW3_inft_CopyW3_ky_CopyW3_kx MODELNAME srcnn_Pipeline_CopyW3_inft_CopyW3_ky_CopyW3_kx RTLNAME srcnn_srcnn_Pipeline_CopyW3_inft_CopyW3_ky_CopyW3_kx}
-  {SRCNAME entry_proc MODELNAME entry_proc RTLNAME srcnn_entry_proc}
+  {SRCNAME entry_proc15 MODELNAME entry_proc15 RTLNAME srcnn_entry_proc15}
   {SRCNAME load_tile_mm_Pipeline_InputTileHread_InputTileWread MODELNAME load_tile_mm_Pipeline_InputTileHread_InputTileWread RTLNAME srcnn_load_tile_mm_Pipeline_InputTileHread_InputTileWread
     SUBMODULES {
       {MODELNAME srcnn_mul_9ns_11ns_19_1_1 RTLNAME srcnn_mul_9ns_11ns_19_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
@@ -20,40 +20,64 @@ set SynModuleInfo {
       {MODELNAME srcnn_am_addmul_8ns_4ns_9ns_17_4_1 RTLNAME srcnn_am_addmul_8ns_4ns_9ns_17_4_1 BINDTYPE op TYPE all IMPL dsp48 LATENCY 3 ALLOW_PRAGMA 1}
     }
   }
-  {SRCNAME compute_tile_Pipeline_Conv2Out_biases MODELNAME compute_tile_Pipeline_Conv2Out_biases RTLNAME srcnn_compute_tile_Pipeline_Conv2Out_biases
+  {SRCNAME entry_proc MODELNAME entry_proc RTLNAME srcnn_entry_proc}
+  {SRCNAME fuse_9x9_1x1_Pipeline_VITIS_LOOP_95_1 MODELNAME fuse_9x9_1x1_Pipeline_VITIS_LOOP_95_1 RTLNAME srcnn_fuse_9x9_1x1_Pipeline_VITIS_LOOP_95_1
     SUBMODULES {
       {MODELNAME srcnn_mux_25_5_32_1_1 RTLNAME srcnn_mux_25_5_32_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
     }
   }
-  {SRCNAME compute_tile_Pipeline_Conv1_ky MODELNAME compute_tile_Pipeline_Conv1_ky RTLNAME srcnn_compute_tile_Pipeline_Conv1_ky
+  {SRCNAME fuse_9x9_1x1_Pipeline_Conv1_ky MODELNAME fuse_9x9_1x1_Pipeline_Conv1_ky RTLNAME srcnn_fuse_9x9_1x1_Pipeline_Conv1_ky
     SUBMODULES {
       {MODELNAME srcnn_mux_3_2_32_1_1 RTLNAME srcnn_mux_3_2_32_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
     }
   }
-  {SRCNAME compute_tile_Pipeline_Conv2_dot32 MODELNAME compute_tile_Pipeline_Conv2_dot32 RTLNAME srcnn_compute_tile_Pipeline_Conv2_dot32}
-  {SRCNAME compute_tile_Pipeline_Conv2_ReLU MODELNAME compute_tile_Pipeline_Conv2_ReLU RTLNAME srcnn_compute_tile_Pipeline_Conv2_ReLU
+  {SRCNAME fuse_9x9_1x1_Pipeline_acc1 MODELNAME fuse_9x9_1x1_Pipeline_acc1 RTLNAME srcnn_fuse_9x9_1x1_Pipeline_acc1
+    SUBMODULES {
+      {MODELNAME srcnn_mux_9_4_32_1_1 RTLNAME srcnn_mux_9_4_32_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
+    }
+  }
+  {SRCNAME fuse_9x9_1x1_Pipeline_Conv2_dot32 MODELNAME fuse_9x9_1x1_Pipeline_Conv2_dot32 RTLNAME srcnn_fuse_9x9_1x1_Pipeline_Conv2_dot32}
+  {SRCNAME fuse_9x9_1x1_Pipeline_Conv2_ReLU MODELNAME fuse_9x9_1x1_Pipeline_Conv2_ReLU RTLNAME srcnn_fuse_9x9_1x1_Pipeline_Conv2_ReLU
     SUBMODULES {
       {MODELNAME srcnn_fcmp_32ns_32ns_1_2_no_dsp_1 RTLNAME srcnn_fcmp_32ns_32ns_1_2_no_dsp_1 BINDTYPE op TYPE fcmp IMPL auto LATENCY 1 ALLOW_PRAGMA 1}
     }
   }
-  {SRCNAME compute_tile_Pipeline_Shift_win32 MODELNAME compute_tile_Pipeline_Shift_win32 RTLNAME srcnn_compute_tile_Pipeline_Shift_win32}
-  {SRCNAME compute_tile_Pipeline_Update_linebuf32 MODELNAME compute_tile_Pipeline_Update_linebuf32 RTLNAME srcnn_compute_tile_Pipeline_Update_linebuf32}
-  {SRCNAME compute_tile_Pipeline_Conv3_inputft MODELNAME compute_tile_Pipeline_Conv3_inputft RTLNAME srcnn_compute_tile_Pipeline_Conv3_inputft
+  {SRCNAME fuse_9x9_1x1 MODELNAME fuse_9x9_1x1 RTLNAME srcnn_fuse_9x9_1x1
+    SUBMODULES {
+      {MODELNAME srcnn_urem_64s_3ns_2_68_seq_1 RTLNAME srcnn_urem_64s_3ns_2_68_seq_1 BINDTYPE op TYPE urem IMPL auto_seq LATENCY 67 ALLOW_PRAGMA 1}
+      {MODELNAME srcnn_mux_64_6_32_1_1 RTLNAME srcnn_mux_64_6_32_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
+      {MODELNAME srcnn_am_addmul_8ns_3ns_9ns_18_4_1 RTLNAME srcnn_am_addmul_8ns_3ns_9ns_18_4_1 BINDTYPE op TYPE all IMPL dsp48 LATENCY 3 ALLOW_PRAGMA 1}
+      {MODELNAME srcnn_fadd_32ns_32ns_32_4_full_dsp_1 RTLNAME srcnn_fadd_32ns_32ns_32_4_full_dsp_1 BINDTYPE op TYPE fadd IMPL fulldsp LATENCY 3 ALLOW_PRAGMA 1}
+      {MODELNAME srcnn_fmul_32ns_32ns_32_3_max_dsp_1 RTLNAME srcnn_fmul_32ns_32ns_32_3_max_dsp_1 BINDTYPE op TYPE fmul IMPL maxdsp LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME srcnn_fuse_9x9_1x1_acc2_RAM_AUTO_1R1W RTLNAME srcnn_fuse_9x9_1x1_acc2_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
+    }
+  }
+  {SRCNAME conv3_5x5_Pipeline_Shift_win32 MODELNAME conv3_5x5_Pipeline_Shift_win32 RTLNAME srcnn_conv3_5x5_Pipeline_Shift_win32}
+  {SRCNAME conv3_5x5_Pipeline_Update_linebuf32 MODELNAME conv3_5x5_Pipeline_Update_linebuf32 RTLNAME srcnn_conv3_5x5_Pipeline_Update_linebuf32}
+  {SRCNAME conv3_5x5_Pipeline_Conv3_inputft MODELNAME conv3_5x5_Pipeline_Conv3_inputft RTLNAME srcnn_conv3_5x5_Pipeline_Conv3_inputft
     SUBMODULES {
       {MODELNAME srcnn_mux_8_3_32_1_1 RTLNAME srcnn_mux_8_3_32_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
       {MODELNAME srcnn_mux_5_3_32_1_1 RTLNAME srcnn_mux_5_3_32_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
     }
   }
-  {SRCNAME compute_tile MODELNAME compute_tile RTLNAME srcnn_compute_tile
+  {SRCNAME conv3_5x5_Pipeline_acc3row MODELNAME conv3_5x5_Pipeline_acc3row RTLNAME srcnn_conv3_5x5_Pipeline_acc3row}
+  {SRCNAME conv3_5x5 MODELNAME conv3_5x5 RTLNAME srcnn_conv3_5x5
     SUBMODULES {
-      {MODELNAME srcnn_fadd_32ns_32ns_32_4_full_dsp_1 RTLNAME srcnn_fadd_32ns_32ns_32_4_full_dsp_1 BINDTYPE op TYPE fadd IMPL fulldsp LATENCY 3 ALLOW_PRAGMA 1}
-      {MODELNAME srcnn_urem_64s_3ns_2_68_seq_1 RTLNAME srcnn_urem_64s_3ns_2_68_seq_1 BINDTYPE op TYPE urem IMPL auto_seq LATENCY 67 ALLOW_PRAGMA 1}
-      {MODELNAME srcnn_mux_64_6_32_1_1 RTLNAME srcnn_mux_64_6_32_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
-      {MODELNAME srcnn_mux_9_4_32_1_1 RTLNAME srcnn_mux_9_4_32_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
-      {MODELNAME srcnn_fmul_32ns_32ns_32_3_max_dsp_1 RTLNAME srcnn_fmul_32ns_32ns_32_3_max_dsp_1 BINDTYPE op TYPE fmul IMPL maxdsp LATENCY 2 ALLOW_PRAGMA 1}
-      {MODELNAME srcnn_compute_tile_linebuf_RAM_2P_BRAM_1R1W RTLNAME srcnn_compute_tile_linebuf_RAM_2P_BRAM_1R1W BINDTYPE storage TYPE ram_2p IMPL bram LATENCY 2 ALLOW_PRAGMA 1}
-      {MODELNAME srcnn_compute_tile_win_RAM_AUTO_1R1W RTLNAME srcnn_compute_tile_win_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
-      {MODELNAME srcnn_compute_tile_win_1_RAM_AUTO_1R1W RTLNAME srcnn_compute_tile_win_1_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME srcnn_conv3_5x5_linebuf_RAM_2P_BRAM_1R1W RTLNAME srcnn_conv3_5x5_linebuf_RAM_2P_BRAM_1R1W BINDTYPE storage TYPE ram_2p IMPL bram LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME srcnn_conv3_5x5_win_RAM_AUTO_1R1W RTLNAME srcnn_conv3_5x5_win_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME srcnn_conv3_5x5_win_1_RAM_AUTO_1R1W RTLNAME srcnn_conv3_5x5_win_1_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME srcnn_conv3_5x5_f2_RAM_AUTO_1R1W RTLNAME srcnn_conv3_5x5_f2_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
+    }
+  }
+  {SRCNAME compute_tile_df MODELNAME compute_tile_df RTLNAME srcnn_compute_tile_df
+    SUBMODULES {
+      {MODELNAME srcnn_fifo_w1_d2_S RTLNAME srcnn_fifo_w1_d2_S BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME tmp_3_U}
+      {MODELNAME srcnn_fifo_w9_d2_S RTLNAME srcnn_fifo_w9_d2_S BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME tmp_4_U}
+      {MODELNAME srcnn_fifo_w9_d2_S RTLNAME srcnn_fifo_w9_d2_S BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME tmp_5_U}
+      {MODELNAME srcnn_fifo_w1024_d64_A RTLNAME srcnn_fifo_w1024_d64_A BINDTYPE storage TYPE fifo IMPL memory ALLOW_PRAGMA 1 INSTNAME s_f2_i_i_U}
+      {MODELNAME srcnn_fifo_w1_d2_S RTLNAME srcnn_fifo_w1_d2_S BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME phase_c_U}
+      {MODELNAME srcnn_fifo_w9_d2_S RTLNAME srcnn_fifo_w9_d2_S BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME h0_c_U}
+      {MODELNAME srcnn_fifo_w9_d2_S RTLNAME srcnn_fifo_w9_d2_S BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME w0_c_U}
     }
   }
   {SRCNAME store_tile_mm_Pipeline_Out_writex MODELNAME store_tile_mm_Pipeline_Out_writex RTLNAME srcnn_store_tile_mm_Pipeline_Out_writex}
@@ -69,12 +93,12 @@ set SynModuleInfo {
       {MODELNAME srcnn_dataflow_in_loop_IT_w0_outbuf_RAM_1P_BRAM_1R1W_memcore RTLNAME srcnn_dataflow_in_loop_IT_w0_outbuf_RAM_1P_BRAM_1R1W_memcore BINDTYPE storage TYPE ram_1p IMPL bram LATENCY 2 ALLOW_PRAGMA 1}
       {MODELNAME srcnn_dataflow_in_loop_IT_w0_outbuf_RAM_1P_BRAM_1R1W RTLNAME srcnn_dataflow_in_loop_IT_w0_outbuf_RAM_1P_BRAM_1R1W BINDTYPE storage TYPE ram_1p IMPL bram LATENCY 2 ALLOW_PRAGMA 1}
       {MODELNAME srcnn_fifo_w64_d4_S RTLNAME srcnn_fifo_w64_d4_S BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME output_ftmap_c_U}
-      {MODELNAME srcnn_fifo_w9_d2_S RTLNAME srcnn_fifo_w9_d2_S BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME h0_c1_channel_U}
-      {MODELNAME srcnn_fifo_w9_d2_S RTLNAME srcnn_fifo_w9_d2_S BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME w0_c2_channel_U}
-      {MODELNAME srcnn_fifo_w1_d2_S RTLNAME srcnn_fifo_w1_d2_S BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME phase_c3_channel_U}
-      {MODELNAME srcnn_fifo_w9_d2_S RTLNAME srcnn_fifo_w9_d2_S BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME h0_c_channel_U}
-      {MODELNAME srcnn_fifo_w9_d2_S RTLNAME srcnn_fifo_w9_d2_S BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME w0_c_channel_U}
-      {MODELNAME srcnn_fifo_w1_d2_S RTLNAME srcnn_fifo_w1_d2_S BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME phase_c_channel_U}
+      {MODELNAME srcnn_fifo_w9_d2_S_x RTLNAME srcnn_fifo_w9_d2_S_x BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME h0_c1_channel_U}
+      {MODELNAME srcnn_fifo_w9_d2_S_x RTLNAME srcnn_fifo_w9_d2_S_x BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME w0_c2_channel_U}
+      {MODELNAME srcnn_fifo_w1_d2_S_x RTLNAME srcnn_fifo_w1_d2_S_x BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME phase_c3_channel_U}
+      {MODELNAME srcnn_fifo_w9_d2_S_x RTLNAME srcnn_fifo_w9_d2_S_x BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME h0_c_U}
+      {MODELNAME srcnn_fifo_w9_d2_S_x RTLNAME srcnn_fifo_w9_d2_S_x BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME w0_c_U}
+      {MODELNAME srcnn_fifo_w1_d2_S_x RTLNAME srcnn_fifo_w1_d2_S_x BINDTYPE storage TYPE fifo IMPL srl ALLOW_PRAGMA 1 INSTNAME phase_c_U}
     }
   }
   {SRCNAME srcnn MODELNAME srcnn RTLNAME srcnn IS_TOP 1
