@@ -1,0 +1,113 @@
+
+Host Name:                 DESKTOP-GFN85N3
+OS Name:                   Microsoft Windows 10 Enterprise
+OS Version:                10.0.19045 N/A Build 19045
+OS Manufacturer:           Microsoft Corporation
+OS Configuration:          Standalone Workstation
+OS Build Type:             Multiprocessor Free
+Registered Owner:          Biho Shin
+Registered Organization:   N/A
+Product ID:                00328-90000-00000-AAOEM
+Original Install Date:     11/12/2021, 1:54:16 AM
+System Boot Time:          25/10/2025, 12:07:38 PM
+System Manufacturer:       Micro-Star International Co., Ltd.
+System Model:              MS-7D08
+System Type:               x64-based PC
+Processor(s):              1 Processor(s) Installed.
+                           [01]: Intel64 Family 6 Model 165 Stepping 5 GenuineIntel ~2904 Mhz
+BIOS Version:              American Megatrends International, LLC. 2.20, 24/06/2021
+Windows Directory:         C:\WINDOWS
+System Directory:          C:\WINDOWS\system32
+Boot Device:               \Device\HarddiskVolume5
+System Locale:             en-us;English (United States)
+Input Locale:              ko;Korean
+Time Zone:                 (UTC+10:00) Canberra, Melbourne, Sydney
+Total Physical Memory:     16,282 MB
+Available Physical Memory: 5,922 MB
+Virtual Memory: Max Size:  38,810 MB
+Virtual Memory: Available: 21,361 MB
+Virtual Memory: In Use:    17,449 MB
+Page File Location(s):     D:\pagefile.sys
+Domain:                    WORKGROUP
+Logon Server:              \\DESKTOP-GFN85N3
+Hotfix(s):                 48 Hotfix(s) Installed.
+                           [01]: KB5064400
+                           [02]: KB5028951
+                           [03]: KB5003791
+                           [04]: KB5011048
+                           [05]: KB5012170
+                           [06]: KB5015684
+                           [07]: KB5065429
+                           [08]: KB5006753
+                           [09]: KB5007273
+                           [10]: KB5011352
+                           [11]: KB5011651
+                           [12]: KB5014032
+                           [13]: KB5014035
+                           [14]: KB5014671
+                           [15]: KB5015895
+                           [16]: KB5016705
+                           [17]: KB5018506
+                           [18]: KB5020372
+                           [19]: KB5022924
+                           [20]: KB5023794
+                           [21]: KB5025315
+                           [22]: KB5026879
+                           [23]: KB5028318
+                           [24]: KB5028380
+                           [25]: KB5029709
+                           [26]: KB5031539
+                           [27]: KB5032392
+                           [28]: KB5032907
+                           [29]: KB5034224
+                           [30]: KB5036447
+                           [31]: KB5037018
+                           [32]: KB5037240
+                           [33]: KB5037995
+                           [34]: KB5039336
+                           [35]: KB5041579
+                           [36]: KB5043935
+                           [37]: KB5043130
+                           [38]: KB5046823
+                           [39]: KB5050388
+                           [40]: KB5050111
+                           [41]: KB5052916
+                           [42]: KB5054682
+                           [43]: KB5058526
+                           [44]: KB5059504
+                           [45]: KB5063706
+                           [46]: KB5063261
+                           [47]: KB5063979
+                           [48]: KB5005699
+Network Card(s):           5 NIC(s) Installed.
+                           [01]: Intel(R) Ethernet Controller (3) I225-V
+                                 Connection Name: Ethernet
+                                 Status:          Media disconnected
+                           [02]: Intel(R) Wi-Fi 6E AX210 160MHz
+                                 Connection Name: Wi-Fi
+                                 DHCP Enabled:    Yes
+                                 DHCP Server:     192.168.1.1
+                                 IP address(es)
+                                 [01]: 192.168.1.16
+                                 [02]: fe80::eb8a:e06d:3000:b1e7
+                                 [03]: fd64:6d6c:9a85:7b00:eda4:a04:511:5e83
+                                 [04]: 2403:4800:34b0:2854:eda4:a04:511:5e83
+                                 [05]: fd64:6d6c:9a85:7b00:4010:9af7:41ad:f9c9
+                                 [06]: 2403:4800:34b0:2854:a62e:5f2f:dc2b:a81
+                                 [07]: 2403:4800:34b0:2800::6
+                           [03]: Bluetooth Device (Personal Area Network)
+                                 Connection Name: Bluetooth Network Connection
+                                 Status:          Media disconnected
+                           [04]: Hyper-V Virtual Ethernet Adapter
+                                 Connection Name: vEthernet (Default Switch)
+                                 DHCP Enabled:    No
+                                 IP address(es)
+                                 [01]: 172.31.48.1
+                                 [02]: fe80::6a6:a686:92a4:a00e
+                           [05]: Hyper-V Virtual Ethernet Adapter
+                                 Connection Name: vEthernet (WSL)
+                                 DHCP Enabled:    No
+                                 IP address(es)
+                                 [01]: 172.20.112.1
+                                 [02]: fe80::5d8b:5352:75c8:7b7e
+Hyper-V Requirements:      A hypervisor has been detected. Features required for Hyper-V will not be displayed.
