@@ -10,7 +10,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 227 \
+    id 435 \
     name output_ftmap \
     type other \
     dir I \
@@ -25,7 +25,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 228 \
+    id 436 \
     name output_ftmap_c \
     type fifo \
     dir O \

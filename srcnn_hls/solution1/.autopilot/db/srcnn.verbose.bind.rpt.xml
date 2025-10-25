@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'srcnn'" level="0">
-<item name = "Date">Tue Oct 21 05:58:33 2025
+<item name = "Date">Tue Oct 21 15:32:05 2025
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -31,18 +31,18 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_srcnn_Pipeline_CopyW1_ky_CopyW1_kx_fu_1138">srcnn_Pipeline_CopyW1_ky_CopyW1_kx, 92, 92, 0.920 us, 0.920 us, 92, 92, no</column>
-<column name="grp_srcnn_Pipeline_CopyW2_inft_fu_1153">srcnn_Pipeline_CopyW2_inft, 75, 75, 0.750 us, 0.750 us, 75, 75, no</column>
-<column name="grp_srcnn_Pipeline_CopyW3_inft_CopyW3_ky_CopyW3_kx_fu_1179">srcnn_Pipeline_CopyW3_inft_CopyW3_ky_CopyW3_kx, 803, 803, 8.030 us, 8.030 us, 803, 803, no</column>
-<column name="grp_dataflow_in_loop_IT_w0_fu_1586">dataflow_in_loop_IT_w0, ?, ?, ?, ?, ?, ?, dataflow</column>
+<column name="grp_srcnn_Pipeline_CopyW1_ky_CopyW1_kx_fu_1563">srcnn_Pipeline_CopyW1_ky_CopyW1_kx, 92, 92, 0.920 us, 0.920 us, 92, 92, no</column>
+<column name="grp_srcnn_Pipeline_CopyW2_inft_fu_1578">srcnn_Pipeline_CopyW2_inft, 75, 75, 0.750 us, 0.750 us, 75, 75, no</column>
+<column name="grp_srcnn_Pipeline_CopyW3_inft_CopyW3_ky_CopyW3_kx_fu_1620">srcnn_Pipeline_CopyW3_inft_CopyW3_ky_CopyW3_kx, 803, 803, 8.030 us, 8.030 us, 803, 803, no</column>
+<column name="grp_dataflow_in_loop_IT_w0_fu_2427">dataflow_in_loop_IT_w0, ?, ?, ?, ?, ?, ?, dataflow</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
 <column name="- CopyW1_outft">6720, 6720, 105, -, -, 64, no</column>
 <column name="- CopyW2_outft">2816, 2816, 88, -, -, 32, no</column>
-<column name="- IT_h0">?, ?, ?, -, -, 16, no</column>
-<column name=" + IT_w0">?, ?, ?, -, -, 16, no</column>
+<column name="- IT_h0">?, ?, ?, -, -, 3, no</column>
+<column name=" + IT_w0">?, ?, ?, -, -, 3, no</column>
 </table>
 </item>
 </section>

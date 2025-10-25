@@ -3,15 +3,15 @@
 #include <hls_stream.h>
 
 #ifndef UF_N2
-#define UF_N2 8                 // unroll across N2 lanes (32 out chs)
+#define UF_N2 16                 // unroll across N2 lanes (32 out chs)
 #endif
 
 // Tile sizes (tune for BRAM and timing)
 #ifndef TH
-#define TH 16
+#define TH 96
 #endif
 #ifndef TW
-#define TW 16
+#define TW 96
 #endif
 
 // Radii and halo (SRCNN 9x9, 1x1, 5x5)
@@ -80,14 +80,22 @@ static void compute_tile(
 
   // ---- buffers for the 5x5 stage (per tile) ----
   ftmap_t linebuf[N2][F3-1][TW + 2*R3];
+#pragma HLS DEPENDENCE variable=linebuf inter false
   #pragma HLS BIND_STORAGE    variable=linebuf type=ram_2p impl=bram
   #pragma HLS ARRAY_PARTITION variable=linebuf complete dim=2
   #pragma HLS ARRAY_PARTITION variable=linebuf cyclic factor=UF_N2 dim=1
 
+//#pragma HLS DEPENDENCE variable=linebuf inter false
+//#pragma HLS DEPENDENCE variable=win     inter false
+
   ftmap_t win[N2][F3][F3];
+#pragma HLS DEPENDENCE variable=win     inter false
   #pragma HLS ARRAY_PARTITION variable=win complete dim=2
   #pragma HLS ARRAY_PARTITION variable=win complete dim=3
   #pragma HLS ARRAY_PARTITION variable=win cyclic factor=UF_N2 dim=1
+
+#pragma HLS DEPENDENCE variable=linebuf inter false
+#pragma HLS DEPENDENCE variable=win     inter false
 
   // // Weight banking to feed the unrolled N2 lanes
   // #pragma HLS ARRAY_PARTITION variable=conv2_w cyclic factor=UF_N2 dim=1

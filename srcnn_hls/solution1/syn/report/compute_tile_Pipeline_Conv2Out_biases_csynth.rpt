@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'compute_tile_Pipeline_Conv2Out_biases'
 ================================================================
-* Date:           Tue Oct 21 05:58:39 2025
+* Date:           Tue Oct 21 15:32:16 2025
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -20,7 +20,7 @@
     +--------+----------+----------+------------+
     |  Clock |  Target  | Estimated| Uncertainty|
     +--------+----------+----------+------------+
-    |ap_clk  |  10.00 ns|  1.554 ns|     2.70 ns|
+    |ap_clk  |  10.00 ns|  1.915 ns|     2.70 ns|
     +--------+----------+----------+------------+
 
 + Latency: 
@@ -29,7 +29,7 @@
     |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
     |   min   |   max   |    min    |    max    | min | max |   Type  |
     +---------+---------+-----------+-----------+-----+-----+---------+
-    |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
+    |        4|        4|  40.000 ns|  40.000 ns|    4|    4|       no|
     +---------+---------+-----------+-----------+-----+-----+---------+
 
     + Detail: 
@@ -41,7 +41,7 @@
         |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
         |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
         +-------------------+---------+---------+----------+-----------+-----------+------+----------+
-        |- Conv2Out_biases  |        4|        4|         1|          1|          1|     4|       yes|
+        |- Conv2Out_biases  |        2|        2|         1|          1|          1|     2|       yes|
         +-------------------+---------+---------+----------+-----------+-----------+------+----------+
 
 
@@ -54,14 +54,14 @@
 |       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
 +-----------------+---------+------+--------+--------+-----+
 |DSP              |        -|     -|       -|       -|    -|
-|Expression       |        -|     -|       0|      13|    -|
+|Expression       |        -|     -|       0|     538|    -|
 |FIFO             |        -|     -|       -|       -|    -|
-|Instance         |        -|     -|       0|    1000|    -|
+|Instance         |        -|     -|       -|       -|    -|
 |Memory           |        -|     -|       -|       -|    -|
 |Multiplexer      |        -|     -|       -|      27|    -|
 |Register         |        -|     -|       8|       -|    -|
 +-----------------+---------+------+--------+--------+-----+
-|Total            |        0|     0|       8|    1040|    0|
+|Total            |        0|     0|       8|     565|    0|
 +-----------------+---------+------+--------+--------+-----+
 |Available        |      288|  1248|  234240|  117120|   64|
 +-----------------+---------+------+--------+--------+-----+
@@ -70,20 +70,7 @@
 
 + Detail: 
     * Instance: 
-    +----------------------+-----------------+---------+----+---+-----+-----+
-    |       Instance       |      Module     | BRAM_18K| DSP| FF| LUT | URAM|
-    +----------------------+-----------------+---------+----+---+-----+-----+
-    |mux_25_5_32_1_1_U255  |mux_25_5_32_1_1  |        0|   0|  0|  125|    0|
-    |mux_25_5_32_1_1_U256  |mux_25_5_32_1_1  |        0|   0|  0|  125|    0|
-    |mux_25_5_32_1_1_U257  |mux_25_5_32_1_1  |        0|   0|  0|  125|    0|
-    |mux_25_5_32_1_1_U258  |mux_25_5_32_1_1  |        0|   0|  0|  125|    0|
-    |mux_25_5_32_1_1_U259  |mux_25_5_32_1_1  |        0|   0|  0|  125|    0|
-    |mux_25_5_32_1_1_U260  |mux_25_5_32_1_1  |        0|   0|  0|  125|    0|
-    |mux_25_5_32_1_1_U261  |mux_25_5_32_1_1  |        0|   0|  0|  125|    0|
-    |mux_25_5_32_1_1_U262  |mux_25_5_32_1_1  |        0|   0|  0|  125|    0|
-    +----------------------+-----------------+---------+----+---+-----+-----+
-    |Total                 |                 |        0|   0|  0| 1000|    0|
-    +----------------------+-----------------+---------+----+---+-----+-----+
+    N/A
 
     * DSP: 
     N/A
@@ -95,13 +82,30 @@
     N/A
 
     * Expression: 
-    +---------------------+----------+----+---+----+------------+------------+
-    |    Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
-    +---------------------+----------+----+---+----+------------+------------+
-    |add_ln123_fu_918_p2  |         +|   0|  0|  13|           6|           4|
-    +---------------------+----------+----+---+----+------------+------------+
-    |Total                |          |   0|  0|  13|           6|           4|
-    +---------------------+----------+----+---+----+------------+------------+
+    +----------------------+----------+----+---+----+------------+------------+
+    |     Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------+----------+----+---+----+------------+------------+
+    |add_ln129_fu_732_p2   |         +|   0|  0|  13|           6|           5|
+    |icmp_ln132_fu_582_p2  |      icmp|   0|  0|  13|           5|           6|
+    |acc2_10_d0            |    select|   0|  0|  32|           1|          32|
+    |acc2_11_d0            |    select|   0|  0|  32|           1|          32|
+    |acc2_12_d0            |    select|   0|  0|  32|           1|          32|
+    |acc2_13_d0            |    select|   0|  0|  32|           1|          32|
+    |acc2_14_d0            |    select|   0|  0|  32|           1|          32|
+    |acc2_15_d0            |    select|   0|  0|  32|           1|          32|
+    |acc2_1_d0             |    select|   0|  0|  32|           1|          32|
+    |acc2_2_d0             |    select|   0|  0|  32|           1|          32|
+    |acc2_3_d0             |    select|   0|  0|  32|           1|          32|
+    |acc2_4_d0             |    select|   0|  0|  32|           1|          32|
+    |acc2_5_d0             |    select|   0|  0|  32|           1|          32|
+    |acc2_6_d0             |    select|   0|  0|  32|           1|          32|
+    |acc2_7_d0             |    select|   0|  0|  32|           1|          32|
+    |acc2_8_d0             |    select|   0|  0|  32|           1|          32|
+    |acc2_9_d0             |    select|   0|  0|  32|           1|          32|
+    |acc2_d0               |    select|   0|  0|  32|           1|          32|
+    +----------------------+----------+----+---+----+------------+------------+
+    |Total                 |          |   0|  0| 538|          27|         523|
+    +----------------------+----------+----+---+----+------------+------------+
 
     * Multiplexer: 
     +-----------------------+----+-----------+-----+-----------+
@@ -109,7 +113,7 @@
     +-----------------------+----+-----------+-----+-----------+
     |ap_done_int            |   9|          2|    1|          2|
     |ap_sig_allocacmp_n2_5  |   9|          2|    6|         12|
-    |n2_fu_120              |   9|          2|    6|         12|
+    |n2_fu_130              |   9|          2|    6|         12|
     +-----------------------+----+-----------+-----+-----------+
     |Total                  |  27|          6|   13|         26|
     +-----------------------+----+-----------+-----+-----------+
@@ -120,7 +124,7 @@
     +-------------+---+----+-----+-----------+
     |ap_CS_fsm    |  1|   0|    1|          0|
     |ap_done_reg  |  1|   0|    1|          0|
-    |n2_fu_120    |  6|   0|    6|          0|
+    |n2_fu_130    |  6|   0|    6|          0|
     +-------------+---+----+-----+-----------+
     |Total        |  8|   0|    8|          0|
     +-------------+---+----+-----+-----------+
@@ -140,69 +144,101 @@
 |ap_done                                                                                                  |  out|    1|  ap_ctrl_hs|                                                                    compute_tile_Pipeline_Conv2Out_biases|  return value|
 |ap_idle                                                                                                  |  out|    1|  ap_ctrl_hs|                                                                    compute_tile_Pipeline_Conv2Out_biases|  return value|
 |ap_ready                                                                                                 |  out|    1|  ap_ctrl_hs|                                                                    compute_tile_Pipeline_Conv2Out_biases|  return value|
-|acc2_7_address0                                                                                          |  out|    2|   ap_memory|                                                                                                   acc2_7|         array|
+|acc2_15_address0                                                                                         |  out|    1|   ap_memory|                                                                                                  acc2_15|         array|
+|acc2_15_ce0                                                                                              |  out|    1|   ap_memory|                                                                                                  acc2_15|         array|
+|acc2_15_we0                                                                                              |  out|    1|   ap_memory|                                                                                                  acc2_15|         array|
+|acc2_15_d0                                                                                               |  out|   32|   ap_memory|                                                                                                  acc2_15|         array|
+|acc2_14_address0                                                                                         |  out|    1|   ap_memory|                                                                                                  acc2_14|         array|
+|acc2_14_ce0                                                                                              |  out|    1|   ap_memory|                                                                                                  acc2_14|         array|
+|acc2_14_we0                                                                                              |  out|    1|   ap_memory|                                                                                                  acc2_14|         array|
+|acc2_14_d0                                                                                               |  out|   32|   ap_memory|                                                                                                  acc2_14|         array|
+|acc2_13_address0                                                                                         |  out|    1|   ap_memory|                                                                                                  acc2_13|         array|
+|acc2_13_ce0                                                                                              |  out|    1|   ap_memory|                                                                                                  acc2_13|         array|
+|acc2_13_we0                                                                                              |  out|    1|   ap_memory|                                                                                                  acc2_13|         array|
+|acc2_13_d0                                                                                               |  out|   32|   ap_memory|                                                                                                  acc2_13|         array|
+|acc2_12_address0                                                                                         |  out|    1|   ap_memory|                                                                                                  acc2_12|         array|
+|acc2_12_ce0                                                                                              |  out|    1|   ap_memory|                                                                                                  acc2_12|         array|
+|acc2_12_we0                                                                                              |  out|    1|   ap_memory|                                                                                                  acc2_12|         array|
+|acc2_12_d0                                                                                               |  out|   32|   ap_memory|                                                                                                  acc2_12|         array|
+|acc2_11_address0                                                                                         |  out|    1|   ap_memory|                                                                                                  acc2_11|         array|
+|acc2_11_ce0                                                                                              |  out|    1|   ap_memory|                                                                                                  acc2_11|         array|
+|acc2_11_we0                                                                                              |  out|    1|   ap_memory|                                                                                                  acc2_11|         array|
+|acc2_11_d0                                                                                               |  out|   32|   ap_memory|                                                                                                  acc2_11|         array|
+|acc2_10_address0                                                                                         |  out|    1|   ap_memory|                                                                                                  acc2_10|         array|
+|acc2_10_ce0                                                                                              |  out|    1|   ap_memory|                                                                                                  acc2_10|         array|
+|acc2_10_we0                                                                                              |  out|    1|   ap_memory|                                                                                                  acc2_10|         array|
+|acc2_10_d0                                                                                               |  out|   32|   ap_memory|                                                                                                  acc2_10|         array|
+|acc2_9_address0                                                                                          |  out|    1|   ap_memory|                                                                                                   acc2_9|         array|
+|acc2_9_ce0                                                                                               |  out|    1|   ap_memory|                                                                                                   acc2_9|         array|
+|acc2_9_we0                                                                                               |  out|    1|   ap_memory|                                                                                                   acc2_9|         array|
+|acc2_9_d0                                                                                                |  out|   32|   ap_memory|                                                                                                   acc2_9|         array|
+|acc2_8_address0                                                                                          |  out|    1|   ap_memory|                                                                                                   acc2_8|         array|
+|acc2_8_ce0                                                                                               |  out|    1|   ap_memory|                                                                                                   acc2_8|         array|
+|acc2_8_we0                                                                                               |  out|    1|   ap_memory|                                                                                                   acc2_8|         array|
+|acc2_8_d0                                                                                                |  out|   32|   ap_memory|                                                                                                   acc2_8|         array|
+|acc2_7_address0                                                                                          |  out|    1|   ap_memory|                                                                                                   acc2_7|         array|
 |acc2_7_ce0                                                                                               |  out|    1|   ap_memory|                                                                                                   acc2_7|         array|
 |acc2_7_we0                                                                                               |  out|    1|   ap_memory|                                                                                                   acc2_7|         array|
 |acc2_7_d0                                                                                                |  out|   32|   ap_memory|                                                                                                   acc2_7|         array|
-|acc2_6_address0                                                                                          |  out|    2|   ap_memory|                                                                                                   acc2_6|         array|
+|acc2_6_address0                                                                                          |  out|    1|   ap_memory|                                                                                                   acc2_6|         array|
 |acc2_6_ce0                                                                                               |  out|    1|   ap_memory|                                                                                                   acc2_6|         array|
 |acc2_6_we0                                                                                               |  out|    1|   ap_memory|                                                                                                   acc2_6|         array|
 |acc2_6_d0                                                                                                |  out|   32|   ap_memory|                                                                                                   acc2_6|         array|
-|acc2_5_address0                                                                                          |  out|    2|   ap_memory|                                                                                                   acc2_5|         array|
+|acc2_5_address0                                                                                          |  out|    1|   ap_memory|                                                                                                   acc2_5|         array|
 |acc2_5_ce0                                                                                               |  out|    1|   ap_memory|                                                                                                   acc2_5|         array|
 |acc2_5_we0                                                                                               |  out|    1|   ap_memory|                                                                                                   acc2_5|         array|
 |acc2_5_d0                                                                                                |  out|   32|   ap_memory|                                                                                                   acc2_5|         array|
-|acc2_4_address0                                                                                          |  out|    2|   ap_memory|                                                                                                   acc2_4|         array|
+|acc2_4_address0                                                                                          |  out|    1|   ap_memory|                                                                                                   acc2_4|         array|
 |acc2_4_ce0                                                                                               |  out|    1|   ap_memory|                                                                                                   acc2_4|         array|
 |acc2_4_we0                                                                                               |  out|    1|   ap_memory|                                                                                                   acc2_4|         array|
 |acc2_4_d0                                                                                                |  out|   32|   ap_memory|                                                                                                   acc2_4|         array|
-|acc2_3_address0                                                                                          |  out|    2|   ap_memory|                                                                                                   acc2_3|         array|
+|acc2_3_address0                                                                                          |  out|    1|   ap_memory|                                                                                                   acc2_3|         array|
 |acc2_3_ce0                                                                                               |  out|    1|   ap_memory|                                                                                                   acc2_3|         array|
 |acc2_3_we0                                                                                               |  out|    1|   ap_memory|                                                                                                   acc2_3|         array|
 |acc2_3_d0                                                                                                |  out|   32|   ap_memory|                                                                                                   acc2_3|         array|
-|acc2_2_address0                                                                                          |  out|    2|   ap_memory|                                                                                                   acc2_2|         array|
+|acc2_2_address0                                                                                          |  out|    1|   ap_memory|                                                                                                   acc2_2|         array|
 |acc2_2_ce0                                                                                               |  out|    1|   ap_memory|                                                                                                   acc2_2|         array|
 |acc2_2_we0                                                                                               |  out|    1|   ap_memory|                                                                                                   acc2_2|         array|
 |acc2_2_d0                                                                                                |  out|   32|   ap_memory|                                                                                                   acc2_2|         array|
-|acc2_1_address0                                                                                          |  out|    2|   ap_memory|                                                                                                   acc2_1|         array|
+|acc2_1_address0                                                                                          |  out|    1|   ap_memory|                                                                                                   acc2_1|         array|
 |acc2_1_ce0                                                                                               |  out|    1|   ap_memory|                                                                                                   acc2_1|         array|
 |acc2_1_we0                                                                                               |  out|    1|   ap_memory|                                                                                                   acc2_1|         array|
 |acc2_1_d0                                                                                                |  out|   32|   ap_memory|                                                                                                   acc2_1|         array|
-|acc2_address0                                                                                            |  out|    2|   ap_memory|                                                                                                     acc2|         array|
+|acc2_address0                                                                                            |  out|    1|   ap_memory|                                                                                                     acc2|         array|
 |acc2_ce0                                                                                                 |  out|    1|   ap_memory|                                                                                                     acc2|         array|
 |acc2_we0                                                                                                 |  out|    1|   ap_memory|                                                                                                     acc2|         array|
 |acc2_d0                                                                                                  |  out|   32|   ap_memory|                                                                                                     acc2|         array|
-|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_52                                                  |   in|   32|   ap_stable|                                                  srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_52|        scalar|
-|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_53                                                  |   in|   32|   ap_stable|                                                  srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_53|        scalar|
 |p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_16_s                       |   in|   32|   ap_stable|                       p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_16_s|        scalar|
-|p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_24_s                       |   in|   32|   ap_stable|                       p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_24_s|        scalar|
-|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_54                                                  |   in|   32|   ap_stable|                                                  srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_54|        scalar|
-|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_55                                                  |   in|   32|   ap_stable|                                                  srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_55|        scalar|
+|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_116                                                 |   in|   32|   ap_stable|                                                 srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_116|        scalar|
 |p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_17_s                       |   in|   32|   ap_stable|                       p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_17_s|        scalar|
-|p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_25_s                       |   in|   32|   ap_stable|                       p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_25_s|        scalar|
-|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_56                                                  |   in|   32|   ap_stable|                                                  srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_56|        scalar|
-|p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_10_s                       |   in|   32|   ap_stable|                       p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_10_s|        scalar|
+|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_117                                                 |   in|   32|   ap_stable|                                                 srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_117|        scalar|
 |p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_18_s                       |   in|   32|   ap_stable|                       p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_18_s|        scalar|
-|p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_26_s                       |   in|   32|   ap_stable|                       p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_26_s|        scalar|
-|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_57                                                  |   in|   32|   ap_stable|                                                  srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_57|        scalar|
-|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_b2_loc_66  |   in|   32|   ap_stable|  srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_b2_loc_66|        scalar|
+|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_118                                                 |   in|   32|   ap_stable|                                                 srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_118|        scalar|
 |p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_19_s                       |   in|   32|   ap_stable|                       p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_19_s|        scalar|
-|p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_27_s                       |   in|   32|   ap_stable|                       p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_27_s|        scalar|
-|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_58                                                  |   in|   32|   ap_stable|                                                  srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_58|        scalar|
-|p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_12_s                       |   in|   32|   ap_stable|                       p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_12_s|        scalar|
+|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_119                                                 |   in|   32|   ap_stable|                                                 srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_119|        scalar|
 |p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_20_s                       |   in|   32|   ap_stable|                       p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_20_s|        scalar|
-|p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_28_s                       |   in|   32|   ap_stable|                       p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_28_s|        scalar|
-|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_59                                                  |   in|   32|   ap_stable|                                                  srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_59|        scalar|
-|p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_13_s                       |   in|   32|   ap_stable|                       p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_13_s|        scalar|
-|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_b2_loc_67  |   in|   32|   ap_stable|  srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_b2_loc_67|        scalar|
-|p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_29_s                       |   in|   32|   ap_stable|                       p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_29_s|        scalar|
-|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_60                                                  |   in|   32|   ap_stable|                                                  srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_60|        scalar|
-|p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_14_s                       |   in|   32|   ap_stable|                       p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_14_s|        scalar|
+|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_120                                                 |   in|   32|   ap_stable|                                                 srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_120|        scalar|
+|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_b2_loc_92  |   in|   32|   ap_stable|  srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_b2_loc_92|        scalar|
+|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_121                                                 |   in|   32|   ap_stable|                                                 srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_121|        scalar|
 |p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_22_s                       |   in|   32|   ap_stable|                       p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_22_s|        scalar|
-|p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_30_s                       |   in|   32|   ap_stable|                       p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_30_s|        scalar|
-|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_61                                                  |   in|   32|   ap_stable|                                                  srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_61|        scalar|
-|p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_15_s                       |   in|   32|   ap_stable|                       p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_15_s|        scalar|
+|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_122                                                 |   in|   32|   ap_stable|                                                 srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_122|        scalar|
 |p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_23_s                       |   in|   32|   ap_stable|                       p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_23_s|        scalar|
+|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_123                                                 |   in|   32|   ap_stable|                                                 srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_123|        scalar|
+|p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_24_s                       |   in|   32|   ap_stable|                       p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_24_s|        scalar|
+|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_124                                                 |   in|   32|   ap_stable|                                                 srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_124|        scalar|
+|p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_25_s                       |   in|   32|   ap_stable|                       p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_25_s|        scalar|
+|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_125                                                 |   in|   32|   ap_stable|                                                 srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_125|        scalar|
+|p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_26_s                       |   in|   32|   ap_stable|                       p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_26_s|        scalar|
+|p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_10_s                       |   in|   32|   ap_stable|                       p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_10_s|        scalar|
+|p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_27_s                       |   in|   32|   ap_stable|                       p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_27_s|        scalar|
+|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_b2_loc_93  |   in|   32|   ap_stable|  srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_b2_loc_93|        scalar|
+|p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_28_s                       |   in|   32|   ap_stable|                       p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_28_s|        scalar|
+|p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_12_s                       |   in|   32|   ap_stable|                       p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_12_s|        scalar|
+|p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_29_s                       |   in|   32|   ap_stable|                       p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_29_s|        scalar|
+|p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_13_s                       |   in|   32|   ap_stable|                       p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_13_s|        scalar|
+|p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_30_s                       |   in|   32|   ap_stable|                       p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_30_s|        scalar|
+|p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_14_s                       |   in|   32|   ap_stable|                       p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_14_s|        scalar|
 |srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_b2_loc     |   in|   32|   ap_stable|     srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_b2_loc|        scalar|
+|p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_15_s                       |   in|   32|   ap_stable|                       p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_15_s|        scalar|
 +---------------------------------------------------------------------------------------------------------+-----+-----+------------+---------------------------------------------------------------------------------------------------------+--------------+
 

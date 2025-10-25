@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'store_tile_mm'" level="0">
-<item name = "Date">Tue Oct 21 05:58:52 2025
+<item name = "Date">Tue Oct 21 15:32:43 2025
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -31,7 +31,7 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_store_tile_mm_Pipeline_Out_writex_fu_98">store_tile_mm_Pipeline_Out_writex, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_store_tile_mm_Pipeline_Out_writex_fu_96">store_tile_mm_Pipeline_Out_writex, ?, ?, ?, ?, ?, ?, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -48,9 +48,9 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="DSP">-, -, -, -, -</column>
-<column name="Expression">-, -, 0, 68, -</column>
+<column name="Expression">-, -, 0, 73, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">-, 0, 216, 549, -</column>
+<column name="Instance">-, 0, 216, 565, -</column>
 <column name="Memory">-, -, -, -, -</column>
 <column name="Multiplexer">-, -, -, 65, -</column>
 <column name="Register">-, -, 111, -, -</column>
@@ -62,8 +62,8 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="mul_8ns_8ns_16_1_1_U1959">mul_8ns_8ns_16_1_1, 0, 0, 0, 40, 0</column>
-<column name="grp_store_tile_mm_Pipeline_Out_writex_fu_98">store_tile_mm_Pipeline_Out_writex, 0, 0, 216, 509, 0</column>
+<column name="mul_8ns_8ns_16_1_1_U3513">mul_8ns_8ns_16_1_1, 0, 0, 0, 40, 0</column>
+<column name="grp_store_tile_mm_Pipeline_Out_writex_fu_96">store_tile_mm_Pipeline_Out_writex, 0, 0, 216, 525, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -80,14 +80,14 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln534_fu_114_p2">+, 0, 0, 16, 9, 5</column>
-<column name="add_ln537_fu_146_p2">+, 0, 0, 16, 9, 5</column>
+<column name="add_ln540_fu_112_p2">+, 0, 0, 16, 9, 7</column>
+<column name="add_ln543_fu_144_p2">+, 0, 0, 16, 9, 7</column>
 <column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
-<column name="th_eff_fu_138_p3">select, 0, 0, 8, 1, 8</column>
-<column name="tw_eff_fu_170_p3">select, 0, 0, 8, 1, 8</column>
-<column name="xor_ln534_fu_132_p2">xor, 0, 0, 8, 8, 2</column>
-<column name="xor_ln537_fu_164_p2">xor, 0, 0, 8, 8, 2</column>
-<column name="xor_ln543_fu_178_p2">xor, 0, 0, 2, 1, 2</column>
+<column name="select_ln350_fu_176_p3">select, 0, 0, 7, 1, 1</column>
+<column name="th_eff_fu_136_p3">select, 0, 0, 8, 1, 8</column>
+<column name="tw_eff_fu_168_p3">select, 0, 0, 8, 1, 8</column>
+<column name="xor_ln540_fu_130_p2">xor, 0, 0, 8, 8, 2</column>
+<column name="xor_ln543_fu_162_p2">xor, 0, 0, 8, 8, 2</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
@@ -104,13 +104,13 @@
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
 <column name="ap_CS_fsm">3, 0, 3, 0</column>
 <column name="ap_done_reg">1, 0, 1, 0</column>
-<column name="bound_reg_251">16, 0, 16, 0</column>
-<column name="grp_store_tile_mm_Pipeline_Out_writex_fu_98_ap_start_reg">1, 0, 1, 0</column>
-<column name="out_reg_236">64, 0, 64, 0</column>
-<column name="th_eff_reg_224">8, 0, 8, 0</column>
-<column name="tmp_1_reg_246">9, 0, 11, 2</column>
-<column name="tmp_reg_241">1, 0, 5, 4</column>
-<column name="tw_eff_reg_229">8, 0, 8, 0</column>
+<column name="bound_reg_243">16, 0, 16, 0</column>
+<column name="grp_store_tile_mm_Pipeline_Out_writex_fu_96_ap_start_reg">1, 0, 1, 0</column>
+<column name="out_reg_228">64, 0, 64, 0</column>
+<column name="select_ln350_reg_233">1, 0, 6, 5</column>
+<column name="th_eff_reg_216">8, 0, 8, 0</column>
+<column name="tmp_reg_238">9, 0, 11, 2</column>
+<column name="tw_eff_reg_221">8, 0, 8, 0</column>
 </table>
 </item>
 </section>
@@ -181,7 +181,7 @@
 <column name="output_ftmap_read">out, 1, ap_fifo, output_ftmap, pointer</column>
 <column name="p_read1">in, 9, ap_none, p_read1, scalar</column>
 <column name="p_read2">in, 9, ap_none, p_read2, scalar</column>
-<column name="outbuf_address0">out, 9, ap_memory, outbuf, array</column>
+<column name="outbuf_address0">out, 15, ap_memory, outbuf, array</column>
 <column name="outbuf_ce0">out, 1, ap_memory, outbuf, array</column>
 <column name="outbuf_q0">in, 32, ap_memory, outbuf, array</column>
 </table>

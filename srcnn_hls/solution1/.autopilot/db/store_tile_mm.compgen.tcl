@@ -17,14 +17,14 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1966 \
+    id 3520 \
     name outbuf \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename outbuf \
     op interface \
-    ports { outbuf_address0 { O 9 vector } outbuf_ce0 { O 1 bit } outbuf_q0 { I 32 vector } } \
+    ports { outbuf_address0 { O 15 vector } outbuf_ce0 { O 1 bit } outbuf_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'outbuf'"
@@ -35,7 +35,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1961 \
+    id 3515 \
     name p_read \
     type other \
     dir I \
@@ -50,7 +50,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1962 \
+    id 3516 \
     name gmem_out \
     type other \
     dir O \
@@ -65,7 +65,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1963 \
+    id 3517 \
     name output_ftmap \
     type fifo \
     dir I \
@@ -80,7 +80,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1964 \
+    id 3518 \
     name p_read1 \
     type other \
     dir I \
@@ -95,7 +95,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1965 \
+    id 3519 \
     name p_read2 \
     type other \
     dir I \

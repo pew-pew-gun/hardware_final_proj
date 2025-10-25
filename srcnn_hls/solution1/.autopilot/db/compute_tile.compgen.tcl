@@ -18,7 +18,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 }
 
 
-set id 1599
+set id 2943
 set name srcnn_mux_64_6_32_1_1
 set corename simcore_mux
 set op mux
@@ -309,7 +309,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_pipemux, check your
 }
 
 
-set id 1600
+set id 2944
 set name srcnn_mux_9_4_32_1_1
 set corename simcore_mux
 set op mux
@@ -436,14 +436,14 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1636 \
+    id 2982 \
     name outbuf \
     reset_level 1 \
     sync_rst true \
     dir O \
     corename outbuf \
     op interface \
-    ports { outbuf_address0 { O 9 vector } outbuf_ce0 { O 1 bit } outbuf_we0 { O 1 bit } outbuf_d0 { O 32 vector } } \
+    ports { outbuf_address0 { O 15 vector } outbuf_ce0 { O 1 bit } outbuf_we0 { O 1 bit } outbuf_d0 { O 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'outbuf'"
@@ -455,14 +455,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1639 \
+    id 2985 \
     name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_inbuf \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_inbuf \
     op interface \
-    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_inbuf_address0 { O 10 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_inbuf_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_inbuf_q0 { I 32 vector } } \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_inbuf_address0 { O 13 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_inbuf_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_inbuf_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_inbuf'"
@@ -474,14 +474,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1640 \
+    id 2986 \
     name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_inbuf_1 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_inbuf_1 \
     op interface \
-    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_inbuf_1_address0 { O 10 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_inbuf_1_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_inbuf_1_q0 { I 32 vector } } \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_inbuf_1_address0 { O 13 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_inbuf_1_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_inbuf_1_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_inbuf_1'"
@@ -493,14 +493,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1641 \
+    id 2987 \
     name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_inbuf_2 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_inbuf_2 \
     op interface \
-    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_inbuf_2_address0 { O 10 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_inbuf_2_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_inbuf_2_q0 { I 32 vector } } \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_inbuf_2_address0 { O 13 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_inbuf_2_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_inbuf_2_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_inbuf_2'"
@@ -512,17 +512,17 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1739 \
-    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10 \
+    id 3085 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_42 \
     reset_level 1 \
     sync_rst true \
     dir I \
-    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10 \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_42 \
     op interface \
-    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10_address0 { O 11 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10_q0 { I 32 vector } } \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_42_address0 { O 11 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_42_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_42_q0 { I 32 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_42'"
 }
 }
 
@@ -531,17 +531,17 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1740 \
-    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_9 \
+    id 3086 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_41 \
     reset_level 1 \
     sync_rst true \
     dir I \
-    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_9 \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_41 \
     op interface \
-    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_9_address0 { O 11 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_9_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_9_q0 { I 32 vector } } \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_41_address0 { O 11 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_41_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_41_q0 { I 32 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_9'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_41'"
 }
 }
 
@@ -550,17 +550,17 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1741 \
-    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_8 \
+    id 3087 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_40 \
     reset_level 1 \
     sync_rst true \
     dir I \
-    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_8 \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_40 \
     op interface \
-    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_8_address0 { O 11 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_8_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_8_q0 { I 32 vector } } \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_40_address0 { O 11 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_40_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_40_q0 { I 32 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_8'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_40'"
 }
 }
 
@@ -569,17 +569,17 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1742 \
-    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_7 \
+    id 3088 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_39 \
     reset_level 1 \
     sync_rst true \
     dir I \
-    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_7 \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_39 \
     op interface \
-    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_7_address0 { O 8 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_7_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_7_q0 { I 32 vector } } \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_39_address0 { O 7 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_39_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_39_q0 { I 32 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_7'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_39'"
 }
 }
 
@@ -588,17 +588,17 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1743 \
-    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_4 \
+    id 3089 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_34 \
     reset_level 1 \
     sync_rst true \
     dir I \
-    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_4 \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_34 \
     op interface \
-    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_4_address0 { O 8 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_4_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_4_q0 { I 32 vector } } \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_34_address0 { O 7 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_34_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_34_q0 { I 32 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_4'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_34'"
 }
 }
 
@@ -607,17 +607,17 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1744 \
-    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_3 \
+    id 3090 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_33 \
     reset_level 1 \
     sync_rst true \
     dir I \
-    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_3 \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_33 \
     op interface \
-    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_3_address0 { O 8 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_3_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_3_q0 { I 32 vector } } \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_33_address0 { O 7 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_33_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_33_q0 { I 32 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_3'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_33'"
 }
 }
 
@@ -626,17 +626,17 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1745 \
-    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_2 \
+    id 3091 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_32 \
     reset_level 1 \
     sync_rst true \
     dir I \
-    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_2 \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_32 \
     op interface \
-    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_2_address0 { O 8 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_2_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_2_q0 { I 32 vector } } \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_32_address0 { O 7 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_32_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_32_q0 { I 32 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_2'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_32'"
 }
 }
 
@@ -645,17 +645,17 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1746 \
-    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_1 \
+    id 3092 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_31 \
     reset_level 1 \
     sync_rst true \
     dir I \
-    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_1 \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_31 \
     op interface \
-    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_1_address0 { O 8 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_1_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_1_q0 { I 32 vector } } \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_31_address0 { O 7 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_31_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_31_q0 { I 32 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_1'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_31'"
 }
 }
 
@@ -664,17 +664,17 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1747 \
-    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f \
+    id 3093 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_30 \
     reset_level 1 \
     sync_rst true \
     dir I \
-    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_30 \
     op interface \
-    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_address0 { O 8 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_q0 { I 32 vector } } \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_30_address0 { O 7 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_30_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_30_q0 { I 32 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_30'"
 }
 }
 
@@ -683,17 +683,17 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1748 \
-    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_6 \
+    id 3094 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_38 \
     reset_level 1 \
     sync_rst true \
     dir I \
-    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_6 \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_38 \
     op interface \
-    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_6_address0 { O 8 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_6_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_6_q0 { I 32 vector } } \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_38_address0 { O 7 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_38_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_38_q0 { I 32 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_6'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_38'"
 }
 }
 
@@ -702,17 +702,17 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1749 \
-    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_5 \
+    id 3095 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_37 \
     reset_level 1 \
     sync_rst true \
     dir I \
-    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_5 \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_37 \
     op interface \
-    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_5_address0 { O 8 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_5_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_5_q0 { I 32 vector } } \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_37_address0 { O 7 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_37_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_37_q0 { I 32 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_5'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_37'"
 }
 }
 
@@ -721,14 +721,166 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1750 \
+    id 3096 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_36 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_36 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_36_address0 { O 7 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_36_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_36_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_36'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3097 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_35 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_35 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_35_address0 { O 7 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_35_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_35_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_35'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3098 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w2_loc_10 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w2_loc_10 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w2_loc_10_address0 { O 7 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w2_loc_10_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w2_loc_10_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w2_loc_10'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3099 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w2_loc_11 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w2_loc_11 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w2_loc_11_address0 { O 7 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w2_loc_11_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w2_loc_11_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w2_loc_11'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3100 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w2_loc_12 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w2_loc_12 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w2_loc_12_address0 { O 7 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w2_loc_12_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w2_loc_12_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w2_loc_12'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3101 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w2_loc_13 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w2_loc_13 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w2_loc_13_address0 { O 7 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w2_loc_13_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w2_loc_13_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w2_loc_13'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3102 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w2_loc_14 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w2_loc_14 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w2_loc_14_address0 { O 7 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w2_loc_14_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w2_loc_14_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w2_loc_14'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3103 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w2_loc_15 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w2_loc_15 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w2_loc_15_address0 { O 7 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w2_loc_15_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w2_loc_15_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w2_loc_15'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3104 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0_4 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0_4 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0_4_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0_4_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0_4_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0_4'"
@@ -740,14 +892,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1751 \
+    id 3105 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_0_4 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_0_4 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_0_4_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_0_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_0_4_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_0_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_0_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_0_4_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_0_4'"
@@ -759,14 +911,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1752 \
+    id 3106 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_0_4 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_0_4 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_0_4_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_0_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_0_4_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_0_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_0_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_0_4_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_0_4'"
@@ -778,14 +930,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1753 \
+    id 3107 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_0_4 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_0_4 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_0_4_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_0_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_0_4_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_0_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_0_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_0_4_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_0_4'"
@@ -797,14 +949,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1754 \
+    id 3108 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_0_4 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_0_4 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_0_4_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_0_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_0_4_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_0_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_0_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_0_4_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_0_4'"
@@ -816,14 +968,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1755 \
+    id 3109 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_0_4 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_0_4 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_0_4_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_0_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_0_4_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_0_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_0_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_0_4_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_0_4'"
@@ -835,14 +987,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1756 \
+    id 3110 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_0_4 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_0_4 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_0_4_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_0_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_0_4_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_0_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_0_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_0_4_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_0_4'"
@@ -854,14 +1006,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1757 \
+    id 3111 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_0_4 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_0_4 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_0_4_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_0_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_0_4_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_0_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_0_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_0_4_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_0_4'"
@@ -873,14 +1025,166 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1758 \
+    id 3112 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_0_4 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_0_4 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_0_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_0_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_0_4_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_0_4'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3113 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_0_4 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_0_4 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_0_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_0_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_0_4_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_0_4'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3114 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_24 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_24 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_24_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_24_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_24_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_24'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3115 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_16 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_16 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_16_address0 { O 1 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_16_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_16_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_16'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3116 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_24 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_24 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_24_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_24_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_24_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_24'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3117 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_24 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_24 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_24_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_24_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_24_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_24'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3118 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_24 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_24 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_24_address0 { O 1 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_24_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_24_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_24'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3119 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_24 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_24 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_24_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_24_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_24_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_24'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3120 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0_3 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0_3 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0_3_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0_3_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0_3_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0_3'"
@@ -892,14 +1196,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1759 \
+    id 3121 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_0_3 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_0_3 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_0_3_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_0_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_0_3_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_0_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_0_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_0_3_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_0_3'"
@@ -911,14 +1215,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1760 \
+    id 3122 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_0_3 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_0_3 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_0_3_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_0_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_0_3_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_0_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_0_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_0_3_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_0_3'"
@@ -930,14 +1234,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1761 \
+    id 3123 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_0_3 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_0_3 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_0_3_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_0_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_0_3_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_0_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_0_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_0_3_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_0_3'"
@@ -949,14 +1253,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1762 \
+    id 3124 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_0_3 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_0_3 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_0_3_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_0_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_0_3_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_0_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_0_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_0_3_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_0_3'"
@@ -968,14 +1272,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1763 \
+    id 3125 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_0_3 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_0_3 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_0_3_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_0_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_0_3_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_0_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_0_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_0_3_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_0_3'"
@@ -987,14 +1291,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1764 \
+    id 3126 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_0_3 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_0_3 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_0_3_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_0_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_0_3_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_0_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_0_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_0_3_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_0_3'"
@@ -1006,14 +1310,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1765 \
+    id 3127 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_0_3 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_0_3 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_0_3_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_0_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_0_3_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_0_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_0_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_0_3_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_0_3'"
@@ -1025,14 +1329,166 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1766 \
+    id 3128 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_0_3 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_0_3 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_0_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_0_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_0_3_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_0_3'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3129 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_0_3 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_0_3 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_0_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_0_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_0_3_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_0_3'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3130 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_23 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_23 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_23_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_23_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_23_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_23'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3131 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_17 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_17 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_17_address0 { O 1 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_17_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_17_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_17'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3132 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_23 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_23 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_23_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_23_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_23_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_23'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3133 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_23 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_23 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_23_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_23_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_23_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_23'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3134 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_23 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_23 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_23_address0 { O 1 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_23_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_23_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_23'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3135 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_23 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_23 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_23_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_23_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_23_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_23'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3136 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0_2 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0_2 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0_2_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0_2_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0_2_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0_2'"
@@ -1044,14 +1500,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1767 \
+    id 3137 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_0_2 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_0_2 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_0_2_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_0_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_0_2_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_0_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_0_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_0_2_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_0_2'"
@@ -1063,14 +1519,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1768 \
+    id 3138 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_0_2 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_0_2 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_0_2_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_0_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_0_2_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_0_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_0_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_0_2_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_0_2'"
@@ -1082,14 +1538,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1769 \
+    id 3139 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_0_2 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_0_2 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_0_2_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_0_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_0_2_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_0_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_0_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_0_2_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_0_2'"
@@ -1101,14 +1557,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1770 \
+    id 3140 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_0_2 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_0_2 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_0_2_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_0_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_0_2_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_0_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_0_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_0_2_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_0_2'"
@@ -1120,14 +1576,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1771 \
+    id 3141 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_0_2 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_0_2 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_0_2_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_0_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_0_2_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_0_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_0_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_0_2_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_0_2'"
@@ -1139,14 +1595,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1772 \
+    id 3142 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_0_2 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_0_2 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_0_2_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_0_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_0_2_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_0_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_0_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_0_2_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_0_2'"
@@ -1158,14 +1614,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1773 \
+    id 3143 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_0_2 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_0_2 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_0_2_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_0_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_0_2_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_0_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_0_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_0_2_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_0_2'"
@@ -1177,14 +1633,166 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1774 \
+    id 3144 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_0_2 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_0_2 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_0_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_0_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_0_2_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_0_2'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3145 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_0_2 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_0_2 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_0_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_0_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_0_2_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_0_2'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3146 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_22 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_22 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_22_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_22_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_22_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_22'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3147 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_18 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_18 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_18_address0 { O 1 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_18_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_18_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_18'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3148 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_22 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_22 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_22_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_22_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_22_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_22'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3149 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_22 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_22 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_22_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_22_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_22_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_22'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3150 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_22 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_22 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_22_address0 { O 1 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_22_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_22_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_22'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3151 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_22 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_22 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_22_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_22_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_22_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_22'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3152 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0_1 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0_1 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0_1_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0_1_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0_1_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0_1'"
@@ -1196,14 +1804,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1775 \
+    id 3153 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_0_1 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_0_1 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_0_1_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_0_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_0_1_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_0_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_0_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_0_1_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_0_1'"
@@ -1215,14 +1823,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1776 \
+    id 3154 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_0_1 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_0_1 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_0_1_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_0_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_0_1_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_0_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_0_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_0_1_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_0_1'"
@@ -1234,14 +1842,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1777 \
+    id 3155 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_0_1 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_0_1 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_0_1_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_0_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_0_1_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_0_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_0_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_0_1_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_0_1'"
@@ -1253,14 +1861,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1778 \
+    id 3156 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_0_1 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_0_1 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_0_1_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_0_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_0_1_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_0_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_0_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_0_1_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_0_1'"
@@ -1272,14 +1880,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1779 \
+    id 3157 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_0_1 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_0_1 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_0_1_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_0_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_0_1_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_0_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_0_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_0_1_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_0_1'"
@@ -1291,14 +1899,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1780 \
+    id 3158 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_0_1 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_0_1 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_0_1_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_0_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_0_1_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_0_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_0_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_0_1_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_0_1'"
@@ -1310,14 +1918,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1781 \
+    id 3159 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_0_1 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_0_1 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_0_1_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_0_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_0_1_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_0_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_0_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_0_1_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_0_1'"
@@ -1329,14 +1937,166 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1782 \
+    id 3160 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_0_1 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_0_1 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_0_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_0_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_0_1_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_0_1'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3161 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_0_1 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_0_1 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_0_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_0_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_0_1_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_0_1'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3162 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_21 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_21 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_21_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_21_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_21_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_21'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3163 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_19 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_19 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_19_address0 { O 1 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_19_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_19_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_19'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3164 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_21 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_21 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_21_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_21_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_21_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_21'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3165 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_21 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_21 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_21_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_21_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_21_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_21'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3166 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_21 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_21 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_21_address0 { O 1 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_21_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_21_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_21'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3167 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_21 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_21 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_21_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_21_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_21_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_21'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3168 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0'"
@@ -1348,14 +2108,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1783 \
+    id 3169 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_0 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_0 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_0_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_0_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_0_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_0_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_0_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_0_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_0'"
@@ -1367,14 +2127,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1784 \
+    id 3170 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_0 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_0 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_0_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_0_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_0_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_0_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_0_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_0_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_0'"
@@ -1386,14 +2146,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1785 \
+    id 3171 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_0 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_0 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_0_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_0_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_0_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_0_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_0_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_0_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_0'"
@@ -1405,14 +2165,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1786 \
+    id 3172 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_0 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_0 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_0_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_0_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_0_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_0_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_0_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_0_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_0'"
@@ -1424,14 +2184,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1787 \
+    id 3173 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_0 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_0 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_0_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_0_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_0_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_0_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_0_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_0_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_0'"
@@ -1443,14 +2203,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1788 \
+    id 3174 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_0 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_0 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_0_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_0_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_0_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_0_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_0_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_0_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_0'"
@@ -1462,14 +2222,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1789 \
+    id 3175 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_0 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_0 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_0_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_0_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_0_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_0_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_0_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_0_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_0'"
@@ -1481,14 +2241,166 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1790 \
+    id 3176 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_0 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_0 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_0_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_0_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_0_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_0'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3177 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_0 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_0 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_0_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_0_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_0_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_0'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3178 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_20 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_20 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_20_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_20_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_20_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_20'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3179 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_20 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_20 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_20_address0 { O 1 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_20_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_20_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_20'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3180 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_20 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_20 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_20_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_20_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_20_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_20'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3181 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_20 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_20 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_20_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_20_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_20_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_20'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3182 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_20 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_20 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_20_address0 { O 1 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_20_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_20_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_20'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3183 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_20 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_20 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_20_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_20_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_20_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_20'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3184 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_1_4 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_1_4 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_1_4_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_1_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_1_4_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_1_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_1_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_1_4_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_1_4'"
@@ -1500,14 +2412,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1791 \
+    id 3185 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_1_4 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_1_4 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_1_4_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_1_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_1_4_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_1_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_1_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_1_4_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_1_4'"
@@ -1519,14 +2431,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1792 \
+    id 3186 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_1_4 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_1_4 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_1_4_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_1_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_1_4_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_1_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_1_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_1_4_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_1_4'"
@@ -1538,14 +2450,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1793 \
+    id 3187 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_1_4 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_1_4 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_1_4_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_1_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_1_4_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_1_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_1_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_1_4_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_1_4'"
@@ -1557,14 +2469,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1794 \
+    id 3188 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_1_4 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_1_4 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_1_4_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_1_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_1_4_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_1_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_1_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_1_4_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_1_4'"
@@ -1576,14 +2488,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1795 \
+    id 3189 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_1_4 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_1_4 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_1_4_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_1_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_1_4_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_1_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_1_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_1_4_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_1_4'"
@@ -1595,14 +2507,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1796 \
+    id 3190 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_1_4 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_1_4 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_1_4_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_1_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_1_4_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_1_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_1_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_1_4_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_1_4'"
@@ -1614,14 +2526,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1797 \
+    id 3191 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_1_4 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_1_4 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_1_4_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_1_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_1_4_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_1_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_1_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_1_4_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_1_4'"
@@ -1633,14 +2545,166 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1798 \
+    id 3192 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_1_4 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_1_4 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_1_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_1_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_1_4_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_1_4'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3193 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_1_4 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_1_4 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_1_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_1_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_1_4_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_1_4'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3194 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_19 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_19 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_19_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_19_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_19_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_19'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3195 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_21 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_21 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_21_address0 { O 1 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_21_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_21_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_21'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3196 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_19 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_19 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_19_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_19_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_19_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_19'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3197 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_19 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_19 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_19_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_19_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_19_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_19'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3198 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_19 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_19 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_19_address0 { O 1 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_19_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_19_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_19'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3199 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_19 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_19 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_19_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_19_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_19_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_19'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3200 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_1_3 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_1_3 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_1_3_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_1_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_1_3_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_1_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_1_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_1_3_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_1_3'"
@@ -1652,14 +2716,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1799 \
+    id 3201 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_1_3 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_1_3 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_1_3_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_1_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_1_3_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_1_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_1_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_1_3_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_1_3'"
@@ -1671,14 +2735,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1800 \
+    id 3202 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_1_3 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_1_3 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_1_3_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_1_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_1_3_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_1_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_1_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_1_3_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_1_3'"
@@ -1690,14 +2754,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1801 \
+    id 3203 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_1_3 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_1_3 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_1_3_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_1_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_1_3_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_1_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_1_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_1_3_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_1_3'"
@@ -1709,14 +2773,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1802 \
+    id 3204 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_1_3 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_1_3 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_1_3_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_1_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_1_3_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_1_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_1_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_1_3_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_1_3'"
@@ -1728,14 +2792,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1803 \
+    id 3205 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_1_3 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_1_3 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_1_3_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_1_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_1_3_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_1_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_1_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_1_3_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_1_3'"
@@ -1747,14 +2811,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1804 \
+    id 3206 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_1_3 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_1_3 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_1_3_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_1_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_1_3_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_1_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_1_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_1_3_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_1_3'"
@@ -1766,14 +2830,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1805 \
+    id 3207 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_1_3 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_1_3 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_1_3_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_1_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_1_3_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_1_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_1_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_1_3_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_1_3'"
@@ -1785,14 +2849,166 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1806 \
+    id 3208 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_1_3 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_1_3 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_1_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_1_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_1_3_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_1_3'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3209 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_1_3 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_1_3 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_1_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_1_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_1_3_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_1_3'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3210 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_18 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_18 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_18_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_18_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_18_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_18'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3211 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_22 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_22 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_22_address0 { O 1 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_22_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_22_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_22'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3212 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_18 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_18 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_18_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_18_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_18_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_18'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3213 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_18 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_18 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_18_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_18_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_18_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_18'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3214 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_18 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_18 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_18_address0 { O 1 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_18_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_18_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_18'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3215 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_18 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_18 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_18_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_18_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_18_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_18'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3216 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_1_2 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_1_2 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_1_2_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_1_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_1_2_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_1_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_1_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_1_2_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_1_2'"
@@ -1804,14 +3020,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1807 \
+    id 3217 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_1_2 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_1_2 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_1_2_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_1_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_1_2_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_1_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_1_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_1_2_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_1_2'"
@@ -1823,14 +3039,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1808 \
+    id 3218 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_1_2 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_1_2 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_1_2_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_1_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_1_2_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_1_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_1_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_1_2_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_1_2'"
@@ -1842,14 +3058,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1809 \
+    id 3219 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_1_2 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_1_2 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_1_2_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_1_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_1_2_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_1_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_1_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_1_2_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_1_2'"
@@ -1861,14 +3077,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1810 \
+    id 3220 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_1_2 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_1_2 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_1_2_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_1_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_1_2_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_1_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_1_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_1_2_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_1_2'"
@@ -1880,14 +3096,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1811 \
+    id 3221 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_1_2 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_1_2 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_1_2_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_1_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_1_2_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_1_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_1_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_1_2_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_1_2'"
@@ -1899,14 +3115,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1812 \
+    id 3222 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_1_2 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_1_2 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_1_2_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_1_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_1_2_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_1_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_1_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_1_2_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_1_2'"
@@ -1918,14 +3134,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1813 \
+    id 3223 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_1_2 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_1_2 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_1_2_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_1_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_1_2_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_1_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_1_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_1_2_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_1_2'"
@@ -1937,14 +3153,166 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1814 \
+    id 3224 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_1_2 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_1_2 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_1_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_1_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_1_2_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_1_2'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3225 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_1_2 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_1_2 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_1_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_1_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_1_2_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_1_2'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3226 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_17 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_17 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_17_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_17_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_17_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_17'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3227 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_23 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_23 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_23_address0 { O 1 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_23_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_23_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_23'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3228 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_17 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_17 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_17_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_17_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_17_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_17'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3229 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_17 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_17 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_17_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_17_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_17_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_17'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3230 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_17 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_17 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_17_address0 { O 1 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_17_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_17_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_17'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3231 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_17 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_17 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_17_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_17_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_17_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_17'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3232 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_1_1 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_1_1 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_1_1_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_1_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_1_1_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_1_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_1_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_1_1_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_1_1'"
@@ -1956,14 +3324,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1815 \
+    id 3233 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_1_1 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_1_1 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_1_1_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_1_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_1_1_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_1_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_1_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_1_1_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_1_1'"
@@ -1975,14 +3343,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1816 \
+    id 3234 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_1_1 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_1_1 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_1_1_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_1_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_1_1_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_1_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_1_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_1_1_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_1_1'"
@@ -1994,14 +3362,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1817 \
+    id 3235 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_1_1 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_1_1 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_1_1_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_1_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_1_1_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_1_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_1_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_1_1_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_1_1'"
@@ -2013,14 +3381,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1818 \
+    id 3236 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_1_1 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_1_1 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_1_1_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_1_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_1_1_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_1_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_1_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_1_1_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_1_1'"
@@ -2032,14 +3400,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1819 \
+    id 3237 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_1_1 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_1_1 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_1_1_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_1_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_1_1_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_1_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_1_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_1_1_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_1_1'"
@@ -2051,14 +3419,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1820 \
+    id 3238 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_1_1 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_1_1 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_1_1_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_1_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_1_1_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_1_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_1_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_1_1_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_1_1'"
@@ -2070,14 +3438,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1821 \
+    id 3239 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_1_1 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_1_1 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_1_1_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_1_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_1_1_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_1_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_1_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_1_1_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_1_1'"
@@ -2089,14 +3457,166 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1822 \
+    id 3240 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_1_1 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_1_1 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_1_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_1_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_1_1_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_1_1'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3241 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_1_1 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_1_1 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_1_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_1_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_1_1_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_1_1'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3242 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_16 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_16 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_16_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_16_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_16_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_16'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3243 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_24 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_24 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_24_address0 { O 1 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_24_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_24_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_24'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3244 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_16 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_16 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_16_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_16_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_16_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_16'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3245 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_16 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_16 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_16_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_16_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_16_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_16'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3246 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_16 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_16 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_16_address0 { O 1 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_16_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_16_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_16'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3247 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_16 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_16 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_16_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_16_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_16_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_16'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3248 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_1 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_1 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_1_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_1_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_1_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_1'"
@@ -2108,14 +3628,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1823 \
+    id 3249 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_1 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_1 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_1_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_1_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_1_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_1'"
@@ -2127,14 +3647,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1824 \
+    id 3250 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_1 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_1 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_1_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_1_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_1_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_1'"
@@ -2146,14 +3666,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1825 \
+    id 3251 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_1 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_1 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_1_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_1_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_1_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_1'"
@@ -2165,14 +3685,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1826 \
+    id 3252 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_1 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_1 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_1_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_1_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_1_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_1'"
@@ -2184,14 +3704,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1827 \
+    id 3253 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_1 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_1 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_1_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_1_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_1_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_1'"
@@ -2203,14 +3723,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1828 \
+    id 3254 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_1 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_1 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_1_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_1_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_1_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_1'"
@@ -2222,14 +3742,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1829 \
+    id 3255 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_1 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_1 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_1_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_1_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_1_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_1'"
@@ -2241,14 +3761,166 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1830 \
+    id 3256 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_1 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_1 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_1_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_1'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3257 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_1 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_1 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_1_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_1'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3258 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_15 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_15 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_15_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_15_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_15_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_15'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3259 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_25 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_25 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_25_address0 { O 1 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_25_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_25_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_25'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3260 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_15 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_15 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_15_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_15_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_15_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_15'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3261 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_15 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_15 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_15_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_15_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_15_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_15'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3262 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_15 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_15 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_15_address0 { O 1 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_15_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_15_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_15'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3263 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_15 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_15 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_15_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_15_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_15_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_15'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3264 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_2_4 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_2_4 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_2_4_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_2_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_2_4_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_2_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_2_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_2_4_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_2_4'"
@@ -2260,14 +3932,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1831 \
+    id 3265 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_2_4 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_2_4 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_2_4_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_2_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_2_4_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_2_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_2_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_2_4_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_2_4'"
@@ -2279,14 +3951,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1832 \
+    id 3266 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_2_4 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_2_4 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_2_4_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_2_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_2_4_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_2_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_2_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_2_4_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_2_4'"
@@ -2298,14 +3970,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1833 \
+    id 3267 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_2_4 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_2_4 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_2_4_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_2_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_2_4_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_2_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_2_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_2_4_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_2_4'"
@@ -2317,14 +3989,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1834 \
+    id 3268 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_2_4 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_2_4 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_2_4_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_2_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_2_4_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_2_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_2_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_2_4_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_2_4'"
@@ -2336,14 +4008,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1835 \
+    id 3269 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_2_4 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_2_4 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_2_4_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_2_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_2_4_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_2_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_2_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_2_4_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_2_4'"
@@ -2355,14 +4027,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1836 \
+    id 3270 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_2_4 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_2_4 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_2_4_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_2_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_2_4_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_2_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_2_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_2_4_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_2_4'"
@@ -2374,14 +4046,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1837 \
+    id 3271 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_2_4 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_2_4 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_2_4_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_2_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_2_4_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_2_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_2_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_2_4_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_2_4'"
@@ -2393,14 +4065,166 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1838 \
+    id 3272 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_2_4 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_2_4 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_2_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_2_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_2_4_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_2_4'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3273 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_2_4 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_2_4 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_2_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_2_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_2_4_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_2_4'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3274 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_14 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_14 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_14_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_14_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_14_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_14'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3275 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_29 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_29 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_29_address0 { O 1 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_29_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_29_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_29'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3276 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_14 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_14 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_14_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_14_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_14_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_14'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3277 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_14 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_14 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_14_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_14_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_14_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_14'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3278 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_14 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_14 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_14_address0 { O 1 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_14_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_14_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_14'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3279 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_14 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_14 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_14_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_14_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_14_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_14'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3280 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_2_3 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_2_3 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_2_3_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_2_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_2_3_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_2_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_2_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_2_3_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_2_3'"
@@ -2412,14 +4236,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1839 \
+    id 3281 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_2_3 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_2_3 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_2_3_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_2_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_2_3_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_2_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_2_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_2_3_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_2_3'"
@@ -2431,14 +4255,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1840 \
+    id 3282 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_2_3 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_2_3 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_2_3_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_2_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_2_3_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_2_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_2_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_2_3_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_2_3'"
@@ -2450,14 +4274,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1841 \
+    id 3283 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_2_3 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_2_3 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_2_3_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_2_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_2_3_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_2_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_2_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_2_3_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_2_3'"
@@ -2469,14 +4293,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1842 \
+    id 3284 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_2_3 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_2_3 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_2_3_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_2_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_2_3_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_2_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_2_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_2_3_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_2_3'"
@@ -2488,14 +4312,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1843 \
+    id 3285 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_2_3 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_2_3 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_2_3_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_2_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_2_3_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_2_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_2_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_2_3_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_2_3'"
@@ -2507,14 +4331,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1844 \
+    id 3286 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_2_3 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_2_3 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_2_3_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_2_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_2_3_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_2_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_2_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_2_3_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_2_3'"
@@ -2526,14 +4350,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1845 \
+    id 3287 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_2_3 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_2_3 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_2_3_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_2_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_2_3_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_2_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_2_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_2_3_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_2_3'"
@@ -2545,14 +4369,166 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1846 \
+    id 3288 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_2_3 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_2_3 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_2_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_2_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_2_3_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_2_3'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3289 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_2_3 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_2_3 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_2_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_2_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_2_3_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_2_3'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3290 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_13 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_13 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_13_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_13_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_13_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_13'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3291 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_28 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_28 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_28_address0 { O 1 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_28_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_28_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_28'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3292 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_13 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_13 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_13_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_13_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_13_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_13'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3293 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_13 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_13 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_13_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_13_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_13_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_13'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3294 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_address0 { O 1 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3295 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_13 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_13 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_13_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_13_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_13_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_13'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3296 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_2_2 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_2_2 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_2_2_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_2_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_2_2_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_2_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_2_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_2_2_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_2_2'"
@@ -2564,14 +4540,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1847 \
+    id 3297 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_2_2 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_2_2 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_2_2_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_2_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_2_2_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_2_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_2_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_2_2_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_2_2'"
@@ -2583,14 +4559,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1848 \
+    id 3298 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_2_2 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_2_2 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_2_2_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_2_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_2_2_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_2_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_2_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_2_2_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_2_2'"
@@ -2602,14 +4578,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1849 \
+    id 3299 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_2_2 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_2_2 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_2_2_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_2_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_2_2_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_2_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_2_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_2_2_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_2_2'"
@@ -2621,14 +4597,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1850 \
+    id 3300 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_2_2 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_2_2 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_2_2_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_2_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_2_2_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_2_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_2_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_2_2_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_2_2'"
@@ -2640,14 +4616,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1851 \
+    id 3301 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_2_2 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_2_2 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_2_2_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_2_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_2_2_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_2_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_2_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_2_2_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_2_2'"
@@ -2659,14 +4635,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1852 \
+    id 3302 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_2_2 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_2_2 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_2_2_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_2_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_2_2_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_2_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_2_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_2_2_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_2_2'"
@@ -2678,14 +4654,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1853 \
+    id 3303 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_2_2 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_2_2 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_2_2_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_2_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_2_2_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_2_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_2_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_2_2_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_2_2'"
@@ -2697,14 +4673,166 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1854 \
+    id 3304 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_2_2 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_2_2 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_2_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_2_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_2_2_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_2_2'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3305 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_2_2 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_2_2 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_2_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_2_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_2_2_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_2_2'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3306 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_12 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_12 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_12_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_12_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_12_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_12'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3307 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_27 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_27 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_27_address0 { O 1 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_27_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_27_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_27'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3308 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_12 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_12 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_12_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_12_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_12_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_12'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3309 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_12 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_12 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_12_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_12_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_12_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_12'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3310 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_address0 { O 1 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3311 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_12 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_12 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_12_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_12_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_12_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_12'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3312 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_2_1 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_2_1 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_2_1_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_2_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_2_1_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_2_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_2_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_2_1_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_2_1'"
@@ -2716,14 +4844,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1855 \
+    id 3313 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_2_1 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_2_1 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_2_1_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_2_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_2_1_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_2_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_2_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_2_1_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_2_1'"
@@ -2735,14 +4863,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1856 \
+    id 3314 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_2_1 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_2_1 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_2_1_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_2_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_2_1_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_2_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_2_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_2_1_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_2_1'"
@@ -2754,14 +4882,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1857 \
+    id 3315 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_2_1 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_2_1 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_2_1_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_2_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_2_1_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_2_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_2_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_2_1_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_2_1'"
@@ -2773,14 +4901,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1858 \
+    id 3316 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_2_1 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_2_1 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_2_1_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_2_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_2_1_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_2_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_2_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_2_1_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_2_1'"
@@ -2792,14 +4920,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1859 \
+    id 3317 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_2_1 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_2_1 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_2_1_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_2_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_2_1_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_2_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_2_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_2_1_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_2_1'"
@@ -2811,14 +4939,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1860 \
+    id 3318 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_2_1 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_2_1 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_2_1_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_2_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_2_1_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_2_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_2_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_2_1_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_2_1'"
@@ -2830,14 +4958,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1861 \
+    id 3319 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_2_1 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_2_1 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_2_1_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_2_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_2_1_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_2_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_2_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_2_1_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_2_1'"
@@ -2849,14 +4977,166 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1862 \
+    id 3320 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_2_1 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_2_1 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_2_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_2_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_2_1_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_2_1'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3321 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_2_1 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_2_1 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_2_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_2_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_2_1_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_2_1'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3322 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_11 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_11 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_11_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_11_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_11_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_11'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3323 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_26 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_26 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_26_address0 { O 1 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_26_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_26_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_26'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3324 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_11 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_11 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_11_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_11_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_11_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_11'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3325 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_11 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_11 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_11_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_11_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_11_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_11'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3326 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_address0 { O 1 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3327 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_11 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_11 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_11_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_11_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_11_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_11'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3328 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_2 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_2 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_2_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_2_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_2_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_2'"
@@ -2868,14 +5148,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1863 \
+    id 3329 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_2 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_2 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_2_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_2_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_2_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_2'"
@@ -2887,14 +5167,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1864 \
+    id 3330 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_2 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_2 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_2_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_2_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_2_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_2'"
@@ -2906,14 +5186,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1865 \
+    id 3331 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_2 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_2 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_2_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_2_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_2_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_2'"
@@ -2925,14 +5205,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1866 \
+    id 3332 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_2 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_2 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_2_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_2_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_2_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_2'"
@@ -2944,14 +5224,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1867 \
+    id 3333 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_2 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_2 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_2_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_2_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_2_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_2'"
@@ -2963,14 +5243,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1868 \
+    id 3334 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_2 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_2 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_2_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_2_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_2_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_2'"
@@ -2982,14 +5262,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1869 \
+    id 3335 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_2 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_2 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_2_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_2_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_2_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_2'"
@@ -3001,14 +5281,166 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1870 \
+    id 3336 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_2 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_2 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_2_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_2'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3337 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_2 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_2 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_2_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_2'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3338 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_10 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_10 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_10_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_10_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_10_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_10'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3339 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_25 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_25 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_25_address0 { O 1 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_25_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_25_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_25'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3340 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_10 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_10 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_10_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_10_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_10_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_10'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3341 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_10 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_10 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_10_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_10_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_10_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_10'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3342 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10_address0 { O 1 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3343 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_10 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_10 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_10_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_10_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_10_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_10'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3344 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_3_4 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_3_4 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_3_4_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_3_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_3_4_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_3_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_3_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_3_4_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_3_4'"
@@ -3020,14 +5452,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1871 \
+    id 3345 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_3_4 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_3_4 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_3_4_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_3_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_3_4_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_3_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_3_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_3_4_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_3_4'"
@@ -3039,14 +5471,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1872 \
+    id 3346 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_3_4 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_3_4 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_3_4_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_3_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_3_4_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_3_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_3_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_3_4_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_3_4'"
@@ -3058,14 +5490,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1873 \
+    id 3347 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_3_4 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_3_4 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_3_4_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_3_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_3_4_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_3_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_3_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_3_4_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_3_4'"
@@ -3077,14 +5509,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1874 \
+    id 3348 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_3_4 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_3_4 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_3_4_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_3_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_3_4_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_3_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_3_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_3_4_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_3_4'"
@@ -3096,14 +5528,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1875 \
+    id 3349 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_3_4 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_3_4 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_3_4_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_3_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_3_4_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_3_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_3_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_3_4_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_3_4'"
@@ -3115,14 +5547,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1876 \
+    id 3350 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_3_4 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_3_4 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_3_4_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_3_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_3_4_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_3_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_3_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_3_4_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_3_4'"
@@ -3134,14 +5566,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1877 \
+    id 3351 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_3_4 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_3_4 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_3_4_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_3_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_3_4_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_3_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_3_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_3_4_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_3_4'"
@@ -3153,14 +5585,166 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1878 \
+    id 3352 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_3_4 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_3_4 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_3_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_3_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_3_4_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_3_4'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3353 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_3_4 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_3_4 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_3_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_3_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_3_4_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_3_4'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3354 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_9 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_9 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_9_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_9_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_9_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_9'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3355 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_8 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_8 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_8_address0 { O 1 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_8_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_8_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_8'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3356 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_9 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_9 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_9_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_9_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_9_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_9'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3357 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_address0 { O 1 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3358 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_9 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_9 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_9_address0 { O 1 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_9_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_9_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_9'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3359 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_9 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_9 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_9_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_9_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_9_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_9'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3360 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_3_3 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_3_3 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_3_3_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_3_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_3_3_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_3_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_3_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_3_3_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_3_3'"
@@ -3172,14 +5756,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1879 \
+    id 3361 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_3_3 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_3_3 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_3_3_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_3_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_3_3_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_3_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_3_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_3_3_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_3_3'"
@@ -3191,14 +5775,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1880 \
+    id 3362 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_3_3 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_3_3 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_3_3_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_3_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_3_3_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_3_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_3_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_3_3_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_3_3'"
@@ -3210,14 +5794,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1881 \
+    id 3363 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_3_3 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_3_3 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_3_3_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_3_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_3_3_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_3_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_3_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_3_3_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_3_3'"
@@ -3229,14 +5813,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1882 \
+    id 3364 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_3_3 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_3_3 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_3_3_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_3_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_3_3_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_3_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_3_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_3_3_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_3_3'"
@@ -3248,14 +5832,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1883 \
+    id 3365 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_3_3 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_3_3 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_3_3_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_3_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_3_3_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_3_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_3_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_3_3_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_3_3'"
@@ -3267,14 +5851,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1884 \
+    id 3366 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_3_3 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_3_3 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_3_3_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_3_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_3_3_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_3_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_3_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_3_3_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_3_3'"
@@ -3286,14 +5870,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1885 \
+    id 3367 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_3_3 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_3_3 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_3_3_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_3_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_3_3_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_3_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_3_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_3_3_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_3_3'"
@@ -3305,14 +5889,166 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1886 \
+    id 3368 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_3_3 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_3_3 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_3_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_3_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_3_3_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_3_3'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3369 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_3_3 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_3_3 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_3_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_3_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_3_3_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_3_3'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3370 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_8 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_8 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_8_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_8_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_8_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_8'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3371 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_9 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_9 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_9_address0 { O 1 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_9_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_9_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_9'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3372 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_8 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_8 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_8_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_8_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_8_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_8'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3373 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_0 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_0 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_0_address0 { O 1 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_0_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_0_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_0'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3374 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_8 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_8 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_8_address0 { O 1 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_8_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_8_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_8'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3375 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_8 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_8 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_8_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_8_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_8_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_8'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3376 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_3_2 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_3_2 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_3_2_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_3_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_3_2_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_3_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_3_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_3_2_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_3_2'"
@@ -3324,14 +6060,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1887 \
+    id 3377 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_3_2 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_3_2 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_3_2_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_3_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_3_2_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_3_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_3_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_3_2_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_3_2'"
@@ -3343,14 +6079,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1888 \
+    id 3378 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_3_2 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_3_2 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_3_2_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_3_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_3_2_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_3_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_3_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_3_2_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_3_2'"
@@ -3362,14 +6098,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1889 \
+    id 3379 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_3_2 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_3_2 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_3_2_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_3_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_3_2_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_3_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_3_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_3_2_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_3_2'"
@@ -3381,14 +6117,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1890 \
+    id 3380 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_3_2 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_3_2 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_3_2_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_3_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_3_2_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_3_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_3_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_3_2_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_3_2'"
@@ -3400,14 +6136,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1891 \
+    id 3381 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_3_2 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_3_2 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_3_2_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_3_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_3_2_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_3_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_3_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_3_2_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_3_2'"
@@ -3419,14 +6155,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1892 \
+    id 3382 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_3_2 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_3_2 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_3_2_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_3_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_3_2_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_3_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_3_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_3_2_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_3_2'"
@@ -3438,14 +6174,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1893 \
+    id 3383 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_3_2 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_3_2 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_3_2_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_3_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_3_2_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_3_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_3_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_3_2_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_3_2'"
@@ -3457,14 +6193,166 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1894 \
+    id 3384 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_3_2 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_3_2 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_3_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_3_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_3_2_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_3_2'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3385 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_3_2 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_3_2 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_3_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_3_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_3_2_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_3_2'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3386 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_7 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_7 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_7_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_7_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_7_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_7'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3387 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_10 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_10 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_10_address0 { O 1 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_10_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_10_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_10'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3388 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_7 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_7 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_7_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_7_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_7_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_7'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3389 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_1 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_1 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_1_address0 { O 1 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_1_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_1_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_1'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3390 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_7 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_7 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_7_address0 { O 1 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_7_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_7_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_7'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3391 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_7 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_7 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_7_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_7_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_7_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_7'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3392 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_3_1 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_3_1 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_3_1_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_3_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_3_1_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_3_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_3_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_3_1_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_3_1'"
@@ -3476,14 +6364,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1895 \
+    id 3393 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_3_1 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_3_1 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_3_1_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_3_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_3_1_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_3_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_3_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_3_1_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_3_1'"
@@ -3495,14 +6383,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1896 \
+    id 3394 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_3_1 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_3_1 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_3_1_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_3_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_3_1_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_3_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_3_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_3_1_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_3_1'"
@@ -3514,14 +6402,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1897 \
+    id 3395 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_3_1 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_3_1 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_3_1_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_3_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_3_1_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_3_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_3_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_3_1_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_3_1'"
@@ -3533,14 +6421,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1898 \
+    id 3396 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_3_1 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_3_1 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_3_1_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_3_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_3_1_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_3_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_3_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_3_1_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_3_1'"
@@ -3552,14 +6440,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1899 \
+    id 3397 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_3_1 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_3_1 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_3_1_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_3_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_3_1_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_3_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_3_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_3_1_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_3_1'"
@@ -3571,14 +6459,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1900 \
+    id 3398 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_3_1 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_3_1 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_3_1_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_3_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_3_1_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_3_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_3_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_3_1_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_3_1'"
@@ -3590,14 +6478,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1901 \
+    id 3399 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_3_1 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_3_1 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_3_1_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_3_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_3_1_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_3_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_3_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_3_1_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_3_1'"
@@ -3609,14 +6497,166 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1902 \
+    id 3400 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_3_1 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_3_1 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_3_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_3_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_3_1_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_3_1'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3401 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_3_1 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_3_1 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_3_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_3_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_3_1_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_3_1'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3402 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_6 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_6 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_6_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_6_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_6_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_6'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3403 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_11 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_11 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_11_address0 { O 1 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_11_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_11_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_11'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3404 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_6 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_6 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_6_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_6_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_6_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_6'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3405 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_2 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_2 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_2_address0 { O 1 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_2_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_2_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_2'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3406 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_6 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_6 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_6_address0 { O 1 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_6_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_6_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_6'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3407 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_6 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_6 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_6_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_6_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_6_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_6'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3408 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_3 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_3 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_3_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_3_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_3_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_3'"
@@ -3628,14 +6668,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1903 \
+    id 3409 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_3 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_3 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_3_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_3_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_3_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_3'"
@@ -3647,14 +6687,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1904 \
+    id 3410 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_3 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_3 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_3_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_3_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_3_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_3'"
@@ -3666,14 +6706,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1905 \
+    id 3411 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_3 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_3 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_3_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_3_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_3_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_3'"
@@ -3685,14 +6725,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1906 \
+    id 3412 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_3 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_3 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_3_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_3_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_3_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_3'"
@@ -3704,14 +6744,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1907 \
+    id 3413 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_3 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_3 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_3_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_3_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_3_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_3'"
@@ -3723,14 +6763,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1908 \
+    id 3414 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_3 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_3 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_3_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_3_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_3_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_3'"
@@ -3742,14 +6782,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1909 \
+    id 3415 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_3 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_3 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_3_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_3_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_3_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_3'"
@@ -3761,14 +6801,166 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1910 \
+    id 3416 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_3 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_3 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_3_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_3'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3417 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_3 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_3 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_3_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_3'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3418 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_5 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_5 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_5_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_5_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_5_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_5'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3419 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_12 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_12 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_12_address0 { O 1 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_12_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_12_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_12'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3420 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_5 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_5 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_5_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_5_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_5_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_5'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3421 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_3 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_3 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_3_address0 { O 1 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_3_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_3_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_3'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3422 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_5 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_5 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_5_address0 { O 1 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_5_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_5_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_5'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3423 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_5 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_5 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_5_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_5_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_5_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_5'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3424 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_4_4 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_4_4 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_4_4_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_4_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_4_4_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_4_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_4_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_4_4_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_4_4'"
@@ -3780,14 +6972,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1911 \
+    id 3425 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_4_4 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_4_4 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_4_4_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_4_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_4_4_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_4_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_4_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_4_4_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_4_4'"
@@ -3799,14 +6991,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1912 \
+    id 3426 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_4_4 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_4_4 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_4_4_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_4_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_4_4_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_4_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_4_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_4_4_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_4_4'"
@@ -3818,14 +7010,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1913 \
+    id 3427 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_4_4 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_4_4 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_4_4_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_4_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_4_4_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_4_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_4_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_4_4_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_4_4'"
@@ -3837,14 +7029,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1914 \
+    id 3428 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_4_4 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_4_4 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_4_4_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_4_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_4_4_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_4_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_4_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_4_4_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_4_4'"
@@ -3856,14 +7048,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1915 \
+    id 3429 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_4_4 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_4_4 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_4_4_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_4_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_4_4_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_4_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_4_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_4_4_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_4_4'"
@@ -3875,14 +7067,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1916 \
+    id 3430 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_4_4 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_4_4 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_4_4_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_4_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_4_4_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_4_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_4_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_4_4_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_4_4'"
@@ -3894,14 +7086,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1917 \
+    id 3431 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_4_4 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_4_4 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_4_4_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_4_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_4_4_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_4_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_4_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_4_4_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_4_4'"
@@ -3913,14 +7105,166 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1918 \
+    id 3432 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_4_4 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_4_4 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_4_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_4_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_4_4_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_4_4'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3433 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_4_4 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_4_4 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_4_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_4_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_4_4_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_4_4'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3434 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_4 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_4 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_4_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_4'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3435 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_13 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_13 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_13_address0 { O 1 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_13_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_13_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_13'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3436 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_4 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_4 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_4_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_4'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3437 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_4 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_4 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_4_address0 { O 1 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_4_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_4_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_4'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3438 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_4 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_4 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_4_address0 { O 1 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_4_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_4_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_4'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3439 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_4 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_4 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_4_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_4'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3440 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_4_3 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_4_3 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_4_3_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_4_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_4_3_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_4_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_4_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_4_3_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_4_3'"
@@ -3932,14 +7276,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1919 \
+    id 3441 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_4_3 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_4_3 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_4_3_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_4_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_4_3_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_4_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_4_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_4_3_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_4_3'"
@@ -3951,14 +7295,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1920 \
+    id 3442 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_4_3 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_4_3 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_4_3_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_4_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_4_3_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_4_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_4_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_4_3_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_4_3'"
@@ -3970,14 +7314,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1921 \
+    id 3443 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_4_3 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_4_3 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_4_3_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_4_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_4_3_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_4_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_4_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_4_3_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_4_3'"
@@ -3989,14 +7333,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1922 \
+    id 3444 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_4_3 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_4_3 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_4_3_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_4_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_4_3_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_4_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_4_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_4_3_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_4_3'"
@@ -4008,14 +7352,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1923 \
+    id 3445 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_4_3 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_4_3 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_4_3_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_4_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_4_3_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_4_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_4_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_4_3_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_4_3'"
@@ -4027,14 +7371,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1924 \
+    id 3446 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_4_3 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_4_3 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_4_3_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_4_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_4_3_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_4_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_4_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_4_3_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_4_3'"
@@ -4046,14 +7390,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1925 \
+    id 3447 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_4_3 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_4_3 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_4_3_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_4_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_4_3_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_4_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_4_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_4_3_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_4_3'"
@@ -4065,14 +7409,166 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1926 \
+    id 3448 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_4_3 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_4_3 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_4_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_4_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_4_3_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_4_3'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3449 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_4_3 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_4_3 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_4_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_4_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_4_3_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_4_3'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3450 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_3 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_3 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_3_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_3'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3451 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_14 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_14 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_14_address0 { O 1 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_14_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_14_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_14'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3452 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_3 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_3 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_3_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_3'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3453 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_5 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_5 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_5_address0 { O 1 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_5_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_5_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_5'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3454 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_3 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_3 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_3_address0 { O 1 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_3_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_3_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_3'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3455 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_3 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_3 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_3_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_3_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_3_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_3'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3456 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_4_2 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_4_2 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_4_2_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_4_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_4_2_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_4_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_4_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_4_2_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_4_2'"
@@ -4084,14 +7580,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1927 \
+    id 3457 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_4_2 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_4_2 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_4_2_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_4_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_4_2_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_4_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_4_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_4_2_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_4_2'"
@@ -4103,14 +7599,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1928 \
+    id 3458 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_4_2 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_4_2 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_4_2_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_4_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_4_2_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_4_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_4_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_4_2_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_4_2'"
@@ -4122,14 +7618,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1929 \
+    id 3459 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_4_2 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_4_2 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_4_2_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_4_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_4_2_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_4_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_4_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_4_2_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_4_2'"
@@ -4141,14 +7637,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1930 \
+    id 3460 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_4_2 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_4_2 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_4_2_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_4_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_4_2_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_4_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_4_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_4_2_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_4_2'"
@@ -4160,14 +7656,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1931 \
+    id 3461 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_4_2 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_4_2 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_4_2_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_4_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_4_2_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_4_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_4_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_4_2_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_4_2'"
@@ -4179,14 +7675,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1932 \
+    id 3462 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_4_2 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_4_2 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_4_2_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_4_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_4_2_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_4_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_4_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_4_2_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_4_2'"
@@ -4198,14 +7694,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1933 \
+    id 3463 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_4_2 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_4_2 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_4_2_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_4_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_4_2_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_4_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_4_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_4_2_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_4_2'"
@@ -4217,14 +7713,166 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1934 \
+    id 3464 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_4_2 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_4_2 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_4_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_4_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_4_2_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_4_2'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3465 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_4_2 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_4_2 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_4_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_4_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_4_2_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_4_2'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3466 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_2 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_2 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_2_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_2'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3467 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_15 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_15 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_15_address0 { O 1 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_15_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_15_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_15'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3468 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_2 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_2 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_2_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_2'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3469 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_6 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_6 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_6_address0 { O 1 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_6_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_6_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_6'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3470 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_2 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_2 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_2_address0 { O 1 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_2_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_2_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_2'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3471 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_2 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_2 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_2_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_2_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_2_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_2'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3472 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_4_1 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_4_1 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_4_1_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_4_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_4_1_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_4_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_4_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_4_1_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_4_1'"
@@ -4236,14 +7884,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1935 \
+    id 3473 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_4_1 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_4_1 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_4_1_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_4_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_4_1_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_4_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_4_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_4_1_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_4_1'"
@@ -4255,14 +7903,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1936 \
+    id 3474 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_4_1 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_4_1 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_4_1_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_4_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_4_1_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_4_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_4_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_4_1_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_4_1'"
@@ -4274,14 +7922,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1937 \
+    id 3475 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_4_1 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_4_1 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_4_1_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_4_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_4_1_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_4_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_4_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_4_1_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_4_1'"
@@ -4293,14 +7941,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1938 \
+    id 3476 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_4_1 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_4_1 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_4_1_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_4_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_4_1_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_4_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_4_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_4_1_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_4_1'"
@@ -4312,14 +7960,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1939 \
+    id 3477 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_4_1 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_4_1 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_4_1_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_4_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_4_1_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_4_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_4_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_4_1_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_4_1'"
@@ -4331,14 +7979,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1940 \
+    id 3478 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_4_1 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_4_1 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_4_1_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_4_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_4_1_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_4_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_4_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_4_1_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_4_1'"
@@ -4350,14 +7998,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1941 \
+    id 3479 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_4_1 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_4_1 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_4_1_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_4_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_4_1_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_4_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_4_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_4_1_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_4_1'"
@@ -4369,14 +8017,166 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1942 \
+    id 3480 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_4_1 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_4_1 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_4_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_4_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_4_1_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_4_1'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3481 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_4_1 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_4_1 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_4_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_4_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_4_1_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_4_1'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3482 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_1 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_1 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_1_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_1'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3483 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_26 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_26 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_26_address0 { O 1 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_26_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_26_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_26'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3484 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_1 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_1 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_1_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_1'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3485 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_7 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_7 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_7_address0 { O 1 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_7_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_7_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_7'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3486 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_1 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_1 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_1_address0 { O 1 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_1_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_1_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_1'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3487 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_1 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_1 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_1_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_1_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_1_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_1'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3488 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_4 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_4 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_4_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_4_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_4_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_4'"
@@ -4388,14 +8188,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1943 \
+    id 3489 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_4 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_4 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_4_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_4_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_4_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_4'"
@@ -4407,14 +8207,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1944 \
+    id 3490 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_4 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_4 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_4_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_4_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_4_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_4'"
@@ -4426,14 +8226,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1945 \
+    id 3491 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_4 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_4 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_4_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_4_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_4_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_4'"
@@ -4445,14 +8245,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1946 \
+    id 3492 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_4 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_4 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_4_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_4_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_4_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_4'"
@@ -4464,14 +8264,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1947 \
+    id 3493 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_4 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_4 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_4_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_4_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_4_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_4'"
@@ -4483,14 +8283,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1948 \
+    id 3494 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_4 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_4 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_4_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_4_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_4_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_4'"
@@ -4502,14 +8302,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1949 \
+    id 3495 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_4 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_4 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_4_address0 { O 2 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_4_q0 { I 32 vector } } \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_4_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_4'"
@@ -4517,10 +8317,162 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 }
 
 
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3496 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_4 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_4 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_4_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_4'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3497 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_4 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_4 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_4_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_4_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_4_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_4'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3498 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_s \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_s \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_s_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_s_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_s_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_s'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3499 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_27 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_27 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_27_address0 { O 1 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_27_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_27_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_27'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3500 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_s \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_s \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_s_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_s_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_s_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_12_s'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3501 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_s \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_s \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_s_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_s_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_s_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_s'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3502 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_address0 { O 1 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 3503 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_s \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_s \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_s_address0 { O 1 vector } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_s_ce0 { O 1 bit } p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_s_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_s'"
+}
+}
+
+
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1635 \
+    id 2981 \
     name p_read \
     type other \
     dir I \
@@ -4535,7 +8487,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1637 \
+    id 2983 \
     name p_read1 \
     type other \
     dir I \
@@ -4550,7 +8502,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1638 \
+    id 2984 \
     name p_read2 \
     type other \
     dir I \
@@ -4565,52 +8517,37 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1642 \
-    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_14 \
+    id 2988 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_46 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_14 \
+    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_46 \
     op interface \
-    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_14 { I 32 vector } } \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_46 { I 32 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1643 \
-    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_24 \
+    id 2989 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_56 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_24 \
+    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_56 \
     op interface \
-    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_24 { I 32 vector } } \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_56 { I 32 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1644 \
-    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_16 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_16 \
-    op interface \
-    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_16 { I 32 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 1645 \
+    id 2990 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_16 \
     type other \
     dir I \
@@ -4625,52 +8562,22 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1646 \
-    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_24 \
+    id 2991 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_55 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_24 \
+    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_55 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_24 { I 32 vector } } \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_55 { I 32 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1647 \
-    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_23 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_23 \
-    op interface \
-    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_23 { I 32 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 1648 \
-    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_15 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_15 \
-    op interface \
-    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_15 { I 32 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 1649 \
+    id 2992 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_17 \
     type other \
     dir I \
@@ -4685,52 +8592,22 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1650 \
-    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_25 \
+    id 2993 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_54 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_25 \
+    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_54 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_25 { I 32 vector } } \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_54 { I 32 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1651 \
-    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_22 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_22 \
-    op interface \
-    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_22 { I 32 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 1652 \
-    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_10 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_10 \
-    op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_10 { I 32 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 1653 \
+    id 2994 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_18 \
     type other \
     dir I \
@@ -4745,52 +8622,22 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1654 \
-    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_26 \
+    id 2995 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_53 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_26 \
+    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_53 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_26 { I 32 vector } } \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_53 { I 32 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1655 \
-    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_21 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_21 \
-    op interface \
-    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_21 { I 32 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 1656 \
-    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_11 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_11 \
-    op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_11 { I 32 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 1657 \
+    id 2996 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_19 \
     type other \
     dir I \
@@ -4805,52 +8652,22 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1658 \
-    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_27 \
+    id 2997 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_52 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_27 \
+    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_52 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_27 { I 32 vector } } \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_52 { I 32 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1659 \
-    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_20 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_20 \
-    op interface \
-    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_20 { I 32 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 1660 \
-    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_12 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_12 \
-    op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_12 { I 32 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 1661 \
+    id 2998 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_20 \
     type other \
     dir I \
@@ -4865,52 +8682,22 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1662 \
-    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_28 \
+    id 2999 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_51 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_28 \
+    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_51 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_28 { I 32 vector } } \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_51 { I 32 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1663 \
-    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_19 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_19 \
-    op interface \
-    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_19 { I 32 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 1664 \
-    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_13 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_13 \
-    op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_13 { I 32 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 1665 \
+    id 3000 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_21 \
     type other \
     dir I \
@@ -4925,52 +8712,22 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1666 \
-    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_29 \
+    id 3001 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_50 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_29 \
+    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_50 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_29 { I 32 vector } } \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_50 { I 32 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1667 \
-    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_18 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_18 \
-    op interface \
-    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_18 { I 32 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 1668 \
-    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_14 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_14 \
-    op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_14 { I 32 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 1669 \
+    id 3002 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_22 \
     type other \
     dir I \
@@ -4985,52 +8742,22 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1670 \
-    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_30 \
+    id 3003 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_49 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_30 \
+    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_49 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_30 { I 32 vector } } \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_49 { I 32 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1671 \
-    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_17 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_17 \
-    op interface \
-    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_17 { I 32 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 1672 \
-    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_15 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_15 \
-    op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_15 { I 32 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 1673 \
+    id 3004 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_23 \
     type other \
     dir I \
@@ -5045,7 +8772,232 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1674 \
+    id 3005 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_48 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_48 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_48 { I 32 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 3006 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_24 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_24 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_24 { I 32 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 3007 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_47 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_47 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_47 { I 32 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 3008 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_25 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_25 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_25 { I 32 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 3009 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_10 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_10 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_10 { I 32 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 3010 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_26 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_26 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_26 { I 32 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 3011 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_11 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_11 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_11 { I 32 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 3012 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_27 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_27 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_27 { I 32 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 3013 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_12 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_12 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_12 { I 32 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 3014 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_28 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_28 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_28 { I 32 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 3015 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_13 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_13 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_13 { I 32 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 3016 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_29 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_29 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_29 { I 32 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 3017 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_14 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_14 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_14 { I 32 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 3018 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_30 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_30 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_30 { I 32 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 3019 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_15 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_15 \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_15 { I 32 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 3020 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_31 \
     type other \
     dir I \
@@ -5060,157 +9012,157 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1675 \
-    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_34 \
+    id 3021 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_66 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_34 \
+    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_66 \
     op interface \
-    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_34 { I 32 vector } } \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_66 { I 32 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1676 \
-    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_33 \
+    id 3022 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_65 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_33 \
+    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_65 \
     op interface \
-    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_33 { I 32 vector } } \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_65 { I 32 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1677 \
-    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_32 \
+    id 3023 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_64 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_32 \
+    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_64 \
     op interface \
-    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_32 { I 32 vector } } \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_64 { I 32 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1678 \
-    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_31 \
+    id 3024 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_63 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_31 \
+    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_63 \
     op interface \
-    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_31 { I 32 vector } } \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_63 { I 32 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1679 \
-    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_30 \
+    id 3025 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_62 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_30 \
+    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_62 \
     op interface \
-    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_30 { I 32 vector } } \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_62 { I 32 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1680 \
-    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_29 \
+    id 3026 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_61 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_29 \
+    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_61 \
     op interface \
-    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_29 { I 32 vector } } \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_61 { I 32 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1681 \
-    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_28 \
+    id 3027 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_60 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_28 \
+    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_60 \
     op interface \
-    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_28 { I 32 vector } } \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_60 { I 32 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1682 \
-    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_27 \
+    id 3028 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_59 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_27 \
+    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_59 \
     op interface \
-    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_27 { I 32 vector } } \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_59 { I 32 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1683 \
-    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_26 \
+    id 3029 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_58 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_26 \
+    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_58 \
     op interface \
-    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_26 { I 32 vector } } \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_58 { I 32 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1684 \
-    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_25 \
+    id 3030 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_57 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_25 \
+    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_57 \
     op interface \
-    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_25 { I 32 vector } } \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_57 { I 32 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1685 \
+    id 3031 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_10 \
     type other \
     dir I \
@@ -5225,7 +9177,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1686 \
+    id 3032 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_11 \
     type other \
     dir I \
@@ -5240,7 +9192,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1687 \
+    id 3033 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_12 \
     type other \
     dir I \
@@ -5255,7 +9207,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1688 \
+    id 3034 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_13 \
     type other \
     dir I \
@@ -5270,7 +9222,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1689 \
+    id 3035 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_14 \
     type other \
     dir I \
@@ -5285,7 +9237,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1690 \
+    id 3036 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_15 \
     type other \
     dir I \
@@ -5300,7 +9252,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1691 \
+    id 3037 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_16 \
     type other \
     dir I \
@@ -5315,7 +9267,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1692 \
+    id 3038 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_17 \
     type other \
     dir I \
@@ -5330,7 +9282,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1693 \
+    id 3039 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_18 \
     type other \
     dir I \
@@ -5345,7 +9297,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1694 \
+    id 3040 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_19 \
     type other \
     dir I \
@@ -5360,7 +9312,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1695 \
+    id 3041 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_20 \
     type other \
     dir I \
@@ -5375,7 +9327,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1696 \
+    id 3042 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_21 \
     type other \
     dir I \
@@ -5390,7 +9342,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1697 \
+    id 3043 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_22 \
     type other \
     dir I \
@@ -5405,7 +9357,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1698 \
+    id 3044 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_23 \
     type other \
     dir I \
@@ -5420,7 +9372,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1699 \
+    id 3045 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_24 \
     type other \
     dir I \
@@ -5435,7 +9387,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1700 \
+    id 3046 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_25 \
     type other \
     dir I \
@@ -5450,7 +9402,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1701 \
+    id 3047 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_26 \
     type other \
     dir I \
@@ -5465,7 +9417,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1702 \
+    id 3048 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_27 \
     type other \
     dir I \
@@ -5480,7 +9432,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1703 \
+    id 3049 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_28 \
     type other \
     dir I \
@@ -5495,7 +9447,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1704 \
+    id 3050 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_29 \
     type other \
     dir I \
@@ -5510,7 +9462,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1705 \
+    id 3051 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_30 \
     type other \
     dir I \
@@ -5525,7 +9477,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1706 \
+    id 3052 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_31 \
     type other \
     dir I \
@@ -5540,7 +9492,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1707 \
+    id 3053 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_32 \
     type other \
     dir I \
@@ -5555,7 +9507,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1708 \
+    id 3054 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_33 \
     type other \
     dir I \
@@ -5570,7 +9522,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1709 \
+    id 3055 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_34 \
     type other \
     dir I \
@@ -5585,7 +9537,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1710 \
+    id 3056 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_35 \
     type other \
     dir I \
@@ -5600,7 +9552,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1711 \
+    id 3057 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_36 \
     type other \
     dir I \
@@ -5615,7 +9567,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1712 \
+    id 3058 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_37 \
     type other \
     dir I \
@@ -5630,7 +9582,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1713 \
+    id 3059 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_38 \
     type other \
     dir I \
@@ -5645,7 +9597,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1714 \
+    id 3060 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_39 \
     type other \
     dir I \
@@ -5660,7 +9612,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1715 \
+    id 3061 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_40 \
     type other \
     dir I \
@@ -5675,7 +9627,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1716 \
+    id 3062 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_41 \
     type other \
     dir I \
@@ -5690,7 +9642,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1717 \
+    id 3063 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_42 \
     type other \
     dir I \
@@ -5705,7 +9657,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1718 \
+    id 3064 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_43 \
     type other \
     dir I \
@@ -5720,7 +9672,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1719 \
+    id 3065 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_44 \
     type other \
     dir I \
@@ -5735,7 +9687,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1720 \
+    id 3066 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_45 \
     type other \
     dir I \
@@ -5750,7 +9702,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1721 \
+    id 3067 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_46 \
     type other \
     dir I \
@@ -5765,7 +9717,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1722 \
+    id 3068 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_47 \
     type other \
     dir I \
@@ -5780,7 +9732,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1723 \
+    id 3069 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_48 \
     type other \
     dir I \
@@ -5795,7 +9747,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1724 \
+    id 3070 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_49 \
     type other \
     dir I \
@@ -5810,7 +9762,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1725 \
+    id 3071 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_50 \
     type other \
     dir I \
@@ -5825,7 +9777,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1726 \
+    id 3072 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_51 \
     type other \
     dir I \
@@ -5840,7 +9792,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1727 \
+    id 3073 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_52 \
     type other \
     dir I \
@@ -5855,7 +9807,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1728 \
+    id 3074 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_53 \
     type other \
     dir I \
@@ -5870,7 +9822,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1729 \
+    id 3075 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_54 \
     type other \
     dir I \
@@ -5885,7 +9837,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1730 \
+    id 3076 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_55 \
     type other \
     dir I \
@@ -5900,7 +9852,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1731 \
+    id 3077 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_56 \
     type other \
     dir I \
@@ -5915,7 +9867,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1732 \
+    id 3078 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_57 \
     type other \
     dir I \
@@ -5930,7 +9882,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1733 \
+    id 3079 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_58 \
     type other \
     dir I \
@@ -5945,7 +9897,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1734 \
+    id 3080 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_59 \
     type other \
     dir I \
@@ -5960,7 +9912,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1735 \
+    id 3081 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_60 \
     type other \
     dir I \
@@ -5975,7 +9927,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1736 \
+    id 3082 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_61 \
     type other \
     dir I \
@@ -5990,7 +9942,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1737 \
+    id 3083 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_62 \
     type other \
     dir I \
@@ -6005,7 +9957,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1738 \
+    id 3084 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_63 \
     type other \
     dir I \

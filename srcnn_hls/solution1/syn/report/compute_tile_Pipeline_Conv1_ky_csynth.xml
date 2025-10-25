@@ -47,8 +47,8 @@
 
 <AreaEstimates>
 <Resources>
-<FF>1332</FF>
-<LUT>1070</LUT>
+<FF>1336</FF>
+<LUT>1104</LUT>
 <BRAM_18K>0</BRAM_18K>
 <DSP>0</DSP>
 <URAM>0</URAM>
@@ -130,7 +130,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_4319_p_din0</name>
+<name>grp_fu_7737_p_din0</name>
 <Object>compute_tile_Pipeline_Conv1_ky</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -141,7 +141,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_4319_p_din1</name>
+<name>grp_fu_7737_p_din1</name>
 <Object>compute_tile_Pipeline_Conv1_ky</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -152,7 +152,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_4319_p_opcode</name>
+<name>grp_fu_7737_p_opcode</name>
 <Object>compute_tile_Pipeline_Conv1_ky</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -163,7 +163,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_4319_p_dout0</name>
+<name>grp_fu_7737_p_dout0</name>
 <Object>compute_tile_Pipeline_Conv1_ky</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -174,7 +174,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_4319_p_ce</name>
+<name>grp_fu_7737_p_ce</name>
 <Object>compute_tile_Pipeline_Conv1_ky</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -185,7 +185,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_6675_p_din0</name>
+<name>grp_fu_10161_p_din0</name>
 <Object>compute_tile_Pipeline_Conv1_ky</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -196,7 +196,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_6675_p_din1</name>
+<name>grp_fu_10161_p_din1</name>
 <Object>compute_tile_Pipeline_Conv1_ky</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -207,7 +207,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_6675_p_opcode</name>
+<name>grp_fu_10161_p_opcode</name>
 <Object>compute_tile_Pipeline_Conv1_ky</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -218,7 +218,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_6675_p_dout0</name>
+<name>grp_fu_10161_p_dout0</name>
 <Object>compute_tile_Pipeline_Conv1_ky</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -229,7 +229,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_6675_p_ce</name>
+<name>grp_fu_10161_p_ce</name>
 <Object>compute_tile_Pipeline_Conv1_ky</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -240,7 +240,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_6679_p_din0</name>
+<name>grp_fu_10165_p_din0</name>
 <Object>compute_tile_Pipeline_Conv1_ky</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -251,7 +251,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_6679_p_din1</name>
+<name>grp_fu_10165_p_din1</name>
 <Object>compute_tile_Pipeline_Conv1_ky</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -262,7 +262,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_6679_p_opcode</name>
+<name>grp_fu_10165_p_opcode</name>
 <Object>compute_tile_Pipeline_Conv1_ky</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -273,7 +273,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_6679_p_dout0</name>
+<name>grp_fu_10165_p_dout0</name>
 <Object>compute_tile_Pipeline_Conv1_ky</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -284,7 +284,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_6679_p_ce</name>
+<name>grp_fu_10165_p_ce</name>
 <Object>compute_tile_Pipeline_Conv1_ky</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -295,7 +295,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_6683_p_din0</name>
+<name>grp_fu_10169_p_din0</name>
 <Object>compute_tile_Pipeline_Conv1_ky</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -306,7 +306,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_6683_p_din1</name>
+<name>grp_fu_10169_p_din1</name>
 <Object>compute_tile_Pipeline_Conv1_ky</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -317,7 +317,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_6683_p_dout0</name>
+<name>grp_fu_10169_p_dout0</name>
 <Object>compute_tile_Pipeline_Conv1_ky</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -328,7 +328,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_6683_p_ce</name>
+<name>grp_fu_10169_p_ce</name>
 <Object>compute_tile_Pipeline_Conv1_ky</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -339,7 +339,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_6687_p_din0</name>
+<name>grp_fu_10173_p_din0</name>
 <Object>compute_tile_Pipeline_Conv1_ky</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -350,7 +350,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_6687_p_din1</name>
+<name>grp_fu_10173_p_din1</name>
 <Object>compute_tile_Pipeline_Conv1_ky</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -361,7 +361,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_6687_p_dout0</name>
+<name>grp_fu_10173_p_dout0</name>
 <Object>compute_tile_Pipeline_Conv1_ky</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -372,7 +372,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_6687_p_ce</name>
+<name>grp_fu_10173_p_ce</name>
 <Object>compute_tile_Pipeline_Conv1_ky</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -383,7 +383,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_6691_p_din0</name>
+<name>grp_fu_10177_p_din0</name>
 <Object>compute_tile_Pipeline_Conv1_ky</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -394,7 +394,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_6691_p_din1</name>
+<name>grp_fu_10177_p_din1</name>
 <Object>compute_tile_Pipeline_Conv1_ky</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -405,7 +405,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_6691_p_dout0</name>
+<name>grp_fu_10177_p_dout0</name>
 <Object>compute_tile_Pipeline_Conv1_ky</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -416,7 +416,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_6691_p_ce</name>
+<name>grp_fu_10177_p_ce</name>
 <Object>compute_tile_Pipeline_Conv1_ky</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -427,8 +427,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>add_ln169</name>
-<Object>add_ln169</Object>
+<name>add_ln175</name>
+<Object>add_ln175</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
@@ -438,25 +438,25 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>y0</name>
-<Object>y0</Object>
+<name>trunc_ln118861</name>
+<Object>trunc_ln118861</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>select_ln175</name>
+<Object>select_ln175</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
 <Bits>6</Bits>
-<Attribute>data</Attribute>
-</RtlPorts>
-<RtlPorts>
-<name>select_ln169</name>
-<Object>select_ln169</Object>
-<Type>scalar</Type>
-<Scope></Scope>
-<IOProtocol>ap_none</IOProtocol>
-<IOConfig></IOConfig>
-<Dir>in</Dir>
-<Bits>3</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -478,7 +478,7 @@
 <IOProtocol>ap_memory</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>out</Dir>
-<Bits>10</Bits>
+<Bits>13</Bits>
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -599,7 +599,7 @@
 <IOProtocol>ap_memory</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>out</Dir>
-<Bits>10</Bits>
+<Bits>13</Bits>
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -632,7 +632,7 @@
 <IOProtocol>ap_memory</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>out</Dir>
-<Bits>10</Bits>
+<Bits>13</Bits>
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -867,8 +867,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10_address0</name>
-<Object>srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10</Object>
+<name>srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_42_address0</name>
+<Object>srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_42</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_stable</IOProtocol>
@@ -878,8 +878,8 @@
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10_ce0</name>
-<Object>srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10</Object>
+<name>srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_42_ce0</name>
+<Object>srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_42</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_stable</IOProtocol>
@@ -889,8 +889,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10_q0</name>
-<Object>srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10</Object>
+<name>srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_42_q0</name>
+<Object>srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_42</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_stable</IOProtocol>
@@ -900,8 +900,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_9_address0</name>
-<Object>srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_9</Object>
+<name>srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_41_address0</name>
+<Object>srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_41</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_stable</IOProtocol>
@@ -911,8 +911,8 @@
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_9_ce0</name>
-<Object>srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_9</Object>
+<name>srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_41_ce0</name>
+<Object>srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_41</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_stable</IOProtocol>
@@ -922,8 +922,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_9_q0</name>
-<Object>srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_9</Object>
+<name>srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_41_q0</name>
+<Object>srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_41</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_stable</IOProtocol>
@@ -933,8 +933,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_8_address0</name>
-<Object>srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_8</Object>
+<name>srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_40_address0</name>
+<Object>srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_40</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_stable</IOProtocol>
@@ -944,8 +944,8 @@
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_8_ce0</name>
-<Object>srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_8</Object>
+<name>srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_40_ce0</name>
+<Object>srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_40</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_stable</IOProtocol>
@@ -955,8 +955,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_8_q0</name>
-<Object>srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_8</Object>
+<name>srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_40_q0</name>
+<Object>srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_40</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_stable</IOProtocol>

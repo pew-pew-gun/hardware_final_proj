@@ -1,140 +1,5 @@
 # This script segment is generated automatically by AutoPilot
 
-set id 255
-set name srcnn_mux_25_5_32_1_1
-set corename simcore_mux
-set op mux
-set stage_num 1
-set din0_width 32
-set din0_signed 0
-set din1_width 32
-set din1_signed 0
-set din2_width 32
-set din2_signed 0
-set din3_width 32
-set din3_signed 0
-set din4_width 32
-set din4_signed 0
-set din5_width 32
-set din5_signed 0
-set din6_width 32
-set din6_signed 0
-set din7_width 32
-set din7_signed 0
-set din8_width 32
-set din8_signed 0
-set din9_width 32
-set din9_signed 0
-set din10_width 32
-set din10_signed 0
-set din11_width 32
-set din11_signed 0
-set din12_width 32
-set din12_signed 0
-set din13_width 32
-set din13_signed 0
-set din14_width 32
-set din14_signed 0
-set din15_width 32
-set din15_signed 0
-set din16_width 32
-set din16_signed 0
-set din17_width 32
-set din17_signed 0
-set din18_width 32
-set din18_signed 0
-set din19_width 32
-set din19_signed 0
-set din20_width 32
-set din20_signed 0
-set din21_width 32
-set din21_signed 0
-set din22_width 32
-set din22_signed 0
-set din23_width 32
-set din23_signed 0
-set din24_width 32
-set din24_signed 0
-set din25_width 5
-set din25_signed 0
-set dout_width 32
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mux} IMPL {auto} LATENCY 0 ALLOW_PRAGMA 1
-}
-
-
-set op mux
-set corename Multiplexer
-if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
-if {[info proc ::AESL_LIB_VIRTEX::xil_gen_pipemux] == "::AESL_LIB_VIRTEX::xil_gen_pipemux"} {
-eval "::AESL_LIB_VIRTEX::xil_gen_pipemux { \
-    id ${id} \
-    name ${name} \
-    corename ${corename} \
-    op ${op} \
-    reset_level 1 \
-    sync_rst true \
-    stage_num ${stage_num} \
-    din0_width ${din0_width} \
-    din0_signed ${din0_signed} \
-    din1_width ${din1_width} \
-    din1_signed ${din1_signed} \
-    din2_width ${din2_width} \
-    din2_signed ${din2_signed} \
-    din3_width ${din3_width} \
-    din3_signed ${din3_signed} \
-    din4_width ${din4_width} \
-    din4_signed ${din4_signed} \
-    din5_width ${din5_width} \
-    din5_signed ${din5_signed} \
-    din6_width ${din6_width} \
-    din6_signed ${din6_signed} \
-    din7_width ${din7_width} \
-    din7_signed ${din7_signed} \
-    din8_width ${din8_width} \
-    din8_signed ${din8_signed} \
-    din9_width ${din9_width} \
-    din9_signed ${din9_signed} \
-    din10_width ${din10_width} \
-    din10_signed ${din10_signed} \
-    din11_width ${din11_width} \
-    din11_signed ${din11_signed} \
-    din12_width ${din12_width} \
-    din12_signed ${din12_signed} \
-    din13_width ${din13_width} \
-    din13_signed ${din13_signed} \
-    din14_width ${din14_width} \
-    din14_signed ${din14_signed} \
-    din15_width ${din15_width} \
-    din15_signed ${din15_signed} \
-    din16_width ${din16_width} \
-    din16_signed ${din16_signed} \
-    din17_width ${din17_width} \
-    din17_signed ${din17_signed} \
-    din18_width ${din18_width} \
-    din18_signed ${din18_signed} \
-    din19_width ${din19_width} \
-    din19_signed ${din19_signed} \
-    din20_width ${din20_width} \
-    din20_signed ${din20_signed} \
-    din21_width ${din21_width} \
-    din21_signed ${din21_signed} \
-    din22_width ${din22_width} \
-    din22_signed ${din22_signed} \
-    din23_width ${din23_width} \
-    din23_signed ${din23_signed} \
-    din24_width ${din24_width} \
-    din24_signed ${din24_signed} \
-    din25_width ${din25_width} \
-    din25_signed ${din25_signed} \
-    dout_width ${dout_width} \
-}"
-} else {
-puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_pipemux, check your platform lib"
-}
-}
-
-
 # clear list
 if {${::AESL::PGuard_autoexp_gen}} {
     cg_default_interface_gen_dc_begin
@@ -146,14 +11,166 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 264 \
+    id 463 \
+    name acc2_15 \
+    reset_level 1 \
+    sync_rst true \
+    dir O \
+    corename acc2_15 \
+    op interface \
+    ports { acc2_15_address0 { O 1 vector } acc2_15_ce0 { O 1 bit } acc2_15_we0 { O 1 bit } acc2_15_d0 { O 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'acc2_15'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 464 \
+    name acc2_14 \
+    reset_level 1 \
+    sync_rst true \
+    dir O \
+    corename acc2_14 \
+    op interface \
+    ports { acc2_14_address0 { O 1 vector } acc2_14_ce0 { O 1 bit } acc2_14_we0 { O 1 bit } acc2_14_d0 { O 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'acc2_14'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 465 \
+    name acc2_13 \
+    reset_level 1 \
+    sync_rst true \
+    dir O \
+    corename acc2_13 \
+    op interface \
+    ports { acc2_13_address0 { O 1 vector } acc2_13_ce0 { O 1 bit } acc2_13_we0 { O 1 bit } acc2_13_d0 { O 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'acc2_13'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 466 \
+    name acc2_12 \
+    reset_level 1 \
+    sync_rst true \
+    dir O \
+    corename acc2_12 \
+    op interface \
+    ports { acc2_12_address0 { O 1 vector } acc2_12_ce0 { O 1 bit } acc2_12_we0 { O 1 bit } acc2_12_d0 { O 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'acc2_12'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 467 \
+    name acc2_11 \
+    reset_level 1 \
+    sync_rst true \
+    dir O \
+    corename acc2_11 \
+    op interface \
+    ports { acc2_11_address0 { O 1 vector } acc2_11_ce0 { O 1 bit } acc2_11_we0 { O 1 bit } acc2_11_d0 { O 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'acc2_11'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 468 \
+    name acc2_10 \
+    reset_level 1 \
+    sync_rst true \
+    dir O \
+    corename acc2_10 \
+    op interface \
+    ports { acc2_10_address0 { O 1 vector } acc2_10_ce0 { O 1 bit } acc2_10_we0 { O 1 bit } acc2_10_d0 { O 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'acc2_10'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 469 \
+    name acc2_9 \
+    reset_level 1 \
+    sync_rst true \
+    dir O \
+    corename acc2_9 \
+    op interface \
+    ports { acc2_9_address0 { O 1 vector } acc2_9_ce0 { O 1 bit } acc2_9_we0 { O 1 bit } acc2_9_d0 { O 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'acc2_9'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 470 \
+    name acc2_8 \
+    reset_level 1 \
+    sync_rst true \
+    dir O \
+    corename acc2_8 \
+    op interface \
+    ports { acc2_8_address0 { O 1 vector } acc2_8_ce0 { O 1 bit } acc2_8_we0 { O 1 bit } acc2_8_d0 { O 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'acc2_8'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 471 \
     name acc2_7 \
     reset_level 1 \
     sync_rst true \
     dir O \
     corename acc2_7 \
     op interface \
-    ports { acc2_7_address0 { O 2 vector } acc2_7_ce0 { O 1 bit } acc2_7_we0 { O 1 bit } acc2_7_d0 { O 32 vector } } \
+    ports { acc2_7_address0 { O 1 vector } acc2_7_ce0 { O 1 bit } acc2_7_we0 { O 1 bit } acc2_7_d0 { O 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'acc2_7'"
@@ -165,14 +182,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 265 \
+    id 472 \
     name acc2_6 \
     reset_level 1 \
     sync_rst true \
     dir O \
     corename acc2_6 \
     op interface \
-    ports { acc2_6_address0 { O 2 vector } acc2_6_ce0 { O 1 bit } acc2_6_we0 { O 1 bit } acc2_6_d0 { O 32 vector } } \
+    ports { acc2_6_address0 { O 1 vector } acc2_6_ce0 { O 1 bit } acc2_6_we0 { O 1 bit } acc2_6_d0 { O 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'acc2_6'"
@@ -184,14 +201,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 266 \
+    id 473 \
     name acc2_5 \
     reset_level 1 \
     sync_rst true \
     dir O \
     corename acc2_5 \
     op interface \
-    ports { acc2_5_address0 { O 2 vector } acc2_5_ce0 { O 1 bit } acc2_5_we0 { O 1 bit } acc2_5_d0 { O 32 vector } } \
+    ports { acc2_5_address0 { O 1 vector } acc2_5_ce0 { O 1 bit } acc2_5_we0 { O 1 bit } acc2_5_d0 { O 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'acc2_5'"
@@ -203,14 +220,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 267 \
+    id 474 \
     name acc2_4 \
     reset_level 1 \
     sync_rst true \
     dir O \
     corename acc2_4 \
     op interface \
-    ports { acc2_4_address0 { O 2 vector } acc2_4_ce0 { O 1 bit } acc2_4_we0 { O 1 bit } acc2_4_d0 { O 32 vector } } \
+    ports { acc2_4_address0 { O 1 vector } acc2_4_ce0 { O 1 bit } acc2_4_we0 { O 1 bit } acc2_4_d0 { O 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'acc2_4'"
@@ -222,14 +239,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 268 \
+    id 475 \
     name acc2_3 \
     reset_level 1 \
     sync_rst true \
     dir O \
     corename acc2_3 \
     op interface \
-    ports { acc2_3_address0 { O 2 vector } acc2_3_ce0 { O 1 bit } acc2_3_we0 { O 1 bit } acc2_3_d0 { O 32 vector } } \
+    ports { acc2_3_address0 { O 1 vector } acc2_3_ce0 { O 1 bit } acc2_3_we0 { O 1 bit } acc2_3_d0 { O 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'acc2_3'"
@@ -241,14 +258,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 269 \
+    id 476 \
     name acc2_2 \
     reset_level 1 \
     sync_rst true \
     dir O \
     corename acc2_2 \
     op interface \
-    ports { acc2_2_address0 { O 2 vector } acc2_2_ce0 { O 1 bit } acc2_2_we0 { O 1 bit } acc2_2_d0 { O 32 vector } } \
+    ports { acc2_2_address0 { O 1 vector } acc2_2_ce0 { O 1 bit } acc2_2_we0 { O 1 bit } acc2_2_d0 { O 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'acc2_2'"
@@ -260,14 +277,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 270 \
+    id 477 \
     name acc2_1 \
     reset_level 1 \
     sync_rst true \
     dir O \
     corename acc2_1 \
     op interface \
-    ports { acc2_1_address0 { O 2 vector } acc2_1_ce0 { O 1 bit } acc2_1_we0 { O 1 bit } acc2_1_d0 { O 32 vector } } \
+    ports { acc2_1_address0 { O 1 vector } acc2_1_ce0 { O 1 bit } acc2_1_we0 { O 1 bit } acc2_1_d0 { O 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'acc2_1'"
@@ -279,14 +296,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 271 \
+    id 478 \
     name acc2 \
     reset_level 1 \
     sync_rst true \
     dir O \
     corename acc2 \
     op interface \
-    ports { acc2_address0 { O 2 vector } acc2_ce0 { O 1 bit } acc2_we0 { O 1 bit } acc2_d0 { O 32 vector } } \
+    ports { acc2_address0 { O 1 vector } acc2_ce0 { O 1 bit } acc2_we0 { O 1 bit } acc2_d0 { O 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'acc2'"
@@ -297,37 +314,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 272 \
-    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_52 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_52 \
-    op interface \
-    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_52 { I 32 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 273 \
-    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_53 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_53 \
-    op interface \
-    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_53 { I 32 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 274 \
+    id 479 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_16_s \
     type other \
     dir I \
@@ -342,52 +329,22 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 275 \
-    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_24_s \
+    id 480 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_116 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_24_s \
+    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_116 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_24_s { I 32 vector } } \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_116 { I 32 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 276 \
-    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_54 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_54 \
-    op interface \
-    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_54 { I 32 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 277 \
-    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_55 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_55 \
-    op interface \
-    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_55 { I 32 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 278 \
+    id 481 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_17_s \
     type other \
     dir I \
@@ -402,52 +359,22 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 279 \
-    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_25_s \
+    id 482 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_117 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_25_s \
+    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_117 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_25_s { I 32 vector } } \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_117 { I 32 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 280 \
-    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_56 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_56 \
-    op interface \
-    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_56 { I 32 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 281 \
-    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_10_s \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_10_s \
-    op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_10_s { I 32 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 282 \
+    id 483 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_18_s \
     type other \
     dir I \
@@ -462,52 +389,22 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 283 \
-    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_26_s \
+    id 484 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_118 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_26_s \
+    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_118 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_26_s { I 32 vector } } \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_118 { I 32 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 284 \
-    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_57 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_57 \
-    op interface \
-    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_57 { I 32 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 285 \
-    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_b2_loc_66 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_b2_loc_66 \
-    op interface \
-    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_b2_loc_66 { I 32 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 286 \
+    id 485 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_19_s \
     type other \
     dir I \
@@ -522,52 +419,22 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 287 \
-    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_27_s \
+    id 486 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_119 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_27_s \
+    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_119 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_27_s { I 32 vector } } \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_119 { I 32 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 288 \
-    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_58 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_58 \
-    op interface \
-    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_58 { I 32 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 289 \
-    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_12_s \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_12_s \
-    op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_12_s { I 32 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 290 \
+    id 487 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_20_s \
     type other \
     dir I \
@@ -582,112 +449,52 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 291 \
-    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_28_s \
+    id 488 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_120 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_28_s \
+    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_120 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_28_s { I 32 vector } } \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_120 { I 32 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 292 \
-    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_59 \
+    id 489 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_b2_loc_92 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_59 \
+    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_b2_loc_92 \
     op interface \
-    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_59 { I 32 vector } } \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_b2_loc_92 { I 32 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 293 \
-    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_13_s \
+    id 490 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_121 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_13_s \
+    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_121 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_13_s { I 32 vector } } \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_121 { I 32 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 294 \
-    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_b2_loc_67 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_b2_loc_67 \
-    op interface \
-    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_b2_loc_67 { I 32 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 295 \
-    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_29_s \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_29_s \
-    op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_29_s { I 32 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 296 \
-    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_60 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_60 \
-    op interface \
-    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_60 { I 32 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 297 \
-    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_14_s \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_14_s \
-    op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_14_s { I 32 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 298 \
+    id 491 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_22_s \
     type other \
     dir I \
@@ -702,52 +509,22 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 299 \
-    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_30_s \
+    id 492 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_122 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_30_s \
+    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_122 \
     op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_30_s { I 32 vector } } \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_122 { I 32 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 300 \
-    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_61 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_61 \
-    op interface \
-    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_61 { I 32 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 301 \
-    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_15_s \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_15_s \
-    op interface \
-    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_15_s { I 32 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 302 \
+    id 493 \
     name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_23_s \
     type other \
     dir I \
@@ -762,7 +539,232 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 303 \
+    id 494 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_123 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_123 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_123 { I 32 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 495 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_24_s \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_24_s \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_24_s { I 32 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 496 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_124 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_124 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_124 { I 32 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 497 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_25_s \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_25_s \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_25_s { I 32 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 498 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_125 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_125 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_125 { I 32 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 499 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_26_s \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_26_s \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_26_s { I 32 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 500 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_10_s \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_10_s \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_10_s { I 32 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 501 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_27_s \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_27_s \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_27_s { I 32 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 502 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_b2_loc_93 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_b2_loc_93 \
+    op interface \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_b2_loc_93 { I 32 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 503 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_28_s \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_28_s \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_28_s { I 32 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 504 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_12_s \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_12_s \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_12_s { I 32 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 505 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_29_s \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_29_s \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_29_s { I 32 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 506 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_13_s \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_13_s \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_13_s { I 32 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 507 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_30_s \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_30_s \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_30_s { I 32 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 508 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_14_s \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_14_s \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_14_s { I 32 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 509 \
     name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_b2_loc \
     type other \
     dir I \
@@ -771,6 +773,21 @@ eval "cg_default_interface_gen_dc { \
     corename dc_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_b2_loc \
     op interface \
     ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_b2_loc { I 32 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 510 \
+    name p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_15_s \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_15_s \
+    op interface \
+    ports { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_15_s { I 32 vector } } \
 } "
 }
 

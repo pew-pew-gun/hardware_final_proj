@@ -17,8 +17,8 @@ module srcnn_compute_tile_linebuf_RAM_2P_BRAM_1R1W (
     reset, clk);
 
 parameter DataWidth = 32;
-parameter AddressWidth = 7;
-parameter AddressRange = 80;
+parameter AddressWidth = 8;
+parameter AddressRange = 200;
  
 input[AddressWidth-1:0] address0;
 input ce0;

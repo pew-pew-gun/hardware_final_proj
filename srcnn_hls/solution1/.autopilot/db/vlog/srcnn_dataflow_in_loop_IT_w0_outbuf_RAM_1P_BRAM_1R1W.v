@@ -8,8 +8,8 @@
 module srcnn_dataflow_in_loop_IT_w0_outbuf_RAM_1P_BRAM_1R1W
 #(parameter
     DataWidth    = 32,
-    AddressRange = 512,
-    AddressWidth = 9,
+    AddressRange = 18432,
+    AddressWidth = 15,
     BufferCount  = 2,
     IndexWidth   = 1
 ) (

@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'load_tile_mm'
 ================================================================
-* Date:           Tue Oct 21 05:58:14 2025
+* Date:           Tue Oct 21 15:31:11 2025
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -88,53 +88,53 @@ State 1 <SV = 0> <Delay = 4.56>
 ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%w0_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %w0"   --->   Operation 7 'read' 'w0_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%h0_read = read i9 @_ssdm_op_Read.ap_auto.i9, i9 %h0"   --->   Operation 8 'read' 'h0_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%w0_cast2 = zext i8 %w0_read"   --->   Operation 9 'zext' 'w0_cast2' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 10 [1/1] (0.77ns)   --->   "%add_ln534 = add i9 %h0_read, i9 16" [src/srcnn.cpp:534]   --->   Operation 10 'add' 'add_ln534' <Predicate = true> <Delay = 0.77> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 11 [1/1] (0.00ns) (grouped into LUT with out node th_eff)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i9.i32, i9 %add_ln534, i32 8" [src/srcnn.cpp:534]   --->   Operation 11 'bitselect' 'tmp' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 12 [1/1] (0.00ns) (grouped into LUT with out node th_eff)   --->   "%trunc_ln533 = trunc i9 %h0_read" [src/srcnn.cpp:533]   --->   Operation 12 'trunc' 'trunc_ln533' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 13 [1/1] (0.00ns) (grouped into LUT with out node th_eff)   --->   "%xor_ln534 = xor i8 %trunc_ln533, i8 255" [src/srcnn.cpp:534]   --->   Operation 13 'xor' 'xor_ln534' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 14 [1/1] (0.39ns) (out node of the LUT)   --->   "%th_eff = select i1 %tmp, i8 %xor_ln534, i8 16" [src/srcnn.cpp:534]   --->   Operation 14 'select' 'th_eff' <Predicate = true> <Delay = 0.39> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.39> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_1 : Operation 15 [1/1] (0.76ns)   --->   "%add_ln537 = add i9 %w0_cast2, i9 16" [src/srcnn.cpp:537]   --->   Operation 15 'add' 'add_ln537' <Predicate = true> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 16 [1/1] (0.00ns) (grouped into LUT with out node add_ln43)   --->   "%tmp_7 = bitselect i1 @_ssdm_op_BitSelect.i1.i9.i32, i9 %add_ln537, i32 8" [src/srcnn.cpp:537]   --->   Operation 16 'bitselect' 'tmp_7' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 17 [1/1] (0.00ns) (grouped into LUT with out node add_ln43)   --->   "%xor_ln537 = xor i8 %w0_read, i8 255" [src/srcnn.cpp:537]   --->   Operation 17 'xor' 'xor_ln537' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 18 [1/1] (0.00ns) (grouped into LUT with out node add_ln43)   --->   "%tw_eff = select i1 %tmp_7, i8 %xor_ln537, i8 16" [src/srcnn.cpp:537]   --->   Operation 18 'select' 'tw_eff' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.39> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_1 : Operation 19 [1/1] (0.00ns) (grouped into LUT with out node add_ln43)   --->   "%tw_eff_cast = zext i8 %tw_eff" [src/srcnn.cpp:537]   --->   Operation 19 'zext' 'tw_eff_cast' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 20 [1/1] (0.76ns) (out node of the LUT)   --->   "%add_ln43 = add i9 %tw_eff_cast, i9 12" [src/srcnn.cpp:43->src/srcnn.cpp:542]   --->   Operation 20 'add' 'add_ln43' <Predicate = true> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%th_eff_cast = zext i8 %th_eff" [src/srcnn.cpp:534]   --->   Operation 21 'zext' 'th_eff_cast' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 22 [1/1] (2.39ns) (grouped into DSP with root node mul_ln43)   --->   "%add_ln43_1 = add i9 %th_eff_cast, i9 12" [src/srcnn.cpp:43->src/srcnn.cpp:542]   --->   Operation 22 'add' 'add_ln43_1' <Predicate = true> <Delay = 2.39> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : '<invalid operator> ' 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
-ST_1 : Operation 23 [1/1] (0.00ns) (grouped into DSP with root node mul_ln43)   --->   "%zext_ln43 = zext i9 %add_ln43_1" [src/srcnn.cpp:43->src/srcnn.cpp:542]   --->   Operation 23 'zext' 'zext_ln43' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%zext_ln43_2 = zext i9 %add_ln43" [src/srcnn.cpp:43->src/srcnn.cpp:542]   --->   Operation 24 'zext' 'zext_ln43_2' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 25 [4/4] (0.99ns) (root node of the DSP)   --->   "%mul_ln43 = mul i17 %zext_ln43, i17 %zext_ln43_2" [src/srcnn.cpp:43->src/srcnn.cpp:542]   --->   Operation 25 'mul' 'mul_ln43' <Predicate = true> <Delay = 0.99> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : '<invalid operator> ' 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 10 [1/1] (0.77ns)   --->   "%add_ln540 = add i9 %h0_read, i9 96" [src/srcnn.cpp:540]   --->   Operation 10 'add' 'add_ln540' <Predicate = true> <Delay = 0.77> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 11 [1/1] (0.00ns) (grouped into LUT with out node th_eff)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i9.i32, i9 %add_ln540, i32 8" [src/srcnn.cpp:540]   --->   Operation 11 'bitselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns) (grouped into LUT with out node th_eff)   --->   "%trunc_ln539 = trunc i9 %h0_read" [src/srcnn.cpp:539]   --->   Operation 12 'trunc' 'trunc_ln539' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns) (grouped into LUT with out node th_eff)   --->   "%xor_ln540 = xor i8 %trunc_ln539, i8 255" [src/srcnn.cpp:540]   --->   Operation 13 'xor' 'xor_ln540' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 14 [1/1] (0.39ns) (out node of the LUT)   --->   "%th_eff = select i1 %tmp, i8 %xor_ln540, i8 96" [src/srcnn.cpp:540]   --->   Operation 14 'select' 'th_eff' <Predicate = true> <Delay = 0.39> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.39> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 15 [1/1] (0.76ns)   --->   "%add_ln543 = add i9 %w0_cast2, i9 96" [src/srcnn.cpp:543]   --->   Operation 15 'add' 'add_ln543' <Predicate = true> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 16 [1/1] (0.00ns) (grouped into LUT with out node add_ln43)   --->   "%tmp_7 = bitselect i1 @_ssdm_op_BitSelect.i1.i9.i32, i9 %add_ln543, i32 8" [src/srcnn.cpp:543]   --->   Operation 16 'bitselect' 'tmp_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns) (grouped into LUT with out node add_ln43)   --->   "%xor_ln543 = xor i8 %w0_read, i8 255" [src/srcnn.cpp:543]   --->   Operation 17 'xor' 'xor_ln543' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 18 [1/1] (0.00ns) (grouped into LUT with out node add_ln43)   --->   "%tw_eff = select i1 %tmp_7, i8 %xor_ln543, i8 96" [src/srcnn.cpp:543]   --->   Operation 18 'select' 'tw_eff' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.39> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 19 [1/1] (0.00ns) (grouped into LUT with out node add_ln43)   --->   "%tw_eff_cast = zext i8 %tw_eff" [src/srcnn.cpp:543]   --->   Operation 19 'zext' 'tw_eff_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.76ns) (out node of the LUT)   --->   "%add_ln43 = add i9 %tw_eff_cast, i9 12" [src/srcnn.cpp:43->src/srcnn.cpp:548]   --->   Operation 20 'add' 'add_ln43' <Predicate = true> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%th_eff_cast = zext i8 %th_eff" [src/srcnn.cpp:540]   --->   Operation 21 'zext' 'th_eff_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (2.39ns) (grouped into DSP with root node mul_ln43)   --->   "%add_ln43_1 = add i9 %th_eff_cast, i9 12" [src/srcnn.cpp:43->src/srcnn.cpp:548]   --->   Operation 22 'add' 'add_ln43_1' <Predicate = true> <Delay = 2.39> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : '<invalid operator> ' 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 23 [1/1] (0.00ns) (grouped into DSP with root node mul_ln43)   --->   "%zext_ln43 = zext i9 %add_ln43_1" [src/srcnn.cpp:43->src/srcnn.cpp:548]   --->   Operation 23 'zext' 'zext_ln43' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%zext_ln43_2 = zext i9 %add_ln43" [src/srcnn.cpp:43->src/srcnn.cpp:548]   --->   Operation 24 'zext' 'zext_ln43_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [4/4] (0.99ns) (root node of the DSP)   --->   "%mul_ln43 = mul i17 %zext_ln43, i17 %zext_ln43_2" [src/srcnn.cpp:43->src/srcnn.cpp:548]   --->   Operation 25 'mul' 'mul_ln43' <Predicate = true> <Delay = 0.99> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : '<invalid operator> ' 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
 
 State 2 <SV = 1> <Delay = 0.99>
-ST_2 : Operation 26 [3/4] (0.99ns) (root node of the DSP)   --->   "%mul_ln43 = mul i17 %zext_ln43, i17 %zext_ln43_2" [src/srcnn.cpp:43->src/srcnn.cpp:542]   --->   Operation 26 'mul' 'mul_ln43' <Predicate = true> <Delay = 0.99> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : '<invalid operator> ' 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 26 [3/4] (0.99ns) (root node of the DSP)   --->   "%mul_ln43 = mul i17 %zext_ln43, i17 %zext_ln43_2" [src/srcnn.cpp:43->src/srcnn.cpp:548]   --->   Operation 26 'mul' 'mul_ln43' <Predicate = true> <Delay = 0.99> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : '<invalid operator> ' 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
 
 State 3 <SV = 2> <Delay = 0.99>
-ST_3 : Operation 27 [2/4] (0.99ns) (root node of the DSP)   --->   "%mul_ln43 = mul i17 %zext_ln43, i17 %zext_ln43_2" [src/srcnn.cpp:43->src/srcnn.cpp:542]   --->   Operation 27 'mul' 'mul_ln43' <Predicate = true> <Delay = 0.99> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : '<invalid operator> ' 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 27 [2/4] (0.99ns) (root node of the DSP)   --->   "%mul_ln43 = mul i17 %zext_ln43, i17 %zext_ln43_2" [src/srcnn.cpp:43->src/srcnn.cpp:548]   --->   Operation 27 'mul' 'mul_ln43' <Predicate = true> <Delay = 0.99> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : '<invalid operator> ' 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
 
 State 4 <SV = 3> <Delay = 0.00>
-ST_4 : Operation 28 [1/4] (0.00ns) (root node of the DSP)   --->   "%mul_ln43 = mul i17 %zext_ln43, i17 %zext_ln43_2" [src/srcnn.cpp:43->src/srcnn.cpp:542]   --->   Operation 28 'mul' 'mul_ln43' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : '<invalid operator> ' 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 28 [1/4] (0.00ns) (root node of the DSP)   --->   "%mul_ln43 = mul i17 %zext_ln43, i17 %zext_ln43_2" [src/srcnn.cpp:43->src/srcnn.cpp:548]   --->   Operation 28 'mul' 'mul_ln43' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : '<invalid operator> ' 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
 
-State 5 <SV = 4> <Delay = 0.77>
-ST_5 : Operation 29 [1/1] (0.00ns)   --->   "%phase_read = read i1 @_ssdm_op_Read.ap_auto.i1, i1 %phase"   --->   Operation 29 'read' 'phase_read' <Predicate = true> <Delay = 0.00>
+State 5 <SV = 4> <Delay = 0.79>
+ST_5 : Operation 29 [1/1] (0.00ns)   --->   "%phase_1_read = read i1 @_ssdm_op_Read.ap_auto.i1, i1 %phase_1"   --->   Operation 29 'read' 'phase_1_read' <Predicate = true> <Delay = 0.00>
 ST_5 : Operation 30 [1/1] (0.00ns)   --->   "%input_ftmap_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %input_ftmap"   --->   Operation 30 'read' 'input_ftmap_read' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 31 [1/1] (0.20ns)   --->   "%select_ln60 = select i1 %phase_read, i3 4, i3 0" [src/srcnn.cpp:60->src/srcnn.cpp:542]   --->   Operation 31 'select' 'select_ln60' <Predicate = true> <Delay = 0.20> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.20> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_5 : Operation 32 [1/1] (0.00ns) (grouped into LUT with out node add_ln60_2)   --->   "%select_ln60_1 = select i1 %phase_read, i9 224, i9 0" [src/srcnn.cpp:60->src/srcnn.cpp:542]   --->   Operation 32 'select' 'select_ln60_1' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.39> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_5 : Operation 33 [1/1] (0.00ns) (grouped into LUT with out node add_ln60_2)   --->   "%select_ln60_2 = select i1 %phase_read, i9 56, i9 0" [src/srcnn.cpp:60->src/srcnn.cpp:542]   --->   Operation 33 'select' 'select_ln60_2' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.36> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_5 : Operation 34 [1/1] (0.77ns) (out node of the LUT)   --->   "%add_ln60_2 = add i9 %select_ln60_1, i9 %select_ln60_2" [src/srcnn.cpp:60->src/srcnn.cpp:542]   --->   Operation 34 'add' 'add_ln60_2' <Predicate = true> <Delay = 0.77> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 31 [1/1] (0.38ns)   --->   "%select_ln60 = select i1 %phase_1_read, i6 44, i6 0" [src/srcnn.cpp:60->src/srcnn.cpp:548]   --->   Operation 31 'select' 'select_ln60' <Predicate = true> <Delay = 0.38> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.38> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 32 [1/1] (0.00ns) (grouped into LUT with out node add_ln60_2)   --->   "%select_ln60_1 = select i1 %phase_1_read, i11 1408, i11 0" [src/srcnn.cpp:60->src/srcnn.cpp:548]   --->   Operation 32 'select' 'select_ln60_1' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.38> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 33 [1/1] (0.00ns) (grouped into LUT with out node add_ln60_2)   --->   "%select_ln60_2 = select i1 %phase_1_read, i11 432, i11 0" [src/srcnn.cpp:60->src/srcnn.cpp:548]   --->   Operation 33 'select' 'select_ln60_2' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.40> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 34 [1/1] (0.79ns) (out node of the LUT)   --->   "%add_ln60_2 = add i11 %select_ln60_1, i11 %select_ln60_2" [src/srcnn.cpp:60->src/srcnn.cpp:548]   --->   Operation 34 'add' 'add_ln60_2' <Predicate = true> <Delay = 0.79> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_5 : Operation 35 [1/1] (0.00ns)   --->   "%h0_cast10_i = zext i9 %h0_read"   --->   Operation 35 'zext' 'h0_cast10_i' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 36 [1/1] (0.77ns)   --->   "%add_ln48 = add i10 %h0_cast10_i, i10 1018" [src/srcnn.cpp:48->src/srcnn.cpp:542]   --->   Operation 36 'add' 'add_ln48' <Predicate = true> <Delay = 0.77> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_5 : Operation 37 [2/2] (0.00ns)   --->   "%call_ln60 = call void @load_tile_mm_Pipeline_InputTileHread_InputTileWread, i9 %add_ln60_2, i10 %add_ln48, i10 %add_ln48, i17 %mul_ln43, i9 %add_ln43, i3 %select_ln60, i8 %w0_read, i64 %input_ftmap_read, i32 %gmem_in, i32 %srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13, i32 %srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12, i32 %srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11" [src/srcnn.cpp:60->src/srcnn.cpp:542]   --->   Operation 37 'call' 'call_ln60' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 36 [1/1] (0.77ns)   --->   "%add_ln48 = add i10 %h0_cast10_i, i10 1018" [src/srcnn.cpp:48->src/srcnn.cpp:548]   --->   Operation 36 'add' 'add_ln48' <Predicate = true> <Delay = 0.77> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 37 [2/2] (0.00ns)   --->   "%call_ln60 = call void @load_tile_mm_Pipeline_InputTileHread_InputTileWread, i11 %add_ln60_2, i10 %add_ln48, i10 %add_ln48, i17 %mul_ln43, i9 %add_ln43, i6 %select_ln60, i8 %w0_read, i64 %input_ftmap_read, i32 %gmem_in, i32 %srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_45, i32 %srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_44, i32 %srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_43" [src/srcnn.cpp:60->src/srcnn.cpp:548]   --->   Operation 37 'call' 'call_ln60' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 6 <SV = 5> <Delay = 0.00>
-ST_6 : Operation 38 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13, i64 666, i64 18, i64 18446744073709551615"   --->   Operation 38 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 39 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12, i64 666, i64 18, i64 18446744073709551615"   --->   Operation 39 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 40 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11, i64 666, i64 18, i64 18446744073709551615"   --->   Operation 40 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 41 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem_in, void @empty_4, i32 0, i32 0, void @empty_8, i32 0, i32 65025, void @empty_27, void @empty_2, void @empty_8, i32 16, i32 16, i32 16, i32 16, void @empty_8, void @empty_8, i32 4294967295, i32 0"   --->   Operation 41 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 42 [1/2] (0.00ns)   --->   "%call_ln60 = call void @load_tile_mm_Pipeline_InputTileHread_InputTileWread, i9 %add_ln60_2, i10 %add_ln48, i10 %add_ln48, i17 %mul_ln43, i9 %add_ln43, i3 %select_ln60, i8 %w0_read, i64 %input_ftmap_read, i32 %gmem_in, i32 %srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13, i32 %srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12, i32 %srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11" [src/srcnn.cpp:60->src/srcnn.cpp:542]   --->   Operation 42 'call' 'call_ln60' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_6 : Operation 43 [1/1] (0.00ns)   --->   "%mrv = insertvalue i19 <undef>, i9 %h0_read" [src/srcnn.cpp:542]   --->   Operation 43 'insertvalue' 'mrv' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 44 [1/1] (0.00ns)   --->   "%mrv_1 = insertvalue i19 %mrv, i9 %w0_cast2" [src/srcnn.cpp:542]   --->   Operation 44 'insertvalue' 'mrv_1' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 45 [1/1] (0.00ns)   --->   "%mrv_2 = insertvalue i19 %mrv_1, i1 %phase_read" [src/srcnn.cpp:542]   --->   Operation 45 'insertvalue' 'mrv_2' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 46 [1/1] (0.00ns)   --->   "%ret_ln542 = ret i19 %mrv_2" [src/srcnn.cpp:542]   --->   Operation 46 'ret' 'ret_ln542' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 38 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_45, i64 666, i64 18, i64 18446744073709551615"   --->   Operation 38 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 39 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_44, i64 666, i64 18, i64 18446744073709551615"   --->   Operation 39 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 40 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_43, i64 666, i64 18, i64 18446744073709551615"   --->   Operation 40 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 41 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem_in, void @empty_43, i32 0, i32 0, void @empty_42, i32 0, i32 65025, void @empty_41, void @empty_40, void @empty_42, i32 16, i32 16, i32 16, i32 16, void @empty_42, void @empty_42, i32 4294967295, i32 0"   --->   Operation 41 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 42 [1/2] (0.00ns)   --->   "%call_ln60 = call void @load_tile_mm_Pipeline_InputTileHread_InputTileWread, i11 %add_ln60_2, i10 %add_ln48, i10 %add_ln48, i17 %mul_ln43, i9 %add_ln43, i6 %select_ln60, i8 %w0_read, i64 %input_ftmap_read, i32 %gmem_in, i32 %srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_45, i32 %srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_44, i32 %srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_43" [src/srcnn.cpp:60->src/srcnn.cpp:548]   --->   Operation 42 'call' 'call_ln60' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 43 [1/1] (0.00ns)   --->   "%mrv = insertvalue i19 <undef>, i9 %h0_read" [src/srcnn.cpp:548]   --->   Operation 43 'insertvalue' 'mrv' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 44 [1/1] (0.00ns)   --->   "%mrv_1 = insertvalue i19 %mrv, i9 %w0_cast2" [src/srcnn.cpp:548]   --->   Operation 44 'insertvalue' 'mrv_1' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 45 [1/1] (0.00ns)   --->   "%mrv_2 = insertvalue i19 %mrv_1, i1 %phase_1_read" [src/srcnn.cpp:548]   --->   Operation 45 'insertvalue' 'mrv_2' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 46 [1/1] (0.00ns)   --->   "%ret_ln548 = ret i19 %mrv_2" [src/srcnn.cpp:548]   --->   Operation 46 'ret' 'ret_ln548' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
@@ -152,10 +152,10 @@ Port [ gmem_in]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; ex
 Port [ input_ftmap]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
 Port [ h0]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
 Port [ w0]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ phase]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
-Port [ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=1; type=1; pingpong=1; private_global=0; MemPort=[0]; IO mode=ap_memory:ce=0
-Port [ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=1; type=1; pingpong=1; private_global=0; MemPort=[0]; IO mode=ap_memory:ce=0
-Port [ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=1; type=1; pingpong=1; private_global=0; MemPort=[0]; IO mode=ap_memory:ce=0
+Port [ phase_1]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_45]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=1; type=1; pingpong=1; private_global=0; MemPort=[0]; IO mode=ap_memory:ce=0
+Port [ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_44]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=1; type=1; pingpong=1; private_global=0; MemPort=[0]; IO mode=ap_memory:ce=0
+Port [ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_43]:  wired=1; compound=1; hidden=0; nouse=0; global=1; static=1; extern=0; dir=1; type=1; pingpong=1; private_global=0; MemPort=[0]; IO mode=ap_memory:ce=0
 ---------------- STG Properties END ------------------
 
 ---------------- Datapath Model BEGIN ----------------
@@ -165,14 +165,14 @@ Port [ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11]:  wired=1; compo
 w0_read           (read         ) [ 0011111]
 h0_read           (read         ) [ 0011111]
 w0_cast2          (zext         ) [ 0011111]
-add_ln534         (add          ) [ 0000000]
+add_ln540         (add          ) [ 0000000]
 tmp               (bitselect    ) [ 0000000]
-trunc_ln533       (trunc        ) [ 0000000]
-xor_ln534         (xor          ) [ 0000000]
+trunc_ln539       (trunc        ) [ 0000000]
+xor_ln540         (xor          ) [ 0000000]
 th_eff            (select       ) [ 0000000]
-add_ln537         (add          ) [ 0000000]
+add_ln543         (add          ) [ 0000000]
 tmp_7             (bitselect    ) [ 0000000]
-xor_ln537         (xor          ) [ 0000000]
+xor_ln543         (xor          ) [ 0000000]
 tw_eff            (select       ) [ 0000000]
 tw_eff_cast       (zext         ) [ 0000000]
 add_ln43          (add          ) [ 0011111]
@@ -181,7 +181,7 @@ add_ln43_1        (add          ) [ 0000000]
 zext_ln43         (zext         ) [ 0011100]
 zext_ln43_2       (zext         ) [ 0011100]
 mul_ln43          (mul          ) [ 0000011]
-phase_read        (read         ) [ 0000001]
+phase_1_read      (read         ) [ 0000001]
 input_ftmap_read  (read         ) [ 0000001]
 select_ln60       (select       ) [ 0000001]
 select_ln60_1     (select       ) [ 0000000]
@@ -197,7 +197,7 @@ call_ln60         (call         ) [ 0000000]
 mrv               (insertvalue  ) [ 0000000]
 mrv_1             (insertvalue  ) [ 0000000]
 mrv_2             (insertvalue  ) [ 0000000]
-ret_ln542         (ret          ) [ 0000000]
+ret_ln548         (ret          ) [ 0000000]
 </LifeTime>
 
 <model>
@@ -239,41 +239,41 @@ ret_ln542         (ret          ) [ 0000000]
 </bind>
 </comp>
 
-<comp id="8" class="1000" name="phase">
+<comp id="8" class="1000" name="phase_1">
 <pin_list>
 <pin id="9" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="phase"/></StgValue>
+<StgValue><ssdm name="phase_1"/></StgValue>
 </bind>
 </comp>
 
-<comp id="10" class="1000" name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13">
+<comp id="10" class="1000" name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_45">
 <pin_list>
 <pin id="11" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13"/><MemPortTyVec>0 </MemPortTyVec>
+<StgValue><ssdm name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_45"/><MemPortTyVec>0 </MemPortTyVec>
 </StgValue>
 </bind>
 </comp>
 
-<comp id="12" class="1000" name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12">
+<comp id="12" class="1000" name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_44">
 <pin_list>
 <pin id="13" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12"/><MemPortTyVec>0 </MemPortTyVec>
+<StgValue><ssdm name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_44"/><MemPortTyVec>0 </MemPortTyVec>
 </StgValue>
 </bind>
 </comp>
 
-<comp id="14" class="1000" name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11">
+<comp id="14" class="1000" name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_43">
 <pin_list>
 <pin id="15" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11"/><MemPortTyVec>0 </MemPortTyVec>
+<StgValue><ssdm name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_43"/><MemPortTyVec>0 </MemPortTyVec>
 </StgValue>
 </bind>
 </comp>
@@ -481,7 +481,7 @@ ret_ln542         (ret          ) [ 0000000]
 <pin id="61" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_4"/></StgValue>
+<StgValue><ssdm name="empty_43"/></StgValue>
 </bind>
 </comp>
 
@@ -499,7 +499,7 @@ ret_ln542         (ret          ) [ 0000000]
 <pin id="65" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_8"/></StgValue>
+<StgValue><ssdm name="empty_42"/></StgValue>
 </bind>
 </comp>
 
@@ -517,7 +517,7 @@ ret_ln542         (ret          ) [ 0000000]
 <pin id="69" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_27"/></StgValue>
+<StgValue><ssdm name="empty_41"/></StgValue>
 </bind>
 </comp>
 
@@ -526,7 +526,7 @@ ret_ln542         (ret          ) [ 0000000]
 <pin id="71" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_2"/></StgValue>
+<StgValue><ssdm name="empty_40"/></StgValue>
 </bind>
 </comp>
 
@@ -581,7 +581,7 @@ ret_ln542         (ret          ) [ 0000000]
 </bind>
 </comp>
 
-<comp id="90" class="1004" name="phase_read_read_fu_90">
+<comp id="90" class="1004" name="phase_1_read_read_fu_90">
 <pin_list>
 <pin id="91" dir="0" index="0" bw="1" slack="0"/>
 <pin id="92" dir="0" index="1" bw="1" slack="0"/>
@@ -589,7 +589,7 @@ ret_ln542         (ret          ) [ 0000000]
 </pin_list>
 <bind>
 <opcode="read(1150) " fcode="read"/>
-<opset="phase_read/5 "/>
+<opset="phase_1_read/5 "/>
 </bind>
 </comp>
 
@@ -608,12 +608,12 @@ ret_ln542         (ret          ) [ 0000000]
 <comp id="102" class="1004" name="grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102">
 <pin_list>
 <pin id="103" dir="0" index="0" bw="0" slack="0"/>
-<pin id="104" dir="0" index="1" bw="9" slack="0"/>
+<pin id="104" dir="0" index="1" bw="11" slack="0"/>
 <pin id="105" dir="0" index="2" bw="10" slack="0"/>
 <pin id="106" dir="0" index="3" bw="10" slack="0"/>
 <pin id="107" dir="0" index="4" bw="17" slack="1"/>
 <pin id="108" dir="0" index="5" bw="9" slack="4"/>
-<pin id="109" dir="0" index="6" bw="3" slack="0"/>
+<pin id="109" dir="0" index="6" bw="6" slack="0"/>
 <pin id="110" dir="0" index="7" bw="8" slack="4"/>
 <pin id="111" dir="0" index="8" bw="64" slack="0"/>
 <pin id="112" dir="0" index="9" bw="32" slack="0"/>
@@ -639,15 +639,15 @@ ret_ln542         (ret          ) [ 0000000]
 </bind>
 </comp>
 
-<comp id="127" class="1004" name="add_ln534_fu_127">
+<comp id="127" class="1004" name="add_ln540_fu_127">
 <pin_list>
 <pin id="128" dir="0" index="0" bw="9" slack="0"/>
-<pin id="129" dir="0" index="1" bw="6" slack="0"/>
+<pin id="129" dir="0" index="1" bw="8" slack="0"/>
 <pin id="130" dir="1" index="2" bw="9" slack="0"/>
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="add_ln534/1 "/>
+<opset="add_ln540/1 "/>
 </bind>
 </comp>
 
@@ -664,18 +664,18 @@ ret_ln542         (ret          ) [ 0000000]
 </bind>
 </comp>
 
-<comp id="141" class="1004" name="trunc_ln533_fu_141">
+<comp id="141" class="1004" name="trunc_ln539_fu_141">
 <pin_list>
 <pin id="142" dir="0" index="0" bw="9" slack="0"/>
 <pin id="143" dir="1" index="1" bw="8" slack="0"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
-<opset="trunc_ln533/1 "/>
+<opset="trunc_ln539/1 "/>
 </bind>
 </comp>
 
-<comp id="145" class="1004" name="xor_ln534_fu_145">
+<comp id="145" class="1004" name="xor_ln540_fu_145">
 <pin_list>
 <pin id="146" dir="0" index="0" bw="8" slack="0"/>
 <pin id="147" dir="0" index="1" bw="1" slack="0"/>
@@ -683,7 +683,7 @@ ret_ln542         (ret          ) [ 0000000]
 </pin_list>
 <bind>
 <opcode="xor(25) " fcode="xor"/>
-<opset="xor_ln534/1 "/>
+<opset="xor_ln540/1 "/>
 </bind>
 </comp>
 
@@ -691,7 +691,7 @@ ret_ln542         (ret          ) [ 0000000]
 <pin_list>
 <pin id="152" dir="0" index="0" bw="1" slack="0"/>
 <pin id="153" dir="0" index="1" bw="8" slack="0"/>
-<pin id="154" dir="0" index="2" bw="6" slack="0"/>
+<pin id="154" dir="0" index="2" bw="8" slack="0"/>
 <pin id="155" dir="1" index="3" bw="8" slack="0"/>
 </pin_list>
 <bind>
@@ -700,15 +700,15 @@ ret_ln542         (ret          ) [ 0000000]
 </bind>
 </comp>
 
-<comp id="159" class="1004" name="add_ln537_fu_159">
+<comp id="159" class="1004" name="add_ln543_fu_159">
 <pin_list>
 <pin id="160" dir="0" index="0" bw="8" slack="0"/>
-<pin id="161" dir="0" index="1" bw="6" slack="0"/>
+<pin id="161" dir="0" index="1" bw="8" slack="0"/>
 <pin id="162" dir="1" index="2" bw="9" slack="0"/>
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="add_ln537/1 "/>
+<opset="add_ln543/1 "/>
 </bind>
 </comp>
 
@@ -725,7 +725,7 @@ ret_ln542         (ret          ) [ 0000000]
 </bind>
 </comp>
 
-<comp id="173" class="1004" name="xor_ln537_fu_173">
+<comp id="173" class="1004" name="xor_ln543_fu_173">
 <pin_list>
 <pin id="174" dir="0" index="0" bw="8" slack="0"/>
 <pin id="175" dir="0" index="1" bw="1" slack="0"/>
@@ -733,7 +733,7 @@ ret_ln542         (ret          ) [ 0000000]
 </pin_list>
 <bind>
 <opcode="xor(25) " fcode="xor"/>
-<opset="xor_ln537/1 "/>
+<opset="xor_ln543/1 "/>
 </bind>
 </comp>
 
@@ -741,7 +741,7 @@ ret_ln542         (ret          ) [ 0000000]
 <pin_list>
 <pin id="180" dir="0" index="0" bw="1" slack="0"/>
 <pin id="181" dir="0" index="1" bw="8" slack="0"/>
-<pin id="182" dir="0" index="2" bw="6" slack="0"/>
+<pin id="182" dir="0" index="2" bw="8" slack="0"/>
 <pin id="183" dir="1" index="3" bw="8" slack="0"/>
 </pin_list>
 <bind>
@@ -798,9 +798,9 @@ ret_ln542         (ret          ) [ 0000000]
 <comp id="205" class="1004" name="select_ln60_fu_205">
 <pin_list>
 <pin id="206" dir="0" index="0" bw="1" slack="0"/>
-<pin id="207" dir="0" index="1" bw="3" slack="0"/>
+<pin id="207" dir="0" index="1" bw="6" slack="0"/>
 <pin id="208" dir="0" index="2" bw="1" slack="0"/>
-<pin id="209" dir="1" index="3" bw="3" slack="0"/>
+<pin id="209" dir="1" index="3" bw="6" slack="0"/>
 </pin_list>
 <bind>
 <opcode="select(49) " fcode="select"/>
@@ -811,9 +811,9 @@ ret_ln542         (ret          ) [ 0000000]
 <comp id="214" class="1004" name="select_ln60_1_fu_214">
 <pin_list>
 <pin id="215" dir="0" index="0" bw="1" slack="0"/>
-<pin id="216" dir="0" index="1" bw="9" slack="0"/>
+<pin id="216" dir="0" index="1" bw="11" slack="0"/>
 <pin id="217" dir="0" index="2" bw="1" slack="0"/>
-<pin id="218" dir="1" index="3" bw="9" slack="0"/>
+<pin id="218" dir="1" index="3" bw="11" slack="0"/>
 </pin_list>
 <bind>
 <opcode="select(49) " fcode="select"/>
@@ -824,9 +824,9 @@ ret_ln542         (ret          ) [ 0000000]
 <comp id="222" class="1004" name="select_ln60_2_fu_222">
 <pin_list>
 <pin id="223" dir="0" index="0" bw="1" slack="0"/>
-<pin id="224" dir="0" index="1" bw="7" slack="0"/>
+<pin id="224" dir="0" index="1" bw="10" slack="0"/>
 <pin id="225" dir="0" index="2" bw="1" slack="0"/>
-<pin id="226" dir="1" index="3" bw="9" slack="0"/>
+<pin id="226" dir="1" index="3" bw="11" slack="0"/>
 </pin_list>
 <bind>
 <opcode="select(49) " fcode="select"/>
@@ -836,9 +836,9 @@ ret_ln542         (ret          ) [ 0000000]
 
 <comp id="230" class="1004" name="add_ln60_2_fu_230">
 <pin_list>
-<pin id="231" dir="0" index="0" bw="9" slack="0"/>
-<pin id="232" dir="0" index="1" bw="7" slack="0"/>
-<pin id="233" dir="1" index="2" bw="9" slack="0"/>
+<pin id="231" dir="0" index="0" bw="11" slack="0"/>
+<pin id="232" dir="0" index="1" bw="10" slack="0"/>
+<pin id="233" dir="1" index="2" bw="11" slack="0"/>
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
@@ -978,13 +978,13 @@ ret_ln542         (ret          ) [ 0000000]
 </bind>
 </comp>
 
-<comp id="302" class="1005" name="phase_read_reg_302">
+<comp id="302" class="1005" name="phase_1_read_reg_302">
 <pin_list>
 <pin id="303" dir="0" index="0" bw="1" slack="1"/>
 <pin id="304" dir="1" index="1" bw="1" slack="1"/>
 </pin_list>
 <bind>
-<opset="phase_read "/>
+<opset="phase_1_read "/>
 </bind>
 </comp>
 
@@ -1000,8 +1000,8 @@ ret_ln542         (ret          ) [ 0000000]
 
 <comp id="312" class="1005" name="select_ln60_reg_312">
 <pin_list>
-<pin id="313" dir="0" index="0" bw="3" slack="1"/>
-<pin id="314" dir="1" index="1" bw="3" slack="1"/>
+<pin id="313" dir="0" index="0" bw="6" slack="1"/>
+<pin id="314" dir="1" index="1" bw="6" slack="1"/>
 </pin_list>
 <bind>
 <opset="select_ln60 "/>
@@ -1010,8 +1010,8 @@ ret_ln542         (ret          ) [ 0000000]
 
 <comp id="317" class="1005" name="add_ln60_2_reg_317">
 <pin_list>
-<pin id="318" dir="0" index="0" bw="9" slack="1"/>
-<pin id="319" dir="1" index="1" bw="9" slack="1"/>
+<pin id="318" dir="0" index="0" bw="11" slack="1"/>
+<pin id="319" dir="1" index="1" bw="11" slack="1"/>
 </pin_list>
 <bind>
 <opset="add_ln60_2 "/>
@@ -1214,21 +1214,21 @@ ret_ln542         (ret          ) [ 0000000]
 
 * FSMD analyzer results:
   - Output states:
-	Port: srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13 | {5 6 }
-	Port: srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12 | {5 6 }
-	Port: srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11 | {5 6 }
+	Port: srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_45 | {5 6 }
+	Port: srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_44 | {5 6 }
+	Port: srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_43 | {5 6 }
  - Input state : 
 	Port: load_tile_mm : gmem_in | {5 6 }
 	Port: load_tile_mm : input_ftmap | {5 }
 	Port: load_tile_mm : h0 | {1 }
 	Port: load_tile_mm : w0 | {1 }
-	Port: load_tile_mm : phase | {5 }
+	Port: load_tile_mm : phase_1 | {5 }
   - Chain level:
 	State 1
 		tmp : 1
-		xor_ln534 : 1
+		xor_ln540 : 1
 		th_eff : 1
-		add_ln537 : 1
+		add_ln543 : 1
 		tmp_7 : 2
 		tw_eff : 3
 		tw_eff_cast : 4
@@ -1248,7 +1248,7 @@ ret_ln542         (ret          ) [ 0000000]
 	State 6
 		mrv_1 : 1
 		mrv_2 : 2
-		ret_ln542 : 3
+		ret_ln548 : 3
 
 
 ============================================================
@@ -1259,28 +1259,28 @@ ret_ln542         (ret          ) [ 0000000]
 |----------|----------------------------------------------------------------|---------|---------|---------|---------|
 | Operation|                         Functional Unit                        |   DSP   |  Delay  |    FF   |   LUT   |
 |----------|----------------------------------------------------------------|---------|---------|---------|---------|
-|   call   | grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102 |    1    |  0.427  |   484   |   666   |
+|   call   | grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102 |    1    |  0.427  |   487   |   664   |
 |----------|----------------------------------------------------------------|---------|---------|---------|---------|
-|          |                        add_ln534_fu_127                        |    0    |    0    |    0    |    16   |
-|          |                        add_ln537_fu_159                        |    0    |    0    |    0    |    15   |
+|          |                        add_ln540_fu_127                        |    0    |    0    |    0    |    16   |
+|          |                        add_ln543_fu_159                        |    0    |    0    |    0    |    15   |
 |    add   |                         add_ln43_fu_191                        |    0    |    0    |    0    |    15   |
-|          |                        add_ln60_2_fu_230                       |    0    |    0    |    0    |    16   |
+|          |                        add_ln60_2_fu_230                       |    0    |    0    |    0    |    18   |
 |          |                         add_ln48_fu_240                        |    0    |    0    |    0    |    16   |
 |----------|----------------------------------------------------------------|---------|---------|---------|---------|
 |          |                          th_eff_fu_151                         |    0    |    0    |    0    |    8    |
 |          |                          tw_eff_fu_179                         |    0    |    0    |    0    |    8    |
-|  select  |                       select_ln60_fu_205                       |    0    |    0    |    0    |    3    |
-|          |                      select_ln60_1_fu_214                      |    0    |    0    |    0    |    9    |
-|          |                      select_ln60_2_fu_222                      |    0    |    0    |    0    |    7    |
+|  select  |                       select_ln60_fu_205                       |    0    |    0    |    0    |    6    |
+|          |                      select_ln60_1_fu_214                      |    0    |    0    |    0    |    10   |
+|          |                      select_ln60_2_fu_222                      |    0    |    0    |    0    |    10   |
 |----------|----------------------------------------------------------------|---------|---------|---------|---------|
-|    xor   |                        xor_ln534_fu_145                        |    0    |    0    |    0    |    8    |
-|          |                        xor_ln537_fu_173                        |    0    |    0    |    0    |    8    |
+|    xor   |                        xor_ln540_fu_145                        |    0    |    0    |    0    |    8    |
+|          |                        xor_ln543_fu_173                        |    0    |    0    |    0    |    8    |
 |----------|----------------------------------------------------------------|---------|---------|---------|---------|
 |  addmul  |                           grp_fu_263                           |    1    |    0    |    0    |    0    |
 |----------|----------------------------------------------------------------|---------|---------|---------|---------|
 |          |                       w0_read_read_fu_78                       |    0    |    0    |    0    |    0    |
 |   read   |                       h0_read_read_fu_84                       |    0    |    0    |    0    |    0    |
-|          |                      phase_read_read_fu_90                     |    0    |    0    |    0    |    0    |
+|          |                     phase_1_read_read_fu_90                    |    0    |    0    |    0    |    0    |
 |          |                   input_ftmap_read_read_fu_96                  |    0    |    0    |    0    |    0    |
 |----------|----------------------------------------------------------------|---------|---------|---------|---------|
 |          |                         w0_cast2_fu_123                        |    0    |    0    |    0    |    0    |
@@ -1292,13 +1292,13 @@ ret_ln542         (ret          ) [ 0000000]
 | bitselect|                           tmp_fu_133                           |    0    |    0    |    0    |    0    |
 |          |                          tmp_7_fu_165                          |    0    |    0    |    0    |    0    |
 |----------|----------------------------------------------------------------|---------|---------|---------|---------|
-|   trunc  |                       trunc_ln533_fu_141                       |    0    |    0    |    0    |    0    |
+|   trunc  |                       trunc_ln539_fu_141                       |    0    |    0    |    0    |    0    |
 |----------|----------------------------------------------------------------|---------|---------|---------|---------|
 |          |                           mrv_fu_248                           |    0    |    0    |    0    |    0    |
 |insertvalue|                          mrv_1_fu_253                          |    0    |    0    |    0    |    0    |
 |          |                          mrv_2_fu_258                          |    0    |    0    |    0    |    0    |
 |----------|----------------------------------------------------------------|---------|---------|---------|---------|
-|   Total  |                                                                |    2    |  0.427  |   484   |   795   |
+|   Total  |                                                                |    2    |  0.427  |   487   |   802   |
 |----------|----------------------------------------------------------------|---------|---------|---------|---------|
 
 Memories:
@@ -1310,31 +1310,31 @@ N/A
 +------------------------+--------+
 |    add_ln43_reg_287    |    9   |
 |    add_ln48_reg_322    |   10   |
-|   add_ln60_2_reg_317   |    9   |
+|   add_ln60_2_reg_317   |   11   |
 |     h0_read_reg_276    |    9   |
 |input_ftmap_read_reg_307|   64   |
 |    mul_ln43_reg_297    |   17   |
-|   phase_read_reg_302   |    1   |
-|   select_ln60_reg_312  |    3   |
+|  phase_1_read_reg_302  |    1   |
+|   select_ln60_reg_312  |    6   |
 |    w0_cast2_reg_282    |    9   |
 |     w0_read_reg_271    |    8   |
 |   zext_ln43_2_reg_292  |   17   |
 +------------------------+--------+
-|          Total         |   156  |
+|          Total         |   161  |
 +------------------------+--------+
 
 * Multiplexer (MUX) list: 
 |----------------------------------------------------------------|------|------|------|--------||---------||---------|
 |                              Comp                              |  Pin | Size |  BW  | S x BW ||  Delay  ||   LUT   |
 |----------------------------------------------------------------|------|------|------|--------||---------||---------|
-| grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102 |  p1  |   2  |   9  |   18   ||    9    |
+| grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102 |  p1  |   2  |  11  |   22   ||    9    |
 | grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102 |  p2  |   2  |  10  |   20   ||    9    |
 | grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102 |  p3  |   2  |  10  |   20   ||    9    |
-| grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102 |  p6  |   2  |   3  |    6   ||    9    |
+| grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102 |  p6  |   2  |   6  |   12   ||    9    |
 | grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102 |  p8  |   2  |  64  |   128  ||    9    |
 |                           grp_fu_263                           |  p1  |   2  |   4  |    8   ||    9    |
 |----------------------------------------------------------------|------|------|------|--------||---------||---------|
-|                              Total                             |      |      |      |   200  ||  2.562  ||    54   |
+|                              Total                             |      |      |      |   210  ||  2.562  ||    54   |
 |----------------------------------------------------------------|------|------|------|--------||---------||---------|
 
 
@@ -1343,10 +1343,10 @@ N/A
 +-----------+--------+--------+--------+--------+
 |           |   DSP  |  Delay |   FF   |   LUT  |
 +-----------+--------+--------+--------+--------+
-|  Function |    2   |    0   |   484  |   795  |
+|  Function |    2   |    0   |   487  |   802  |
 |   Memory  |    -   |    -   |    -   |    -   |
 |Multiplexer|    -   |    2   |    -   |   54   |
-|  Register |    -   |    -   |   156  |    -   |
+|  Register |    -   |    -   |   161  |    -   |
 +-----------+--------+--------+--------+--------+
-|   Total   |    2   |    2   |   640  |   849  |
+|   Total   |    2   |    2   |   648  |   856  |
 +-----------+--------+--------+--------+--------+

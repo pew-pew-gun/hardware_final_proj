@@ -1,7 +1,7 @@
 --- !Passed
 Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
-DebugLoc:        { File: src/srcnn.cpp, Line: 490, Column: 13 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 496, Column: 13 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Loop '''
@@ -11,7 +11,7 @@ Args:
 --- !Passed
 Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
-DebugLoc:        { File: src/srcnn.cpp, Line: 492, Column: 17 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 498, Column: 17 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Loop '''
@@ -21,8 +21,8 @@ Args:
 --- !Passed
 Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
-DebugLoc:        { File: src/srcnn.cpp, Line: 165, Column: 4 }
-Function:        _ZL12compute_tilePA28_fPA16_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+DebugLoc:        { File: src/srcnn.cpp, Line: 171, Column: 4 }
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
 Args:            
   - String:          'Loop '''
   - LoopName:        Conv1_kx
@@ -31,8 +31,8 @@ Args:
 --- !Passed
 Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
-DebugLoc:        { File: src/srcnn.cpp, Line: 211, Column: 9 }
-Function:        _ZL12compute_tilePA28_fPA16_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+DebugLoc:        { File: src/srcnn.cpp, Line: 217, Column: 9 }
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
 Args:            
   - String:          'Loop '''
   - LoopName:        Shift_win_row
@@ -41,8 +41,8 @@ Args:
 --- !Passed
 Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
-DebugLoc:        { File: src/srcnn.cpp, Line: 222, Column: 9 }
-Function:        _ZL12compute_tilePA28_fPA16_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+DebugLoc:        { File: src/srcnn.cpp, Line: 228, Column: 9 }
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
 Args:            
   - String:          'Loop '''
   - LoopName:        ReadLineInWin
@@ -51,8 +51,8 @@ Args:
 --- !Passed
 Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
-DebugLoc:        { File: src/srcnn.cpp, Line: 236, Column: 9 }
-Function:        _ZL12compute_tilePA28_fPA16_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+DebugLoc:        { File: src/srcnn.cpp, Line: 242, Column: 9 }
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
 Args:            
   - String:          'Loop '''
   - LoopName:        Update_linebuf_row
@@ -61,8 +61,8 @@ Args:
 --- !Passed
 Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
-DebugLoc:        { File: src/srcnn.cpp, Line: 291, Column: 15 }
-Function:        _ZL12compute_tilePA28_fPA16_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+DebugLoc:        { File: src/srcnn.cpp, Line: 297, Column: 15 }
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
 Args:            
   - String:          'Loop '''
   - LoopName:        Conv3_ky
@@ -71,8 +71,8 @@ Args:
 --- !Passed
 Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
-DebugLoc:        { File: src/srcnn.cpp, Line: 294, Column: 17 }
-Function:        _ZL12compute_tilePA28_fPA16_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+DebugLoc:        { File: src/srcnn.cpp, Line: 300, Column: 17 }
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
 Args:            
   - String:          'Loop '''
   - LoopName:        Conv3_kx
@@ -81,13 +81,13 @@ Args:
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: src/srcnn.cpp, Line: 357, Column: 0 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 363, Column: 0 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        CopyW2_ky
   - String:          ''' ('
-  - LoopLoc:         'src/srcnn.cpp:490:13'
+  - LoopLoc:         'src/srcnn.cpp:496:13'
   - String:          ') '
   - String:          'in function '''
   - String:          srcnn
@@ -97,13 +97,13 @@ Args:
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: src/srcnn.cpp, Line: 357, Column: 0 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 363, Column: 0 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        CopyW2_kx
   - String:          ''' ('
-  - LoopLoc:         'src/srcnn.cpp:492:17'
+  - LoopLoc:         'src/srcnn.cpp:498:17'
   - String:          ') '
   - String:          'in function '''
   - String:          srcnn
@@ -114,30 +114,30 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaPartiallyUnroll
 DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
-Function:        _ZL12compute_tilePA28_fPA16_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        Conv2Out_biases
   - String:          ''' ('
-  - LoopLoc:         'src/srcnn.cpp:123:7'
+  - LoopLoc:         'src/srcnn.cpp:129:7'
   - String:          ') '
   - String:          'in function '''
   - String:          compute_tile
   - String:          ''' partially '
   - String:          ''
   - String:          'with a factor of '
-  - Factor:          '8'
+  - Factor:          '16'
 ...
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
-Function:        _ZL12compute_tilePA28_fPA16_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        Conv1_kx
   - String:          ''' ('
-  - LoopLoc:         'src/srcnn.cpp:165:4'
+  - LoopLoc:         'src/srcnn.cpp:171:4'
   - String:          ') '
   - String:          'in function '''
   - String:          compute_tile
@@ -148,66 +148,66 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaPartiallyUnroll
 DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
-Function:        _ZL12compute_tilePA28_fPA16_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        Conv2_dot32
   - String:          ''' ('
-  - LoopLoc:         'src/srcnn.cpp:184:9'
+  - LoopLoc:         'src/srcnn.cpp:190:9'
   - String:          ') '
   - String:          'in function '''
   - String:          compute_tile
   - String:          ''' partially '
   - String:          ''
   - String:          'with a factor of '
-  - Factor:          '8'
+  - Factor:          '16'
 ...
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaPartiallyUnroll
 DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
-Function:        _ZL12compute_tilePA28_fPA16_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        Conv2_ReLU
   - String:          ''' ('
-  - LoopLoc:         'src/srcnn.cpp:194:7'
+  - LoopLoc:         'src/srcnn.cpp:200:7'
   - String:          ') '
   - String:          'in function '''
   - String:          compute_tile
   - String:          ''' partially '
   - String:          ''
   - String:          'with a factor of '
-  - Factor:          '8'
+  - Factor:          '16'
 ...
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaPartiallyUnroll
 DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
-Function:        _ZL12compute_tilePA28_fPA16_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        Shift_win32
   - String:          ''' ('
-  - LoopLoc:         'src/srcnn.cpp:206:7'
+  - LoopLoc:         'src/srcnn.cpp:212:7'
   - String:          ') '
   - String:          'in function '''
   - String:          compute_tile
   - String:          ''' partially '
   - String:          ''
   - String:          'with a factor of '
-  - Factor:          '8'
+  - Factor:          '16'
 ...
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
-Function:        _ZL12compute_tilePA28_fPA16_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        Shift_win_row
   - String:          ''' ('
-  - LoopLoc:         'src/srcnn.cpp:211:9'
+  - LoopLoc:         'src/srcnn.cpp:217:9'
   - String:          ') '
   - String:          'in function '''
   - String:          compute_tile
@@ -218,12 +218,12 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
-Function:        _ZL12compute_tilePA28_fPA16_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        ReadLineInWin
   - String:          ''' ('
-  - LoopLoc:         'src/srcnn.cpp:222:9'
+  - LoopLoc:         'src/srcnn.cpp:228:9'
   - String:          ') '
   - String:          'in function '''
   - String:          compute_tile
@@ -234,12 +234,12 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
-Function:        _ZL12compute_tilePA28_fPA16_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        Shift_win_row
   - String:          ''' ('
-  - LoopLoc:         'src/srcnn.cpp:211:9'
+  - LoopLoc:         'src/srcnn.cpp:217:9'
   - String:          ') '
   - String:          'in function '''
   - String:          compute_tile
@@ -250,12 +250,12 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
-Function:        _ZL12compute_tilePA28_fPA16_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        ReadLineInWin
   - String:          ''' ('
-  - LoopLoc:         'src/srcnn.cpp:222:9'
+  - LoopLoc:         'src/srcnn.cpp:228:9'
   - String:          ') '
   - String:          'in function '''
   - String:          compute_tile
@@ -266,12 +266,12 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
-Function:        _ZL12compute_tilePA28_fPA16_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        Shift_win_row
   - String:          ''' ('
-  - LoopLoc:         'src/srcnn.cpp:211:9'
+  - LoopLoc:         'src/srcnn.cpp:217:9'
   - String:          ') '
   - String:          'in function '''
   - String:          compute_tile
@@ -282,12 +282,12 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
-Function:        _ZL12compute_tilePA28_fPA16_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        ReadLineInWin
   - String:          ''' ('
-  - LoopLoc:         'src/srcnn.cpp:222:9'
+  - LoopLoc:         'src/srcnn.cpp:228:9'
   - String:          ') '
   - String:          'in function '''
   - String:          compute_tile
@@ -298,12 +298,12 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
-Function:        _ZL12compute_tilePA28_fPA16_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        Shift_win_row
   - String:          ''' ('
-  - LoopLoc:         'src/srcnn.cpp:211:9'
+  - LoopLoc:         'src/srcnn.cpp:217:9'
   - String:          ') '
   - String:          'in function '''
   - String:          compute_tile
@@ -314,12 +314,12 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
-Function:        _ZL12compute_tilePA28_fPA16_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        ReadLineInWin
   - String:          ''' ('
-  - LoopLoc:         'src/srcnn.cpp:222:9'
+  - LoopLoc:         'src/srcnn.cpp:228:9'
   - String:          ') '
   - String:          'in function '''
   - String:          compute_tile
@@ -330,12 +330,12 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
-Function:        _ZL12compute_tilePA28_fPA16_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        Shift_win_row
   - String:          ''' ('
-  - LoopLoc:         'src/srcnn.cpp:211:9'
+  - LoopLoc:         'src/srcnn.cpp:217:9'
   - String:          ') '
   - String:          'in function '''
   - String:          compute_tile
@@ -346,12 +346,12 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
-Function:        _ZL12compute_tilePA28_fPA16_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        ReadLineInWin
   - String:          ''' ('
-  - LoopLoc:         'src/srcnn.cpp:222:9'
+  - LoopLoc:         'src/srcnn.cpp:228:9'
   - String:          ') '
   - String:          'in function '''
   - String:          compute_tile
@@ -362,12 +362,12 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
-Function:        _ZL12compute_tilePA28_fPA16_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        Shift_win_row
   - String:          ''' ('
-  - LoopLoc:         'src/srcnn.cpp:211:9'
+  - LoopLoc:         'src/srcnn.cpp:217:9'
   - String:          ') '
   - String:          'in function '''
   - String:          compute_tile
@@ -378,12 +378,12 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
-Function:        _ZL12compute_tilePA28_fPA16_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        ReadLineInWin
   - String:          ''' ('
-  - LoopLoc:         'src/srcnn.cpp:222:9'
+  - LoopLoc:         'src/srcnn.cpp:228:9'
   - String:          ') '
   - String:          'in function '''
   - String:          compute_tile
@@ -394,12 +394,12 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
-Function:        _ZL12compute_tilePA28_fPA16_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        Shift_win_row
   - String:          ''' ('
-  - LoopLoc:         'src/srcnn.cpp:211:9'
+  - LoopLoc:         'src/srcnn.cpp:217:9'
   - String:          ') '
   - String:          'in function '''
   - String:          compute_tile
@@ -410,12 +410,12 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
-Function:        _ZL12compute_tilePA28_fPA16_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        ReadLineInWin
   - String:          ''' ('
-  - LoopLoc:         'src/srcnn.cpp:222:9'
+  - LoopLoc:         'src/srcnn.cpp:228:9'
   - String:          ') '
   - String:          'in function '''
   - String:          compute_tile
@@ -426,12 +426,12 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
-Function:        _ZL12compute_tilePA28_fPA16_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        Shift_win_row
   - String:          ''' ('
-  - LoopLoc:         'src/srcnn.cpp:211:9'
+  - LoopLoc:         'src/srcnn.cpp:217:9'
   - String:          ') '
   - String:          'in function '''
   - String:          compute_tile
@@ -442,12 +442,268 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
-Function:        _ZL12compute_tilePA28_fPA16_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        ReadLineInWin
   - String:          ''' ('
-  - LoopLoc:         'src/srcnn.cpp:222:9'
+  - LoopLoc:         'src/srcnn.cpp:228:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          compute_tile
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        Shift_win_row
+  - String:          ''' ('
+  - LoopLoc:         'src/srcnn.cpp:217:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          compute_tile
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        ReadLineInWin
+  - String:          ''' ('
+  - LoopLoc:         'src/srcnn.cpp:228:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          compute_tile
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        Shift_win_row
+  - String:          ''' ('
+  - LoopLoc:         'src/srcnn.cpp:217:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          compute_tile
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        ReadLineInWin
+  - String:          ''' ('
+  - LoopLoc:         'src/srcnn.cpp:228:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          compute_tile
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        Shift_win_row
+  - String:          ''' ('
+  - LoopLoc:         'src/srcnn.cpp:217:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          compute_tile
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        ReadLineInWin
+  - String:          ''' ('
+  - LoopLoc:         'src/srcnn.cpp:228:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          compute_tile
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        Shift_win_row
+  - String:          ''' ('
+  - LoopLoc:         'src/srcnn.cpp:217:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          compute_tile
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        ReadLineInWin
+  - String:          ''' ('
+  - LoopLoc:         'src/srcnn.cpp:228:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          compute_tile
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        Shift_win_row
+  - String:          ''' ('
+  - LoopLoc:         'src/srcnn.cpp:217:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          compute_tile
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        ReadLineInWin
+  - String:          ''' ('
+  - LoopLoc:         'src/srcnn.cpp:228:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          compute_tile
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        Shift_win_row
+  - String:          ''' ('
+  - LoopLoc:         'src/srcnn.cpp:217:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          compute_tile
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        ReadLineInWin
+  - String:          ''' ('
+  - LoopLoc:         'src/srcnn.cpp:228:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          compute_tile
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        Shift_win_row
+  - String:          ''' ('
+  - LoopLoc:         'src/srcnn.cpp:217:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          compute_tile
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        ReadLineInWin
+  - String:          ''' ('
+  - LoopLoc:         'src/srcnn.cpp:228:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          compute_tile
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        Shift_win_row
+  - String:          ''' ('
+  - LoopLoc:         'src/srcnn.cpp:217:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          compute_tile
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        ReadLineInWin
+  - String:          ''' ('
+  - LoopLoc:         'src/srcnn.cpp:228:9'
   - String:          ') '
   - String:          'in function '''
   - String:          compute_tile
@@ -458,30 +714,30 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaPartiallyUnroll
 DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
-Function:        _ZL12compute_tilePA28_fPA16_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        Update_linebuf32
   - String:          ''' ('
-  - LoopLoc:         'src/srcnn.cpp:232:7'
+  - LoopLoc:         'src/srcnn.cpp:238:7'
   - String:          ') '
   - String:          'in function '''
   - String:          compute_tile
   - String:          ''' partially '
   - String:          ''
   - String:          'with a factor of '
-  - Factor:          '8'
+  - Factor:          '16'
 ...
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
-Function:        _ZL12compute_tilePA28_fPA16_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        Update_linebuf_row
   - String:          ''' ('
-  - LoopLoc:         'src/srcnn.cpp:236:9'
+  - LoopLoc:         'src/srcnn.cpp:242:9'
   - String:          ') '
   - String:          'in function '''
   - String:          compute_tile
@@ -492,12 +748,12 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
-Function:        _ZL12compute_tilePA28_fPA16_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        Update_linebuf_row
   - String:          ''' ('
-  - LoopLoc:         'src/srcnn.cpp:236:9'
+  - LoopLoc:         'src/srcnn.cpp:242:9'
   - String:          ') '
   - String:          'in function '''
   - String:          compute_tile
@@ -508,12 +764,12 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
-Function:        _ZL12compute_tilePA28_fPA16_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        Update_linebuf_row
   - String:          ''' ('
-  - LoopLoc:         'src/srcnn.cpp:236:9'
+  - LoopLoc:         'src/srcnn.cpp:242:9'
   - String:          ') '
   - String:          'in function '''
   - String:          compute_tile
@@ -524,12 +780,12 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
-Function:        _ZL12compute_tilePA28_fPA16_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        Update_linebuf_row
   - String:          ''' ('
-  - LoopLoc:         'src/srcnn.cpp:236:9'
+  - LoopLoc:         'src/srcnn.cpp:242:9'
   - String:          ') '
   - String:          'in function '''
   - String:          compute_tile
@@ -540,12 +796,12 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
-Function:        _ZL12compute_tilePA28_fPA16_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        Update_linebuf_row
   - String:          ''' ('
-  - LoopLoc:         'src/srcnn.cpp:236:9'
+  - LoopLoc:         'src/srcnn.cpp:242:9'
   - String:          ') '
   - String:          'in function '''
   - String:          compute_tile
@@ -556,12 +812,12 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
-Function:        _ZL12compute_tilePA28_fPA16_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        Update_linebuf_row
   - String:          ''' ('
-  - LoopLoc:         'src/srcnn.cpp:236:9'
+  - LoopLoc:         'src/srcnn.cpp:242:9'
   - String:          ') '
   - String:          'in function '''
   - String:          compute_tile
@@ -572,12 +828,12 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
-Function:        _ZL12compute_tilePA28_fPA16_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        Update_linebuf_row
   - String:          ''' ('
-  - LoopLoc:         'src/srcnn.cpp:236:9'
+  - LoopLoc:         'src/srcnn.cpp:242:9'
   - String:          ') '
   - String:          'in function '''
   - String:          compute_tile
@@ -588,12 +844,12 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
-Function:        _ZL12compute_tilePA28_fPA16_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        Update_linebuf_row
   - String:          ''' ('
-  - LoopLoc:         'src/srcnn.cpp:236:9'
+  - LoopLoc:         'src/srcnn.cpp:242:9'
   - String:          ') '
   - String:          'in function '''
   - String:          compute_tile
@@ -604,12 +860,140 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
-Function:        _ZL12compute_tilePA28_fPA16_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_279_3
+  - LoopName:        Update_linebuf_row
   - String:          ''' ('
-  - LoopLoc:         'src/srcnn.cpp:279:32'
+  - LoopLoc:         'src/srcnn.cpp:242:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          compute_tile
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        Update_linebuf_row
+  - String:          ''' ('
+  - LoopLoc:         'src/srcnn.cpp:242:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          compute_tile
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        Update_linebuf_row
+  - String:          ''' ('
+  - LoopLoc:         'src/srcnn.cpp:242:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          compute_tile
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        Update_linebuf_row
+  - String:          ''' ('
+  - LoopLoc:         'src/srcnn.cpp:242:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          compute_tile
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        Update_linebuf_row
+  - String:          ''' ('
+  - LoopLoc:         'src/srcnn.cpp:242:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          compute_tile
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        Update_linebuf_row
+  - String:          ''' ('
+  - LoopLoc:         'src/srcnn.cpp:242:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          compute_tile
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        Update_linebuf_row
+  - String:          ''' ('
+  - LoopLoc:         'src/srcnn.cpp:242:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          compute_tile
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        Update_linebuf_row
+  - String:          ''' ('
+  - LoopLoc:         'src/srcnn.cpp:242:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          compute_tile
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_285_3
+  - String:          ''' ('
+  - LoopLoc:         'src/srcnn.cpp:285:32'
   - String:          ') '
   - String:          'in function '''
   - String:          compute_tile
@@ -620,12 +1004,12 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
-Function:        _ZL12compute_tilePA28_fPA16_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        Conv3_ky
   - String:          ''' ('
-  - LoopLoc:         'src/srcnn.cpp:291:15'
+  - LoopLoc:         'src/srcnn.cpp:297:15'
   - String:          ') '
   - String:          'in function '''
   - String:          compute_tile
@@ -636,12 +1020,12 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
-Function:        _ZL12compute_tilePA28_fPA16_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        Conv3_kx
   - String:          ''' ('
-  - LoopLoc:         'src/srcnn.cpp:294:17'
+  - LoopLoc:         'src/srcnn.cpp:300:17'
   - String:          ') '
   - String:          'in function '''
   - String:          compute_tile
@@ -652,12 +1036,12 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
-Function:        _ZL12compute_tilePA28_fPA16_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        Conv3_kx
   - String:          ''' ('
-  - LoopLoc:         'src/srcnn.cpp:294:17'
+  - LoopLoc:         'src/srcnn.cpp:300:17'
   - String:          ') '
   - String:          'in function '''
   - String:          compute_tile
@@ -668,12 +1052,12 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
-Function:        _ZL12compute_tilePA28_fPA16_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        Conv3_kx
   - String:          ''' ('
-  - LoopLoc:         'src/srcnn.cpp:294:17'
+  - LoopLoc:         'src/srcnn.cpp:300:17'
   - String:          ') '
   - String:          'in function '''
   - String:          compute_tile
@@ -684,12 +1068,12 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
-Function:        _ZL12compute_tilePA28_fPA16_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        Conv3_kx
   - String:          ''' ('
-  - LoopLoc:         'src/srcnn.cpp:294:17'
+  - LoopLoc:         'src/srcnn.cpp:300:17'
   - String:          ') '
   - String:          'in function '''
   - String:          compute_tile
@@ -700,12 +1084,12 @@ Args:
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
-Function:        _ZL12compute_tilePA28_fPA16_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        Conv3_kx
   - String:          ''' ('
-  - LoopLoc:         'src/srcnn.cpp:294:17'
+  - LoopLoc:         'src/srcnn.cpp:300:17'
   - String:          ') '
   - String:          'in function '''
   - String:          compute_tile
@@ -716,20 +1100,20 @@ Args:
 Pass:            reflow-inliner
 Name:            AutoInline
 DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
-Function:        _ZL12compute_tilePA28_fPA16_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
 Args:            
   - String:          'Inlining function '''
   - Callee:          'clampi(int, int, int)'
     DebugLoc:        { File: src/srcnn.cpp, Line: 24, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'compute_tile(float (*) [28], float (*) [16], float (*) [1][9][9], float*, float (*) [64][1][1], float*, float (*) [32][5][5], float*, int, int, int, int)'
+  - Caller:          'compute_tile(float (*) [108], float (*) [96], float (*) [1][9][9], float*, float (*) [64][1][1], float*, float (*) [32][5][5], float*, int, int, int, int)'
     DebugLoc:        { File: src/srcnn.cpp, Line: 77, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: src/srcnn.cpp, Line: 421, Column: 0 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 427, Column: 0 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Applying '
@@ -747,8 +1131,8 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: src/srcnn.cpp, Line: 419, Column: 0 }
-Function:        _ZL12compute_tilePA28_fPA16_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+DebugLoc:        { File: src/srcnn.cpp, Line: 425, Column: 0 }
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -765,8 +1149,8 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: src/srcnn.cpp, Line: 417, Column: 0 }
-Function:        _ZL12compute_tilePA28_fPA16_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+DebugLoc:        { File: src/srcnn.cpp, Line: 423, Column: 0 }
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -783,8 +1167,8 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: src/srcnn.cpp, Line: 420, Column: 0 }
-Function:        _ZL12compute_tilePA28_fPA16_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+DebugLoc:        { File: src/srcnn.cpp, Line: 426, Column: 0 }
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -795,7 +1179,7 @@ Args:
   - Mode:            Cyclic
   - String:          ' partitioning'
   - String:          ' with factor '
-  - Factor:          '8'
+  - Factor:          '16'
   - String:          ' on dimension '
   - Dim:             '2'
   - String:          .
@@ -815,7 +1199,7 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: src/srcnn.cpp, Line: 418, Column: 0 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 424, Column: 0 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Applying '
@@ -827,7 +1211,7 @@ Args:
   - Mode:            Cyclic
   - String:          ' partitioning'
   - String:          ' with factor '
-  - Factor:          '8'
+  - Factor:          '16'
   - String:          ' on dimension '
   - Dim:             '1'
   - String:          .
@@ -836,7 +1220,7 @@ Args:
 Pass:            reflow-array-partition
 Name:            ArrayXform
 DebugLoc:        { File: src/srcnn.cpp, Line: 82, Column: 10 }
-Function:        _ZL12compute_tilePA28_fPA16_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -847,7 +1231,7 @@ Args:
   - Mode:            Cyclic
   - String:          ' partitioning'
   - String:          ' with factor '
-  - Factor:          '8'
+  - Factor:          '16'
   - String:          ' on dimension '
   - Dim:             '1'
   - String:          .
@@ -861,8 +1245,8 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: src/srcnn.cpp, Line: 87, Column: 10 }
-Function:        _ZL12compute_tilePA28_fPA16_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+DebugLoc:        { File: src/srcnn.cpp, Line: 90, Column: 10 }
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -873,7 +1257,7 @@ Args:
   - Mode:            Cyclic
   - String:          ' partitioning'
   - String:          ' with factor '
-  - Factor:          '8'
+  - Factor:          '16'
   - String:          ' on dimension '
   - Dim:             '1'
   - String:          .
@@ -893,8 +1277,8 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: src/srcnn.cpp, Line: 120, Column: 10 }
-Function:        _ZL12compute_tilePA28_fPA16_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+DebugLoc:        { File: src/srcnn.cpp, Line: 126, Column: 10 }
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -905,7 +1289,7 @@ Args:
   - Mode:            Cyclic
   - String:          ' partitioning'
   - String:          ' with factor '
-  - Factor:          '8'
+  - Factor:          '16'
   - String:          ' on dimension '
   - Dim:             '1'
   - String:          .
@@ -913,8 +1297,8 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: src/srcnn.cpp, Line: 151, Column: 14 }
-Function:        _ZL12compute_tilePA28_fPA16_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+DebugLoc:        { File: src/srcnn.cpp, Line: 157, Column: 14 }
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -931,8 +1315,8 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: src/srcnn.cpp, Line: 191, Column: 15 }
-Function:        _ZL12compute_tilePA28_fPA16_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+DebugLoc:        { File: src/srcnn.cpp, Line: 197, Column: 15 }
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -943,7 +1327,7 @@ Args:
   - Mode:            Cyclic
   - String:          ' partitioning'
   - String:          ' with factor '
-  - Factor:          '8'
+  - Factor:          '16'
   - String:          ' on dimension '
   - Dim:             '1'
   - String:          .
@@ -951,8 +1335,8 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: src/srcnn.cpp, Line: 274, Column: 21 }
-Function:        _ZL12compute_tilePA28_fPA16_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
+DebugLoc:        { File: src/srcnn.cpp, Line: 280, Column: 21 }
+Function:        _ZL12compute_tilePA108_fPA96_fPA1_A9_A9_fPfPA64_A1_A1_fS7_PA32_A5_A5_fS7_iiii
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -975,7 +1359,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -986,7 +1370,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -997,7 +1381,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1008,7 +1392,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1019,7 +1403,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1030,7 +1414,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1041,7 +1425,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1052,7 +1436,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1063,7 +1447,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1074,7 +1458,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1085,7 +1469,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1096,7 +1480,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1107,7 +1491,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1118,7 +1502,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1129,7 +1513,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1140,7 +1524,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1151,7 +1535,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1162,7 +1546,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1173,7 +1557,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1184,7 +1568,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1195,7 +1579,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1206,7 +1590,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1217,7 +1601,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1228,7 +1612,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1239,7 +1623,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1250,7 +1634,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1261,7 +1645,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1272,7 +1656,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1283,7 +1667,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1294,7 +1678,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1305,7 +1689,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1316,7 +1700,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1327,7 +1711,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1338,7 +1722,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1349,7 +1733,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1360,7 +1744,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1371,7 +1755,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1382,7 +1766,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1393,7 +1777,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1404,7 +1788,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1415,7 +1799,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1426,7 +1810,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1437,7 +1821,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1448,7 +1832,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1459,7 +1843,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1470,7 +1854,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1481,7 +1865,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1492,7 +1876,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1503,7 +1887,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1514,7 +1898,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1525,7 +1909,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1536,7 +1920,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1547,7 +1931,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1558,7 +1942,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1569,7 +1953,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1580,7 +1964,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1591,7 +1975,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1602,7 +1986,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1613,7 +1997,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1624,7 +2008,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1635,7 +2019,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1646,7 +2030,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1657,7 +2041,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1668,7 +2052,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 447, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 453, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1679,7 +2063,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 448, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 454, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1690,7 +2074,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 448, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 454, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1701,7 +2085,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 448, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 454, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1712,7 +2096,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 448, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 454, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1723,7 +2107,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 448, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 454, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1734,7 +2118,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 448, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 454, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1745,7 +2129,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 448, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 454, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1756,7 +2140,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 448, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 454, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1767,7 +2151,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 448, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 454, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1778,7 +2162,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 448, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 454, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1789,7 +2173,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 448, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 454, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1800,7 +2184,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 448, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 454, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1811,7 +2195,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 448, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 454, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1822,7 +2206,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 448, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 454, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1833,7 +2217,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 448, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 454, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1844,7 +2228,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 448, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 454, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1855,7 +2239,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 448, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 454, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1866,7 +2250,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 448, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 454, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1877,7 +2261,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 448, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 454, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1888,7 +2272,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 448, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 454, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1899,7 +2283,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 448, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 454, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1910,7 +2294,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 448, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 454, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1921,7 +2305,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 448, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 454, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1932,7 +2316,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 448, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 454, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1943,7 +2327,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 448, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 454, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1954,7 +2338,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 448, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 454, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1965,7 +2349,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 448, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 454, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1976,7 +2360,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 448, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 454, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1987,7 +2371,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 448, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 454, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -1998,7 +2382,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 448, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 454, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -2009,7 +2393,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 448, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 454, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -2020,7 +2404,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 448, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 454, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -2031,7 +2415,7 @@ Args:
 --- !Passed
 Pass:            reflow-check-pragma-conflict-variable
 Name:            VariablePragmaScalarWarn
-DebugLoc:        { File: src/srcnn.cpp, Line: 449, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 455, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Unsuported scalar variable on pragma '''
@@ -2042,7 +2426,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: src/srcnn.cpp, Line: 468, Column: 3 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 474, Column: 3 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Sequential '
@@ -2051,28 +2435,28 @@ Args:
   - Length:          '5184'
   - String:          ' has been inferred'
   - String:          ' _XLX_SEP_ '
-  - AccessID:        conv1_weights342seq
+  - AccessID:        conv1_weights678seq
   - ArrayName:       conv1_weights
   - String:          ' '
   - BundleName:      gmem_w1
   - String:          ' '
   - LoopName:        CopyW1_outft
   - String:          ' '
-  - LoopLoc:         'src/srcnn.cpp:468:3'
+  - LoopLoc:         'src/srcnn.cpp:474:3'
   - String:          ' '
   - Function:        'srcnn(float (*) [255][255], float (*) [1][9][9], float*, float (*) [64][1][1], float*, float (*) [32][5][5], float*, float (*) [255][255], int)'
-    DebugLoc:        { File: src/srcnn.cpp, Line: 357, Column: 0 }
+    DebugLoc:        { File: src/srcnn.cpp, Line: 363, Column: 0 }
   - String:          ' '
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      load
-    DebugLoc:        { File: src/srcnn.cpp, Line: 477, Column: 33 }
+    DebugLoc:        { File: src/srcnn.cpp, Line: 483, Column: 33 }
   - OrigDirection:   read
   - OrigID:          for.inc.load.5
 ...
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: src/srcnn.cpp, Line: 468, Column: 3 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 474, Column: 3 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Sequential '
@@ -2081,28 +2465,28 @@ Args:
   - Length:          '64'
   - String:          ' has been inferred'
   - String:          ' _XLX_SEP_ '
-  - AccessID:        conv1_biases343seq
+  - AccessID:        conv1_biases679seq
   - ArrayName:       conv1_biases
   - String:          ' '
   - BundleName:      gmem_w1
   - String:          ' '
   - LoopName:        CopyW1_outft
   - String:          ' '
-  - LoopLoc:         'src/srcnn.cpp:468:3'
+  - LoopLoc:         'src/srcnn.cpp:474:3'
   - String:          ' '
   - Function:        'srcnn(float (*) [255][255], float (*) [1][9][9], float*, float (*) [64][1][1], float*, float (*) [32][5][5], float*, float (*) [255][255], int)'
-    DebugLoc:        { File: src/srcnn.cpp, Line: 357, Column: 0 }
+    DebugLoc:        { File: src/srcnn.cpp, Line: 363, Column: 0 }
   - String:          ' '
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      load
-    DebugLoc:        { File: src/srcnn.cpp, Line: 470, Column: 18 }
+    DebugLoc:        { File: src/srcnn.cpp, Line: 476, Column: 18 }
   - OrigDirection:   read
   - OrigID:          CopyW1_ky.load.6
 ...
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: src/srcnn.cpp, Line: 483, Column: 5 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 489, Column: 5 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Sequential '
@@ -2111,28 +2495,28 @@ Args:
   - Length:          '2048'
   - String:          ' has been inferred'
   - String:          ' _XLX_SEP_ '
-  - AccessID:        conv2_weights344seq
+  - AccessID:        conv2_weights680seq
   - ArrayName:       conv2_weights
   - String:          ' '
   - BundleName:      gmem_w2
   - String:          ' '
   - LoopName:        CopyW2_outft
   - String:          ' '
-  - LoopLoc:         'src/srcnn.cpp:483:5'
+  - LoopLoc:         'src/srcnn.cpp:489:5'
   - String:          ' '
   - Function:        'srcnn(float (*) [255][255], float (*) [1][9][9], float*, float (*) [64][1][1], float*, float (*) [32][5][5], float*, float (*) [255][255], int)'
-    DebugLoc:        { File: src/srcnn.cpp, Line: 357, Column: 0 }
+    DebugLoc:        { File: src/srcnn.cpp, Line: 363, Column: 0 }
   - String:          ' '
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      load
-    DebugLoc:        { File: src/srcnn.cpp, Line: 493, Column: 46 }
+    DebugLoc:        { File: src/srcnn.cpp, Line: 499, Column: 46 }
   - OrigDirection:   read
-  - OrigID:          for.inc69.load.19
+  - OrigID:          for.inc69.load.27
 ...
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: src/srcnn.cpp, Line: 483, Column: 5 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 489, Column: 5 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Sequential '
@@ -2141,28 +2525,28 @@ Args:
   - Length:          '32'
   - String:          ' has been inferred'
   - String:          ' _XLX_SEP_ '
-  - AccessID:        conv2_biases345seq
+  - AccessID:        conv2_biases681seq
   - ArrayName:       conv2_biases
   - String:          ' '
   - BundleName:      gmem_w2
   - String:          ' '
   - LoopName:        CopyW2_outft
   - String:          ' '
-  - LoopLoc:         'src/srcnn.cpp:483:5'
+  - LoopLoc:         'src/srcnn.cpp:489:5'
   - String:          ' '
   - Function:        'srcnn(float (*) [255][255], float (*) [1][9][9], float*, float (*) [64][1][1], float*, float (*) [32][5][5], float*, float (*) [255][255], int)'
-    DebugLoc:        { File: src/srcnn.cpp, Line: 357, Column: 0 }
+    DebugLoc:        { File: src/srcnn.cpp, Line: 363, Column: 0 }
   - String:          ' '
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      load
-    DebugLoc:        { File: src/srcnn.cpp, Line: 485, Column: 15 }
+    DebugLoc:        { File: src/srcnn.cpp, Line: 491, Column: 15 }
   - OrigDirection:   read
-  - OrigID:          CopyW2_inft.load.16
+  - OrigID:          CopyW2_inft.load.24
 ...
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: src/srcnn.cpp, Line: 505, Column: 5 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 511, Column: 5 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Sequential '
@@ -2171,21 +2555,21 @@ Args:
   - Length:          '800'
   - String:          ' has been inferred'
   - String:          ' _XLX_SEP_ '
-  - AccessID:        conv3_weights346seq
+  - AccessID:        conv3_weights682seq
   - ArrayName:       conv3_weights
   - String:          ' '
   - BundleName:      gmem_w3
   - String:          ' '
   - LoopName:        CopyW3_inft
   - String:          ' '
-  - LoopLoc:         'src/srcnn.cpp:505:5'
+  - LoopLoc:         'src/srcnn.cpp:511:5'
   - String:          ' '
   - Function:        'srcnn(float (*) [255][255], float (*) [1][9][9], float*, float (*) [64][1][1], float*, float (*) [32][5][5], float*, float (*) [255][255], int)'
-    DebugLoc:        { File: src/srcnn.cpp, Line: 357, Column: 0 }
+    DebugLoc:        { File: src/srcnn.cpp, Line: 363, Column: 0 }
   - String:          ' '
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      load
-    DebugLoc:        { File: src/srcnn.cpp, Line: 513, Column: 41 }
+    DebugLoc:        { File: src/srcnn.cpp, Line: 519, Column: 41 }
   - OrigDirection:   read
   - OrigID:          for.inc109.load.6
 ...
@@ -2193,7 +2577,7 @@ Args:
 Pass:            reflow-burst-inference
 Name:            CouldNotAnalyzePattern
 DebugLoc:        { File: src/srcnn.cpp, Line: 60, Column: 31 }
-Function:        _ZL12load_tile_mmPA255_A255_fiiiiPA28_f
+Function:        _ZL12load_tile_mmPA255_A255_fiiiiPA108_f
 Args:            
   - String:          Could not analyze pattern
   - String:          ' _XLX_SEP_ '
@@ -2209,15 +2593,15 @@ Args:
   - String:          ' '
   - LoopLoc:         'src/srcnn.cpp:53:9'
   - String:          ' '
-  - Function:        'load_tile_mm(float (*) [255][255], int, int, int, int, float (*) [28])'
+  - Function:        'load_tile_mm(float (*) [255][255], int, int, int, int, float (*) [108])'
     DebugLoc:        { File: src/srcnn.cpp, Line: 33, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: src/srcnn.cpp, Line: 341, Column: 5 }
-Function:        _ZL13store_tile_mmPA16_fPA255_A255_fiiii
+DebugLoc:        { File: src/srcnn.cpp, Line: 347, Column: 5 }
+Function:        _ZL13store_tile_mmPA96_fPA255_A255_fiiii
 Args:            
   - String:          'Sequential '
   - Direction:       write
@@ -2233,27 +2617,27 @@ Args:
   - String:          ' '
   - LoopName:        Out_writex
   - String:          ' '
-  - LoopLoc:         'src/srcnn.cpp:341:5'
+  - LoopLoc:         'src/srcnn.cpp:347:5'
   - String:          ' '
-  - Function:        'store_tile_mm(float (*) [16], float (*) [255][255], int, int, int, int)'
-    DebugLoc:        { File: src/srcnn.cpp, Line: 333, Column: 0 }
+  - Function:        'store_tile_mm(float (*) [96], float (*) [255][255], int, int, int, int)'
+    DebugLoc:        { File: src/srcnn.cpp, Line: 339, Column: 0 }
   - String:          ' '
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      store
-    DebugLoc:        { File: src/srcnn.cpp, Line: 344, Column: 25 }
+    DebugLoc:        { File: src/srcnn.cpp, Line: 350, Column: 25 }
   - OrigDirection:   write
   - OrigID:          for.inc.store.9
 ...
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            IncompatibleStride
-DebugLoc:        { File: src/srcnn.cpp, Line: 341, Column: 5 }
-Function:        _ZL13store_tile_mmPA16_fPA255_A255_fiiii
+DebugLoc:        { File: src/srcnn.cpp, Line: 347, Column: 5 }
+Function:        _ZL13store_tile_mmPA96_fPA255_A255_fiiii
 Args:            
   - String:          Stride is incompatible
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      call
-    DebugLoc:        { File: src/srcnn.cpp, Line: 341, Column: 5 }
+    DebugLoc:        { File: src/srcnn.cpp, Line: 347, Column: 5 }
   - OrigDirection:   write
   - OrigID:          scevgepseq
   - ArrayName:       out
@@ -2262,16 +2646,16 @@ Args:
   - String:          ' '
   - LoopName:        Out_writey
   - String:          ' '
-  - LoopLoc:         'src/srcnn.cpp:338:3'
+  - LoopLoc:         'src/srcnn.cpp:344:3'
   - String:          ' '
-  - Function:        'store_tile_mm(float (*) [16], float (*) [255][255], int, int, int, int)'
-    DebugLoc:        { File: src/srcnn.cpp, Line: 333, Column: 0 }
+  - Function:        'store_tile_mm(float (*) [96], float (*) [255][255], int, int, int, int)'
+    DebugLoc:        { File: src/srcnn.cpp, Line: 339, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-widen
 Name:            GreaterOrEqualThreshold
-DebugLoc:        { File: src/srcnn.cpp, Line: 505, Column: 5 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 511, Column: 5 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Could not widen since type '
@@ -2280,25 +2664,25 @@ Args:
   - Threshold:       '0'
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      call
-    DebugLoc:        { File: src/srcnn.cpp, Line: 505, Column: 5 }
+    DebugLoc:        { File: src/srcnn.cpp, Line: 511, Column: 5 }
   - OrigDirection:   read
-  - OrigID:          conv3_weights346seq
+  - OrigID:          conv3_weights682seq
   - ArrayName:       conv3_weights
   - String:          ' '
   - BundleName:      gmem_w3
   - String:          ' '
   - LoopName:        CopyW3_kx
   - String:          ' '
-  - LoopLoc:         'src/srcnn.cpp:511:13'
+  - LoopLoc:         'src/srcnn.cpp:517:13'
   - String:          ' '
   - Function:        'srcnn(float (*) [255][255], float (*) [1][9][9], float*, float (*) [64][1][1], float*, float (*) [32][5][5], float*, float (*) [255][255], int)'
-    DebugLoc:        { File: src/srcnn.cpp, Line: 357, Column: 0 }
+    DebugLoc:        { File: src/srcnn.cpp, Line: 363, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-widen
 Name:            GreaterOrEqualThreshold
-DebugLoc:        { File: src/srcnn.cpp, Line: 483, Column: 5 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 489, Column: 5 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Could not widen since type '
@@ -2307,25 +2691,25 @@ Args:
   - Threshold:       '0'
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      call
-    DebugLoc:        { File: src/srcnn.cpp, Line: 483, Column: 5 }
+    DebugLoc:        { File: src/srcnn.cpp, Line: 489, Column: 5 }
   - OrigDirection:   read
-  - OrigID:          conv2_weights344seq
+  - OrigID:          conv2_weights680seq
   - ArrayName:       conv2_weights
   - String:          ' '
   - BundleName:      gmem_w2
   - String:          ' '
   - LoopName:        CopyW2_inft
   - String:          ' '
-  - LoopLoc:         'src/srcnn.cpp:487:9'
+  - LoopLoc:         'src/srcnn.cpp:493:9'
   - String:          ' '
   - Function:        'srcnn(float (*) [255][255], float (*) [1][9][9], float*, float (*) [64][1][1], float*, float (*) [32][5][5], float*, float (*) [255][255], int)'
-    DebugLoc:        { File: src/srcnn.cpp, Line: 357, Column: 0 }
+    DebugLoc:        { File: src/srcnn.cpp, Line: 363, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-widen
 Name:            GreaterOrEqualThreshold
-DebugLoc:        { File: src/srcnn.cpp, Line: 483, Column: 5 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 489, Column: 5 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Could not widen since type '
@@ -2334,25 +2718,25 @@ Args:
   - Threshold:       '0'
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      call
-    DebugLoc:        { File: src/srcnn.cpp, Line: 483, Column: 5 }
+    DebugLoc:        { File: src/srcnn.cpp, Line: 489, Column: 5 }
   - OrigDirection:   read
-  - OrigID:          conv2_biases345seq
+  - OrigID:          conv2_biases681seq
   - ArrayName:       conv2_biases
   - String:          ' '
   - BundleName:      gmem_w2
   - String:          ' '
   - LoopName:        CopyW2_outft
   - String:          ' '
-  - LoopLoc:         'src/srcnn.cpp:483:5'
+  - LoopLoc:         'src/srcnn.cpp:489:5'
   - String:          ' '
   - Function:        'srcnn(float (*) [255][255], float (*) [1][9][9], float*, float (*) [64][1][1], float*, float (*) [32][5][5], float*, float (*) [255][255], int)'
-    DebugLoc:        { File: src/srcnn.cpp, Line: 357, Column: 0 }
+    DebugLoc:        { File: src/srcnn.cpp, Line: 363, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-widen
 Name:            GreaterOrEqualThreshold
-DebugLoc:        { File: src/srcnn.cpp, Line: 468, Column: 3 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 474, Column: 3 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Could not widen since type '
@@ -2361,25 +2745,25 @@ Args:
   - Threshold:       '0'
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      call
-    DebugLoc:        { File: src/srcnn.cpp, Line: 468, Column: 3 }
+    DebugLoc:        { File: src/srcnn.cpp, Line: 474, Column: 3 }
   - OrigDirection:   read
-  - OrigID:          conv1_weights342seq
+  - OrigID:          conv1_weights678seq
   - ArrayName:       conv1_weights
   - String:          ' '
   - BundleName:      gmem_w1
   - String:          ' '
   - LoopName:        CopyW1_kx
   - String:          ' '
-  - LoopLoc:         'src/srcnn.cpp:475:7'
+  - LoopLoc:         'src/srcnn.cpp:481:7'
   - String:          ' '
   - Function:        'srcnn(float (*) [255][255], float (*) [1][9][9], float*, float (*) [64][1][1], float*, float (*) [32][5][5], float*, float (*) [255][255], int)'
-    DebugLoc:        { File: src/srcnn.cpp, Line: 357, Column: 0 }
+    DebugLoc:        { File: src/srcnn.cpp, Line: 363, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-widen
 Name:            GreaterOrEqualThreshold
-DebugLoc:        { File: src/srcnn.cpp, Line: 468, Column: 3 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 474, Column: 3 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Could not widen since type '
@@ -2388,26 +2772,26 @@ Args:
   - Threshold:       '0'
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      call
-    DebugLoc:        { File: src/srcnn.cpp, Line: 468, Column: 3 }
+    DebugLoc:        { File: src/srcnn.cpp, Line: 474, Column: 3 }
   - OrigDirection:   read
-  - OrigID:          conv1_biases343seq
+  - OrigID:          conv1_biases679seq
   - ArrayName:       conv1_biases
   - String:          ' '
   - BundleName:      gmem_w1
   - String:          ' '
   - LoopName:        CopyW1_outft
   - String:          ' '
-  - LoopLoc:         'src/srcnn.cpp:468:3'
+  - LoopLoc:         'src/srcnn.cpp:474:3'
   - String:          ' '
   - Function:        'srcnn(float (*) [255][255], float (*) [1][9][9], float*, float (*) [64][1][1], float*, float (*) [32][5][5], float*, float (*) [255][255], int)'
-    DebugLoc:        { File: src/srcnn.cpp, Line: 357, Column: 0 }
+    DebugLoc:        { File: src/srcnn.cpp, Line: 363, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-widen
 Name:            GreaterOrEqualThreshold
-DebugLoc:        { File: src/srcnn.cpp, Line: 341, Column: 5 }
-Function:        _ZL13store_tile_mmPA16_fPA255_A255_fiiii
+DebugLoc:        { File: src/srcnn.cpp, Line: 347, Column: 5 }
+Function:        _ZL13store_tile_mmPA96_fPA255_A255_fiiii
 Args:            
   - String:          'Could not widen since type '
   - Type:            float
@@ -2415,7 +2799,7 @@ Args:
   - Threshold:       '0'
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      call
-    DebugLoc:        { File: src/srcnn.cpp, Line: 341, Column: 5 }
+    DebugLoc:        { File: src/srcnn.cpp, Line: 347, Column: 5 }
   - OrigDirection:   write
   - OrigID:          scevgepseq
   - ArrayName:       out
@@ -2424,10 +2808,10 @@ Args:
   - String:          ' '
   - LoopName:        Out_writex
   - String:          ' '
-  - LoopLoc:         'src/srcnn.cpp:341:5'
+  - LoopLoc:         'src/srcnn.cpp:347:5'
   - String:          ' '
-  - Function:        'store_tile_mm(float (*) [16], float (*) [255][255], int, int, int, int)'
-    DebugLoc:        { File: src/srcnn.cpp, Line: 333, Column: 0 }
+  - Function:        'store_tile_mm(float (*) [96], float (*) [255][255], int, int, int, int)'
+    DebugLoc:        { File: src/srcnn.cpp, Line: 339, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
@@ -2443,17 +2827,17 @@ Args:
   - String:          ' '
   - PragmaFunction:  srcnn
   - String:          ' '
-  - varLoc:          'src/srcnn.cpp:398:0'
+  - varLoc:          'src/srcnn.cpp:404:0'
   - String:          ' '
-  - PragmaSrcLoc:    'src/srcnn.cpp:163:9'
-    DebugLoc:        { File: src/srcnn.cpp, Line: 163, Column: 9 }
+  - PragmaSrcLoc:    'src/srcnn.cpp:169:9'
+    DebugLoc:        { File: src/srcnn.cpp, Line: 169, Column: 9 }
   - VarName:         'srcnn(float (*) [255][255], float (*) [1][9][9], float*, float (*) [64][1][1], float*, float (*) [32][5][5], float*, float (*) [255][255], int)::inbuf'
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-auto-array-partition
 Name:            AutoArrayXform
-DebugLoc:        { File: src/srcnn.cpp, Line: 163, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 169, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Inferring pragma '''
@@ -2484,17 +2868,17 @@ Args:
   - String:          ' '
   - PragmaFunction:  srcnn
   - String:          ' '
-  - varLoc:          'src/srcnn.cpp:416:0'
+  - varLoc:          'src/srcnn.cpp:422:0'
   - String:          ' '
-  - PragmaSrcLoc:    'src/srcnn.cpp:163:9'
-    DebugLoc:        { File: src/srcnn.cpp, Line: 163, Column: 9 }
+  - PragmaSrcLoc:    'src/srcnn.cpp:169:9'
+    DebugLoc:        { File: src/srcnn.cpp, Line: 169, Column: 9 }
   - VarName:         'srcnn(float (*) [255][255], float (*) [1][9][9], float*, float (*) [64][1][1], float*, float (*) [32][5][5], float*, float (*) [255][255], int)::w1_loc'
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-auto-array-partition
 Name:            AutoArrayXform
-DebugLoc:        { File: src/srcnn.cpp, Line: 163, Column: 9 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 169, Column: 9 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Inferring pragma '''
@@ -2515,7 +2899,7 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: src/srcnn.cpp, Line: 416, Column: 0 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 422, Column: 0 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Applying '
@@ -2535,7 +2919,7 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: src/srcnn.cpp, Line: 398, Column: 0 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 404, Column: 0 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Applying '
@@ -2555,8 +2939,8 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: src/srcnn.cpp, Line: 341, Column: 5 }
-Function:        _ZL13store_tile_mmPA16_fPA255_A255_fiiii.1
+DebugLoc:        { File: src/srcnn.cpp, Line: 347, Column: 5 }
+Function:        _ZL13store_tile_mmPA96_fPA255_A255_fiiii.1
 Args:            
   - String:          'Multiple burst '
   - Direction:       writes
@@ -2574,17 +2958,17 @@ Args:
   - String:          ' '
   - LoopName:        Out_writex
   - String:          ' '
-  - LoopLoc:         'src/srcnn.cpp:341:5'
+  - LoopLoc:         'src/srcnn.cpp:347:5'
   - String:          ' '
-  - Function:        'store_tile_mm(float (*) [16], float (*) [255][255], int, int, int, int) (.1)'
-    DebugLoc:        { File: src/srcnn.cpp, Line: 333, Column: 0 }
+  - Function:        'store_tile_mm(float (*) [96], float (*) [255][255], int, int, int, int) (.1)'
+    DebugLoc:        { File: src/srcnn.cpp, Line: 339, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: src/srcnn.cpp, Line: 341, Column: 5 }
-Function:        _ZL13store_tile_mmPA16_fPA255_A255_fiiii.1
+DebugLoc:        { File: src/srcnn.cpp, Line: 347, Column: 5 }
+Function:        _ZL13store_tile_mmPA96_fPA255_A255_fiiii.1
 Args:            
   - String:          'Multiple burst '
   - Direction:       writes
@@ -2595,7 +2979,7 @@ Args:
   - String:          ' in loop '''
   - LoopName:        Out_writex
   - String:          '''('
-  - LoopLoc:         'src/srcnn.cpp:341:5'
+  - LoopLoc:         'src/srcnn.cpp:347:5'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
   - BundleName:      gmem_out
@@ -2605,7 +2989,7 @@ Args:
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            BurstConflict
-DebugLoc:        { File: src/srcnn.cpp, Line: 468, Column: 3 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 474, Column: 3 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Could not burst due to multiple potential '
@@ -2613,7 +2997,7 @@ Args:
   - String:          ' to the same bundle in the same region.'
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      call
-    DebugLoc:        { File: src/srcnn.cpp, Line: 468, Column: 3 }
+    DebugLoc:        { File: src/srcnn.cpp, Line: 474, Column: 3 }
   - OrigDirection:   read
   - OrigID:          seq
   - ArrayName:       ''
@@ -2621,13 +3005,13 @@ Args:
   - BundleName:      gmem_w1
   - String:          ' '
   - Function:        'srcnn(float (*) [255][255], float (*) [1][9][9], float*, float (*) [64][1][1], float*, float (*) [32][5][5], float*, float (*) [255][255], int)'
-    DebugLoc:        { File: src/srcnn.cpp, Line: 357, Column: 0 }
+    DebugLoc:        { File: src/srcnn.cpp, Line: 363, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            BurstConflict
-DebugLoc:        { File: src/srcnn.cpp, Line: 483, Column: 5 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 489, Column: 5 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Could not burst due to multiple potential '
@@ -2635,7 +3019,7 @@ Args:
   - String:          ' to the same bundle in the same region.'
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      call
-    DebugLoc:        { File: src/srcnn.cpp, Line: 483, Column: 5 }
+    DebugLoc:        { File: src/srcnn.cpp, Line: 489, Column: 5 }
   - OrigDirection:   read
   - OrigID:          seq2
   - ArrayName:       ''
@@ -2643,13 +3027,13 @@ Args:
   - BundleName:      gmem_w2
   - String:          ' '
   - Function:        'srcnn(float (*) [255][255], float (*) [1][9][9], float*, float (*) [64][1][1], float*, float (*) [32][5][5], float*, float (*) [255][255], int)'
-    DebugLoc:        { File: src/srcnn.cpp, Line: 357, Column: 0 }
+    DebugLoc:        { File: src/srcnn.cpp, Line: 363, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: src/srcnn.cpp, Line: 505, Column: 5 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 511, Column: 5 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Multiple burst '
@@ -2668,16 +3052,16 @@ Args:
   - String:          ' '
   - LoopName:        CopyW3_inft
   - String:          ' '
-  - LoopLoc:         'src/srcnn.cpp:505:5'
+  - LoopLoc:         'src/srcnn.cpp:511:5'
   - String:          ' '
   - Function:        'srcnn(float (*) [255][255], float (*) [1][9][9], float*, float (*) [64][1][1], float*, float (*) [32][5][5], float*, float (*) [255][255], int)'
-    DebugLoc:        { File: src/srcnn.cpp, Line: 357, Column: 0 }
+    DebugLoc:        { File: src/srcnn.cpp, Line: 363, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: src/srcnn.cpp, Line: 505, Column: 5 }
+DebugLoc:        { File: src/srcnn.cpp, Line: 511, Column: 5 }
 Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i
 Args:            
   - String:          'Multiple burst '
@@ -2689,7 +3073,7 @@ Args:
   - String:          ' in loop '''
   - LoopName:        CopyW3_inft
   - String:          '''('
-  - LoopLoc:         'src/srcnn.cpp:505:5'
+  - LoopLoc:         'src/srcnn.cpp:511:5'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
   - BundleName:      gmem_w3

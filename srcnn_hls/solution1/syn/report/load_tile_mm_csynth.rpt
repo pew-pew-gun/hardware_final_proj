@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'load_tile_mm'
 ================================================================
-* Date:           Tue Oct 21 05:58:39 2025
+* Date:           Tue Oct 21 15:32:15 2025
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -54,14 +54,14 @@
 |       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
 +-----------------+---------+------+--------+--------+-----+
 |DSP              |        -|     1|       -|       -|    -|
-|Expression       |        -|     -|       0|     133|    -|
+|Expression       |        -|     -|       0|     142|    -|
 |FIFO             |        -|     -|       -|       -|    -|
-|Instance         |        -|     1|     554|     805|    -|
+|Instance         |        -|     1|     559|     803|    -|
 |Memory           |        -|     -|       -|       -|    -|
 |Multiplexer      |        -|     -|       -|      91|    -|
-|Register         |        -|     -|      77|       -|    -|
+|Register         |        -|     -|      80|       -|    -|
 +-----------------+---------+------+--------+--------+-----+
-|Total            |        0|     2|     631|    1029|    0|
+|Total            |        0|     2|     639|    1036|    0|
 +-----------------+---------+------+--------+--------+-----+
 |Available        |      288|  1248|  234240|  117120|   64|
 +-----------------+---------+------+--------+--------+-----+
@@ -73,16 +73,16 @@
     +----------------------------------------------------------------+-----------------------------------------------------+---------+----+-----+-----+-----+
     |                            Instance                            |                        Module                       | BRAM_18K| DSP|  FF | LUT | URAM|
     +----------------------------------------------------------------+-----------------------------------------------------+---------+----+-----+-----+-----+
-    |grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102  |load_tile_mm_Pipeline_InputTileHread_InputTileWread  |        0|   1|  554|  805|    0|
+    |grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102  |load_tile_mm_Pipeline_InputTileHread_InputTileWread  |        0|   1|  559|  803|    0|
     +----------------------------------------------------------------+-----------------------------------------------------+---------+----+-----+-----+-----+
-    |Total                                                           |                                                     |        0|   1|  554|  805|    0|
+    |Total                                                           |                                                     |        0|   1|  559|  803|    0|
     +----------------------------------------------------------------+-----------------------------------------------------+---------+----+-----+-----+-----+
 
     * DSP: 
     +-----------------------------------+------------------------------+----------------+
     |              Instance             |            Module            |   Expression   |
     +-----------------------------------+------------------------------+----------------+
-    |am_addmul_8ns_4ns_9ns_17_4_1_U245  |am_addmul_8ns_4ns_9ns_17_4_1  |  (i0 + i1) * i2|
+    |am_addmul_8ns_4ns_9ns_17_4_1_U453  |am_addmul_8ns_4ns_9ns_17_4_1  |  (i0 + i1) * i2|
     +-----------------------------------+------------------------------+----------------+
 
     * Memory: 
@@ -97,19 +97,19 @@
     +-------------------------+----------+----+---+----+------------+------------+
     |add_ln43_fu_191_p2       |         +|   0|  0|  16|           9|           4|
     |add_ln48_fu_240_p2       |         +|   0|  0|  17|          10|           4|
-    |add_ln534_fu_127_p2      |         +|   0|  0|  16|           9|           5|
-    |add_ln537_fu_159_p2      |         +|   0|  0|  16|           9|           5|
-    |add_ln60_2_fu_230_p2     |         +|   0|  0|  16|           9|           9|
+    |add_ln540_fu_127_p2      |         +|   0|  0|  16|           9|           7|
+    |add_ln543_fu_159_p2      |         +|   0|  0|  16|           9|           7|
+    |add_ln60_2_fu_230_p2     |         +|   0|  0|  18|          11|          11|
     |ap_block_state1          |        or|   0|  0|   2|           1|           1|
-    |select_ln60_1_fu_214_p3  |    select|   0|  0|   8|           1|           8|
-    |select_ln60_2_fu_222_p3  |    select|   0|  0|   6|           1|           6|
-    |select_ln60_fu_205_p3    |    select|   0|  0|   4|           1|           4|
+    |select_ln60_1_fu_214_p3  |    select|   0|  0|  10|           1|          11|
+    |select_ln60_2_fu_222_p3  |    select|   0|  0|   9|           1|           9|
+    |select_ln60_fu_205_p3    |    select|   0|  0|   6|           1|           6|
     |th_eff_fu_151_p3         |    select|   0|  0|   8|           1|           8|
     |tw_eff_fu_179_p3         |    select|   0|  0|   8|           1|           8|
-    |xor_ln534_fu_145_p2      |       xor|   0|  0|   8|           8|           2|
-    |xor_ln537_fu_173_p2      |       xor|   0|  0|   8|           8|           2|
+    |xor_ln540_fu_145_p2      |       xor|   0|  0|   8|           8|           2|
+    |xor_ln543_fu_173_p2      |       xor|   0|  0|   8|           8|           2|
     +-------------------------+----------+----+---+----+------------+------------+
-    |Total                    |          |   0|  0| 133|          68|          66|
+    |Total                    |          |   0|  0| 142|          70|          80|
     +-------------------------+----------+----+---+----+------------+------------+
 
     * Multiplexer: 
@@ -133,7 +133,7 @@
     +-----------------------------------------------------------------------------+----+----+-----+-----------+
     |add_ln43_reg_287                                                             |   9|   0|    9|          0|
     |add_ln48_reg_322                                                             |  10|   0|   10|          0|
-    |add_ln60_2_reg_317                                                           |   6|   0|    9|          3|
+    |add_ln60_2_reg_317                                                           |   7|   0|   11|          4|
     |ap_CS_fsm                                                                    |   6|   0|    6|          0|
     |ap_done_reg                                                                  |   1|   0|    1|          0|
     |ap_return_0_preg                                                             |   9|   0|    9|          0|
@@ -141,10 +141,10 @@
     |ap_return_2_preg                                                             |   1|   0|    1|          0|
     |grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_ap_start_reg  |   1|   0|    1|          0|
     |mul_ln43_reg_297                                                             |  17|   0|   17|          0|
-    |select_ln60_reg_312                                                          |   1|   0|    3|          2|
+    |select_ln60_reg_312                                                          |   3|   0|    6|          3|
     |w0_cast2_reg_282                                                             |   8|   0|    9|          1|
     +-----------------------------------------------------------------------------+----+----+-----+-----------+
-    |Total                                                                        |  77|   0|   84|          7|
+    |Total                                                                        |  80|   0|   89|          9|
     +-----------------------------------------------------------------------------+----+----+-----+-----------+
 
 
@@ -215,18 +215,18 @@
 |input_ftmap                                                       |   in|   64|     ap_none|                                              input_ftmap|        scalar|
 |h0                                                                |   in|    9|     ap_none|                                                       h0|        scalar|
 |w0                                                                |   in|    8|     ap_none|                                                       w0|        scalar|
-|phase                                                             |   in|    1|     ap_none|                                                    phase|        scalar|
-|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_address0  |  out|   10|   ap_memory|  srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13|         array|
-|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_ce0       |  out|    1|   ap_memory|  srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13|         array|
-|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_we0       |  out|    1|   ap_memory|  srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13|         array|
-|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_d0        |  out|   32|   ap_memory|  srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13|         array|
-|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_address0  |  out|   10|   ap_memory|  srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12|         array|
-|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_ce0       |  out|    1|   ap_memory|  srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12|         array|
-|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_we0       |  out|    1|   ap_memory|  srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12|         array|
-|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_d0        |  out|   32|   ap_memory|  srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12|         array|
-|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_address0  |  out|   10|   ap_memory|  srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11|         array|
-|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_ce0       |  out|    1|   ap_memory|  srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11|         array|
-|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_we0       |  out|    1|   ap_memory|  srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11|         array|
-|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_d0        |  out|   32|   ap_memory|  srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11|         array|
+|phase_1                                                           |   in|    1|     ap_none|                                                  phase_1|        scalar|
+|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_45_address0  |  out|   13|   ap_memory|  srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_45|         array|
+|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_45_ce0       |  out|    1|   ap_memory|  srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_45|         array|
+|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_45_we0       |  out|    1|   ap_memory|  srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_45|         array|
+|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_45_d0        |  out|   32|   ap_memory|  srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_45|         array|
+|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_44_address0  |  out|   13|   ap_memory|  srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_44|         array|
+|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_44_ce0       |  out|    1|   ap_memory|  srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_44|         array|
+|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_44_we0       |  out|    1|   ap_memory|  srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_44|         array|
+|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_44_d0        |  out|   32|   ap_memory|  srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_44|         array|
+|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_43_address0  |  out|   13|   ap_memory|  srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_43|         array|
+|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_43_ce0       |  out|    1|   ap_memory|  srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_43|         array|
+|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_43_we0       |  out|    1|   ap_memory|  srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_43|         array|
+|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_43_d0        |  out|   32|   ap_memory|  srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_43|         array|
 +------------------------------------------------------------------+-----+-----+------------+---------------------------------------------------------+--------------+
 

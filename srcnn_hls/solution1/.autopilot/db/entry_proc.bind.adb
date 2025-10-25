@@ -34,7 +34,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>555757919</coreId>
+						<coreId>1953391988</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -70,7 +70,7 @@
 						<coreName>FIFO_SRL</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>572538144</coreId>
+						<coreId>1953391988</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -110,7 +110,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1688676086</coreId>
+						<coreId>1095903008</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -197,7 +197,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1688795968</coreId>
+						<coreId>1095903008</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -245,7 +245,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>539453539</coreId>
+					<coreId>1398748755</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>

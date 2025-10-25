@@ -1,9 +1,9 @@
 {
   "0": {
     "basicblocks": 41,
-    "calls": "4 2 1",
+    "calls": "2 1 3",
     "file": "srcnn.cpp",
-    "fileloc": 351,
+    "fileloc": 357,
     "instructions": 191,
     "loads": {
       "G": 1,
@@ -13,49 +13,25 @@
     "stores": {
       "G": 7
     },
-    "total_instructions": 2794
+    "total_instructions": 4125
   },
   "1": {
-    "basicblocks": 11,
-    "calls": "",
-    "file": "srcnn.cpp",
-    "fileloc": 329,
-    "instructions": 33,
-    "loads": {
-      "L": 1
-    },
-    "name": "store_tile_mm",
-    "stores": {
-      "L": 1
-    },
-    "total_instructions": 33
-  },
-  "2": {
-    "basicblocks": 101,
-    "calls": "3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3",
+    "basicblocks": 149,
+    "calls": "4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4",
     "file": "srcnn.cpp",
     "fileloc": 69,
-    "instructions": 1967,
+    "instructions": 3298,
     "loads": {
-      "G": 52,
-      "L": 318
+      "G": 68,
+      "L": 566
     },
     "name": "compute_tile",
     "stores": {
-      "L": 297
+      "L": 553
     },
-    "total_instructions": 2517
+    "total_instructions": 3848
   },
-  "3": {
-    "basicblocks": 7,
-    "calls": "",
-    "file": "srcnn.cpp",
-    "fileloc": 24,
-    "instructions": 11,
-    "name": "clampi",
-    "total_instructions": 11
-  },
-  "4": {
+  "2": {
     "basicblocks": 19,
     "calls": "",
     "file": "srcnn.cpp",
@@ -69,5 +45,29 @@
       "L": 1
     },
     "total_instructions": 53
+  },
+  "3": {
+    "basicblocks": 11,
+    "calls": "",
+    "file": "srcnn.cpp",
+    "fileloc": 335,
+    "instructions": 33,
+    "loads": {
+      "L": 1
+    },
+    "name": "store_tile_mm",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 33
+  },
+  "4": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "srcnn.cpp",
+    "fileloc": 24,
+    "instructions": 11,
+    "name": "clampi",
+    "total_instructions": 11
   }
 }

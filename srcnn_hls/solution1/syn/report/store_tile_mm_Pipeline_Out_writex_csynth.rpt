@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'store_tile_mm_Pipeline_Out_writex'
 ================================================================
-* Date:           Tue Oct 21 05:58:51 2025
+* Date:           Tue Oct 21 15:32:43 2025
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -54,14 +54,14 @@
 |       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
 +-----------------+---------+------+--------+--------+-----+
 |DSP              |        -|     -|       -|       -|    -|
-|Expression       |        -|     -|       0|     378|    -|
+|Expression       |        -|     -|       0|     394|    -|
 |FIFO             |        -|     -|       -|       -|    -|
 |Instance         |        -|     -|       -|       -|    -|
 |Memory           |        -|     -|       -|       -|    -|
 |Multiplexer      |        -|     -|       -|      99|    -|
 |Register         |        -|     -|     216|      32|    -|
 +-----------------+---------+------+--------+--------+-----+
-|Total            |        0|     0|     216|     509|    0|
+|Total            |        0|     0|     216|     525|    0|
 +-----------------+---------+------+--------+--------+-----+
 |Available        |      288|  1248|  234240|  117120|   64|
 +-----------------+---------+------+--------+--------+-----+
@@ -85,32 +85,33 @@
     +----------------------------------+----------+----+---+----+------------+------------+
     |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +----------------------------------+----------+----+---+----+------------+------------+
-    |add_ln338_1_fu_395_p2             |         +|   0|  0|  29|          22|          22|
-    |add_ln338_2_fu_405_p2             |         +|   0|  0|  71|          64|          64|
-    |add_ln338_3_fu_284_p2             |         +|   0|  0|  23|          16|           1|
-    |add_ln338_fu_293_p2               |         +|   0|  0|  15|           8|           1|
-    |add_ln341_fu_436_p2               |         +|   0|  0|  15|           8|           1|
-    |add_ln344_1_fu_425_p2             |         +|   0|  0|  16|           9|           9|
-    |add_ln344_fu_331_p2               |         +|   0|  0|  16|           9|           9|
-    |empty_fu_242_p2                   |         +|   0|  0|  17|          10|          10|
-    |p_mid1_fu_347_p2                  |         +|   0|  0|  17|          10|          10|
-    |empty_69_fu_272_p2                |         -|   0|  0|  28|          21|          21|
-    |p_mid17_fu_377_p2                 |         -|   0|  0|  28|          21|          21|
+    |add_ln344_1_fu_429_p2             |         +|   0|  0|  29|          22|          22|
+    |add_ln344_2_fu_439_p2             |         +|   0|  0|  71|          64|          64|
+    |add_ln344_3_fu_294_p2             |         +|   0|  0|  23|          16|           1|
+    |add_ln344_fu_303_p2               |         +|   0|  0|  15|           8|           1|
+    |add_ln347_fu_470_p2               |         +|   0|  0|  15|           8|           1|
+    |add_ln350_1_fu_459_p2             |         +|   0|  0|  16|          15|          15|
+    |add_ln350_fu_341_p2               |         +|   0|  0|  16|           9|           9|
+    |empty_fu_252_p2                   |         +|   0|  0|  17|          10|          10|
+    |p_mid1_fu_381_p2                  |         +|   0|  0|  17|          10|          10|
+    |empty_95_fu_282_p2                |         -|   0|  0|  28|          21|          21|
+    |p_mid17_fu_411_p2                 |         -|   0|  0|  28|          21|          21|
+    |sub_ln350_fu_371_p2               |         -|   0|  0|  16|          15|          15|
     |ap_block_pp0_stage0_01001         |       and|   0|  0|   2|           1|           1|
     |ap_block_state2_io                |       and|   0|  0|   2|           1|           1|
     |ap_block_state8_pp0_stage0_iter7  |       and|   0|  0|   2|           1|           1|
-    |ap_condition_454                  |       and|   0|  0|   2|           1|           1|
-    |icmp_ln338_fu_278_p2              |      icmp|   0|  0|  23|          16|          16|
-    |icmp_ln341_1_fu_442_p2            |      icmp|   0|  0|  15|           8|           8|
-    |icmp_ln341_fu_299_p2              |      icmp|   0|  0|  15|           8|           8|
+    |ap_condition_472                  |       and|   0|  0|   2|           1|           1|
+    |icmp_ln344_fu_288_p2              |      icmp|   0|  0|  23|          16|          16|
+    |icmp_ln347_1_fu_476_p2            |      icmp|   0|  0|  15|           8|           8|
+    |icmp_ln347_fu_309_p2              |      icmp|   0|  0|  15|           8|           8|
     |ap_block_pp0_stage0_11001         |        or|   0|  0|   2|           1|           1|
-    |or_ln338_fu_305_p2                |        or|   0|  0|   2|           1|           1|
-    |select_ln338_1_fu_319_p3          |    select|   0|  0|   8|           1|           8|
-    |select_ln338_2_fu_383_p3          |    select|   0|  0|  20|           1|          21|
-    |select_ln338_fu_311_p3            |    select|   0|  0|   8|           1|           1|
+    |or_ln344_fu_315_p2                |        or|   0|  0|   2|           1|           1|
+    |select_ln344_1_fu_329_p3          |    select|   0|  0|   8|           1|           8|
+    |select_ln344_2_fu_417_p3          |    select|   0|  0|  20|           1|          21|
+    |select_ln344_fu_321_p3            |    select|   0|  0|   8|           1|           1|
     |ap_enable_pp0                     |       xor|   0|  0|   2|           1|           2|
     +----------------------------------+----------+----+---+----+------------+------------+
-    |Total                             |          |   0|  0| 378|         240|         239|
+    |Total                             |          |   0|  0| 394|         261|         260|
     +----------------------------------+----------+----+---+----+------------+------------+
 
     * Multiplexer: 
@@ -125,9 +126,9 @@
     |gmem_out_blk_n_AW                     |   9|          2|    1|          2|
     |gmem_out_blk_n_B                      |   9|          2|    1|          2|
     |gmem_out_blk_n_W                      |   9|          2|    1|          2|
-    |indvar_flatten_fu_112                 |   9|          2|   16|         32|
-    |x_fu_104                              |   9|          2|    8|         16|
-    |y_fu_108                              |   9|          2|    8|         16|
+    |indvar_flatten_fu_118                 |   9|          2|   16|         32|
+    |x_fu_110                              |   9|          2|    8|         16|
+    |y_fu_114                              |   9|          2|    8|         16|
     +--------------------------------------+----+-----------+-----+-----------+
     |Total                                 |  99|         22|   69|        138|
     +--------------------------------------+----+-----------+-----+-----------+
@@ -151,16 +152,16 @@
     |ap_loop_exit_ready_pp0_iter4_reg  |   1|   0|    1|          0|
     |ap_loop_exit_ready_pp0_iter5_reg  |   1|   0|    1|          0|
     |ap_loop_exit_ready_pp0_iter6_reg  |   1|   0|    1|          0|
-    |icmp_ln338_reg_509                |   1|   0|    1|          0|
-    |icmp_ln341_1_reg_527              |   1|   0|    1|          0|
-    |indvar_flatten_fu_112             |  16|   0|   16|          0|
-    |or_ln338_reg_513                  |   1|   0|    1|          0|
-    |outbuf_load_reg_531               |  32|   0|   32|          0|
-    |sext_ln341_mid2_v_reg_517         |  62|   0|   62|          0|
-    |x_fu_104                          |   8|   0|    8|          0|
-    |y_fu_108                          |   8|   0|    8|          0|
-    |zext_ln338_2_cast_reg_504         |   8|   0|   32|         24|
-    |icmp_ln341_1_reg_527              |  64|  32|    1|          0|
+    |icmp_ln344_reg_543                |   1|   0|    1|          0|
+    |icmp_ln347_1_reg_561              |   1|   0|    1|          0|
+    |indvar_flatten_fu_118             |  16|   0|   16|          0|
+    |or_ln344_reg_547                  |   1|   0|    1|          0|
+    |outbuf_load_reg_565               |  32|   0|   32|          0|
+    |sext_ln347_mid2_v_reg_551         |  62|   0|   62|          0|
+    |x_fu_110                          |   8|   0|    8|          0|
+    |y_fu_114                          |   8|   0|    8|          0|
+    |zext_ln344_2_cast_reg_538         |   8|   0|   32|         24|
+    |icmp_ln347_1_reg_561              |  64|  32|    1|          0|
     +----------------------------------+----+----+-----+-----------+
     |Total                             | 216|  32|  177|         24|
     +----------------------------------+----+----+-----+-----------+
@@ -226,14 +227,14 @@
 |m_axi_gmem_out_BRESP     |   in|    2|       m_axi|                           gmem_out|       pointer|
 |m_axi_gmem_out_BID       |   in|    1|       m_axi|                           gmem_out|       pointer|
 |m_axi_gmem_out_BUSER     |   in|    1|       m_axi|                           gmem_out|       pointer|
-|zext_ln338               |   in|    9|     ap_none|                         zext_ln338|        scalar|
+|zext_ln344               |   in|    9|     ap_none|                         zext_ln344|        scalar|
 |bound                    |   in|   16|     ap_none|                              bound|        scalar|
 |tw_eff                   |   in|    8|     ap_none|                             tw_eff|        scalar|
-|zext_ln338_2             |   in|    8|     ap_none|                       zext_ln338_2|        scalar|
-|zext_ln344               |   in|    5|     ap_none|                         zext_ln344|        scalar|
-|zext_ln338_1             |   in|   11|     ap_none|                       zext_ln338_1|        scalar|
+|zext_ln344_2             |   in|    8|     ap_none|                       zext_ln344_2|        scalar|
+|select_ln350             |   in|    6|     ap_none|                       select_ln350|        scalar|
+|zext_ln344_1             |   in|   11|     ap_none|                       zext_ln344_1|        scalar|
 |out_r                    |   in|   64|     ap_none|                              out_r|        scalar|
-|outbuf_address0          |  out|    9|   ap_memory|                             outbuf|         array|
+|outbuf_address0          |  out|   15|   ap_memory|                             outbuf|         array|
 |outbuf_ce0               |  out|    1|   ap_memory|                             outbuf|         array|
 |outbuf_q0                |   in|   32|   ap_memory|                             outbuf|         array|
 +-------------------------+-----+-----+------------+-----------------------------------+--------------+

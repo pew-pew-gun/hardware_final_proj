@@ -12,8 +12,8 @@ entity srcnn_dataflow_in_loop_IT_w0_outbuf_RAM_1P_BRAM_1R1W_memcore is
     generic(
         MEM_TYPE        : string    := "block"; 
         DataWidth       : integer   := 32; 
-        AddressWidth    : integer   := 10;
-        AddressRange    : integer   := 1024
+        AddressWidth    : integer   := 16;
+        AddressRange    : integer   := 36864
     ); 
     port (
         address0    : in std_logic_vector(AddressWidth-1 downto 0); 

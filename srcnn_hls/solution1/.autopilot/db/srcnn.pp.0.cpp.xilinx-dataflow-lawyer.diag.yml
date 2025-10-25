@@ -3,74 +3,74 @@ MainSourceFile:  'C:/Users/redre/Desktop/HAC/FinalProject/golden/srcnn_hls/solut
 Diagnostics:     
   - DiagnosticName:  clang-diagnostic-warning
     Message:         '[xlx-df-check-6] As the loop counter is not increased by 1, the compiler may not successfully process the dataflow loop'
-    FileOffset:      '536:32'
+    FileOffset:      '542:32'
     FilePath:        src/srcnn.cpp
   - DiagnosticName:  clang-diagnostic-warning
     Message:         '[xlx-df-check-10] Either use an argument of the function or declare the variable inside the dataflow loop body'
-    FileOffset:      '542:29'
+    FileOffset:      '548:29'
     FilePath:        src/srcnn.cpp
   - DiagnosticName:  clang-diagnostic-warning
     Message:         '[xlx-df-check-10] Either use an argument of the function or declare the variable inside the dataflow loop body'
-    FileOffset:      '542:37'
+    FileOffset:      '548:37'
     FilePath:        src/srcnn.cpp
   - DiagnosticName:  clang-diagnostic-warning
     Message:         '[xlx-df-check-10] Either use an argument of the function or declare the variable inside the dataflow loop body'
-    FileOffset:      '542:53'
+    FileOffset:      '548:53'
     FilePath:        src/srcnn.cpp
   - DiagnosticName:  clang-diagnostic-warning
     Message:         '[xlx-df-check-10] Either use an argument of the function or declare the variable inside the dataflow loop body'
-    FileOffset:      '543:21'
+    FileOffset:      '549:21'
     FilePath:        src/srcnn.cpp
   - DiagnosticName:  clang-diagnostic-warning
     Message:         '[xlx-df-check-10] Either use an argument of the function or declare the variable inside the dataflow loop body'
-    FileOffset:      '543:36'
+    FileOffset:      '549:36'
     FilePath:        src/srcnn.cpp
   - DiagnosticName:  clang-diagnostic-warning
     Message:         '[xlx-df-check-10] Either use an argument of the function or declare the variable inside the dataflow loop body'
-    FileOffset:      '544:21'
+    FileOffset:      '550:21'
     FilePath:        src/srcnn.cpp
   - DiagnosticName:  clang-diagnostic-warning
     Message:         '[xlx-df-check-10] Either use an argument of the function or declare the variable inside the dataflow loop body'
-    FileOffset:      '544:29'
+    FileOffset:      '550:29'
     FilePath:        src/srcnn.cpp
   - DiagnosticName:  clang-diagnostic-warning
     Message:         '[xlx-df-check-10] Either use an argument of the function or declare the variable inside the dataflow loop body'
-    FileOffset:      '545:21'
+    FileOffset:      '551:21'
     FilePath:        src/srcnn.cpp
   - DiagnosticName:  clang-diagnostic-warning
     Message:         '[xlx-df-check-10] Either use an argument of the function or declare the variable inside the dataflow loop body'
-    FileOffset:      '545:29'
+    FileOffset:      '551:29'
     FilePath:        src/srcnn.cpp
   - DiagnosticName:  clang-diagnostic-warning
     Message:         '[xlx-df-check-10] Either use an argument of the function or declare the variable inside the dataflow loop body'
-    FileOffset:      '546:21'
+    FileOffset:      '552:21'
     FilePath:        src/srcnn.cpp
   - DiagnosticName:  clang-diagnostic-warning
     Message:         '[xlx-df-check-10] Either use an argument of the function or declare the variable inside the dataflow loop body'
-    FileOffset:      '546:29'
+    FileOffset:      '552:29'
     FilePath:        src/srcnn.cpp
   - DiagnosticName:  clang-diagnostic-warning
     Message:         '[xlx-df-check-10] Either use an argument of the function or declare the variable inside the dataflow loop body'
-    FileOffset:      '547:6'
+    FileOffset:      '553:6'
     FilePath:        src/srcnn.cpp
   - DiagnosticName:  clang-diagnostic-warning
     Message:         '[xlx-df-check-10] Either use an argument of the function or declare the variable inside the dataflow loop body'
-    FileOffset:      '547:14'
+    FileOffset:      '553:14'
     FilePath:        src/srcnn.cpp
   - DiagnosticName:  clang-diagnostic-warning
     Message:         '[xlx-df-check-10] Either use an argument of the function or declare the variable inside the dataflow loop body'
-    FileOffset:      '548:21'
+    FileOffset:      '554:21'
     FilePath:        src/srcnn.cpp
   - DiagnosticName:  clang-diagnostic-warning
     Message:         '[xlx-df-check-10] Either use an argument of the function or declare the variable inside the dataflow loop body'
-    FileOffset:      '548:51'
+    FileOffset:      '554:51'
     FilePath:        src/srcnn.cpp
   - DiagnosticName:  clang-diagnostic-warning
     Message:         '[xlx-df-check-10] Either use an argument of the function or declare the variable inside the dataflow loop body'
-    FileOffset:      '548:59'
+    FileOffset:      '554:59'
     FilePath:        src/srcnn.cpp
   - DiagnosticName:  clang-diagnostic-warning
     Message:         '[xlx-df-check-11] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region'
-    FileOffset:      '539:9'
+    FileOffset:      '545:9'
     FilePath:        src/srcnn.cpp
 ...

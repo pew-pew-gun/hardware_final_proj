@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'compute_tile_Pipeline_Conv2_dot32'" level="0">
-<item name = "Date">Tue Oct 21 05:58:18 2025
+<item name = "Date">Tue Oct 21 15:31:18 2025
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">13, 13, 0.130 us, 0.130 us, 13, 13, no</column>
+<column name="">11, 11, 0.110 us, 0.110 us, 11, 11, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- Conv2_dot32">11, 11, 9, 1, 1, 4, yes</column>
+<column name="- Conv2_dot32">9, 9, 9, 1, 1, 2, yes</column>
 </table>
 </item>
 </section>

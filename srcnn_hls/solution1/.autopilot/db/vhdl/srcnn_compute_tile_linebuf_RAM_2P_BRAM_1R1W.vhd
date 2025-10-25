@@ -12,8 +12,8 @@ entity srcnn_compute_tile_linebuf_RAM_2P_BRAM_1R1W is
     generic(
         MEM_TYPE        : string    := "block"; 
         DataWidth       : integer   := 32; 
-        AddressWidth    : integer   := 7;
-        AddressRange    : integer   := 80
+        AddressWidth    : integer   := 8;
+        AddressRange    : integer   := 200
     ); 
     port (
         address0    : in std_logic_vector(AddressWidth-1 downto 0); 

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'srcnn'" level="0">
-<item name = "Date">Tue Oct 21 05:58:33 2025
+<item name = "Date">Tue Oct 21 15:32:03 2025
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -37,8 +37,8 @@
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
 <column name="- CopyW1_outft">6720, 6720, 105, -, -, 64, no</column>
 <column name="- CopyW2_outft">2816, 2816, 88, -, -, 32, no</column>
-<column name="- IT_h0">?, ?, ?, -, -, 16, no</column>
-<column name=" + IT_w0">?, ?, ?, -, -, 16, no</column>
+<column name="- IT_h0">?, ?, ?, -, -, 3, no</column>
+<column name=" + IT_w0">?, ?, ?, -, -, 3, no</column>
 </table>
 </item>
 </section>

@@ -63,19 +63,19 @@ module srcnn_load_tile_mm (
         input_ftmap,
         h0,
         w0,
-        phase,
-        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_address0,
-        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_ce0,
-        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_we0,
-        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_d0,
-        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_address0,
-        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_ce0,
-        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_we0,
-        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_d0,
-        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_address0,
-        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_ce0,
-        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_we0,
-        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_d0,
+        phase_1,
+        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_45_address0,
+        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_45_ce0,
+        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_45_we0,
+        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_45_d0,
+        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_44_address0,
+        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_44_ce0,
+        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_44_we0,
+        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_44_d0,
+        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_43_address0,
+        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_43_ce0,
+        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_43_we0,
+        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_43_d0,
         ap_return_0,
         ap_return_1,
         ap_return_2
@@ -144,19 +144,19 @@ input  [0:0] m_axi_gmem_in_BUSER;
 input  [63:0] input_ftmap;
 input  [8:0] h0;
 input  [7:0] w0;
-input  [0:0] phase;
-output  [9:0] srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_address0;
-output   srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_ce0;
-output   srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_we0;
-output  [31:0] srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_d0;
-output  [9:0] srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_address0;
-output   srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_ce0;
-output   srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_we0;
-output  [31:0] srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_d0;
-output  [9:0] srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_address0;
-output   srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_ce0;
-output   srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_we0;
-output  [31:0] srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_d0;
+input  [0:0] phase_1;
+output  [12:0] srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_45_address0;
+output   srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_45_ce0;
+output   srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_45_we0;
+output  [31:0] srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_45_d0;
+output  [12:0] srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_44_address0;
+output   srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_44_ce0;
+output   srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_44_we0;
+output  [31:0] srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_44_d0;
+output  [12:0] srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_43_address0;
+output   srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_43_ce0;
+output   srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_43_we0;
+output  [31:0] srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_43_d0;
 output  [8:0] ap_return_0;
 output  [8:0] ap_return_1;
 output  [0:0] ap_return_2;
@@ -182,10 +182,10 @@ wire  signed [16:0] grp_fu_263_p3;
 reg   [16:0] mul_ln43_reg_297;
 wire    ap_CS_fsm_state4;
 wire    ap_CS_fsm_state5;
-wire   [2:0] select_ln60_fu_205_p3;
-reg   [2:0] select_ln60_reg_312;
-wire   [8:0] add_ln60_2_fu_230_p2;
-reg   [8:0] add_ln60_2_reg_317;
+wire   [5:0] select_ln60_fu_205_p3;
+reg   [5:0] select_ln60_reg_312;
+wire   [10:0] add_ln60_2_fu_230_p2;
+reg   [10:0] add_ln60_2_reg_317;
 wire   [9:0] add_ln48_fu_240_p2;
 reg   [9:0] add_ln48_reg_322;
 wire    grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_ap_start;
@@ -224,32 +224,32 @@ wire   [3:0] grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_ax
 wire   [0:0] grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_ARUSER;
 wire    grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_RREADY;
 wire    grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_m_axi_gmem_in_BREADY;
-wire   [9:0] grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_address0;
-wire    grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_ce0;
-wire    grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_we0;
-wire   [31:0] grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_d0;
-wire   [9:0] grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_address0;
-wire    grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_ce0;
-wire    grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_we0;
-wire   [31:0] grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_d0;
-wire   [9:0] grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_address0;
-wire    grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_ce0;
-wire    grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_we0;
-wire   [31:0] grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_d0;
+wire   [12:0] grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_45_address0;
+wire    grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_45_ce0;
+wire    grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_45_we0;
+wire   [31:0] grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_45_d0;
+wire   [12:0] grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_44_address0;
+wire    grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_44_ce0;
+wire    grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_44_we0;
+wire   [31:0] grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_44_d0;
+wire   [12:0] grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_43_address0;
+wire    grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_43_ce0;
+wire    grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_43_we0;
+wire   [31:0] grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_43_d0;
 reg    grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_ap_start_reg;
 wire    ap_CS_fsm_state6;
-wire   [8:0] add_ln534_fu_127_p2;
-wire   [7:0] trunc_ln533_fu_141_p1;
+wire   [8:0] add_ln540_fu_127_p2;
+wire   [7:0] trunc_ln539_fu_141_p1;
 wire   [0:0] tmp_fu_133_p3;
-wire   [7:0] xor_ln534_fu_145_p2;
-wire   [8:0] add_ln537_fu_159_p2;
+wire   [7:0] xor_ln540_fu_145_p2;
+wire   [8:0] add_ln543_fu_159_p2;
 wire   [0:0] tmp_7_fu_165_p3;
-wire   [7:0] xor_ln537_fu_173_p2;
+wire   [7:0] xor_ln543_fu_173_p2;
 wire   [7:0] tw_eff_fu_179_p3;
 wire   [8:0] tw_eff_cast_fu_187_p1;
 wire   [7:0] th_eff_fu_151_p3;
-wire   [8:0] select_ln60_1_fu_214_p3;
-wire   [8:0] select_ln60_2_fu_222_p3;
+wire   [10:0] select_ln60_1_fu_214_p3;
+wire   [10:0] select_ln60_2_fu_222_p3;
 wire   [9:0] h0_cast10_i_fu_237_p1;
 wire   [7:0] grp_fu_263_p0;
 wire   [3:0] grp_fu_263_p1;
@@ -340,18 +340,18 @@ srcnn_load_tile_mm_Pipeline_InputTileHread_InputTileWread grp_load_tile_mm_Pipel
     .select_ln60(select_ln60_reg_312),
     .w0_cast2(w0),
     .input_ftmap(input_ftmap),
-    .srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_address0(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_address0),
-    .srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_ce0(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_ce0),
-    .srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_we0(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_we0),
-    .srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_d0(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_d0),
-    .srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_address0(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_address0),
-    .srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_ce0(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_ce0),
-    .srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_we0(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_we0),
-    .srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_d0(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_d0),
-    .srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_address0(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_address0),
-    .srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_ce0(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_ce0),
-    .srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_we0(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_we0),
-    .srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_d0(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_d0)
+    .srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_45_address0(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_45_address0),
+    .srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_45_ce0(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_45_ce0),
+    .srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_45_we0(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_45_we0),
+    .srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_45_d0(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_45_d0),
+    .srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_44_address0(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_44_address0),
+    .srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_44_ce0(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_44_ce0),
+    .srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_44_we0(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_44_we0),
+    .srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_44_d0(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_44_d0),
+    .srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_43_address0(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_43_address0),
+    .srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_43_ce0(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_43_ce0),
+    .srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_43_we0(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_43_we0),
+    .srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_43_d0(grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_43_d0)
 );
 
 srcnn_am_addmul_8ns_4ns_9ns_17_4_1 #(
@@ -361,7 +361,7 @@ srcnn_am_addmul_8ns_4ns_9ns_17_4_1 #(
     .din1_WIDTH( 4 ),
     .din2_WIDTH( 9 ),
     .dout_WIDTH( 17 ))
-am_addmul_8ns_4ns_9ns_17_4_1_U245(
+am_addmul_8ns_4ns_9ns_17_4_1_U453(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_263_p0),
@@ -423,7 +423,7 @@ always @ (posedge ap_clk) begin
         ap_return_2_preg <= 1'd0;
     end else begin
         if (((1'b1 == ap_CS_fsm_state6) & (grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_ap_done == 1'b1))) begin
-            ap_return_2_preg <= phase;
+            ap_return_2_preg <= phase_1;
         end
     end
 end
@@ -450,8 +450,9 @@ end
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state5)) begin
         add_ln48_reg_322 <= add_ln48_fu_240_p2;
-        add_ln60_2_reg_317[8 : 3] <= add_ln60_2_fu_230_p2[8 : 3];
-        select_ln60_reg_312[2] <= select_ln60_fu_205_p3[2];
+        add_ln60_2_reg_317[10 : 4] <= add_ln60_2_fu_230_p2[10 : 4];
+        select_ln60_reg_312[3 : 2] <= select_ln60_fu_205_p3[3 : 2];
+select_ln60_reg_312[5] <= select_ln60_fu_205_p3[5];
     end
 end
 
@@ -527,7 +528,7 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state6) & (grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_ap_done == 1'b1))) begin
-        ap_return_2 = phase;
+        ap_return_2 = phase_1;
     end else begin
         ap_return_2 = ap_return_2_preg;
     end
@@ -595,9 +596,9 @@ assign add_ln43_fu_191_p2 = (tw_eff_cast_fu_187_p1 + 9'd12);
 
 assign add_ln48_fu_240_p2 = ($signed(h0_cast10_i_fu_237_p1) + $signed(10'd1018));
 
-assign add_ln534_fu_127_p2 = (h0 + 9'd16);
+assign add_ln540_fu_127_p2 = (h0 + 9'd96);
 
-assign add_ln537_fu_159_p2 = (w0_cast2_fu_123_p1 + 9'd16);
+assign add_ln543_fu_159_p2 = (w0_cast2_fu_123_p1 + 9'd96);
 
 assign add_ln60_2_fu_230_p2 = (select_ln60_1_fu_214_p3 + select_ln60_2_fu_222_p3);
 
@@ -687,58 +688,59 @@ assign m_axi_gmem_in_WUSER = 1'd0;
 
 assign m_axi_gmem_in_WVALID = 1'b0;
 
-assign select_ln60_1_fu_214_p3 = ((phase[0:0] == 1'b1) ? 9'd224 : 9'd0);
+assign select_ln60_1_fu_214_p3 = ((phase_1[0:0] == 1'b1) ? 11'd1408 : 11'd0);
 
-assign select_ln60_2_fu_222_p3 = ((phase[0:0] == 1'b1) ? 9'd56 : 9'd0);
+assign select_ln60_2_fu_222_p3 = ((phase_1[0:0] == 1'b1) ? 11'd432 : 11'd0);
 
-assign select_ln60_fu_205_p3 = ((phase[0:0] == 1'b1) ? 3'd4 : 3'd0);
+assign select_ln60_fu_205_p3 = ((phase_1[0:0] == 1'b1) ? 6'd44 : 6'd0);
 
-assign srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_address0 = grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_address0;
+assign srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_43_address0 = grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_43_address0;
 
-assign srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_ce0 = grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_ce0;
+assign srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_43_ce0 = grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_43_ce0;
 
-assign srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_d0 = grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_d0;
+assign srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_43_d0 = grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_43_d0;
 
-assign srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_we0 = grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_we0;
+assign srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_43_we0 = grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_43_we0;
 
-assign srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_address0 = grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_address0;
+assign srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_44_address0 = grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_44_address0;
 
-assign srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_ce0 = grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_ce0;
+assign srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_44_ce0 = grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_44_ce0;
 
-assign srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_d0 = grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_d0;
+assign srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_44_d0 = grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_44_d0;
 
-assign srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_we0 = grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_we0;
+assign srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_44_we0 = grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_44_we0;
 
-assign srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_address0 = grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_address0;
+assign srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_45_address0 = grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_45_address0;
 
-assign srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_ce0 = grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_ce0;
+assign srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_45_ce0 = grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_45_ce0;
 
-assign srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_d0 = grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_d0;
+assign srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_45_d0 = grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_45_d0;
 
-assign srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_we0 = grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_we0;
+assign srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_45_we0 = grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_45_we0;
 
-assign th_eff_fu_151_p3 = ((tmp_fu_133_p3[0:0] == 1'b1) ? xor_ln534_fu_145_p2 : 8'd16);
+assign th_eff_fu_151_p3 = ((tmp_fu_133_p3[0:0] == 1'b1) ? xor_ln540_fu_145_p2 : 8'd96);
 
-assign tmp_7_fu_165_p3 = add_ln537_fu_159_p2[32'd8];
+assign tmp_7_fu_165_p3 = add_ln543_fu_159_p2[32'd8];
 
-assign tmp_fu_133_p3 = add_ln534_fu_127_p2[32'd8];
+assign tmp_fu_133_p3 = add_ln540_fu_127_p2[32'd8];
 
-assign trunc_ln533_fu_141_p1 = h0[7:0];
+assign trunc_ln539_fu_141_p1 = h0[7:0];
 
 assign tw_eff_cast_fu_187_p1 = tw_eff_fu_179_p3;
 
-assign tw_eff_fu_179_p3 = ((tmp_7_fu_165_p3[0:0] == 1'b1) ? xor_ln537_fu_173_p2 : 8'd16);
+assign tw_eff_fu_179_p3 = ((tmp_7_fu_165_p3[0:0] == 1'b1) ? xor_ln543_fu_173_p2 : 8'd96);
 
 assign w0_cast2_fu_123_p1 = w0;
 
-assign xor_ln534_fu_145_p2 = (trunc_ln533_fu_141_p1 ^ 8'd255);
+assign xor_ln540_fu_145_p2 = (trunc_ln539_fu_141_p1 ^ 8'd255);
 
-assign xor_ln537_fu_173_p2 = (w0 ^ 8'd255);
+assign xor_ln543_fu_173_p2 = (w0 ^ 8'd255);
 
 always @ (posedge ap_clk) begin
     w0_cast2_reg_282[8] <= 1'b0;
     select_ln60_reg_312[1:0] <= 2'b00;
-    add_ln60_2_reg_317[2:0] <= 3'b000;
+    select_ln60_reg_312[4] <= 1'b0;
+    add_ln60_2_reg_317[3:0] <= 4'b0000;
     ap_return_1_preg[8] <= 1'b0;
 end
 

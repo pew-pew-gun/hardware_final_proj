@@ -23,17 +23,17 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 242 \
-    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13 \
+    id 450 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_45 \
     reset_level 1 \
     sync_rst true \
     dir O \
-    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13 \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_45 \
     op interface \
-    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_address0 { O 10 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_we0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_d0 { O 32 vector } } \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_45_address0 { O 13 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_45_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_45_we0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_45_d0 { O 32 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_45'"
 }
 }
 
@@ -42,17 +42,17 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 243 \
-    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12 \
+    id 451 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_44 \
     reset_level 1 \
     sync_rst true \
     dir O \
-    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12 \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_44 \
     op interface \
-    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_address0 { O 10 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_we0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_d0 { O 32 vector } } \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_44_address0 { O 13 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_44_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_44_we0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_44_d0 { O 32 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_44'"
 }
 }
 
@@ -61,17 +61,17 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 244 \
-    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11 \
+    id 452 \
+    name srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_43 \
     reset_level 1 \
     sync_rst true \
     dir O \
-    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11 \
+    corename srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_43 \
     op interface \
-    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_address0 { O 10 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_we0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_d0 { O 32 vector } } \
+    ports { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_43_address0 { O 13 vector } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_43_ce0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_43_we0 { O 1 bit } srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_43_d0 { O 32 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_43'"
 }
 }
 
@@ -79,7 +79,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 233 \
+    id 441 \
     name add_ln60_2 \
     type other \
     dir I \
@@ -87,14 +87,14 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_add_ln60_2 \
     op interface \
-    ports { add_ln60_2 { I 9 vector } } \
+    ports { add_ln60_2 { I 11 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 234 \
+    id 442 \
     name sext_ln48 \
     type other \
     dir I \
@@ -109,7 +109,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 235 \
+    id 443 \
     name add_ln48 \
     type other \
     dir I \
@@ -124,7 +124,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 236 \
+    id 444 \
     name bound \
     type other \
     dir I \
@@ -139,7 +139,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 237 \
+    id 445 \
     name add_ln43 \
     type other \
     dir I \
@@ -154,7 +154,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 238 \
+    id 446 \
     name select_ln60 \
     type other \
     dir I \
@@ -162,14 +162,14 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_select_ln60 \
     op interface \
-    ports { select_ln60 { I 3 vector } } \
+    ports { select_ln60 { I 6 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 239 \
+    id 447 \
     name w0_cast2 \
     type other \
     dir I \
@@ -184,7 +184,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 240 \
+    id 448 \
     name input_ftmap \
     type other \
     dir I \
@@ -199,7 +199,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 241 \
+    id 449 \
     name gmem_in \
     type other \
     dir I \

@@ -9,8 +9,8 @@ use ieee.numeric_std.all;
 entity srcnn_dataflow_in_loop_IT_w0_outbuf_RAM_1P_BRAM_1R1W  is
     generic (
         DataWidth    : integer := 32;
-        AddressRange : integer := 512;
-        AddressWidth : integer := 9;
+        AddressRange : integer := 18432;
+        AddressWidth : integer := 15;
         BufferCount  : integer := 2;
         MemLatency   : integer := 1;
         IndexWidth   : integer := 1
@@ -45,13 +45,13 @@ architecture rtl of srcnn_dataflow_in_loop_IT_w0_outbuf_RAM_1P_BRAM_1R1W is
 component srcnn_dataflow_in_loop_IT_w0_outbuf_RAM_1P_BRAM_1R1W_memcore is
 port (
     ce0      : in  std_logic;
-    address0 : in  std_logic_vector(9 downto 0);
+    address0 : in  std_logic_vector(15 downto 0);
     we0      : in  std_logic;
     d0       : in  std_logic_vector(DataWidth-1 downto 0);
     q0       : out std_logic_vector(DataWidth-1 downto 0);   
     
     ce1      : in  std_logic;
-    address1 : in  std_logic_vector(9 downto 0);
+    address1 : in  std_logic_vector(15 downto 0);
     we1      : in  std_logic;
     d1       : in  std_logic_vector(DataWidth-1 downto 0);
     q1       : out std_logic_vector(DataWidth-1 downto 0);   
@@ -71,8 +71,8 @@ signal push_buf : std_logic;        -- finish writing a buffer
 signal write_buf: std_logic;        -- write a buffer
 signal pop_buf  : std_logic;        -- finish reading a buffer
 
-signal memcore_iaddr: std_logic_vector(9 downto 0);
-signal memcore_taddr: std_logic_vector(9 downto 0);
+signal memcore_iaddr: std_logic_vector(15 downto 0);
+signal memcore_taddr: std_logic_vector(15 downto 0);
 
 begin 
 

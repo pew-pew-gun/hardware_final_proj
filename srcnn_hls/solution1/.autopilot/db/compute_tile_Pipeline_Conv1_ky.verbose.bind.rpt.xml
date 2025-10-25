@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'compute_tile_Pipeline_Conv1_ky'" level="0">
-<item name = "Date">Tue Oct 21 05:58:16 2025
+<item name = "Date">Tue Oct 21 15:31:16 2025
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>

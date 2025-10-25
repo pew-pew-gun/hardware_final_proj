@@ -3055,7 +3055,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>7972e35d</spirit:value>
+            <spirit:value>a1d0281f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -3074,7 +3074,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>d7bbc596</spirit:value>
+            <spirit:value>8b180e7f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -3093,7 +3093,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>45fc3caa</spirit:value>
+            <spirit:value>feb7a963</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -3112,7 +3112,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>405a2153</spirit:value>
+            <spirit:value>d72fe237</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -8018,15 +8018,15 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_dataflow_in_loop_IT_w0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_1bkb.v</spirit:name>
+        <spirit:name>hdl/verilog/srcnn_dataflow_in_loop_IT_w0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_4bkb.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_dataflow_in_loop_IT_w0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_1bkb_memcore.dat</spirit:name>
+        <spirit:name>hdl/verilog/srcnn_dataflow_in_loop_IT_w0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_4bkb_memcore.dat</spirit:name>
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_dataflow_in_loop_IT_w0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_1bkb_memcore.v</spirit:name>
+        <spirit:name>hdl/verilog/srcnn_dataflow_in_loop_IT_w0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_4bkb_memcore.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -8122,15 +8122,11 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_mux_8_3_32_1_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>hdl/verilog/srcnn_mux_9_4_32_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_mux_25_5_32_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/srcnn_mux_16_4_32_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -8138,27 +8134,27 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loceOg.dat</spirit:name>
+        <spirit:name>hdl/verilog/srcnn_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_lockbM.dat</spirit:name>
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loceOg.v</spirit:name>
+        <spirit:name>hdl/verilog/srcnn_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_lockbM.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_7_RAM_1P_BRAM_1R1W.dat</spirit:name>
+        <spirit:name>hdl/verilog/srcnn_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_39_RAM_1P_BRAM_1R1W.dat</spirit:name>
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_7_RAM_1P_BRAM_1R1W.v</spirit:name>
+        <spirit:name>hdl/verilog/srcnn_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_39_RAM_1P_BRAM_1R1W.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10_RAM_1P_LUTRAM_1R1W.dat</spirit:name>
+        <spirit:name>hdl/verilog/srcnn_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_42_RAM_1P_LUTRAM_1R1W.dat</spirit:name>
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10_RAM_1P_LUTRAM_1R1W.v</spirit:name>
+        <spirit:name>hdl/verilog/srcnn_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_42_RAM_1P_LUTRAM_1R1W.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -8295,16 +8291,16 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_dataflow_in_loop_IT_w0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_1bkb.v</spirit:name>
+        <spirit:name>hdl/verilog/srcnn_dataflow_in_loop_IT_w0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_4bkb.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_dataflow_in_loop_IT_w0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_1bkb_memcore.dat</spirit:name>
+        <spirit:name>hdl/verilog/srcnn_dataflow_in_loop_IT_w0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_4bkb_memcore.dat</spirit:name>
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_dataflow_in_loop_IT_w0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_1bkb_memcore.v</spirit:name>
+        <spirit:name>hdl/verilog/srcnn_dataflow_in_loop_IT_w0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_4bkb_memcore.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -8424,17 +8420,12 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_mux_8_3_32_1_1.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>hdl/verilog/srcnn_mux_9_4_32_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_mux_25_5_32_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/srcnn_mux_16_4_32_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -8444,29 +8435,29 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loceOg.dat</spirit:name>
+        <spirit:name>hdl/verilog/srcnn_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_lockbM.dat</spirit:name>
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loceOg.v</spirit:name>
+        <spirit:name>hdl/verilog/srcnn_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_lockbM.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_7_RAM_1P_BRAM_1R1W.dat</spirit:name>
+        <spirit:name>hdl/verilog/srcnn_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_39_RAM_1P_BRAM_1R1W.dat</spirit:name>
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_7_RAM_1P_BRAM_1R1W.v</spirit:name>
+        <spirit:name>hdl/verilog/srcnn_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_39_RAM_1P_BRAM_1R1W.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10_RAM_1P_LUTRAM_1R1W.dat</spirit:name>
+        <spirit:name>hdl/verilog/srcnn_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_42_RAM_1P_LUTRAM_1R1W.dat</spirit:name>
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/srcnn_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10_RAM_1P_LUTRAM_1R1W.v</spirit:name>
+        <spirit:name>hdl/verilog/srcnn_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_42_RAM_1P_LUTRAM_1R1W.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -8631,11 +8622,11 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/srcnn_dataflow_in_loop_IT_w0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_1bkb.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/srcnn_dataflow_in_loop_IT_w0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_4bkb.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/srcnn_dataflow_in_loop_IT_w0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_1bkb_memcore.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/srcnn_dataflow_in_loop_IT_w0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_4bkb_memcore.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -8719,15 +8710,11 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/srcnn_mux_8_3_32_1_1.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>hdl/vhdl/srcnn_mux_9_4_32_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/srcnn_mux_25_5_32_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/srcnn_mux_16_4_32_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -8735,15 +8722,15 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/srcnn_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loceOg.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/srcnn_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_lockbM.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/srcnn_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_7_RAM_1P_BRAM_1R1W.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/srcnn_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_39_RAM_1P_BRAM_1R1W.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/srcnn_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10_RAM_1P_LUTRAM_1R1W.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/srcnn_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_42_RAM_1P_LUTRAM_1R1W.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -8781,7 +8768,7 @@
       <spirit:file>
         <spirit:name>hdl/vhdl/srcnn.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_1a438028</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_f98832cb</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -8877,12 +8864,12 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/srcnn_dataflow_in_loop_IT_w0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_1bkb.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/srcnn_dataflow_in_loop_IT_w0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_4bkb.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/srcnn_dataflow_in_loop_IT_w0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_1bkb_memcore.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/srcnn_dataflow_in_loop_IT_w0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_4bkb_memcore.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -8987,17 +8974,12 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/srcnn_mux_8_3_32_1_1.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>hdl/vhdl/srcnn_mux_9_4_32_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/srcnn_mux_25_5_32_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/srcnn_mux_16_4_32_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -9007,17 +8989,17 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/srcnn_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loceOg.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/srcnn_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_lockbM.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/srcnn_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_7_RAM_1P_BRAM_1R1W.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/srcnn_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_39_RAM_1P_BRAM_1R1W.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/srcnn_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10_RAM_1P_LUTRAM_1R1W.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/srcnn_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_42_RAM_1P_LUTRAM_1R1W.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -9741,8 +9723,8 @@
       </xilinx:taxonomies>
       <xilinx:displayName>Srcnn</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>2114312880</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2025-10-20T19:00:50Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>2114313455</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2025-10-21T04:36:09Z</xilinx:coreCreationDateTime>
       <xilinx:sdxKernelAttributes>
         <xilinx:sdx_kernel>true</xilinx:sdx_kernel>
         <xilinx:sdx_kernel_type>hls</xilinx:sdx_kernel_type>
@@ -9753,7 +9735,7 @@
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="bba2d44c"/>
       <xilinx:checksum xilinx:scope="addressSpaces" xilinx:value="4225efad"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="3ff14f0b"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="8fdb6541"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="ae16c708"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="47243525"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="f14c59ac"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="04059cc4"/>

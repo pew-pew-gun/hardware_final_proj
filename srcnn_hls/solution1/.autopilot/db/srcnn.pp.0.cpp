@@ -320,7 +320,7 @@ class stream : public stream<__STREAM_T__, 0> {
 static void load_tile_mm(
   ftmap_t in[1][255][255],
   int h0, int w0, int th_eff, int tw_eff,
-  ftmap_t in_tile[16 + 2*((9/2) + (1/2) + (5/2))][16 + 2*((9/2) + (1/2) + (5/2))] )
+  ftmap_t in_tile[96 + 2*((9/2) + (1/2) + (5/2))][96 + 2*((9/2) + (1/2) + (5/2))] )
 {
 #pragma HLS INLINE off
 
@@ -358,8 +358,8 @@ static void load_tile_mm(
 
 
 static void compute_tile(
-  ftmap_t in_tile[16 + 2*((9/2) + (1/2) + (5/2))][16 + 2*((9/2) + (1/2) + (5/2))],
-  ftmap_t out_tile[16][16],
+  ftmap_t in_tile[96 + 2*((9/2) + (1/2) + (5/2))][96 + 2*((9/2) + (1/2) + (5/2))],
+  ftmap_t out_tile[96][96],
 
   param_t conv1_w[64][1][9][9], param_t conv1_b[64],
   param_t conv2_w[32][64][1][1], param_t conv2_b[32],
@@ -370,15 +370,21 @@ static void compute_tile(
 
 
 
- ftmap_t linebuf[32][5 -1][16 + 2*(5/2)];
+ ftmap_t linebuf[32][5 -1][96 + 2*(5/2)];
 #pragma HLS BIND_STORAGE variable=linebuf type=ram_2p impl=bram
 #pragma HLS ARRAY_PARTITION variable=linebuf complete dim=2
-#pragma HLS ARRAY_PARTITION variable=linebuf cyclic factor=8 dim=1
+#pragma HLS ARRAY_PARTITION variable=linebuf cyclic factor=16 dim=1
+
+#pragma HLS DEPENDENCE variable=linebuf inter false
+
 
  ftmap_t win[32][5][5];
 #pragma HLS ARRAY_PARTITION variable=win complete dim=2
 #pragma HLS ARRAY_PARTITION variable=win complete dim=3
-#pragma HLS ARRAY_PARTITION variable=win cyclic factor=8 dim=1
+#pragma HLS ARRAY_PARTITION variable=win cyclic factor=16 dim=1
+
+#pragma HLS DEPENDENCE variable=linebuf inter false
+#pragma HLS DEPENDENCE variable=win inter false
 
 
 
@@ -387,9 +393,9 @@ static void compute_tile(
 
 
 
-#pragma HLS ALLOCATION operation instances=mul limit=8
-#pragma HLS ALLOCATION operation instances=add limit=8
-# 110 "src/srcnn.cpp"
+#pragma HLS ALLOCATION operation instances=mul limit=16
+#pragma HLS ALLOCATION operation instances=add limit=16
+# 116 "src/srcnn.cpp"
  ITRowcomp:
   for (int y0 = -(5/2); y0 < th_eff + (5/2); ++y0) {
 #pragma HLS LOOP_FLATTEN off
@@ -401,22 +407,22 @@ static void compute_tile(
 
 
  param_t acc2[32];
-#pragma HLS ARRAY_PARTITION variable=acc2 cyclic factor=8 dim=1
+#pragma HLS ARRAY_PARTITION variable=acc2 cyclic factor=16 dim=1
  Conv2Out_biases:
       for (int n2 = 0; n2 < 32; ++n2) {
 #pragma HLS PIPELINE
-#pragma HLS UNROLL factor=8
+#pragma HLS UNROLL factor=16
  acc2[n2] = conv2_b[n2];
       }
 
 
       Conv1_outftmaps:
       for (int c1 = 0; c1 < 64; ++c1) {
-# 151 "src/srcnn.cpp"
+# 157 "src/srcnn.cpp"
      param_t v[9];
 #pragma HLS ARRAY_PARTITION variable=v complete dim=1
 
- VITIS_LOOP_154_1: for (int i=0; i<9; ++i) {
+ VITIS_LOOP_160_1: for (int i=0; i<9; ++i) {
 
       v[i] = 0;
      }
@@ -447,18 +453,18 @@ static void compute_tile(
 
         Conv2_dot32:
         for (int n2 = 0; n2 < 32; ++n2) {
-#pragma HLS UNROLL factor=8
+#pragma HLS UNROLL factor=16
 #pragma HLS PIPELINE
  acc2[n2] += conv2_w[n2][c1][0][0] * acc1;
         }
       }
 
       ftmap_t f2[32];
-#pragma HLS ARRAY_PARTITION variable=f2 cyclic factor=8 dim=1
+#pragma HLS ARRAY_PARTITION variable=f2 cyclic factor=16 dim=1
  Conv2_ReLU:
       for (int n2 = 0; n2 < 32; ++n2) {
 #pragma HLS PIPELINE
-#pragma HLS UNROLL factor=8
+#pragma HLS UNROLL factor=16
  param_t t = acc2[n2];
         f2[n2] = (t > (param_t)0) ? (ftmap_t)t : (ftmap_t)0;
       }
@@ -470,7 +476,7 @@ static void compute_tile(
       Shift_win32:
       for (int n2 = 0; n2 < 32; ++n2) {
 #pragma HLS PIPELINE
-#pragma HLS UNROLL factor=8
+#pragma HLS UNROLL factor=16
 
  Shift_win_row:
         for (int r = 0; r < 5; ++r) {
@@ -496,7 +502,7 @@ static void compute_tile(
       Update_linebuf32:
       for (int n2 = 0; n2 < 32; ++n2) {
 #pragma HLS PIPELINE
-#pragma HLS UNROLL factor=8
+#pragma HLS UNROLL factor=16
  Update_linebuf_row:
         for (int r = 5 -2; r >= 1; --r) {
 #pragma HLS UNROLL factor=5 -2
@@ -510,13 +516,13 @@ static void compute_tile(
         int oy = y0 - (5/2);
         int ox = x0 - (5/2);
         if (oy < th_eff && ox < tw_eff) {
-# 274 "src/srcnn.cpp"
+# 280 "src/srcnn.cpp"
             param_t acc3[5][5];
 #pragma HLS ARRAY_PARTITION variable=acc3 complete dim=1
 #pragma HLS ARRAY_PARTITION variable=acc3 complete dim=2
 
- VITIS_LOOP_278_2: for (int i=0; i<5; ++i) {
-             VITIS_LOOP_279_3: for (int j=0;j<5;++j) {
+ VITIS_LOOP_284_2: for (int i=0; i<5; ++i) {
+             VITIS_LOOP_285_3: for (int j=0;j<5;++j) {
 #pragma HLS UNROLL
  acc3[i][j]=0;
              }
@@ -567,7 +573,7 @@ static void compute_tile(
 
 
 static void store_tile_mm(
-  ftmap_t out_tile[16][16],
+  ftmap_t out_tile[96][96],
   ftmap_t out[1][255][255],
   int h0, int w0, int th_eff, int tw_eff )
 {
@@ -597,13 +603,13 @@ __attribute__((sdx_kernel("srcnn", 0))) void srcnn(
 {
 #line 27 "C:/Users/redre/Desktop/HAC/FinalProject/golden/srcnn_hls/solution1/csynth.tcl"
 #pragma HLSDIRECTIVE TOP name=srcnn
-# 357 "src/srcnn.cpp"
+# 363 "src/srcnn.cpp"
 
 #line 7 "C:/Users/redre/Desktop/HAC/FinalProject/golden/srcnn_hls/solution1/directives.tcl"
 #pragma HLSDIRECTIVE TOP name=srcnn
-# 357 "src/srcnn.cpp"
+# 363 "src/srcnn.cpp"
 
-# 367 "src/srcnn.cpp"
+# 373 "src/srcnn.cpp"
 #pragma HLS INTERFACE s_axilite port=return bundle=ctrl
 
 #pragma HLS INTERFACE s_axilite port=reload_weights bundle=ctrl
@@ -635,8 +641,8 @@ __attribute__((sdx_kernel("srcnn", 0))) void srcnn(
 
 
 
- static ftmap_t inbuf [2][16 + 2*((9/2) + (1/2) + (5/2))][16 + 2*((9/2) + (1/2) + (5/2))];
-  static ftmap_t outbuf[2][16][16];
+ static ftmap_t inbuf [2][96 + 2*((9/2) + (1/2) + (5/2))][96 + 2*((9/2) + (1/2) + (5/2))];
+  static ftmap_t outbuf[2][96][96];
 
 
 
@@ -644,7 +650,7 @@ __attribute__((sdx_kernel("srcnn", 0))) void srcnn(
 
 #pragma HLS BIND_STORAGE variable=inbuf type=ram_1p impl=bram
 #pragma HLS BIND_STORAGE variable=outbuf type=ram_1p impl=bram
-# 416 "src/srcnn.cpp"
+# 422 "src/srcnn.cpp"
  static param_t w1_loc[64][1][9][9];
   static param_t b1_loc[64];
   static param_t w2_loc[32][64][1][1];
@@ -661,7 +667,7 @@ __attribute__((sdx_kernel("srcnn", 0))) void srcnn(
 
 
 #pragma HLS BIND_STORAGE variable=w2_loc type=ram_1p impl=bram
-#pragma HLS ARRAY_PARTITION variable=w2_loc cyclic factor=8 dim=1
+#pragma HLS ARRAY_PARTITION variable=w2_loc cyclic factor=16 dim=1
 
 
 
@@ -669,7 +675,7 @@ __attribute__((sdx_kernel("srcnn", 0))) void srcnn(
 #pragma HLS RESOURCE variable=w3_loc core=RAM_1P_LUTRAM
 #pragma HLS ARRAY_PARTITION variable=w3_loc complete dim=3
 #pragma HLS ARRAY_PARTITION variable=w3_loc complete dim=4
-#pragma HLS ARRAY_PARTITION variable=w3_loc cyclic factor=8 dim=2
+#pragma HLS ARRAY_PARTITION variable=w3_loc cyclic factor=16 dim=2
 
 
 
@@ -687,7 +693,7 @@ __attribute__((sdx_kernel("srcnn", 0))) void srcnn(
 #pragma HLS reset variable=weights_loaded
 
  if (reload_weights || !weights_loaded) {
-# 467 "src/srcnn.cpp"
+# 473 "src/srcnn.cpp"
 CopyW1_outft:
   for (int c1=0;c1<64;++c1) {
 
@@ -754,11 +760,11 @@ CopyW1_outft:
  bool phase = false;
 
   IT_h0:
-  for (int h0 = 0; h0 < 255; h0 += 16) {
-    const int th_eff = (h0 + 16 <= 255) ? 16 : (255 - h0);
+  for (int h0 = 0; h0 < 255; h0 += 96) {
+    const int th_eff = (h0 + 96 <= 255) ? 96 : (255 - h0);
     IT_w0:
-    for (int w0 = 0; w0 < 255; w0 += 16) {
-      const int tw_eff = (w0 + 16 <= 255) ? 16 : (255 - w0);
+    for (int w0 = 0; w0 < 255; w0 += 96) {
+      const int tw_eff = (w0 + 96 <= 255) ? 96 : (255 - w0);
 
 #pragma HLS DATAFLOW
 

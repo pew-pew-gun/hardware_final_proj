@@ -17,8 +17,8 @@ module srcnn_dataflow_in_loop_IT_w0_outbuf_RAM_1P_BRAM_1R1W_memcore (
     reset, clk);
 
 parameter DataWidth = 32;
-parameter AddressWidth = 10;
-parameter AddressRange = 1024;
+parameter AddressWidth = 16;
+parameter AddressRange = 36864;
  
 input[AddressWidth-1:0] address0;
 input ce0;

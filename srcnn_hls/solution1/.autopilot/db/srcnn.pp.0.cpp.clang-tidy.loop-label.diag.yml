@@ -7,70 +7,70 @@ Diagnostics:
     FilePath:        'C:\Users\redre\Desktop\HAC\FinalProject\golden\src\srcnn.cpp'
     Replacements:    
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_154_1:  '
-    FileOffset:      154
+    Message:         'Added loop label VITIS_LOOP_160_1:  '
+    FileOffset:      160
     FilePath:        'C:\Users\redre\Desktop\HAC\FinalProject\golden\src\srcnn.cpp'
     Replacements:    
       - FilePath:        'C:\Users\redre\Desktop\HAC\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
-        Offset:          16734
+        Offset:          16895
         Length:          0
-        ReplacementText: 'VITIS_LOOP_154_1: '
+        ReplacementText: 'VITIS_LOOP_160_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_278_2:  '
-    FileOffset:      278
+    Message:         'Added loop label VITIS_LOOP_284_2:  '
+    FileOffset:      284
     FilePath:        'C:\Users\redre\Desktop\HAC\FinalProject\golden\src\srcnn.cpp'
     Replacements:    
       - FilePath:        'C:\Users\redre\Desktop\HAC\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
-        Offset:          18978
+        Offset:          19144
         Length:          0
-        ReplacementText: 'VITIS_LOOP_278_2: '
+        ReplacementText: 'VITIS_LOOP_284_2: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_279_3:  '
-    FileOffset:      279
+    Message:         'Added loop label VITIS_LOOP_285_3:  '
+    FileOffset:      285
     FilePath:        'C:\Users\redre\Desktop\HAC\FinalProject\golden\src\srcnn.cpp'
     Replacements:    
       - FilePath:        'C:\Users\redre\Desktop\HAC\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
-        Offset:          19017
+        Offset:          19183
         Length:          0
-        ReplacementText: 'VITIS_LOOP_279_3: '
+        ReplacementText: 'VITIS_LOOP_285_3: '
   - DiagnosticName:  clang-diagnostic-error
     Message:         'Invalid Directive: for current device, ram_1p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
-    FileOffset:      405
+    FileOffset:      411
     FilePath:        'C:\Users\redre\Desktop\HAC\FinalProject\golden\src\srcnn.cpp'
     Replacements:    
   - DiagnosticName:  clang-diagnostic-error
     Message:         'Invalid Directive: for current device, ram_1p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
-    FileOffset:      406
+    FileOffset:      412
     FilePath:        'C:\Users\redre\Desktop\HAC\FinalProject\golden\src\srcnn.cpp'
     Replacements:    
   - DiagnosticName:  clang-diagnostic-error
     Message:         'Resource with core_name: RAM_1P_LUTRAM pragma is ignored, because this core doesn''t exist at all '
-    FileOffset:      426
+    FileOffset:      432
     FilePath:        'C:\Users\redre\Desktop\HAC\FinalProject\golden\src\srcnn.cpp'
     Replacements:    
   - DiagnosticName:  clang-diagnostic-error
     Message:         'Invalid Directive: for current device, ram_1p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
-    FileOffset:      431
-    FilePath:        'C:\Users\redre\Desktop\HAC\FinalProject\golden\src\srcnn.cpp'
-    Replacements:    
-  - DiagnosticName:  clang-diagnostic-error
-    Message:         'Resource with core_name: RAM_1P_LUTRAM pragma is ignored, because this core doesn''t exist at all '
     FileOffset:      437
     FilePath:        'C:\Users\redre\Desktop\HAC\FinalProject\golden\src\srcnn.cpp'
     Replacements:    
   - DiagnosticName:  clang-diagnostic-error
     Message:         'Resource with core_name: RAM_1P_LUTRAM pragma is ignored, because this core doesn''t exist at all '
-    FileOffset:      447
+    FileOffset:      443
     FilePath:        'C:\Users\redre\Desktop\HAC\FinalProject\golden\src\srcnn.cpp'
     Replacements:    
   - DiagnosticName:  clang-diagnostic-error
     Message:         'Resource with core_name: RAM_1P_LUTRAM pragma is ignored, because this core doesn''t exist at all '
-    FileOffset:      448
+    FileOffset:      453
     FilePath:        'C:\Users\redre\Desktop\HAC\FinalProject\golden\src\srcnn.cpp'
     Replacements:    
   - DiagnosticName:  clang-diagnostic-error
     Message:         'Resource with core_name: RAM_1P_LUTRAM pragma is ignored, because this core doesn''t exist at all '
-    FileOffset:      449
+    FileOffset:      454
+    FilePath:        'C:\Users\redre\Desktop\HAC\FinalProject\golden\src\srcnn.cpp'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Resource with core_name: RAM_1P_LUTRAM pragma is ignored, because this core doesn''t exist at all '
+    FileOffset:      455
     FilePath:        'C:\Users\redre\Desktop\HAC\FinalProject\golden\src\srcnn.cpp'
     Replacements:    
 ...

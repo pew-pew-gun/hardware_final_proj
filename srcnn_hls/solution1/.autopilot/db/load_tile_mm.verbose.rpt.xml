@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'load_tile_mm'" level="0">
-<item name = "Date">Tue Oct 21 05:58:39 2025
+<item name = "Date">Tue Oct 21 15:32:15 2025
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -48,12 +48,12 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="DSP">-, 1, -, -, -</column>
-<column name="Expression">-, -, 0, 133, -</column>
+<column name="Expression">-, -, 0, 142, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">-, 1, 554, 805, -</column>
+<column name="Instance">-, 1, 559, 803, -</column>
 <column name="Memory">-, -, -, -, -</column>
 <column name="Multiplexer">-, -, -, 91, -</column>
-<column name="Register">-, -, 77, -, -</column>
+<column name="Register">-, -, 80, -, -</column>
 <specialColumn name="Available">288, 1248, 234240, 117120, 64</specialColumn>
 <specialColumn name="Utilization (%)">0, ~0, ~0, ~0, 0</specialColumn>
 </table>
@@ -62,12 +62,12 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102">load_tile_mm_Pipeline_InputTileHread_InputTileWread, 0, 1, 554, 805, 0</column>
+<column name="grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102">load_tile_mm_Pipeline_InputTileHread_InputTileWread, 0, 1, 559, 803, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
 <keys size="3">Instance, Module, Expression</keys>
-<column name="am_addmul_8ns_4ns_9ns_17_4_1_U245">am_addmul_8ns_4ns_9ns_17_4_1, (i0 + i1) * i2</column>
+<column name="am_addmul_8ns_4ns_9ns_17_4_1_U453">am_addmul_8ns_4ns_9ns_17_4_1, (i0 + i1) * i2</column>
 </table>
 </item>
 <item name = "Memory"><table name="" hasTotal="1">
@@ -82,17 +82,17 @@
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
 <column name="add_ln43_fu_191_p2">+, 0, 0, 16, 9, 4</column>
 <column name="add_ln48_fu_240_p2">+, 0, 0, 17, 10, 4</column>
-<column name="add_ln534_fu_127_p2">+, 0, 0, 16, 9, 5</column>
-<column name="add_ln537_fu_159_p2">+, 0, 0, 16, 9, 5</column>
-<column name="add_ln60_2_fu_230_p2">+, 0, 0, 16, 9, 9</column>
+<column name="add_ln540_fu_127_p2">+, 0, 0, 16, 9, 7</column>
+<column name="add_ln543_fu_159_p2">+, 0, 0, 16, 9, 7</column>
+<column name="add_ln60_2_fu_230_p2">+, 0, 0, 18, 11, 11</column>
 <column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
-<column name="select_ln60_1_fu_214_p3">select, 0, 0, 8, 1, 8</column>
-<column name="select_ln60_2_fu_222_p3">select, 0, 0, 6, 1, 6</column>
-<column name="select_ln60_fu_205_p3">select, 0, 0, 4, 1, 4</column>
+<column name="select_ln60_1_fu_214_p3">select, 0, 0, 10, 1, 11</column>
+<column name="select_ln60_2_fu_222_p3">select, 0, 0, 9, 1, 9</column>
+<column name="select_ln60_fu_205_p3">select, 0, 0, 6, 1, 6</column>
 <column name="th_eff_fu_151_p3">select, 0, 0, 8, 1, 8</column>
 <column name="tw_eff_fu_179_p3">select, 0, 0, 8, 1, 8</column>
-<column name="xor_ln534_fu_145_p2">xor, 0, 0, 8, 8, 2</column>
-<column name="xor_ln537_fu_173_p2">xor, 0, 0, 8, 8, 2</column>
+<column name="xor_ln540_fu_145_p2">xor, 0, 0, 8, 8, 2</column>
+<column name="xor_ln543_fu_173_p2">xor, 0, 0, 8, 8, 2</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
@@ -110,7 +110,7 @@
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
 <column name="add_ln43_reg_287">9, 0, 9, 0</column>
 <column name="add_ln48_reg_322">10, 0, 10, 0</column>
-<column name="add_ln60_2_reg_317">6, 0, 9, 3</column>
+<column name="add_ln60_2_reg_317">7, 0, 11, 4</column>
 <column name="ap_CS_fsm">6, 0, 6, 0</column>
 <column name="ap_done_reg">1, 0, 1, 0</column>
 <column name="ap_return_0_preg">9, 0, 9, 0</column>
@@ -118,7 +118,7 @@
 <column name="ap_return_2_preg">1, 0, 1, 0</column>
 <column name="grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102_ap_start_reg">1, 0, 1, 0</column>
 <column name="mul_ln43_reg_297">17, 0, 17, 0</column>
-<column name="select_ln60_reg_312">1, 0, 3, 2</column>
+<column name="select_ln60_reg_312">3, 0, 6, 3</column>
 <column name="w0_cast2_reg_282">8, 0, 9, 1</column>
 </table>
 </item>
@@ -188,19 +188,19 @@
 <column name="input_ftmap">in, 64, ap_none, input_ftmap, scalar</column>
 <column name="h0">in, 9, ap_none, h0, scalar</column>
 <column name="w0">in, 8, ap_none, w0, scalar</column>
-<column name="phase">in, 1, ap_none, phase, scalar</column>
-<column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_address0">out, 10, ap_memory, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13, array</column>
-<column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_ce0">out, 1, ap_memory, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13, array</column>
-<column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_we0">out, 1, ap_memory, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13, array</column>
-<column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_d0">out, 32, ap_memory, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13, array</column>
-<column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_address0">out, 10, ap_memory, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12, array</column>
-<column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_ce0">out, 1, ap_memory, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12, array</column>
-<column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_we0">out, 1, ap_memory, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12, array</column>
-<column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_d0">out, 32, ap_memory, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12, array</column>
-<column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_address0">out, 10, ap_memory, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11, array</column>
-<column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_ce0">out, 1, ap_memory, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11, array</column>
-<column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_we0">out, 1, ap_memory, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11, array</column>
-<column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_d0">out, 32, ap_memory, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11, array</column>
+<column name="phase_1">in, 1, ap_none, phase_1, scalar</column>
+<column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_45_address0">out, 13, ap_memory, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_45, array</column>
+<column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_45_ce0">out, 1, ap_memory, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_45, array</column>
+<column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_45_we0">out, 1, ap_memory, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_45, array</column>
+<column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_45_d0">out, 32, ap_memory, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_45, array</column>
+<column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_44_address0">out, 13, ap_memory, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_44, array</column>
+<column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_44_ce0">out, 1, ap_memory, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_44, array</column>
+<column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_44_we0">out, 1, ap_memory, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_44, array</column>
+<column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_44_d0">out, 32, ap_memory, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_44, array</column>
+<column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_43_address0">out, 13, ap_memory, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_43, array</column>
+<column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_43_ce0">out, 1, ap_memory, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_43, array</column>
+<column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_43_we0">out, 1, ap_memory, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_43, array</column>
+<column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_43_d0">out, 32, ap_memory, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_43, array</column>
 </table>
 </item>
 </section>
