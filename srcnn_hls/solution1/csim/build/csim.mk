@@ -23,14 +23,14 @@ HLS_SOURCES = ../../../../test/util.cpp ../../../../test/tb_set14.cpp ../../../.
 
 override TARGET := csim.exe
 
-AUTOPILOT_ROOT := C:/Xilinx/Vitis_HLS/2023.1
+AUTOPILOT_ROOT := D:/Vitis_HLS/2023.1
 AUTOPILOT_MACH := win64
 ifdef AP_GCC_M32
   AUTOPILOT_MACH := Linux_x86
   IFLAG += -m32
 endif
 ifndef AP_GCC_PATH
-  AP_GCC_PATH := C:/Xilinx/Vitis_HLS/2023.1/tps/win64/msys64/mingw64/bin
+  AP_GCC_PATH := D:/Vitis_HLS/2023.1/tps/win64/msys64/mingw64/bin
 endif
 AUTOPILOT_TOOL := ${AUTOPILOT_ROOT}/${AUTOPILOT_MACH}/tools
 AP_CLANG_PATH := ${AUTOPILOT_ROOT}/tps/win64/msys64/mingw64/bin

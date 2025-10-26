@@ -1,10 +1,10 @@
 {
   "0": {
     "basicblocks": 41,
-    "calls": "4 2 1",
+    "calls": "3 2 4",
     "file": "srcnn.cpp",
-    "fileloc": 351,
-    "instructions": 191,
+    "fileloc": 426,
+    "instructions": 197,
     "loads": {
       "G": 1,
       "T": 6
@@ -13,40 +13,9 @@
     "stores": {
       "G": 7
     },
-    "total_instructions": 2794
+    "total_instructions": 2906
   },
   "1": {
-    "basicblocks": 11,
-    "calls": "",
-    "file": "srcnn.cpp",
-    "fileloc": 329,
-    "instructions": 33,
-    "loads": {
-      "L": 1
-    },
-    "name": "store_tile_mm",
-    "stores": {
-      "L": 1
-    },
-    "total_instructions": 33
-  },
-  "2": {
-    "basicblocks": 101,
-    "calls": "3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3",
-    "file": "srcnn.cpp",
-    "fileloc": 69,
-    "instructions": 1967,
-    "loads": {
-      "G": 52,
-      "L": 318
-    },
-    "name": "compute_tile",
-    "stores": {
-      "L": 297
-    },
-    "total_instructions": 2517
-  },
-  "3": {
     "basicblocks": 7,
     "calls": "",
     "file": "srcnn.cpp",
@@ -55,7 +24,23 @@
     "name": "clampi",
     "total_instructions": 11
   },
-  "4": {
+  "2": {
+    "basicblocks": 95,
+    "calls": "1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1",
+    "file": "srcnn.cpp",
+    "fileloc": 69,
+    "instructions": 2073,
+    "loads": {
+      "G": 51,
+      "L": 355
+    },
+    "name": "compute_tile",
+    "stores": {
+      "L": 310
+    },
+    "total_instructions": 2623
+  },
+  "3": {
     "basicblocks": 19,
     "calls": "",
     "file": "srcnn.cpp",
@@ -69,5 +54,20 @@
       "L": 1
     },
     "total_instructions": 53
+  },
+  "4": {
+    "basicblocks": 11,
+    "calls": "",
+    "file": "srcnn.cpp",
+    "fileloc": 404,
+    "instructions": 33,
+    "loads": {
+      "L": 1
+    },
+    "name": "store_tile_mm",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 33
   }
 }

@@ -1,6 +1,6 @@
 <dict>
   <key>main-file</key>
-  <string>C:/Users/redre/Desktop/HAC/FinalProject/golden/srcnn_hls/solution1/.autopilot/db/srcnn.pp.0.cpp</string>
+  <string>D:/HAC/hardware_final_proj/srcnn_hls/solution1/.autopilot/db/srcnn.pp.0.cpp</string>
   <key>diagnostics</key>
   <array>
     <dict>
@@ -9,7 +9,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>426</integer>
+      <integer>530</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -25,7 +25,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>437</integer>
+      <integer>541</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -41,7 +41,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>447</integer>
+      <integer>551</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -57,7 +57,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>448</integer>
+      <integer>552</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -73,7 +73,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>449</integer>
+      <integer>553</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>

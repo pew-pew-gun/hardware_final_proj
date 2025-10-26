@@ -96,8 +96,8 @@ static void compute_tile(
   // #pragma HLS ARRAY_PARTITION variable=conv3_w complete dim=4
 
   // Limit operator replication so scheduling doesn't explode
-  #pragma HLS ALLOCATION operation instances=mul limit=UF_N2
-  #pragma HLS ALLOCATION operation instances=add limit=UF_N2
+//  #pragma HLS ALLOCATION operation instances=mul limit=UF_N2
+//  #pragma HLS ALLOCATION operation instances=add limit=UF_N2
 
 //#pragma HLS ALLOCATION operation instances=fmul limit=UF_N2
 //#pragma HLS ALLOCATION operation instances=fadd limit=UF_N2
@@ -117,9 +117,10 @@ static void compute_tile(
     #pragma HLS DEPENDENCE variable=win     inter false
 
       // ---------------- conv1 + conv2 (fused) at (y0,x0) ----------------
-      param_t acc2[N2];
+      param_t acc2[N2]; // initialising an accumulator for the conv2 biases
       #pragma HLS ARRAY_PARTITION variable=acc2 cyclic factor=UF_N2 dim=1
-      Conv2Out_biases:
+
+      Init_Conv2Out_biases:
       for (int n2 = 0; n2 < N2; ++n2) {
 #pragma HLS PIPELINE
       #pragma HLS UNROLL factor=UF_N2
@@ -131,7 +132,7 @@ static void compute_tile(
       for (int c1 = 0; c1 < N1; ++c1) { // N1 = 64 conv1 channels
 //#pragma HLS DATAFLOW
 
-    	/************** This method introduces a true loop-carried dependency
+    	/************** This method introduces a true inter-loop dependency
     	 * - must refactor with F1 interleaved accumulators
         param_t v = conv1_b[c1];
         // 9x9 over in_tile around (y0,x0)
@@ -148,12 +149,14 @@ static void compute_tile(
         */
 
     	// Using F1 interleaved accumulators instead of just 1 accumulator 'v'
-    	param_t v[F1]; // F1 independent partial sums
-#pragma HLS ARRAY_PARTITION variable=v complete dim=1
-    	// initialise values to zero
+    	param_t pacc1[F1]; // F1 independent partial sums
+#pragma HLS ARRAY_PARTITION variable=pacc1 complete dim=1
+
+
+    	// Initialise all accumulator values to zero
     	for (int i=0; i<F1; ++i) {
-//#pragma HLS UNROLL
-    		v[i] = 0;
+#pragma HLS UNROLL
+    		pacc1[i] = 0;
     	}
 
 
@@ -163,23 +166,53 @@ static void compute_tile(
 #pragma HLS PIPELINE II=3
 			Conv1_kx:
 			for (int kx = 0; kx < F1; ++kx) {
-				#pragma HLS UNROLL
+				#pragma HLS UNROLL //complete unrolling
 				int py = (y0 - R1) + ky + R_TOTAL;
 				int px = (x0 - R1) + kx + R_TOTAL;
-				v[kx] += conv1_w[c1][0][ky][kx] * in_tile[py][px];
+				pacc1[kx] += conv1_w[c1][0][ky][kx] * in_tile[py][px];
 			}
 		}
+
+		/*
+		// Sum all partial sums/interleaved accumulators together
 		param_t acc1 = conv1_b[c1];
-		acc1:
+		Sum_pacc1:
 		for (int i = 0;i < F1; ++i) {
-#pragma HLS PIPELINE off
-			acc1 += v[i];
+#pragma HLS PIPELINE II=3
+			acc1 += pacc1[i];
 		}
+	*/
+
+		// Sum all partial sums/interleaved accumulators together
+		param_t acc1 = conv1_b[c1];
+		// log2 adder tree (depth 4)
+
+		// layer 1
+		param_t p0 = pacc1[0] + pacc1[1];
+		param_t p1 = pacc1[2] + pacc1[3];
+		param_t p2 = pacc1[4] + pacc1[5];
+		param_t p3 = pacc1[6] + pacc1[7];
+		// layer 2
+		param_t p4 = p0 + p1;
+		param_t p5 = p2 + p3;
+		// layer 3
+		param_t p6 = p4 + p5;
+		// layer 4
+		param_t p7 = p6 + pacc1[8];
+
+		acc1 += p7;
 
 
+//		Sum_pacc1:
+//		for (int i = 0; i < F1; ++i) {
+//#pragma HLS PIPELINE II=3
+//			acc1 += pacc1[i];
+//		}
 
         if (acc1 < (param_t)0) acc1 = (param_t)0;  // ReLU after conv1
 
+
+        // pass conv1 output to conv2 directly
         Conv2_dot32:
         for (int n2 = 0; n2 < N2; ++n2) { // generate all 32 output feature maps pixel by pixel
         #pragma HLS UNROLL factor=UF_N2
@@ -190,6 +223,8 @@ static void compute_tile(
 
       ftmap_t f2[N2];   // ReLU after conv2
       #pragma HLS ARRAY_PARTITION variable=f2 cyclic factor=UF_N2 dim=1
+
+
       Conv2_ReLU:
       for (int n2 = 0; n2 < N2; ++n2) {
 #pragma HLS PIPELINE
@@ -270,12 +305,17 @@ static void compute_tile(
           // Double check the indexing on this one
           out_tile[oy][ox] = (ftmap_t)acc3;
           */
+
+
         	// Need to refactor code to use interleaved accumulators:
             param_t acc3[F3][F3];
 #pragma HLS ARRAY_PARTITION variable=acc3 complete dim=1
 #pragma HLS ARRAY_PARTITION variable=acc3 complete dim=2
             // Initialise values to zero
+            pacc3row_0:
             for (int i=0; i<F3; ++i) {
+#pragma HLS PIPELINE
+            	pacc3col_0:
             	for (int j=0;j<F3;++j) {
 #pragma HLS UNROLL
             		acc3[i][j]=0;
@@ -302,17 +342,52 @@ static void compute_tile(
                 }
               }
             }
-
+/*
             ftmap_t acc3_sum = conv3_b[0];
             acc3row:
             for (int i=0; i < F3; ++i) {
+#pragma HLS PIPELINE II=3
             	acc3col:
             	for (int j=0; j<F3; ++j) {
-#pragma HLS PIPELINE off
+#pragma HLS UNROLL
             		acc3_sum += acc3[i][j];
             	}
             }
+*/
 
+            ftmap_t acc3_sum = conv3_b[0];
+            param_t psum_row[F3];
+#pragma HLS ARRAY_PARTITION variable=psum_row complete dim=1
+
+
+            acc3row:
+            for (int i=0; i < F3; ++i) {
+//#pragma HLS PIPELINE
+#pragma HLS UNROLL
+            	// 5-term adder tree (depth 3)
+            	// layer 1
+            	param_t s0 = acc3[i][0] + acc3[i][1];
+            	param_t s1 = acc3[i][2] + acc3[i][3];
+            	// layer 2
+            	param_t s2 = s0 + s1;
+            	// layer 3
+            	psum_row[i] = s2 + acc3[i][4]; // just assign
+
+//            	acc3_sum += s3;
+            }
+
+            // 5-term adder tree (depth 3)
+			// layer 1
+			param_t s0 = psum_row[0] + psum_row[1];
+			param_t s1 = psum_row[2] + psum_row[3];
+			// layer 2
+			param_t s2 = s0 + s1;
+			// layer 3
+			acc3_sum = s2 + psum_row[4];
+
+//            for (int i=0; i<F3; ++i) {
+//            	acc3_sum += psum_row[i];
+//            }
             // Double check the indexing on this one
             out_tile[oy][ox] = acc3_sum;
 
@@ -394,6 +469,15 @@ void srcnn(
   // #pragma HLS INTERFACE m_axi port=input_ftmap  bundle=gmem_in  num_read_outstanding=16  max_read_burst_length=256
   // #pragma HLS INTERFACE m_axi port=output_ftmap bundle=gmem_out num_write_outstanding=8   max_write_burst_length=256
 
+
+
+
+
+
+
+
+
+
   // Ping-pong BRAM tiles so LOAD/COMPUTE/STORE can overlap across tiles
   static ftmap_t inbuf [2][TH + 2*R_TOTAL][TW + 2*R_TOTAL];
   static ftmap_t outbuf[2][TH][TW];
@@ -405,12 +489,17 @@ void srcnn(
 #pragma HLS BIND_STORAGE variable=inbuf  type=ram_1p impl=bram
 #pragma HLS BIND_STORAGE variable=outbuf type=ram_1p impl=bram
 
+
+
+
+
+
+
+
+
+
   ////////////////////////////////////////////////////////////////////////////////
   // Copying the weights into BRAM
-
-
-
-
 
   // --- Weight-Stationary: Local on-chip copies (live for the whole kernel) ---
   static param_t w1_loc[N1][N0][F1][F1];    // conv1_weights

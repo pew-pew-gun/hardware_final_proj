@@ -4,8 +4,8 @@
 # 396 "<built-in>" 3
 # 1 "<command line>" 1
 # 1 "<built-in>" 2
-# 1 "C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\\etc/autopilot_ssdm_op.h" 1
-# 108 "C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\\etc/autopilot_ssdm_op.h"
+# 1 "D:/Vitis_HLS/2023.1/common/technology/autopilot\\etc/autopilot_ssdm_op.h" 1
+# 108 "D:/Vitis_HLS/2023.1/common/technology/autopilot\\etc/autopilot_ssdm_op.h"
 extern "C" {
 
 
@@ -179,12 +179,12 @@ void conv1(ftmap_t input_ftmap[1][255][255],
            param_t conv1_biases[64],
            ftmap_t output_ftmap[64][255][255]);
 # 3 "src/srcnn.cpp" 2
-# 1 "C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\\hls_stream.h" 1
-# 15 "C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\\hls_stream.h"
-# 1 "C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_stream_39.h" 1
-# 26 "C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_stream_39.h"
+# 1 "D:/Vitis_HLS/2023.1/common/technology/autopilot\\hls_stream.h" 1
+# 15 "D:/Vitis_HLS/2023.1/common/technology/autopilot\\hls_stream.h"
+# 1 "D:/Vitis_HLS/2023.1/common/technology/autopilot/hls_stream_39.h" 1
+# 26 "D:/Vitis_HLS/2023.1/common/technology/autopilot/hls_stream_39.h"
 namespace hls {
-# 52 "C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_stream_39.h"
+# 52 "D:/Vitis_HLS/2023.1/common/technology/autopilot/hls_stream_39.h"
 template<typename __STREAM_T__, int DEPTH=0>
 class stream;
 
@@ -309,7 +309,7 @@ class stream : public stream<__STREAM_T__, 0> {
     }
 };
 }
-# 16 "C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\\hls_stream.h" 2
+# 16 "D:/Vitis_HLS/2023.1/common/technology/autopilot\\hls_stream.h" 2
 # 4 "src/srcnn.cpp" 2
 # 24 "src/srcnn.cpp"
  static inline int clampi(int v, int lo, int hi) {
@@ -379,16 +379,6 @@ static void compute_tile(
 #pragma HLS ARRAY_PARTITION variable=win complete dim=2
 #pragma HLS ARRAY_PARTITION variable=win complete dim=3
 #pragma HLS ARRAY_PARTITION variable=win cyclic factor=8 dim=1
-
-
-
-
-
-
-
-
-#pragma HLS ALLOCATION operation instances=mul limit=8
-#pragma HLS ALLOCATION operation instances=add limit=8
 # 110 "src/srcnn.cpp"
  ITRowcomp:
   for (int y0 = -(5/2); y0 < th_eff + (5/2); ++y0) {
@@ -402,7 +392,8 @@ static void compute_tile(
 
  param_t acc2[32];
 #pragma HLS ARRAY_PARTITION variable=acc2 cyclic factor=8 dim=1
- Conv2Out_biases:
+
+ Init_Conv2Out_biases:
       for (int n2 = 0; n2 < 32; ++n2) {
 #pragma HLS PIPELINE
 #pragma HLS UNROLL factor=8
@@ -412,13 +403,15 @@ static void compute_tile(
 
       Conv1_outftmaps:
       for (int c1 = 0; c1 < 64; ++c1) {
-# 151 "src/srcnn.cpp"
-     param_t v[9];
-#pragma HLS ARRAY_PARTITION variable=v complete dim=1
+# 152 "src/srcnn.cpp"
+     param_t pacc1[9];
+#pragma HLS ARRAY_PARTITION variable=pacc1 complete dim=1
 
- VITIS_LOOP_154_1: for (int i=0; i<9; ++i) {
 
-      v[i] = 0;
+
+ VITIS_LOOP_157_1: for (int i=0; i<9; ++i) {
+#pragma HLS UNROLL
+ pacc1[i] = 0;
      }
 
 
@@ -431,19 +424,31 @@ static void compute_tile(
 #pragma HLS UNROLL
  int py = (y0 - (9/2)) + ky + ((9/2) + (1/2) + (5/2));
     int px = (x0 - (9/2)) + kx + ((9/2) + (1/2) + (5/2));
-    v[kx] += conv1_w[c1][0][ky][kx] * in_tile[py][px];
+    pacc1[kx] += conv1_w[c1][0][ky][kx] * in_tile[py][px];
    }
   }
+# 187 "src/srcnn.cpp"
   param_t acc1 = conv1_b[c1];
-  acc1:
-  for (int i = 0;i < 9; ++i) {
-#pragma HLS PIPELINE off
- acc1 += v[i];
-  }
 
 
 
+  param_t p0 = pacc1[0] + pacc1[1];
+  param_t p1 = pacc1[2] + pacc1[3];
+  param_t p2 = pacc1[4] + pacc1[5];
+  param_t p3 = pacc1[6] + pacc1[7];
+
+  param_t p4 = p0 + p1;
+  param_t p5 = p2 + p3;
+
+  param_t p6 = p4 + p5;
+
+  param_t p7 = p6 + pacc1[8];
+
+  acc1 += p7;
+# 212 "src/srcnn.cpp"
         if (acc1 < (param_t)0) acc1 = (param_t)0;
+
+
 
         Conv2_dot32:
         for (int n2 = 0; n2 < 32; ++n2) {
@@ -455,6 +460,8 @@ static void compute_tile(
 
       ftmap_t f2[32];
 #pragma HLS ARRAY_PARTITION variable=f2 cyclic factor=8 dim=1
+
+
  Conv2_ReLU:
       for (int n2 = 0; n2 < 32; ++n2) {
 #pragma HLS PIPELINE
@@ -510,13 +517,16 @@ static void compute_tile(
         int oy = y0 - (5/2);
         int ox = x0 - (5/2);
         if (oy < th_eff && ox < tw_eff) {
-# 274 "src/srcnn.cpp"
+# 311 "src/srcnn.cpp"
             param_t acc3[5][5];
 #pragma HLS ARRAY_PARTITION variable=acc3 complete dim=1
 #pragma HLS ARRAY_PARTITION variable=acc3 complete dim=2
 
- VITIS_LOOP_278_2: for (int i=0; i<5; ++i) {
-             VITIS_LOOP_279_3: for (int j=0;j<5;++j) {
+ pacc3row_0:
+            for (int i=0; i<5; ++i) {
+#pragma HLS PIPELINE
+ pacc3col_0:
+             for (int j=0;j<5;++j) {
 #pragma HLS UNROLL
  acc3[i][j]=0;
              }
@@ -542,16 +552,39 @@ static void compute_tile(
                 }
               }
             }
-
+# 358 "src/srcnn.cpp"
             ftmap_t acc3_sum = conv3_b[0];
-            acc3row:
+            param_t psum_row[5];
+#pragma HLS ARRAY_PARTITION variable=psum_row complete dim=1
+
+
+ acc3row:
             for (int i=0; i < 5; ++i) {
-             acc3col:
-             for (int j=0; j<5; ++j) {
-#pragma HLS PIPELINE off
- acc3_sum += acc3[i][j];
-             }
+
+#pragma HLS UNROLL
+
+
+ param_t s0 = acc3[i][0] + acc3[i][1];
+             param_t s1 = acc3[i][2] + acc3[i][3];
+
+             param_t s2 = s0 + s1;
+
+             psum_row[i] = s2 + acc3[i][4];
+
+
             }
+
+
+
+   param_t s0 = psum_row[0] + psum_row[1];
+   param_t s1 = psum_row[2] + psum_row[3];
+
+   param_t s2 = s0 + s1;
+
+   acc3_sum = s2 + psum_row[4];
+
+
+
 
 
             out_tile[oy][ox] = acc3_sum;
@@ -595,15 +628,11 @@ __attribute__((sdx_kernel("srcnn", 0))) void srcnn(
   param_t conv3_weights[1][32][5][5], param_t conv3_biases[1],
   ftmap_t output_ftmap[1][255][255], int reload_weights )
 {
-#line 27 "C:/Users/redre/Desktop/HAC/FinalProject/golden/srcnn_hls/solution1/csynth.tcl"
+#line 27 "D:/HAC/hardware_final_proj/srcnn_hls/solution1/csynth.tcl"
 #pragma HLSDIRECTIVE TOP name=srcnn
-# 357 "src/srcnn.cpp"
+# 432 "src/srcnn.cpp"
 
-#line 7 "C:/Users/redre/Desktop/HAC/FinalProject/golden/srcnn_hls/solution1/directives.tcl"
-#pragma HLSDIRECTIVE TOP name=srcnn
-# 357 "src/srcnn.cpp"
-
-# 367 "src/srcnn.cpp"
+# 442 "src/srcnn.cpp"
 #pragma HLS INTERFACE s_axilite port=return bundle=ctrl
 
 #pragma HLS INTERFACE s_axilite port=reload_weights bundle=ctrl
@@ -629,22 +658,20 @@ __attribute__((sdx_kernel("srcnn", 0))) void srcnn(
 #pragma HLS INTERFACE s_axilite port=conv3_weights bundle=ctrl
 #pragma HLS INTERFACE m_axi port=conv3_biases bundle=gmem_w3 offset=slave depth=(1)
 #pragma HLS INTERFACE s_axilite port=conv3_biases bundle=ctrl
-
-
-
-
-
-
+# 488 "src/srcnn.cpp"
  static ftmap_t inbuf [2][16 + 2*((9/2) + (1/2) + (5/2))][16 + 2*((9/2) + (1/2) + (5/2))];
   static ftmap_t outbuf[2][16][16];
+#pragma HLS BIND_STORAGE variable=inbuf type=ram_2p impl=bram
+#pragma HLS BIND_STORAGE variable=outbuf type=ram_2p impl=bram
 
+#pragma HLS ARRAY_PARTITION variable=inbuf cyclic factor=2 dim=1
+#pragma HLS ARRAY_PARTITION variable=inbuf complete dim=2
+#pragma HLS ARRAY_PARTITION variable=inbuf complete dim=3
 
-
-
-
-#pragma HLS BIND_STORAGE variable=inbuf type=ram_1p impl=bram
-#pragma HLS BIND_STORAGE variable=outbuf type=ram_1p impl=bram
-# 416 "src/srcnn.cpp"
+#pragma HLS ARRAY_PARTITION variable=outbuf cyclic factor=2 dim=1
+#pragma HLS ARRAY_PARTITION variable=outbuf complete dim=2
+#pragma HLS ARRAY_PARTITION variable=outbuf complete dim=3
+# 520 "src/srcnn.cpp"
  static param_t w1_loc[64][1][9][9];
   static param_t b1_loc[64];
   static param_t w2_loc[32][64][1][1];
@@ -687,7 +714,7 @@ __attribute__((sdx_kernel("srcnn", 0))) void srcnn(
 #pragma HLS reset variable=weights_loaded
 
  if (reload_weights || !weights_loaded) {
-# 467 "src/srcnn.cpp"
+# 571 "src/srcnn.cpp"
 CopyW1_outft:
   for (int c1=0;c1<64;++c1) {
 
