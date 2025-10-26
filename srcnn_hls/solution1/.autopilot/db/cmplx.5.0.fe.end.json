@@ -1,0 +1,305 @@
+{
+    "1": {
+        "name": "compute_tile_Pipeline_Conv3_inputft",
+        "file": "srcnn.cpp",
+        "fileloc": "0",
+        "instructions": "1676",
+        "total_instructions": "1676",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "G": "200",
+            "L": "251"
+        },
+        "stores": {
+            "L": "52"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "2": {
+        "name": "store_tile_mm",
+        "file": "srcnn.cpp",
+        "fileloc": "0",
+        "instructions": "1048",
+        "total_instructions": "1393",
+        "calls": "12",
+        "basicblocks": "1",
+        "loads": {
+            "G": "256"
+        }
+    },
+    "3": {
+        "name": "compute_tile_Pipeline_Conv2_dot32",
+        "file": "srcnn.cpp",
+        "fileloc": "0",
+        "instructions": "83",
+        "total_instructions": "83",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "G": "8",
+            "L": "9"
+        },
+        "stores": {
+            "L": "10"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "4": {
+        "name": "compute_tile_Pipeline_Shift_win32",
+        "file": "srcnn.cpp",
+        "fileloc": "0",
+        "instructions": "692",
+        "total_instructions": "692",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "201"
+        },
+        "stores": {
+            "L": "202"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "0": {
+        "name": "srcnn",
+        "file": "srcnn.cpp",
+        "fileloc": "426",
+        "instructions": "1886",
+        "total_instructions": "18002",
+        "calls": "7 8 10 11",
+        "basicblocks": "114",
+        "loads": {
+            "G": "1",
+            "L": "4"
+        },
+        "stores": {
+            "G": "97",
+            "L": "8"
+        },
+        "loops": {
+            "L": "3",
+            "N": "1"
+        }
+    },
+    "5": {
+        "name": "compute_tile_Pipeline_Update_linebuf32",
+        "file": "srcnn.cpp",
+        "fileloc": "0",
+        "instructions": "156",
+        "total_instructions": "156",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "33"
+        },
+        "stores": {
+            "L": "34"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "6": {
+        "name": "compute_tile_Pipeline_Conv2_ReLU",
+        "file": "srcnn.cpp",
+        "fileloc": "0",
+        "instructions": "119",
+        "total_instructions": "119",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "9"
+        },
+        "stores": {
+            "L": "10"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "7": {
+        "name": "srcnn_Pipeline_CopyW1_ky_CopyW1_kx",
+        "file": "srcnn.cpp",
+        "fileloc": "0",
+        "instructions": "78",
+        "total_instructions": "78",
+        "calls": "",
+        "basicblocks": "8",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "G": "3",
+            "L": "6"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "8": {
+        "name": "srcnn_Pipeline_CopyW2_inft",
+        "file": "srcnn.cpp",
+        "fileloc": "0",
+        "instructions": "66",
+        "total_instructions": "66",
+        "calls": "",
+        "basicblocks": "13",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "G": "8",
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "9": {
+        "name": "load_tile_mm_Pipeline_InputTileHread_InputTileWread",
+        "file": "srcnn.cpp",
+        "fileloc": "0",
+        "instructions": "3280",
+        "total_instructions": "3280",
+        "calls": "",
+        "basicblocks": "845",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "G": "784",
+            "L": "6"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "10": {
+        "name": "srcnn_Pipeline_CopyW3_inft_CopyW3_ky_CopyW3_kx",
+        "file": "srcnn.cpp",
+        "fileloc": "0",
+        "instructions": "954",
+        "total_instructions": "954",
+        "calls": "",
+        "basicblocks": "301",
+        "loads": {
+            "L": "5"
+        },
+        "stores": {
+            "G": "200",
+            "L": "10"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "11": {
+        "name": "dataflow_in_loop_IT_w0",
+        "file": "srcnn.cpp",
+        "fileloc": "0",
+        "instructions": "1062",
+        "total_instructions": "15018",
+        "calls": "14 15 17 2",
+        "basicblocks": "1"
+    },
+    "12": {
+        "name": "store_tile_mm_Pipeline_Out_writex",
+        "file": "srcnn.cpp",
+        "fileloc": "0",
+        "instructions": "345",
+        "total_instructions": "345",
+        "calls": "",
+        "basicblocks": "8",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "6"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "13": {
+        "name": "compute_tile_Pipeline_Init_Conv2Out_biases",
+        "file": "srcnn.cpp",
+        "fileloc": "0",
+        "instructions": "72",
+        "total_instructions": "72",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "10"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "14": {
+        "name": "entry_proc",
+        "file": "srcnn.cpp",
+        "fileloc": "0",
+        "instructions": "4",
+        "total_instructions": "4",
+        "calls": "",
+        "basicblocks": "1"
+    },
+    "15": {
+        "name": "load_tile_mm",
+        "file": "srcnn.cpp",
+        "fileloc": "0",
+        "instructions": "813",
+        "total_instructions": "4093",
+        "calls": "9",
+        "basicblocks": "1"
+    },
+    "16": {
+        "name": "compute_tile_Pipeline_Conv1_ky",
+        "file": "srcnn.cpp",
+        "fileloc": "0",
+        "instructions": "380",
+        "total_instructions": "380",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "G": "9",
+            "L": "19"
+        },
+        "stores": {
+            "L": "20"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "17": {
+        "name": "compute_tile",
+        "file": "srcnn.cpp",
+        "fileloc": "0",
+        "instructions": "5288",
+        "total_instructions": "8466",
+        "calls": "13 6 4 5 16 3 1",
+        "basicblocks": "303",
+        "loads": {
+            "G": "96",
+            "L": "819"
+        },
+        "stores": {
+            "L": "258"
+        },
+        "loops": {
+            "L": "1",
+            "N": "2"
+        }
+    }
+}

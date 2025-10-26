@@ -17,42 +17,42 @@ Diagnostics:
         ReplacementText: 'VITIS_LOOP_157_1: '
   - DiagnosticName:  clang-diagnostic-error
     Message:         'Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
-    FileOffset:      490
+    FileOffset:      489
     FilePath:        'D:\HAC\hardware_final_proj\src\srcnn.cpp'
     Replacements:    
   - DiagnosticName:  clang-diagnostic-error
     Message:         'Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
-    FileOffset:      491
+    FileOffset:      490
     FilePath:        'D:\HAC\hardware_final_proj\src\srcnn.cpp'
     Replacements:    
   - DiagnosticName:  clang-diagnostic-error
     Message:         'Resource with core_name: RAM_1P_LUTRAM pragma is ignored, because this core doesn''t exist at all '
-    FileOffset:      530
+    FileOffset:      517
     FilePath:        'D:\HAC\hardware_final_proj\src\srcnn.cpp'
     Replacements:    
   - DiagnosticName:  clang-diagnostic-error
     Message:         'Invalid Directive: for current device, ram_1p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
-    FileOffset:      535
+    FileOffset:      522
     FilePath:        'D:\HAC\hardware_final_proj\src\srcnn.cpp'
     Replacements:    
   - DiagnosticName:  clang-diagnostic-error
     Message:         'Resource with core_name: RAM_1P_LUTRAM pragma is ignored, because this core doesn''t exist at all '
-    FileOffset:      541
+    FileOffset:      528
     FilePath:        'D:\HAC\hardware_final_proj\src\srcnn.cpp'
     Replacements:    
   - DiagnosticName:  clang-diagnostic-error
     Message:         'Resource with core_name: RAM_1P_LUTRAM pragma is ignored, because this core doesn''t exist at all '
-    FileOffset:      551
+    FileOffset:      538
     FilePath:        'D:\HAC\hardware_final_proj\src\srcnn.cpp'
     Replacements:    
   - DiagnosticName:  clang-diagnostic-error
     Message:         'Resource with core_name: RAM_1P_LUTRAM pragma is ignored, because this core doesn''t exist at all '
-    FileOffset:      552
+    FileOffset:      539
     FilePath:        'D:\HAC\hardware_final_proj\src\srcnn.cpp'
     Replacements:    
   - DiagnosticName:  clang-diagnostic-error
     Message:         'Resource with core_name: RAM_1P_LUTRAM pragma is ignored, because this core doesn''t exist at all '
-    FileOffset:      553
+    FileOffset:      540
     FilePath:        'D:\HAC\hardware_final_proj\src\srcnn.cpp'
     Replacements:    
 ...

@@ -1,42 +1,42 @@
 {
   "0": {
-    "basicblocks": 436,
-    "calls": "2 1 3 2 1 3",
+    "basicblocks": 433,
+    "calls": "2 1 3",
     "file": "srcnn.cpp",
     "fileloc": 426,
-    "instructions": 4203,
+    "instructions": 6276,
     "loads": {
-      "G": 2081,
+      "G": 1,
       "T": 1
     },
     "name": "srcnn",
     "stores": {
       "G": 309
     },
-    "total_instructions": 17045
+    "total_instructions": 15305
   },
   "1": {
     "basicblocks": 320,
     "calls": "",
     "file": "srcnn.cpp",
     "fileloc": 69,
-    "instructions": 4653,
+    "instructions": 5437,
     "loads": {
       "G": 313,
-      "L": 448
+      "L": 1232
     },
     "name": "compute_tile",
     "stores": {
       "L": 512
     },
-    "total_instructions": 4653
+    "total_instructions": 5437
   },
   "2": {
     "basicblocks": 848,
     "calls": "",
     "file": "srcnn.cpp",
     "fileloc": 29,
-    "instructions": 1724,
+    "instructions": 3292,
     "loads": {
       "L": 1
     },
@@ -44,15 +44,18 @@
     "stores": {
       "L": 784
     },
-    "total_instructions": 1724
+    "total_instructions": 3292
   },
   "3": {
     "basicblocks": 8,
     "calls": "",
     "file": "srcnn.cpp",
     "fileloc": 404,
-    "instructions": 44,
+    "instructions": 300,
+    "loads": {
+      "L": 256
+    },
     "name": "store_tile_mm",
-    "total_instructions": 44
+    "total_instructions": 300
   }
 }

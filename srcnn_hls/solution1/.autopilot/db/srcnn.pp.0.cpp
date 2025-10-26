@@ -658,20 +658,32 @@ __attribute__((sdx_kernel("srcnn", 0))) void srcnn(
 #pragma HLS INTERFACE s_axilite port=conv3_weights bundle=ctrl
 #pragma HLS INTERFACE m_axi port=conv3_biases bundle=gmem_w3 offset=slave depth=(1)
 #pragma HLS INTERFACE s_axilite port=conv3_biases bundle=ctrl
-# 488 "src/srcnn.cpp"
+# 482 "src/srcnn.cpp"
  static ftmap_t inbuf [2][16 + 2*((9/2) + (1/2) + (5/2))][16 + 2*((9/2) + (1/2) + (5/2))];
   static ftmap_t outbuf[2][16][16];
+
+
+
+
+
 #pragma HLS BIND_STORAGE variable=inbuf type=ram_2p impl=bram
 #pragma HLS BIND_STORAGE variable=outbuf type=ram_2p impl=bram
 
-#pragma HLS ARRAY_PARTITION variable=inbuf cyclic factor=2 dim=1
 #pragma HLS ARRAY_PARTITION variable=inbuf complete dim=2
 #pragma HLS ARRAY_PARTITION variable=inbuf complete dim=3
 
-#pragma HLS ARRAY_PARTITION variable=outbuf cyclic factor=2 dim=1
 #pragma HLS ARRAY_PARTITION variable=outbuf complete dim=2
 #pragma HLS ARRAY_PARTITION variable=outbuf complete dim=3
-# 520 "src/srcnn.cpp"
+
+#pragma HLS DEPENDENCE variable=inbuf inter false
+#pragma HLS DEPENDENCE variable=outbuf inter false
+
+
+
+
+
+
+
  static param_t w1_loc[64][1][9][9];
   static param_t b1_loc[64];
   static param_t w2_loc[32][64][1][1];
@@ -714,7 +726,7 @@ __attribute__((sdx_kernel("srcnn", 0))) void srcnn(
 #pragma HLS reset variable=weights_loaded
 
  if (reload_weights || !weights_loaded) {
-# 571 "src/srcnn.cpp"
+# 558 "src/srcnn.cpp"
 CopyW1_outft:
   for (int c1=0;c1<64;++c1) {
 

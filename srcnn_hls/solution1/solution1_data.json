@@ -284,16 +284,16 @@
   "Xdc": {
     "OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"],
     "FalsePaths": [
-      "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_33[*]]",
-      "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_32[*]]",
-      "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_31[*]]",
-      "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_30[*]]",
-      "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_29[*]]",
-      "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_28[*]]",
-      "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_27[*]]",
-      "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_26[*]]",
-      "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_25[*]]",
-      "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_24[*]]",
+      "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_102[*]]",
+      "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_103[*]]",
+      "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_104[*]]",
+      "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_99[*]]",
+      "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_98[*]]",
+      "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_97[*]]",
+      "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_96[*]]",
+      "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_95[*]]",
+      "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_94[*]]",
+      "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_93[*]]",
       "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_10[*]]",
       "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_11[*]]",
       "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_12[*]]",
@@ -351,16 +351,16 @@
       "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10[*]]",
       "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_9[*]]",
       "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_8[*]]",
-      "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_23[*]]",
-      "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_22[*]]",
-      "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_21[*]]",
-      "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_20[*]]",
-      "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_19[*]]",
-      "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_18[*]]",
-      "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_17[*]]",
-      "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_16[*]]",
-      "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_15[*]]",
-      "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_14[*]]",
+      "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_92[*]]",
+      "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_91[*]]",
+      "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_90[*]]",
+      "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_89[*]]",
+      "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_88[*]]",
+      "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_87[*]]",
+      "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_86[*]]",
+      "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_85[*]]",
+      "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_84[*]]",
+      "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_83[*]]",
       "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_10[*]]",
       "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_11[*]]",
       "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_12[*]]",
@@ -384,13 +384,13 @@
       "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_30[*]]",
       "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_31[*]]",
       "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_7[*]]",
+      "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_6[*]]",
+      "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_5[*]]",
       "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_4[*]]",
       "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_3[*]]",
       "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_2[*]]",
       "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_1[*]]",
       "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f[*]]",
-      "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_6[*]]",
-      "set_false_path -through [get_ports srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_5[*]]",
       "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0_4[*]]",
       "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0_3[*]]",
       "set_false_path -through [get_ports p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0_2[*]]",
@@ -599,7 +599,7 @@
     "Name": "srcnn",
     "Version": "1.0",
     "DisplayName": "Srcnn",
-    "Revision": "2114320905",
+    "Revision": "2114320955",
     "Description": "An IP generated by Vitis HLS",
     "Taxonomy": "\/VITIS_HLS_IP",
     "AutoFamilySupport": "",
@@ -625,10 +625,8 @@
       "impl\/vhdl\/srcnn_compute_tile_win_RAM_AUTO_1R1W.vhd",
       "impl\/vhdl\/srcnn_ctrl_s_axi.vhd",
       "impl\/vhdl\/srcnn_dataflow_in_loop_IT_w0.vhd",
-      "impl\/vhdl\/srcnn_dataflow_in_loop_IT_w0_outbuf_RAM_1P_BRAM_1R1W.vhd",
-      "impl\/vhdl\/srcnn_dataflow_in_loop_IT_w0_outbuf_RAM_1P_BRAM_1R1W_memcore.vhd",
-      "impl\/vhdl\/srcnn_dataflow_in_loop_IT_w0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_1bkb.vhd",
-      "impl\/vhdl\/srcnn_dataflow_in_loop_IT_w0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_1bkb_memcore.vhd",
+      "impl\/vhdl\/srcnn_dataflow_in_loop_IT_w0_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32bkb.vhd",
+      "impl\/vhdl\/srcnn_dataflow_in_loop_IT_w0_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32bkb_memcore.vhd",
       "impl\/vhdl\/srcnn_entry_proc.vhd",
       "impl\/vhdl\/srcnn_fadd_32ns_32ns_32_4_full_dsp_1.vhd",
       "impl\/vhdl\/srcnn_fcmp_32ns_32ns_1_2_no_dsp_1.vhd",
@@ -646,13 +644,13 @@
       "impl\/vhdl\/srcnn_load_tile_mm_Pipeline_InputTileHread_InputTileWread.vhd",
       "impl\/vhdl\/srcnn_mul_4ns_6ns_9_1_1.vhd",
       "impl\/vhdl\/srcnn_mul_8ns_8ns_16_1_1.vhd",
-      "impl\/vhdl\/srcnn_mul_9ns_11ns_19_1_1.vhd",
-      "impl\/vhdl\/srcnn_mux_3_2_32_1_1.vhd",
       "impl\/vhdl\/srcnn_mux_5_3_32_1_1.vhd",
       "impl\/vhdl\/srcnn_mux_8_3_32_1_1.vhd",
+      "impl\/vhdl\/srcnn_mux_16_4_32_1_1.vhd",
       "impl\/vhdl\/srcnn_mux_25_5_32_1_1.vhd",
+      "impl\/vhdl\/srcnn_mux_32_5_32_1_1.vhd",
       "impl\/vhdl\/srcnn_mux_64_6_32_1_1.vhd",
-      "impl\/vhdl\/srcnn_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loceOg.vhd",
+      "impl\/vhdl\/srcnn_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locqXc.vhd",
       "impl\/vhdl\/srcnn_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_7_RAM_1P_BRAM_1R1W.vhd",
       "impl\/vhdl\/srcnn_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10_RAM_1P_LUTRAM_1R1W.vhd",
       "impl\/vhdl\/srcnn_srcnn_Pipeline_CopyW1_ky_CopyW1_kx.vhd",
@@ -661,8 +659,6 @@
       "impl\/vhdl\/srcnn_store_tile_mm.vhd",
       "impl\/vhdl\/srcnn_store_tile_mm_Pipeline_Out_writex.vhd",
       "impl\/vhdl\/srcnn_urem_4ns_3ns_2_8_1.vhd",
-      "impl\/vhdl\/srcnn_urem_9ns_3ns_2_13_1.vhd",
-      "impl\/vhdl\/srcnn_urem_64s_3ns_2_68_seq_1.vhd",
       "impl\/vhdl\/srcnn.vhd"
     ],
     "Verilog": [
@@ -680,12 +676,9 @@
       "impl\/verilog\/srcnn_compute_tile_win_RAM_AUTO_1R1W.v",
       "impl\/verilog\/srcnn_ctrl_s_axi.v",
       "impl\/verilog\/srcnn_dataflow_in_loop_IT_w0.v",
-      "impl\/verilog\/srcnn_dataflow_in_loop_IT_w0_outbuf_RAM_1P_BRAM_1R1W.v",
-      "impl\/verilog\/srcnn_dataflow_in_loop_IT_w0_outbuf_RAM_1P_BRAM_1R1W_memcore.dat",
-      "impl\/verilog\/srcnn_dataflow_in_loop_IT_w0_outbuf_RAM_1P_BRAM_1R1W_memcore.v",
-      "impl\/verilog\/srcnn_dataflow_in_loop_IT_w0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_1bkb.v",
-      "impl\/verilog\/srcnn_dataflow_in_loop_IT_w0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_1bkb_memcore.dat",
-      "impl\/verilog\/srcnn_dataflow_in_loop_IT_w0_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_1bkb_memcore.v",
+      "impl\/verilog\/srcnn_dataflow_in_loop_IT_w0_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32bkb.v",
+      "impl\/verilog\/srcnn_dataflow_in_loop_IT_w0_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32bkb_memcore.dat",
+      "impl\/verilog\/srcnn_dataflow_in_loop_IT_w0_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32bkb_memcore.v",
       "impl\/verilog\/srcnn_entry_proc.v",
       "impl\/verilog\/srcnn_fadd_32ns_32ns_32_4_full_dsp_1.v",
       "impl\/verilog\/srcnn_fcmp_32ns_32ns_1_2_no_dsp_1.v",
@@ -703,14 +696,14 @@
       "impl\/verilog\/srcnn_load_tile_mm_Pipeline_InputTileHread_InputTileWread.v",
       "impl\/verilog\/srcnn_mul_4ns_6ns_9_1_1.v",
       "impl\/verilog\/srcnn_mul_8ns_8ns_16_1_1.v",
-      "impl\/verilog\/srcnn_mul_9ns_11ns_19_1_1.v",
-      "impl\/verilog\/srcnn_mux_3_2_32_1_1.v",
       "impl\/verilog\/srcnn_mux_5_3_32_1_1.v",
       "impl\/verilog\/srcnn_mux_8_3_32_1_1.v",
+      "impl\/verilog\/srcnn_mux_16_4_32_1_1.v",
       "impl\/verilog\/srcnn_mux_25_5_32_1_1.v",
+      "impl\/verilog\/srcnn_mux_32_5_32_1_1.v",
       "impl\/verilog\/srcnn_mux_64_6_32_1_1.v",
-      "impl\/verilog\/srcnn_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loceOg.dat",
-      "impl\/verilog\/srcnn_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loceOg.v",
+      "impl\/verilog\/srcnn_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locqXc.dat",
+      "impl\/verilog\/srcnn_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locqXc.v",
       "impl\/verilog\/srcnn_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_7_RAM_1P_BRAM_1R1W.dat",
       "impl\/verilog\/srcnn_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_7_RAM_1P_BRAM_1R1W.v",
       "impl\/verilog\/srcnn_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10_RAM_1P_LUTRAM_1R1W.dat",
@@ -721,8 +714,6 @@
       "impl\/verilog\/srcnn_store_tile_mm.v",
       "impl\/verilog\/srcnn_store_tile_mm_Pipeline_Out_writex.v",
       "impl\/verilog\/srcnn_urem_4ns_3ns_2_8_1.v",
-      "impl\/verilog\/srcnn_urem_9ns_3ns_2_13_1.v",
-      "impl\/verilog\/srcnn_urem_64s_3ns_2_68_seq_1.v",
       "impl\/verilog\/srcnn.v"
     ],
     "SwDriver": [
@@ -2827,19 +2818,19 @@
       "Instances": [
         {
           "ModuleName": "srcnn_Pipeline_CopyW1_ky_CopyW1_kx",
-          "InstanceName": "grp_srcnn_Pipeline_CopyW1_ky_CopyW1_kx_fu_1118"
+          "InstanceName": "grp_srcnn_Pipeline_CopyW1_ky_CopyW1_kx_fu_3192"
         },
         {
           "ModuleName": "srcnn_Pipeline_CopyW2_inft",
-          "InstanceName": "grp_srcnn_Pipeline_CopyW2_inft_fu_1133"
+          "InstanceName": "grp_srcnn_Pipeline_CopyW2_inft_fu_3207"
         },
         {
           "ModuleName": "srcnn_Pipeline_CopyW3_inft_CopyW3_ky_CopyW3_kx",
-          "InstanceName": "grp_srcnn_Pipeline_CopyW3_inft_CopyW3_ky_CopyW3_kx_fu_1159"
+          "InstanceName": "grp_srcnn_Pipeline_CopyW3_inft_CopyW3_ky_CopyW3_kx_fu_3233"
         },
         {
           "ModuleName": "dataflow_in_loop_IT_w0",
-          "InstanceName": "grp_dataflow_in_loop_IT_w0_fu_1566",
+          "InstanceName": "grp_dataflow_in_loop_IT_w0_fu_3640",
           "Instances": [
             {
               "ModuleName": "entry_proc",
@@ -2850,7 +2841,7 @@
               "InstanceName": "load_tile_mm_U0",
               "Instances": [{
                   "ModuleName": "load_tile_mm_Pipeline_InputTileHread_InputTileWread",
-                  "InstanceName": "grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_102"
+                  "InstanceName": "grp_load_tile_mm_Pipeline_InputTileHread_InputTileWread_fu_1654"
                 }]
             },
             {
@@ -2859,31 +2850,31 @@
               "Instances": [
                 {
                   "ModuleName": "compute_tile_Pipeline_Init_Conv2Out_biases",
-                  "InstanceName": "grp_compute_tile_Pipeline_Init_Conv2Out_biases_fu_2001"
+                  "InstanceName": "grp_compute_tile_Pipeline_Init_Conv2Out_biases_fu_19907"
                 },
                 {
                   "ModuleName": "compute_tile_Pipeline_Conv1_ky",
-                  "InstanceName": "grp_compute_tile_Pipeline_Conv1_ky_fu_2045"
+                  "InstanceName": "grp_compute_tile_Pipeline_Conv1_ky_fu_19951"
                 },
                 {
                   "ModuleName": "compute_tile_Pipeline_Conv2_ReLU",
-                  "InstanceName": "grp_compute_tile_Pipeline_Conv2_ReLU_fu_2083"
+                  "InstanceName": "grp_compute_tile_Pipeline_Conv2_ReLU_fu_20224"
                 },
                 {
                   "ModuleName": "compute_tile_Pipeline_Conv2_dot32",
-                  "InstanceName": "grp_compute_tile_Pipeline_Conv2_dot32_fu_2103"
+                  "InstanceName": "grp_compute_tile_Pipeline_Conv2_dot32_fu_20244"
                 },
                 {
                   "ModuleName": "compute_tile_Pipeline_Shift_win32",
-                  "InstanceName": "grp_compute_tile_Pipeline_Shift_win32_fu_2133"
+                  "InstanceName": "grp_compute_tile_Pipeline_Shift_win32_fu_20274"
                 },
                 {
                   "ModuleName": "compute_tile_Pipeline_Update_linebuf32",
-                  "InstanceName": "grp_compute_tile_Pipeline_Update_linebuf32_fu_2378"
+                  "InstanceName": "grp_compute_tile_Pipeline_Update_linebuf32_fu_20519"
                 },
                 {
                   "ModuleName": "compute_tile_Pipeline_Conv3_inputft",
-                  "InstanceName": "grp_compute_tile_Pipeline_Conv3_inputft_fu_2423"
+                  "InstanceName": "grp_compute_tile_Pipeline_Conv3_inputft_fu_20564"
                 }
               ]
             },
@@ -2892,7 +2883,7 @@
               "InstanceName": "store_tile_mm_U0",
               "Instances": [{
                   "ModuleName": "store_tile_mm_Pipeline_Out_writex",
-                  "InstanceName": "grp_store_tile_mm_Pipeline_Out_writex_fu_98"
+                  "InstanceName": "grp_store_tile_mm_Pipeline_Out_writex_fu_3934"
                 }]
             }
           ]
@@ -3179,12 +3170,12 @@
       },
       "load_tile_mm_Pipeline_InputTileHread_InputTileWread": {
         "Latency": {
-          "LatencyBest": "157",
+          "LatencyBest": "155",
           "LatencyAvg": "",
-          "LatencyWorst": "71302",
-          "PipelineIIMin": "157",
-          "PipelineIIMax": "71302",
-          "PipelineII": "157 ~ 71302",
+          "LatencyWorst": "71300",
+          "PipelineIIMin": "155",
+          "PipelineIIMax": "71300",
+          "PipelineII": "155 ~ 71300",
           "PipelineDepth": "",
           "PipelineType": "no"
         },
@@ -3196,25 +3187,25 @@
         "Loops": [{
             "Name": "InputTileHread_InputTileWread",
             "TripCount": "",
-            "LatencyMin": "155",
-            "LatencyMax": "71300",
-            "Latency": "155 ~ 71300",
+            "LatencyMin": "153",
+            "LatencyMax": "71298",
+            "Latency": "153 ~ 71298",
             "PipelineII": "1",
-            "PipelineDepth": "13"
+            "PipelineDepth": "11"
           }],
         "Area": {
-          "DSP": "1",
-          "AVAIL_DSP": "1248",
-          "UTIL_DSP": "~0",
-          "FF": "554",
+          "FF": "1160",
           "AVAIL_FF": "234240",
           "UTIL_FF": "~0",
-          "LUT": "805",
+          "LUT": "633",
           "AVAIL_LUT": "117120",
           "UTIL_LUT": "~0",
           "BRAM_18K": "0",
           "AVAIL_BRAM": "288",
           "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "1248",
+          "UTIL_DSP": "0",
           "URAM": "0",
           "AVAIL_URAM": "64",
           "UTIL_URAM": "0"
@@ -3222,12 +3213,12 @@
       },
       "load_tile_mm": {
         "Latency": {
-          "LatencyBest": "162",
+          "LatencyBest": "159",
           "LatencyAvg": "",
-          "LatencyWorst": "71307",
-          "PipelineIIMin": "162",
-          "PipelineIIMax": "71307",
-          "PipelineII": "162 ~ 71307",
+          "LatencyWorst": "71304",
+          "PipelineIIMin": "159",
+          "PipelineIIMax": "71304",
+          "PipelineII": "159 ~ 71304",
           "PipelineDepth": "",
           "PipelineType": "no"
         },
@@ -3237,13 +3228,13 @@
           "Estimate": "7.300"
         },
         "Area": {
-          "DSP": "2",
+          "DSP": "1",
           "AVAIL_DSP": "1248",
           "UTIL_DSP": "~0",
-          "FF": "631",
+          "FF": "1229",
           "AVAIL_FF": "234240",
           "UTIL_FF": "~0",
-          "LUT": "1029",
+          "LUT": "817",
           "AVAIL_LUT": "117120",
           "UTIL_LUT": "~0",
           "BRAM_18K": "0",
@@ -3295,10 +3286,10 @@
       },
       "compute_tile_Pipeline_Conv1_ky": {
         "Latency": {
-          "LatencyBest": "37",
-          "LatencyAvg": "37",
-          "LatencyWorst": "37",
-          "PipelineII": "37",
+          "LatencyBest": "36",
+          "LatencyAvg": "36",
+          "LatencyWorst": "36",
+          "PipelineII": "36",
           "PipelineDepth": "",
           "PipelineType": "no"
         },
@@ -3310,17 +3301,17 @@
         "Loops": [{
             "Name": "Conv1_ky",
             "TripCount": "9",
-            "Latency": "35",
+            "Latency": "34",
             "PipelineII": "3",
-            "PipelineDepth": "12"
+            "PipelineDepth": "11"
           }],
         "Area": {
-          "FF": "1332",
+          "FF": "1338",
           "AVAIL_FF": "234240",
           "UTIL_FF": "~0",
-          "LUT": "1070",
+          "LUT": "2028",
           "AVAIL_LUT": "117120",
-          "UTIL_LUT": "~0",
+          "UTIL_LUT": "1",
           "BRAM_18K": "0",
           "AVAIL_BRAM": "288",
           "UTIL_BRAM": "0",
@@ -3529,12 +3520,12 @@
       },
       "compute_tile": {
         "Latency": {
-          "LatencyBest": "78409",
+          "LatencyBest": "76330",
           "LatencyAvg": "",
-          "LatencyWorst": "337417949",
-          "PipelineIIMin": "78409",
-          "PipelineIIMax": "337417949",
-          "PipelineII": "78409 ~ 337417949",
+          "LatencyWorst": "328697420",
+          "PipelineIIMin": "76330",
+          "PipelineIIMax": "328697420",
+          "PipelineII": "76330 ~ 328697420",
           "PipelineDepth": "",
           "PipelineType": "no"
         },
@@ -3546,29 +3537,29 @@
         "Loops": [{
             "Name": "ITRowcomp",
             "TripCount": "",
-            "LatencyMin": "78408",
-            "LatencyMax": "337417948",
-            "Latency": "78408 ~ 337417948",
+            "LatencyMin": "76328",
+            "LatencyMax": "328697418",
+            "Latency": "76328 ~ 328697418",
             "PipelineII": "",
-            "PipelineDepthMin": "19602",
-            "PipelineDepthMax": "1302772",
-            "PipelineDepth": "19602 ~ 1302772",
+            "PipelineDepthMin": "19082",
+            "PipelineDepthMax": "1269102",
+            "PipelineDepth": "19082 ~ 1269102",
             "Loops": [{
                 "Name": "ITColcomp",
                 "TripCount": "",
-                "LatencyMin": "19600",
-                "LatencyMax": "1302770",
-                "Latency": "19600 ~ 1302770",
+                "LatencyMin": "19080",
+                "LatencyMax": "1269100",
+                "Latency": "19080 ~ 1269100",
                 "PipelineII": "",
-                "PipelineDepthMin": "4900",
-                "PipelineDepthMax": "5030",
-                "PipelineDepth": "4900 ~ 5030",
+                "PipelineDepthMin": "4770",
+                "PipelineDepthMax": "4900",
+                "PipelineDepth": "4770 ~ 4900",
                 "Loops": [{
                     "Name": "Conv1_outftmaps",
                     "TripCount": "64",
-                    "Latency": "4800",
+                    "Latency": "4736",
                     "PipelineII": "",
-                    "PipelineDepth": "75"
+                    "PipelineDepth": "74"
                   }]
               }]
           }],
@@ -3576,15 +3567,15 @@
           "BRAM_18K": "32",
           "AVAIL_BRAM": "288",
           "UTIL_BRAM": "11",
-          "DSP": "54",
+          "DSP": "45",
           "AVAIL_DSP": "1248",
-          "UTIL_DSP": "4",
-          "FF": "23555",
+          "UTIL_DSP": "3",
+          "FF": "56041",
           "AVAIL_FF": "234240",
-          "UTIL_FF": "10",
-          "LUT": "35556",
+          "UTIL_FF": "23",
+          "LUT": "72688",
           "AVAIL_LUT": "117120",
-          "UTIL_LUT": "30",
+          "UTIL_LUT": "62",
           "URAM": "0",
           "AVAIL_URAM": "64",
           "UTIL_URAM": "0"
@@ -3612,12 +3603,12 @@
             "PipelineDepth": "8"
           }],
         "Area": {
-          "FF": "216",
+          "FF": "248",
           "AVAIL_FF": "234240",
           "UTIL_FF": "~0",
-          "LUT": "509",
+          "LUT": "1582",
           "AVAIL_LUT": "117120",
-          "UTIL_LUT": "~0",
+          "UTIL_LUT": "1",
           "BRAM_18K": "0",
           "AVAIL_BRAM": "288",
           "UTIL_BRAM": "0",
@@ -3647,12 +3638,12 @@
           "DSP": "0",
           "AVAIL_DSP": "1248",
           "UTIL_DSP": "0",
-          "FF": "327",
+          "FF": "8550",
           "AVAIL_FF": "234240",
-          "UTIL_FF": "~0",
-          "LUT": "682",
+          "UTIL_FF": "3",
+          "LUT": "1755",
           "AVAIL_LUT": "117120",
-          "UTIL_LUT": "~0",
+          "UTIL_LUT": "1",
           "BRAM_18K": "0",
           "AVAIL_BRAM": "288",
           "UTIL_BRAM": "0",
@@ -3676,18 +3667,18 @@
           "Estimate": "7.300"
         },
         "Area": {
-          "BRAM_18K": "46",
+          "BRAM_18K": "2112",
           "AVAIL_BRAM": "288",
-          "UTIL_BRAM": "15",
-          "DSP": "56",
+          "UTIL_BRAM": "733",
+          "DSP": "46",
           "AVAIL_DSP": "1248",
-          "UTIL_DSP": "4",
-          "FF": "25221",
+          "UTIL_DSP": "3",
+          "FF": "67564",
           "AVAIL_FF": "234240",
-          "UTIL_FF": "10",
-          "LUT": "37935",
+          "UTIL_FF": "28",
+          "LUT": "89396",
           "AVAIL_LUT": "117120",
-          "UTIL_LUT": "32",
+          "UTIL_LUT": "76",
           "URAM": "0",
           "AVAIL_URAM": "64",
           "UTIL_URAM": "0"
@@ -3738,18 +3729,18 @@
           }
         ],
         "Area": {
-          "BRAM_18K": "74",
+          "BRAM_18K": "2140",
           "AVAIL_BRAM": "288",
-          "UTIL_BRAM": "25",
-          "DSP": "56",
+          "UTIL_BRAM": "743",
+          "DSP": "46",
           "AVAIL_DSP": "1248",
-          "UTIL_DSP": "4",
-          "FF": "41186",
+          "UTIL_DSP": "3",
+          "FF": "83529",
           "AVAIL_FF": "234240",
-          "UTIL_FF": "17",
-          "LUT": "55153",
+          "UTIL_FF": "35",
+          "LUT": "106614",
           "AVAIL_LUT": "117120",
-          "UTIL_LUT": "47",
+          "UTIL_LUT": "91",
           "URAM": "0",
           "AVAIL_URAM": "64",
           "UTIL_URAM": "0"
@@ -3760,7 +3751,7 @@
   "GenerateBdFiles": "0",
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2025-10-26 19:45:04 +1100",
+    "Time": "2025-10-26 20:35:12 +1100",
     "ToolName": "vitis_hls",
     "ToolVersion": "2023.1"
   }

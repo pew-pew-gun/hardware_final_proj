@@ -173,15 +173,15 @@ static void compute_tile(
 			}
 		}
 
-		/*
+
 		// Sum all partial sums/interleaved accumulators together
-		param_t acc1 = conv1_b[c1];
-		Sum_pacc1:
-		for (int i = 0;i < F1; ++i) {
-#pragma HLS PIPELINE II=3
-			acc1 += pacc1[i];
-		}
-	*/
+//		param_t acc1 = conv1_b[c1];
+//		Sum_pacc1:
+//		for (int i = 0;i < F1; ++i) {
+//#pragma HLS PIPELINE II=3
+//			acc1 += pacc1[i];
+//		}
+
 
 		// Sum all partial sums/interleaved accumulators together
 		param_t acc1 = conv1_b[c1];
@@ -342,18 +342,18 @@ static void compute_tile(
                 }
               }
             }
-/*
-            ftmap_t acc3_sum = conv3_b[0];
-            acc3row:
-            for (int i=0; i < F3; ++i) {
-#pragma HLS PIPELINE II=3
-            	acc3col:
-            	for (int j=0; j<F3; ++j) {
-#pragma HLS UNROLL
-            		acc3_sum += acc3[i][j];
-            	}
-            }
-*/
+
+//            ftmap_t acc3_sum = conv3_b[0];
+//            acc3row:
+//            for (int i=0; i < F3; ++i) {
+//#pragma HLS PIPELINE II=3
+//            	acc3col:
+//            	for (int j=0; j<F3; ++j) {
+//#pragma HLS UNROLL
+//            		acc3_sum += acc3[i][j];
+//            	}
+//            }
+
 
             ftmap_t acc3_sum = conv3_b[0];
             param_t psum_row[F3];
@@ -383,7 +383,7 @@ static void compute_tile(
 			// layer 2
 			param_t s2 = s0 + s1;
 			// layer 3
-			acc3_sum = s2 + psum_row[4];
+			acc3_sum += (s2 + psum_row[4]);
 
 //            for (int i=0; i<F3; ++i) {
 //            	acc3_sum += psum_row[i];
