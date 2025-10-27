@@ -2,7 +2,7 @@
   - Butterfly MSE: 3.46254e-015
 
 ***** SRCNN Golden Reference *****
-  - Butterfly MSE: 3.50187e-014
+  - Butterfly MSE: 5.37797e-014
   - PSNR GT vs HR (dB): 27.4622
 
 ***** SRCNN - Set14 Test *****

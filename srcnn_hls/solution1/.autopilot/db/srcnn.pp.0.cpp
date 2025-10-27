@@ -156,7 +156,6 @@ extern "C" {
 }
 # 2 "<built-in>" 2
 # 1 "src/srcnn.cpp" 2
-
 # 1 "src/srcnn.h" 1
 # 19 "src/srcnn.h"
 typedef float ftmap_t;
@@ -178,7 +177,7 @@ void conv1(ftmap_t input_ftmap[1][255][255],
            param_t conv1_weights[64][1][9][9],
            param_t conv1_biases[64],
            ftmap_t output_ftmap[64][255][255]);
-# 3 "src/srcnn.cpp" 2
+# 2 "src/srcnn.cpp" 2
 # 1 "D:/Vitis_HLS/2023.1/common/technology/autopilot\\hls_stream.h" 1
 # 15 "D:/Vitis_HLS/2023.1/common/technology/autopilot\\hls_stream.h"
 # 1 "D:/Vitis_HLS/2023.1/common/technology/autopilot/hls_stream_39.h" 1
@@ -310,314 +309,412 @@ class stream : public stream<__STREAM_T__, 0> {
 };
 }
 # 16 "D:/Vitis_HLS/2023.1/common/technology/autopilot\\hls_stream.h" 2
-# 4 "src/srcnn.cpp" 2
-# 24 "src/srcnn.cpp"
- static inline int clampi(int v, int lo, int hi) {
-     return v < lo ? lo : (v > hi ? hi : v);
- }
-
-
-static void load_tile_mm(
-  ftmap_t in[1][255][255],
-  int h0, int w0, int th_eff, int tw_eff,
-  ftmap_t in_tile[16 + 2*((9/2) + (1/2) + (5/2))][16 + 2*((9/2) + (1/2) + (5/2))] )
-{
-#pragma HLS INLINE off
-
-
- const int PH = th_eff + 2*((9/2) + (1/2) + (5/2));
-    const int PW = tw_eff + 2*((9/2) + (1/2) + (5/2));
-
-
-
-    InputTileHread:
-    for (int py = 0; py < PH; ++py) {
+# 3 "src/srcnn.cpp" 2
+# 25 "src/srcnn.cpp"
+typedef float ftmap_t;
+typedef float param_t;
+# 42 "src/srcnn.cpp"
+struct conv2_pixel {
+  ftmap_t v[32];
+};
 
 
 
 
-        int iy = h0 + py - ((9/2) + (1/2) + (5/2));
-        if (iy < 0) iy = 0;
-        if (iy >= 255) iy = 255 - 1;
 
-        InputTileWread:
-        for (int px = 0; px < PW; ++px) {
+struct win9_t {
+  ftmap_t a[9][9];
+  bool valid;
+};
 
-#pragma HLS PIPELINE
 
- int ix = w0 + px - ((9/2) + (1/2) + (5/2));
-            if (ix < 0) ix = 0;
-            if (ix >= 255) ix = 255 - 1;
-            in_tile[py][px] = in[0][iy][ix];
-        }
-    }
+
+struct col5_t {
+  conv2_pixel c[5];
+  bool valid;
+};
+
+struct col4_t {
+  conv2_pixel c[4];
+};
+struct col1_t {
+  conv2_pixel c;
+  bool valid;
+};
+
+
+
+
+
+struct c1_word {
+    param_t y;
+    bool first;
+    bool last;
+    bool valid;
+};
+
+
+
+
+static inline int clampi(int v, int lo, int hi) {
+    return v < lo ? lo : (v > hi ? hi : v);
 }
 
 
 
 
-
-static void compute_tile(
-  ftmap_t in_tile[16 + 2*((9/2) + (1/2) + (5/2))][16 + 2*((9/2) + (1/2) + (5/2))],
-  ftmap_t out_tile[16][16],
-
-  param_t conv1_w[64][1][9][9], param_t conv1_b[64],
-  param_t conv2_w[32][64][1][1], param_t conv2_b[32],
-  param_t conv3_w[1][32][5][5], param_t conv3_b[1],
-  int h0, int w0, int th_eff, int tw_eff )
+static void load_tile_to_stream(
+  ftmap_t in[1][255][255],
+  int h0, int w0, int th_eff, int tw_eff,
+  hls::stream<ftmap_t> &s_pix)
 {
 #pragma HLS INLINE off
+#pragma HLS PIPELINE II=1
+#pragma HLS STREAM variable=s_pix depth=1024
+ const int PH = th_eff + 2*((9/2) + (1/2) + (5/2));
+  const int PW = tw_eff + 2*((9/2) + (1/2) + (5/2));
+
+  InputTileHread:
+  for (int py=0; py<PH; ++py) {
+    int iy = h0 + py - ((9/2) + (1/2) + (5/2));
+    if (iy < 0) iy = 0;
+    if (iy >= 255) iy = 255 - 1;
+
+    InputTileWread:
+    for (int px=0; px<PW; ++px) {
+      int ix = w0 + px - ((9/2) + (1/2) + (5/2));
+      if (ix < 0) ix = 0;
+      if (ix >= 255) ix = 255 - 1;
+      s_pix.write(in[0][iy][ix]);
+    }
+  }
+}
+
+
+static void make_win9(
+  hls::stream<ftmap_t> &s_pix,
+  hls::stream<win9_t> &s_win,
+  int th_eff, int tw_eff)
+{
+  const int PH = th_eff + 2*((9/2) + (1/2) + (5/2));
+  const int PW = tw_eff + 2*((9/2) + (1/2) + (5/2));
+  const int C2H = th_eff + 2*(5/2);
+  const int C2W = tw_eff + 2*(5/2);
 
 
 
- ftmap_t linebuf[32][5 -1][16 + 2*(5/2)];
-#pragma HLS BIND_STORAGE variable=linebuf type=ram_2p impl=bram
-#pragma HLS ARRAY_PARTITION variable=linebuf complete dim=2
-#pragma HLS ARRAY_PARTITION variable=linebuf cyclic factor=8 dim=1
-
- ftmap_t win[32][5][5];
-#pragma HLS ARRAY_PARTITION variable=win complete dim=2
-#pragma HLS ARRAY_PARTITION variable=win complete dim=3
-#pragma HLS ARRAY_PARTITION variable=win cyclic factor=8 dim=1
-# 110 "src/srcnn.cpp"
- ITRowcomp:
-  for (int y0 = -(5/2); y0 < th_eff + (5/2); ++y0) {
-#pragma HLS LOOP_FLATTEN off
- ITColcomp:
-    for (int x0 = -(5/2); x0 < tw_eff + (5/2); ++x0) {
-
-#pragma HLS DEPENDENCE variable=linebuf inter false
-#pragma HLS DEPENDENCE variable=win inter false
+  ftmap_t lb1[9 -1][8 + 2*((9/2) + (1/2) + (5/2))];
+#pragma HLS BIND_STORAGE variable=lb1 type=ram_2p impl=bram
+#pragma HLS ARRAY_PARTITION variable=lb1 complete dim=1
 
 
- param_t acc2[32];
-#pragma HLS ARRAY_PARTITION variable=acc2 cyclic factor=8 dim=1
+ ftmap_t win1[9][9];
+#pragma HLS ARRAY_PARTITION variable=win1 complete dim=0
+
+
+ int y=0, x=0;
+
+
+  win9x9_read_pix:
+  for (int t=0; t<PH*PW; ++t) {
+#pragma HLS PIPELINE II=1
+ ftmap_t pix = s_pix.read();
+
+
+    Shift_win9x9_row:
+    for (int r=0; r<9; ++r) {
+
+#pragma HLS UNROLL
+ Shift_win9x9_col:
+      for (int c=0; c<9 -1; ++c) {
+#pragma HLS UNROLL
+ win1[r][c] = win1[r][c+1];
+      }
+    }
+
+
+    ReadLBto9x9:
+    for (int r=0; r<9 -1; ++r) {
+#pragma HLS UNROLL
+ win1[r][9 -1] = lb1[9 -2-r][x];
+    }
+    win1[9 -1][9 -1] = pix;
+
+
+
+    Shift_lb1:
+    for (int r=9 -2; r>=1; --r) {
+#pragma HLS UNROLL
+ lb1[r][x] = lb1[r-1][x];
+    }
+    lb1[0][x] = pix;
+
+
+
+    if (y >= (9 -1) && x >= (9 -1)) {
+      win9_t w;
+#pragma HLS ARRAY_PARTITION variable=w.a complete dim=0
+ VITIS_LOOP_182_1: for (int ky=0; ky<9; ++ky) {
+#pragma HLS UNROLL
+ VITIS_LOOP_184_2: for (int kx=0; kx<9; ++kx) {
+#pragma HLS UNROLL
+ w.a[ky][kx] = win1[ky][kx];
+        }
+      }
+
+
+      w.valid = (y < (9 -1 + C2H)) && (x < (9 -1 + C2W));
+
+
+
+      s_win.write(w);
+    }
+
+
+    if (++x == PW) {
+      x = 0;
+      ++y;
+
+
+
+
+
+    }
+  }
+}
+# 308 "src/srcnn.cpp"
+static void conv1conv2_from_windows(
+  hls::stream<win9_t> &s_win,
+  hls::stream<conv2_pixel> &s_f2,
+
+  param_t w1[64][1][9][9], param_t b1[64],
+  param_t w2[32][64][1][1], param_t b2[32],
+  int th_eff, int tw_eff)
+{
+#pragma HLS INLINE off
+ const int C2H = th_eff + 2*(5/2);
+  const int C2W = tw_eff + 2*(5/2);
+
+
+#pragma HLS ALLOCATION instances=mul limit=32 operation
+#pragma HLS ALLOCATION instances=fmul limit=32 operation
+
+
+
+Conv12_oy:
+  for (int wy = 0; wy < C2H; ++wy) {
+  Conv12_ox:
+    for (int wx = 0; wx < C2W; ++wx) {
+
+      win9_t w = s_win.read();
+
+
+      param_t acc2[32];
+#pragma HLS ARRAY_PARTITION variable=acc2 cyclic factor=4 dim=1
+
 
  Init_Conv2Out_biases:
       for (int n2 = 0; n2 < 32; ++n2) {
-#pragma HLS PIPELINE
-#pragma HLS UNROLL factor=8
- acc2[n2] = conv2_b[n2];
+#pragma HLS UNROLL factor=4
+ acc2[n2] = b2[n2];
       }
 
 
       Conv1_outftmaps:
       for (int c1 = 0; c1 < 64; ++c1) {
-# 152 "src/srcnn.cpp"
-     param_t pacc1[9];
-#pragma HLS ARRAY_PARTITION variable=pacc1 complete dim=1
-
-
-
- VITIS_LOOP_157_1: for (int i=0; i<9; ++i) {
-#pragma HLS UNROLL
- pacc1[i] = 0;
-     }
-
-
-
-  Conv1_ky:
-  for (int ky = 0; ky < 9; ++ky) {
 #pragma HLS PIPELINE II=3
- Conv1_kx:
-   for (int kx = 0; kx < 9; ++kx) {
+
+
+
+ param_t sum1 = 0;
+        Conv1_ky:
+        for (int ky = 0; ky < 9; ++ky) {
 #pragma HLS UNROLL
- int py = (y0 - (9/2)) + ky + ((9/2) + (1/2) + (5/2));
-    int px = (x0 - (9/2)) + kx + ((9/2) + (1/2) + (5/2));
-    pacc1[kx] += conv1_w[c1][0][ky][kx] * in_tile[py][px];
-   }
-  }
-# 187 "src/srcnn.cpp"
-  param_t acc1 = conv1_b[c1];
+ Conv1_kx:
+          for (int kx = 0; kx < 9; ++kx) {
+#pragma HLS UNROLL
+ sum1 += w1[c1][0][ky][kx] * w.a[ky][kx];
+          }
+        }
 
-
-
-  param_t p0 = pacc1[0] + pacc1[1];
-  param_t p1 = pacc1[2] + pacc1[3];
-  param_t p2 = pacc1[4] + pacc1[5];
-  param_t p3 = pacc1[6] + pacc1[7];
-
-  param_t p4 = p0 + p1;
-  param_t p5 = p2 + p3;
-
-  param_t p6 = p4 + p5;
-
-  param_t p7 = p6 + pacc1[8];
-
-  acc1 += p7;
-# 212 "src/srcnn.cpp"
-        if (acc1 < (param_t)0) acc1 = (param_t)0;
-
+        param_t acc1_sum = b1[c1] + sum1;
+        if (acc1_sum < (param_t)0) acc1_sum = 0;
 
 
         Conv2_dot32:
         for (int n2 = 0; n2 < 32; ++n2) {
-#pragma HLS UNROLL factor=8
-#pragma HLS PIPELINE
- acc2[n2] += conv2_w[n2][c1][0][0] * acc1;
+#pragma HLS UNROLL factor=4
+ acc2[n2] += w2[n2][c1][0][0] * acc1_sum;
         }
       }
 
-      ftmap_t f2[32];
-#pragma HLS ARRAY_PARTITION variable=f2 cyclic factor=8 dim=1
 
-
- Conv2_ReLU:
+      conv2_pixel outpix;
+      Push_conv2pix_out:
       for (int n2 = 0; n2 < 32; ++n2) {
-#pragma HLS PIPELINE
-#pragma HLS UNROLL factor=8
- param_t t = acc2[n2];
-        f2[n2] = (t > (param_t)0) ? (ftmap_t)t : (ftmap_t)0;
+#pragma HLS PIPELINE II=4
+#pragma HLS UNROLL factor=4
+ param_t t2 = acc2[n2];
+        outpix.v[n2] = (t2 > (param_t)0) ? (ftmap_t)t2 : (ftmap_t)0;
       }
 
-
-      const int col = x0 + (5/2);
-
-
-      Shift_win32:
-      for (int n2 = 0; n2 < 32; ++n2) {
-#pragma HLS PIPELINE
-#pragma HLS UNROLL factor=8
-
- Shift_win_row:
-        for (int r = 0; r < 5; ++r) {
-
-          ftmap_t a = win[n2][r][1], b = win[n2][r][2],
-                  c = win[n2][r][3], d = win[n2][r][4];
-          win[n2][r][0]=a;
-          win[n2][r][1]=b;
-          win[n2][r][2]=c;
-          win[n2][r][3]=d;
-        }
-
-        ReadLineInWin:
-        for (int r = 0; r < 5 -1; ++r) {
-
-#pragma HLS UNROLL factor=5 -1
- win[n2][r][5 -1] = linebuf[n2][5 -2 - r][col];
-        }
-        win[n2][5 -1][5 -1] = f2[n2];
-      }
+      s_f2.write(outpix);
+    }
+  }
+}
 
 
-      Update_linebuf32:
-      for (int n2 = 0; n2 < 32; ++n2) {
-#pragma HLS PIPELINE
-#pragma HLS UNROLL factor=8
- Update_linebuf_row:
-        for (int r = 5 -2; r >= 1; --r) {
-#pragma HLS UNROLL factor=5 -2
- linebuf[n2][r][col] = linebuf[n2][r-1][col];
-        }
-        linebuf[n2][0][col] = f2[n2];
-      }
+
+static void conv1conv2_stream(
+  hls::stream<ftmap_t> &s_pix,
+  hls::stream<conv2_pixel> &s_f2,
+  param_t w1[64][1][9][9], param_t b1[64],
+  param_t w2[32][64][1][1], param_t b2[32],
+  int th_eff, int tw_eff)
+{
+#pragma HLS INLINE off
+#pragma HLS DATAFLOW
+
+ hls::stream<win9_t> s_win;
+#pragma HLS STREAM variable=s_win depth=64
+ hls::stream<c1_word> s_c1;
+#pragma HLS STREAM variable=s_c1 depth=64
+
+ make_win9 (s_pix, s_win, th_eff, tw_eff);
+  conv1conv2_from_windows(s_win, s_f2, w1,b1, w2,b2, th_eff, tw_eff);
+}
+# 593 "src/srcnn.cpp"
+ static void conv3_stream(
+   hls::stream<conv2_pixel> &s_f2,
+   hls::stream<ftmap_t> &s_out,
+   param_t w3[1][32][5][5], param_t b3[1],
+   int h0, int w0, int th_eff, int tw_eff)
+ {
+#pragma HLS INLINE off
+#pragma HLS PIPELINE II=1
+#pragma HLS STREAM variable=s_out depth=1024
+ const int C2H = th_eff + 2*(5/2);
+   const int C2W = tw_eff + 2*(5/2);
+
+#pragma HLS ALLOCATION instances=mul limit=32 operation
+#pragma HLS ALLOCATION instances=fmul limit=32 operation
 
 
-      if (y0 >= (5/2) && x0 >= (5/2)) {
-        int oy = y0 - (5/2);
-        int ox = x0 - (5/2);
-        if (oy < th_eff && ox < tw_eff) {
-# 311 "src/srcnn.cpp"
-            param_t acc3[5][5];
-#pragma HLS ARRAY_PARTITION variable=acc3 complete dim=1
-#pragma HLS ARRAY_PARTITION variable=acc3 complete dim=2
 
- pacc3row_0:
-            for (int i=0; i<5; ++i) {
-#pragma HLS PIPELINE
- pacc3col_0:
-             for (int j=0;j<5;++j) {
+
+
+
+ conv2_pixel lb2[5 -1][8 + 2*(5/2)];
+
+
+#pragma HLS ARRAY_PARTITION variable=lb2 complete dim=1
+
+ conv2_pixel win2[5][5];
+#pragma HLS ARRAY_PARTITION variable=win2 complete dim=0
+
+ int y=0, x=0;
+
+
+   win5x5_read_pix:
+   for (int t=0; t<C2H*C2W; ++t) {
+     conv2_pixel v = s_f2.read();
+
+     Shift_win5x5_row:
+     for (int r=0; r<5; ++r) {
+
 #pragma HLS UNROLL
- acc3[i][j]=0;
-             }
-            }
+ Shift_win5x5_col:
+       for (int c=0; c<5 -1; ++c) {
+#pragma HLS UNROLL
+ win2[r][c] = win2[r][c+1];
+       }
+     }
 
 
-            Conv3_inputft:
-            for (int n2 = 0; n2 < 32; ++n2) {
+     ReadLBto5x5:
+     for (int r=0; r<5 -1; ++r) {
+#pragma HLS UNROLL
+ win2[r][5 -1] = lb2[5 -2-r][x];
+     }
+     win2[5 -1][5 -1] = v;
 
-#pragma HLS PIPELINE II=3
- Conv3_ky:
-              for (int ky = 0; ky < 5; ++ky) {
+
+
+
+     Shift_lb2:
+     for (int r=5 -2; r>=1; --r) {
+#pragma HLS UNROLL
+ lb2[r][x] = lb2[r-1][x];
+     }
+     lb2[0][x] = v;
+
+
+
+
+
+     if (y >= (5 - 1) && x >= (5 - 1)) {
+
+
+       param_t acc = b3[0];
+
+       Conv3_ky:
+       for (int ky=0; ky<5; ++ky) {
 #pragma HLS UNROLL
  Conv3_kx:
-                for (int kx = 0; kx < 5; ++kx) {
-
+         for (int kx=0; kx<5; ++kx) {
 #pragma HLS UNROLL
 
- int wy = clampi(ky, (5/2)-(h0+oy), (5/2)-(h0+oy)+255 -1);
-                   int wx = clampi(kx, (5/2)-(w0+ox), (5/2)-(w0+ox)+255 -1);
-
-                  acc3[ky][kx] += conv3_w[0][n2][ky][kx] * win[n2][wy][wx];
-                }
-              }
-            }
-# 358 "src/srcnn.cpp"
-            ftmap_t acc3_sum = conv3_b[0];
-            param_t psum_row[5];
-#pragma HLS ARRAY_PARTITION variable=psum_row complete dim=1
-
-
- acc3row:
-            for (int i=0; i < 5; ++i) {
-
+ Conv3_inv8_dot:
+           for (int n2=0; n2<32; n2 += 4) {
+#pragma HLS UNROLL
+ param_t ps = 0;
+             Conv3_inner_dot:
+             for (int u=0; u<4; ++u) {
 #pragma HLS UNROLL
 
+ int wy = clampi(ky, 3*(5/2)-(h0+y), 3*(5/2)-(h0+y)+255 -1);
+               int wx = clampi(kx, 3*(5/2)-(w0+x), 3*(5/2)-(w0+x)+255 -1);
 
- param_t s0 = acc3[i][0] + acc3[i][1];
-             param_t s1 = acc3[i][2] + acc3[i][3];
+               ps += w3[0][n2+u][ky][kx] * win2[wy][wx].v[n2+u];
+             }
+             acc += ps;
+           }
+         }
+       }
+       s_out.write((ftmap_t)acc);
+     }
 
-             param_t s2 = s0 + s1;
-
-             psum_row[i] = s2 + acc3[i][4];
-
-
-            }
-
-
-
-   param_t s0 = psum_row[0] + psum_row[1];
-   param_t s1 = psum_row[2] + psum_row[3];
-
-   param_t s2 = s0 + s1;
-
-   acc3_sum = s2 + psum_row[4];
+     if (++x == C2W) {
+       x = 0;
 
 
-
-
-
-            out_tile[oy][ox] = acc3_sum;
-
-
-
-        }
-      }
-    }
-  }
-}
-
-
-
-static void store_tile_mm(
-  ftmap_t out_tile[16][16],
+       if (++y == C2H) {
+         y = 0;
+       }
+     }
+   }
+ }
+# 713 "src/srcnn.cpp"
+static void store_stream(
+  hls::stream<ftmap_t> &s_out,
   ftmap_t out[1][255][255],
-  int h0, int w0, int th_eff, int tw_eff )
+  int h0, int w0, int th_eff, int tw_eff)
 {
-
 #pragma HLS INLINE off
+#pragma HLS PIPELINE II=1
 
  Out_writey:
-  for (int y = 0; y < th_eff; ++y) {
-
- Out_writex:
-    for (int x = 0; x < tw_eff; ++x) {
-
-#pragma HLS PIPELINE
- out[0][h0 + y][w0 + x] = out_tile[y][x];
+  for (int y=0; y<th_eff; ++y) {
+    Out_writex:
+    for (int x=0; x<tw_eff; ++x) {
+      out[0][h0+y][w0+x] = s_out.read();
     }
   }
 }
+
+
+
+
 
 
 
@@ -630,9 +727,13 @@ __attribute__((sdx_kernel("srcnn", 0))) void srcnn(
 {
 #line 27 "D:/HAC/hardware_final_proj/srcnn_hls/solution1/csynth.tcl"
 #pragma HLSDIRECTIVE TOP name=srcnn
-# 432 "src/srcnn.cpp"
+# 742 "src/srcnn.cpp"
 
-# 442 "src/srcnn.cpp"
+#line 7 "D:/HAC/hardware_final_proj/srcnn_hls/solution1/directives.tcl"
+#pragma HLSDIRECTIVE TOP name=srcnn
+# 742 "src/srcnn.cpp"
+
+# 754 "src/srcnn.cpp"
 #pragma HLS INTERFACE s_axilite port=return bundle=ctrl
 
 #pragma HLS INTERFACE s_axilite port=reload_weights bundle=ctrl
@@ -658,20 +759,23 @@ __attribute__((sdx_kernel("srcnn", 0))) void srcnn(
 #pragma HLS INTERFACE s_axilite port=conv3_weights bundle=ctrl
 #pragma HLS INTERFACE m_axi port=conv3_biases bundle=gmem_w3 offset=slave depth=(1)
 #pragma HLS INTERFACE s_axilite port=conv3_biases bundle=ctrl
-# 488 "src/srcnn.cpp"
- static ftmap_t inbuf [2][16 + 2*((9/2) + (1/2) + (5/2))][16 + 2*((9/2) + (1/2) + (5/2))];
-  static ftmap_t outbuf[2][16][16];
+
+
+
+
+ static ftmap_t inbuf [2][8 + 2*((9/2) + (1/2) + (5/2))][8 + 2*((9/2) + (1/2) + (5/2))];
+  static ftmap_t outbuf[2][8][8];
+
 #pragma HLS BIND_STORAGE variable=inbuf type=ram_2p impl=bram
 #pragma HLS BIND_STORAGE variable=outbuf type=ram_2p impl=bram
 
-#pragma HLS ARRAY_PARTITION variable=inbuf cyclic factor=2 dim=1
-#pragma HLS ARRAY_PARTITION variable=inbuf complete dim=2
-#pragma HLS ARRAY_PARTITION variable=inbuf complete dim=3
+#pragma HLS DEPENDENCE variable=inbuf inter false
+#pragma HLS DEPENDENCE variable=outbuf inter false
 
-#pragma HLS ARRAY_PARTITION variable=outbuf cyclic factor=2 dim=1
-#pragma HLS ARRAY_PARTITION variable=outbuf complete dim=2
-#pragma HLS ARRAY_PARTITION variable=outbuf complete dim=3
-# 520 "src/srcnn.cpp"
+
+
+
+
  static param_t w1_loc[64][1][9][9];
   static param_t b1_loc[64];
   static param_t w2_loc[32][64][1][1];
@@ -682,22 +786,23 @@ __attribute__((sdx_kernel("srcnn", 0))) void srcnn(
 
 
 
+
+#pragma HLS ARRAY_PARTITION variable=w1_loc complete dim=3
+#pragma HLS ARRAY_PARTITION variable=w1_loc complete dim=4
 #pragma HLS RESOURCE variable=w1_loc core=RAM_1P_LUTRAM
 
 
 
+#pragma HLS RESOURCE variable=w2_loc core=RAM_1P_LUTRAM
 
-#pragma HLS BIND_STORAGE variable=w2_loc type=ram_1p impl=bram
-#pragma HLS ARRAY_PARTITION variable=w2_loc cyclic factor=8 dim=1
-
-
+#pragma HLS ARRAY_PARTITION variable=w2_loc complete dim=1
 
 
 #pragma HLS RESOURCE variable=w3_loc core=RAM_1P_LUTRAM
+
 #pragma HLS ARRAY_PARTITION variable=w3_loc complete dim=3
 #pragma HLS ARRAY_PARTITION variable=w3_loc complete dim=4
-#pragma HLS ARRAY_PARTITION variable=w3_loc cyclic factor=8 dim=2
-
+#pragma HLS ARRAY_PARTITION variable=w3_loc cyclic factor=4 dim=2
 
 
 #pragma HLS ARRAY_PARTITION variable=b1_loc complete dim=1
@@ -706,48 +811,46 @@ __attribute__((sdx_kernel("srcnn", 0))) void srcnn(
 #pragma HLS RESOURCE variable=b1_loc core=RAM_1P_LUTRAM
 #pragma HLS RESOURCE variable=b2_loc core=RAM_1P_LUTRAM
 #pragma HLS RESOURCE variable=b3_loc core=RAM_1P_LUTRAM
-
-
-
+# 843 "src/srcnn.cpp"
  static bool weights_loaded = false;
+
 
 #pragma HLS reset variable=weights_loaded
 
  if (reload_weights || !weights_loaded) {
-# 571 "src/srcnn.cpp"
-CopyW1_outft:
-  for (int c1=0;c1<64;++c1) {
 
-    b1_loc[c1] = conv1_biases[c1];
-    CopyW1_ky:
-    for (int ky=0;ky<9;++ky){
 
-     CopyW1_kx:
-      for (int kx=0;kx<9;++kx){
+    CopyW1_outft:
+    for (int c1=0;c1<64;++c1) {
 
-        w1_loc[c1][0][ky][kx] = conv1_weights[c1][0][ky][kx];
+      b1_loc[c1] = conv1_biases[c1];
+      CopyW1_ky:
+      for (int ky=0;ky<9;++ky){
+
+        CopyW1_kx:
+        for (int kx=0;kx<9;++kx){
+
+          w1_loc[c1][0][ky][kx] = conv1_weights[c1][0][ky][kx];
+        }
       }
     }
-  }
 
-   CopyW2_outft:
+    CopyW2_outft:
     for (int c2=0;c2<32;++c2) {
 #pragma HLS PIPELINE off
  b2_loc[c2] = conv2_biases[c2];
-        CopyW2_inft:
-        for (int i2=0; i2<64;++i2) {
+      CopyW2_inft:
+      for (int i2=0; i2<64;++i2) {
 #pragma HLS PIPELINE
  CopyW2_ky:
-            for (int ky=0;ky<1;++ky){
-             CopyW2_kx:
-                for (int kx=0;kx<1;++kx){
-                    w2_loc[c2][i2][ky][kx] = conv2_weights[c2][i2][ky][kx];
-                }
-            }
+        for (int ky=0;ky<1;++ky){
+          CopyW2_kx:
+          for (int kx=0;kx<1;++kx){
+            w2_loc[c2][i2][ky][kx] = conv2_weights[c2][i2][ky][kx];
+          }
         }
+      }
     }
-
-
 
 
     b3_loc[0] = conv3_biases[0];
@@ -755,20 +858,19 @@ CopyW1_outft:
     CopyW3_inft:
     for (int i3=0; i3<32;++i3) {
 
-     CopyW3_ky:
-        for (int ky=0;ky<5;++ky){
+      CopyW3_ky:
+      for (int ky=0;ky<5;++ky){
 
-         CopyW3_kx:
-            for (int kx=0;kx<5;++kx){
+        CopyW3_kx:
+        for (int kx=0;kx<5;++kx){
 
-                w3_loc[0][i3][ky][kx] = conv3_weights[0][i3][ky][kx];
-            }
+            w3_loc[0][i3][ky][kx] = conv3_weights[0][i3][ky][kx];
         }
+      }
     }
 
-        weights_loaded = true;
+    weights_loaded = true;
   }
-
 
 
 #pragma HLS stable variable=w1_loc
@@ -778,27 +880,36 @@ CopyW1_outft:
 #pragma HLS stable variable=w3_loc
 #pragma HLS stable variable=b3_loc
 
+
+
  bool phase = false;
 
   IT_h0:
-  for (int h0 = 0; h0 < 255; h0 += 16) {
-    const int th_eff = (h0 + 16 <= 255) ? 16 : (255 - h0);
+  for (int h0=0; h0<255; h0+=8) {
+    const int th_eff = (h0+8<=255)? 8 : (255 -h0);
     IT_w0:
-    for (int w0 = 0; w0 < 255; w0 += 16) {
-      const int tw_eff = (w0 + 16 <= 255) ? 16 : (255 - w0);
+    for (int w0=0; w0<255; w0+=8) {
+      const int tw_eff = (w0+8<=255)? 8 : (255 -w0);
+
+      hls::stream<ftmap_t> s_pix;
+      hls::stream<conv2_pixel> s_f2;
+      hls::stream<ftmap_t> s_out;
+
+
+
+
+
+#pragma HLS STREAM variable=s_pix depth=512
+#pragma HLS STREAM variable=s_f2 depth=128
+#pragma HLS STREAM variable=s_out depth=256
+
+
 
 #pragma HLS DATAFLOW
-
-
- load_tile_mm (input_ftmap, h0, w0, th_eff, tw_eff, inbuf[ phase]);
-      compute_tile (inbuf[ phase], outbuf[!phase],
-                    w1_loc, b1_loc,
-                    w2_loc, b2_loc,
-                    w3_loc, b3_loc,
-     h0, w0, th_eff, tw_eff);
-      store_tile_mm(outbuf[!phase], output_ftmap, h0, w0, th_eff, tw_eff);
-
-      phase = !phase;
+ load_tile_to_stream(input_ftmap, h0,w0, th_eff,tw_eff, s_pix);
+      conv1conv2_stream(s_pix, s_f2, w1_loc,b1_loc, w2_loc,b2_loc, th_eff,tw_eff);
+      conv3_stream (s_f2, s_out, w3_loc,b3_loc, h0,w0, th_eff,tw_eff);
+      store_stream (s_out, output_ftmap, h0,w0, th_eff,tw_eff);
     }
   }
 }

@@ -2,9 +2,10 @@
 #include <hls_stream.h>
 
 #ifndef UF_N2
-#define UF_N2 8                 // unroll across N2 lanes (32 out chs)
+#define UF_N2 4                 // unroll across N2 lanes (32 out chs)
 #endif
 
+#define TEST_II 1
 
 // image dimensions
 #define W  255          // image width
@@ -26,10 +27,10 @@ typedef float param_t;  // parameters
 
 // Tile sizes (tune for BRAM and timing)
 #ifndef TH
-#define TH 16
+#define TH 8
 #endif
 #ifndef TW
-#define TW 16
+#define TW 8
 #endif
 
 // Radii and halo (SRCNN 9x9, 1x1, 5x5)
@@ -58,6 +59,15 @@ struct col5_t {
   bool valid;
 };
 
+struct col4_t {           // 4*32*32 = 4096 bits
+  conv2_pixel c[4];
+};
+struct col1_t {           // 1*32*32 + 1 = 1025 bits
+  conv2_pixel c;
+  bool        valid;
+};
+
+
 
 
 
@@ -84,7 +94,7 @@ static void load_tile_to_stream(
   hls::stream<ftmap_t> &s_pix)
 {
 #pragma HLS INLINE off
-#pragma HLS PIPELINE II=1
+#pragma HLS PIPELINE II=TEST_II
 #pragma HLS STREAM variable=s_pix depth=1024 // currently using 1024, arbitrarily chosen - can change later
   const int PH = th_eff + 2*R_TOTAL;
   const int PW = tw_eff + 2*R_TOTAL;
@@ -132,7 +142,7 @@ static void make_win9(
   // Read PH*PW pixels/the input tile from the stream:
   win9x9_read_pix:
   for (int t=0; t<PH*PW; ++t) {
-    #pragma HLS PIPELINE II=1
+    #pragma HLS PIPELINE II=TEST_II
     ftmap_t pix = s_pix.read();
 
     // shift 9x9 window left by 1 col, insert rightmost col from lb1 + current pix
@@ -307,6 +317,12 @@ static void conv1conv2_from_windows(
   const int C2H = th_eff + 2*R3;
   const int C2W = tw_eff + 2*R3;
 
+
+#pragma HLS ALLOCATION instances=mul limit=32 operation
+#pragma HLS ALLOCATION instances=fmul limit=32 operation
+
+
+
 Conv12_oy:
   for (int wy = 0; wy < C2H; ++wy) {
   Conv12_ox:
@@ -358,7 +374,7 @@ Conv12_oy:
       conv2_pixel outpix;
       Push_conv2pix_out:
       for (int n2 = 0; n2 < N2; ++n2) {
-		#pragma HLS PIPELINE II=4
+	    #pragma HLS PIPELINE II=4
         #pragma HLS UNROLL factor=UF_N2
         param_t t2 = acc2[n2];
         outpix.v[n2] = (t2 > (param_t)0) ? (ftmap_t)t2 : (ftmap_t)0; // ReLU for conv2
@@ -392,154 +408,176 @@ static void conv1conv2_stream(
 
 
 
-/**** Narrower bitwidths can make this viable ****/
-
-// static void make_col5(
-//   hls::stream<conv2_pixel> &s_f2_in,   // C2H*C2W items
-//   hls::stream<col5_t>      &s_col,     // C2H*C2W items (each is a 5x1 column)
-//   int th_eff, int tw_eff)
-// {
-//   const int C2H = th_eff + 2*R3;
-//   const int C2W = tw_eff + 2*R3;
-
-//   // line buffers: previous F3-1 rows of N2-vectors
-//   conv2_pixel lb2[F3-1][TW + 2*R3]; // local variable
-//   #pragma HLS BIND_STORAGE    variable=lb2 type=ram_2p impl=bram
-//   #pragma HLS ARRAY_PARTITION variable=lb2 complete dim=1
-
-//   int y = 0, x = 0;
-
-// Make5x5_read_pix:
-//   for (int t = 0; t < C2H*C2W; ++t) {
-//   #pragma HLS PIPELINE II=1
-//     conv2_pixel v = s_f2_in.read();
-
-//     // Only build the rightmost 5x1 column for this (y,x):
-//     col5_t out;
-//     BuildNewLB:
-//     for (int r = 0; r < F3-1; ++r) {   // 4 items from line buffers
-//     #pragma HLS UNROLL
-//       out.c[r] = lb2[F3-2-r][x];
-//     }
-//     out.c[F3-1] = v;                   // current pixel at the bottom
-
-//     // Mark valid when the 5x5 window is valid AND the center falls in THxTW
-//     bool win_valid = (y >= (F3-1)) && (x >= (F3-1));
-//     bool in_core   = (y < (F3-1 + th_eff)) && (x < (F3-1 + tw_eff));
-//     out.valid = win_valid && in_core;
-
-//     // Emit one column each cycle
-//     s_col.write(out);
-
-//     // After emitting the column, update line buffers at this column:
-//     // push rows down (increasing index), insert current row on top (0th index)
-//     for (int r = F3-2; r >= 1; --r) {
-//     #pragma HLS UNROLL
-//       lb2[r][x] = lb2[r-1][x];
-//     }
-//     lb2[0][x] = v;
-
-//     // Bump coordinates
-//     if (++x == C2W) {
-//         x = 0;
-//         ++y;
-//     }
-//   }
-// }
 
 
 
+/****************************************************************************************/
 
-// static void conv3_from_columns(
-//   hls::stream<col5_t> &s_col,
-//   hls::stream<ftmap_t>&s_out,
-//   param_t w3[N3][N2][F3][F3], param_t b3[N3],
-//   int h0, int w0, int th_eff, int tw_eff)
-// {
-//   const int C2H = th_eff + 2*R3;
-//   const int C2W = tw_eff + 2*R3;
-
-//   // 5x5 window of N2-vectors (registers)
-//   conv2_pixel win2[F3][F3];
-//   #pragma HLS ARRAY_PARTITION variable=win2 complete dim=0
-
-// Conv3Y:
-//   for (int y = 0; y < C2H; ++y) {
-//   Conv3X:
-//     for (int x = 0; x < C2W; ++x) {
-//       #pragma HLS PIPELINE II=1
-//       // Get the next 5x1 column
-//       col5_t col = s_col.read();
-
-//       // Shift window left, insert new column on the right
-//       Shift_win5x5_row:
-//       for (int r = 0; r < F3; ++r) {
-//         #pragma HLS UNROLL
-//         Shift_win5x5_col:
-//         for (int c = 0; c < F3-1; ++c) {
-//             #pragma HLS UNROLL
-//             win2[r][c] = win2[r][c+1];
-//         }
-//         win2[r][F3-1] = col.c[r]; // insert rightmost column, double check this
-//       }
-
-//       // Compute only when a full 5x5 is ready
-//       if (col.valid) {
-//       // if (y >= (F3 - 1) && x >= (F3 - 1)) {
-//         param_t acc = b3[0];
-
-//         // 5x5 kernel × N2 features
-//         Conv3_ky:
-//         for (int ky = 0; ky < F3; ++ky) {
-//           #pragma HLS UNROLL
-//           Conv3_kx:
-//           for (int kx = 0; kx < F3; ++kx) {
-//             #pragma HLS UNROLL
-
-//             // accumulate dot( w3[0][_][ky][kx], win2[ky][kx].v[_] )
-//             Conv3_inv8_dot:
-//             for (int n2 = 0; n2 < N2; n2 += UF_N2) { // for each bank in the w3 BRAM
-//               #pragma HLS UNROLL
-//               param_t ps = 0;
-//               Conv3_inner_dot:
-//               for (int u = 0; u < UF_N2; ++u) { // for each element in a bank in the w3 BRAM
-//                 #pragma HLS UNROLL
-
-//                 // Clamp window coordinates
-//                 int wy = clampi(ky, 3*R3-(h0+y), 3*R3-(h0+y)+H-1);
-//                 int wx = clampi(kx, 3*R3-(w0+x), 3*R3-(w0+x)+W-1);
-
-//                 ps += w3[0][n2+u][ky][kx] * win2[wy][wx].v[n2+u];
-//               }
-//               acc += ps;
-//             }
-//           }
-//         }
-//         s_out.write((ftmap_t)acc);
-//       }
-//     }
-//   }
-// }
+// pipelined conv3 with split line buffer columns
 
 
-// static void conv3_stream(
-//   hls::stream<conv2_pixel> &s_f2,
-//   hls::stream<ftmap_t>     &s_out,
-//   param_t w3[N3][N2][F3][F3], param_t b3[N3],
-//   int h0, int w0, int th_eff, int tw_eff)
-// {
-// #pragma HLS INLINE off
-// #pragma HLS DATAFLOW
-
-//   hls::stream<col5_t> s_col;
-//   #pragma HLS STREAM variable=s_col depth=16
-
-//   make_col5          (s_f2,  s_col,  th_eff, tw_eff);          // 5x5 buffer
-//   conv3_from_columns (s_col, s_out,  w3, b3, h0, w0, th_eff, tw_eff); // conv3 calc
-// }
-
-
-/**** Narrower bitwidths can make this viable ****/
+//
+//
+//static void make_col5(
+//  hls::stream<conv2_pixel> &s_f2_in,   // C2H*C2W items
+//  // hls::stream<col5_t>      &s_col,     // C2H*C2W items (each is a 5x1 column) [too big!]
+//  hls::stream<col4_t>      &s_col4,    // top 4 rows (4096 bits)
+//  hls::stream<col1_t>      &s_col1,    // bottom row + valid (1025 bits)
+//  int th_eff, int tw_eff)
+//{
+//  const int C2H = th_eff + 2*R3;
+//  const int C2W = tw_eff + 2*R3;
+//
+//  // line buffers: previous F3-1 rows of N2-vectors
+//  conv2_pixel lb2[F3-1][TW + 2*R3]; // local variable
+//  #pragma HLS BIND_STORAGE    variable=lb2 type=ram_2p impl=bram
+//  #pragma HLS ARRAY_PARTITION variable=lb2 complete dim=1
+//
+//  int y = 0, x = 0;
+//
+//  Make5x5_read_pix:
+//  for (int t = 0; t < C2H*C2W; ++t) {
+//  #pragma HLS PIPELINE II=TEST_II
+//    conv2_pixel v = s_f2_in.read();
+//
+//    // Only build the rightmost 5x1 column (top 4 from linebufs + bottom = v)
+//    col4_t top4;
+//    for (int r = 0; r < F3-1; ++r) { // 4 items from line buffers
+//      #pragma HLS UNROLL
+//      top4.c[r] = lb2[F3-2-r][x];
+//    }
+//    col1_t bot;
+//    bot.c = v;                       // current pixel at the bottom
+//
+//
+//    // Mark valid when the 5x5 window is valid AND the center falls in THxTW
+//    bool win_valid = (y >= (F3-1)) && (x >= (F3-1));
+//    bool in_core   = (y < (F3-1 + th_eff)) && (x < (F3-1 + tw_eff));
+//    // out.valid = win_valid && in_core;
+//    bot.valid = win_valid && in_core;
+//
+//    // Emit one column/both parts this cycle
+//    s_col4.write(top4);
+//    s_col1.write(bot);
+//
+//    // After emitting the column, update line buffers at this column:
+//    // push rows down (increasing index), insert current row on top (0th index)
+//    for (int r = F3-2; r >= 1; --r) {
+//    #pragma HLS UNROLL
+//      lb2[r][x] = lb2[r-1][x];
+//    }
+//    lb2[0][x] = v;
+//
+//    // Bump coordinates
+//    if (++x == C2W) {
+//        x = 0;
+//        ++y;
+//    }
+//  }
+//}
+//
+//
+//
+//
+//static void conv3_from_columns(
+//  hls::stream<col4_t> &s_col4,
+//  hls::stream<col1_t> &s_col1,
+//  hls::stream<ftmap_t>&s_out,
+//  param_t w3[N3][N2][F3][F3], param_t b3[N3],
+//  int h0, int w0, int th_eff, int tw_eff)
+//{
+//  const int C2H = th_eff + 2*R3;
+//  const int C2W = tw_eff + 2*R3;
+//
+//  // 5x5 window of N2-vectors (registers)
+//  conv2_pixel win2[F3][F3];
+//  #pragma HLS ARRAY_PARTITION variable=win2 complete dim=0
+//
+//Conv3Y:
+//  for (int y = 0; y < C2H; ++y) {
+//  Conv3X:
+//    for (int x = 0; x < C2W; ++x) {
+//      #pragma HLS PIPELINE II=TEST_II
+//
+//      // Get the next 5x1 column
+//      col4_t col4 = s_col4.read();
+//      col1_t col1 = s_col1.read();
+//
+//      // Shift window left, insert new column on the right
+//      Shift_win5x5_row:
+//      for (int r = 0; r < F3; ++r) {
+//        #pragma HLS UNROLL
+//        Shift_win5x5_col:
+//        for (int c = 0; c < F3-1; ++c) {
+//          #pragma HLS UNROLL
+//          win2[r][c] = win2[r][c+1];
+//        }
+//      }
+//
+//      // Insert rightmost column: rows 0-3 from col4, row 4 from col1
+//      for (int r = 0; r < F3-1; ++r) {
+//        #pragma HLS UNROLL
+//        win2[r][F3-1] = col4.c[r];
+//      }
+//      win2[F3-1][F3-1] = col1.c;
+//
+//
+//      // Compute only when a full 5x5 is ready
+//      if (col1.valid) {
+//        param_t acc = b3[0];
+//
+//        // 5x5 kernel × N2 features
+//        Conv3_ky:
+//        for (int ky = 0; ky < F3; ++ky) {
+////          #pragma HLS UNROLL
+//          Conv3_kx:
+//          for (int kx = 0; kx < F3; ++kx) {
+////            #pragma HLS UNROLL
+//
+//            // accumulate dot( w3[0][_][ky][kx], win2[ky][kx].v[_] )
+//            Conv3_inv8_dot:
+//            for (int n2 = 0; n2 < N2; n2 += UF_N2) { // for each bank in the w3 BRAM
+//              #pragma HLS UNROLL
+//              param_t ps = 0;
+//              Conv3_inner_dot:
+//              for (int u = 0; u < UF_N2; ++u) { // for each element in a bank in the w3 BRAM
+//                #pragma HLS UNROLL
+//
+//                // Clamp window coordinates
+//                int wy = clampi(ky, 3*R3-(h0+y), 3*R3-(h0+y)+H-1);
+//                int wx = clampi(kx, 3*R3-(w0+x), 3*R3-(w0+x)+W-1);
+//
+//                ps += w3[0][n2+u][ky][kx] * win2[wy][wx].v[n2+u];
+//              }
+//              acc += ps;
+//            }
+//          }
+//        }
+//        s_out.write((ftmap_t)acc);
+//      }
+//    }
+//  }
+//}
+//
+//
+//static void conv3_stream(
+//  hls::stream<conv2_pixel> &s_f2,
+//  hls::stream<ftmap_t>     &s_out,
+//  param_t w3[N3][N2][F3][F3], param_t b3[N3],
+//  int h0, int w0, int th_eff, int tw_eff)
+//{
+//#pragma HLS INLINE off
+//#pragma HLS DATAFLOW
+//
+//  hls::stream<col4_t> s_col4;
+//  #pragma HLS STREAM variable=s_col4 depth=16
+//  hls::stream<col1_t> s_col1;
+//  #pragma HLS STREAM variable=s_col1 depth=16
+//
+//  make_col5       (s_f2,  s_col4, s_col1,  th_eff, tw_eff);
+//  conv3_from_columns (s_col4, s_col1, s_out,  w3, b3, h0, w0, th_eff, tw_eff);
+//}
+//
 
 
 
@@ -552,113 +590,116 @@ static void conv1conv2_stream(
 
 
 
-static void conv3_stream(
-  hls::stream<conv2_pixel> &s_f2,
-  hls::stream<ftmap_t> &s_out,
-  param_t w3[N3][N2][F3][F3], param_t b3[N3],
-  int h0, int w0, int th_eff, int tw_eff)
-{
-#pragma HLS INLINE off
-#pragma HLS PIPELINE
-#pragma HLS STREAM variable=s_out depth=1024
-  const int C2H = th_eff + 2*R3;
-  const int C2W = tw_eff + 2*R3;
-  // ---- Sliding window/buffer for the 5x5 stage (per tile) ----
-  // line buffers: previous F3-1 rows of N2-vectors
+ static void conv3_stream(
+   hls::stream<conv2_pixel> &s_f2,
+   hls::stream<ftmap_t> &s_out,
+   param_t w3[N3][N2][F3][F3], param_t b3[N3],
+   int h0, int w0, int th_eff, int tw_eff)
+ {
+ #pragma HLS INLINE off
+ #pragma HLS PIPELINE II=TEST_II
+ #pragma HLS STREAM variable=s_out depth=1024
+   const int C2H = th_eff + 2*R3;
+   const int C2W = tw_eff + 2*R3;
 
-  conv2_pixel lb2[F3-1][TW + 2*R3];
-//  #pragma HLS BIND_STORAGE    variable=lb2 type=ram_2p impl=bram
-
-  #pragma HLS ARRAY_PARTITION variable=lb2 complete dim=1
-  // 5x5 window of N2-vectors in registers
-  conv2_pixel win2[F3][F3];
-  #pragma HLS ARRAY_PARTITION variable=win2 complete dim=0
-  // coordinates of the input pixel kind of - (stream counters)??
-  int y=0, x=0;
-
-  // Read C2H*C2W pixels/the input from the stream:
-  win5x5_read_pix:
-  for (int t=0; t<C2H*C2W; ++t) {
-    conv2_pixel v = s_f2.read();
-    // shift 5x5 window left, insert rightmost column from lb2 + v
-    Shift_win5x5_row:
-    for (int r=0; r<F3; ++r) { // for each window5x5 row
-      // shifting can be done in parallel
-      #pragma HLS UNROLL
-      Shift_win5x5_col:
-      for (int c=0; c<F3-1; ++c) { // for each window5x5 col
-        #pragma HLS UNROLL
-        win2[r][c] = win2[r][c+1];
-      }
-    }
-
-    // Rightmost column: 4x1 column from linebuf (reverse indexed) + current pixel at bottom
-    ReadLBto5x5:
-    for (int r=0; r<F3-1; ++r) {
-      #pragma HLS UNROLL
-      win2[r][F3-1] = lb2[F3-2-r][x]; // linebuf is indexed in reverse
-    }
-    win2[F3-1][F3-1] = v; // insert new pixel/vector to bottom right corner of 9x9 window
-
-    // After filling the window, update line buffers at this column:
-    // push rows down (increasing index), insert current row on top (0th index)
-
-    Shift_lb2:
-    for (int r=F3-2; r>=1; --r) {
-      #pragma HLS UNROLL
-      lb2[r][x] = lb2[r-1][x]; // increment all indexes by 1
-    }
-    lb2[0][x] = v; // add the current pixel
+#pragma HLS ALLOCATION instances=mul limit=32 operation
+#pragma HLS ALLOCATION instances=fmul limit=32 operation
 
 
-    // ------------------------- conv3 --------------------------
-    // when 5x5 is valid, produce centre pixel
-    // if ((y >= R3 && x >= R3) && (y < C2H - R3 && x < C2W - R3)) {
-    if (y >= (F3 - 1) && x >= (F3 - 1)) {
-      // conv3 over win2 (regs)
-      // Need to refactor code to use interleaved accumulators:
-      param_t acc = b3[0];
-      // conv3
-      Conv3_ky:
-      for (int ky=0; ky<F3; ++ky) {
-        #pragma HLS UNROLL
-        Conv3_kx:
-        for (int kx=0; kx<F3; ++kx) {
-          #pragma HLS UNROLL
-          // accumulate dot( w3[0][_][ky][kx], win2[ky][kx].v[_] )
-          Conv3_inv8_dot:
-          for (int n2=0; n2<N2; n2 += UF_N2) { // for each bank in the w3 BRAM
-            #pragma HLS UNROLL
-            param_t ps = 0;
-            Conv3_inner_dot:
-            for (int u=0; u<UF_N2; ++u) { // for each element in a bank in the w3 BRAM
-              #pragma HLS UNROLL
-              // // Clamp window coordinates
-              // int wy = clampi(ky, R3-(h0+oy), R3-(h0+oy)+H-1);
-              // int wx = clampi(kx, R3-(w0+ox), R3-(w0+ox)+W-1);
-              // Clamp window coordinates
-              int wy = clampi(ky, 3*R3-(h0+y), 3*R3-(h0+y)+H-1);
-              int wx = clampi(kx, 3*R3-(w0+x), 3*R3-(w0+x)+W-1);
 
-              ps += w3[0][n2+u][ky][kx] * win2[wy][wx].v[n2+u];
-            }
-            acc += ps;
-          }
-        }
-      }
-      s_out.write((ftmap_t)acc);
-    }
-    // Increment x,y
-    if (++x == C2W) { //increment and check if reached column end
-      x = 0;
-      // ++y; //increment row
-      // This could break things: but i don't think it will
-      if (++y == C2H) { //increment row
-        y = 0;
-      }
-    }
-  }
-}
+   // ---- Sliding window/buffer for the 5x5 stage (per tile) ----
+   // line buffers: previous F3-1 rows of N2-vectors
+
+   conv2_pixel lb2[F3-1][TW + 2*R3];
+ //  #pragma HLS BIND_STORAGE    variable=lb2 type=ram_2p impl=bram
+
+   #pragma HLS ARRAY_PARTITION variable=lb2 complete dim=1
+   // 5x5 window of N2-vectors in registers
+   conv2_pixel win2[F3][F3];
+   #pragma HLS ARRAY_PARTITION variable=win2 complete dim=0
+   // coordinates of the input pixel kind of - (stream counters)??
+   int y=0, x=0;
+
+   // Read C2H*C2W pixels/the input from the stream:
+   win5x5_read_pix:
+   for (int t=0; t<C2H*C2W; ++t) {
+     conv2_pixel v = s_f2.read();
+     // shift 5x5 window left, insert rightmost column from lb2 + v
+     Shift_win5x5_row:
+     for (int r=0; r<F3; ++r) { // for each window5x5 row
+       // shifting can be done in parallel
+       #pragma HLS UNROLL
+       Shift_win5x5_col:
+       for (int c=0; c<F3-1; ++c) { // for each window5x5 col
+         #pragma HLS UNROLL
+         win2[r][c] = win2[r][c+1];
+       }
+     }
+
+     // Rightmost column: 4x1 column from linebuf (reverse indexed) + current pixel at bottom
+     ReadLBto5x5:
+     for (int r=0; r<F3-1; ++r) {
+       #pragma HLS UNROLL
+       win2[r][F3-1] = lb2[F3-2-r][x]; // linebuf is indexed in reverse
+     }
+     win2[F3-1][F3-1] = v; // insert new pixel/vector to bottom right corner of 9x9 window
+
+     // After filling the window, update line buffers at this column:
+     // push rows down (increasing index), insert current row on top (0th index)
+
+     Shift_lb2:
+     for (int r=F3-2; r>=1; --r) {
+       #pragma HLS UNROLL
+       lb2[r][x] = lb2[r-1][x]; // increment all indexes by 1
+     }
+     lb2[0][x] = v; // add the current pixel
+
+
+     // ------------------------- conv3 --------------------------
+     // when 5x5 is valid, produce centre pixel
+     // if ((y >= R3 && x >= R3) && (y < C2H - R3 && x < C2W - R3)) {
+     if (y >= (F3 - 1) && x >= (F3 - 1)) {
+       // conv3 over win2 (regs)
+       // Need to refactor code to use interleaved accumulators:
+       param_t acc = b3[0];
+       // conv3
+       Conv3_ky:
+       for (int ky=0; ky<F3; ++ky) {
+         #pragma HLS UNROLL
+         Conv3_kx:
+         for (int kx=0; kx<F3; ++kx) {
+           #pragma HLS UNROLL
+           // accumulate dot( w3[0][_][ky][kx], win2[ky][kx].v[_] )
+           Conv3_inv8_dot:
+           for (int n2=0; n2<N2; n2 += UF_N2) { // for each bank in the w3 BRAM
+             #pragma HLS UNROLL
+             param_t ps = 0;
+             Conv3_inner_dot:
+             for (int u=0; u<UF_N2; ++u) { // for each element in a bank in the w3 BRAM
+               #pragma HLS UNROLL
+               // Clamp window coordinates
+               int wy = clampi(ky, 3*R3-(h0+y), 3*R3-(h0+y)+H-1);
+               int wx = clampi(kx, 3*R3-(w0+x), 3*R3-(w0+x)+W-1);
+
+               ps += w3[0][n2+u][ky][kx] * win2[wy][wx].v[n2+u];
+             }
+             acc += ps;
+           }
+         }
+       }
+       s_out.write((ftmap_t)acc);
+     }
+     // Increment x,y
+     if (++x == C2W) { //increment and check if reached column end
+       x = 0;
+       // ++y; //increment row
+       // This could break things: but i don't think it will
+       if (++y == C2H) { //increment row
+         y = 0;
+       }
+     }
+   }
+ }
 
 
 
@@ -675,7 +716,7 @@ static void store_stream(
   int h0, int w0, int th_eff, int tw_eff)
 {
 #pragma HLS INLINE off
-#pragma HLS PIPELINE II=1
+#pragma HLS PIPELINE II=TEST_II
 
   Out_writey:
   for (int y=0; y<th_eff; ++y) {
@@ -775,6 +816,7 @@ void srcnn(
 
   //// 3) CONV3 weights
   #pragma HLS RESOURCE        variable=w3_loc core=RAM_1P_LUTRAM
+//  #pragma HLS BIND_STORAGE    variable=w3_loc type=ram_1p impl=bram
   #pragma HLS ARRAY_PARTITION variable=w3_loc complete dim=3   // ky
   #pragma HLS ARRAY_PARTITION variable=w3_loc complete dim=4   // kx
   #pragma HLS ARRAY_PARTITION variable=w3_loc cyclic factor=UF_N2 dim=2  // N2
@@ -786,6 +828,13 @@ void srcnn(
   #pragma HLS RESOURCE        variable=b1_loc core=RAM_1P_LUTRAM
   #pragma HLS RESOURCE        variable=b2_loc core=RAM_1P_LUTRAM
   #pragma HLS RESOURCE        variable=b3_loc core=RAM_1P_LUTRAM
+
+
+  // Limiting the instances
+//  #pragma HLS ALLOCATION instances=fmul limit=UF_N2 operation
+//  #pragma HLS ALLOCATION instances=mul  limit=UF_N2 operation
+//  #pragma HLS ALLOCATION instances=fadd limit=UF_N2 operation
+//  #pragma HLS ALLOCATION instances=add  limit=UF_N2 operation
 
 
   // ---------------- Copy ONCE from DRAM to on-chip ----------------
@@ -873,10 +922,16 @@ void srcnn(
       hls::stream<ftmap_t> s_pix;
       hls::stream<conv2_pixel> s_f2;
       hls::stream<ftmap_t> s_out;
-      #pragma HLS STREAM variable=s_pix depth=2048
-      #pragma HLS STREAM variable=s_f2 depth=(R3*TW*4)   // absorbs conv3 prologue
-      // #pragma HLS STREAM variable=s_f2 depth=((F3-1)*(TW + 2*R3) + 32)
-      #pragma HLS STREAM variable=s_out depth=1024
+//      #pragma HLS STREAM variable=s_pix depth=2048
+//      #pragma HLS STREAM variable=s_f2 depth=(R3*TW*4)   // absorbs conv3 prologue
+//      // #pragma HLS STREAM variable=s_f2 depth=((F3-1)*(TW + 2*R3) + 32)
+//      #pragma HLS STREAM variable=s_out depth=1024
+
+#pragma HLS STREAM variable=s_pix depth=512
+#pragma HLS STREAM variable=s_f2  depth=128
+#pragma HLS STREAM variable=s_out depth=256
+
+
 
       #pragma HLS DATAFLOW
       load_tile_to_stream(input_ftmap, h0,w0, th_eff,tw_eff, s_pix);
