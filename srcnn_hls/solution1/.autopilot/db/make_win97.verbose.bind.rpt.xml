@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'make_win97'" level="0">
-<item name = "Date">Tue Oct 28 00:02:06 2025
+<item name = "Date">Tue Oct 28 01:26:36 2025
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -31,7 +31,7 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_make_win97_Pipeline_win9x9_read_pix_fu_84">make_win97_Pipeline_win9x9_read_pix, 147, 71292, 1.470 us, 0.713 ms, 147, 71292, no</column>
+<column name="grp_make_win97_Pipeline_win9x9_read_pix_fu_126">make_win97_Pipeline_win9x9_read_pix, 147, 71292, 1.470 us, 0.713 ms, 147, 71292, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

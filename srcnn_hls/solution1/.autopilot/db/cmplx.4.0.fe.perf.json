@@ -1,21 +1,70 @@
 {
   "0": {
-    "basicblocks": 1828,
-    "calls": "6",
+    "basicblocks": 680,
+    "calls": "4",
     "file": "srcnn.cpp",
-    "fileloc": 473,
-    "instructions": 5370,
+    "fileloc": 736,
+    "instructions": 2949,
     "loads": {
       "G": 1,
       "T": 5
     },
     "name": "srcnn",
     "stores": {
-      "G": 983
+      "G": 411
     },
-    "total_instructions": 15309
+    "total_instructions": 11107
   },
   "1": {
+    "basicblocks": 6,
+    "calls": "",
+    "file": "srcnn.cpp",
+    "fileloc": 119,
+    "instructions": 856,
+    "loads": {
+      "L": 9
+    },
+    "name": "make_win9",
+    "stores": {
+      "L": 9
+    },
+    "total_instructions": 856
+  },
+  "2": {
+    "basicblocks": 16,
+    "calls": "",
+    "file": "srcnn.cpp",
+    "fileloc": 308,
+    "instructions": 1737,
+    "loads": {
+      "G": 209,
+      "L": 73
+    },
+    "name": "conv1conv2_from_windows",
+    "stores": {
+      "L": 49
+    },
+    "total_instructions": 1737
+  },
+  "3": {
+    "basicblocks": 1,
+    "calls": "1 2",
+    "file": "srcnn.cpp",
+    "fileloc": 390,
+    "instructions": 9,
+    "name": "conv1conv2_stream",
+    "total_instructions": 2602
+  },
+  "4": {
+    "basicblocks": 1,
+    "calls": "5 3 6 7",
+    "file": "srcnn.cpp",
+    "fileloc": 0,
+    "instructions": 25,
+    "name": "_Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i_for.body126",
+    "total_instructions": 8158
+  },
+  "5": {
     "basicblocks": 7,
     "calls": "",
     "file": "srcnn.cpp",
@@ -30,76 +79,27 @@
     },
     "total_instructions": 45
   },
-  "2": {
-    "basicblocks": 1,
-    "calls": "5 3",
-    "file": "srcnn.cpp",
-    "fileloc": 299,
-    "instructions": 9,
-    "name": "conv1conv2_stream",
-    "total_instructions": 2542
-  },
-  "3": {
-    "basicblocks": 16,
+  "6": {
+    "basicblocks": 8,
     "calls": "",
     "file": "srcnn.cpp",
-    "fileloc": 214,
-    "instructions": 1685,
-    "loads": {
-      "G": 209,
-      "L": 69
-    },
-    "name": "conv1conv2_from_windows",
-    "stores": {
-      "L": 41
-    },
-    "total_instructions": 1685
-  },
-  "4": {
-    "basicblocks": 10,
-    "calls": "",
-    "file": "srcnn.cpp",
-    "fileloc": 329,
-    "instructions": 7289,
+    "fileloc": 593,
+    "instructions": 5448,
     "loads": {
       "G": 801,
-      "L": 537
+      "L": 129
     },
     "name": "conv3_stream",
     "stores": {
-      "L": 769
+      "L": 129
     },
-    "total_instructions": 7289
-  },
-  "5": {
-    "basicblocks": 6,
-    "calls": "",
-    "file": "srcnn.cpp",
-    "fileloc": 119,
-    "instructions": 848,
-    "loads": {
-      "L": 9
-    },
-    "name": "make_win9",
-    "stores": {
-      "L": 9
-    },
-    "total_instructions": 848
-  },
-  "6": {
-    "basicblocks": 1,
-    "calls": "1 2 4 7",
-    "file": "srcnn.cpp",
-    "fileloc": 0,
-    "instructions": 25,
-    "name": "_Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i_for.body126",
-    "total_instructions": 9939
+    "total_instructions": 5448
   },
   "7": {
     "basicblocks": 7,
     "calls": "",
     "file": "srcnn.cpp",
-    "fileloc": 450,
+    "fileloc": 713,
     "instructions": 38,
     "loads": {
       "L": 1

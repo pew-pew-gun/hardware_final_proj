@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv1conv2_from_windows8'" level="0">
-<item name = "Date">Tue Oct 28 00:02:20 2025
+<item name = "Date">Tue Oct 28 01:26:49 2025
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 7.419 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 7.291 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">14996, 62854901, 0.150 ms, 0.629 sec, 14996, 62854901, no</column>
+<column name="">9412, 39443632, 94.120 us, 0.394 sec, 9412, 39443632, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- Conv12_oy_Conv12_ox">14992, 62854897, 937, -, -, 16 ~ 67081, no</column>
+<column name="- Conv12_oy_Conv12_ox">9408, 39443628, 588, -, -, 16 ~ 67081, no</column>
 </table>
 </item>
 </section>

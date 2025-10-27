@@ -25,7 +25,7 @@ output reg[DataWidth-1:0] q0;
 input reset;
 input clk;
 
-(* ram_style = "block"  *)reg [DataWidth-1:0] ram[0:AddressRange-1];
+(* ram_style = "distributed"  *)reg [DataWidth-1:0] ram[0:AddressRange-1];
 
 initial begin
     $readmemh("./srcnn_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_locbkb.dat", ram);

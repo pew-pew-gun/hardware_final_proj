@@ -1,13 +1,31 @@
-src/srcnn.cpp:576:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+src/srcnn.cpp:321:34: warning: unexpected pragma argument 'mul', expects function/operation [-Winvalid-hls-pragmas]
+#pragma HLS ALLOCATION instances=mul limit=32 operation
+                                 ^
+src/srcnn.cpp:322:34: warning: unexpected pragma argument 'fmul', expects function/operation [-Winvalid-hls-pragmas]
+#pragma HLS ALLOCATION instances=fmul limit=32 operation
+                                 ^
+src/srcnn.cpp:605:34: warning: unexpected pragma argument 'mul', expects function/operation [-Winvalid-hls-pragmas]
+#pragma HLS ALLOCATION instances=mul limit=32 operation
+                                 ^
+src/srcnn.cpp:606:34: warning: unexpected pragma argument 'fmul', expects function/operation [-Winvalid-hls-pragmas]
+#pragma HLS ALLOCATION instances=fmul limit=32 operation
+                                 ^
+src/srcnn.cpp:809:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+#pragma HLS RESOURCE variable=w1_loc core=RAM_1P_LUTRAM
+        ^
+src/srcnn.cpp:813:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+#pragma HLS RESOURCE variable=w2_loc core=RAM_1P_LUTRAM
+        ^
+src/srcnn.cpp:818:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
 #pragma HLS RESOURCE variable=w3_loc core=RAM_1P_LUTRAM
         ^
-src/srcnn.cpp:588:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+src/srcnn.cpp:828:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
 #pragma HLS RESOURCE variable=b1_loc core=RAM_1P_LUTRAM
         ^
-src/srcnn.cpp:589:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+src/srcnn.cpp:829:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
 #pragma HLS RESOURCE variable=b2_loc core=RAM_1P_LUTRAM
         ^
-src/srcnn.cpp:590:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+src/srcnn.cpp:830:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
 #pragma HLS RESOURCE variable=b3_loc core=RAM_1P_LUTRAM
         ^
-4 warnings generated.
+10 warnings generated.

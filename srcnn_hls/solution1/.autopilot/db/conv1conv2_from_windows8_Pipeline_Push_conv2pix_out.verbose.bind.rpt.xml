@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv1conv2_from_windows8_Pipeline_Push_conv2pix_out'" level="0">
-<item name = "Date">Tue Oct 28 00:02:20 2025
+<item name = "Date">Tue Oct 28 01:26:48 2025
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">35, 35, 0.350 us, 0.350 us, 35, 35, no</column>
+<column name="">19, 19, 0.190 us, 0.190 us, 19, 19, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- Push_conv2pix_out">33, 33, 6, 4, 4, 8, yes</column>
+<column name="- Push_conv2pix_out">17, 17, 6, 4, 4, 4, yes</column>
 </table>
 </item>
 </section>

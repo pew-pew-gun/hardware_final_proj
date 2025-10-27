@@ -2,13 +2,10 @@
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
     <originFiles name="conv1.cpp" path="D:\HAC\hardware_final_proj\src\conv1.cpp"/>
-    <originFiles name="srcnn.cpp" path="D:\HAC\hardware_final_proj\src\srcnn.cpp"/>
     <originFiles name="srcnn.h" path="D:\HAC\hardware_final_proj\src\srcnn.h"/>
+    <originFiles name="srcnn.cpp" path="D:\HAC\hardware_final_proj\src\srcnn.cpp"/>
   </source>
   <testbench>
-    <originFiles name="set14" path="D:\HAC\hardware_final_proj\test\set14"/>
-    <originFiles name="set5" path="D:\HAC\hardware_final_proj\test\set5"/>
-    <originFiles name="weights" path="D:\HAC\hardware_final_proj\src\weights"/>
     <originFiles name="util.cpp" path="D:\HAC\hardware_final_proj\test\util.cpp"/>
     <originFiles name="util.h" path="D:\HAC\hardware_final_proj\test\util.h"/>
     <originFiles name="tb_set14.cpp" path="D:\HAC\hardware_final_proj\test\tb_set14.cpp"/>

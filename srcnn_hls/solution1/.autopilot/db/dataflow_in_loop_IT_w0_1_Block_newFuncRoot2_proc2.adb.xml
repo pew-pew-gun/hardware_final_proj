@@ -49,10 +49,10 @@ entry:1 %w0_cast = zext i8 %w0_read
 
 <Node id="4" bw="9" op_0_bw="9" op_1_bw="9">
 <![CDATA[
-entry:2 %add_ln673 = add i9 %w0_cast, i9 16
+entry:2 %add_ln920 = add i9 %w0_cast, i9 16
 
 ]]></Node>
-<StgValue><ssdm name="add_ln673"/></StgValue>
+<StgValue><ssdm name="add_ln920"/></StgValue>
 </operation>
 
 <operation id="5" st_id="1" stage="1" lat="1">
@@ -64,7 +64,7 @@ entry:2 %add_ln673 = add i9 %w0_cast, i9 16
 
 <Node id="5" bw="1" op_0_bw="1" op_1_bw="9" op_2_bw="32">
 <![CDATA[
-entry:3 %tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i9.i32, i9 %add_ln673, i32 8
+entry:3 %tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i9.i32, i9 %add_ln920, i32 8
 
 ]]></Node>
 <StgValue><ssdm name="tmp"/></StgValue>
@@ -80,10 +80,10 @@ entry:3 %tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i9.i32, i9 %add_ln673, i32 8
 
 <Node id="6" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-entry:4 %xor_ln673 = xor i8 %w0_read, i8 255
+entry:4 %xor_ln920 = xor i8 %w0_read, i8 255
 
 ]]></Node>
-<StgValue><ssdm name="xor_ln673"/></StgValue>
+<StgValue><ssdm name="xor_ln920"/></StgValue>
 </operation>
 
 <operation id="7" st_id="1" stage="1" lat="1">
@@ -95,7 +95,7 @@ entry:4 %xor_ln673 = xor i8 %w0_read, i8 255
 
 <Node id="7" bw="8" op_0_bw="1" op_1_bw="8" op_2_bw="8">
 <![CDATA[
-entry:5 %tw_eff = select i1 %tmp, i8 %xor_ln673, i8 16
+entry:5 %tw_eff = select i1 %tmp, i8 %xor_ln920, i8 16
 
 ]]></Node>
 <StgValue><ssdm name="tw_eff"/></StgValue>
@@ -110,10 +110,10 @@ entry:5 %tw_eff = select i1 %tmp, i8 %xor_ln673, i8 16
 
 <Node id="8" bw="0" op_0_bw="8">
 <![CDATA[
-entry:6 %ret_ln673 = ret i8 %tw_eff
+entry:6 %ret_ln920 = ret i8 %tw_eff
 
 ]]></Node>
-<StgValue><ssdm name="ret_ln673"/></StgValue>
+<StgValue><ssdm name="ret_ln920"/></StgValue>
 </operation>
 </state>
 </state_list>
@@ -133,27 +133,27 @@ entry:6 %ret_ln673 = ret i8 %tw_eff
 </dataflow>
 <dataflow id="13" from="w0_read" to="w0_cast" fromId="2" toId="3">
 </dataflow>
-<dataflow id="14" from="w0_cast" to="add_ln673" fromId="3" toId="4">
+<dataflow id="14" from="w0_cast" to="add_ln920" fromId="3" toId="4">
 </dataflow>
-<dataflow id="16" from="StgValue_15" to="add_ln673" fromId="15" toId="4">
+<dataflow id="16" from="StgValue_15" to="add_ln920" fromId="15" toId="4">
 </dataflow>
 <dataflow id="18" from="_ssdm_op_BitSelect.i1.i9.i32" to="tmp" fromId="17" toId="5">
 </dataflow>
-<dataflow id="19" from="add_ln673" to="tmp" fromId="4" toId="5">
+<dataflow id="19" from="add_ln920" to="tmp" fromId="4" toId="5">
 </dataflow>
 <dataflow id="21" from="StgValue_20" to="tmp" fromId="20" toId="5">
 </dataflow>
-<dataflow id="22" from="w0_read" to="xor_ln673" fromId="2" toId="6">
+<dataflow id="22" from="w0_read" to="xor_ln920" fromId="2" toId="6">
 </dataflow>
-<dataflow id="24" from="StgValue_23" to="xor_ln673" fromId="23" toId="6">
+<dataflow id="24" from="StgValue_23" to="xor_ln920" fromId="23" toId="6">
 </dataflow>
 <dataflow id="25" from="tmp" to="tw_eff" fromId="5" toId="7">
 </dataflow>
-<dataflow id="26" from="xor_ln673" to="tw_eff" fromId="6" toId="7">
+<dataflow id="26" from="xor_ln920" to="tw_eff" fromId="6" toId="7">
 </dataflow>
 <dataflow id="28" from="StgValue_27" to="tw_eff" fromId="27" toId="7">
 </dataflow>
-<dataflow id="29" from="tw_eff" to="ret_ln673" fromId="7" toId="8">
+<dataflow id="29" from="tw_eff" to="ret_ln920" fromId="7" toId="8">
 </dataflow>
 <dataflow id="30" from="tmp" to="StgValue_1" fromId="5" toId="1">
 </dataflow>

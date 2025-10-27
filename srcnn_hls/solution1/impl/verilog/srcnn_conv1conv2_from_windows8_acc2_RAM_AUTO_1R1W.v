@@ -17,8 +17,8 @@ module srcnn_conv1conv2_from_windows8_acc2_RAM_AUTO_1R1W (
     reset, clk);
 
 parameter DataWidth = 32;
-parameter AddressWidth = 3;
-parameter AddressRange = 8;
+parameter AddressWidth = 2;
+parameter AddressRange = 4;
  
 input[AddressWidth-1:0] address0;
 input ce0;

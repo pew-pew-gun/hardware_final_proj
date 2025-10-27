@@ -1,9 +1,9 @@
 {
   "0": {
     "basicblocks": 82,
-    "calls": "3 7 5 4",
+    "calls": "6 7 4 5",
     "file": "srcnn.cpp",
-    "fileloc": 473,
+    "fileloc": 736,
     "instructions": 278,
     "loads": {
       "G": 1,
@@ -13,9 +13,18 @@
     "stores": {
       "G": 7
     },
-    "total_instructions": 994
+    "total_instructions": 993
   },
   "1": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "srcnn.cpp",
+    "fileloc": 84,
+    "instructions": 11,
+    "name": "clampi",
+    "total_instructions": 11
+  },
+  "2": {
     "basicblocks": 50,
     "calls": "",
     "file": "srcnn.cpp",
@@ -30,11 +39,11 @@
     },
     "total_instructions": 180
   },
-  "2": {
+  "3": {
     "basicblocks": 54,
     "calls": "",
     "file": "srcnn.cpp",
-    "fileloc": 214,
+    "fileloc": 308,
     "instructions": 150,
     "loads": {
       "L": 7
@@ -45,7 +54,34 @@
     },
     "total_instructions": 160
   },
-  "3": {
+  "4": {
+    "basicblocks": 62,
+    "calls": "1 1",
+    "file": "srcnn.cpp",
+    "fileloc": 593,
+    "instructions": 211,
+    "loads": {
+      "L": 8
+    },
+    "name": "conv3_stream",
+    "stores": {
+      "L": 6
+    },
+    "total_instructions": 243
+  },
+  "5": {
+    "basicblocks": 13,
+    "calls": "",
+    "file": "srcnn.cpp",
+    "fileloc": 713,
+    "instructions": 28,
+    "name": "store_stream",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 40
+  },
+  "6": {
     "basicblocks": 21,
     "calls": "",
     "file": "srcnn.cpp",
@@ -54,47 +90,11 @@
     "name": "load_tile_to_stream",
     "total_instructions": 52
   },
-  "4": {
-    "basicblocks": 13,
-    "calls": "",
-    "file": "srcnn.cpp",
-    "fileloc": 450,
-    "instructions": 28,
-    "name": "store_stream",
-    "stores": {
-      "L": 1
-    },
-    "total_instructions": 40
-  },
-  "5": {
-    "basicblocks": 62,
-    "calls": "6 6",
-    "file": "srcnn.cpp",
-    "fileloc": 329,
-    "instructions": 212,
-    "loads": {
-      "L": 8
-    },
-    "name": "conv3_stream",
-    "stores": {
-      "L": 6
-    },
-    "total_instructions": 244
-  },
-  "6": {
-    "basicblocks": 7,
-    "calls": "",
-    "file": "srcnn.cpp",
-    "fileloc": 84,
-    "instructions": 11,
-    "name": "clampi",
-    "total_instructions": 11
-  },
   "7": {
     "basicblocks": 1,
-    "calls": "1 2",
+    "calls": "2 3",
     "file": "srcnn.cpp",
-    "fileloc": 299,
+    "fileloc": 390,
     "instructions": 25,
     "name": "conv1conv2_stream",
     "total_instructions": 371

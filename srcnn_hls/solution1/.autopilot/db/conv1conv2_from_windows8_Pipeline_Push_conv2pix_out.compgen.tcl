@@ -11,14 +11,14 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1299 \
+    id 817 \
     name acc2 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename acc2 \
     op interface \
-    ports { acc2_address0 { O 3 vector } acc2_ce0 { O 1 bit } acc2_q0 { I 32 vector } } \
+    ports { acc2_address0 { O 2 vector } acc2_ce0 { O 1 bit } acc2_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'acc2'"
@@ -30,14 +30,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1300 \
+    id 818 \
     name outpix \
     reset_level 1 \
     sync_rst true \
     dir O \
     corename outpix \
     op interface \
-    ports { outpix_address0 { O 5 vector } outpix_ce0 { O 1 bit } outpix_we0 { O 1 bit } outpix_d0 { O 32 vector } } \
+    ports { outpix_address0 { O 5 vector } outpix_ce0 { O 1 bit } outpix_we0 { O 1 bit } outpix_d0 { O 32 vector } outpix_address1 { O 5 vector } outpix_ce1 { O 1 bit } outpix_we1 { O 1 bit } outpix_d1 { O 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'outpix'"
@@ -49,14 +49,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1301 \
+    id 819 \
     name acc2_1 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename acc2_1 \
     op interface \
-    ports { acc2_1_address0 { O 3 vector } acc2_1_ce0 { O 1 bit } acc2_1_q0 { I 32 vector } } \
+    ports { acc2_1_address0 { O 2 vector } acc2_1_ce0 { O 1 bit } acc2_1_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'acc2_1'"
@@ -68,14 +68,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1302 \
+    id 820 \
     name acc2_2 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename acc2_2 \
     op interface \
-    ports { acc2_2_address0 { O 3 vector } acc2_2_ce0 { O 1 bit } acc2_2_q0 { I 32 vector } } \
+    ports { acc2_2_address0 { O 2 vector } acc2_2_ce0 { O 1 bit } acc2_2_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'acc2_2'"
@@ -87,17 +87,93 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1303 \
+    id 821 \
     name acc2_3 \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename acc2_3 \
     op interface \
-    ports { acc2_3_address0 { O 3 vector } acc2_3_ce0 { O 1 bit } acc2_3_q0 { I 32 vector } } \
+    ports { acc2_3_address0 { O 2 vector } acc2_3_ce0 { O 1 bit } acc2_3_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'acc2_3'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 822 \
+    name acc2_4 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename acc2_4 \
+    op interface \
+    ports { acc2_4_address0 { O 2 vector } acc2_4_ce0 { O 1 bit } acc2_4_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'acc2_4'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 823 \
+    name acc2_5 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename acc2_5 \
+    op interface \
+    ports { acc2_5_address0 { O 2 vector } acc2_5_ce0 { O 1 bit } acc2_5_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'acc2_5'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 824 \
+    name acc2_6 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename acc2_6 \
+    op interface \
+    ports { acc2_6_address0 { O 2 vector } acc2_6_ce0 { O 1 bit } acc2_6_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'acc2_6'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 825 \
+    name acc2_7 \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename acc2_7 \
+    op interface \
+    ports { acc2_7_address0 { O 2 vector } acc2_7_ce0 { O 1 bit } acc2_7_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'acc2_7'"
 }
 }
 

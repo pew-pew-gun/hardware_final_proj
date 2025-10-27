@@ -6,6 +6,11 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 }
 
 
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler srcnn_make_win97_lb1_RAM_2P_BRAM_1R1W BINDTYPE {storage} TYPE {ram_2p} IMPL {bram} LATENCY 2 ALLOW_PRAGMA 1
+}
+
+
 # clear list
 if {${::AESL::PGuard_autoexp_gen}} {
     cg_default_interface_gen_dc_begin
@@ -16,7 +21,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 922 \
+    id 357 \
     name s_pix_i \
     type fifo \
     dir I \
@@ -24,14 +29,14 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_s_pix_i \
     op interface \
-    ports { s_pix_i_dout { I 32 vector } s_pix_i_num_data_valid { I 10 vector } s_pix_i_fifo_cap { I 10 vector } s_pix_i_empty_n { I 1 bit } s_pix_i_read { O 1 bit } } \
+    ports { s_pix_i_dout { I 32 vector } s_pix_i_num_data_valid { I 11 vector } s_pix_i_fifo_cap { I 11 vector } s_pix_i_empty_n { I 1 bit } s_pix_i_read { O 1 bit } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 923 \
+    id 358 \
     name s_win_i \
     type fifo \
     dir O \
@@ -46,7 +51,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 924 \
+    id 359 \
     name h0 \
     type other \
     dir I \
@@ -61,7 +66,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 925 \
+    id 360 \
     name p_read \
     type other \
     dir I \
@@ -76,7 +81,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 926 \
+    id 361 \
     name h0_c \
     type fifo \
     dir O \
@@ -91,7 +96,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 927 \
+    id 362 \
     name tw_eff_loc_i_c \
     type fifo \
     dir O \

@@ -41,8 +41,8 @@ set portList {
 	{ ap_idle sc_out sc_logic 1 done -1 } 
 	{ ap_ready sc_out sc_logic 1 ready -1 } 
 	{ s_out_i_dout sc_in sc_lv 32 signal 0 } 
-	{ s_out_i_num_data_valid sc_in sc_lv 9 signal 0 } 
-	{ s_out_i_fifo_cap sc_in sc_lv 9 signal 0 } 
+	{ s_out_i_num_data_valid sc_in sc_lv 11 signal 0 } 
+	{ s_out_i_fifo_cap sc_in sc_lv 11 signal 0 } 
 	{ s_out_i_empty_n sc_in sc_logic 1 signal 0 } 
 	{ s_out_i_read sc_out sc_logic 1 signal 0 } 
 	{ m_axi_gmem_out_AWVALID sc_out sc_logic 1 signal 1 } 
@@ -121,8 +121,8 @@ set NewPortList {[
  	{ "name": "ap_idle", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "done", "bundle":{"name": "ap_idle", "role": "default" }} , 
  	{ "name": "ap_ready", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "ready", "bundle":{"name": "ap_ready", "role": "default" }} , 
  	{ "name": "s_out_i_dout", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "s_out_i", "role": "dout" }} , 
- 	{ "name": "s_out_i_num_data_valid", "direction": "in", "datatype": "sc_lv", "bitwidth":9, "type": "signal", "bundle":{"name": "s_out_i", "role": "num_data_valid" }} , 
- 	{ "name": "s_out_i_fifo_cap", "direction": "in", "datatype": "sc_lv", "bitwidth":9, "type": "signal", "bundle":{"name": "s_out_i", "role": "fifo_cap" }} , 
+ 	{ "name": "s_out_i_num_data_valid", "direction": "in", "datatype": "sc_lv", "bitwidth":11, "type": "signal", "bundle":{"name": "s_out_i", "role": "num_data_valid" }} , 
+ 	{ "name": "s_out_i_fifo_cap", "direction": "in", "datatype": "sc_lv", "bitwidth":11, "type": "signal", "bundle":{"name": "s_out_i", "role": "fifo_cap" }} , 
  	{ "name": "s_out_i_empty_n", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "s_out_i", "role": "empty_n" }} , 
  	{ "name": "s_out_i_read", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "s_out_i", "role": "read" }} , 
  	{ "name": "m_axi_gmem_out_AWVALID", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "gmem_out", "role": "AWVALID" }} , 
@@ -208,7 +208,7 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
-			{"Name" : "s_out_i", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "256", "DependentChanType" : "0",
+			{"Name" : "s_out_i", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "1024", "DependentChanType" : "0",
 				"BlockSignal" : [
 					{"Name" : "s_out_i_blk_n", "Type" : "RtlSignal"}]},
 			{"Name" : "gmem_out", "Type" : "MAXI", "Direction" : "O",
@@ -255,7 +255,7 @@ set PipelineEnableSignalInfo {[
 ]}
 
 set Spec2ImplPortList { 
-	s_out_i { ap_fifo {  { s_out_i_dout fifo_port_we 0 32 }  { s_out_i_num_data_valid fifo_status_num_data_valid 0 9 }  { s_out_i_fifo_cap fifo_update 0 9 }  { s_out_i_empty_n fifo_status 0 1 }  { s_out_i_read fifo_data 1 1 } } }
+	s_out_i { ap_fifo {  { s_out_i_dout fifo_port_we 0 32 }  { s_out_i_num_data_valid fifo_status_num_data_valid 0 11 }  { s_out_i_fifo_cap fifo_update 0 11 }  { s_out_i_empty_n fifo_status 0 1 }  { s_out_i_read fifo_data 1 1 } } }
 	 { m_axi {  { m_axi_gmem_out_AWVALID VALID 1 1 }  { m_axi_gmem_out_AWREADY READY 0 1 }  { m_axi_gmem_out_AWADDR ADDR 1 64 }  { m_axi_gmem_out_AWID ID 1 1 }  { m_axi_gmem_out_AWLEN SIZE 1 32 }  { m_axi_gmem_out_AWSIZE BURST 1 3 }  { m_axi_gmem_out_AWBURST LOCK 1 2 }  { m_axi_gmem_out_AWLOCK CACHE 1 2 }  { m_axi_gmem_out_AWCACHE PROT 1 4 }  { m_axi_gmem_out_AWPROT QOS 1 3 }  { m_axi_gmem_out_AWQOS REGION 1 4 }  { m_axi_gmem_out_AWREGION USER 1 4 }  { m_axi_gmem_out_AWUSER DATA 1 1 }  { m_axi_gmem_out_WVALID VALID 1 1 }  { m_axi_gmem_out_WREADY READY 0 1 }  { m_axi_gmem_out_WDATA FIFONUM 1 32 }  { m_axi_gmem_out_WSTRB STRB 1 4 }  { m_axi_gmem_out_WLAST LAST 1 1 }  { m_axi_gmem_out_WID ID 1 1 }  { m_axi_gmem_out_WUSER DATA 1 1 }  { m_axi_gmem_out_ARVALID VALID 1 1 }  { m_axi_gmem_out_ARREADY READY 0 1 }  { m_axi_gmem_out_ARADDR ADDR 1 64 }  { m_axi_gmem_out_ARID ID 1 1 }  { m_axi_gmem_out_ARLEN SIZE 1 32 }  { m_axi_gmem_out_ARSIZE BURST 1 3 }  { m_axi_gmem_out_ARBURST LOCK 1 2 }  { m_axi_gmem_out_ARLOCK CACHE 1 2 }  { m_axi_gmem_out_ARCACHE PROT 1 4 }  { m_axi_gmem_out_ARPROT QOS 1 3 }  { m_axi_gmem_out_ARQOS REGION 1 4 }  { m_axi_gmem_out_ARREGION USER 1 4 }  { m_axi_gmem_out_ARUSER DATA 1 1 }  { m_axi_gmem_out_RVALID VALID 0 1 }  { m_axi_gmem_out_RREADY READY 1 1 }  { m_axi_gmem_out_RDATA FIFONUM 0 32 }  { m_axi_gmem_out_RLAST LAST 0 1 }  { m_axi_gmem_out_RID ID 0 1 }  { m_axi_gmem_out_RFIFONUM LEN 0 9 }  { m_axi_gmem_out_RUSER DATA 0 1 }  { m_axi_gmem_out_RRESP RESP 0 2 }  { m_axi_gmem_out_BVALID VALID 0 1 }  { m_axi_gmem_out_BREADY READY 1 1 }  { m_axi_gmem_out_BRESP RESP 0 2 }  { m_axi_gmem_out_BID ID 0 1 }  { m_axi_gmem_out_BUSER DATA 0 1 } } }
 	output_ftmap { ap_fifo {  { output_ftmap_dout fifo_port_we 0 64 }  { output_ftmap_num_data_valid fifo_status_num_data_valid 0 4 }  { output_ftmap_fifo_cap fifo_update 0 4 }  { output_ftmap_empty_n fifo_status 0 1 }  { output_ftmap_read fifo_data 1 1 } } }
 	h0 { ap_fifo {  { h0_dout fifo_port_we 0 9 }  { h0_num_data_valid fifo_status_num_data_valid 0 2 }  { h0_fifo_cap fifo_update 0 2 }  { h0_empty_n fifo_status 0 1 }  { h0_read fifo_data 1 1 } } }

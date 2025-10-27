@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'srcnn_Pipeline_CopyW1_ky_CopyW1_kx'
 ================================================================
-* Date:           Tue Oct 28 00:04:26 2025
+* Date:           Tue Oct 28 01:28:33 2025
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -85,22 +85,22 @@
     +-----------------------------------+----------+----+---+----+------------+------------+
     |           Variable Name           | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +-----------------------------------+----------+----+---+----+------------+------------+
-    |add_ln609_1_fu_1313_p2             |         +|   0|  0|  14|           7|           7|
-    |add_ln609_2_fu_1366_p2             |         +|   0|  0|  14|           7|           7|
-    |add_ln609_3_fu_1325_p2             |         +|   0|  0|  14|           7|           1|
-    |add_ln609_fu_1334_p2               |         +|   0|  0|  12|           4|           1|
-    |add_ln612_fu_1428_p2               |         +|   0|  0|  12|           4|           1|
-    |add_ln614_1_fu_1396_p2             |         +|   0|  0|  63|          63|          63|
-    |add_ln614_2_fu_1402_p2             |         +|   0|  0|  15|           8|           8|
-    |add_ln614_fu_1412_p2               |         +|   0|  0|  63|          63|          63|
+    |add_ln856_1_fu_1313_p2             |         +|   0|  0|  14|           7|           7|
+    |add_ln856_2_fu_1366_p2             |         +|   0|  0|  14|           7|           7|
+    |add_ln856_3_fu_1325_p2             |         +|   0|  0|  14|           7|           1|
+    |add_ln856_fu_1334_p2               |         +|   0|  0|  12|           4|           1|
+    |add_ln859_fu_1428_p2               |         +|   0|  0|  12|           4|           1|
+    |add_ln861_1_fu_1396_p2             |         +|   0|  0|  63|          63|          63|
+    |add_ln861_2_fu_1402_p2             |         +|   0|  0|  15|           8|           8|
+    |add_ln861_fu_1412_p2               |         +|   0|  0|  63|          63|          63|
     |ap_block_state10_pp0_stage0_iter9  |       and|   0|  0|   2|           1|           1|
     |ap_block_state2_io                 |       and|   0|  0|   2|           1|           1|
-    |icmp_ln609_fu_1319_p2              |      icmp|   0|  0|  14|           7|           7|
-    |icmp_ln612_fu_1340_p2              |      icmp|   0|  0|  12|           4|           4|
+    |icmp_ln856_fu_1319_p2              |      icmp|   0|  0|  14|           7|           7|
+    |icmp_ln859_fu_1340_p2              |      icmp|   0|  0|  12|           4|           4|
     |ap_block_pp0_stage0_11001          |        or|   0|  0|   2|           1|           1|
-    |select_ln609_1_fu_1372_p3          |    select|   0|  0|   7|           1|           7|
-    |select_ln609_2_fu_1384_p3          |    select|   0|  0|   4|           1|           4|
-    |select_ln609_fu_1346_p3            |    select|   0|  0|   4|           1|           1|
+    |select_ln856_1_fu_1372_p3          |    select|   0|  0|   7|           1|           7|
+    |select_ln856_2_fu_1384_p3          |    select|   0|  0|   4|           1|           4|
+    |select_ln856_fu_1346_p3            |    select|   0|  0|   4|           1|           1|
     |ap_enable_pp0                      |       xor|   0|  0|   2|           1|           2|
     +-----------------------------------+----------+----+---+----+------------+------------+
     |Total                              |          |   0|  0| 256|         181|         179|
@@ -149,9 +149,9 @@
     |ap_loop_exit_ready_pp0_iter7_reg                                                              |   1|   0|    1|          0|
     |ap_loop_exit_ready_pp0_iter8_reg                                                              |   1|   0|    1|          0|
     |ap_loop_exit_ready_pp0_iter9_reg                                                              |   1|   0|    1|          0|
-    |bitcast_ln614_reg_1982                                                                        |  32|   0|   32|          0|
+    |bitcast_ln861_reg_1982                                                                        |  32|   0|   32|          0|
     |gmem_w1_addr_reg_1571                                                                         |  64|   0|   64|          0|
-    |icmp_ln609_reg_1559                                                                           |   1|   0|    1|          0|
+    |icmp_ln856_reg_1559                                                                           |   1|   0|    1|          0|
     |indvar_flatten_fu_262                                                                         |   7|   0|    7|          0|
     |kx_fu_254                                                                                     |   4|   0|    4|          0|
     |ky_fu_258                                                                                     |   4|   0|    4|          0|
@@ -236,12 +236,12 @@
     |p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_8_6_1_reg_1587  |   6|   0|    6|          0|
     |p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_8_7_1_reg_1582  |   6|   0|    6|          0|
     |p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_8_8_1_reg_1577  |   6|   0|    6|          0|
-    |select_ln609_2_reg_1567                                                                       |   4|   0|    4|          0|
-    |select_ln609_reg_1563                                                                         |   4|   0|    4|          0|
-    |zext_ln605_2_cast_reg_1474                                                                    |   6|   0|   64|         58|
-    |icmp_ln609_reg_1559                                                                           |  64|  32|    1|          0|
-    |select_ln609_2_reg_1567                                                                       |  64|  32|    4|          0|
-    |select_ln609_reg_1563                                                                         |  64|  32|    4|          0|
+    |select_ln856_2_reg_1567                                                                       |   4|   0|    4|          0|
+    |select_ln856_reg_1563                                                                         |   4|   0|    4|          0|
+    |zext_ln852_2_cast_reg_1474                                                                    |   6|   0|   64|         58|
+    |icmp_ln856_reg_1559                                                                           |  64|  32|    1|          0|
+    |select_ln856_2_reg_1567                                                                       |  64|  32|    4|          0|
+    |select_ln856_reg_1563                                                                         |  64|  32|    4|          0|
     +----------------------------------------------------------------------------------------------+----+----+-----+-----------+
     |Total                                                                                         | 825|  96|  700|         58|
     +----------------------------------------------------------------------------------------------+----+----+-----+-----------+
@@ -307,9 +307,9 @@
 |m_axi_gmem_w1_BRESP                                                                         |   in|    2|       m_axi|                                                                            gmem_w1|       pointer|
 |m_axi_gmem_w1_BID                                                                           |   in|    1|       m_axi|                                                                            gmem_w1|       pointer|
 |m_axi_gmem_w1_BUSER                                                                         |   in|    1|       m_axi|                                                                            gmem_w1|       pointer|
-|zext_ln605_2                                                                                |   in|    6|     ap_none|                                                                       zext_ln605_2|        scalar|
-|sext_ln605                                                                                  |   in|   62|     ap_none|                                                                         sext_ln605|        scalar|
-|zext_ln605_3                                                                                |   in|   13|     ap_none|                                                                       zext_ln605_3|        scalar|
+|zext_ln852_2                                                                                |   in|    6|     ap_none|                                                                       zext_ln852_2|        scalar|
+|sext_ln852                                                                                  |   in|   62|     ap_none|                                                                         sext_ln852|        scalar|
+|zext_ln852_3                                                                                |   in|   13|     ap_none|                                                                       zext_ln852_3|        scalar|
 |p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_0_address0  |  out|    6|   ap_memory|  p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_0|         array|
 |p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_0_ce0       |  out|    1|   ap_memory|  p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_0|         array|
 |p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_0_we0       |  out|    1|   ap_memory|  p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_0|         array|

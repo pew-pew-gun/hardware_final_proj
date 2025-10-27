@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv1conv2_stream4'" level="0">
-<item name = "Date">Tue Oct 28 00:02:21 2025
+<item name = "Date">Tue Oct 28 01:26:50 2025
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 7.419 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 7.291 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">14998, 62854903, 0.150 ms, 0.629 sec, 14997, 62854902, dataflow</column>
+<column name="">9414, 39443634, 94.140 us, 0.394 sec, 9413, 39443633, dataflow</column>
 </table>
 </item>
 <item name = "Detail">

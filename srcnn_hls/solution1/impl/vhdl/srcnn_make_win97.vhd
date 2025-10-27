@@ -18,8 +18,8 @@ port (
     ap_idle : OUT STD_LOGIC;
     ap_ready : OUT STD_LOGIC;
     s_pix_i_dout : IN STD_LOGIC_VECTOR (31 downto 0);
-    s_pix_i_num_data_valid : IN STD_LOGIC_VECTOR (9 downto 0);
-    s_pix_i_fifo_cap : IN STD_LOGIC_VECTOR (9 downto 0);
+    s_pix_i_num_data_valid : IN STD_LOGIC_VECTOR (10 downto 0);
+    s_pix_i_fifo_cap : IN STD_LOGIC_VECTOR (10 downto 0);
     s_pix_i_empty_n : IN STD_LOGIC;
     s_pix_i_read : OUT STD_LOGIC;
     s_win_i_din : OUT STD_LOGIC_VECTOR (2592 downto 0);
@@ -57,7 +57,7 @@ architecture behav of srcnn_make_win97 is
     constant ap_const_lv8_FF : STD_LOGIC_VECTOR (7 downto 0) := "11111111";
     constant ap_const_lv8_10 : STD_LOGIC_VECTOR (7 downto 0) := "00010000";
     constant ap_const_lv9_C : STD_LOGIC_VECTOR (8 downto 0) := "000001100";
-    constant ap_const_lv10_0 : STD_LOGIC_VECTOR (9 downto 0) := "0000000000";
+    constant ap_const_lv11_0 : STD_LOGIC_VECTOR (10 downto 0) := "00000000000";
     constant ap_const_lv7_0 : STD_LOGIC_VECTOR (6 downto 0) := "0000000";
 
 attribute shreg_extract : string;
@@ -70,39 +70,95 @@ attribute shreg_extract : string;
     signal h0_c_blk_n : STD_LOGIC;
     signal tw_eff_loc_i_c_blk_n : STD_LOGIC;
     signal ap_block_state1 : BOOLEAN;
-    signal PH_fu_131_p2 : STD_LOGIC_VECTOR (8 downto 0);
-    signal PH_reg_166 : STD_LOGIC_VECTOR (8 downto 0);
-    signal PW_fu_140_p2 : STD_LOGIC_VECTOR (8 downto 0);
-    signal PW_reg_172 : STD_LOGIC_VECTOR (8 downto 0);
+    signal PH_fu_181_p2 : STD_LOGIC_VECTOR (8 downto 0);
+    signal PH_reg_216 : STD_LOGIC_VECTOR (8 downto 0);
+    signal PW_fu_190_p2 : STD_LOGIC_VECTOR (8 downto 0);
+    signal PW_reg_222 : STD_LOGIC_VECTOR (8 downto 0);
     signal ap_CS_fsm_state2 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state2 : signal is "none";
-    signal mul_ln146_fu_154_p2 : STD_LOGIC_VECTOR (16 downto 0);
-    signal mul_ln146_reg_177 : STD_LOGIC_VECTOR (16 downto 0);
-    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_84_ap_start : STD_LOGIC;
-    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_84_ap_done : STD_LOGIC;
-    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_84_ap_idle : STD_LOGIC;
-    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_84_ap_ready : STD_LOGIC;
-    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_84_s_pix_i_read : STD_LOGIC;
-    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_84_s_win_i_din : STD_LOGIC_VECTOR (2592 downto 0);
-    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_84_s_win_i_write : STD_LOGIC;
-    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_84_ap_start_reg : STD_LOGIC := '0';
+    signal mul_ln144_fu_204_p2 : STD_LOGIC_VECTOR (16 downto 0);
+    signal mul_ln144_reg_227 : STD_LOGIC_VECTOR (16 downto 0);
+    signal lb1_q0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal lb1_1_q0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal lb1_2_q0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal lb1_3_q0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal lb1_4_q0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal lb1_5_q0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal lb1_6_q0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal lb1_7_q0 : STD_LOGIC_VECTOR (31 downto 0);
+    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_126_ap_start : STD_LOGIC;
+    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_126_ap_done : STD_LOGIC;
+    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_126_ap_idle : STD_LOGIC;
+    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_126_ap_ready : STD_LOGIC;
+    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_126_s_pix_i_read : STD_LOGIC;
+    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_126_s_win_i_din : STD_LOGIC_VECTOR (2592 downto 0);
+    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_126_s_win_i_write : STD_LOGIC;
+    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_7_address0 : STD_LOGIC_VECTOR (4 downto 0);
+    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_7_ce0 : STD_LOGIC;
+    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_7_address1 : STD_LOGIC_VECTOR (4 downto 0);
+    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_7_ce1 : STD_LOGIC;
+    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_7_we1 : STD_LOGIC;
+    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_7_d1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_6_address0 : STD_LOGIC_VECTOR (4 downto 0);
+    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_6_ce0 : STD_LOGIC;
+    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_6_address1 : STD_LOGIC_VECTOR (4 downto 0);
+    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_6_ce1 : STD_LOGIC;
+    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_6_we1 : STD_LOGIC;
+    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_6_d1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_5_address0 : STD_LOGIC_VECTOR (4 downto 0);
+    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_5_ce0 : STD_LOGIC;
+    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_5_address1 : STD_LOGIC_VECTOR (4 downto 0);
+    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_5_ce1 : STD_LOGIC;
+    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_5_we1 : STD_LOGIC;
+    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_5_d1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_4_address0 : STD_LOGIC_VECTOR (4 downto 0);
+    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_4_ce0 : STD_LOGIC;
+    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_4_address1 : STD_LOGIC_VECTOR (4 downto 0);
+    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_4_ce1 : STD_LOGIC;
+    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_4_we1 : STD_LOGIC;
+    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_4_d1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_3_address0 : STD_LOGIC_VECTOR (4 downto 0);
+    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_3_ce0 : STD_LOGIC;
+    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_3_address1 : STD_LOGIC_VECTOR (4 downto 0);
+    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_3_ce1 : STD_LOGIC;
+    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_3_we1 : STD_LOGIC;
+    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_3_d1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_2_address0 : STD_LOGIC_VECTOR (4 downto 0);
+    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_2_ce0 : STD_LOGIC;
+    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_2_address1 : STD_LOGIC_VECTOR (4 downto 0);
+    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_2_ce1 : STD_LOGIC;
+    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_2_we1 : STD_LOGIC;
+    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_2_d1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_1_address0 : STD_LOGIC_VECTOR (4 downto 0);
+    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_1_ce0 : STD_LOGIC;
+    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_1_address1 : STD_LOGIC_VECTOR (4 downto 0);
+    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_1_ce1 : STD_LOGIC;
+    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_1_we1 : STD_LOGIC;
+    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_1_d1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_address0 : STD_LOGIC_VECTOR (4 downto 0);
+    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_ce0 : STD_LOGIC;
+    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_address1 : STD_LOGIC_VECTOR (4 downto 0);
+    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_ce1 : STD_LOGIC;
+    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_we1 : STD_LOGIC;
+    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_d1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal grp_make_win97_Pipeline_win9x9_read_pix_fu_126_ap_start_reg : STD_LOGIC := '0';
     signal ap_CS_fsm_state3 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state3 : signal is "none";
-    signal add_ln670_fu_95_p2 : STD_LOGIC_VECTOR (8 downto 0);
-    signal trunc_ln669_fu_109_p1 : STD_LOGIC_VECTOR (7 downto 0);
-    signal tmp_fu_101_p3 : STD_LOGIC_VECTOR (0 downto 0);
-    signal xor_ln670_fu_113_p2 : STD_LOGIC_VECTOR (7 downto 0);
-    signal th_eff_fu_119_p3 : STD_LOGIC_VECTOR (7 downto 0);
-    signal th_eff_cast_i_fu_127_p1 : STD_LOGIC_VECTOR (8 downto 0);
-    signal p_read_cast_fu_137_p1 : STD_LOGIC_VECTOR (8 downto 0);
-    signal mul_ln146_fu_154_p0 : STD_LOGIC_VECTOR (8 downto 0);
-    signal mul_ln146_fu_154_p1 : STD_LOGIC_VECTOR (8 downto 0);
+    signal add_ln917_fu_145_p2 : STD_LOGIC_VECTOR (8 downto 0);
+    signal trunc_ln916_fu_159_p1 : STD_LOGIC_VECTOR (7 downto 0);
+    signal tmp_fu_151_p3 : STD_LOGIC_VECTOR (0 downto 0);
+    signal xor_ln917_fu_163_p2 : STD_LOGIC_VECTOR (7 downto 0);
+    signal th_eff_fu_169_p3 : STD_LOGIC_VECTOR (7 downto 0);
+    signal th_eff_cast_i_fu_177_p1 : STD_LOGIC_VECTOR (8 downto 0);
+    signal p_read_cast_fu_187_p1 : STD_LOGIC_VECTOR (8 downto 0);
+    signal mul_ln144_fu_204_p0 : STD_LOGIC_VECTOR (8 downto 0);
+    signal mul_ln144_fu_204_p1 : STD_LOGIC_VECTOR (8 downto 0);
     signal ap_NS_fsm : STD_LOGIC_VECTOR (2 downto 0);
     signal ap_ST_fsm_state1_blk : STD_LOGIC;
     signal ap_ST_fsm_state2_blk : STD_LOGIC;
     signal ap_ST_fsm_state3_blk : STD_LOGIC;
-    signal mul_ln146_fu_154_p00 : STD_LOGIC_VECTOR (16 downto 0);
-    signal mul_ln146_fu_154_p10 : STD_LOGIC_VECTOR (16 downto 0);
+    signal mul_ln144_fu_204_p00 : STD_LOGIC_VECTOR (16 downto 0);
+    signal mul_ln144_fu_204_p10 : STD_LOGIC_VECTOR (16 downto 0);
     signal ap_ce_reg : STD_LOGIC;
 
     component srcnn_make_win97_Pipeline_win9x9_read_pix IS
@@ -114,8 +170,8 @@ attribute shreg_extract : string;
         ap_idle : OUT STD_LOGIC;
         ap_ready : OUT STD_LOGIC;
         s_pix_i_dout : IN STD_LOGIC_VECTOR (31 downto 0);
-        s_pix_i_num_data_valid : IN STD_LOGIC_VECTOR (9 downto 0);
-        s_pix_i_fifo_cap : IN STD_LOGIC_VECTOR (9 downto 0);
+        s_pix_i_num_data_valid : IN STD_LOGIC_VECTOR (10 downto 0);
+        s_pix_i_fifo_cap : IN STD_LOGIC_VECTOR (10 downto 0);
         s_pix_i_empty_n : IN STD_LOGIC;
         s_pix_i_read : OUT STD_LOGIC;
         s_win_i_din : OUT STD_LOGIC_VECTOR (2592 downto 0);
@@ -125,6 +181,62 @@ attribute shreg_extract : string;
         s_win_i_write : OUT STD_LOGIC;
         empty : IN STD_LOGIC_VECTOR (16 downto 0);
         zext_ln125 : IN STD_LOGIC_VECTOR (8 downto 0);
+        lb1_7_address0 : OUT STD_LOGIC_VECTOR (4 downto 0);
+        lb1_7_ce0 : OUT STD_LOGIC;
+        lb1_7_q0 : IN STD_LOGIC_VECTOR (31 downto 0);
+        lb1_7_address1 : OUT STD_LOGIC_VECTOR (4 downto 0);
+        lb1_7_ce1 : OUT STD_LOGIC;
+        lb1_7_we1 : OUT STD_LOGIC;
+        lb1_7_d1 : OUT STD_LOGIC_VECTOR (31 downto 0);
+        lb1_6_address0 : OUT STD_LOGIC_VECTOR (4 downto 0);
+        lb1_6_ce0 : OUT STD_LOGIC;
+        lb1_6_q0 : IN STD_LOGIC_VECTOR (31 downto 0);
+        lb1_6_address1 : OUT STD_LOGIC_VECTOR (4 downto 0);
+        lb1_6_ce1 : OUT STD_LOGIC;
+        lb1_6_we1 : OUT STD_LOGIC;
+        lb1_6_d1 : OUT STD_LOGIC_VECTOR (31 downto 0);
+        lb1_5_address0 : OUT STD_LOGIC_VECTOR (4 downto 0);
+        lb1_5_ce0 : OUT STD_LOGIC;
+        lb1_5_q0 : IN STD_LOGIC_VECTOR (31 downto 0);
+        lb1_5_address1 : OUT STD_LOGIC_VECTOR (4 downto 0);
+        lb1_5_ce1 : OUT STD_LOGIC;
+        lb1_5_we1 : OUT STD_LOGIC;
+        lb1_5_d1 : OUT STD_LOGIC_VECTOR (31 downto 0);
+        lb1_4_address0 : OUT STD_LOGIC_VECTOR (4 downto 0);
+        lb1_4_ce0 : OUT STD_LOGIC;
+        lb1_4_q0 : IN STD_LOGIC_VECTOR (31 downto 0);
+        lb1_4_address1 : OUT STD_LOGIC_VECTOR (4 downto 0);
+        lb1_4_ce1 : OUT STD_LOGIC;
+        lb1_4_we1 : OUT STD_LOGIC;
+        lb1_4_d1 : OUT STD_LOGIC_VECTOR (31 downto 0);
+        lb1_3_address0 : OUT STD_LOGIC_VECTOR (4 downto 0);
+        lb1_3_ce0 : OUT STD_LOGIC;
+        lb1_3_q0 : IN STD_LOGIC_VECTOR (31 downto 0);
+        lb1_3_address1 : OUT STD_LOGIC_VECTOR (4 downto 0);
+        lb1_3_ce1 : OUT STD_LOGIC;
+        lb1_3_we1 : OUT STD_LOGIC;
+        lb1_3_d1 : OUT STD_LOGIC_VECTOR (31 downto 0);
+        lb1_2_address0 : OUT STD_LOGIC_VECTOR (4 downto 0);
+        lb1_2_ce0 : OUT STD_LOGIC;
+        lb1_2_q0 : IN STD_LOGIC_VECTOR (31 downto 0);
+        lb1_2_address1 : OUT STD_LOGIC_VECTOR (4 downto 0);
+        lb1_2_ce1 : OUT STD_LOGIC;
+        lb1_2_we1 : OUT STD_LOGIC;
+        lb1_2_d1 : OUT STD_LOGIC_VECTOR (31 downto 0);
+        lb1_1_address0 : OUT STD_LOGIC_VECTOR (4 downto 0);
+        lb1_1_ce0 : OUT STD_LOGIC;
+        lb1_1_q0 : IN STD_LOGIC_VECTOR (31 downto 0);
+        lb1_1_address1 : OUT STD_LOGIC_VECTOR (4 downto 0);
+        lb1_1_ce1 : OUT STD_LOGIC;
+        lb1_1_we1 : OUT STD_LOGIC;
+        lb1_1_d1 : OUT STD_LOGIC_VECTOR (31 downto 0);
+        lb1_address0 : OUT STD_LOGIC_VECTOR (4 downto 0);
+        lb1_ce0 : OUT STD_LOGIC;
+        lb1_q0 : IN STD_LOGIC_VECTOR (31 downto 0);
+        lb1_address1 : OUT STD_LOGIC_VECTOR (4 downto 0);
+        lb1_ce1 : OUT STD_LOGIC;
+        lb1_we1 : OUT STD_LOGIC;
+        lb1_d1 : OUT STD_LOGIC_VECTOR (31 downto 0);
         zext_ln124 : IN STD_LOGIC_VECTOR (8 downto 0) );
     end component;
 
@@ -143,31 +255,233 @@ attribute shreg_extract : string;
     end component;
 
 
+    component srcnn_make_win97_lb1_RAM_2P_BRAM_1R1W IS
+    generic (
+        DataWidth : INTEGER;
+        AddressRange : INTEGER;
+        AddressWidth : INTEGER );
+    port (
+        clk : IN STD_LOGIC;
+        reset : IN STD_LOGIC;
+        address0 : IN STD_LOGIC_VECTOR (4 downto 0);
+        ce0 : IN STD_LOGIC;
+        q0 : OUT STD_LOGIC_VECTOR (31 downto 0);
+        address1 : IN STD_LOGIC_VECTOR (4 downto 0);
+        ce1 : IN STD_LOGIC;
+        we1 : IN STD_LOGIC;
+        d1 : IN STD_LOGIC_VECTOR (31 downto 0) );
+    end component;
+
+
 
 begin
-    grp_make_win97_Pipeline_win9x9_read_pix_fu_84 : component srcnn_make_win97_Pipeline_win9x9_read_pix
+    lb1_U : component srcnn_make_win97_lb1_RAM_2P_BRAM_1R1W
+    generic map (
+        DataWidth => 32,
+        AddressRange => 28,
+        AddressWidth => 5)
+    port map (
+        clk => ap_clk,
+        reset => ap_rst,
+        address0 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_address0,
+        ce0 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_ce0,
+        q0 => lb1_q0,
+        address1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_address1,
+        ce1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_ce1,
+        we1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_we1,
+        d1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_d1);
+
+    lb1_1_U : component srcnn_make_win97_lb1_RAM_2P_BRAM_1R1W
+    generic map (
+        DataWidth => 32,
+        AddressRange => 28,
+        AddressWidth => 5)
+    port map (
+        clk => ap_clk,
+        reset => ap_rst,
+        address0 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_1_address0,
+        ce0 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_1_ce0,
+        q0 => lb1_1_q0,
+        address1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_1_address1,
+        ce1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_1_ce1,
+        we1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_1_we1,
+        d1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_1_d1);
+
+    lb1_2_U : component srcnn_make_win97_lb1_RAM_2P_BRAM_1R1W
+    generic map (
+        DataWidth => 32,
+        AddressRange => 28,
+        AddressWidth => 5)
+    port map (
+        clk => ap_clk,
+        reset => ap_rst,
+        address0 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_2_address0,
+        ce0 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_2_ce0,
+        q0 => lb1_2_q0,
+        address1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_2_address1,
+        ce1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_2_ce1,
+        we1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_2_we1,
+        d1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_2_d1);
+
+    lb1_3_U : component srcnn_make_win97_lb1_RAM_2P_BRAM_1R1W
+    generic map (
+        DataWidth => 32,
+        AddressRange => 28,
+        AddressWidth => 5)
+    port map (
+        clk => ap_clk,
+        reset => ap_rst,
+        address0 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_3_address0,
+        ce0 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_3_ce0,
+        q0 => lb1_3_q0,
+        address1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_3_address1,
+        ce1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_3_ce1,
+        we1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_3_we1,
+        d1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_3_d1);
+
+    lb1_4_U : component srcnn_make_win97_lb1_RAM_2P_BRAM_1R1W
+    generic map (
+        DataWidth => 32,
+        AddressRange => 28,
+        AddressWidth => 5)
+    port map (
+        clk => ap_clk,
+        reset => ap_rst,
+        address0 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_4_address0,
+        ce0 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_4_ce0,
+        q0 => lb1_4_q0,
+        address1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_4_address1,
+        ce1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_4_ce1,
+        we1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_4_we1,
+        d1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_4_d1);
+
+    lb1_5_U : component srcnn_make_win97_lb1_RAM_2P_BRAM_1R1W
+    generic map (
+        DataWidth => 32,
+        AddressRange => 28,
+        AddressWidth => 5)
+    port map (
+        clk => ap_clk,
+        reset => ap_rst,
+        address0 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_5_address0,
+        ce0 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_5_ce0,
+        q0 => lb1_5_q0,
+        address1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_5_address1,
+        ce1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_5_ce1,
+        we1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_5_we1,
+        d1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_5_d1);
+
+    lb1_6_U : component srcnn_make_win97_lb1_RAM_2P_BRAM_1R1W
+    generic map (
+        DataWidth => 32,
+        AddressRange => 28,
+        AddressWidth => 5)
+    port map (
+        clk => ap_clk,
+        reset => ap_rst,
+        address0 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_6_address0,
+        ce0 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_6_ce0,
+        q0 => lb1_6_q0,
+        address1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_6_address1,
+        ce1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_6_ce1,
+        we1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_6_we1,
+        d1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_6_d1);
+
+    lb1_7_U : component srcnn_make_win97_lb1_RAM_2P_BRAM_1R1W
+    generic map (
+        DataWidth => 32,
+        AddressRange => 28,
+        AddressWidth => 5)
+    port map (
+        clk => ap_clk,
+        reset => ap_rst,
+        address0 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_7_address0,
+        ce0 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_7_ce0,
+        q0 => lb1_7_q0,
+        address1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_7_address1,
+        ce1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_7_ce1,
+        we1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_7_we1,
+        d1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_7_d1);
+
+    grp_make_win97_Pipeline_win9x9_read_pix_fu_126 : component srcnn_make_win97_Pipeline_win9x9_read_pix
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst,
-        ap_start => grp_make_win97_Pipeline_win9x9_read_pix_fu_84_ap_start,
-        ap_done => grp_make_win97_Pipeline_win9x9_read_pix_fu_84_ap_done,
-        ap_idle => grp_make_win97_Pipeline_win9x9_read_pix_fu_84_ap_idle,
-        ap_ready => grp_make_win97_Pipeline_win9x9_read_pix_fu_84_ap_ready,
+        ap_start => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_ap_start,
+        ap_done => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_ap_done,
+        ap_idle => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_ap_idle,
+        ap_ready => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_ap_ready,
         s_pix_i_dout => s_pix_i_dout,
-        s_pix_i_num_data_valid => ap_const_lv10_0,
-        s_pix_i_fifo_cap => ap_const_lv10_0,
+        s_pix_i_num_data_valid => ap_const_lv11_0,
+        s_pix_i_fifo_cap => ap_const_lv11_0,
         s_pix_i_empty_n => s_pix_i_empty_n,
-        s_pix_i_read => grp_make_win97_Pipeline_win9x9_read_pix_fu_84_s_pix_i_read,
-        s_win_i_din => grp_make_win97_Pipeline_win9x9_read_pix_fu_84_s_win_i_din,
+        s_pix_i_read => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_s_pix_i_read,
+        s_win_i_din => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_s_win_i_din,
         s_win_i_num_data_valid => ap_const_lv7_0,
         s_win_i_fifo_cap => ap_const_lv7_0,
         s_win_i_full_n => s_win_i_full_n,
-        s_win_i_write => grp_make_win97_Pipeline_win9x9_read_pix_fu_84_s_win_i_write,
-        empty => mul_ln146_reg_177,
-        zext_ln125 => PW_reg_172,
-        zext_ln124 => PH_reg_166);
+        s_win_i_write => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_s_win_i_write,
+        empty => mul_ln144_reg_227,
+        zext_ln125 => PW_reg_222,
+        lb1_7_address0 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_7_address0,
+        lb1_7_ce0 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_7_ce0,
+        lb1_7_q0 => lb1_7_q0,
+        lb1_7_address1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_7_address1,
+        lb1_7_ce1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_7_ce1,
+        lb1_7_we1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_7_we1,
+        lb1_7_d1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_7_d1,
+        lb1_6_address0 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_6_address0,
+        lb1_6_ce0 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_6_ce0,
+        lb1_6_q0 => lb1_6_q0,
+        lb1_6_address1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_6_address1,
+        lb1_6_ce1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_6_ce1,
+        lb1_6_we1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_6_we1,
+        lb1_6_d1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_6_d1,
+        lb1_5_address0 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_5_address0,
+        lb1_5_ce0 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_5_ce0,
+        lb1_5_q0 => lb1_5_q0,
+        lb1_5_address1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_5_address1,
+        lb1_5_ce1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_5_ce1,
+        lb1_5_we1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_5_we1,
+        lb1_5_d1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_5_d1,
+        lb1_4_address0 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_4_address0,
+        lb1_4_ce0 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_4_ce0,
+        lb1_4_q0 => lb1_4_q0,
+        lb1_4_address1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_4_address1,
+        lb1_4_ce1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_4_ce1,
+        lb1_4_we1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_4_we1,
+        lb1_4_d1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_4_d1,
+        lb1_3_address0 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_3_address0,
+        lb1_3_ce0 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_3_ce0,
+        lb1_3_q0 => lb1_3_q0,
+        lb1_3_address1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_3_address1,
+        lb1_3_ce1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_3_ce1,
+        lb1_3_we1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_3_we1,
+        lb1_3_d1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_3_d1,
+        lb1_2_address0 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_2_address0,
+        lb1_2_ce0 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_2_ce0,
+        lb1_2_q0 => lb1_2_q0,
+        lb1_2_address1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_2_address1,
+        lb1_2_ce1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_2_ce1,
+        lb1_2_we1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_2_we1,
+        lb1_2_d1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_2_d1,
+        lb1_1_address0 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_1_address0,
+        lb1_1_ce0 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_1_ce0,
+        lb1_1_q0 => lb1_1_q0,
+        lb1_1_address1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_1_address1,
+        lb1_1_ce1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_1_ce1,
+        lb1_1_we1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_1_we1,
+        lb1_1_d1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_1_d1,
+        lb1_address0 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_address0,
+        lb1_ce0 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_ce0,
+        lb1_q0 => lb1_q0,
+        lb1_address1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_address1,
+        lb1_ce1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_ce1,
+        lb1_we1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_we1,
+        lb1_d1 => grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_d1,
+        zext_ln124 => PH_reg_216);
 
-    mul_9ns_9ns_17_1_1_U920 : component srcnn_mul_9ns_9ns_17_1_1
+    mul_9ns_9ns_17_1_1_U354 : component srcnn_mul_9ns_9ns_17_1_1
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -175,9 +489,9 @@ begin
         din1_WIDTH => 9,
         dout_WIDTH => 17)
     port map (
-        din0 => mul_ln146_fu_154_p0,
-        din1 => mul_ln146_fu_154_p1,
-        dout => mul_ln146_fu_154_p2);
+        din0 => mul_ln144_fu_204_p0,
+        din1 => mul_ln144_fu_204_p1,
+        dout => mul_ln144_fu_204_p2);
 
 
 
@@ -203,7 +517,7 @@ begin
             else
                 if ((ap_continue = ap_const_logic_1)) then 
                     ap_done_reg <= ap_const_logic_0;
-                elsif (((grp_make_win97_Pipeline_win9x9_read_pix_fu_84_ap_done = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state3))) then 
+                elsif (((ap_const_logic_1 = ap_CS_fsm_state3) and (grp_make_win97_Pipeline_win9x9_read_pix_fu_126_ap_done = ap_const_logic_1))) then 
                     ap_done_reg <= ap_const_logic_1;
                 end if; 
             end if;
@@ -211,16 +525,16 @@ begin
     end process;
 
 
-    grp_make_win97_Pipeline_win9x9_read_pix_fu_84_ap_start_reg_assign_proc : process(ap_clk)
+    grp_make_win97_Pipeline_win9x9_read_pix_fu_126_ap_start_reg_assign_proc : process(ap_clk)
     begin
         if (ap_clk'event and ap_clk =  '1') then
             if (ap_rst = '1') then
-                grp_make_win97_Pipeline_win9x9_read_pix_fu_84_ap_start_reg <= ap_const_logic_0;
+                grp_make_win97_Pipeline_win9x9_read_pix_fu_126_ap_start_reg <= ap_const_logic_0;
             else
                 if ((ap_const_logic_1 = ap_CS_fsm_state2)) then 
-                    grp_make_win97_Pipeline_win9x9_read_pix_fu_84_ap_start_reg <= ap_const_logic_1;
-                elsif ((grp_make_win97_Pipeline_win9x9_read_pix_fu_84_ap_ready = ap_const_logic_1)) then 
-                    grp_make_win97_Pipeline_win9x9_read_pix_fu_84_ap_start_reg <= ap_const_logic_0;
+                    grp_make_win97_Pipeline_win9x9_read_pix_fu_126_ap_start_reg <= ap_const_logic_1;
+                elsif ((grp_make_win97_Pipeline_win9x9_read_pix_fu_126_ap_ready = ap_const_logic_1)) then 
+                    grp_make_win97_Pipeline_win9x9_read_pix_fu_126_ap_start_reg <= ap_const_logic_0;
                 end if; 
             end if;
         end if;
@@ -230,7 +544,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((not(((ap_start = ap_const_logic_0) or (tw_eff_loc_i_c_full_n = ap_const_logic_0) or (h0_c_full_n = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1))) and (ap_const_logic_1 = ap_CS_fsm_state1))) then
-                PH_reg_166 <= PH_fu_131_p2;
+                PH_reg_216 <= PH_fu_181_p2;
             end if;
         end if;
     end process;
@@ -238,13 +552,13 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((ap_const_logic_1 = ap_CS_fsm_state2)) then
-                PW_reg_172 <= PW_fu_140_p2;
-                mul_ln146_reg_177 <= mul_ln146_fu_154_p2;
+                PW_reg_222 <= PW_fu_190_p2;
+                mul_ln144_reg_227 <= mul_ln144_fu_204_p2;
             end if;
         end if;
     end process;
 
-    ap_NS_fsm_assign_proc : process (ap_start, ap_done_reg, ap_CS_fsm, ap_CS_fsm_state1, h0_c_full_n, tw_eff_loc_i_c_full_n, grp_make_win97_Pipeline_win9x9_read_pix_fu_84_ap_done, ap_CS_fsm_state3)
+    ap_NS_fsm_assign_proc : process (ap_start, ap_done_reg, ap_CS_fsm, ap_CS_fsm_state1, h0_c_full_n, tw_eff_loc_i_c_full_n, grp_make_win97_Pipeline_win9x9_read_pix_fu_126_ap_done, ap_CS_fsm_state3)
     begin
         case ap_CS_fsm is
             when ap_ST_fsm_state1 => 
@@ -256,7 +570,7 @@ begin
             when ap_ST_fsm_state2 => 
                 ap_NS_fsm <= ap_ST_fsm_state3;
             when ap_ST_fsm_state3 => 
-                if (((grp_make_win97_Pipeline_win9x9_read_pix_fu_84_ap_done = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state3))) then
+                if (((ap_const_logic_1 = ap_CS_fsm_state3) and (grp_make_win97_Pipeline_win9x9_read_pix_fu_126_ap_done = ap_const_logic_1))) then
                     ap_NS_fsm <= ap_ST_fsm_state1;
                 else
                     ap_NS_fsm <= ap_ST_fsm_state3;
@@ -265,9 +579,9 @@ begin
                 ap_NS_fsm <= "XXX";
         end case;
     end process;
-    PH_fu_131_p2 <= std_logic_vector(unsigned(th_eff_cast_i_fu_127_p1) + unsigned(ap_const_lv9_C));
-    PW_fu_140_p2 <= std_logic_vector(unsigned(p_read_cast_fu_137_p1) + unsigned(ap_const_lv9_C));
-    add_ln670_fu_95_p2 <= std_logic_vector(unsigned(h0) + unsigned(ap_const_lv9_10));
+    PH_fu_181_p2 <= std_logic_vector(unsigned(th_eff_cast_i_fu_177_p1) + unsigned(ap_const_lv9_C));
+    PW_fu_190_p2 <= std_logic_vector(unsigned(p_read_cast_fu_187_p1) + unsigned(ap_const_lv9_C));
+    add_ln917_fu_145_p2 <= std_logic_vector(unsigned(h0) + unsigned(ap_const_lv9_10));
     ap_CS_fsm_state1 <= ap_CS_fsm(0);
     ap_CS_fsm_state2 <= ap_CS_fsm(1);
     ap_CS_fsm_state3 <= ap_CS_fsm(2);
@@ -283,9 +597,9 @@ begin
 
     ap_ST_fsm_state2_blk <= ap_const_logic_0;
 
-    ap_ST_fsm_state3_blk_assign_proc : process(grp_make_win97_Pipeline_win9x9_read_pix_fu_84_ap_done)
+    ap_ST_fsm_state3_blk_assign_proc : process(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_ap_done)
     begin
-        if ((grp_make_win97_Pipeline_win9x9_read_pix_fu_84_ap_done = ap_const_logic_0)) then 
+        if ((grp_make_win97_Pipeline_win9x9_read_pix_fu_126_ap_done = ap_const_logic_0)) then 
             ap_ST_fsm_state3_blk <= ap_const_logic_1;
         else 
             ap_ST_fsm_state3_blk <= ap_const_logic_0;
@@ -299,9 +613,9 @@ begin
     end process;
 
 
-    ap_done_assign_proc : process(ap_done_reg, grp_make_win97_Pipeline_win9x9_read_pix_fu_84_ap_done, ap_CS_fsm_state3)
+    ap_done_assign_proc : process(ap_done_reg, grp_make_win97_Pipeline_win9x9_read_pix_fu_126_ap_done, ap_CS_fsm_state3)
     begin
-        if (((grp_make_win97_Pipeline_win9x9_read_pix_fu_84_ap_done = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state3))) then 
+        if (((ap_const_logic_1 = ap_CS_fsm_state3) and (grp_make_win97_Pipeline_win9x9_read_pix_fu_126_ap_done = ap_const_logic_1))) then 
             ap_done <= ap_const_logic_1;
         else 
             ap_done <= ap_done_reg;
@@ -319,16 +633,16 @@ begin
     end process;
 
 
-    ap_ready_assign_proc : process(grp_make_win97_Pipeline_win9x9_read_pix_fu_84_ap_done, ap_CS_fsm_state3)
+    ap_ready_assign_proc : process(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_ap_done, ap_CS_fsm_state3)
     begin
-        if (((grp_make_win97_Pipeline_win9x9_read_pix_fu_84_ap_done = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state3))) then 
+        if (((ap_const_logic_1 = ap_CS_fsm_state3) and (grp_make_win97_Pipeline_win9x9_read_pix_fu_126_ap_done = ap_const_logic_1))) then 
             ap_ready <= ap_const_logic_1;
         else 
             ap_ready <= ap_const_logic_0;
         end if; 
     end process;
 
-    grp_make_win97_Pipeline_win9x9_read_pix_fu_84_ap_start <= grp_make_win97_Pipeline_win9x9_read_pix_fu_84_ap_start_reg;
+    grp_make_win97_Pipeline_win9x9_read_pix_fu_126_ap_start <= grp_make_win97_Pipeline_win9x9_read_pix_fu_126_ap_start_reg;
 
     h0_c_blk_n_assign_proc : process(ap_start, ap_done_reg, ap_CS_fsm_state1, h0_c_full_n)
     begin
@@ -350,38 +664,38 @@ begin
         end if; 
     end process;
 
-    mul_ln146_fu_154_p0 <= mul_ln146_fu_154_p00(9 - 1 downto 0);
-    mul_ln146_fu_154_p00 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(PH_reg_166),17));
-    mul_ln146_fu_154_p1 <= mul_ln146_fu_154_p10(9 - 1 downto 0);
-    mul_ln146_fu_154_p10 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(PW_fu_140_p2),17));
-    p_read_cast_fu_137_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(p_read),9));
+    mul_ln144_fu_204_p0 <= mul_ln144_fu_204_p00(9 - 1 downto 0);
+    mul_ln144_fu_204_p00 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(PH_reg_216),17));
+    mul_ln144_fu_204_p1 <= mul_ln144_fu_204_p10(9 - 1 downto 0);
+    mul_ln144_fu_204_p10 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(PW_fu_190_p2),17));
+    p_read_cast_fu_187_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(p_read),9));
 
-    s_pix_i_read_assign_proc : process(grp_make_win97_Pipeline_win9x9_read_pix_fu_84_s_pix_i_read, ap_CS_fsm_state3)
+    s_pix_i_read_assign_proc : process(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_s_pix_i_read, ap_CS_fsm_state3)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state3)) then 
-            s_pix_i_read <= grp_make_win97_Pipeline_win9x9_read_pix_fu_84_s_pix_i_read;
+            s_pix_i_read <= grp_make_win97_Pipeline_win9x9_read_pix_fu_126_s_pix_i_read;
         else 
             s_pix_i_read <= ap_const_logic_0;
         end if; 
     end process;
 
-    s_win_i_din <= grp_make_win97_Pipeline_win9x9_read_pix_fu_84_s_win_i_din;
+    s_win_i_din <= grp_make_win97_Pipeline_win9x9_read_pix_fu_126_s_win_i_din;
 
-    s_win_i_write_assign_proc : process(grp_make_win97_Pipeline_win9x9_read_pix_fu_84_s_win_i_write, ap_CS_fsm_state3)
+    s_win_i_write_assign_proc : process(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_s_win_i_write, ap_CS_fsm_state3)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state3)) then 
-            s_win_i_write <= grp_make_win97_Pipeline_win9x9_read_pix_fu_84_s_win_i_write;
+            s_win_i_write <= grp_make_win97_Pipeline_win9x9_read_pix_fu_126_s_win_i_write;
         else 
             s_win_i_write <= ap_const_logic_0;
         end if; 
     end process;
 
-    th_eff_cast_i_fu_127_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(th_eff_fu_119_p3),9));
-    th_eff_fu_119_p3 <= 
-        xor_ln670_fu_113_p2 when (tmp_fu_101_p3(0) = '1') else 
+    th_eff_cast_i_fu_177_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(th_eff_fu_169_p3),9));
+    th_eff_fu_169_p3 <= 
+        xor_ln917_fu_163_p2 when (tmp_fu_151_p3(0) = '1') else 
         ap_const_lv8_10;
-    tmp_fu_101_p3 <= add_ln670_fu_95_p2(8 downto 8);
-    trunc_ln669_fu_109_p1 <= h0(8 - 1 downto 0);
+    tmp_fu_151_p3 <= add_ln917_fu_145_p2(8 downto 8);
+    trunc_ln916_fu_159_p1 <= h0(8 - 1 downto 0);
 
     tw_eff_loc_i_c_blk_n_assign_proc : process(ap_start, ap_done_reg, ap_CS_fsm_state1, tw_eff_loc_i_c_full_n)
     begin
@@ -403,5 +717,5 @@ begin
         end if; 
     end process;
 
-    xor_ln670_fu_113_p2 <= (trunc_ln669_fu_109_p1 xor ap_const_lv8_FF);
+    xor_ln917_fu_163_p2 <= (trunc_ln916_fu_159_p1 xor ap_const_lv8_FF);
 end behav;

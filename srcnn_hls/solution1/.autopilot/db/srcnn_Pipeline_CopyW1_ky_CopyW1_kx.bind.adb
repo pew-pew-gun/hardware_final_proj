@@ -52,7 +52,7 @@
 					<Obj>
 						<type>1</type>
 						<id>2</id>
-						<name>zext_ln605_2</name>
+						<name>zext_ln852_2</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -88,7 +88,7 @@
 					<Obj>
 						<type>1</type>
 						<id>3</id>
-						<name>sext_ln605</name>
+						<name>sext_ln852</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -124,7 +124,7 @@
 					<Obj>
 						<type>1</type>
 						<id>4</id>
-						<name>zext_ln605_3</name>
+						<name>zext_ln852_3</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -142,7 +142,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>544433525</coreId>
+						<coreId>1852142702</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>13</bitwidth>
@@ -175,7 +175,7 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
 						<coreId>1852142702</coreId>
@@ -211,10 +211,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2721984096</coreId>
+						<coreId>3621216858</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -247,10 +247,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2612183384</coreId>
+						<coreId>3621216858</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -283,10 +283,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1853189990</coreId>
+						<coreId>3621216858</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -319,10 +319,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2563254824</coreId>
+						<coreId>3621216858</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -355,10 +355,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2572612048</coreId>
+						<coreId>3621216858</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -391,10 +391,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2609580280</coreId>
+						<coreId>3621216858</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -427,10 +427,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2563250664</coreId>
+						<coreId>3621216858</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -463,10 +463,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2562647760</coreId>
+						<coreId>3621216858</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -499,10 +499,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2562646928</coreId>
+						<coreId>3621216858</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -535,10 +535,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2597928624</coreId>
+						<coreId>3621216858</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -571,10 +571,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2562608032</coreId>
+						<coreId>3621216858</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -607,10 +607,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1651406112</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -643,10 +643,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2584894712</coreId>
+						<coreId>3621216858</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -679,10 +679,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2609598328</coreId>
+						<coreId>1948264804</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -715,10 +715,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2609576440</coreId>
+						<coreId>3621216858</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -751,10 +751,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2562921696</coreId>
+						<coreId>3621216858</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -787,10 +787,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2721917280</coreId>
+						<coreId>2301857856</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -823,10 +823,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2871702464</coreId>
+						<coreId>2301862432</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -859,10 +859,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2871702464</coreId>
+						<coreId>2301858912</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -895,10 +895,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2871702464</coreId>
+						<coreId>2301863136</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -931,10 +931,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2871702464</coreId>
+						<coreId>2301861552</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -967,10 +967,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2871702464</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1003,10 +1003,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2871702464</coreId>
+						<coreId>544433253</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1039,10 +1039,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2870300576</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1075,10 +1075,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1680154734</coreId>
+						<coreId>2301860320</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1111,10 +1111,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2870314064</coreId>
+						<coreId>2301863664</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1147,10 +1147,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2871702464</coreId>
+						<coreId>2301863312</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1183,10 +1183,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2871702464</coreId>
+						<coreId>2301864896</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1219,10 +1219,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>6553715</coreId>
+						<coreId>2301856976</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1255,10 +1255,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2871702464</coreId>
+						<coreId>2301859088</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1291,10 +1291,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2871702464</coreId>
+						<coreId>2301857680</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1327,10 +1327,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1718511904</coreId>
+						<coreId>2301856976</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1363,10 +1363,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2871702464</coreId>
+						<coreId>158</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1399,10 +1399,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2609583224</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1435,10 +1435,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2603901472</coreId>
+						<coreId>178</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1471,10 +1471,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2618942384</coreId>
+						<coreId>156</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1507,10 +1507,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2440467928</coreId>
+						<coreId>6759712</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1543,10 +1543,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2575340616</coreId>
+						<coreId>33</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1579,10 +1579,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2575353256</coreId>
+						<coreId>158</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1615,10 +1615,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2575341896</coreId>
+						<coreId>274</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1651,10 +1651,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>222</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1687,10 +1687,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2575465256</coreId>
+						<coreId>138</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1723,10 +1723,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2585799936</coreId>
+						<coreId>209</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1759,10 +1759,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2575336936</coreId>
+						<coreId>428</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1795,10 +1795,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2618942736</coreId>
+						<coreId>236</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1831,10 +1831,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>544434290</coreId>
+						<coreId>214</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1867,10 +1867,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2564281496</coreId>
+						<coreId>306</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1903,10 +1903,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2564273224</coreId>
+						<coreId>217</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1939,10 +1939,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2585792896</coreId>
+						<coreId>175</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1975,10 +1975,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2616988000</coreId>
+						<coreId>1784946798</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2011,10 +2011,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2621058976</coreId>
+						<coreId>2288429712</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2047,10 +2047,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>624059954</coreId>
+						<coreId>2279551560</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2083,10 +2083,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2621057072</coreId>
+						<coreId>2252584760</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2119,10 +2119,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2594366704</coreId>
+						<coreId>2288820872</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2155,10 +2155,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2612923328</coreId>
+						<coreId>2544465280</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2191,10 +2191,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3</coreId>
+						<coreId>4175536912</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2227,10 +2227,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2594365616</coreId>
+						<coreId>2279550408</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2263,10 +2263,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>816</coreId>
+						<coreId>160</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2299,10 +2299,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>506</coreId>
+						<coreId>2305666608</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2335,10 +2335,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1668178292</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2371,10 +2371,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>471</coreId>
+						<coreId>2233115160</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2407,10 +2407,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>984</coreId>
+						<coreId>2279041656</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2443,10 +2443,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1117</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2479,10 +2479,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>2279029560</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2515,10 +2515,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>650</coreId>
+						<coreId>2557376304</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2551,10 +2551,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1937</coreId>
+						<coreId>2557378576</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2587,10 +2587,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>41</coreId>
+						<coreId>781</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2623,10 +2623,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>366</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2659,10 +2659,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>292</coreId>
+						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2695,10 +2695,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>230</coreId>
+						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2731,10 +2731,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>478</coreId>
+						<coreId>2560409888</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2767,10 +2767,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>223</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2803,10 +2803,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>347</coreId>
+						<coreId>621</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2839,10 +2839,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1852011123</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2875,10 +2875,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>543519329</coreId>
+						<coreId>2557373488</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2911,10 +2911,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1936028192</coreId>
+						<coreId>2560410656</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2947,10 +2947,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>544434547</coreId>
+						<coreId>2557370864</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2983,10 +2983,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>842888767</coreId>
+						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -3019,10 +3019,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1953391988</coreId>
+						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -3055,10 +3055,10 @@
 						<control></control>
 						<opType></opType>
 						<implIndex></implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>841823281</coreId>
+						<coreId>767</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -3098,7 +3098,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2423686200</coreId>
+						<coreId>2223960824</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>4</bitwidth>
@@ -3140,7 +3140,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2423683400</coreId>
+						<coreId>2223966424</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>4</bitwidth>
@@ -3182,7 +3182,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2423685080</coreId>
+						<coreId>2284384512</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>7</bitwidth>
@@ -3206,7 +3206,7 @@
 					<Obj>
 						<type>0</type>
 						<id>89</id>
-						<name>zext_ln605_3_read</name>
+						<name>zext_ln852_3_read</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -3224,7 +3224,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2423681720</coreId>
+						<coreId>2223961944</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>13</bitwidth>
@@ -3249,7 +3249,7 @@
 					<Obj>
 						<type>0</type>
 						<id>90</id>
-						<name>sext_ln605_read</name>
+						<name>sext_ln852_read</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -3267,7 +3267,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2604761120</coreId>
+						<coreId>2260598432</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>62</bitwidth>
@@ -3292,7 +3292,7 @@
 					<Obj>
 						<type>0</type>
 						<id>91</id>
-						<name>zext_ln605_2_read</name>
+						<name>zext_ln852_2_read</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -3310,7 +3310,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2604761120</coreId>
+						<coreId>2223962504</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -3335,7 +3335,7 @@
 					<Obj>
 						<type>0</type>
 						<id>92</id>
-						<name>zext_ln605_3_cast</name>
+						<name>zext_ln852_3_cast</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -3353,7 +3353,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2423680600</coreId>
+						<coreId>2252498936</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>63</bitwidth>
@@ -3377,7 +3377,7 @@
 					<Obj>
 						<type>0</type>
 						<id>93</id>
-						<name>sext_ln605_cast</name>
+						<name>sext_ln852_cast</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -3395,7 +3395,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2423680040</coreId>
+						<coreId>2223965864</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>63</bitwidth>
@@ -3419,7 +3419,7 @@
 					<Obj>
 						<type>0</type>
 						<id>94</id>
-						<name>zext_ln605_2_cast</name>
+						<name>zext_ln852_2_cast</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -3437,7 +3437,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2423681160</coreId>
+						<coreId>2223964184</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -3479,7 +3479,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2423682280</coreId>
+						<coreId>2223965304</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -3522,7 +3522,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2423682840</coreId>
+						<coreId>2223959704</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -3565,7 +3565,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2604761120</coreId>
+						<coreId>2223964744</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -3608,7 +3608,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2423684520</coreId>
+						<coreId>2223963064</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -3635,7 +3635,7 @@
 						<name>ky_1</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>609</lineNumber>
+						<lineNumber>856</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -3651,7 +3651,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>609</second>
+										<second>856</second>
 									</item>
 								</second>
 							</item>
@@ -3664,7 +3664,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3760</coreId>
+						<coreId>3158</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>4</bitwidth>
@@ -3692,7 +3692,7 @@
 						<name>indvar_flatten_load</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>609</lineNumber>
+						<lineNumber>856</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -3708,7 +3708,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>609</second>
+										<second>856</second>
 									</item>
 								</second>
 							</item>
@@ -3721,7 +3721,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>2263011992</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>7</bitwidth>
@@ -3764,7 +3764,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>2263003544</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -3808,7 +3808,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>2262990296</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -3852,7 +3852,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>2263009688</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -3896,7 +3896,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3900</coreId>
+						<coreId>2262983000</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -3940,7 +3940,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>2263003544</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -3984,7 +3984,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>2262987224</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -4028,7 +4028,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>2262983000</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -4072,7 +4072,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>2263009688</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -4116,7 +4116,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3620</coreId>
+						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -4160,7 +4160,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>2262997208</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -4204,7 +4204,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>2262987224</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -4248,7 +4248,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2679016256</coreId>
+						<coreId>2262987224</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -4292,7 +4292,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>2263011992</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -4336,7 +4336,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>2262990296</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -4380,7 +4380,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>2263009688</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -4424,7 +4424,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>2263003544</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -4468,7 +4468,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>2262997208</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -4512,7 +4512,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>2262995480</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -4556,7 +4556,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>2263009880</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -4644,7 +4644,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>2289333624</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -4688,7 +4688,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>2263009880</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -4732,7 +4732,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>2289150872</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -4776,7 +4776,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>2262996248</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -4820,7 +4820,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>2262997208</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -4864,7 +4864,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>2262995480</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -4908,7 +4908,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>2262996248</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -4952,7 +4952,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>2015</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -4996,7 +4996,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>2670</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -5040,7 +5040,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>478</coreId>
+						<coreId>1730</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -5084,7 +5084,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -5128,7 +5128,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1196</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -5172,7 +5172,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -5260,7 +5260,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -5304,7 +5304,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1368</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -5348,7 +5348,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -5392,7 +5392,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -5436,7 +5436,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>685</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -5480,7 +5480,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>499</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -5524,7 +5524,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -5568,7 +5568,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -5612,7 +5612,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1549</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -5656,7 +5656,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>875</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -5744,7 +5744,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -5788,7 +5788,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>137</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -5832,7 +5832,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -5876,7 +5876,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -5920,7 +5920,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -5964,7 +5964,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>309</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -6096,7 +6096,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>298</coreId>
+						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -6140,7 +6140,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>412</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -6184,7 +6184,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -6272,7 +6272,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>187</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -6316,7 +6316,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>327</coreId>
+						<coreId>3080244</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -6404,7 +6404,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>808</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -6492,7 +6492,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1176</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -6536,7 +6536,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -6580,7 +6580,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>3480</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -6668,7 +6668,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -6712,7 +6712,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>3760</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -6756,7 +6756,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>47</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -6800,7 +6800,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -6844,7 +6844,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1560</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -6888,7 +6888,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3080244</coreId>
+						<coreId>3620</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -6932,7 +6932,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -7152,7 +7152,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -7196,7 +7196,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>747</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -7240,7 +7240,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>887</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -7310,10 +7310,10 @@
 					<Obj>
 						<type>0</type>
 						<id>266</id>
-						<name>zext_ln609</name>
+						<name>zext_ln856</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>609</lineNumber>
+						<lineNumber>856</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -7329,7 +7329,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>609</second>
+										<second>856</second>
 									</item>
 								</second>
 							</item>
@@ -7342,7 +7342,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>7</bitwidth>
@@ -7369,7 +7369,7 @@
 						<name>shl_ln1</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>609</lineNumber>
+						<lineNumber>856</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -7385,7 +7385,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>609</second>
+										<second>856</second>
 									</item>
 								</second>
 							</item>
@@ -7424,10 +7424,10 @@
 					<Obj>
 						<type>0</type>
 						<id>268</id>
-						<name>add_ln609_1</name>
+						<name>add_ln856_1</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>609</lineNumber>
+						<lineNumber>856</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -7443,7 +7443,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>609</second>
+										<second>856</second>
 									</item>
 								</second>
 							</item>
@@ -7481,10 +7481,10 @@
 					<Obj>
 						<type>0</type>
 						<id>270</id>
-						<name>icmp_ln609</name>
+						<name>icmp_ln856</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>609</lineNumber>
+						<lineNumber>856</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -7500,7 +7500,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>609</second>
+										<second>856</second>
 									</item>
 								</second>
 							</item>
@@ -7538,10 +7538,10 @@
 					<Obj>
 						<type>0</type>
 						<id>271</id>
-						<name>add_ln609_3</name>
+						<name>add_ln856_3</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>609</lineNumber>
+						<lineNumber>856</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -7557,7 +7557,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>609</second>
+										<second>856</second>
 									</item>
 								</second>
 							</item>
@@ -7595,10 +7595,10 @@
 					<Obj>
 						<type>0</type>
 						<id>272</id>
-						<name>br_ln609</name>
+						<name>br_ln856</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>609</lineNumber>
+						<lineNumber>856</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -7614,7 +7614,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>609</second>
+										<second>856</second>
 									</item>
 								</second>
 							</item>
@@ -7627,7 +7627,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>842019389</coreId>
+						<coreId>1031365995</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -7656,7 +7656,7 @@
 						<name>kx_load</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>612</lineNumber>
+						<lineNumber>859</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -7672,7 +7672,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>612</second>
+										<second>859</second>
 									</item>
 								</second>
 							</item>
@@ -7685,7 +7685,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1031040613</coreId>
+						<coreId>980447331</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>4</bitwidth>
@@ -7710,10 +7710,10 @@
 					<Obj>
 						<type>0</type>
 						<id>275</id>
-						<name>add_ln609</name>
+						<name>add_ln856</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>609</lineNumber>
+						<lineNumber>856</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -7729,7 +7729,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>609</second>
+										<second>856</second>
 									</item>
 								</second>
 							</item>
@@ -7767,10 +7767,10 @@
 					<Obj>
 						<type>0</type>
 						<id>278</id>
-						<name>icmp_ln612</name>
+						<name>icmp_ln859</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>612</lineNumber>
+						<lineNumber>859</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -7786,7 +7786,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>612</second>
+										<second>859</second>
 									</item>
 								</second>
 							</item>
@@ -7824,10 +7824,10 @@
 					<Obj>
 						<type>0</type>
 						<id>279</id>
-						<name>select_ln609</name>
+						<name>select_ln856</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>609</lineNumber>
+						<lineNumber>856</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -7843,7 +7843,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>609</second>
+										<second>856</second>
 									</item>
 								</second>
 							</item>
@@ -7882,10 +7882,10 @@
 					<Obj>
 						<type>0</type>
 						<id>280</id>
-						<name>zext_ln609_1</name>
+						<name>zext_ln856_1</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>609</lineNumber>
+						<lineNumber>856</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -7901,7 +7901,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>609</second>
+										<second>856</second>
 									</item>
 								</second>
 							</item>
@@ -7914,7 +7914,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1031369833</coreId>
+						<coreId>1734828403</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>7</bitwidth>
@@ -7938,10 +7938,10 @@
 					<Obj>
 						<type>0</type>
 						<id>281</id>
-						<name>shl_ln609_mid1</name>
+						<name>shl_ln856_mid1</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>609</lineNumber>
+						<lineNumber>856</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -7957,7 +7957,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>609</second>
+										<second>856</second>
 									</item>
 								</second>
 							</item>
@@ -7970,7 +7970,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1313415741</coreId>
+						<coreId>1881171303</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>7</bitwidth>
@@ -7996,10 +7996,10 @@
 					<Obj>
 						<type>0</type>
 						<id>282</id>
-						<name>add_ln609_2</name>
+						<name>add_ln856_2</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>609</lineNumber>
+						<lineNumber>856</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -8015,7 +8015,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>609</second>
+										<second>856</second>
 									</item>
 								</second>
 							</item>
@@ -8053,10 +8053,10 @@
 					<Obj>
 						<type>0</type>
 						<id>283</id>
-						<name>select_ln609_1</name>
+						<name>select_ln856_1</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>609</lineNumber>
+						<lineNumber>856</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -8072,7 +8072,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>609</second>
+										<second>856</second>
 									</item>
 								</second>
 							</item>
@@ -8111,10 +8111,10 @@
 					<Obj>
 						<type>0</type>
 						<id>284</id>
-						<name>zext_ln609_2</name>
+						<name>zext_ln856_2</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>609</lineNumber>
+						<lineNumber>856</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -8130,7 +8130,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>609</second>
+										<second>856</second>
 									</item>
 								</second>
 							</item>
@@ -8143,7 +8143,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1868701808</coreId>
+						<coreId>577531252</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -8167,10 +8167,10 @@
 					<Obj>
 						<type>0</type>
 						<id>286</id>
-						<name>select_ln609_2</name>
+						<name>select_ln856_2</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>609</lineNumber>
+						<lineNumber>856</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -8186,7 +8186,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>609</second>
+										<second>856</second>
 									</item>
 								</second>
 							</item>
@@ -8228,7 +8228,7 @@
 						<name>kx_cast</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>609</lineNumber>
+						<lineNumber>856</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -8244,7 +8244,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>609</second>
+										<second>856</second>
 									</item>
 								</second>
 							</item>
@@ -8257,7 +8257,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1819307369</coreId>
+						<coreId>1007225406</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -8281,10 +8281,10 @@
 					<Obj>
 						<type>0</type>
 						<id>289</id>
-						<name>add_ln614_1</name>
+						<name>add_ln861_1</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -8300,7 +8300,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -8338,10 +8338,10 @@
 					<Obj>
 						<type>0</type>
 						<id>290</id>
-						<name>add_ln614_2</name>
+						<name>add_ln861_2</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -8357,7 +8357,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -8395,10 +8395,10 @@
 					<Obj>
 						<type>0</type>
 						<id>291</id>
-						<name>zext_ln614</name>
+						<name>zext_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -8414,7 +8414,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -8427,7 +8427,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1007225406</coreId>
+						<coreId>1230388083</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>63</bitwidth>
@@ -8451,10 +8451,10 @@
 					<Obj>
 						<type>0</type>
 						<id>292</id>
-						<name>add_ln614</name>
+						<name>add_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -8470,7 +8470,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -8508,10 +8508,10 @@
 					<Obj>
 						<type>0</type>
 						<id>293</id>
-						<name>sext_ln614</name>
+						<name>sext_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -8527,7 +8527,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -8540,7 +8540,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>997420912</coreId>
+						<coreId>1734439795</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -8567,7 +8567,7 @@
 						<name>gmem_w1_addr</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -8583,7 +8583,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -8596,7 +8596,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1881171303</coreId>
+						<coreId>1431261768</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -8624,7 +8624,7 @@
 						<name>gmem_w1_load_1_req</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -8640,7 +8640,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -8682,7 +8682,7 @@
 						<name>gmem_w1_addr_read</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -8698,7 +8698,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -8737,10 +8737,10 @@
 					<Obj>
 						<type>0</type>
 						<id>297</id>
-						<name>bitcast_ln614</name>
+						<name>bitcast_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -8756,7 +8756,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -8769,7 +8769,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1819045746</coreId>
+						<coreId>2020302642</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -8793,10 +8793,10 @@
 					<Obj>
 						<type>0</type>
 						<id>298</id>
-						<name>_ln614</name>
+						<name>_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -8812,7 +8812,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -8825,7 +8825,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1853187616</coreId>
+						<coreId>2004299567</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -8866,10 +8866,10 @@
 					<Obj>
 						<type>0</type>
 						<id>300</id>
-						<name>_ln614</name>
+						<name>_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -8885,7 +8885,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -8898,7 +8898,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1680830057</coreId>
+						<coreId>1279672660</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -8939,10 +8939,10 @@
 					<Obj>
 						<type>0</type>
 						<id>302</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_7_7_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_7_7_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -8958,7 +8958,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -8967,11 +8967,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -8987,7 +8987,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>220</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -8996,10 +8996,10 @@
 					<Obj>
 						<type>0</type>
 						<id>303</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -9015,7 +9015,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -9028,7 +9028,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1213932093</coreId>
+						<coreId>841823281</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -9052,10 +9052,10 @@
 					<Obj>
 						<type>0</type>
 						<id>305</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_7_6_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_7_6_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -9071,7 +9071,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -9080,11 +9080,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -9100,7 +9100,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>221</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -9109,10 +9109,10 @@
 					<Obj>
 						<type>0</type>
 						<id>306</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -9128,7 +9128,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -9141,7 +9141,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>825373242</coreId>
+						<coreId>542329928</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -9165,10 +9165,10 @@
 					<Obj>
 						<type>0</type>
 						<id>308</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_7_5_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_7_5_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -9184,7 +9184,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -9193,11 +9193,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -9213,7 +9213,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>222</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -9222,10 +9222,10 @@
 					<Obj>
 						<type>0</type>
 						<id>309</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -9241,7 +9241,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -9254,7 +9254,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>120</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -9278,10 +9278,10 @@
 					<Obj>
 						<type>0</type>
 						<id>311</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_7_4_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_7_4_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -9297,7 +9297,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -9306,11 +9306,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -9326,7 +9326,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>223</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -9335,10 +9335,10 @@
 					<Obj>
 						<type>0</type>
 						<id>312</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -9354,7 +9354,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -9367,7 +9367,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2780</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -9391,10 +9391,10 @@
 					<Obj>
 						<type>0</type>
 						<id>314</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_7_3_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_7_3_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -9410,7 +9410,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -9419,11 +9419,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -9439,7 +9439,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>224</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -9448,10 +9448,10 @@
 					<Obj>
 						<type>0</type>
 						<id>315</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -9467,7 +9467,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -9480,7 +9480,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1660</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -9504,10 +9504,10 @@
 					<Obj>
 						<type>0</type>
 						<id>317</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_7_2_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_7_2_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -9523,7 +9523,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -9532,11 +9532,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -9552,7 +9552,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>225</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -9561,10 +9561,10 @@
 					<Obj>
 						<type>0</type>
 						<id>318</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -9580,7 +9580,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -9593,7 +9593,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>400</coreId>
+						<coreId>2245128432</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -9617,10 +9617,10 @@
 					<Obj>
 						<type>0</type>
 						<id>320</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_7_1_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_7_1_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -9636,7 +9636,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -9645,11 +9645,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -9665,7 +9665,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>226</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -9674,10 +9674,10 @@
 					<Obj>
 						<type>0</type>
 						<id>321</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -9693,7 +9693,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -9706,7 +9706,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2640</coreId>
+						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -9730,10 +9730,10 @@
 					<Obj>
 						<type>0</type>
 						<id>323</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_7_0_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_7_0_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -9749,7 +9749,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -9758,11 +9758,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -9778,7 +9778,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>227</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -9787,10 +9787,10 @@
 					<Obj>
 						<type>0</type>
 						<id>324</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -9806,7 +9806,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -9819,7 +9819,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>960</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -9843,10 +9843,10 @@
 					<Obj>
 						<type>0</type>
 						<id>326</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_7_8_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_7_8_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -9862,7 +9862,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -9871,11 +9871,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -9891,7 +9891,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>228</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -9900,10 +9900,10 @@
 					<Obj>
 						<type>0</type>
 						<id>327</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -9919,7 +9919,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -9932,7 +9932,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3480</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -9956,10 +9956,10 @@
 					<Obj>
 						<type>0</type>
 						<id>329</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -9975,7 +9975,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -9988,7 +9988,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>540</coreId>
+						<coreId>2437772528</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -10012,10 +10012,10 @@
 					<Obj>
 						<type>0</type>
 						<id>331</id>
-						<name>_ln614</name>
+						<name>_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -10031,7 +10031,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -10044,7 +10044,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1100</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -10085,10 +10085,10 @@
 					<Obj>
 						<type>0</type>
 						<id>333</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_6_7_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_6_7_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -10104,7 +10104,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -10113,11 +10113,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -10133,7 +10133,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>230</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -10142,10 +10142,10 @@
 					<Obj>
 						<type>0</type>
 						<id>334</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -10161,7 +10161,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -10174,7 +10174,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3760</coreId>
+						<coreId>2</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -10198,10 +10198,10 @@
 					<Obj>
 						<type>0</type>
 						<id>336</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_6_6_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_6_6_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -10217,7 +10217,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -10226,11 +10226,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -10246,7 +10246,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>231</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -10255,10 +10255,10 @@
 					<Obj>
 						<type>0</type>
 						<id>337</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -10274,7 +10274,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -10287,7 +10287,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1520</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -10311,10 +10311,10 @@
 					<Obj>
 						<type>0</type>
 						<id>339</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_6_5_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_6_5_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -10330,7 +10330,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -10339,11 +10339,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -10359,7 +10359,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>232</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -10368,10 +10368,10 @@
 					<Obj>
 						<type>0</type>
 						<id>340</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -10387,7 +10387,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -10400,7 +10400,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2873928336</coreId>
+						<coreId>2296604913</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -10424,10 +10424,10 @@
 					<Obj>
 						<type>0</type>
 						<id>342</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_6_4_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_6_4_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -10443,7 +10443,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -10452,11 +10452,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -10472,7 +10472,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>233</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -10481,10 +10481,10 @@
 					<Obj>
 						<type>0</type>
 						<id>343</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -10500,7 +10500,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -10513,7 +10513,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3340</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -10537,10 +10537,10 @@
 					<Obj>
 						<type>0</type>
 						<id>345</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_6_3_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_6_3_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -10556,7 +10556,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -10565,11 +10565,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -10585,7 +10585,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>234</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -10594,10 +10594,10 @@
 					<Obj>
 						<type>0</type>
 						<id>346</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -10613,7 +10613,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -10626,7 +10626,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2920</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -10650,10 +10650,10 @@
 					<Obj>
 						<type>0</type>
 						<id>348</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_6_2_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_6_2_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -10669,7 +10669,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -10678,11 +10678,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -10698,7 +10698,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>235</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -10707,10 +10707,10 @@
 					<Obj>
 						<type>0</type>
 						<id>349</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -10726,7 +10726,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -10739,7 +10739,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2360</coreId>
+						<coreId>2723</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -10763,10 +10763,10 @@
 					<Obj>
 						<type>0</type>
 						<id>351</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_6_1_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_6_1_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -10782,7 +10782,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -10791,11 +10791,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -10811,7 +10811,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>236</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -10820,10 +10820,10 @@
 					<Obj>
 						<type>0</type>
 						<id>352</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -10839,7 +10839,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -10852,7 +10852,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3060</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -10876,10 +10876,10 @@
 					<Obj>
 						<type>0</type>
 						<id>354</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_6_0_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_6_0_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -10895,7 +10895,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -10904,11 +10904,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -10924,7 +10924,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>237</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -10933,10 +10933,10 @@
 					<Obj>
 						<type>0</type>
 						<id>355</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -10952,7 +10952,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -10965,7 +10965,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4</coreId>
+						<coreId>2535253853</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -10989,10 +10989,10 @@
 					<Obj>
 						<type>0</type>
 						<id>357</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_6_8_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_6_8_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -11008,7 +11008,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -11017,11 +11017,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -11037,7 +11037,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>238</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -11046,10 +11046,10 @@
 					<Obj>
 						<type>0</type>
 						<id>358</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -11065,7 +11065,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -11078,7 +11078,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -11102,10 +11102,10 @@
 					<Obj>
 						<type>0</type>
 						<id>360</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -11121,7 +11121,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -11134,7 +11134,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>916</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -11158,10 +11158,10 @@
 					<Obj>
 						<type>0</type>
 						<id>362</id>
-						<name>_ln614</name>
+						<name>_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -11177,7 +11177,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -11190,7 +11190,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2296604913</coreId>
+						<coreId>13238029</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -11231,10 +11231,10 @@
 					<Obj>
 						<type>0</type>
 						<id>364</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_5_7_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_5_7_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -11250,7 +11250,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -11259,11 +11259,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -11279,7 +11279,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>240</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -11288,10 +11288,10 @@
 					<Obj>
 						<type>0</type>
 						<id>365</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -11307,7 +11307,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -11320,7 +11320,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -11344,10 +11344,10 @@
 					<Obj>
 						<type>0</type>
 						<id>367</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_5_6_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_5_6_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -11363,7 +11363,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -11372,11 +11372,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -11392,7 +11392,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>241</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -11401,10 +11401,10 @@
 					<Obj>
 						<type>0</type>
 						<id>368</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -11420,7 +11420,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -11457,10 +11457,10 @@
 					<Obj>
 						<type>0</type>
 						<id>370</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_5_5_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_5_5_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -11476,7 +11476,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -11485,11 +11485,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -11505,7 +11505,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>242</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -11514,10 +11514,10 @@
 					<Obj>
 						<type>0</type>
 						<id>371</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -11533,7 +11533,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -11546,7 +11546,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2870918592</coreId>
+						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -11570,10 +11570,10 @@
 					<Obj>
 						<type>0</type>
 						<id>373</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_5_4_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_5_4_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -11589,7 +11589,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -11598,11 +11598,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -11618,7 +11618,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>243</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -11627,10 +11627,10 @@
 					<Obj>
 						<type>0</type>
 						<id>374</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -11646,7 +11646,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -11659,7 +11659,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>13238029</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -11683,10 +11683,10 @@
 					<Obj>
 						<type>0</type>
 						<id>376</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_5_3_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_5_3_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -11702,7 +11702,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -11711,11 +11711,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -11731,7 +11731,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>244</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -11740,10 +11740,10 @@
 					<Obj>
 						<type>0</type>
 						<id>377</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -11759,7 +11759,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -11772,7 +11772,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2</coreId>
+						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -11796,10 +11796,10 @@
 					<Obj>
 						<type>0</type>
 						<id>379</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_5_2_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_5_2_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -11815,7 +11815,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -11824,11 +11824,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -11844,7 +11844,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>245</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -11853,10 +11853,10 @@
 					<Obj>
 						<type>0</type>
 						<id>380</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -11872,7 +11872,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -11885,7 +11885,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>15</coreId>
+						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -11909,10 +11909,10 @@
 					<Obj>
 						<type>0</type>
 						<id>382</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_5_1_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_5_1_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -11928,7 +11928,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -11937,11 +11937,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -11957,7 +11957,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>246</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -11966,10 +11966,10 @@
 					<Obj>
 						<type>0</type>
 						<id>383</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -11985,7 +11985,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -11998,7 +11998,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -12022,10 +12022,10 @@
 					<Obj>
 						<type>0</type>
 						<id>385</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_5_0_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_5_0_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -12041,7 +12041,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -12050,11 +12050,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -12070,7 +12070,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>247</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -12079,10 +12079,10 @@
 					<Obj>
 						<type>0</type>
 						<id>386</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -12098,7 +12098,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -12111,7 +12111,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1724605885</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -12135,10 +12135,10 @@
 					<Obj>
 						<type>0</type>
 						<id>388</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_5_8_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_5_8_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -12154,7 +12154,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -12163,11 +12163,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -12183,7 +12183,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>248</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -12192,10 +12192,10 @@
 					<Obj>
 						<type>0</type>
 						<id>389</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -12211,7 +12211,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -12224,7 +12224,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -12248,10 +12248,10 @@
 					<Obj>
 						<type>0</type>
 						<id>391</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -12267,7 +12267,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -12280,7 +12280,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2870916512</coreId>
+						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -12304,10 +12304,10 @@
 					<Obj>
 						<type>0</type>
 						<id>393</id>
-						<name>_ln614</name>
+						<name>_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -12323,7 +12323,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -12336,7 +12336,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -12377,10 +12377,10 @@
 					<Obj>
 						<type>0</type>
 						<id>395</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_4_7_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_4_7_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -12396,7 +12396,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -12405,11 +12405,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -12425,7 +12425,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>250</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -12434,10 +12434,10 @@
 					<Obj>
 						<type>0</type>
 						<id>396</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -12453,7 +12453,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -12490,10 +12490,10 @@
 					<Obj>
 						<type>0</type>
 						<id>398</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_4_6_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_4_6_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -12509,7 +12509,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -12518,11 +12518,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -12538,7 +12538,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>251</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -12547,10 +12547,10 @@
 					<Obj>
 						<type>0</type>
 						<id>399</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -12566,7 +12566,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -12603,10 +12603,10 @@
 					<Obj>
 						<type>0</type>
 						<id>401</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_4_5_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_4_5_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -12622,7 +12622,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -12631,11 +12631,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -12651,7 +12651,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>252</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -12660,10 +12660,10 @@
 					<Obj>
 						<type>0</type>
 						<id>402</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -12679,7 +12679,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -12716,10 +12716,10 @@
 					<Obj>
 						<type>0</type>
 						<id>404</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_4_4_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_4_4_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -12735,7 +12735,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -12744,11 +12744,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -12764,7 +12764,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>253</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -12773,10 +12773,10 @@
 					<Obj>
 						<type>0</type>
 						<id>405</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -12792,7 +12792,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -12829,10 +12829,10 @@
 					<Obj>
 						<type>0</type>
 						<id>407</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_4_3_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_4_3_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -12848,7 +12848,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -12857,11 +12857,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -12877,7 +12877,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>254</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -12886,10 +12886,10 @@
 					<Obj>
 						<type>0</type>
 						<id>408</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -12905,7 +12905,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -12942,10 +12942,10 @@
 					<Obj>
 						<type>0</type>
 						<id>410</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_4_2_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_4_2_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -12961,7 +12961,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -12970,11 +12970,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -12990,7 +12990,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>255</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -12999,10 +12999,10 @@
 					<Obj>
 						<type>0</type>
 						<id>411</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -13018,7 +13018,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -13055,10 +13055,10 @@
 					<Obj>
 						<type>0</type>
 						<id>413</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_4_1_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_4_1_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -13074,7 +13074,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -13083,11 +13083,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -13103,7 +13103,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>256</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -13112,10 +13112,10 @@
 					<Obj>
 						<type>0</type>
 						<id>414</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -13131,7 +13131,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -13144,7 +13144,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1001</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -13168,10 +13168,10 @@
 					<Obj>
 						<type>0</type>
 						<id>416</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_4_0_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_4_0_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -13187,7 +13187,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -13196,11 +13196,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -13216,7 +13216,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>257</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -13225,10 +13225,10 @@
 					<Obj>
 						<type>0</type>
 						<id>417</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -13244,7 +13244,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -13281,10 +13281,10 @@
 					<Obj>
 						<type>0</type>
 						<id>419</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_4_8_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_4_8_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -13300,7 +13300,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -13309,11 +13309,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -13329,7 +13329,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>258</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -13338,10 +13338,10 @@
 					<Obj>
 						<type>0</type>
 						<id>420</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -13357,7 +13357,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -13370,7 +13370,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1499</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -13394,10 +13394,10 @@
 					<Obj>
 						<type>0</type>
 						<id>422</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -13413,7 +13413,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -13450,10 +13450,10 @@
 					<Obj>
 						<type>0</type>
 						<id>424</id>
-						<name>_ln614</name>
+						<name>_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -13469,7 +13469,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -13523,10 +13523,10 @@
 					<Obj>
 						<type>0</type>
 						<id>426</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_3_7_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_3_7_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -13542,7 +13542,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -13551,11 +13551,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -13571,7 +13571,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>260</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -13580,10 +13580,10 @@
 					<Obj>
 						<type>0</type>
 						<id>427</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -13599,7 +13599,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -13636,10 +13636,10 @@
 					<Obj>
 						<type>0</type>
 						<id>429</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_3_6_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_3_6_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -13655,7 +13655,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -13664,11 +13664,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -13684,7 +13684,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>261</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -13693,10 +13693,10 @@
 					<Obj>
 						<type>0</type>
 						<id>430</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -13712,7 +13712,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -13725,7 +13725,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1024</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -13749,10 +13749,10 @@
 					<Obj>
 						<type>0</type>
 						<id>432</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_3_5_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_3_5_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -13768,7 +13768,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -13777,11 +13777,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -13797,7 +13797,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>262</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -13806,10 +13806,10 @@
 					<Obj>
 						<type>0</type>
 						<id>433</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -13825,7 +13825,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -13862,10 +13862,10 @@
 					<Obj>
 						<type>0</type>
 						<id>435</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_3_4_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_3_4_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -13881,7 +13881,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -13890,11 +13890,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -13910,7 +13910,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>263</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -13919,10 +13919,10 @@
 					<Obj>
 						<type>0</type>
 						<id>436</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -13938,7 +13938,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -13975,10 +13975,10 @@
 					<Obj>
 						<type>0</type>
 						<id>438</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_3_3_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_3_3_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -13994,7 +13994,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -14003,11 +14003,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -14023,7 +14023,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>264</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -14032,10 +14032,10 @@
 					<Obj>
 						<type>0</type>
 						<id>439</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -14051,7 +14051,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -14088,10 +14088,10 @@
 					<Obj>
 						<type>0</type>
 						<id>441</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_3_2_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_3_2_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -14107,7 +14107,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -14116,11 +14116,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -14136,7 +14136,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>265</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -14145,10 +14145,10 @@
 					<Obj>
 						<type>0</type>
 						<id>442</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -14164,7 +14164,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -14201,10 +14201,10 @@
 					<Obj>
 						<type>0</type>
 						<id>444</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_3_1_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_3_1_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -14220,7 +14220,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -14229,11 +14229,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -14249,7 +14249,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>266</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -14258,10 +14258,10 @@
 					<Obj>
 						<type>0</type>
 						<id>445</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -14277,7 +14277,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -14290,7 +14290,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -14314,10 +14314,10 @@
 					<Obj>
 						<type>0</type>
 						<id>447</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_3_0_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_3_0_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -14333,7 +14333,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -14342,11 +14342,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -14362,7 +14362,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>267</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -14371,10 +14371,10 @@
 					<Obj>
 						<type>0</type>
 						<id>448</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -14390,7 +14390,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -14403,7 +14403,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -14427,10 +14427,10 @@
 					<Obj>
 						<type>0</type>
 						<id>450</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_3_8_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_3_8_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -14446,7 +14446,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -14455,11 +14455,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -14475,7 +14475,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>268</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -14484,10 +14484,10 @@
 					<Obj>
 						<type>0</type>
 						<id>451</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -14503,7 +14503,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -14516,7 +14516,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
+						<coreId>961</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -14540,10 +14540,10 @@
 					<Obj>
 						<type>0</type>
 						<id>453</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -14559,7 +14559,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -14572,7 +14572,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -14596,10 +14596,10 @@
 					<Obj>
 						<type>0</type>
 						<id>455</id>
-						<name>_ln614</name>
+						<name>_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -14615,7 +14615,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -14628,7 +14628,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -14669,10 +14669,10 @@
 					<Obj>
 						<type>0</type>
 						<id>457</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_2_7_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_2_7_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -14688,7 +14688,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -14697,11 +14697,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -14717,7 +14717,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>270</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -14726,10 +14726,10 @@
 					<Obj>
 						<type>0</type>
 						<id>458</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -14745,7 +14745,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -14758,7 +14758,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -14782,10 +14782,10 @@
 					<Obj>
 						<type>0</type>
 						<id>460</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_2_6_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_2_6_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -14801,7 +14801,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -14810,11 +14810,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -14830,7 +14830,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>271</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -14839,10 +14839,10 @@
 					<Obj>
 						<type>0</type>
 						<id>461</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -14858,7 +14858,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -14871,7 +14871,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -14895,10 +14895,10 @@
 					<Obj>
 						<type>0</type>
 						<id>463</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_2_5_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_2_5_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -14914,7 +14914,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -14923,11 +14923,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -14943,7 +14943,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>272</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -14952,10 +14952,10 @@
 					<Obj>
 						<type>0</type>
 						<id>464</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -14971,7 +14971,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -14984,7 +14984,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -15008,10 +15008,10 @@
 					<Obj>
 						<type>0</type>
 						<id>466</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_2_4_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_2_4_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -15027,7 +15027,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -15036,11 +15036,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -15056,7 +15056,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>273</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -15065,10 +15065,10 @@
 					<Obj>
 						<type>0</type>
 						<id>467</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -15084,7 +15084,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -15097,7 +15097,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -15121,10 +15121,10 @@
 					<Obj>
 						<type>0</type>
 						<id>469</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_2_3_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_2_3_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -15140,7 +15140,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -15149,11 +15149,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -15169,7 +15169,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>274</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -15178,10 +15178,10 @@
 					<Obj>
 						<type>0</type>
 						<id>470</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -15197,7 +15197,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -15210,7 +15210,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -15234,10 +15234,10 @@
 					<Obj>
 						<type>0</type>
 						<id>472</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_2_2_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_2_2_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -15253,7 +15253,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -15262,11 +15262,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -15282,7 +15282,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>275</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -15291,10 +15291,10 @@
 					<Obj>
 						<type>0</type>
 						<id>473</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -15310,7 +15310,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -15323,7 +15323,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -15347,10 +15347,10 @@
 					<Obj>
 						<type>0</type>
 						<id>475</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_2_1_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_2_1_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -15366,7 +15366,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -15375,11 +15375,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -15395,7 +15395,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>276</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -15404,10 +15404,10 @@
 					<Obj>
 						<type>0</type>
 						<id>476</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -15423,7 +15423,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -15436,7 +15436,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -15460,10 +15460,10 @@
 					<Obj>
 						<type>0</type>
 						<id>478</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_2_0_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_2_0_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -15479,7 +15479,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -15488,11 +15488,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -15508,7 +15508,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>277</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -15517,10 +15517,10 @@
 					<Obj>
 						<type>0</type>
 						<id>479</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -15536,7 +15536,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -15549,7 +15549,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
+						<coreId>1109</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -15573,10 +15573,10 @@
 					<Obj>
 						<type>0</type>
 						<id>481</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_2_8_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_2_8_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -15592,7 +15592,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -15601,11 +15601,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -15621,7 +15621,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>278</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -15630,10 +15630,10 @@
 					<Obj>
 						<type>0</type>
 						<id>482</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -15649,7 +15649,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -15662,7 +15662,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -15686,10 +15686,10 @@
 					<Obj>
 						<type>0</type>
 						<id>484</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -15705,7 +15705,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -15718,7 +15718,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -15742,10 +15742,10 @@
 					<Obj>
 						<type>0</type>
 						<id>486</id>
-						<name>_ln614</name>
+						<name>_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -15761,7 +15761,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -15774,7 +15774,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
+						<coreId>154</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -15815,10 +15815,10 @@
 					<Obj>
 						<type>0</type>
 						<id>488</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_1_7_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_1_7_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -15834,7 +15834,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -15843,11 +15843,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -15863,7 +15863,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>280</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -15872,10 +15872,10 @@
 					<Obj>
 						<type>0</type>
 						<id>489</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -15891,7 +15891,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -15928,10 +15928,10 @@
 					<Obj>
 						<type>0</type>
 						<id>491</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_1_6_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_1_6_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -15947,7 +15947,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -15956,11 +15956,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -15976,7 +15976,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>281</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -15985,10 +15985,10 @@
 					<Obj>
 						<type>0</type>
 						<id>492</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -16004,7 +16004,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -16041,10 +16041,10 @@
 					<Obj>
 						<type>0</type>
 						<id>494</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_1_5_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_1_5_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -16060,7 +16060,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -16069,11 +16069,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -16089,7 +16089,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>282</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -16098,10 +16098,10 @@
 					<Obj>
 						<type>0</type>
 						<id>495</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -16117,7 +16117,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -16154,10 +16154,10 @@
 					<Obj>
 						<type>0</type>
 						<id>497</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_1_4_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_1_4_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -16173,7 +16173,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -16182,11 +16182,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -16202,7 +16202,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>283</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -16211,10 +16211,10 @@
 					<Obj>
 						<type>0</type>
 						<id>498</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -16230,7 +16230,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -16267,10 +16267,10 @@
 					<Obj>
 						<type>0</type>
 						<id>500</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_1_3_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_1_3_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -16286,7 +16286,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -16295,11 +16295,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -16315,7 +16315,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>284</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -16324,10 +16324,10 @@
 					<Obj>
 						<type>0</type>
 						<id>501</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -16343,7 +16343,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -16380,10 +16380,10 @@
 					<Obj>
 						<type>0</type>
 						<id>503</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_1_2_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_1_2_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -16399,7 +16399,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -16408,11 +16408,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -16428,7 +16428,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>285</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -16437,10 +16437,10 @@
 					<Obj>
 						<type>0</type>
 						<id>504</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -16456,7 +16456,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -16493,10 +16493,10 @@
 					<Obj>
 						<type>0</type>
 						<id>506</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_1_1_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_1_1_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -16512,7 +16512,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -16521,11 +16521,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -16541,7 +16541,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>286</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -16550,10 +16550,10 @@
 					<Obj>
 						<type>0</type>
 						<id>507</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -16569,7 +16569,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -16606,10 +16606,10 @@
 					<Obj>
 						<type>0</type>
 						<id>509</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_1_0_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_1_0_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -16625,7 +16625,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -16634,11 +16634,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -16654,7 +16654,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>287</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -16663,10 +16663,10 @@
 					<Obj>
 						<type>0</type>
 						<id>510</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -16682,7 +16682,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -16719,10 +16719,10 @@
 					<Obj>
 						<type>0</type>
 						<id>512</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_1_8_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_1_8_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -16738,7 +16738,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -16747,11 +16747,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -16767,7 +16767,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>288</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -16776,10 +16776,10 @@
 					<Obj>
 						<type>0</type>
 						<id>513</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -16795,7 +16795,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -16832,10 +16832,10 @@
 					<Obj>
 						<type>0</type>
 						<id>515</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -16851,7 +16851,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -16888,10 +16888,10 @@
 					<Obj>
 						<type>0</type>
 						<id>517</id>
-						<name>_ln614</name>
+						<name>_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -16907,7 +16907,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -16961,10 +16961,10 @@
 					<Obj>
 						<type>0</type>
 						<id>519</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_7_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_7_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -16980,7 +16980,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -16989,11 +16989,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -17009,7 +17009,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>290</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -17018,10 +17018,10 @@
 					<Obj>
 						<type>0</type>
 						<id>520</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -17037,7 +17037,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -17074,10 +17074,10 @@
 					<Obj>
 						<type>0</type>
 						<id>522</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_6_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_6_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -17093,7 +17093,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -17102,11 +17102,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -17122,7 +17122,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>291</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -17131,10 +17131,10 @@
 					<Obj>
 						<type>0</type>
 						<id>523</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -17150,7 +17150,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -17187,10 +17187,10 @@
 					<Obj>
 						<type>0</type>
 						<id>525</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_5_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_5_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -17206,7 +17206,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -17215,11 +17215,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -17235,7 +17235,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>292</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -17244,10 +17244,10 @@
 					<Obj>
 						<type>0</type>
 						<id>526</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -17263,7 +17263,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -17300,10 +17300,10 @@
 					<Obj>
 						<type>0</type>
 						<id>528</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_4_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_4_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -17319,7 +17319,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -17328,11 +17328,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -17348,7 +17348,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>293</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -17357,10 +17357,10 @@
 					<Obj>
 						<type>0</type>
 						<id>529</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -17376,7 +17376,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -17413,10 +17413,10 @@
 					<Obj>
 						<type>0</type>
 						<id>531</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_3_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_3_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -17432,7 +17432,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -17441,11 +17441,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -17461,7 +17461,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>294</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -17470,10 +17470,10 @@
 					<Obj>
 						<type>0</type>
 						<id>532</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -17489,7 +17489,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -17526,10 +17526,10 @@
 					<Obj>
 						<type>0</type>
 						<id>534</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_2_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_2_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -17545,7 +17545,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -17554,11 +17554,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -17574,7 +17574,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>295</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -17583,10 +17583,10 @@
 					<Obj>
 						<type>0</type>
 						<id>535</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -17602,7 +17602,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -17639,10 +17639,10 @@
 					<Obj>
 						<type>0</type>
 						<id>537</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_1_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_1_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -17658,7 +17658,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -17667,11 +17667,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -17687,7 +17687,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>296</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -17696,10 +17696,10 @@
 					<Obj>
 						<type>0</type>
 						<id>538</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -17715,7 +17715,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -17752,10 +17752,10 @@
 					<Obj>
 						<type>0</type>
 						<id>540</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_0_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_0_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -17771,7 +17771,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -17780,11 +17780,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -17800,7 +17800,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>297</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -17809,10 +17809,10 @@
 					<Obj>
 						<type>0</type>
 						<id>541</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -17828,7 +17828,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -17865,10 +17865,10 @@
 					<Obj>
 						<type>0</type>
 						<id>543</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_8_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_8_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -17884,7 +17884,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -17893,11 +17893,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -17913,7 +17913,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>298</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -17922,10 +17922,10 @@
 					<Obj>
 						<type>0</type>
 						<id>544</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -17941,7 +17941,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -17978,10 +17978,10 @@
 					<Obj>
 						<type>0</type>
 						<id>546</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -17997,7 +17997,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -18034,10 +18034,10 @@
 					<Obj>
 						<type>0</type>
 						<id>548</id>
-						<name>_ln614</name>
+						<name>_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -18053,7 +18053,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -18107,10 +18107,10 @@
 					<Obj>
 						<type>0</type>
 						<id>550</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_8_7_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_8_7_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -18126,7 +18126,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -18135,11 +18135,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -18155,7 +18155,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>300</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -18164,10 +18164,10 @@
 					<Obj>
 						<type>0</type>
 						<id>551</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -18183,7 +18183,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -18220,10 +18220,10 @@
 					<Obj>
 						<type>0</type>
 						<id>553</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_8_6_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_8_6_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -18239,7 +18239,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -18248,11 +18248,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -18268,7 +18268,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>301</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -18277,10 +18277,10 @@
 					<Obj>
 						<type>0</type>
 						<id>554</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -18296,7 +18296,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -18333,10 +18333,10 @@
 					<Obj>
 						<type>0</type>
 						<id>556</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_8_5_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_8_5_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -18352,7 +18352,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -18361,11 +18361,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -18381,7 +18381,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>302</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -18390,10 +18390,10 @@
 					<Obj>
 						<type>0</type>
 						<id>557</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -18409,7 +18409,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -18446,10 +18446,10 @@
 					<Obj>
 						<type>0</type>
 						<id>559</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_8_4_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_8_4_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -18465,7 +18465,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -18474,11 +18474,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -18494,7 +18494,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>303</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -18503,10 +18503,10 @@
 					<Obj>
 						<type>0</type>
 						<id>560</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -18522,7 +18522,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -18559,10 +18559,10 @@
 					<Obj>
 						<type>0</type>
 						<id>562</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_8_3_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_8_3_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -18578,7 +18578,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -18587,11 +18587,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -18607,7 +18607,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>304</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -18616,10 +18616,10 @@
 					<Obj>
 						<type>0</type>
 						<id>563</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -18635,7 +18635,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -18672,10 +18672,10 @@
 					<Obj>
 						<type>0</type>
 						<id>565</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_8_2_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_8_2_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -18691,7 +18691,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -18700,11 +18700,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -18720,7 +18720,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>305</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -18729,10 +18729,10 @@
 					<Obj>
 						<type>0</type>
 						<id>566</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -18748,7 +18748,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -18785,10 +18785,10 @@
 					<Obj>
 						<type>0</type>
 						<id>568</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_8_1_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_8_1_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -18804,7 +18804,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -18813,11 +18813,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -18833,7 +18833,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>306</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -18842,10 +18842,10 @@
 					<Obj>
 						<type>0</type>
 						<id>569</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -18861,7 +18861,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -18898,10 +18898,10 @@
 					<Obj>
 						<type>0</type>
 						<id>571</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_8_0_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_8_0_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -18917,7 +18917,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -18926,11 +18926,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -18946,7 +18946,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>307</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -18955,10 +18955,10 @@
 					<Obj>
 						<type>0</type>
 						<id>572</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -18974,7 +18974,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -19011,10 +19011,10 @@
 					<Obj>
 						<type>0</type>
 						<id>574</id>
-						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_8_8_1_write_ln614</name>
+						<name>p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_8_8_1_write_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -19030,7 +19030,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -19039,11 +19039,11 @@
 						<rtlName></rtlName>
 						<control>auto</control>
 						<opType>ram_1p</opType>
-						<implIndex>bram</implIndex>
-						<coreName>RAM_1P_BRAM</coreName>
+						<implIndex>lutram</implIndex>
+						<coreName>RAM_1P_LUTRAM</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>90</coreId>
+						<coreId>89</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -19059,7 +19059,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.23</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>308</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -19068,10 +19068,10 @@
 					<Obj>
 						<type>0</type>
 						<id>575</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -19087,7 +19087,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -19124,10 +19124,10 @@
 					<Obj>
 						<type>0</type>
 						<id>577</id>
-						<name>br_ln614</name>
+						<name>br_ln861</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>614</lineNumber>
+						<lineNumber>861</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -19143,7 +19143,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>614</second>
+										<second>861</second>
 									</item>
 								</second>
 							</item>
@@ -19180,10 +19180,10 @@
 					<Obj>
 						<type>0</type>
 						<id>579</id>
-						<name>add_ln612</name>
+						<name>add_ln859</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>612</lineNumber>
+						<lineNumber>859</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -19199,7 +19199,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>612</second>
+										<second>859</second>
 									</item>
 								</second>
 							</item>
@@ -19237,10 +19237,10 @@
 					<Obj>
 						<type>0</type>
 						<id>580</id>
-						<name>indvar_flatten_write_ln612</name>
+						<name>indvar_flatten_write_ln859</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>612</lineNumber>
+						<lineNumber>859</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -19256,7 +19256,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>612</second>
+										<second>859</second>
 									</item>
 								</second>
 							</item>
@@ -19269,7 +19269,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1330389504</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -19296,10 +19296,10 @@
 					<Obj>
 						<type>0</type>
 						<id>581</id>
-						<name>ky_write_ln612</name>
+						<name>ky_write_ln859</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>612</lineNumber>
+						<lineNumber>859</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -19315,7 +19315,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>612</second>
+										<second>859</second>
 									</item>
 								</second>
 							</item>
@@ -19328,7 +19328,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1330926913</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -19355,10 +19355,10 @@
 					<Obj>
 						<type>0</type>
 						<id>582</id>
-						<name>kx_write_ln612</name>
+						<name>kx_write_ln859</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>612</lineNumber>
+						<lineNumber>859</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -19374,7 +19374,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>612</second>
+										<second>859</second>
 									</item>
 								</second>
 							</item>
@@ -19387,7 +19387,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1952869993</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -19414,10 +19414,10 @@
 					<Obj>
 						<type>0</type>
 						<id>583</id>
-						<name>br_ln612</name>
+						<name>br_ln859</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>612</lineNumber>
+						<lineNumber>859</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -19433,7 +19433,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>612</second>
+										<second>859</second>
 									</item>
 								</second>
 							</item>
@@ -19446,7 +19446,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1043267618</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -19488,7 +19488,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>570455150</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -19533,7 +19533,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>875639357</coreId>
+						<coreId>534</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -19564,7 +19564,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1986360096</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>7</bitwidth>
@@ -19595,7 +19595,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>997420912</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>4</bitwidth>
@@ -19626,7 +19626,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1633951845</coreId>
+						<coreId>30</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -19657,7 +19657,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1835491698</coreId>
+						<coreId>2358723776</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>3</bitwidth>
@@ -19688,7 +19688,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1701407856</coreId>
+						<coreId>400</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>7</bitwidth>
@@ -19719,7 +19719,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1769239916</coreId>
+						<coreId>398</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>7</bitwidth>
@@ -19750,7 +19750,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1864397934</coreId>
+						<coreId>262</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>4</bitwidth>
@@ -19781,7 +19781,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1213932093</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>4</bitwidth>
@@ -19812,7 +19812,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>134</coreId>
+						<coreId>486</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>4</bitwidth>
@@ -19843,7 +19843,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2612</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>4</bitwidth>
@@ -19874,7 +19874,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1732</coreId>
+						<coreId>134</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>4</bitwidth>
@@ -19905,7 +19905,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1971</coreId>
+						<coreId>319</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>4</bitwidth>
@@ -19936,7 +19936,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>287</coreId>
+						<coreId>443</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>4</bitwidth>
@@ -19967,7 +19967,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3940</coreId>
+						<coreId>2361770832</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>4</bitwidth>
@@ -20001,7 +20001,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>100</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -20214,7 +20214,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>1522</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -20245,7 +20245,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>1384</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -20277,7 +20277,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>1601</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -20309,7 +20309,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>1878</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -20341,7 +20341,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>306</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -20373,7 +20373,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>834</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -20405,7 +20405,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>976</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -20437,7 +20437,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>43</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -20469,7 +20469,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>1152</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -20501,7 +20501,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>859</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -20533,7 +20533,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>628</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -20564,7 +20564,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>1568</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -20595,7 +20595,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>466</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -20627,7 +20627,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>57</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -20723,7 +20723,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>207</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -20755,7 +20755,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>907</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -20787,7 +20787,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>1376</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -20819,7 +20819,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>2311233552</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -20851,7 +20851,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>2311225360</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -20883,7 +20883,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>2311228272</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -20914,7 +20914,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>2311231088</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -20945,7 +20945,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>787</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -20977,7 +20977,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>617</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -21009,7 +21009,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>339</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -21041,7 +21041,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>472</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -21073,7 +21073,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>2311228944</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -21137,7 +21137,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>1256</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -21169,7 +21169,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>1033</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -21201,7 +21201,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>4294967295</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -21233,7 +21233,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>4294967295</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -21264,7 +21264,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>4294967295</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -21295,7 +21295,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>4294967295</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -21327,7 +21327,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>4294967295</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -21359,7 +21359,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>4294967295</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -21391,7 +21391,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>4294967295</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -21423,7 +21423,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>4294967295</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -21455,7 +21455,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>4294967295</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -21487,7 +21487,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>4294967295</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -21519,7 +21519,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>4294967295</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -21551,7 +21551,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>4294967295</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -21583,7 +21583,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>4294967295</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -21614,7 +21614,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>4294967295</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -21645,7 +21645,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>4294967295</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -21677,7 +21677,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>4294967295</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -21709,7 +21709,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>4294967295</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -21741,7 +21741,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>4294967295</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -21773,7 +21773,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>4294967295</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -21805,7 +21805,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>4294967295</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -21837,7 +21837,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>4294967295</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -21869,7 +21869,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>4294967295</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -21901,7 +21901,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>4294967295</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -21933,7 +21933,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>4294967295</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -21964,7 +21964,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>4294967295</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -21995,7 +21995,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>4294967295</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -22027,7 +22027,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>4294967295</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -22059,7 +22059,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>4294967295</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -22091,7 +22091,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>4294967295</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -22123,7 +22123,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>4294967295</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -22155,7 +22155,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>4294967295</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -22187,7 +22187,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>4294967295</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -22251,7 +22251,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>4294967295</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -22283,7 +22283,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>4294967295</coreId>
+					<coreId>2296604913</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -22314,7 +22314,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>2535253853</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -22345,7 +22345,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>4294967295</coreId>
+					<coreId>2296604913</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -22377,7 +22377,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>4294967295</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -22409,7 +22409,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>4294967295</coreId>
+					<coreId>2296604913</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -22441,7 +22441,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>2535253853</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -22473,7 +22473,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>4294967295</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -22505,7 +22505,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>4294967295</coreId>
+					<coreId>1634754358</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -22537,7 +22537,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>13238029</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -22569,7 +22569,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>4294967295</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -22601,7 +22601,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>4294967295</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -22633,7 +22633,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>4294967295</coreId>
+					<coreId>1515872112</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -22664,7 +22664,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>4294967295</coreId>
+					<coreId>2296604913</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -22695,7 +22695,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>4294967295</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -22727,7 +22727,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>4294967295</coreId>
+					<coreId>1597076319</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -22759,7 +22759,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>4294967295</coreId>
+					<coreId>2296604913</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -22791,7 +22791,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>4294967295</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -22823,7 +22823,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>4294967295</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -22855,7 +22855,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>4294967295</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -22887,7 +22887,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>3345901779</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -22919,7 +22919,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>2535253853</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -22951,7 +22951,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>4294967295</coreId>
+					<coreId>828733279</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -22983,7 +22983,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>4294967295</coreId>
+					<coreId>1348882534</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -23014,7 +23014,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>2535253853</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -23045,7 +23045,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>4294967295</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -23077,7 +23077,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>4294967295</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -23109,7 +23109,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>4294967295</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -23141,7 +23141,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>2535253853</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -23173,7 +23173,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>4294967295</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -23205,7 +23205,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>13238029</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -23237,7 +23237,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>4294967295</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -23269,7 +23269,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>667</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -23301,7 +23301,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>792</coreId>
+					<coreId>4294967295</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -23333,7 +23333,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>1553</coreId>
+					<coreId>4294967295</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -23364,7 +23364,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>1392</coreId>
+					<coreId>4294967295</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -23399,7 +23399,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>794</coreId>
+					<coreId>4294967295</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -37151,7 +37151,7 @@
 		<count>110</count>
 		<item_version>0</item_version>
 		<item class_id="48" tracking_level="0" version="0">
-			<first>add_ln609_1_fu_1313</first>
+			<first>add_ln856_1_fu_1313</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -37159,7 +37159,7 @@
 			</second>
 		</item>
 		<item>
-			<first>add_ln609_2_fu_1366</first>
+			<first>add_ln856_2_fu_1366</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -37167,7 +37167,7 @@
 			</second>
 		</item>
 		<item>
-			<first>add_ln609_3_fu_1325</first>
+			<first>add_ln856_3_fu_1325</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -37175,7 +37175,7 @@
 			</second>
 		</item>
 		<item>
-			<first>add_ln609_fu_1334</first>
+			<first>add_ln856_fu_1334</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -37183,7 +37183,7 @@
 			</second>
 		</item>
 		<item>
-			<first>add_ln612_fu_1428</first>
+			<first>add_ln859_fu_1428</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -37191,7 +37191,7 @@
 			</second>
 		</item>
 		<item>
-			<first>add_ln614_1_fu_1396</first>
+			<first>add_ln861_1_fu_1396</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -37199,7 +37199,7 @@
 			</second>
 		</item>
 		<item>
-			<first>add_ln614_2_fu_1402</first>
+			<first>add_ln861_2_fu_1402</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -37207,7 +37207,7 @@
 			</second>
 		</item>
 		<item>
-			<first>add_ln614_fu_1412</first>
+			<first>add_ln861_fu_1412</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -37215,7 +37215,7 @@
 			</second>
 		</item>
 		<item>
-			<first>bitcast_ln614_fu_1449</first>
+			<first>bitcast_ln861_fu_1449</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -37231,7 +37231,7 @@
 			</second>
 		</item>
 		<item>
-			<first>icmp_ln609_fu_1319</first>
+			<first>icmp_ln856_fu_1319</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -37239,7 +37239,7 @@
 			</second>
 		</item>
 		<item>
-			<first>icmp_ln612_fu_1340</first>
+			<first>icmp_ln859_fu_1340</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -37927,7 +37927,7 @@
 			</second>
 		</item>
 		<item>
-			<first>select_ln609_1_fu_1372</first>
+			<first>select_ln856_1_fu_1372</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -37935,7 +37935,7 @@
 			</second>
 		</item>
 		<item>
-			<first>select_ln609_2_fu_1384</first>
+			<first>select_ln856_2_fu_1384</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -37943,7 +37943,7 @@
 			</second>
 		</item>
 		<item>
-			<first>select_ln609_fu_1346</first>
+			<first>select_ln856_fu_1346</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -37951,7 +37951,7 @@
 			</second>
 		</item>
 		<item>
-			<first>sext_ln605_cast_fu_1272</first>
+			<first>sext_ln852_cast_fu_1272</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -37959,7 +37959,7 @@
 			</second>
 		</item>
 		<item>
-			<first>sext_ln614_fu_1418</first>
+			<first>sext_ln861_fu_1418</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -37975,7 +37975,7 @@
 			</second>
 		</item>
 		<item>
-			<first>shl_ln609_mid1_fu_1358</first>
+			<first>shl_ln856_mid1_fu_1358</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -37983,7 +37983,7 @@
 			</second>
 		</item>
 		<item>
-			<first>zext_ln605_2_cast_fu_1276</first>
+			<first>zext_ln852_2_cast_fu_1276</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -37991,7 +37991,7 @@
 			</second>
 		</item>
 		<item>
-			<first>zext_ln605_3_cast_fu_1268</first>
+			<first>zext_ln852_3_cast_fu_1268</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -37999,7 +37999,7 @@
 			</second>
 		</item>
 		<item>
-			<first>zext_ln609_1_fu_1354</first>
+			<first>zext_ln856_1_fu_1354</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -38007,7 +38007,7 @@
 			</second>
 		</item>
 		<item>
-			<first>zext_ln609_2_fu_1380</first>
+			<first>zext_ln856_2_fu_1380</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -38015,7 +38015,7 @@
 			</second>
 		</item>
 		<item>
-			<first>zext_ln609_fu_1301</first>
+			<first>zext_ln856_fu_1301</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -38023,7 +38023,7 @@
 			</second>
 		</item>
 		<item>
-			<first>zext_ln614_fu_1408</first>
+			<first>zext_ln861_fu_1408</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -38086,7 +38086,7 @@
 			</second>
 		</item>
 		<item>
-			<first>sext_ln605_read_read_fu_272</first>
+			<first>sext_ln852_read_read_fu_272</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -38118,7 +38118,7 @@
 			</second>
 		</item>
 		<item>
-			<first>store_ln612_store_fu_1434</first>
+			<first>store_ln859_store_fu_1434</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -38126,7 +38126,7 @@
 			</second>
 		</item>
 		<item>
-			<first>store_ln612_store_fu_1439</first>
+			<first>store_ln859_store_fu_1439</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -38134,7 +38134,7 @@
 			</second>
 		</item>
 		<item>
-			<first>store_ln612_store_fu_1444</first>
+			<first>store_ln859_store_fu_1444</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -38142,7 +38142,7 @@
 			</second>
 		</item>
 		<item>
-			<first>zext_ln605_2_read_read_fu_278</first>
+			<first>zext_ln852_2_read_read_fu_278</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -38150,7 +38150,7 @@
 			</second>
 		</item>
 		<item>
-			<first>zext_ln605_3_read_read_fu_266</first>
+			<first>zext_ln852_3_read_read_fu_266</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -39785,7 +39785,7 @@
 		<count>90</count>
 		<item_version>0</item_version>
 		<item>
-			<first>bitcast_ln614_reg_1982</first>
+			<first>bitcast_ln861_reg_1982</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -39801,7 +39801,7 @@
 			</second>
 		</item>
 		<item>
-			<first>icmp_ln609_reg_1559</first>
+			<first>icmp_ln856_reg_1559</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -40481,7 +40481,7 @@
 			</second>
 		</item>
 		<item>
-			<first>select_ln609_2_reg_1567</first>
+			<first>select_ln856_2_reg_1567</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -40489,7 +40489,7 @@
 			</second>
 		</item>
 		<item>
-			<first>select_ln609_reg_1563</first>
+			<first>select_ln856_reg_1563</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -40497,7 +40497,7 @@
 			</second>
 		</item>
 		<item>
-			<first>zext_ln605_2_cast_reg_1474</first>
+			<first>zext_ln852_2_cast_reg_1474</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -41755,7 +41755,7 @@
 			</second>
 		</item>
 		<item>
-			<first>sext_ln605</first>
+			<first>sext_ln852</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -41770,7 +41770,7 @@
 			</second>
 		</item>
 		<item>
-			<first>zext_ln605_2</first>
+			<first>zext_ln852_2</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -41785,7 +41785,7 @@
 			</second>
 		</item>
 		<item>
-			<first>zext_ln605_3</first>
+			<first>zext_ln852_3</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -41807,567 +41807,567 @@
 			<first>5</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>6</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>7</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>8</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>9</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>10</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>11</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>12</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>13</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>14</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>15</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>16</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>17</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>18</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>19</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>20</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>21</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>22</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>23</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>24</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>25</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>26</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>27</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>28</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>29</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>30</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>31</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>32</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>33</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>34</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>35</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>36</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>37</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>38</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>39</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>40</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>41</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>42</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>43</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>44</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>45</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>46</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>47</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>48</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>49</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>50</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>51</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>52</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>53</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>54</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>55</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>56</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>57</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>58</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>59</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>60</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>61</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>62</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>63</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>64</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>65</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>66</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>67</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>68</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>69</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>70</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>71</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>72</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>73</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>74</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>75</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>76</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>77</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>78</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>79</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>80</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>81</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>82</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>83</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>84</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>85</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 	</port2core>
@@ -42476,567 +42476,567 @@
 			<first>302</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>305</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>308</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>311</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>314</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>317</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>320</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>323</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>326</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>333</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>336</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>339</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>342</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>345</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>348</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>351</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>354</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>357</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>364</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>367</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>370</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>373</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>376</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>379</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>382</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>385</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>388</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>395</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>398</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>401</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>404</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>407</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>410</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>413</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>416</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>419</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>426</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>429</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>432</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>435</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>438</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>441</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>444</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>447</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>450</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>457</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>460</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>463</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>466</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>469</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>472</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>475</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>478</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>481</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>488</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>491</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>494</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>497</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>500</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>503</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>506</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>509</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>512</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>519</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>522</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>525</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>528</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>531</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>534</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>537</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>540</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>543</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>550</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>553</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>556</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>559</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>562</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>565</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>568</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>571</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>
 			<first>574</first>
 			<second>
 				<first>666</first>
-				<second>18</second>
+				<second>19</second>
 			</second>
 		</item>
 		<item>

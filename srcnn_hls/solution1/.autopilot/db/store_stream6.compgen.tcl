@@ -10,7 +10,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 5100 \
+    id 3978 \
     name s_out_i \
     type fifo \
     dir I \
@@ -18,14 +18,14 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_s_out_i \
     op interface \
-    ports { s_out_i_dout { I 32 vector } s_out_i_num_data_valid { I 9 vector } s_out_i_fifo_cap { I 9 vector } s_out_i_empty_n { I 1 bit } s_out_i_read { O 1 bit } } \
+    ports { s_out_i_dout { I 32 vector } s_out_i_num_data_valid { I 11 vector } s_out_i_fifo_cap { I 11 vector } s_out_i_empty_n { I 1 bit } s_out_i_read { O 1 bit } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 5101 \
+    id 3979 \
     name gmem_out \
     type other \
     dir O \
@@ -40,7 +40,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 5102 \
+    id 3980 \
     name output_ftmap \
     type fifo \
     dir I \
@@ -55,7 +55,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 5103 \
+    id 3981 \
     name h0 \
     type fifo \
     dir I \
@@ -70,7 +70,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 5104 \
+    id 3982 \
     name w0 \
     type fifo \
     dir I \
@@ -85,7 +85,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 5105 \
+    id 3983 \
     name tw_eff_loc_i \
     type fifo \
     dir I \

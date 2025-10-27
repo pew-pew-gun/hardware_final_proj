@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'make_win97'" level="0">
-<item name = "Date">Tue Oct 28 00:04:32 2025
+<item name = "Date">Tue Oct 28 01:28:37 2025
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -31,7 +31,7 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_make_win97_Pipeline_win9x9_read_pix_fu_84">make_win97_Pipeline_win9x9_read_pix, 147, 71292, 1.470 us, 0.713 ms, 147, 71292, no</column>
+<column name="grp_make_win97_Pipeline_win9x9_read_pix_fu_126">make_win97_Pipeline_win9x9_read_pix, 147, 71292, 1.470 us, 0.713 ms, 147, 71292, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -50,20 +50,20 @@
 <column name="DSP">-, -, -, -, -</column>
 <column name="Expression">-, -, 0, 66, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">0, 0, 3739, 1593, 0</column>
-<column name="Memory">-, -, -, -, -</column>
+<column name="Instance">-, 0, 3227, 1481, -</column>
+<column name="Memory">8, -, 0, 0, -</column>
 <column name="Multiplexer">-, -, -, 65, -</column>
 <column name="Register">-, -, 40, -, -</column>
 <specialColumn name="Available">288, 1248, 234240, 117120, 64</specialColumn>
-<specialColumn name="Utilization (%)">0, 0, 1, 1, 0</specialColumn>
+<specialColumn name="Utilization (%)">2, 0, 1, 1, 0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="grp_make_win97_Pipeline_win9x9_read_pix_fu_84">make_win97_Pipeline_win9x9_read_pix, 0, 0, 3739, 1543, 0</column>
-<column name="mul_9ns_9ns_17_1_1_U920">mul_9ns_9ns_17_1_1, 0, 0, 0, 50, 0</column>
+<column name="grp_make_win97_Pipeline_win9x9_read_pix_fu_126">make_win97_Pipeline_win9x9_read_pix, 0, 0, 3227, 1431, 0</column>
+<column name="mul_9ns_9ns_17_1_1_U354">mul_9ns_9ns_17_1_1, 0, 0, 0, 50, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -72,6 +72,14 @@
 </item>
 <item name = "Memory"><table name="" hasTotal="1">
 <keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="lb1_U">make_win97_lb1_RAM_2P_BRAM_1R1W, 1, 0, 0, 0, 28, 32, 1, 896</column>
+<column name="lb1_1_U">make_win97_lb1_RAM_2P_BRAM_1R1W, 1, 0, 0, 0, 28, 32, 1, 896</column>
+<column name="lb1_2_U">make_win97_lb1_RAM_2P_BRAM_1R1W, 1, 0, 0, 0, 28, 32, 1, 896</column>
+<column name="lb1_3_U">make_win97_lb1_RAM_2P_BRAM_1R1W, 1, 0, 0, 0, 28, 32, 1, 896</column>
+<column name="lb1_4_U">make_win97_lb1_RAM_2P_BRAM_1R1W, 1, 0, 0, 0, 28, 32, 1, 896</column>
+<column name="lb1_5_U">make_win97_lb1_RAM_2P_BRAM_1R1W, 1, 0, 0, 0, 28, 32, 1, 896</column>
+<column name="lb1_6_U">make_win97_lb1_RAM_2P_BRAM_1R1W, 1, 0, 0, 0, 28, 32, 1, 896</column>
+<column name="lb1_7_U">make_win97_lb1_RAM_2P_BRAM_1R1W, 1, 0, 0, 0, 28, 32, 1, 896</column>
 </table>
 </item>
 <item name = "FIFO"><table name="" hasTotal="1">
@@ -80,12 +88,12 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="PH_fu_131_p2">+, 0, 0, 16, 9, 4</column>
-<column name="PW_fu_140_p2">+, 0, 0, 16, 9, 4</column>
-<column name="add_ln670_fu_95_p2">+, 0, 0, 16, 9, 5</column>
+<column name="PH_fu_181_p2">+, 0, 0, 16, 9, 4</column>
+<column name="PW_fu_190_p2">+, 0, 0, 16, 9, 4</column>
+<column name="add_ln917_fu_145_p2">+, 0, 0, 16, 9, 5</column>
 <column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
-<column name="th_eff_fu_119_p3">select, 0, 0, 8, 1, 8</column>
-<column name="xor_ln670_fu_113_p2">xor, 0, 0, 8, 8, 2</column>
+<column name="th_eff_fu_169_p3">select, 0, 0, 8, 1, 8</column>
+<column name="xor_ln917_fu_163_p2">xor, 0, 0, 8, 8, 2</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
@@ -100,12 +108,12 @@
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="PH_reg_166">9, 0, 9, 0</column>
-<column name="PW_reg_172">9, 0, 9, 0</column>
+<column name="PH_reg_216">9, 0, 9, 0</column>
+<column name="PW_reg_222">9, 0, 9, 0</column>
 <column name="ap_CS_fsm">3, 0, 3, 0</column>
 <column name="ap_done_reg">1, 0, 1, 0</column>
-<column name="grp_make_win97_Pipeline_win9x9_read_pix_fu_84_ap_start_reg">1, 0, 1, 0</column>
-<column name="mul_ln146_reg_177">17, 0, 17, 0</column>
+<column name="grp_make_win97_Pipeline_win9x9_read_pix_fu_126_ap_start_reg">1, 0, 1, 0</column>
+<column name="mul_ln144_reg_227">17, 0, 17, 0</column>
 </table>
 </item>
 </section>
@@ -123,8 +131,8 @@
 <column name="ap_idle">out, 1, ap_ctrl_hs, make_win97, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, make_win97, return value</column>
 <column name="s_pix_i_dout">in, 32, ap_fifo, s_pix_i, pointer</column>
-<column name="s_pix_i_num_data_valid">in, 10, ap_fifo, s_pix_i, pointer</column>
-<column name="s_pix_i_fifo_cap">in, 10, ap_fifo, s_pix_i, pointer</column>
+<column name="s_pix_i_num_data_valid">in, 11, ap_fifo, s_pix_i, pointer</column>
+<column name="s_pix_i_fifo_cap">in, 11, ap_fifo, s_pix_i, pointer</column>
 <column name="s_pix_i_empty_n">in, 1, ap_fifo, s_pix_i, pointer</column>
 <column name="s_pix_i_read">out, 1, ap_fifo, s_pix_i, pointer</column>
 <column name="s_win_i_din">out, 2593, ap_fifo, s_win_i, pointer</column>
