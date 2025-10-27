@@ -1,25 +1,25 @@
 set ModuleHierarchy {[{
 "Name" : "srcnn","ID" : "0","Type" : "sequential",
 "SubInsts" : [
-	{"Name" : "grp_srcnn_Pipeline_CopyW3_inft_CopyW3_ky_CopyW3_kx_fu_1383","ID" : "1","Type" : "sequential",
+	{"Name" : "grp_srcnn_Pipeline_CopyW3_inft_CopyW3_ky_CopyW3_kx_fu_2647","ID" : "1","Type" : "sequential",
 		"SubLoops" : [
 		{"Name" : "CopyW3_inft_CopyW3_ky_CopyW3_kx","ID" : "2","Type" : "pipeline"},]},],
 "SubLoops" : [
 	{"Name" : "CopyW1_outft","ID" : "3","Type" : "no",
 	"SubInsts" : [
-	{"Name" : "grp_srcnn_Pipeline_CopyW1_ky_CopyW1_kx_fu_1186","ID" : "4","Type" : "sequential",
+	{"Name" : "grp_srcnn_Pipeline_CopyW1_ky_CopyW1_kx_fu_2458","ID" : "4","Type" : "sequential",
 			"SubLoops" : [
 			{"Name" : "CopyW1_ky_CopyW1_kx","ID" : "5","Type" : "pipeline"},]},]},
 	{"Name" : "CopyW2_outft","ID" : "6","Type" : "no",
 	"SubInsts" : [
-	{"Name" : "grp_srcnn_Pipeline_CopyW2_inft_fu_1357","ID" : "7","Type" : "sequential",
+	{"Name" : "grp_srcnn_Pipeline_CopyW2_inft_fu_2629","ID" : "7","Type" : "sequential",
 			"SubLoops" : [
 			{"Name" : "CopyW2_inft","ID" : "8","Type" : "pipeline"},]},]},
 	{"Name" : "IT_h0","ID" : "9","Type" : "no",
 	"SubLoops" : [
 	{"Name" : "IT_w0","ID" : "10","Type" : "no",
 		"SubInsts" : [
-		{"Name" : "grp_dataflow_in_loop_IT_w0_1_fu_1710","ID" : "11","Type" : "dataflow",
+		{"Name" : "grp_dataflow_in_loop_IT_w0_1_fu_4254","ID" : "11","Type" : "dataflow",
 				"SubInsts" : [
 				{"Name" : "tw_eff_loc_i_c3_channel_U","ID" : "12","Type" : "sequential"},
 				{"Name" : "load_tile_to_stream3_U0","ID" : "13","Type" : "sequential",
@@ -39,13 +39,13 @@ set ModuleHierarchy {[{
 						"SubLoops" : [
 						{"Name" : "Conv12_oy_Conv12_ox","ID" : "22","Type" : "no",
 						"SubInsts" : [
-						{"Name" : "grp_conv1conv2_from_windows8_Pipeline_Init_Conv2Out_biases_fu_1556","ID" : "23","Type" : "sequential",
+						{"Name" : "grp_conv1conv2_from_windows8_Pipeline_Init_Conv2Out_biases_fu_1496","ID" : "23","Type" : "sequential",
 								"SubLoops" : [
 								{"Name" : "Init_Conv2Out_biases","ID" : "24","Type" : "pipeline"},]},
-						{"Name" : "grp_conv1conv2_from_windows8_Pipeline_Conv1_outftmaps_fu_1600","ID" : "25","Type" : "sequential",
+						{"Name" : "grp_conv1conv2_from_windows8_Pipeline_Conv1_outftmaps_fu_1536","ID" : "25","Type" : "sequential",
 								"SubLoops" : [
 								{"Name" : "Conv1_outftmaps","ID" : "26","Type" : "pipeline"},]},
-						{"Name" : "grp_conv1conv2_from_windows8_Pipeline_Push_conv2pix_out_fu_2007","ID" : "27","Type" : "sequential",
+						{"Name" : "grp_conv1conv2_from_windows8_Pipeline_Push_conv2pix_out_fu_1927","ID" : "27","Type" : "sequential",
 								"SubLoops" : [
 								{"Name" : "Push_conv2pix_out","ID" : "28","Type" : "pipeline"},]},]},]},]},
 				{"Name" : "conv3_stream5_U0","ID" : "29","Type" : "sequential",

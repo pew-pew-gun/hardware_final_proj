@@ -91,10 +91,10 @@ entry:5 %write_ln0 = write void @_ssdm_op_Write.ap_fifo.i9P0A, i9 %h0_c, i9 %h0_
 
 <Node id="13" bw="9" op_0_bw="9" op_1_bw="9">
 <![CDATA[
-entry:6 %add_ln978 = add i9 %h0_read, i9 16
+entry:6 %add_ln670 = add i9 %h0_read, i9 16
 
 ]]></Node>
-<StgValue><ssdm name="add_ln978"/></StgValue>
+<StgValue><ssdm name="add_ln670"/></StgValue>
 </operation>
 
 <operation id="9" st_id="1" stage="1" lat="1">
@@ -106,7 +106,7 @@ entry:6 %add_ln978 = add i9 %h0_read, i9 16
 
 <Node id="14" bw="1" op_0_bw="1" op_1_bw="9" op_2_bw="32">
 <![CDATA[
-entry:7 %tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i9.i32, i9 %add_ln978, i32 8
+entry:7 %tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i9.i32, i9 %add_ln670, i32 8
 
 ]]></Node>
 <StgValue><ssdm name="tmp"/></StgValue>
@@ -121,10 +121,10 @@ entry:7 %tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i9.i32, i9 %add_ln978, i32 8
 
 <Node id="15" bw="8" op_0_bw="9">
 <![CDATA[
-entry:8 %trunc_ln977 = trunc i9 %h0_read
+entry:8 %trunc_ln669 = trunc i9 %h0_read
 
 ]]></Node>
-<StgValue><ssdm name="trunc_ln977"/></StgValue>
+<StgValue><ssdm name="trunc_ln669"/></StgValue>
 </operation>
 
 <operation id="11" st_id="1" stage="1" lat="1">
@@ -136,10 +136,10 @@ entry:8 %trunc_ln977 = trunc i9 %h0_read
 
 <Node id="16" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-entry:9 %xor_ln978 = xor i8 %trunc_ln977, i8 255
+entry:9 %xor_ln670 = xor i8 %trunc_ln669, i8 255
 
 ]]></Node>
-<StgValue><ssdm name="xor_ln978"/></StgValue>
+<StgValue><ssdm name="xor_ln670"/></StgValue>
 </operation>
 
 <operation id="12" st_id="1" stage="1" lat="1">
@@ -151,7 +151,7 @@ entry:9 %xor_ln978 = xor i8 %trunc_ln977, i8 255
 
 <Node id="17" bw="8" op_0_bw="1" op_1_bw="8" op_2_bw="8">
 <![CDATA[
-entry:10 %th_eff = select i1 %tmp, i8 %xor_ln978, i8 16
+entry:10 %th_eff = select i1 %tmp, i8 %xor_ln670, i8 16
 
 ]]></Node>
 <StgValue><ssdm name="th_eff"/></StgValue>
@@ -229,10 +229,10 @@ entry:16 %PW = add i9 %p_read_cast, i9 12
 
 <Node id="24" bw="17" op_0_bw="9">
 <![CDATA[
-entry:17 %zext_ln145 = zext i9 %PH
+entry:17 %zext_ln146 = zext i9 %PH
 
 ]]></Node>
-<StgValue><ssdm name="zext_ln145"/></StgValue>
+<StgValue><ssdm name="zext_ln146"/></StgValue>
 </operation>
 
 <operation id="18" st_id="2" stage="1" lat="1">
@@ -244,10 +244,10 @@ entry:17 %zext_ln145 = zext i9 %PH
 
 <Node id="25" bw="17" op_0_bw="9">
 <![CDATA[
-entry:18 %zext_ln145_1 = zext i9 %PW
+entry:18 %zext_ln146_1 = zext i9 %PW
 
 ]]></Node>
-<StgValue><ssdm name="zext_ln145_1"/></StgValue>
+<StgValue><ssdm name="zext_ln146_1"/></StgValue>
 </operation>
 
 <operation id="19" st_id="2" stage="1" lat="1">
@@ -259,10 +259,10 @@ entry:18 %zext_ln145_1 = zext i9 %PW
 
 <Node id="26" bw="17" op_0_bw="17" op_1_bw="17">
 <![CDATA[
-entry:19 %mul_ln145 = mul i17 %zext_ln145, i17 %zext_ln145_1
+entry:19 %mul_ln146 = mul i17 %zext_ln146, i17 %zext_ln146_1
 
 ]]></Node>
-<StgValue><ssdm name="mul_ln145"/></StgValue>
+<StgValue><ssdm name="mul_ln146"/></StgValue>
 </operation>
 
 <operation id="20" st_id="2" stage="1" lat="1">
@@ -289,10 +289,10 @@ entry:20 %empty = wait i32 @_ssdm_op_Wait
 
 <Node id="28" bw="0" op_0_bw="0" op_1_bw="17" op_2_bw="9" op_3_bw="32" op_4_bw="9" op_5_bw="2593" op_6_bw="0">
 <![CDATA[
-entry:21 %call_ln145 = call void @make_win97_Pipeline_win9x9_read_pix, i17 %mul_ln145, i9 %PW, i32 %s_pix_i, i9 %PH, i2593 %s_win_i
+entry:21 %call_ln146 = call void @make_win97_Pipeline_win9x9_read_pix, i17 %mul_ln146, i9 %PW, i32 %s_pix_i, i9 %PH, i2593 %s_win_i
 
 ]]></Node>
-<StgValue><ssdm name="call_ln145"/></StgValue>
+<StgValue><ssdm name="call_ln146"/></StgValue>
 </operation>
 </state>
 
@@ -337,7 +337,7 @@ entry:4 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i9 %h0_
 
 <Node id="20" bw="0" op_0_bw="0" op_1_bw="2593" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-entry:13 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i2593 %s_win_i, void @empty_30, i32 0, i32 0, void @empty_25, i32 0, i32 0, void @empty_25, void @empty_25, void @empty_25, i32 0, i32 0, i32 0, i32 0, void @empty_25, void @empty_25, i32 4294967295, i32 0
+entry:13 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i2593 %s_win_i, void @empty_95, i32 0, i32 0, void @empty_85, i32 0, i32 0, void @empty_85, void @empty_85, void @empty_85, i32 0, i32 0, i32 0, i32 0, void @empty_85, void @empty_85, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -352,7 +352,7 @@ entry:13 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i2593 
 
 <Node id="21" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-entry:14 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %s_pix_i, void @empty_30, i32 0, i32 0, void @empty_25, i32 0, i32 0, void @empty_25, void @empty_25, void @empty_25, i32 0, i32 0, i32 0, i32 0, void @empty_25, void @empty_25, i32 4294967295, i32 0
+entry:14 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %s_pix_i, void @empty_95, i32 0, i32 0, void @empty_85, i32 0, i32 0, void @empty_85, void @empty_85, void @empty_85, i32 0, i32 0, i32 0, i32 0, void @empty_85, void @empty_85, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -367,10 +367,10 @@ entry:14 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %s
 
 <Node id="28" bw="0" op_0_bw="0" op_1_bw="17" op_2_bw="9" op_3_bw="32" op_4_bw="9" op_5_bw="2593" op_6_bw="0">
 <![CDATA[
-entry:21 %call_ln145 = call void @make_win97_Pipeline_win9x9_read_pix, i17 %mul_ln145, i9 %PW, i32 %s_pix_i, i9 %PH, i2593 %s_win_i
+entry:21 %call_ln146 = call void @make_win97_Pipeline_win9x9_read_pix, i17 %mul_ln146, i9 %PW, i32 %s_pix_i, i9 %PH, i2593 %s_win_i
 
 ]]></Node>
-<StgValue><ssdm name="call_ln145"/></StgValue>
+<StgValue><ssdm name="call_ln146"/></StgValue>
 </operation>
 
 <operation id="27" st_id="3" stage="1" lat="1">
@@ -382,10 +382,10 @@ entry:21 %call_ln145 = call void @make_win97_Pipeline_win9x9_read_pix, i17 %mul_
 
 <Node id="29" bw="0">
 <![CDATA[
-entry:22 %ret_ln413 = ret
+entry:22 %ret_ln314 = ret
 
 ]]></Node>
-<StgValue><ssdm name="ret_ln413"/></StgValue>
+<StgValue><ssdm name="ret_ln314"/></StgValue>
 </operation>
 </state>
 </state_list>

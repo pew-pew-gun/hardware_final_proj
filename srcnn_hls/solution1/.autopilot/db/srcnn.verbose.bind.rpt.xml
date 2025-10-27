@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'srcnn'" level="0">
-<item name = "Date">Mon Oct 27 20:05:06 2025
+<item name = "Date">Mon Oct 27 21:44:58 2025
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 7.793 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 7.419 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -31,10 +31,10 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_srcnn_Pipeline_CopyW1_ky_CopyW1_kx_fu_1186">srcnn_Pipeline_CopyW1_ky_CopyW1_kx, 92, 92, 0.920 us, 0.920 us, 92, 92, no</column>
-<column name="grp_srcnn_Pipeline_CopyW2_inft_fu_1357">srcnn_Pipeline_CopyW2_inft, 75, 75, 0.750 us, 0.750 us, 75, 75, no</column>
-<column name="grp_srcnn_Pipeline_CopyW3_inft_CopyW3_ky_CopyW3_kx_fu_1383">srcnn_Pipeline_CopyW3_inft_CopyW3_ky_CopyW3_kx, 803, 803, 8.030 us, 8.030 us, 803, 803, no</column>
-<column name="grp_dataflow_in_loop_IT_w0_1_fu_1710">dataflow_in_loop_IT_w0_1, ?, ?, ?, ?, ?, ?, dataflow</column>
+<column name="grp_srcnn_Pipeline_CopyW1_ky_CopyW1_kx_fu_2458">srcnn_Pipeline_CopyW1_ky_CopyW1_kx, 92, 92, 0.920 us, 0.920 us, 92, 92, no</column>
+<column name="grp_srcnn_Pipeline_CopyW2_inft_fu_2629">srcnn_Pipeline_CopyW2_inft, 75, 75, 0.750 us, 0.750 us, 75, 75, no</column>
+<column name="grp_srcnn_Pipeline_CopyW3_inft_CopyW3_ky_CopyW3_kx_fu_2647">srcnn_Pipeline_CopyW3_inft_CopyW3_ky_CopyW3_kx, 803, 803, 8.030 us, 8.030 us, 803, 803, no</column>
+<column name="grp_dataflow_in_loop_IT_w0_1_fu_4254">dataflow_in_loop_IT_w0_1, ?, ?, ?, ?, ?, ?, dataflow</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

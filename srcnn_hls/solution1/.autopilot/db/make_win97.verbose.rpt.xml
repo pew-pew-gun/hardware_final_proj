@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'make_win97'" level="0">
-<item name = "Date">Mon Oct 27 20:05:11 2025
+<item name = "Date">Mon Oct 27 21:45:16 2025
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -63,7 +63,7 @@
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="grp_make_win97_Pipeline_win9x9_read_pix_fu_84">make_win97_Pipeline_win9x9_read_pix, 0, 0, 3739, 1543, 0</column>
-<column name="mul_9ns_9ns_17_1_1_U284">mul_9ns_9ns_17_1_1, 0, 0, 0, 50, 0</column>
+<column name="mul_9ns_9ns_17_1_1_U920">mul_9ns_9ns_17_1_1, 0, 0, 0, 50, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -82,10 +82,10 @@
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
 <column name="PH_fu_131_p2">+, 0, 0, 16, 9, 4</column>
 <column name="PW_fu_140_p2">+, 0, 0, 16, 9, 4</column>
-<column name="add_ln978_fu_95_p2">+, 0, 0, 16, 9, 5</column>
+<column name="add_ln670_fu_95_p2">+, 0, 0, 16, 9, 5</column>
 <column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
 <column name="th_eff_fu_119_p3">select, 0, 0, 8, 1, 8</column>
-<column name="xor_ln978_fu_113_p2">xor, 0, 0, 8, 8, 2</column>
+<column name="xor_ln670_fu_113_p2">xor, 0, 0, 8, 8, 2</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
@@ -105,7 +105,7 @@
 <column name="ap_CS_fsm">3, 0, 3, 0</column>
 <column name="ap_done_reg">1, 0, 1, 0</column>
 <column name="grp_make_win97_Pipeline_win9x9_read_pix_fu_84_ap_start_reg">1, 0, 1, 0</column>
-<column name="mul_ln145_reg_177">17, 0, 17, 0</column>
+<column name="mul_ln146_reg_177">17, 0, 17, 0</column>
 </table>
 </item>
 </section>

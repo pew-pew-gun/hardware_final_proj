@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'dataflow_in_loop_IT_w0_1_Block_newFuncRoot2_proc2'
 ================================================================
-* Date:           Mon Oct 27 20:03:12 2025
+* Date:           Mon Oct 27 21:38:58 2025
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -77,11 +77,11 @@ IsGatedGlobalClock: 0
 State 1 <SV = 0> <Delay = 1.15>
 ST_1 : Operation 2 [1/1] (0.00ns)   --->   "%w0_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %w0"   --->   Operation 2 'read' 'w0_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%w0_cast = zext i8 %w0_read"   --->   Operation 3 'zext' 'w0_cast' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 4 [1/1] (0.76ns)   --->   "%add_ln981 = add i9 %w0_cast, i9 16" [src/srcnn.cpp:981]   --->   Operation 4 'add' 'add_ln981' <Predicate = true> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 5 [1/1] (0.00ns) (grouped into LUT with out node tw_eff)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i9.i32, i9 %add_ln981, i32 8" [src/srcnn.cpp:981]   --->   Operation 5 'bitselect' 'tmp' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 6 [1/1] (0.00ns) (grouped into LUT with out node tw_eff)   --->   "%xor_ln981 = xor i8 %w0_read, i8 255" [src/srcnn.cpp:981]   --->   Operation 6 'xor' 'xor_ln981' <Predicate = (tmp)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 7 [1/1] (0.39ns) (out node of the LUT)   --->   "%tw_eff = select i1 %tmp, i8 %xor_ln981, i8 16" [src/srcnn.cpp:981]   --->   Operation 7 'select' 'tw_eff' <Predicate = true> <Delay = 0.39> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.39> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%ret_ln981 = ret i8 %tw_eff" [src/srcnn.cpp:981]   --->   Operation 8 'ret' 'ret_ln981' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.76ns)   --->   "%add_ln673 = add i9 %w0_cast, i9 16" [src/srcnn.cpp:673]   --->   Operation 4 'add' 'add_ln673' <Predicate = true> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 5 [1/1] (0.00ns) (grouped into LUT with out node tw_eff)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i9.i32, i9 %add_ln673, i32 8" [src/srcnn.cpp:673]   --->   Operation 5 'bitselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns) (grouped into LUT with out node tw_eff)   --->   "%xor_ln673 = xor i8 %w0_read, i8 255" [src/srcnn.cpp:673]   --->   Operation 6 'xor' 'xor_ln673' <Predicate = (tmp)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 7 [1/1] (0.39ns) (out node of the LUT)   --->   "%tw_eff = select i1 %tmp, i8 %xor_ln673, i8 16" [src/srcnn.cpp:673]   --->   Operation 7 'select' 'tw_eff' <Predicate = true> <Delay = 0.39> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.39> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%ret_ln673 = ret i8 %tw_eff" [src/srcnn.cpp:673]   --->   Operation 8 'ret' 'ret_ln673' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
@@ -92,8 +92,8 @@ Target clock period: 10.000ns, clock uncertainty: 2.700ns.
  <State 1>: 1.158ns
 The critical path consists of the following:
 	wire read operation ('w0_read') on port 'w0' [2]  (0.000 ns)
-	'add' operation ('add_ln981', src/srcnn.cpp:981) [4]  (0.765 ns)
-	'select' operation ('tw_eff', src/srcnn.cpp:981) [7]  (0.393 ns)
+	'add' operation ('add_ln673', src/srcnn.cpp:673) [4]  (0.765 ns)
+	'select' operation ('tw_eff', src/srcnn.cpp:673) [7]  (0.393 ns)
 
 
 ============================================================

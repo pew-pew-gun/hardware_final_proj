@@ -12,8 +12,8 @@ entity srcnn_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1
     generic(
         MEM_TYPE        : string    := "distributed"; 
         DataWidth       : integer   := 32; 
-        AddressWidth    : integer   := 3;
-        AddressRange    : integer   := 5
+        AddressWidth    : integer   := 1;
+        AddressRange    : integer   := 1
     ); 
     port (
         address0    : in std_logic_vector(AddressWidth-1 downto 0); 

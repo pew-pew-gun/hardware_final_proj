@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv1conv2_stream4'" level="0">
-<item name = "Date">Mon Oct 27 20:03:27 2025
+<item name = "Date">Mon Oct 27 21:39:36 2025
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 7.291 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 7.419 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,16 +24,16 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">10438, 43736818, 0.104 ms, 0.437 sec, 10437, 43736817, dataflow</column>
+<column name="">14998, 62854903, 0.150 ms, 0.629 sec, 14997, 62854902, dataflow</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="tw_eff_loc_i_tmp_channel_entry_proc_fu_440">entry_proc, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
-<column name="grp_make_win97_fu_453">make_win97, 149, 71294, 1.490 us, 0.713 ms, 149, 71294, no</column>
-<column name="grp_conv1conv2_from_windows8_fu_464">conv1conv2_from_windows8, 10436, 43736816, 0.104 ms, 0.437 sec, 10436, 43736816, no</column>
+<column name="tw_eff_loc_i_tmp_channel_entry_proc_fu_432">entry_proc, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
+<column name="grp_make_win97_fu_445">make_win97, 149, 71294, 1.490 us, 0.713 ms, 149, 71294, no</column>
+<column name="grp_conv1conv2_from_windows8_fu_456">conv1conv2_from_windows8, 14996, 62854901, 0.150 ms, 0.629 sec, 14996, 62854901, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

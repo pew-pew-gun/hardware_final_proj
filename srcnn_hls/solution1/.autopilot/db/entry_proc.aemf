@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1761555910582">
-  <ports id="1" name="return_r" type="PortType" coreId="1702127986" bitwidth="9" direction="DirOut">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1761561914488">
+  <ports id="1" name="return_r" type="PortType" coreId="1701995617" bitwidth="9" direction="DirOut">
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="2" name="tw_eff_loc_i" type="PortType" coreName="FIFO_SRL" coreId="1852142702" bitwidth="8" iftype="IfTypeRom">
+  <ports id="2" name="tw_eff_loc_i" type="PortType" coreName="FIFO_SRL" coreId="0" bitwidth="8" iftype="IfTypeRom">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="3" name="tw_eff_loc_i_c1" type="PortType" coreName="FIFO_SRL" coreId="1919181157" bitwidth="8" direction="DirOut" iftype="IfTypeRom">
+  <ports id="3" name="tw_eff_loc_i_c1" type="PortType" coreName="FIFO_SRL" coreId="1698970656" bitwidth="8" direction="DirOut" iftype="IfTypeRom">
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="4" name="h0" type="PortType" coreName="FIFO_SRL" coreId="0" bitwidth="9" iftype="IfTypeRom">
+  <ports id="4" name="h0" type="PortType" coreName="FIFO_SRL" coreId="1701995617" bitwidth="9" iftype="IfTypeRom">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="5" name="h0_c5" type="PortType" coreName="FIFO_SRL" coreId="1701995617" bitwidth="9" direction="DirOut" iftype="IfTypeRom">
+  <ports id="5" name="h0_c5" type="PortType" coreName="FIFO_SRL" coreId="0" bitwidth="9" direction="DirOut" iftype="IfTypeRom">
     <dataInputObjs>write</dataInputObjs>
   </ports>
   <ports id="15" name="ap_return" direction="DirOut">
@@ -51,7 +51,7 @@
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>return_r</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="_ln0" coreId="0" opcode="ret" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="_ln0" coreId="4294967295" opcode="ret" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>ap_return</dataOutputObjs>
     </node_objs>

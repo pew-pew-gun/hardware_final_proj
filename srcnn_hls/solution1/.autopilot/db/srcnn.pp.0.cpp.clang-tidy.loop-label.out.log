@@ -1,34 +1,34 @@
-D:\HAC\hardware_final_proj\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:458:2: warning: Added loop label VITIS_LOOP_183_1:   [xilinx-label-all-loops]
+D:\HAC\hardware_final_proj\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:459:2: warning: Added loop label VITIS_LOOP_184_1:   [xilinx-label-all-loops]
  for (int ky=0; ky<9; ++ky) {
  ^~~
- VITIS_LOOP_183_1: 
-D:\HAC\hardware_final_proj\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:458:2: note: FIX-IT applied suggested code changes
-D:\HAC\hardware_final_proj\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:460:2: warning: Added loop label VITIS_LOOP_185_2:   [xilinx-label-all-loops]
+ VITIS_LOOP_184_1: 
+D:\HAC\hardware_final_proj\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:459:2: note: FIX-IT applied suggested code changes
+D:\HAC\hardware_final_proj\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:461:2: warning: Added loop label VITIS_LOOP_186_2:   [xilinx-label-all-loops]
  for (int kx=0; kx<9; ++kx) {
  ^~~
- VITIS_LOOP_185_2: 
-D:\HAC\hardware_final_proj\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:460:2: note: FIX-IT applied suggested code changes
-D:\HAC\hardware_final_proj\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:766:46: error: Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+ VITIS_LOOP_186_2: 
+D:\HAC\hardware_final_proj\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:461:2: note: FIX-IT applied suggested code changes
+D:\HAC\hardware_final_proj\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:769:46: error: Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
 #pragma HLS BIND_STORAGE variable=inbuf type=ram_2p impl=bram
                                              ^
-D:\HAC\hardware_final_proj\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:767:47: error: Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+D:\HAC\hardware_final_proj\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:770:47: error: Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
 #pragma HLS BIND_STORAGE variable=outbuf type=ram_2p impl=bram
                                               ^
-D:\HAC\hardware_final_proj\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:783:9: error: Resource with core_name: RAM_1P_LUTRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
-#pragma HLS RESOURCE variable=w1_loc core=RAM_1P_LUTRAM
-        ^
-D:\HAC\hardware_final_proj\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:787:9: error: Resource with core_name: RAM_1P_LUTRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
-#pragma HLS RESOURCE variable=w2_loc core=RAM_1P_LUTRAM
-        ^
-D:\HAC\hardware_final_proj\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:794:9: error: Resource with core_name: RAM_1P_LUTRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
+D:\HAC\hardware_final_proj\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:791:47: error: Invalid Directive: for current device, ram_1p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=w1_loc type=ram_1p impl=bram
+                                              ^
+D:\HAC\hardware_final_proj\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:796:47: error: Invalid Directive: for current device, ram_1p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=w2_loc type=ram_1p impl=bram
+                                              ^
+D:\HAC\hardware_final_proj\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:799:9: error: Resource with core_name: RAM_1P_LUTRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
 #pragma HLS RESOURCE variable=w3_loc core=RAM_1P_LUTRAM
         ^
-D:\HAC\hardware_final_proj\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:806:9: error: Resource with core_name: RAM_1P_LUTRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
+D:\HAC\hardware_final_proj\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:811:9: error: Resource with core_name: RAM_1P_LUTRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
 #pragma HLS RESOURCE variable=b1_loc core=RAM_1P_LUTRAM
         ^
-D:\HAC\hardware_final_proj\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:807:9: error: Resource with core_name: RAM_1P_LUTRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
+D:\HAC\hardware_final_proj\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:812:9: error: Resource with core_name: RAM_1P_LUTRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
 #pragma HLS RESOURCE variable=b2_loc core=RAM_1P_LUTRAM
         ^
-D:\HAC\hardware_final_proj\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:808:9: error: Resource with core_name: RAM_1P_LUTRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
+D:\HAC\hardware_final_proj\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:813:9: error: Resource with core_name: RAM_1P_LUTRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
 #pragma HLS RESOURCE variable=b3_loc core=RAM_1P_LUTRAM
         ^

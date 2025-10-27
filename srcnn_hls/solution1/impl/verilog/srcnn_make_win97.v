@@ -91,8 +91,8 @@ reg   [8:0] PH_reg_166;
 wire   [8:0] PW_fu_140_p2;
 reg   [8:0] PW_reg_172;
 wire    ap_CS_fsm_state2;
-wire   [16:0] mul_ln145_fu_154_p2;
-reg   [16:0] mul_ln145_reg_177;
+wire   [16:0] mul_ln146_fu_154_p2;
+reg   [16:0] mul_ln146_reg_177;
 wire    grp_make_win97_Pipeline_win9x9_read_pix_fu_84_ap_start;
 wire    grp_make_win97_Pipeline_win9x9_read_pix_fu_84_ap_done;
 wire    grp_make_win97_Pipeline_win9x9_read_pix_fu_84_ap_idle;
@@ -102,21 +102,21 @@ wire   [2592:0] grp_make_win97_Pipeline_win9x9_read_pix_fu_84_s_win_i_din;
 wire    grp_make_win97_Pipeline_win9x9_read_pix_fu_84_s_win_i_write;
 reg    grp_make_win97_Pipeline_win9x9_read_pix_fu_84_ap_start_reg;
 wire    ap_CS_fsm_state3;
-wire   [8:0] add_ln978_fu_95_p2;
-wire   [7:0] trunc_ln977_fu_109_p1;
+wire   [8:0] add_ln670_fu_95_p2;
+wire   [7:0] trunc_ln669_fu_109_p1;
 wire   [0:0] tmp_fu_101_p3;
-wire   [7:0] xor_ln978_fu_113_p2;
+wire   [7:0] xor_ln670_fu_113_p2;
 wire   [7:0] th_eff_fu_119_p3;
 wire   [8:0] th_eff_cast_i_fu_127_p1;
 wire   [8:0] p_read_cast_fu_137_p1;
-wire   [8:0] mul_ln145_fu_154_p0;
-wire   [8:0] mul_ln145_fu_154_p1;
+wire   [8:0] mul_ln146_fu_154_p0;
+wire   [8:0] mul_ln146_fu_154_p1;
 reg   [2:0] ap_NS_fsm;
 reg    ap_ST_fsm_state1_blk;
 wire    ap_ST_fsm_state2_blk;
 reg    ap_ST_fsm_state3_blk;
-wire   [16:0] mul_ln145_fu_154_p00;
-wire   [16:0] mul_ln145_fu_154_p10;
+wire   [16:0] mul_ln146_fu_154_p00;
+wire   [16:0] mul_ln146_fu_154_p10;
 wire    ap_ce_reg;
 
 // power-on initialization
@@ -143,7 +143,7 @@ srcnn_make_win97_Pipeline_win9x9_read_pix grp_make_win97_Pipeline_win9x9_read_pi
     .s_win_i_fifo_cap(7'd0),
     .s_win_i_full_n(s_win_i_full_n),
     .s_win_i_write(grp_make_win97_Pipeline_win9x9_read_pix_fu_84_s_win_i_write),
-    .empty(mul_ln145_reg_177),
+    .empty(mul_ln146_reg_177),
     .zext_ln125(PW_reg_172),
     .zext_ln124(PH_reg_166)
 );
@@ -154,10 +154,10 @@ srcnn_mul_9ns_9ns_17_1_1 #(
     .din0_WIDTH( 9 ),
     .din1_WIDTH( 9 ),
     .dout_WIDTH( 17 ))
-mul_9ns_9ns_17_1_1_U284(
-    .din0(mul_ln145_fu_154_p0),
-    .din1(mul_ln145_fu_154_p1),
-    .dout(mul_ln145_fu_154_p2)
+mul_9ns_9ns_17_1_1_U920(
+    .din0(mul_ln146_fu_154_p0),
+    .din1(mul_ln146_fu_154_p1),
+    .dout(mul_ln146_fu_154_p2)
 );
 
 always @ (posedge ap_clk) begin
@@ -201,7 +201,7 @@ end
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state2)) begin
         PW_reg_172 <= PW_fu_140_p2;
-        mul_ln145_reg_177 <= mul_ln145_fu_154_p2;
+        mul_ln146_reg_177 <= mul_ln146_fu_154_p2;
     end
 end
 
@@ -324,7 +324,7 @@ assign PH_fu_131_p2 = (th_eff_cast_i_fu_127_p1 + 9'd12);
 
 assign PW_fu_140_p2 = (p_read_cast_fu_137_p1 + 9'd12);
 
-assign add_ln978_fu_95_p2 = (h0 + 9'd16);
+assign add_ln670_fu_95_p2 = (h0 + 9'd16);
 
 assign ap_CS_fsm_state1 = ap_CS_fsm[32'd0];
 
@@ -340,13 +340,13 @@ assign grp_make_win97_Pipeline_win9x9_read_pix_fu_84_ap_start = grp_make_win97_P
 
 assign h0_c_din = h0;
 
-assign mul_ln145_fu_154_p0 = mul_ln145_fu_154_p00;
+assign mul_ln146_fu_154_p0 = mul_ln146_fu_154_p00;
 
-assign mul_ln145_fu_154_p00 = PH_reg_166;
+assign mul_ln146_fu_154_p00 = PH_reg_166;
 
-assign mul_ln145_fu_154_p1 = mul_ln145_fu_154_p10;
+assign mul_ln146_fu_154_p1 = mul_ln146_fu_154_p10;
 
-assign mul_ln145_fu_154_p10 = PW_fu_140_p2;
+assign mul_ln146_fu_154_p10 = PW_fu_140_p2;
 
 assign p_read_cast_fu_137_p1 = p_read;
 
@@ -354,14 +354,14 @@ assign s_win_i_din = grp_make_win97_Pipeline_win9x9_read_pix_fu_84_s_win_i_din;
 
 assign th_eff_cast_i_fu_127_p1 = th_eff_fu_119_p3;
 
-assign th_eff_fu_119_p3 = ((tmp_fu_101_p3[0:0] == 1'b1) ? xor_ln978_fu_113_p2 : 8'd16);
+assign th_eff_fu_119_p3 = ((tmp_fu_101_p3[0:0] == 1'b1) ? xor_ln670_fu_113_p2 : 8'd16);
 
-assign tmp_fu_101_p3 = add_ln978_fu_95_p2[32'd8];
+assign tmp_fu_101_p3 = add_ln670_fu_95_p2[32'd8];
 
-assign trunc_ln977_fu_109_p1 = h0[7:0];
+assign trunc_ln669_fu_109_p1 = h0[7:0];
 
 assign tw_eff_loc_i_c_din = p_read;
 
-assign xor_ln978_fu_113_p2 = (trunc_ln977_fu_109_p1 ^ 8'd255);
+assign xor_ln670_fu_113_p2 = (trunc_ln669_fu_109_p1 ^ 8'd255);
 
 endmodule //srcnn_make_win97

@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'make_win97'
 ================================================================
-* Date:           Mon Oct 27 20:03:14 2025
+* Date:           Mon Oct 27 21:39:03 2025
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -86,30 +86,30 @@ ST_1 : Operation 4 [1/1] (1.83ns)   --->   "%p_read_1 = read i8 @_ssdm_op_Read.a
 ST_1 : Operation 5 [1/1] (1.83ns)   --->   "%h0_read = read i9 @_ssdm_op_Read.ap_auto.volatile.i9P0A, i9 %h0"   --->   Operation 5 'read' 'h0_read' <Predicate = true> <Delay = 1.83> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
 ST_1 : Operation 6 [1/1] (1.83ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_fifo.i8P0A, i8 %tw_eff_loc_i_c, i8 %p_read_1"   --->   Operation 6 'write' 'write_ln0' <Predicate = true> <Delay = 1.83> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 2> <FIFO>
 ST_1 : Operation 7 [1/1] (1.83ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_fifo.i9P0A, i9 %h0_c, i9 %h0_read"   --->   Operation 7 'write' 'write_ln0' <Predicate = true> <Delay = 1.83> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 9> <Depth = 2> <FIFO>
-ST_1 : Operation 8 [1/1] (0.77ns)   --->   "%add_ln978 = add i9 %h0_read, i9 16" [src/srcnn.cpp:978]   --->   Operation 8 'add' 'add_ln978' <Predicate = true> <Delay = 0.77> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 9 [1/1] (0.00ns) (grouped into LUT with out node PH)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i9.i32, i9 %add_ln978, i32 8" [src/srcnn.cpp:978]   --->   Operation 9 'bitselect' 'tmp' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 10 [1/1] (0.00ns) (grouped into LUT with out node PH)   --->   "%trunc_ln977 = trunc i9 %h0_read" [src/srcnn.cpp:977]   --->   Operation 10 'trunc' 'trunc_ln977' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 11 [1/1] (0.00ns) (grouped into LUT with out node PH)   --->   "%xor_ln978 = xor i8 %trunc_ln977, i8 255" [src/srcnn.cpp:978]   --->   Operation 11 'xor' 'xor_ln978' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 12 [1/1] (0.00ns) (grouped into LUT with out node PH)   --->   "%th_eff = select i1 %tmp, i8 %xor_ln978, i8 16" [src/srcnn.cpp:978]   --->   Operation 12 'select' 'th_eff' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.39> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_1 : Operation 13 [1/1] (0.00ns) (grouped into LUT with out node PH)   --->   "%th_eff_cast_i = zext i8 %th_eff" [src/srcnn.cpp:978]   --->   Operation 13 'zext' 'th_eff_cast_i' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 14 [1/1] (0.76ns) (out node of the LUT)   --->   "%PH = add i9 %th_eff_cast_i, i9 12" [src/srcnn.cpp:124->src/srcnn.cpp:413->src/srcnn.cpp:999->src/srcnn.cpp:985]   --->   Operation 14 'add' 'PH' <Predicate = true> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 8 [1/1] (0.77ns)   --->   "%add_ln670 = add i9 %h0_read, i9 16" [src/srcnn.cpp:670]   --->   Operation 8 'add' 'add_ln670' <Predicate = true> <Delay = 0.77> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 9 [1/1] (0.00ns) (grouped into LUT with out node PH)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i9.i32, i9 %add_ln670, i32 8" [src/srcnn.cpp:670]   --->   Operation 9 'bitselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns) (grouped into LUT with out node PH)   --->   "%trunc_ln669 = trunc i9 %h0_read" [src/srcnn.cpp:669]   --->   Operation 10 'trunc' 'trunc_ln669' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns) (grouped into LUT with out node PH)   --->   "%xor_ln670 = xor i8 %trunc_ln669, i8 255" [src/srcnn.cpp:670]   --->   Operation 11 'xor' 'xor_ln670' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 12 [1/1] (0.00ns) (grouped into LUT with out node PH)   --->   "%th_eff = select i1 %tmp, i8 %xor_ln670, i8 16" [src/srcnn.cpp:670]   --->   Operation 12 'select' 'th_eff' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.39> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 13 [1/1] (0.00ns) (grouped into LUT with out node PH)   --->   "%th_eff_cast_i = zext i8 %th_eff" [src/srcnn.cpp:670]   --->   Operation 13 'zext' 'th_eff_cast_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.76ns) (out node of the LUT)   --->   "%PH = add i9 %th_eff_cast_i, i9 12" [src/srcnn.cpp:124->src/srcnn.cpp:314->src/srcnn.cpp:691->src/srcnn.cpp:677]   --->   Operation 14 'add' 'PH' <Predicate = true> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 
 State 2 <SV = 1> <Delay = 2.50>
 ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%p_read_cast = zext i8 %p_read_1"   --->   Operation 15 'zext' 'p_read_cast' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 16 [1/1] (0.76ns)   --->   "%PW = add i9 %p_read_cast, i9 12" [src/srcnn.cpp:125->src/srcnn.cpp:413->src/srcnn.cpp:999->src/srcnn.cpp:985]   --->   Operation 16 'add' 'PW' <Predicate = true> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%zext_ln145 = zext i9 %PH" [src/srcnn.cpp:145->src/srcnn.cpp:413->src/srcnn.cpp:999->src/srcnn.cpp:985]   --->   Operation 17 'zext' 'zext_ln145' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%zext_ln145_1 = zext i9 %PW" [src/srcnn.cpp:145->src/srcnn.cpp:413->src/srcnn.cpp:999->src/srcnn.cpp:985]   --->   Operation 18 'zext' 'zext_ln145_1' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 19 [1/1] (1.74ns)   --->   "%mul_ln145 = mul i17 %zext_ln145, i17 %zext_ln145_1" [src/srcnn.cpp:145->src/srcnn.cpp:413->src/srcnn.cpp:999->src/srcnn.cpp:985]   --->   Operation 19 'mul' 'mul_ln145' <Predicate = true> <Delay = 1.74> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 1.74> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 16 [1/1] (0.76ns)   --->   "%PW = add i9 %p_read_cast, i9 12" [src/srcnn.cpp:125->src/srcnn.cpp:314->src/srcnn.cpp:691->src/srcnn.cpp:677]   --->   Operation 16 'add' 'PW' <Predicate = true> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%zext_ln146 = zext i9 %PH" [src/srcnn.cpp:146->src/srcnn.cpp:314->src/srcnn.cpp:691->src/srcnn.cpp:677]   --->   Operation 17 'zext' 'zext_ln146' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%zext_ln146_1 = zext i9 %PW" [src/srcnn.cpp:146->src/srcnn.cpp:314->src/srcnn.cpp:691->src/srcnn.cpp:677]   --->   Operation 18 'zext' 'zext_ln146_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 19 [1/1] (1.74ns)   --->   "%mul_ln146 = mul i17 %zext_ln146, i17 %zext_ln146_1" [src/srcnn.cpp:146->src/srcnn.cpp:314->src/srcnn.cpp:691->src/srcnn.cpp:677]   --->   Operation 19 'mul' 'mul_ln146' <Predicate = true> <Delay = 1.74> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 1.74> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%empty = wait i32 @_ssdm_op_Wait"   --->   Operation 20 'wait' 'empty' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 21 [2/2] (0.00ns)   --->   "%call_ln145 = call void @make_win97_Pipeline_win9x9_read_pix, i17 %mul_ln145, i9 %PW, i32 %s_pix_i, i9 %PH, i2593 %s_win_i" [src/srcnn.cpp:145->src/srcnn.cpp:413->src/srcnn.cpp:999->src/srcnn.cpp:985]   --->   Operation 21 'call' 'call_ln145' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 21 [2/2] (0.00ns)   --->   "%call_ln146 = call void @make_win97_Pipeline_win9x9_read_pix, i17 %mul_ln146, i9 %PW, i32 %s_pix_i, i9 %PH, i2593 %s_win_i" [src/srcnn.cpp:146->src/srcnn.cpp:314->src/srcnn.cpp:691->src/srcnn.cpp:677]   --->   Operation 21 'call' 'call_ln146' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 3 <SV = 2> <Delay = 0.00>
 ST_3 : Operation 22 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %tw_eff_loc_i_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0"   --->   Operation 22 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 23 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i9 %h0_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0"   --->   Operation 23 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 24 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i2593 %s_win_i, void @empty_30, i32 0, i32 0, void @empty_25, i32 0, i32 0, void @empty_25, void @empty_25, void @empty_25, i32 0, i32 0, i32 0, i32 0, void @empty_25, void @empty_25, i32 4294967295, i32 0"   --->   Operation 24 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 25 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %s_pix_i, void @empty_30, i32 0, i32 0, void @empty_25, i32 0, i32 0, void @empty_25, void @empty_25, void @empty_25, i32 0, i32 0, i32 0, i32 0, void @empty_25, void @empty_25, i32 4294967295, i32 0"   --->   Operation 25 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 26 [1/2] (0.00ns)   --->   "%call_ln145 = call void @make_win97_Pipeline_win9x9_read_pix, i17 %mul_ln145, i9 %PW, i32 %s_pix_i, i9 %PH, i2593 %s_win_i" [src/srcnn.cpp:145->src/srcnn.cpp:413->src/srcnn.cpp:999->src/srcnn.cpp:985]   --->   Operation 26 'call' 'call_ln145' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_3 : Operation 27 [1/1] (0.00ns)   --->   "%ret_ln413 = ret" [src/srcnn.cpp:413->src/srcnn.cpp:999->src/srcnn.cpp:985]   --->   Operation 27 'ret' 'ret_ln413' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 24 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i2593 %s_win_i, void @empty_95, i32 0, i32 0, void @empty_85, i32 0, i32 0, void @empty_85, void @empty_85, void @empty_85, i32 0, i32 0, i32 0, i32 0, void @empty_85, void @empty_85, i32 4294967295, i32 0"   --->   Operation 24 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 25 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %s_pix_i, void @empty_95, i32 0, i32 0, void @empty_85, i32 0, i32 0, void @empty_85, void @empty_85, void @empty_85, i32 0, i32 0, i32 0, i32 0, void @empty_85, void @empty_85, i32 4294967295, i32 0"   --->   Operation 25 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 26 [1/2] (0.00ns)   --->   "%call_ln146 = call void @make_win97_Pipeline_win9x9_read_pix, i17 %mul_ln146, i9 %PW, i32 %s_pix_i, i9 %PH, i2593 %s_win_i" [src/srcnn.cpp:146->src/srcnn.cpp:314->src/srcnn.cpp:691->src/srcnn.cpp:677]   --->   Operation 26 'call' 'call_ln146' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 27 [1/1] (0.00ns)   --->   "%ret_ln314 = ret" [src/srcnn.cpp:314->src/srcnn.cpp:691->src/srcnn.cpp:677]   --->   Operation 27 'ret' 'ret_ln314' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
@@ -139,25 +139,25 @@ p_read_1          (read         ) [ 0010]
 h0_read           (read         ) [ 0000]
 write_ln0         (write        ) [ 0000]
 write_ln0         (write        ) [ 0000]
-add_ln978         (add          ) [ 0000]
+add_ln670         (add          ) [ 0000]
 tmp               (bitselect    ) [ 0000]
-trunc_ln977       (trunc        ) [ 0000]
-xor_ln978         (xor          ) [ 0000]
+trunc_ln669       (trunc        ) [ 0000]
+xor_ln670         (xor          ) [ 0000]
 th_eff            (select       ) [ 0000]
 th_eff_cast_i     (zext         ) [ 0000]
 PH                (add          ) [ 0011]
 p_read_cast       (zext         ) [ 0000]
 PW                (add          ) [ 0001]
-zext_ln145        (zext         ) [ 0000]
-zext_ln145_1      (zext         ) [ 0000]
-mul_ln145         (mul          ) [ 0001]
+zext_ln146        (zext         ) [ 0000]
+zext_ln146_1      (zext         ) [ 0000]
+mul_ln146         (mul          ) [ 0001]
 empty             (wait         ) [ 0000]
 specinterface_ln0 (specinterface) [ 0000]
 specinterface_ln0 (specinterface) [ 0000]
 specinterface_ln0 (specinterface) [ 0000]
 specinterface_ln0 (specinterface) [ 0000]
-call_ln145        (call         ) [ 0000]
-ret_ln413         (ret          ) [ 0000]
+call_ln146        (call         ) [ 0000]
+ret_ln314         (ret          ) [ 0000]
 </LifeTime>
 
 <model>
@@ -402,7 +402,7 @@ ret_ln413         (ret          ) [ 0000]
 <pin id="53" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_30"/></StgValue>
+<StgValue><ssdm name="empty_95"/></StgValue>
 </bind>
 </comp>
 
@@ -411,7 +411,7 @@ ret_ln413         (ret          ) [ 0000]
 <pin id="55" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_25"/></StgValue>
+<StgValue><ssdm name="empty_85"/></StgValue>
 </bind>
 </comp>
 
@@ -477,11 +477,11 @@ ret_ln413         (ret          ) [ 0000]
 </pin_list>
 <bind>
 <opcode="call(48) " fcode="call"/>
-<opset="call_ln145/2 "/>
+<opset="call_ln146/2 "/>
 </bind>
 </comp>
 
-<comp id="95" class="1004" name="add_ln978_fu_95">
+<comp id="95" class="1004" name="add_ln670_fu_95">
 <pin_list>
 <pin id="96" dir="0" index="0" bw="9" slack="0"/>
 <pin id="97" dir="0" index="1" bw="6" slack="0"/>
@@ -489,7 +489,7 @@ ret_ln413         (ret          ) [ 0000]
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="add_ln978/1 "/>
+<opset="add_ln670/1 "/>
 </bind>
 </comp>
 
@@ -506,18 +506,18 @@ ret_ln413         (ret          ) [ 0000]
 </bind>
 </comp>
 
-<comp id="109" class="1004" name="trunc_ln977_fu_109">
+<comp id="109" class="1004" name="trunc_ln669_fu_109">
 <pin_list>
 <pin id="110" dir="0" index="0" bw="9" slack="0"/>
 <pin id="111" dir="1" index="1" bw="8" slack="0"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
-<opset="trunc_ln977/1 "/>
+<opset="trunc_ln669/1 "/>
 </bind>
 </comp>
 
-<comp id="113" class="1004" name="xor_ln978_fu_113">
+<comp id="113" class="1004" name="xor_ln670_fu_113">
 <pin_list>
 <pin id="114" dir="0" index="0" bw="8" slack="0"/>
 <pin id="115" dir="0" index="1" bw="1" slack="0"/>
@@ -525,7 +525,7 @@ ret_ln413         (ret          ) [ 0000]
 </pin_list>
 <bind>
 <opcode="xor(25) " fcode="xor"/>
-<opset="xor_ln978/1 "/>
+<opset="xor_ln670/1 "/>
 </bind>
 </comp>
 
@@ -588,29 +588,29 @@ ret_ln413         (ret          ) [ 0000]
 </bind>
 </comp>
 
-<comp id="147" class="1004" name="zext_ln145_fu_147">
+<comp id="147" class="1004" name="zext_ln146_fu_147">
 <pin_list>
 <pin id="148" dir="0" index="0" bw="9" slack="1"/>
 <pin id="149" dir="1" index="1" bw="17" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="zext_ln145/2 "/>
+<opset="zext_ln146/2 "/>
 </bind>
 </comp>
 
-<comp id="150" class="1004" name="zext_ln145_1_fu_150">
+<comp id="150" class="1004" name="zext_ln146_1_fu_150">
 <pin_list>
 <pin id="151" dir="0" index="0" bw="9" slack="0"/>
 <pin id="152" dir="1" index="1" bw="17" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="zext_ln145_1/2 "/>
+<opset="zext_ln146_1/2 "/>
 </bind>
 </comp>
 
-<comp id="154" class="1004" name="mul_ln145_fu_154">
+<comp id="154" class="1004" name="mul_ln146_fu_154">
 <pin_list>
 <pin id="155" dir="0" index="0" bw="9" slack="0"/>
 <pin id="156" dir="0" index="1" bw="9" slack="0"/>
@@ -618,7 +618,7 @@ ret_ln413         (ret          ) [ 0000]
 </pin_list>
 <bind>
 <opcode="mul(12) " fcode="mul"/>
-<opset="mul_ln145/2 "/>
+<opset="mul_ln146/2 "/>
 </bind>
 </comp>
 
@@ -652,13 +652,13 @@ ret_ln413         (ret          ) [ 0000]
 </bind>
 </comp>
 
-<comp id="177" class="1005" name="mul_ln145_reg_177">
+<comp id="177" class="1005" name="mul_ln146_reg_177">
 <pin_list>
 <pin id="178" dir="0" index="0" bw="17" slack="1"/>
 <pin id="179" dir="1" index="1" bw="17" slack="1"/>
 </pin_list>
 <bind>
-<opset="mul_ln145 "/>
+<opset="mul_ln146 "/>
 </bind>
 </comp>
 
@@ -768,15 +768,15 @@ ret_ln413         (ret          ) [ 0000]
   - Chain level:
 	State 1
 		tmp : 1
-		xor_ln978 : 1
+		xor_ln670 : 1
 		th_eff : 1
 		th_eff_cast_i : 2
 		PH : 3
 	State 2
 		PW : 1
-		zext_ln145_1 : 2
-		mul_ln145 : 3
-		call_ln145 : 4
+		zext_ln146_1 : 2
+		mul_ln146 : 3
+		call_ln146 : 4
 	State 3
 
 
@@ -790,13 +790,13 @@ ret_ln413         (ret          ) [ 0000]
 |----------|-----------------------------------------------|---------|---------|---------|---------|---------|---------|
 |   call   | grp_make_win97_Pipeline_win9x9_read_pix_fu_84 |    0    |    0    |  3.416  |   3797  |   1391  |    0    |
 |----------|-----------------------------------------------|---------|---------|---------|---------|---------|---------|
-|    mul   |                mul_ln145_fu_154               |    0    |    0    |    0    |    0    |    50   |    0    |
+|    mul   |                mul_ln146_fu_154               |    0    |    0    |    0    |    0    |    50   |    0    |
 |----------|-----------------------------------------------|---------|---------|---------|---------|---------|---------|
-|          |                add_ln978_fu_95                |    0    |    0    |    0    |    0    |    16   |    0    |
+|          |                add_ln670_fu_95                |    0    |    0    |    0    |    0    |    16   |    0    |
 |    add   |                   PH_fu_131                   |    0    |    0    |    0    |    0    |    15   |    0    |
 |          |                   PW_fu_140                   |    0    |    0    |    0    |    0    |    15   |    0    |
 |----------|-----------------------------------------------|---------|---------|---------|---------|---------|---------|
-|    xor   |                xor_ln978_fu_113               |    0    |    0    |    0    |    0    |    8    |    0    |
+|    xor   |                xor_ln670_fu_113               |    0    |    0    |    0    |    0    |    8    |    0    |
 |----------|-----------------------------------------------|---------|---------|---------|---------|---------|---------|
 |  select  |                 th_eff_fu_119                 |    0    |    0    |    0    |    0    |    8    |    0    |
 |----------|-----------------------------------------------|---------|---------|---------|---------|---------|---------|
@@ -808,12 +808,12 @@ ret_ln413         (ret          ) [ 0000]
 |----------|-----------------------------------------------|---------|---------|---------|---------|---------|---------|
 | bitselect|                   tmp_fu_101                  |    0    |    0    |    0    |    0    |    0    |    0    |
 |----------|-----------------------------------------------|---------|---------|---------|---------|---------|---------|
-|   trunc  |               trunc_ln977_fu_109              |    0    |    0    |    0    |    0    |    0    |    0    |
+|   trunc  |               trunc_ln669_fu_109              |    0    |    0    |    0    |    0    |    0    |    0    |
 |----------|-----------------------------------------------|---------|---------|---------|---------|---------|---------|
 |          |              th_eff_cast_i_fu_127             |    0    |    0    |    0    |    0    |    0    |    0    |
 |   zext   |               p_read_cast_fu_137              |    0    |    0    |    0    |    0    |    0    |    0    |
-|          |               zext_ln145_fu_147               |    0    |    0    |    0    |    0    |    0    |    0    |
-|          |              zext_ln145_1_fu_150              |    0    |    0    |    0    |    0    |    0    |    0    |
+|          |               zext_ln146_fu_147               |    0    |    0    |    0    |    0    |    0    |    0    |
+|          |              zext_ln146_1_fu_150              |    0    |    0    |    0    |    0    |    0    |    0    |
 |----------|-----------------------------------------------|---------|---------|---------|---------|---------|---------|
 |   Total  |                                               |    0    |    0    |  3.416  |   3797  |   1503  |    0    |
 |----------|-----------------------------------------------|---------|---------|---------|---------|---------|---------|
@@ -827,7 +827,7 @@ N/A
 +-----------------+--------+
 |    PH_reg_166   |    9   |
 |    PW_reg_172   |    9   |
-|mul_ln145_reg_177|   17   |
+|mul_ln146_reg_177|   17   |
 | p_read_1_reg_161|    8   |
 +-----------------+--------+
 |      Total      |   43   |

@@ -13,8 +13,8 @@ module srcnn_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1
     reset, clk);
 
 parameter DataWidth = 32;
-parameter AddressWidth = 3;
-parameter AddressRange = 5;
+parameter AddressWidth = 1;
+parameter AddressRange = 1;
  
 input[AddressWidth-1:0] address0;
 input ce0;

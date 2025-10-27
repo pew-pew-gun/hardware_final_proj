@@ -1,4 +1,0 @@
-src/srcnn.cpp:422:3: warning: '/*' within block comment [-Wcomment]
-  /****************************************************************************************/
-  ^
-1 warning generated.

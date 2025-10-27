@@ -160,7 +160,7 @@ set RtlHierarchyInfo {[
 	{"ID" : "8", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_make_win97_Pipeline_win9x9_read_pix_fu_84.lb1_6_U", "Parent" : "1"},
 	{"ID" : "9", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_make_win97_Pipeline_win9x9_read_pix_fu_84.lb1_7_U", "Parent" : "1"},
 	{"ID" : "10", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_make_win97_Pipeline_win9x9_read_pix_fu_84.flow_control_loop_pipe_sequential_init_U", "Parent" : "1"},
-	{"ID" : "11", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_9ns_9ns_17_1_1_U284", "Parent" : "0"}]}
+	{"ID" : "11", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_9ns_9ns_17_1_1_U920", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {

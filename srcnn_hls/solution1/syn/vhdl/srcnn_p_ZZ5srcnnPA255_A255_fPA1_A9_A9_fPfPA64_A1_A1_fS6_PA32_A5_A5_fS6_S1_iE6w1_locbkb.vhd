@@ -10,7 +10,7 @@ use ieee.std_logic_unsigned.all;
 
 entity srcnn_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_locbkb is 
     generic(
-        MEM_TYPE        : string    := "distributed"; 
+        MEM_TYPE        : string    := "block"; 
         DataWidth       : integer   := 32; 
         AddressWidth    : integer   := 6;
         AddressRange    : integer   := 64
@@ -36,7 +36,7 @@ type mem_array is array (0 to AddressRange-1) of std_logic_vector (DataWidth-1 d
 shared variable ram : mem_array := (
     others=>(others=>'0')); -- 
 attribute syn_ramstyle : string;
-attribute syn_ramstyle of ram : variable is "select_ram";
+attribute syn_ramstyle of ram : variable is "block_ram";
 attribute ram_style : string;
 attribute ram_style of ram : variable is MEM_TYPE;
 

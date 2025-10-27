@@ -16,36 +16,28 @@ set C_modelName {srcnn_Pipeline_CopyW2_inft}
 set C_modelType { void 0 }
 set C_modelArgList {
 	{ gmem_w2 int 32 regular {axi_master 0}  }
-	{ zext_ln938_1 int 8 regular  }
-	{ zext_ln928_1 int 11 regular  }
-	{ sext_ln928 int 62 regular  }
-	{ trunc_ln928_3 int 3 regular  }
-	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_17 float 32 regular {array 256 { 0 } 0 1 stable  } {global 1}  }
-	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_16 float 32 regular {array 256 { 0 } 0 1 stable  } {global 1}  }
-	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_15 float 32 regular {array 256 { 0 } 0 1 stable  } {global 1}  }
-	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_14 float 32 regular {array 256 { 0 } 0 1 stable  } {global 1}  }
-	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13 float 32 regular {array 256 { 0 } 0 1 stable  } {global 1}  }
-	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12 float 32 regular {array 256 { 0 } 0 1 stable  } {global 1}  }
-	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11 float 32 regular {array 256 { 0 } 0 1 stable  } {global 1}  }
-	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10 float 32 regular {array 256 { 0 } 0 1 stable  } {global 1}  }
+	{ zext_ln630_1 int 9 regular  }
+	{ zext_ln620_1 int 11 regular  }
+	{ sext_ln620 int 62 regular  }
+	{ trunc_ln620_3 int 2 regular  }
+	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_68 float 32 regular {array 512 { 0 } 0 1 stable  } {global 1}  }
+	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_67 float 32 regular {array 512 { 0 } 0 1 stable  } {global 1}  }
+	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_66 float 32 regular {array 512 { 0 } 0 1 stable  } {global 1}  }
+	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_65 float 32 regular {array 512 { 0 } 0 1 stable  } {global 1}  }
 }
 set hasAXIMCache 0
 set C_modelArgMapList {[ 
 	{ "Name" : "gmem_w2", "interface" : "axi_master", "bitwidth" : 32, "direction" : "READONLY", "bitSlice":[ {"cElement": [{"cName": "conv2_weights","offset": { "type": "dynamic","port_name": "conv2_weights","bundle": "ctrl"},"direction": "READONLY"},{"cName": "conv2_biases","offset": { "type": "dynamic","port_name": "conv2_biases","bundle": "ctrl"},"direction": "READONLY"}]}]} , 
- 	{ "Name" : "zext_ln938_1", "interface" : "wire", "bitwidth" : 8, "direction" : "READONLY"} , 
- 	{ "Name" : "zext_ln928_1", "interface" : "wire", "bitwidth" : 11, "direction" : "READONLY"} , 
- 	{ "Name" : "sext_ln928", "interface" : "wire", "bitwidth" : 62, "direction" : "READONLY"} , 
- 	{ "Name" : "trunc_ln928_3", "interface" : "wire", "bitwidth" : 3, "direction" : "READONLY"} , 
- 	{ "Name" : "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_17", "interface" : "memory", "bitwidth" : 32, "direction" : "WRITEONLY", "extern" : 0} , 
- 	{ "Name" : "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_16", "interface" : "memory", "bitwidth" : 32, "direction" : "WRITEONLY", "extern" : 0} , 
- 	{ "Name" : "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_15", "interface" : "memory", "bitwidth" : 32, "direction" : "WRITEONLY", "extern" : 0} , 
- 	{ "Name" : "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_14", "interface" : "memory", "bitwidth" : 32, "direction" : "WRITEONLY", "extern" : 0} , 
- 	{ "Name" : "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13", "interface" : "memory", "bitwidth" : 32, "direction" : "WRITEONLY", "extern" : 0} , 
- 	{ "Name" : "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12", "interface" : "memory", "bitwidth" : 32, "direction" : "WRITEONLY", "extern" : 0} , 
- 	{ "Name" : "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11", "interface" : "memory", "bitwidth" : 32, "direction" : "WRITEONLY", "extern" : 0} , 
- 	{ "Name" : "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10", "interface" : "memory", "bitwidth" : 32, "direction" : "WRITEONLY", "extern" : 0} ]}
+ 	{ "Name" : "zext_ln630_1", "interface" : "wire", "bitwidth" : 9, "direction" : "READONLY"} , 
+ 	{ "Name" : "zext_ln620_1", "interface" : "wire", "bitwidth" : 11, "direction" : "READONLY"} , 
+ 	{ "Name" : "sext_ln620", "interface" : "wire", "bitwidth" : 62, "direction" : "READONLY"} , 
+ 	{ "Name" : "trunc_ln620_3", "interface" : "wire", "bitwidth" : 2, "direction" : "READONLY"} , 
+ 	{ "Name" : "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_68", "interface" : "memory", "bitwidth" : 32, "direction" : "WRITEONLY", "extern" : 0} , 
+ 	{ "Name" : "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_67", "interface" : "memory", "bitwidth" : 32, "direction" : "WRITEONLY", "extern" : 0} , 
+ 	{ "Name" : "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_66", "interface" : "memory", "bitwidth" : 32, "direction" : "WRITEONLY", "extern" : 0} , 
+ 	{ "Name" : "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_65", "interface" : "memory", "bitwidth" : 32, "direction" : "WRITEONLY", "extern" : 0} ]}
 # RTL Port declarations: 
-set portNum 88
+set portNum 72
 set portList { 
 	{ ap_clk sc_in sc_logic 1 clock -1 } 
 	{ ap_rst sc_in sc_logic 1 reset -1 active_high_sync } 
@@ -99,42 +91,26 @@ set portList {
 	{ m_axi_gmem_w2_BRESP sc_in sc_lv 2 signal 0 } 
 	{ m_axi_gmem_w2_BID sc_in sc_lv 1 signal 0 } 
 	{ m_axi_gmem_w2_BUSER sc_in sc_lv 1 signal 0 } 
-	{ zext_ln938_1 sc_in sc_lv 8 signal 1 } 
-	{ zext_ln928_1 sc_in sc_lv 11 signal 2 } 
-	{ sext_ln928 sc_in sc_lv 62 signal 3 } 
-	{ trunc_ln928_3 sc_in sc_lv 3 signal 4 } 
-	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_17_address0 sc_out sc_lv 8 signal 5 } 
-	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_17_ce0 sc_out sc_logic 1 signal 5 } 
-	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_17_we0 sc_out sc_logic 1 signal 5 } 
-	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_17_d0 sc_out sc_lv 32 signal 5 } 
-	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_16_address0 sc_out sc_lv 8 signal 6 } 
-	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_16_ce0 sc_out sc_logic 1 signal 6 } 
-	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_16_we0 sc_out sc_logic 1 signal 6 } 
-	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_16_d0 sc_out sc_lv 32 signal 6 } 
-	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_15_address0 sc_out sc_lv 8 signal 7 } 
-	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_15_ce0 sc_out sc_logic 1 signal 7 } 
-	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_15_we0 sc_out sc_logic 1 signal 7 } 
-	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_15_d0 sc_out sc_lv 32 signal 7 } 
-	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_14_address0 sc_out sc_lv 8 signal 8 } 
-	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_14_ce0 sc_out sc_logic 1 signal 8 } 
-	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_14_we0 sc_out sc_logic 1 signal 8 } 
-	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_14_d0 sc_out sc_lv 32 signal 8 } 
-	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_address0 sc_out sc_lv 8 signal 9 } 
-	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_ce0 sc_out sc_logic 1 signal 9 } 
-	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_we0 sc_out sc_logic 1 signal 9 } 
-	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_d0 sc_out sc_lv 32 signal 9 } 
-	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_address0 sc_out sc_lv 8 signal 10 } 
-	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_ce0 sc_out sc_logic 1 signal 10 } 
-	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_we0 sc_out sc_logic 1 signal 10 } 
-	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_d0 sc_out sc_lv 32 signal 10 } 
-	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_address0 sc_out sc_lv 8 signal 11 } 
-	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_ce0 sc_out sc_logic 1 signal 11 } 
-	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_we0 sc_out sc_logic 1 signal 11 } 
-	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_d0 sc_out sc_lv 32 signal 11 } 
-	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10_address0 sc_out sc_lv 8 signal 12 } 
-	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10_ce0 sc_out sc_logic 1 signal 12 } 
-	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10_we0 sc_out sc_logic 1 signal 12 } 
-	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10_d0 sc_out sc_lv 32 signal 12 } 
+	{ zext_ln630_1 sc_in sc_lv 9 signal 1 } 
+	{ zext_ln620_1 sc_in sc_lv 11 signal 2 } 
+	{ sext_ln620 sc_in sc_lv 62 signal 3 } 
+	{ trunc_ln620_3 sc_in sc_lv 2 signal 4 } 
+	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_68_address0 sc_out sc_lv 9 signal 5 } 
+	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_68_ce0 sc_out sc_logic 1 signal 5 } 
+	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_68_we0 sc_out sc_logic 1 signal 5 } 
+	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_68_d0 sc_out sc_lv 32 signal 5 } 
+	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_67_address0 sc_out sc_lv 9 signal 6 } 
+	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_67_ce0 sc_out sc_logic 1 signal 6 } 
+	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_67_we0 sc_out sc_logic 1 signal 6 } 
+	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_67_d0 sc_out sc_lv 32 signal 6 } 
+	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_66_address0 sc_out sc_lv 9 signal 7 } 
+	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_66_ce0 sc_out sc_logic 1 signal 7 } 
+	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_66_we0 sc_out sc_logic 1 signal 7 } 
+	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_66_d0 sc_out sc_lv 32 signal 7 } 
+	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_65_address0 sc_out sc_lv 9 signal 8 } 
+	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_65_ce0 sc_out sc_logic 1 signal 8 } 
+	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_65_we0 sc_out sc_logic 1 signal 8 } 
+	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_65_d0 sc_out sc_lv 32 signal 8 } 
 }
 set NewPortList {[ 
 	{ "name": "ap_clk", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "clock", "bundle":{"name": "ap_clk", "role": "default" }} , 
@@ -189,42 +165,26 @@ set NewPortList {[
  	{ "name": "m_axi_gmem_w2_BRESP", "direction": "in", "datatype": "sc_lv", "bitwidth":2, "type": "signal", "bundle":{"name": "gmem_w2", "role": "BRESP" }} , 
  	{ "name": "m_axi_gmem_w2_BID", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "gmem_w2", "role": "BID" }} , 
  	{ "name": "m_axi_gmem_w2_BUSER", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "gmem_w2", "role": "BUSER" }} , 
- 	{ "name": "zext_ln938_1", "direction": "in", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "zext_ln938_1", "role": "default" }} , 
- 	{ "name": "zext_ln928_1", "direction": "in", "datatype": "sc_lv", "bitwidth":11, "type": "signal", "bundle":{"name": "zext_ln928_1", "role": "default" }} , 
- 	{ "name": "sext_ln928", "direction": "in", "datatype": "sc_lv", "bitwidth":62, "type": "signal", "bundle":{"name": "sext_ln928", "role": "default" }} , 
- 	{ "name": "trunc_ln928_3", "direction": "in", "datatype": "sc_lv", "bitwidth":3, "type": "signal", "bundle":{"name": "trunc_ln928_3", "role": "default" }} , 
- 	{ "name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_17_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_17", "role": "address0" }} , 
- 	{ "name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_17_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_17", "role": "ce0" }} , 
- 	{ "name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_17_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_17", "role": "we0" }} , 
- 	{ "name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_17_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_17", "role": "d0" }} , 
- 	{ "name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_16_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_16", "role": "address0" }} , 
- 	{ "name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_16_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_16", "role": "ce0" }} , 
- 	{ "name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_16_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_16", "role": "we0" }} , 
- 	{ "name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_16_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_16", "role": "d0" }} , 
- 	{ "name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_15_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_15", "role": "address0" }} , 
- 	{ "name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_15_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_15", "role": "ce0" }} , 
- 	{ "name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_15_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_15", "role": "we0" }} , 
- 	{ "name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_15_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_15", "role": "d0" }} , 
- 	{ "name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_14_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_14", "role": "address0" }} , 
- 	{ "name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_14_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_14", "role": "ce0" }} , 
- 	{ "name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_14_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_14", "role": "we0" }} , 
- 	{ "name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_14_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_14", "role": "d0" }} , 
- 	{ "name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13", "role": "address0" }} , 
- 	{ "name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13", "role": "ce0" }} , 
- 	{ "name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13", "role": "we0" }} , 
- 	{ "name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13", "role": "d0" }} , 
- 	{ "name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12", "role": "address0" }} , 
- 	{ "name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12", "role": "ce0" }} , 
- 	{ "name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12", "role": "we0" }} , 
- 	{ "name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12", "role": "d0" }} , 
- 	{ "name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11", "role": "address0" }} , 
- 	{ "name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11", "role": "ce0" }} , 
- 	{ "name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11", "role": "we0" }} , 
- 	{ "name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11", "role": "d0" }} , 
- 	{ "name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10", "role": "address0" }} , 
- 	{ "name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10", "role": "ce0" }} , 
- 	{ "name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10", "role": "we0" }} , 
- 	{ "name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10", "role": "d0" }}  ]}
+ 	{ "name": "zext_ln630_1", "direction": "in", "datatype": "sc_lv", "bitwidth":9, "type": "signal", "bundle":{"name": "zext_ln630_1", "role": "default" }} , 
+ 	{ "name": "zext_ln620_1", "direction": "in", "datatype": "sc_lv", "bitwidth":11, "type": "signal", "bundle":{"name": "zext_ln620_1", "role": "default" }} , 
+ 	{ "name": "sext_ln620", "direction": "in", "datatype": "sc_lv", "bitwidth":62, "type": "signal", "bundle":{"name": "sext_ln620", "role": "default" }} , 
+ 	{ "name": "trunc_ln620_3", "direction": "in", "datatype": "sc_lv", "bitwidth":2, "type": "signal", "bundle":{"name": "trunc_ln620_3", "role": "default" }} , 
+ 	{ "name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_68_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":9, "type": "signal", "bundle":{"name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_68", "role": "address0" }} , 
+ 	{ "name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_68_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_68", "role": "ce0" }} , 
+ 	{ "name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_68_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_68", "role": "we0" }} , 
+ 	{ "name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_68_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_68", "role": "d0" }} , 
+ 	{ "name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_67_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":9, "type": "signal", "bundle":{"name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_67", "role": "address0" }} , 
+ 	{ "name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_67_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_67", "role": "ce0" }} , 
+ 	{ "name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_67_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_67", "role": "we0" }} , 
+ 	{ "name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_67_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_67", "role": "d0" }} , 
+ 	{ "name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_66_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":9, "type": "signal", "bundle":{"name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_66", "role": "address0" }} , 
+ 	{ "name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_66_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_66", "role": "ce0" }} , 
+ 	{ "name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_66_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_66", "role": "we0" }} , 
+ 	{ "name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_66_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_66", "role": "d0" }} , 
+ 	{ "name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_65_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":9, "type": "signal", "bundle":{"name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_65", "role": "address0" }} , 
+ 	{ "name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_65_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_65", "role": "ce0" }} , 
+ 	{ "name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_65_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_65", "role": "we0" }} , 
+ 	{ "name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_65_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_65", "role": "d0" }}  ]}
 
 set RtlHierarchyInfo {[
 	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1"],
@@ -246,18 +206,14 @@ set RtlHierarchyInfo {[
 				"BlockSignal" : [
 					{"Name" : "gmem_w2_blk_n_AR", "Type" : "RtlSignal"},
 					{"Name" : "gmem_w2_blk_n_R", "Type" : "RtlSignal"}]},
-			{"Name" : "zext_ln938_1", "Type" : "None", "Direction" : "I"},
-			{"Name" : "zext_ln928_1", "Type" : "None", "Direction" : "I"},
-			{"Name" : "sext_ln928", "Type" : "None", "Direction" : "I"},
-			{"Name" : "trunc_ln928_3", "Type" : "None", "Direction" : "I"},
-			{"Name" : "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_17", "Type" : "Memory", "Direction" : "O"},
-			{"Name" : "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_16", "Type" : "Memory", "Direction" : "O"},
-			{"Name" : "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_15", "Type" : "Memory", "Direction" : "O"},
-			{"Name" : "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_14", "Type" : "Memory", "Direction" : "O"},
-			{"Name" : "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13", "Type" : "Memory", "Direction" : "O"},
-			{"Name" : "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12", "Type" : "Memory", "Direction" : "O"},
-			{"Name" : "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11", "Type" : "Memory", "Direction" : "O"},
-			{"Name" : "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10", "Type" : "Memory", "Direction" : "O"}],
+			{"Name" : "zext_ln630_1", "Type" : "None", "Direction" : "I"},
+			{"Name" : "zext_ln620_1", "Type" : "None", "Direction" : "I"},
+			{"Name" : "sext_ln620", "Type" : "None", "Direction" : "I"},
+			{"Name" : "trunc_ln620_3", "Type" : "None", "Direction" : "I"},
+			{"Name" : "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_68", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_67", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_66", "Type" : "Memory", "Direction" : "O"},
+			{"Name" : "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_65", "Type" : "Memory", "Direction" : "O"}],
 		"Loop" : [
 			{"Name" : "CopyW2_inft", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter10", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter10", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
@@ -267,18 +223,14 @@ set RtlHierarchyInfo {[
 set ArgLastReadFirstWriteLatency {
 	srcnn_Pipeline_CopyW2_inft {
 		gmem_w2 {Type I LastRead 9 FirstWrite -1}
-		zext_ln938_1 {Type I LastRead 0 FirstWrite -1}
-		zext_ln928_1 {Type I LastRead 0 FirstWrite -1}
-		sext_ln928 {Type I LastRead 0 FirstWrite -1}
-		trunc_ln928_3 {Type I LastRead 0 FirstWrite -1}
-		srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_17 {Type O LastRead -1 FirstWrite 10}
-		srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_16 {Type O LastRead -1 FirstWrite 10}
-		srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_15 {Type O LastRead -1 FirstWrite 10}
-		srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_14 {Type O LastRead -1 FirstWrite 10}
-		srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13 {Type O LastRead -1 FirstWrite 10}
-		srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12 {Type O LastRead -1 FirstWrite 10}
-		srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11 {Type O LastRead -1 FirstWrite 10}
-		srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10 {Type O LastRead -1 FirstWrite 10}}}
+		zext_ln630_1 {Type I LastRead 0 FirstWrite -1}
+		zext_ln620_1 {Type I LastRead 0 FirstWrite -1}
+		sext_ln620 {Type I LastRead 0 FirstWrite -1}
+		trunc_ln620_3 {Type I LastRead 0 FirstWrite -1}
+		srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_68 {Type O LastRead -1 FirstWrite 10}
+		srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_67 {Type O LastRead -1 FirstWrite 10}
+		srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_66 {Type O LastRead -1 FirstWrite 10}
+		srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_65 {Type O LastRead -1 FirstWrite 10}}}
 
 set hasDtUnsupportedChannel 0
 
@@ -293,16 +245,12 @@ set PipelineEnableSignalInfo {[
 
 set Spec2ImplPortList { 
 	 { m_axi {  { m_axi_gmem_w2_AWVALID VALID 1 1 }  { m_axi_gmem_w2_AWREADY READY 0 1 }  { m_axi_gmem_w2_AWADDR ADDR 1 64 }  { m_axi_gmem_w2_AWID ID 1 1 }  { m_axi_gmem_w2_AWLEN SIZE 1 32 }  { m_axi_gmem_w2_AWSIZE BURST 1 3 }  { m_axi_gmem_w2_AWBURST LOCK 1 2 }  { m_axi_gmem_w2_AWLOCK CACHE 1 2 }  { m_axi_gmem_w2_AWCACHE PROT 1 4 }  { m_axi_gmem_w2_AWPROT QOS 1 3 }  { m_axi_gmem_w2_AWQOS REGION 1 4 }  { m_axi_gmem_w2_AWREGION USER 1 4 }  { m_axi_gmem_w2_AWUSER DATA 1 1 }  { m_axi_gmem_w2_WVALID VALID 1 1 }  { m_axi_gmem_w2_WREADY READY 0 1 }  { m_axi_gmem_w2_WDATA FIFONUM 1 32 }  { m_axi_gmem_w2_WSTRB STRB 1 4 }  { m_axi_gmem_w2_WLAST LAST 1 1 }  { m_axi_gmem_w2_WID ID 1 1 }  { m_axi_gmem_w2_WUSER DATA 1 1 }  { m_axi_gmem_w2_ARVALID VALID 1 1 }  { m_axi_gmem_w2_ARREADY READY 0 1 }  { m_axi_gmem_w2_ARADDR ADDR 1 64 }  { m_axi_gmem_w2_ARID ID 1 1 }  { m_axi_gmem_w2_ARLEN SIZE 1 32 }  { m_axi_gmem_w2_ARSIZE BURST 1 3 }  { m_axi_gmem_w2_ARBURST LOCK 1 2 }  { m_axi_gmem_w2_ARLOCK CACHE 1 2 }  { m_axi_gmem_w2_ARCACHE PROT 1 4 }  { m_axi_gmem_w2_ARPROT QOS 1 3 }  { m_axi_gmem_w2_ARQOS REGION 1 4 }  { m_axi_gmem_w2_ARREGION USER 1 4 }  { m_axi_gmem_w2_ARUSER DATA 1 1 }  { m_axi_gmem_w2_RVALID VALID 0 1 }  { m_axi_gmem_w2_RREADY READY 1 1 }  { m_axi_gmem_w2_RDATA FIFONUM 0 32 }  { m_axi_gmem_w2_RLAST LAST 0 1 }  { m_axi_gmem_w2_RID ID 0 1 }  { m_axi_gmem_w2_RFIFONUM LEN 0 9 }  { m_axi_gmem_w2_RUSER DATA 0 1 }  { m_axi_gmem_w2_RRESP RESP 0 2 }  { m_axi_gmem_w2_BVALID VALID 0 1 }  { m_axi_gmem_w2_BREADY READY 1 1 }  { m_axi_gmem_w2_BRESP RESP 0 2 }  { m_axi_gmem_w2_BID ID 0 1 }  { m_axi_gmem_w2_BUSER DATA 0 1 } } }
-	zext_ln938_1 { ap_none {  { zext_ln938_1 in_data 0 8 } } }
-	zext_ln928_1 { ap_none {  { zext_ln928_1 in_data 0 11 } } }
-	sext_ln928 { ap_none {  { sext_ln928 in_data 0 62 } } }
-	trunc_ln928_3 { ap_none {  { trunc_ln928_3 in_data 0 3 } } }
-	srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_17 { ap_memory {  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_17_address0 mem_address 1 8 }  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_17_ce0 mem_ce 1 1 }  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_17_we0 mem_we 1 1 }  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_17_d0 mem_din 1 32 } } }
-	srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_16 { ap_memory {  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_16_address0 mem_address 1 8 }  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_16_ce0 mem_ce 1 1 }  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_16_we0 mem_we 1 1 }  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_16_d0 mem_din 1 32 } } }
-	srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_15 { ap_memory {  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_15_address0 mem_address 1 8 }  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_15_ce0 mem_ce 1 1 }  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_15_we0 mem_we 1 1 }  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_15_d0 mem_din 1 32 } } }
-	srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_14 { ap_memory {  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_14_address0 mem_address 1 8 }  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_14_ce0 mem_ce 1 1 }  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_14_we0 mem_we 1 1 }  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_14_d0 mem_din 1 32 } } }
-	srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13 { ap_memory {  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_address0 mem_address 1 8 }  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_ce0 mem_ce 1 1 }  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_we0 mem_we 1 1 }  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_13_d0 mem_din 1 32 } } }
-	srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12 { ap_memory {  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_address0 mem_address 1 8 }  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_ce0 mem_ce 1 1 }  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_we0 mem_we 1 1 }  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_12_d0 mem_din 1 32 } } }
-	srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11 { ap_memory {  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_address0 mem_address 1 8 }  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_ce0 mem_ce 1 1 }  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_we0 mem_we 1 1 }  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_11_d0 mem_din 1 32 } } }
-	srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10 { ap_memory {  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10_address0 mem_address 1 8 }  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10_ce0 mem_ce 1 1 }  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10_we0 mem_we 1 1 }  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_10_d0 mem_din 1 32 } } }
+	zext_ln630_1 { ap_none {  { zext_ln630_1 in_data 0 9 } } }
+	zext_ln620_1 { ap_none {  { zext_ln620_1 in_data 0 11 } } }
+	sext_ln620 { ap_none {  { sext_ln620 in_data 0 62 } } }
+	trunc_ln620_3 { ap_none {  { trunc_ln620_3 in_data 0 2 } } }
+	srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_68 { ap_memory {  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_68_address0 mem_address 1 9 }  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_68_ce0 mem_ce 1 1 }  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_68_we0 mem_we 1 1 }  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_68_d0 mem_din 1 32 } } }
+	srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_67 { ap_memory {  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_67_address0 mem_address 1 9 }  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_67_ce0 mem_ce 1 1 }  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_67_we0 mem_we 1 1 }  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_67_d0 mem_din 1 32 } } }
+	srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_66 { ap_memory {  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_66_address0 mem_address 1 9 }  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_66_ce0 mem_ce 1 1 }  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_66_we0 mem_we 1 1 }  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_66_d0 mem_din 1 32 } } }
+	srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_65 { ap_memory {  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_65_address0 mem_address 1 9 }  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_65_ce0 mem_ce 1 1 }  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_65_we0 mem_we 1 1 }  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_65_d0 mem_din 1 32 } } }
 }

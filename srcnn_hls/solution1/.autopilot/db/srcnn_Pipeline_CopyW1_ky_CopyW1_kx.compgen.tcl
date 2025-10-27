@@ -1565,14 +1565,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 2 \
-    name zext_ln913_2 \
+    name zext_ln605_2 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_zext_ln913_2 \
+    corename dc_zext_ln605_2 \
     op interface \
-    ports { zext_ln913_2 { I 6 vector } } \
+    ports { zext_ln605_2 { I 6 vector } } \
 } "
 }
 
@@ -1580,14 +1580,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 3 \
-    name sext_ln913 \
+    name sext_ln605 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_sext_ln913 \
+    corename dc_sext_ln605 \
     op interface \
-    ports { sext_ln913 { I 62 vector } } \
+    ports { sext_ln605 { I 62 vector } } \
 } "
 }
 
@@ -1595,14 +1595,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 4 \
-    name zext_ln913_3 \
+    name zext_ln605_3 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_zext_ln913_3 \
+    corename dc_zext_ln605_3 \
     op interface \
-    ports { zext_ln913_3 { I 13 vector } } \
+    ports { zext_ln605_3 { I 13 vector } } \
 } "
 }
 

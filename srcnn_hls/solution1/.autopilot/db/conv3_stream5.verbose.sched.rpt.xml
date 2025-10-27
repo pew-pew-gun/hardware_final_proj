@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv3_stream5'" level="0">
-<item name = "Date">Mon Oct 27 20:04:47 2025
+<item name = "Date">Mon Oct 27 21:43:35 2025
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">97, 29716884, 0.970 us, 0.297 sec, 97, 29716884, no</column>
+<column name="">50, 55140584, 0.500 us, 0.551 sec, 50, 55140584, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- win5x5_read_pix">96, 29716883, 6 ~ 443, -, -, 16 ~ 67081, no</column>
+<column name="- win5x5_read_pix">48, 55140582, 3 ~ 822, -, -, 16 ~ 67081, no</column>
 </table>
 </item>
 </section>
