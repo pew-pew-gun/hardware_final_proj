@@ -275,7 +275,7 @@ attribute shreg_extract : string;
 
 
 begin
-    fcmp_32ns_32ns_1_2_no_dsp_1_U559 : component srcnn_fcmp_32ns_32ns_1_2_no_dsp_1
+    fcmp_32ns_32ns_1_2_no_dsp_1_U703 : component srcnn_fcmp_32ns_32ns_1_2_no_dsp_1
     generic map (
         ID => 1,
         NUM_STAGE => 2,

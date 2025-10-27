@@ -2,7 +2,7 @@ ECHO is off.
 ECHO is off.
 NOTE: Using modified tcl85t.dll from https://gitenterprise.xilinx.com/ACT/vitis_hls_tcl
 INFO: [HLS 200-10] Running 'D:/Vitis_HLS/2023.1/bin/unwrapped/win64.o/vitis_hls.exe'
-INFO: [HLS 200-10] For user 'Biho Shin' on host 'desktop-gfn85n3' (Windows NT_amd64 version 6.2) on Mon Oct 27 19:15:17 +1100 2025
+INFO: [HLS 200-10] For user 'Biho Shin' on host 'desktop-gfn85n3' (Windows NT_amd64 version 6.2) on Mon Oct 27 20:01:38 +1100 2025
 INFO: [HLS 200-10] In directory 'D:/HAC/hardware_final_proj'
 Sourcing Tcl script 'D:/HAC/hardware_final_proj/srcnn_hls/solution1/csynth.tcl'
 INFO: [HLS 200-1510] Running: source D:/HAC/hardware_final_proj/srcnn_hls/solution1/csynth.tcl
@@ -49,65 +49,64 @@ INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog
 INFO: [HLS 200-1510] Running: source ./srcnn_hls/solution1/directives.tcl
 INFO: [HLS 200-1510] Running: set_directive_top -name srcnn srcnn 
 INFO: [HLS 200-1510] Running: csynth_design 
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.18 seconds; current allocated memory: 87.246 MB.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.188 seconds; current allocated memory: 87.484 MB.
 INFO: [HLS 200-10] Analyzing design file 'src/conv1.cpp' ... 
 INFO: [HLS 200-10] Analyzing design file 'src/srcnn.cpp' ... 
 WARNING: [HLS 207-997] '/*' within block comment (src/srcnn.cpp:422:3)
-WARNING: [HLS 207-5559] unexpected pragma argument 'mul', expects function/operation (src/srcnn.cpp:612:34)
-WARNING: [HLS 207-5559] unexpected pragma argument 'fmul', expects function/operation (src/srcnn.cpp:613:34)
-WARNING: [HLS 207-5531] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (src/srcnn.cpp:823:9)
-WARNING: [HLS 207-5531] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (src/srcnn.cpp:834:9)
-WARNING: [HLS 207-5531] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (src/srcnn.cpp:871:9)
-WARNING: [HLS 207-5531] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (src/srcnn.cpp:872:9)
-WARNING: [HLS 207-5531] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (src/srcnn.cpp:873:9)
-WARNING: [HLS 214-109] As the loop counter is not increased by 1, the compiler may not successfully process the dataflow loop (src/srcnn.cpp:964:28)
+WARNING: [HLS 207-5531] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (src/srcnn.cpp:824:9)
+WARNING: [HLS 207-5531] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (src/srcnn.cpp:836:9)
+WARNING: [HLS 207-5531] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (src/srcnn.cpp:875:9)
+WARNING: [HLS 207-5531] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (src/srcnn.cpp:887:9)
+WARNING: [HLS 207-5531] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (src/srcnn.cpp:888:9)
+WARNING: [HLS 207-5531] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (src/srcnn.cpp:889:9)
+WARNING: [HLS 214-109] As the loop counter is not increased by 1, the compiler may not successfully process the dataflow loop (src/srcnn.cpp:980:28)
 Resolution: For help on HLS 214-109 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=214-109.html
-WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (src/srcnn.cpp:982:35)
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (src/srcnn.cpp:998:35)
 Resolution: For help on HLS 214-113 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=214-113.html
-WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (src/srcnn.cpp:982:42)
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (src/srcnn.cpp:998:42)
 Resolution: For help on HLS 214-113 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=214-113.html
-WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (src/srcnn.cpp:983:38)
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (src/srcnn.cpp:999:38)
 Resolution: For help on HLS 214-113 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=214-113.html
-WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (src/srcnn.cpp:983:45)
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (src/srcnn.cpp:999:45)
 Resolution: For help on HLS 214-113 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=214-113.html
-WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (src/srcnn.cpp:983:53)
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (src/srcnn.cpp:999:53)
 Resolution: For help on HLS 214-113 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=214-113.html
-WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (src/srcnn.cpp:983:60)
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (src/srcnn.cpp:999:60)
 Resolution: For help on HLS 214-113 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=214-113.html
-WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (src/srcnn.cpp:983:68)
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (src/srcnn.cpp:999:68)
 Resolution: For help on HLS 214-113 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=214-113.html
-WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (src/srcnn.cpp:984:34)
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (src/srcnn.cpp:1000:34)
 Resolution: For help on HLS 214-113 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=214-113.html
-WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (src/srcnn.cpp:984:41)
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (src/srcnn.cpp:1000:41)
 Resolution: For help on HLS 214-113 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=214-113.html
-WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (src/srcnn.cpp:984:49)
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (src/srcnn.cpp:1000:49)
 Resolution: For help on HLS 214-113 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=214-113.html
-WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (src/srcnn.cpp:984:56)
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (src/srcnn.cpp:1000:56)
 Resolution: For help on HLS 214-113 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=214-113.html
-WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (src/srcnn.cpp:985:42)
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (src/srcnn.cpp:1001:42)
 Resolution: For help on HLS 214-113 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=214-113.html
-WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (src/srcnn.cpp:985:49)
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (src/srcnn.cpp:1001:49)
 Resolution: For help on HLS 214-113 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=214-113.html
 WARNING: [HLS 200-471] Dataflow form checks found 14 issue(s) in file src/srcnn.cpp
 Resolution: For help on HLS 200-471 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-471.html
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.783 seconds; current allocated memory: 91.027 MB.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.865 seconds; current allocated memory: 90.586 MB.
 INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
 INFO: [HLS 214-377] Adding 'w' into disaggregation list because there's array-partition pragma applied on the struct field (src/srcnn.cpp:182:9)
 INFO: [HLS 214-210] Disaggregating variable 'w' (src/srcnn.cpp:181:14)
 Resolution: For help on HLS 214-210 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=214-210.html
-INFO: [HLS 214-291] Loop 'CopyW2_ky' is marked as complete unroll implied by the pipeline pragma (src/srcnn.cpp:919:9)
-INFO: [HLS 214-291] Loop 'CopyW2_kx' is marked as complete unroll implied by the pipeline pragma (src/srcnn.cpp:921:11)
-INFO: [HLS 214-291] Loop 'Out_writey' is marked as complete unroll implied by the pipeline pragma (src/srcnn.cpp:732:3)
-INFO: [HLS 214-291] Loop 'Out_writex' is marked as complete unroll implied by the pipeline pragma (src/srcnn.cpp:734:5)
-INFO: [HLS 214-291] Loop 'win5x5_read_pix' is marked as complete unroll implied by the pipeline pragma (src/srcnn.cpp:635:4)
-INFO: [HLS 214-291] Loop 'Shift_win5x5_row' is marked as complete unroll implied by the pipeline pragma (src/srcnn.cpp:639:6)
-INFO: [HLS 214-291] Loop 'Shift_win5x5_col' is marked as complete unroll implied by the pipeline pragma (src/srcnn.cpp:643:8)
-INFO: [HLS 214-291] Loop 'ReadLBto5x5' is marked as complete unroll implied by the pipeline pragma (src/srcnn.cpp:651:6)
-INFO: [HLS 214-291] Loop 'Shift_lb2' is marked as complete unroll implied by the pipeline pragma (src/srcnn.cpp:661:6)
-INFO: [HLS 214-291] Loop 'Conv3_ky' is marked as complete unroll implied by the pipeline pragma (src/srcnn.cpp:677:8)
-INFO: [HLS 214-291] Loop 'Conv3_kx' is marked as complete unroll implied by the pipeline pragma (src/srcnn.cpp:680:10)
-INFO: [HLS 214-291] Loop 'Conv3_inv8_dot' is marked as complete unroll implied by the pipeline pragma (src/srcnn.cpp:684:12)
-INFO: [HLS 214-291] Loop 'Conv3_inner_dot' is marked as complete unroll implied by the pipeline pragma (src/srcnn.cpp:688:14)
+INFO: [HLS 214-291] Loop 'CopyW2_ky' is marked as complete unroll implied by the pipeline pragma (src/srcnn.cpp:935:9)
+INFO: [HLS 214-291] Loop 'CopyW2_kx' is marked as complete unroll implied by the pipeline pragma (src/srcnn.cpp:937:11)
+INFO: [HLS 214-291] Loop 'Out_writey' is marked as complete unroll implied by the pipeline pragma (src/srcnn.cpp:733:3)
+INFO: [HLS 214-291] Loop 'Out_writex' is marked as complete unroll implied by the pipeline pragma (src/srcnn.cpp:735:5)
+INFO: [HLS 214-291] Loop 'win5x5_read_pix' is marked as complete unroll implied by the pipeline pragma (src/srcnn.cpp:636:4)
+INFO: [HLS 214-291] Loop 'Shift_win5x5_row' is marked as complete unroll implied by the pipeline pragma (src/srcnn.cpp:640:6)
+INFO: [HLS 214-291] Loop 'Shift_win5x5_col' is marked as complete unroll implied by the pipeline pragma (src/srcnn.cpp:644:8)
+INFO: [HLS 214-291] Loop 'ReadLBto5x5' is marked as complete unroll implied by the pipeline pragma (src/srcnn.cpp:652:6)
+INFO: [HLS 214-291] Loop 'Shift_lb2' is marked as complete unroll implied by the pipeline pragma (src/srcnn.cpp:662:6)
+INFO: [HLS 214-291] Loop 'Conv3_ky' is marked as complete unroll implied by the pipeline pragma (src/srcnn.cpp:678:8)
+INFO: [HLS 214-291] Loop 'Conv3_kx' is marked as complete unroll implied by the pipeline pragma (src/srcnn.cpp:681:10)
+INFO: [HLS 214-291] Loop 'Conv3_inv8_dot' is marked as complete unroll implied by the pipeline pragma (src/srcnn.cpp:685:12)
+INFO: [HLS 214-291] Loop 'Conv3_inner_dot' is marked as complete unroll implied by the pipeline pragma (src/srcnn.cpp:689:14)
 INFO: [HLS 214-291] Loop 'Conv1_ky' is marked as complete unroll implied by the pipeline pragma (src/srcnn.cpp:355:9)
 INFO: [HLS 214-291] Loop 'Conv1_kx' is marked as complete unroll implied by the pipeline pragma (src/srcnn.cpp:358:11)
 INFO: [HLS 214-291] Loop 'Conv2_dot32' is marked as complete unroll implied by the pipeline pragma (src/srcnn.cpp:375:9)
@@ -119,16 +118,16 @@ INFO: [HLS 214-291] Loop 'VITIS_LOOP_183_1' is marked as complete unroll implied
 INFO: [HLS 214-291] Loop 'VITIS_LOOP_185_2' is marked as complete unroll implied by the pipeline pragma (src/srcnn.cpp:185:20)
 INFO: [HLS 214-291] Loop 'InputTileHread' is marked as complete unroll implied by the pipeline pragma (src/srcnn.cpp:103:3)
 INFO: [HLS 214-291] Loop 'InputTileWread' is marked as complete unroll implied by the pipeline pragma (src/srcnn.cpp:109:5)
-INFO: [HLS 214-186] Unrolling loop 'CopyW2_ky' (src/srcnn.cpp:919:9) in function 'srcnn' completely with a factor of 1 (src/srcnn.cpp:752:0)
-INFO: [HLS 214-186] Unrolling loop 'CopyW2_kx' (src/srcnn.cpp:921:11) in function 'srcnn' completely with a factor of 1 (src/srcnn.cpp:752:0)
-INFO: [HLS 214-186] Unrolling loop 'Shift_win5x5_row' (src/srcnn.cpp:639:6) in function 'conv3_stream' completely with a factor of 5 (src/srcnn.cpp:605:0)
-INFO: [HLS 214-186] Unrolling loop 'Shift_win5x5_col' (src/srcnn.cpp:643:8) in function 'conv3_stream' completely with a factor of 4 (src/srcnn.cpp:605:0)
-INFO: [HLS 214-186] Unrolling loop 'ReadLBto5x5' (src/srcnn.cpp:651:6) in function 'conv3_stream' completely with a factor of 4 (src/srcnn.cpp:605:0)
-INFO: [HLS 214-186] Unrolling loop 'Shift_lb2' (src/srcnn.cpp:661:6) in function 'conv3_stream' completely with a factor of 3 (src/srcnn.cpp:605:0)
-INFO: [HLS 214-186] Unrolling loop 'Conv3_ky' (src/srcnn.cpp:677:8) in function 'conv3_stream' completely with a factor of 5 (src/srcnn.cpp:605:0)
-INFO: [HLS 214-186] Unrolling loop 'Conv3_kx' (src/srcnn.cpp:680:10) in function 'conv3_stream' completely with a factor of 5 (src/srcnn.cpp:605:0)
-INFO: [HLS 214-186] Unrolling loop 'Conv3_inv8_dot' (src/srcnn.cpp:684:12) in function 'conv3_stream' completely with a factor of 4 (src/srcnn.cpp:605:0)
-INFO: [HLS 214-186] Unrolling loop 'Conv3_inner_dot' (src/srcnn.cpp:688:14) in function 'conv3_stream' completely with a factor of 8 (src/srcnn.cpp:605:0)
+INFO: [HLS 214-186] Unrolling loop 'CopyW2_ky' (src/srcnn.cpp:935:9) in function 'srcnn' completely with a factor of 1 (src/srcnn.cpp:753:0)
+INFO: [HLS 214-186] Unrolling loop 'CopyW2_kx' (src/srcnn.cpp:937:11) in function 'srcnn' completely with a factor of 1 (src/srcnn.cpp:753:0)
+INFO: [HLS 214-186] Unrolling loop 'Shift_win5x5_row' (src/srcnn.cpp:640:6) in function 'conv3_stream' completely with a factor of 5 (src/srcnn.cpp:605:0)
+INFO: [HLS 214-186] Unrolling loop 'Shift_win5x5_col' (src/srcnn.cpp:644:8) in function 'conv3_stream' completely with a factor of 4 (src/srcnn.cpp:605:0)
+INFO: [HLS 214-186] Unrolling loop 'ReadLBto5x5' (src/srcnn.cpp:652:6) in function 'conv3_stream' completely with a factor of 4 (src/srcnn.cpp:605:0)
+INFO: [HLS 214-186] Unrolling loop 'Shift_lb2' (src/srcnn.cpp:662:6) in function 'conv3_stream' completely with a factor of 3 (src/srcnn.cpp:605:0)
+INFO: [HLS 214-186] Unrolling loop 'Conv3_ky' (src/srcnn.cpp:678:8) in function 'conv3_stream' completely with a factor of 5 (src/srcnn.cpp:605:0)
+INFO: [HLS 214-186] Unrolling loop 'Conv3_kx' (src/srcnn.cpp:681:10) in function 'conv3_stream' completely with a factor of 5 (src/srcnn.cpp:605:0)
+INFO: [HLS 214-186] Unrolling loop 'Conv3_inv8_dot' (src/srcnn.cpp:685:12) in function 'conv3_stream' completely with a factor of 4 (src/srcnn.cpp:605:0)
+INFO: [HLS 214-186] Unrolling loop 'Conv3_inner_dot' (src/srcnn.cpp:689:14) in function 'conv3_stream' completely with a factor of 8 (src/srcnn.cpp:605:0)
 INFO: [HLS 214-188] Unrolling loop 'Init_Conv2Out_biases' (src/srcnn.cpp:340:7) in function 'conv1conv2_from_windows' partially with a factor of 8 (src/srcnn.cpp:316:0)
 INFO: [HLS 214-186] Unrolling loop 'Conv1_ky' (src/srcnn.cpp:355:9) in function 'conv1conv2_from_windows' completely with a factor of 9 (src/srcnn.cpp:316:0)
 INFO: [HLS 214-186] Unrolling loop 'Conv1_kx' (src/srcnn.cpp:358:11) in function 'conv1conv2_from_windows' completely with a factor of 9 (src/srcnn.cpp:316:0)
@@ -141,84 +140,78 @@ INFO: [HLS 214-186] Unrolling loop 'Shift_lb1' (src/srcnn.cpp:172:5) in function
 INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_183_1' (src/srcnn.cpp:183:20) in function 'make_win9' completely with a factor of 9 (src/srcnn.cpp:123:0)
 INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_185_2' (src/srcnn.cpp:185:20) in function 'make_win9' completely with a factor of 9 (src/srcnn.cpp:123:0)
 INFO: [HLS 214-178] Inlining function 'clampi(int, int, int)' into 'conv3_stream(hls::stream<conv2_pixel_t, 0>&, hls::stream<float, 0>&, float (*) [32][5][5], float*, int, int, int, int)' (src/srcnn.cpp:605:0)
-INFO: [HLS 214-248] Applying array_partition to '_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b3_loc': Complete partitioning on dimension 1. (src/srcnn.cpp:811:0)
-INFO: [HLS 214-248] Applying array_partition to '_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc': Complete partitioning on dimension 1. (src/srcnn.cpp:809:0)
-INFO: [HLS 214-248] Applying array_partition to '_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc': Complete partitioning on dimension 1. (src/srcnn.cpp:807:0)
-INFO: [HLS 214-248] Applying array_partition to '_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc': Cyclic partitioning with factor 8 on dimension 2. (src/srcnn.cpp:810:0)
-INFO: [HLS 214-248] Applying array_partition to '_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w2_loc': Cyclic partitioning with factor 8 on dimension 1. (src/srcnn.cpp:808:0)
-INFO: [HLS 214-248] Applying array_partition to '_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc': Complete partitioning on dimension 4. (src/srcnn.cpp:806:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b3_loc': Complete partitioning on dimension 1. (src/srcnn.cpp:812:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc': Complete partitioning on dimension 1. (src/srcnn.cpp:810:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc': Complete partitioning on dimension 1. (src/srcnn.cpp:808:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc': Complete partitioning on dimension 2. Complete partitioning on dimension 4. (src/srcnn.cpp:811:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w2_loc': Cyclic partitioning with factor 8 on dimension 1. (src/srcnn.cpp:809:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc': Complete partitioning on dimension 3. Complete partitioning on dimension 4. (src/srcnn.cpp:807:0)
 INFO: [HLS 214-248] Applying array_partition to 'lb1': Complete partitioning on dimension 1. (src/srcnn.cpp:131:11)
 INFO: [HLS 214-248] Applying array_partition to 'acc2': Cyclic partitioning with factor 8 on dimension 1. (src/srcnn.cpp:335:15)
-INFO: [HLS 214-248] Applying array_partition to 'lb2': Complete partitioning on dimension 1. (src/srcnn.cpp:620:16)
-INFO: [HLS 214-248] Applying array_partition to 'win2': Complete partitioning on dimension 2. (src/srcnn.cpp:625:16)
-WARNING: [HLS 214-322] Unsuported scalar variable on pragma 'Resource/Bind_Storage', ignore it. (src/srcnn.cpp:871:9)
-WARNING: [HLS 214-322] Unsuported scalar variable on pragma 'Resource/Bind_Storage', ignore it. (src/srcnn.cpp:872:9)
-WARNING: [HLS 214-322] Unsuported scalar variable on pragma 'Resource/Bind_Storage', ignore it. (src/srcnn.cpp:873:9)
+INFO: [HLS 214-248] Applying array_partition to 'lb2': Complete partitioning on dimension 1. (src/srcnn.cpp:621:18)
+INFO: [HLS 214-248] Applying array_partition to 'win2': Complete partitioning on dimension 2. (src/srcnn.cpp:626:16)
+WARNING: [HLS 214-322] Unsuported scalar variable on pragma 'Resource/Bind_Storage', ignore it. (src/srcnn.cpp:887:9)
+WARNING: [HLS 214-322] Unsuported scalar variable on pragma 'Resource/Bind_Storage', ignore it. (src/srcnn.cpp:888:9)
+WARNING: [HLS 214-322] Unsuported scalar variable on pragma 'Resource/Bind_Storage', ignore it. (src/srcnn.cpp:889:9)
 INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 's_win' with compact=bit mode in 2593-bits (src/srcnn.cpp:408:22)
-INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 's_f2' with compact=bit mode in 1024-bits (src/srcnn.cpp:968:34)
-INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=3' for array 'srcnn(float (*) [255][255], float (*) [1][9][9], float*, float (*) [64][1][1], float*, float (*) [32][5][5], float*, float (*) [255][255], int)::w1_loc' due to pipeline pragma (src/srcnn.cpp:349:9)
-INFO: [HLS 214-248] Applying array_partition to '_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_8': Complete partitioning on dimension 3.
-INFO: [HLS 214-248] Applying array_partition to '_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_7': Complete partitioning on dimension 3.
-INFO: [HLS 214-248] Applying array_partition to '_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_6': Complete partitioning on dimension 3.
-INFO: [HLS 214-248] Applying array_partition to '_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_5': Complete partitioning on dimension 3.
-INFO: [HLS 214-248] Applying array_partition to '_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_4': Complete partitioning on dimension 3.
-INFO: [HLS 214-248] Applying array_partition to '_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_3': Complete partitioning on dimension 3.
-INFO: [HLS 214-248] Applying array_partition to '_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_2': Complete partitioning on dimension 3.
-INFO: [HLS 214-248] Applying array_partition to '_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_1': Complete partitioning on dimension 3.
-INFO: [HLS 214-248] Applying array_partition to '_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0': Complete partitioning on dimension 3.
-INFO: [HLS 214-115] Multiple burst writes of variable length and bit width 32 in loop 'Out_writex'(src/srcnn.cpp:734:5) has been inferred on bundle 'gmem_out'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/srcnn.cpp:734:5)
-INFO: [HLS 214-115] Multiple burst reads of length 800 and bit width 32 in loop 'CopyW3_inft'(src/srcnn.cpp:932:5) has been inferred on bundle 'gmem_w3'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/srcnn.cpp:932:5)
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 44.364 seconds; current allocated memory: 95.477 MB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.005 seconds; current allocated memory: 95.520 MB.
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 's_f2' with compact=bit mode in 1024-bits (src/srcnn.cpp:984:34)
+INFO: [HLS 214-115] Multiple burst writes of variable length and bit width 32 in loop 'Out_writex'(src/srcnn.cpp:735:5) has been inferred on bundle 'gmem_out'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/srcnn.cpp:735:5)
+INFO: [HLS 214-115] Multiple burst reads of length 800 and bit width 32 in loop 'CopyW3_inft'(src/srcnn.cpp:948:5) has been inferred on bundle 'gmem_w3'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/srcnn.cpp:948:5)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 46.285 seconds; current allocated memory: 94.855 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.005 seconds; current allocated memory: 94.879 MB.
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 4 seconds. CPU system time: 0 seconds. Elapsed time: 3.49 seconds; current allocated memory: 116.621 MB.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 4 seconds. CPU system time: 0 seconds. Elapsed time: 3.728 seconds; current allocated memory: 116.395 MB.
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 2.632 seconds; current allocated memory: 131.297 MB.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 3.194 seconds; current allocated memory: 132.516 MB.
 INFO: [XFORM 203-510] Pipelining loop 'Init_Conv2Out_biases' (src/srcnn.cpp:340) in function 'conv1conv2_from_windows' automatically.
-INFO: [XFORM 203-510] Pipelining loop 'CopyW1_kx' (src/srcnn.cpp:904) in function 'srcnn' automatically.
-INFO: [XFORM 203-510] Pipelining loop 'CopyW3_kx' (src/srcnn.cpp:938) in function 'srcnn' automatically.
-INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'store_stream' (src/srcnn.cpp:724:3).
+INFO: [XFORM 203-510] Pipelining loop 'CopyW1_kx' (src/srcnn.cpp:920) in function 'srcnn' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'CopyW3_kx' (src/srcnn.cpp:954) in function 'srcnn' automatically.
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'store_stream' (src/srcnn.cpp:725:3).
 INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'load_tile_to_stream' (src/srcnn.cpp:92:3).
 INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'conv3_stream' (src/srcnn.cpp:85:4).
-WARNING: [HLS 200-936] Cannot unroll loop 'Out_writey' (src/srcnn.cpp:732) in function 'store_stream': cannot completely unroll a loop with a variable trip count.
+WARNING: [HLS 200-936] Cannot unroll loop 'Out_writey' (src/srcnn.cpp:733) in function 'store_stream': cannot completely unroll a loop with a variable trip count.
 Resolution: For help on HLS 200-936 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-936.html
-WARNING: [HLS 200-936] Cannot unroll loop 'Out_writex' (src/srcnn.cpp:734) in function 'store_stream': cannot completely unroll a loop with a variable trip count.
+WARNING: [HLS 200-936] Cannot unroll loop 'Out_writex' (src/srcnn.cpp:735) in function 'store_stream': cannot completely unroll a loop with a variable trip count.
 Resolution: For help on HLS 200-936 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-936.html
 WARNING: [HLS 200-936] Cannot unroll loop 'InputTileHread' (src/srcnn.cpp:103) in function 'load_tile_to_stream': cannot completely unroll a loop with a variable trip count.
 Resolution: For help on HLS 200-936 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-936.html
 WARNING: [HLS 200-936] Cannot unroll loop 'InputTileWread' (src/srcnn.cpp:109) in function 'load_tile_to_stream': cannot completely unroll a loop with a variable trip count.
 Resolution: For help on HLS 200-936 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-936.html
-WARNING: [HLS 200-936] Cannot unroll loop 'win5x5_read_pix' (src/srcnn.cpp:635) in function 'conv3_stream': cannot completely unroll a loop with a variable trip count.
+WARNING: [HLS 200-936] Cannot unroll loop 'win5x5_read_pix' (src/srcnn.cpp:636) in function 'conv3_stream': cannot completely unroll a loop with a variable trip count.
 Resolution: For help on HLS 200-936 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-936.html
-INFO: [XFORM 203-102] Partitioning array 'win2' (src/srcnn.cpp:625) in dimension 2 automatically.
-INFO: [XFORM 203-102] Partitioning array 'win2.1' (src/srcnn.cpp:625) in dimension 2 automatically.
-INFO: [XFORM 203-102] Partitioning array 'win2.2' (src/srcnn.cpp:625) in dimension 2 automatically.
-INFO: [XFORM 203-102] Partitioning array 'win2.3' (src/srcnn.cpp:625) in dimension 2 automatically.
-INFO: [XFORM 203-102] Partitioning array 'win2.4' (src/srcnn.cpp:625) in dimension 2 automatically.
-WARNING: [XFORM 203-713] Disabling dataflow-in-loop for loop IT_w0 at src/srcnn.cpp:964 in function 'srcnn': cannot recognize loop index variable. The generated RTL may not be functionally correct. Please convert it into a for loop with a fixed iteration count.
+INFO: [XFORM 203-102] Partitioning array 'lb2' (src/srcnn.cpp:621) in dimension 2 automatically.
+INFO: [XFORM 203-102] Partitioning array 'lb2.1' (src/srcnn.cpp:621) in dimension 2 automatically.
+INFO: [XFORM 203-102] Partitioning array 'lb2.2' (src/srcnn.cpp:621) in dimension 2 automatically.
+INFO: [XFORM 203-102] Partitioning array 'lb2.3' (src/srcnn.cpp:621) in dimension 2 automatically.
+INFO: [XFORM 203-102] Partitioning array 'win2' (src/srcnn.cpp:626) in dimension 2 automatically.
+INFO: [XFORM 203-102] Partitioning array 'win2.1' (src/srcnn.cpp:626) in dimension 2 automatically.
+INFO: [XFORM 203-102] Partitioning array 'win2.2' (src/srcnn.cpp:626) in dimension 2 automatically.
+INFO: [XFORM 203-102] Partitioning array 'win2.3' (src/srcnn.cpp:626) in dimension 2 automatically.
+INFO: [XFORM 203-102] Partitioning array 'win2.4' (src/srcnn.cpp:626) in dimension 2 automatically.
+WARNING: [XFORM 203-713] Disabling dataflow-in-loop for loop IT_w0 at src/srcnn.cpp:980 in function 'srcnn': cannot recognize loop index variable. The generated RTL may not be functionally correct. Please convert it into a for loop with a fixed iteration count.
 INFO: [XFORM 203-712] Applying dataflow to function 'conv1conv2_stream4' (src/srcnn.cpp:409:7), detected/extracted 3 process function(s): 
 	 'entry_proc'
 	 'make_win97'
 	 'conv1conv2_from_windows8'.
-INFO: [XFORM 203-712] Applying dataflow to function 'dataflow_in_loop_IT_w0.1' (src/srcnn.cpp:967:28), detected/extracted 6 process function(s): 
+INFO: [XFORM 203-712] Applying dataflow to function 'dataflow_in_loop_IT_w0.1' (src/srcnn.cpp:983:28), detected/extracted 6 process function(s): 
 	 'entry_proc16'
 	 'dataflow_in_loop_IT_w0.1_Block_newFuncRoot2_proc2'
 	 'load_tile_to_stream3'
 	 'conv1conv2_stream4'
 	 'conv3_stream5'
 	 'store_stream6'.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (src/srcnn.cpp:703:10) to (src/srcnn.cpp:635:4) in function 'conv3_stream5'... converting 3 basic blocks.
-INFO: [XFORM 203-11] Balancing expressions in function 'srcnn' (src/srcnn.cpp:746:9)...3 expression(s) balanced.
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 18 seconds. CPU system time: 0 seconds. Elapsed time: 17.774 seconds; current allocated memory: 174.164 MB.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (src/srcnn.cpp:704:10) to (src/srcnn.cpp:636:4) in function 'conv3_stream5'... converting 3 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'srcnn' (src/srcnn.cpp:747:9)...3 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 19 seconds. CPU system time: 0 seconds. Elapsed time: 19.597 seconds; current allocated memory: 177.441 MB.
 WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 144 for loop 'win9x9_read_pix' in function 'make_win97'.
 WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 16 for loop 'win5x5_read_pix' in function 'conv3_stream5'.
-INFO: [XFORM 203-541] Flattening a loop nest 'CopyW1_ky' (src/srcnn.cpp:901:7) in function 'srcnn'.
-WARNING: [HLS 200-960] Cannot flatten loop 'CopyW1_outft' (src/srcnn.cpp:897:5) in function 'srcnn' the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
+INFO: [XFORM 203-541] Flattening a loop nest 'CopyW1_ky' (src/srcnn.cpp:917:7) in function 'srcnn'.
+WARNING: [HLS 200-960] Cannot flatten loop 'CopyW1_outft' (src/srcnn.cpp:913:5) in function 'srcnn' the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
 Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-960.html
-WARNING: [HLS 200-960] Cannot flatten loop 'CopyW2_outft' (src/srcnn.cpp:912:5) in function 'srcnn' the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
+WARNING: [HLS 200-960] Cannot flatten loop 'CopyW2_outft' (src/srcnn.cpp:928:5) in function 'srcnn' the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
 Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-960.html
-INFO: [XFORM 203-541] Flattening a loop nest 'CopyW3_ky' (src/srcnn.cpp:935:7) in function 'srcnn'.
-INFO: [XFORM 203-541] Flattening a loop nest 'CopyW3_inft' (src/srcnn.cpp:932:5) in function 'srcnn'.
+INFO: [XFORM 203-541] Flattening a loop nest 'CopyW3_ky' (src/srcnn.cpp:951:7) in function 'srcnn'.
+INFO: [XFORM 203-541] Flattening a loop nest 'CopyW3_inft' (src/srcnn.cpp:948:5) in function 'srcnn'.
 WARNING: [HLS 200-960] Cannot flatten loop 'Conv12_ox' (src/srcnn.cpp:330:5) in function 'conv1conv2_from_windows8' more than one sub loop.
 Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-960.html
 INFO: [XFORM 203-541] Flattening a loop nest 'Conv12_oy' (src/srcnn.cpp:328:3) in function 'conv1conv2_from_windows8'.
@@ -227,7 +220,7 @@ WARNING: [HLS 200-1449] Process conv1conv2_from_windows8 has both a predecessor 
 WARNING: [HLS 200-1449] Process load_tile_to_stream3 has both a predecessor and reads an input from its caller (see the GUI dataflow viewer). This may lead to lower throughput. Consider copying this input via a predecessor process.
 WARNING: [HLS 200-1449] Process conv1conv2_stream4 has both a predecessor and reads an input from its caller (see the GUI dataflow viewer). This may lead to lower throughput. Consider copying this input via a predecessor process.
 WARNING: [HLS 200-1449] Process conv3_stream5 has both a predecessor and reads an input from its caller (see the GUI dataflow viewer). This may lead to lower throughput. Consider copying this input via a predecessor process.
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 8 seconds. CPU system time: 0 seconds. Elapsed time: 8.646 seconds; current allocated memory: 379.352 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 10 seconds. CPU system time: 0 seconds. Elapsed time: 10.111 seconds; current allocated memory: 389.348 MB.
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'srcnn' ...
 WARNING: [SYN 201-103] Legalizing function name 'dataflow_in_loop_IT_w0.1_Block_newFuncRoot2_proc2' to 'dataflow_in_loop_IT_w0_1_Block_newFuncRoot2_proc2'.
@@ -239,13 +232,13 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'CopyW1_ky_CopyW1_kx'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 11, loop 'CopyW1_ky_CopyW1_kx'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 3.453 seconds; current allocated memory: 394.473 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 4 seconds. CPU system time: 0 seconds. Elapsed time: 4.112 seconds; current allocated memory: 404.855 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.248 seconds; current allocated memory: 395.562 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.279 seconds; current allocated memory: 406.012 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'srcnn_Pipeline_CopyW2_inft' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -253,13 +246,13 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'CopyW2_inft'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 11, loop 'CopyW2_inft'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.276 seconds; current allocated memory: 395.660 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.297 seconds; current allocated memory: 406.066 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.183 seconds; current allocated memory: 395.664 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.21 seconds; current allocated memory: 406.070 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'srcnn_Pipeline_CopyW3_inft_CopyW3_ky_CopyW3_kx' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -267,37 +260,37 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'CopyW3_inft_CopyW3_ky_CopyW3_kx'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'CopyW3_inft_CopyW3_ky_CopyW3_kx'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.226 seconds; current allocated memory: 395.691 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.591 seconds; current allocated memory: 412.906 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.107 seconds; current allocated memory: 395.719 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.251 seconds; current allocated memory: 412.930 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'entry_proc16' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.096 seconds; current allocated memory: 395.742 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.236 seconds; current allocated memory: 412.949 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.073 seconds; current allocated memory: 395.773 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.075 seconds; current allocated memory: 412.980 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'dataflow_in_loop_IT_w0_1_Block_newFuncRoot2_proc2' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.085 seconds; current allocated memory: 395.773 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.083 seconds; current allocated memory: 412.980 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.075 seconds; current allocated memory: 395.773 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.075 seconds; current allocated memory: 412.980 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'load_tile_to_stream3' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -305,25 +298,25 @@ INFO: [SCHED 204-11] Starting scheduling ...
 WARNING: [SCHED 204-65] Unable to satisfy pipeline directive for function 'load_tile_to_stream3': contains subloop(s) that are not unrolled.
 WARNING: [SCHED 204-65] Unable to satisfy pipeline directive for function 'load_tile_to_stream3': contains subloop(s) that are not unrolled.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.291 seconds; current allocated memory: 395.848 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.31 seconds; current allocated memory: 413.121 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.213 seconds; current allocated memory: 395.859 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.226 seconds; current allocated memory: 413.133 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'entry_proc' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.108 seconds; current allocated memory: 395.859 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.116 seconds; current allocated memory: 413.137 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 395.883 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.081 seconds; current allocated memory: 413.137 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'make_win97_Pipeline_win9x9_read_pix' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -331,25 +324,25 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'win9x9_read_pix'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'win9x9_read_pix'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.352 seconds; current allocated memory: 399.020 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.363 seconds; current allocated memory: 414.020 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.179 seconds; current allocated memory: 399.031 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.19 seconds; current allocated memory: 414.035 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'make_win97' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.223 seconds; current allocated memory: 399.137 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.229 seconds; current allocated memory: 414.172 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.106 seconds; current allocated memory: 399.359 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.101 seconds; current allocated memory: 414.289 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'conv1conv2_from_windows8_Pipeline_Init_Conv2Out_biases' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -357,33 +350,33 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'Init_Conv2Out_biases'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'Init_Conv2Out_biases'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.165 seconds; current allocated memory: 399.570 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.164 seconds; current allocated memory: 414.508 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.093 seconds; current allocated memory: 399.613 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.097 seconds; current allocated memory: 414.566 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'conv1conv2_from_windows8_Pipeline_Conv1_outftmaps' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'Conv1_outftmaps'.
-WARNING: [HLS 200-880] The II Violation in module 'conv1conv2_from_windows8_Pipeline_Conv1_outftmaps' (loop 'Conv1_outftmaps'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('add60151_i_write_ln347', src/srcnn.cpp:347->src/srcnn.cpp:414->src/srcnn.cpp:983->src/srcnn.cpp:969) of variable 'add_i', src/srcnn.cpp:377->src/srcnn.cpp:414->src/srcnn.cpp:983->src/srcnn.cpp:969 on local variable 'add60151_i' and 'load' operation ('add60151_i_load', src/srcnn.cpp:377->src/srcnn.cpp:414->src/srcnn.cpp:983->src/srcnn.cpp:969) on local variable 'add60151_i'.
+WARNING: [HLS 200-880] The II Violation in module 'conv1conv2_from_windows8_Pipeline_Conv1_outftmaps' (loop 'Conv1_outftmaps'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('add60151_i_write_ln347', src/srcnn.cpp:347->src/srcnn.cpp:414->src/srcnn.cpp:999->src/srcnn.cpp:985) of variable 'add_i', src/srcnn.cpp:377->src/srcnn.cpp:414->src/srcnn.cpp:999->src/srcnn.cpp:985 on local variable 'add60151_i' and 'load' operation ('add60151_i_load', src/srcnn.cpp:377->src/srcnn.cpp:414->src/srcnn.cpp:999->src/srcnn.cpp:985) on local variable 'add60151_i'.
 Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
-WARNING: [HLS 200-880] The II Violation in module 'conv1conv2_from_windows8_Pipeline_Conv1_outftmaps' (loop 'Conv1_outftmaps'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('add60151_i_write_ln347', src/srcnn.cpp:347->src/srcnn.cpp:414->src/srcnn.cpp:983->src/srcnn.cpp:969) of variable 'add_i', src/srcnn.cpp:377->src/srcnn.cpp:414->src/srcnn.cpp:983->src/srcnn.cpp:969 on local variable 'add60151_i' and 'load' operation ('add60151_i_load', src/srcnn.cpp:377->src/srcnn.cpp:414->src/srcnn.cpp:983->src/srcnn.cpp:969) on local variable 'add60151_i'.
+WARNING: [HLS 200-880] The II Violation in module 'conv1conv2_from_windows8_Pipeline_Conv1_outftmaps' (loop 'Conv1_outftmaps'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('add60151_i_write_ln347', src/srcnn.cpp:347->src/srcnn.cpp:414->src/srcnn.cpp:999->src/srcnn.cpp:985) of variable 'add_i', src/srcnn.cpp:377->src/srcnn.cpp:414->src/srcnn.cpp:999->src/srcnn.cpp:985 on local variable 'add60151_i' and 'load' operation ('add60151_i_load', src/srcnn.cpp:377->src/srcnn.cpp:414->src/srcnn.cpp:999->src/srcnn.cpp:985) on local variable 'add60151_i'.
 Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-880.html
-WARNING: [HLS 200-885] The II Violation in module 'conv1conv2_from_windows8_Pipeline_Conv1_outftmaps' (loop 'Conv1_outftmaps'): Unable to schedule 'load' operation ('srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_931', src/srcnn.cpp:377->src/srcnn.cpp:414->src/srcnn.cpp:983->src/srcnn.cpp:969) on array 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_15' due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_15'.
+WARNING: [HLS 200-885] The II Violation in module 'conv1conv2_from_windows8_Pipeline_Conv1_outftmaps' (loop 'Conv1_outftmaps'): Unable to schedule 'load' operation ('srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_185', src/srcnn.cpp:377->src/srcnn.cpp:414->src/srcnn.cpp:999->src/srcnn.cpp:985) on array 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_17' due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_17'.
 Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-885.html
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 4, Depth = 347, loop 'Conv1_outftmaps'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 6 seconds. CPU system time: 0 seconds. Elapsed time: 6.137 seconds; current allocated memory: 408.051 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 6 seconds. CPU system time: 0 seconds. Elapsed time: 6.196 seconds; current allocated memory: 421.746 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 4 seconds. CPU system time: 0 seconds. Elapsed time: 4.104 seconds; current allocated memory: 408.848 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 4 seconds. CPU system time: 0 seconds. Elapsed time: 4.183 seconds; current allocated memory: 422.902 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'conv1conv2_from_windows8_Pipeline_Push_conv2pix_out' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -391,38 +384,38 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'Push_conv2pix_out'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 4, Final II = 4, Depth = 6, loop 'Push_conv2pix_out'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.059 seconds; current allocated memory: 409.840 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.076 seconds; current allocated memory: 424.375 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.158 seconds; current allocated memory: 410.688 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.167 seconds; current allocated memory: 424.664 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'conv1conv2_from_windows8' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [HLS 200-486] Changing DSP latency (root=add_ln328) to 3 in order to utilize available DSP registers.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.542 seconds; current allocated memory: 415.039 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.573 seconds; current allocated memory: 429.277 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.574 seconds; current allocated memory: 415.945 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.612 seconds; current allocated memory: 430.156 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'conv1conv2_stream4' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.388 seconds; current allocated memory: 416.324 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.393 seconds; current allocated memory: 430.441 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.181 seconds; current allocated memory: 417.027 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.188 seconds; current allocated memory: 430.953 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'conv3_stream5' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -430,17 +423,13 @@ INFO: [SCHED 204-11] Starting scheduling ...
 WARNING: [SCHED 204-65] Unable to satisfy pipeline directive for function 'conv3_stream5': contains subloop(s) that are not unrolled.
 WARNING: [SCHED 204-65] Unable to satisfy pipeline directive for function 'conv3_stream5': contains subloop(s) that are not unrolled.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 80 seconds. CPU system time: 1 seconds. Elapsed time: 79.58 seconds; current allocated memory: 506.371 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 80 seconds. CPU system time: 1 seconds. Elapsed time: 80.028 seconds; current allocated memory: 522.594 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
-WARNING: [BIND 205-102] The specified resource core for memory 'lb2_1' will be ignored if a simpler one can be used.
-WARNING: [BIND 205-102] The specified resource core for memory 'lb2_2' will be ignored if a simpler one can be used.
-WARNING: [BIND 205-102] The specified resource core for memory 'lb2_3' will be ignored if a simpler one can be used.
-WARNING: [BIND 205-102] The specified resource core for memory 'lb2' will be ignored if a simpler one can be used.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 11 seconds. CPU system time: 0 seconds. Elapsed time: 12.02 seconds; current allocated memory: 506.371 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 12 seconds. CPU system time: 0 seconds. Elapsed time: 12.869 seconds; current allocated memory: 522.594 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'store_stream6' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -448,50 +437,50 @@ INFO: [SCHED 204-11] Starting scheduling ...
 WARNING: [SCHED 204-65] Unable to satisfy pipeline directive for function 'store_stream6': contains subloop(s) that are not unrolled.
 WARNING: [SCHED 204-65] Unable to satisfy pipeline directive for function 'store_stream6': contains subloop(s) that are not unrolled.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 4 seconds. CPU system time: 0 seconds. Elapsed time: 3.368 seconds; current allocated memory: 506.371 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 3.462 seconds; current allocated memory: 522.594 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.196 seconds; current allocated memory: 506.371 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.19 seconds; current allocated memory: 522.594 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'dataflow_in_loop_IT_w0_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
 WARNING: [HLS 200-1020] Increasing the depth of FIFO start_for_store_stream6_U0 (from entry_proc16_U0 to store_stream6_U0) to 5 to improve performance and/or avoid deadlocks.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.168 seconds; current allocated memory: 506.371 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.174 seconds; current allocated memory: 522.594 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.357 seconds; current allocated memory: 506.371 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.381 seconds; current allocated memory: 522.594 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'srcnn' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.007 seconds; current allocated memory: 506.371 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.127 seconds; current allocated memory: 522.594 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.81 seconds; current allocated memory: 506.371 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.876 seconds; current allocated memory: 522.594 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'srcnn_Pipeline_CopyW1_ky_CopyW1_kx' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'srcnn_Pipeline_CopyW1_ky_CopyW1_kx' pipeline 'CopyW1_ky_CopyW1_kx' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Finished creating RTL model for 'srcnn_Pipeline_CopyW1_ky_CopyW1_kx'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.858 seconds; current allocated memory: 506.371 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.921 seconds; current allocated memory: 522.594 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'srcnn_Pipeline_CopyW2_inft' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'srcnn_Pipeline_CopyW2_inft' pipeline 'CopyW2_inft' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Finished creating RTL model for 'srcnn_Pipeline_CopyW2_inft'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.586 seconds; current allocated memory: 506.371 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.593 seconds; current allocated memory: 522.594 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'srcnn_Pipeline_CopyW3_inft_CopyW3_ky_CopyW3_kx' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -508,48 +497,48 @@ WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_CopyW3_inft_C
 WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_CopyW3_inft_CopyW3_ky_CopyW3_kx/m_axi_gmem_w3_ARQOS' to 0.
 WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_CopyW3_inft_CopyW3_ky_CopyW3_kx/m_axi_gmem_w3_ARREGION' to 0.
 WARNING: [RTGEN 206-101] Setting dangling out port 'srcnn_Pipeline_CopyW3_inft_CopyW3_ky_CopyW3_kx/m_axi_gmem_w3_ARUSER' to 0.
+INFO: [RTGEN 206-104] Estimated max fanout for 'srcnn_Pipeline_CopyW3_inft_CopyW3_ky_CopyW3_kx' is 5600 from HDL expression: ((1'b0 == ap_block_pp0_stage0) & (ap_enable_reg_pp0_iter2 == 1'b1))
 INFO: [RTGEN 206-100] Finished creating RTL model for 'srcnn_Pipeline_CopyW3_inft_CopyW3_ky_CopyW3_kx'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.455 seconds; current allocated memory: 506.371 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.576 seconds; current allocated memory: 527.516 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'entry_proc16' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'entry_proc16'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.277 seconds; current allocated memory: 506.660 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.83 seconds; current allocated memory: 539.715 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'dataflow_in_loop_IT_w0_1_Block_newFuncRoot2_proc2' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'dataflow_in_loop_IT_w0_1_Block_newFuncRoot2_proc2'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.107 seconds; current allocated memory: 506.805 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.112 seconds; current allocated memory: 539.715 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'load_tile_to_stream3' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'load_tile_to_stream3'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.133 seconds; current allocated memory: 507.832 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.139 seconds; current allocated memory: 539.715 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'entry_proc' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'entry_proc'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.304 seconds; current allocated memory: 509.578 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.297 seconds; current allocated memory: 539.863 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'make_win97_Pipeline_win9x9_read_pix' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-WARNING: [HLS 200-2049] Adding the rewind optimization to the pipelined process 'win9x9_read_pix' with inout ports inside a dataflow region can result in the creation of loop-carried dependencies and errors. Use caution when adding the rewind optimization to such loops.
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'make_win97_Pipeline_win9x9_read_pix' pipeline 'win9x9_read_pix' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Finished creating RTL model for 'make_win97_Pipeline_win9x9_read_pix'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.195 seconds; current allocated memory: 512.789 MB.
+INFO: [RTMG 210-278] Implementing memory 'srcnn_make_win97_Pipeline_win9x9_read_pix_lb1_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.202 seconds; current allocated memory: 543.293 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'make_win97' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Generating core module 'mul_9ns_9ns_17_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'make_win97'.
-INFO: [RTMG 210-278] Implementing memory 'srcnn_make_win97_lb1_RAM_2P_BRAM_1R1W' using block RAMs.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.595 seconds; current allocated memory: 519.887 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.586 seconds; current allocated memory: 550.586 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'conv1conv2_from_windows8_Pipeline_Init_Conv2Out_biases' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Generating core module 'mux_25_5_32_1_1': 8 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'conv1conv2_from_windows8_Pipeline_Init_Conv2Out_biases'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.205 seconds; current allocated memory: 521.473 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.206 seconds; current allocated memory: 550.941 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'conv1conv2_from_windows8_Pipeline_Conv1_outftmaps' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -560,14 +549,14 @@ INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 in
 INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 29 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mux_64_6_32_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'conv1conv2_from_windows8_Pipeline_Conv1_outftmaps'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 1.528 seconds; current allocated memory: 558.527 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.551 seconds; current allocated memory: 588.789 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'conv1conv2_from_windows8_Pipeline_Push_conv2pix_out' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv1conv2_from_windows8_Pipeline_Push_conv2pix_out' pipeline 'Push_conv2pix_out' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 2 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'conv1conv2_from_windows8_Pipeline_Push_conv2pix_out'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 2.974 seconds; current allocated memory: 578.449 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 3.011 seconds; current allocated memory: 608.801 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'conv1conv2_from_windows8' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -576,7 +565,7 @@ INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 in
 INFO: [RTGEN 206-100] Finished creating RTL model for 'conv1conv2_from_windows8'.
 INFO: [RTMG 210-278] Implementing memory 'srcnn_conv1conv2_from_windows8_acc2_RAM_AUTO_1R1W' using auto RAMs.
 INFO: [RTMG 210-278] Implementing memory 'srcnn_conv1conv2_from_windows8_outpix_RAM_AUTO_1R1W' using auto RAMs.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.715 seconds; current allocated memory: 582.941 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.723 seconds; current allocated memory: 613.297 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'conv1conv2_stream4' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -586,23 +575,24 @@ INFO: [RTMG 210-285] Implementing FIFO 'tw_eff_loc_i_tmp_channel_U(srcnn_fifo_w8
 INFO: [RTMG 210-285] Implementing FIFO 's_win_i_U(srcnn_fifo_w2593_d64_A)' using Vivado Default RAMs.
 INFO: [RTMG 210-285] Implementing FIFO 'h0_c_U(srcnn_fifo_w9_d2_S)' using Shift Registers.
 INFO: [RTMG 210-285] Implementing FIFO 'tw_eff_loc_i_c_U(srcnn_fifo_w8_d2_S)' using Shift Registers.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.981 seconds; current allocated memory: 596.598 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.998 seconds; current allocated memory: 626.715 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'conv3_stream5' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 9 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 8 instance(s).
+INFO: [RTGEN 206-104] Estimated max fanout for 'conv3_stream5' is 6209 from HDL expression: (1'b1 == ap_CS_fsm_state5)
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 21 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 20 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mul_9ns_9ns_18_1_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mux_5_3_32_1_1': 320 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_5_3_32_1_1': 480 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'conv3_stream5'.
-INFO: [RTMG 210-278] Implementing memory 'srcnn_conv3_stream5_lb2_RAM_2P_BRAM_1R1W' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'srcnn_conv3_stream5_lb2_0_RAM_AUTO_1R1W' using auto RAMs.
 INFO: [RTMG 210-278] Implementing memory 'srcnn_conv3_stream5_win2_0_RAM_AUTO_1R1W' using auto RAMs.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 3.173 seconds; current allocated memory: 642.816 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 2.404 seconds; current allocated memory: 679.090 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'store_stream6' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'store_stream6'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 6 seconds. CPU system time: 4 seconds. Elapsed time: 10.765 seconds; current allocated memory: 792.637 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 7 seconds. CPU system time: 3 seconds. Elapsed time: 11.125 seconds; current allocated memory: 835.047 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'dataflow_in_loop_IT_w0_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -643,19 +633,19 @@ WARNING: [RTGEN 206-101] Setting dangling out port 'dataflow_in_loop_IT_w0_1/m_a
 INFO: [RTGEN 206-100] Finished creating RTL model for 'dataflow_in_loop_IT_w0_1'.
 INFO: [RTMG 210-285] Implementing FIFO 'output_ftmap_c_U(srcnn_fifo_w64_d6_S)' using Shift Registers.
 INFO: [RTMG 210-285] Implementing FIFO 'tw_eff_loc_i_c3_channel_U(srcnn_fifo_w8_d2_S_x)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 's_pix_U(srcnn_fifo_w32_d1024_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 's_pix_U(srcnn_fifo_w32_d512_A)' using Vivado Default RAMs.
 INFO: [RTMG 210-285] Implementing FIFO 'tw_eff_loc_i_c2_U(srcnn_fifo_w8_d2_S_x)' using Shift Registers.
 INFO: [RTMG 210-285] Implementing FIFO 'w0_c4_U(srcnn_fifo_w8_d3_S)' using Shift Registers.
 INFO: [RTMG 210-285] Implementing FIFO 'h0_c6_U(srcnn_fifo_w9_d2_S_x)' using Shift Registers.
 INFO: [RTMG 210-285] Implementing FIFO 's_f2_i_U(srcnn_fifo_w1024_d128_A)' using Vivado Default RAMs.
 INFO: [RTMG 210-285] Implementing FIFO 'tw_eff_loc_i_c1_U(srcnn_fifo_w8_d2_S_x)' using Shift Registers.
 INFO: [RTMG 210-285] Implementing FIFO 'h0_c5_U(srcnn_fifo_w9_d2_S_x)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 's_out_U(srcnn_fifo_w32_d1024_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 's_out_U(srcnn_fifo_w32_d256_A)' using Vivado Default RAMs.
 INFO: [RTMG 210-285] Implementing FIFO 'tw_eff_loc_i_c_U(srcnn_fifo_w8_d2_S_x)' using Shift Registers.
 INFO: [RTMG 210-285] Implementing FIFO 'w0_c_U(srcnn_fifo_w8_d2_S_x)' using Shift Registers.
 INFO: [RTMG 210-285] Implementing FIFO 'h0_c_U(srcnn_fifo_w9_d2_S_x)' using Shift Registers.
 INFO: [RTMG 210-285] Implementing FIFO 'start_for_store_stream6_U0_U(srcnn_start_for_store_stream6_U0)' using Shift Registers.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.302 seconds; current allocated memory: 792.637 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.333 seconds; current allocated memory: 835.047 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'srcnn' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -676,6 +666,8 @@ INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/output_ftmap' to 's_
 INFO: [RTGEN 206-500] Setting interface mode on port 'srcnn/reload_weights' to 's_axilite & ap_none'.
 INFO: [RTGEN 206-500] Setting interface mode on function 'srcnn' to 's_axilite & ap_ctrl_hs'.
 WARNING: [RTGEN 206-101] Register 'weights_loaded' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_38' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_37' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_36' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_35' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_34' is power-on initialization.
@@ -684,8 +676,6 @@ WARNING: [RTGEN 206-101] Register 'srcnn_float_255_255_float_1_9_9_float_float_6
 WARNING: [RTGEN 206-101] Register 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_31' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_30' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_29' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_28' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_27' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_10' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_11' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_12' is power-on initialization.
@@ -821,6 +811,8 @@ INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64
 INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_8_6_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_locbrm' due to the length limit 80
 INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_8_7_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_locbsm' due to the length limit 80
 INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_8_8_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_locbtn' due to the length limit 80
+WARNING: [RTGEN 206-101] Register 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_28' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_27' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_26' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_25' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_24' is power-on initialization.
@@ -829,8 +821,6 @@ WARNING: [RTGEN 206-101] Register 'srcnn_float_255_255_float_1_9_9_float_float_6
 WARNING: [RTGEN 206-101] Register 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_21' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_20' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_19' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_18' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_17' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_10' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_11' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_12' is power-on initialization.
@@ -853,19 +843,169 @@ WARNING: [RTGEN 206-101] Register 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1
 WARNING: [RTGEN 206-101] Register 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_29' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_30' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_31' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_16' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_18' is power-on initialization.
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_0_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locbun' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_1_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locbvn' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_2_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locbwn' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_3_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locbxn' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_0_4_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locbyn' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_0_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locbzo' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_1_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locbAo' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_2_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locbBo' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_3_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locbCo' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_1_4_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locbDo' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_0_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locbEo' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_1_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locbFp' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_2_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locbGp' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_3_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locbHp' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_2_4_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locbIp' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_0_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locbJp' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_1_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locbKp' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_2_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locbLp' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_3_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locbMq' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_3_4_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locbNq' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_0_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locbOq' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_1_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locbPq' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_2_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locbQq' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_3_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locbRq' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_4_4_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locbSr' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_0_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locbTr' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_1_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locbUr' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_2_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locbVr' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_3_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locbWr' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_5_4_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locbXr' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_0_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locbYs' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_1_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locbZs' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_2_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locb0s' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_3_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locb1s' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_6_4_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locb2s' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_0_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locb3s' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_1_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locb4t' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_2_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locb5t' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_3_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locb6t' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_7_4_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locb7t' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_0_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locb8t' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_1_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locb9t' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_2_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loccau' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_3_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loccbu' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_8_4_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locccu' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_0_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loccdu' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_1_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locceu' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_2_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loccfu' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_3_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loccgu' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_9_4_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locchv' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_4_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locciv' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_3_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loccjv' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_2_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locckv' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_1_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locclv' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_10_s_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loccmv' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_17_RAM_1P_LUTRAM_1R1W' to 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_fcnw' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_18_RAM_1P_LUTRAM_1R1W' to 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_fcow' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_19_RAM_1P_LUTRAM_1R1W' to 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_fcpw' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_20_RAM_1P_LUTRAM_1R1W' to 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_fcqw' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_21_RAM_1P_LUTRAM_1R1W' to 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_fcrw' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_13_RAM_1P_LUTRAM_1R1W' to 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_fcsw' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_14_RAM_1P_LUTRAM_1R1W' to 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_fctx' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_15_RAM_1P_LUTRAM_1R1W' to 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_fcux' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_16_RAM_1P_LUTRAM_1R1W' to 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_fcvx' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_13_s_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loccwx' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_14_4_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loccxx' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_14_3_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loccyx' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_14_2_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locczy' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_14_1_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loccAy' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_14_s_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loccBy' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_4_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loccCy' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_3_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loccDy' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_2_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loccEy' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_1_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loccFz' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_15_s_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loccGz' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_16_4_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loccHz' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_16_3_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loccIz' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_16_2_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loccJz' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_16_1_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loccKz' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_16_s_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loccLz' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_17_4_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loccMA' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_17_3_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loccNA' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_17_2_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loccOA' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_17_1_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loccPA' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_17_s_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loccQA' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_18_4_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loccRA' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_18_3_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loccSB' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_18_2_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loccTB' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_18_1_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loccUB' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_18_s_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loccVB' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_19_4_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loccWB' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_19_3_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loccXB' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_19_2_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loccYC' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_19_1_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loccZC' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_19_s_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locc0C' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_20_4_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locc1C' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_20_3_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locc2C' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_20_2_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locc3C' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_20_1_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locc4D' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_20_s_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locc5D' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_8_RAM_1P_LUTRAM_1R1W' to 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_fc6D' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_9_RAM_1P_LUTRAM_1R1W' to 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_fc7D' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_10_RAM_1P_LUTRAM_1R1W' to 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_fc8D' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_11_RAM_1P_LUTRAM_1R1W' to 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_fc9D' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_12_RAM_1P_LUTRAM_1R1W' to 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_fdaE' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_4_RAM_1P_LUTRAM_1R1W' to 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_fdbE' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_5_RAM_1P_LUTRAM_1R1W' to 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_fdcE' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_6_RAM_1P_LUTRAM_1R1W' to 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_fddE' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_7_RAM_1P_LUTRAM_1R1W' to 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_fdeE' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_23_s_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locdfE' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_24_4_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locdgE' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_24_3_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locdhF' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_24_2_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locdiF' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_24_1_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locdjF' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_24_s_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locdkF' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_25_4_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locdlF' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_25_3_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locdmF' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_25_2_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locdnG' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_25_1_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locdoG' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_25_s_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locdpG' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_26_4_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locdqG' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_26_3_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locdrG' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_26_2_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locdsG' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_26_1_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locdtH' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_26_s_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locduH' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_27_4_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locdvH' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_27_3_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locdwH' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_27_2_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locdxH' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_27_1_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locdyH' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_27_s_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locdzI' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_28_4_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locdAI' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_28_3_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locdBI' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_28_2_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locdCI' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_28_1_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locdDI' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_28_s_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locdEI' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_29_4_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locdFJ' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_29_3_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locdGJ' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_29_2_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locdHJ' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_29_1_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locdIJ' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_29_s_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locdJJ' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_30_4_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locdKJ' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_30_3_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locdLJ' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_30_2_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locdMK' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_30_1_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locdNK' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_loc_30_s_RAM_1P_LUTRAM_1R1W' to 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locdOK' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_RAM_1P_LUTRAM_1R1W' to 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_fdPK' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_0_RAM_1P_LUTRAM_1R1W' to 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_fdQK' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_1_RAM_1P_LUTRAM_1R1W' to 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_fdRK' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_2_RAM_1P_LUTRAM_1R1W' to 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_fdSL' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_w3_loc_3_RAM_1P_LUTRAM_1R1W' to 'srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_fdTL' due to the length limit 80
 INFO: [RTGEN 206-100] Bundling port 'input_ftmap', 'conv1_weights', 'conv1_biases', 'conv2_weights', 'conv2_biases', 'conv3_weights', 'conv3_biases', 'output_ftmap', 'reload_weights' and 'return' to AXI-Lite port ctrl.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'srcnn'.
 INFO: [RTMG 210-278] Implementing memory 'srcnn_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_locbkb' using distributed RAMs.
-INFO: [RTMG 210-278] Implementing memory 'srcnn_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_15_RAM_1P_LUTRAM_1R1W' using distributed RAMs.
-INFO: [RTMG 210-278] Implementing memory 'srcnn_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_7_RAM_2P_BRAM_1R1W' using block RAMs.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 3 seconds. CPU system time: 1 seconds. Elapsed time: 5.38 seconds; current allocated memory: 792.637 MB.
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 4.372 seconds; current allocated memory: 806.969 MB.
+INFO: [RTMG 210-278] Implementing memory 'srcnn_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_17_RAM_1P_LUTRAM_1R1W' using distributed RAMs.
+INFO: [RTMG 210-278] Implementing memory 'srcnn_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locbun' using distributed RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 4 seconds. CPU system time: 1 seconds. Elapsed time: 9.075 seconds; current allocated memory: 846.281 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 4 seconds. CPU system time: 1 seconds. Elapsed time: 5.249 seconds; current allocated memory: 873.016 MB.
 INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
-INFO: [HLS 200-111] Finished Updating report files: CPU user time: 9 seconds. CPU system time: 1 seconds. Elapsed time: 9.55 seconds; current allocated memory: 852.996 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 12 seconds. CPU system time: 0 seconds. Elapsed time: 12.969 seconds; current allocated memory: 924.398 MB.
 INFO: [VHDL 208-304] Generating VHDL RTL for srcnn.
 INFO: [VLOG 209-307] Generating Verilog RTL for srcnn.
 INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
-INFO: [HLS 200-789] **** Estimated Fmax: 128.30 MHz
-INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 182 seconds. CPU system time: 8 seconds. Elapsed time: 242.352 seconds; current allocated memory: 765.836 MB.
-INFO: [HLS 200-112] Total CPU user time: 183 seconds. Total CPU system time: 9 seconds. Total elapsed time: 244.026 seconds; peak allocated memory: 852.996 MB.
+INFO: [HLS 200-789] **** Estimated Fmax: 128.32 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 195 seconds. CPU system time: 8 seconds. Elapsed time: 260.223 seconds; current allocated memory: 837.059 MB.
+INFO: [HLS 200-112] Total CPU user time: 196 seconds. Total CPU system time: 9 seconds. Total elapsed time: 262.041 seconds; peak allocated memory: 924.398 MB.

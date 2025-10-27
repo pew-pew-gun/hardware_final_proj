@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv1conv2_from_windows8_Pipeline_Init_Conv2Out_biases'
 ================================================================
-* Date:           Mon Oct 27 19:18:39 2025
+* Date:           Mon Oct 27 20:05:11 2025
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -73,14 +73,14 @@
     +----------------------+-----------------+---------+----+---+-----+-----+
     |       Instance       |      Module     | BRAM_18K| DSP| FF| LUT | URAM|
     +----------------------+-----------------+---------+----+---+-----+-----+
-    |mux_25_5_32_1_1_U148  |mux_25_5_32_1_1  |        0|   0|  0|  125|    0|
-    |mux_25_5_32_1_1_U149  |mux_25_5_32_1_1  |        0|   0|  0|  125|    0|
-    |mux_25_5_32_1_1_U150  |mux_25_5_32_1_1  |        0|   0|  0|  125|    0|
-    |mux_25_5_32_1_1_U151  |mux_25_5_32_1_1  |        0|   0|  0|  125|    0|
-    |mux_25_5_32_1_1_U152  |mux_25_5_32_1_1  |        0|   0|  0|  125|    0|
-    |mux_25_5_32_1_1_U153  |mux_25_5_32_1_1  |        0|   0|  0|  125|    0|
-    |mux_25_5_32_1_1_U154  |mux_25_5_32_1_1  |        0|   0|  0|  125|    0|
-    |mux_25_5_32_1_1_U155  |mux_25_5_32_1_1  |        0|   0|  0|  125|    0|
+    |mux_25_5_32_1_1_U292  |mux_25_5_32_1_1  |        0|   0|  0|  125|    0|
+    |mux_25_5_32_1_1_U293  |mux_25_5_32_1_1  |        0|   0|  0|  125|    0|
+    |mux_25_5_32_1_1_U294  |mux_25_5_32_1_1  |        0|   0|  0|  125|    0|
+    |mux_25_5_32_1_1_U295  |mux_25_5_32_1_1  |        0|   0|  0|  125|    0|
+    |mux_25_5_32_1_1_U296  |mux_25_5_32_1_1  |        0|   0|  0|  125|    0|
+    |mux_25_5_32_1_1_U297  |mux_25_5_32_1_1  |        0|   0|  0|  125|    0|
+    |mux_25_5_32_1_1_U298  |mux_25_5_32_1_1  |        0|   0|  0|  125|    0|
+    |mux_25_5_32_1_1_U299  |mux_25_5_32_1_1  |        0|   0|  0|  125|    0|
     +----------------------+-----------------+---------+----+---+-----+-----+
     |Total                 |                 |        0|   0|  0| 1000|    0|
     +----------------------+-----------------+---------+----+---+-----+-----+
@@ -140,8 +140,8 @@
 |ap_done                                                                                                  |  out|    1|  ap_ctrl_hs|                                                   conv1conv2_from_windows8_Pipeline_Init_Conv2Out_biases|  return value|
 |ap_idle                                                                                                  |  out|    1|  ap_ctrl_hs|                                                   conv1conv2_from_windows8_Pipeline_Init_Conv2Out_biases|  return value|
 |ap_ready                                                                                                 |  out|    1|  ap_ctrl_hs|                                                   conv1conv2_from_windows8_Pipeline_Init_Conv2Out_biases|  return value|
-|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_853                                                 |   in|   32|   ap_stable|                                                 srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_853|        scalar|
-|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_854                                                 |   in|   32|   ap_stable|                                                 srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_854|        scalar|
+|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_107                                                 |   in|   32|   ap_stable|                                                 srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_107|        scalar|
+|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_108                                                 |   in|   32|   ap_stable|                                                 srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_108|        scalar|
 |p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_16_s                       |   in|   32|   ap_stable|                       p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_16_s|        scalar|
 |p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_24_s                       |   in|   32|   ap_stable|                       p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_24_s|        scalar|
 |acc2_address0                                                                                            |  out|    2|   ap_memory|                                                                                                     acc2|         array|
@@ -172,31 +172,31 @@
 |acc2_6_ce0                                                                                               |  out|    1|   ap_memory|                                                                                                   acc2_6|         array|
 |acc2_6_we0                                                                                               |  out|    1|   ap_memory|                                                                                                   acc2_6|         array|
 |acc2_6_d0                                                                                                |  out|   32|   ap_memory|                                                                                                   acc2_6|         array|
-|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_855                                                 |   in|   32|   ap_stable|                                                 srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_855|        scalar|
-|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_856                                                 |   in|   32|   ap_stable|                                                 srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_856|        scalar|
+|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_109                                                 |   in|   32|   ap_stable|                                                 srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_109|        scalar|
+|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_110                                                 |   in|   32|   ap_stable|                                                 srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_110|        scalar|
 |p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_17_s                       |   in|   32|   ap_stable|                       p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_17_s|        scalar|
 |p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_25_s                       |   in|   32|   ap_stable|                       p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_25_s|        scalar|
-|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_857                                                 |   in|   32|   ap_stable|                                                 srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_857|        scalar|
+|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_111                                                 |   in|   32|   ap_stable|                                                 srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_111|        scalar|
 |p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_10_s                       |   in|   32|   ap_stable|                       p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_10_s|        scalar|
 |p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_18_s                       |   in|   32|   ap_stable|                       p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_18_s|        scalar|
 |p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_26_s                       |   in|   32|   ap_stable|                       p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_26_s|        scalar|
-|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_858                                                 |   in|   32|   ap_stable|                                                 srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_858|        scalar|
-|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_b2_loc_52  |   in|   32|   ap_stable|  srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_b2_loc_52|        scalar|
+|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_112                                                 |   in|   32|   ap_stable|                                                 srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_112|        scalar|
+|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_b2_loc_74  |   in|   32|   ap_stable|  srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_b2_loc_74|        scalar|
 |p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_19_s                       |   in|   32|   ap_stable|                       p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_19_s|        scalar|
 |p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_27_s                       |   in|   32|   ap_stable|                       p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_27_s|        scalar|
-|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_859                                                 |   in|   32|   ap_stable|                                                 srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_859|        scalar|
+|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_113                                                 |   in|   32|   ap_stable|                                                 srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_113|        scalar|
 |p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_12_s                       |   in|   32|   ap_stable|                       p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_12_s|        scalar|
 |p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_20_s                       |   in|   32|   ap_stable|                       p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_20_s|        scalar|
 |p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_28_s                       |   in|   32|   ap_stable|                       p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_28_s|        scalar|
-|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_860                                                 |   in|   32|   ap_stable|                                                 srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_860|        scalar|
+|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_114                                                 |   in|   32|   ap_stable|                                                 srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_114|        scalar|
 |p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_13_s                       |   in|   32|   ap_stable|                       p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_13_s|        scalar|
-|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_b2_loc_53  |   in|   32|   ap_stable|  srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_b2_loc_53|        scalar|
+|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_b2_loc_75  |   in|   32|   ap_stable|  srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_b2_loc_75|        scalar|
 |p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_29_s                       |   in|   32|   ap_stable|                       p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_29_s|        scalar|
-|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_861                                                 |   in|   32|   ap_stable|                                                 srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_861|        scalar|
+|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_115                                                 |   in|   32|   ap_stable|                                                 srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_115|        scalar|
 |p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_14_s                       |   in|   32|   ap_stable|                       p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_14_s|        scalar|
 |p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_22_s                       |   in|   32|   ap_stable|                       p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_22_s|        scalar|
 |p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_30_s                       |   in|   32|   ap_stable|                       p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_30_s|        scalar|
-|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_862                                                 |   in|   32|   ap_stable|                                                 srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_862|        scalar|
+|srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_116                                                 |   in|   32|   ap_stable|                                                 srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_116|        scalar|
 |p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_15_s                       |   in|   32|   ap_stable|                       p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_15_s|        scalar|
 |p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_23_s                       |   in|   32|   ap_stable|                       p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_23_s|        scalar|
 |srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_b2_loc     |   in|   32|   ap_stable|     srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_b2_loc|        scalar|

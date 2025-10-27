@@ -13,8 +13,8 @@ module srcnn_conv1conv2_from_windows8_Pipeline_Init_Conv2Out_biases (
         ap_done,
         ap_idle,
         ap_ready,
-        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_853,
-        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_854,
+        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_107,
+        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_108,
         p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_16_s,
         p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_24_s,
         acc2_address0,
@@ -45,31 +45,31 @@ module srcnn_conv1conv2_from_windows8_Pipeline_Init_Conv2Out_biases (
         acc2_6_ce0,
         acc2_6_we0,
         acc2_6_d0,
-        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_855,
-        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_856,
+        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_109,
+        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_110,
         p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_17_s,
         p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_25_s,
-        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_857,
+        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_111,
         p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_10_s,
         p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_18_s,
         p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_26_s,
-        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_858,
-        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_b2_loc_52,
+        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_112,
+        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_b2_loc_74,
         p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_19_s,
         p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_27_s,
-        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_859,
+        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_113,
         p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_12_s,
         p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_20_s,
         p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_28_s,
-        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_860,
+        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_114,
         p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_13_s,
-        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_b2_loc_53,
+        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_b2_loc_75,
         p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_29_s,
-        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_861,
+        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_115,
         p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_14_s,
         p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_22_s,
         p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_30_s,
-        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_862,
+        srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_116,
         p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_15_s,
         p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_23_s,
         srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_b2_loc,
@@ -87,8 +87,8 @@ input   ap_start;
 output   ap_done;
 output   ap_idle;
 output   ap_ready;
-input  [31:0] srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_853;
-input  [31:0] srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_854;
+input  [31:0] srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_107;
+input  [31:0] srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_108;
 input  [31:0] p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_16_s;
 input  [31:0] p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_24_s;
 output  [1:0] acc2_address0;
@@ -119,31 +119,31 @@ output  [1:0] acc2_6_address0;
 output   acc2_6_ce0;
 output   acc2_6_we0;
 output  [31:0] acc2_6_d0;
-input  [31:0] srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_855;
-input  [31:0] srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_856;
+input  [31:0] srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_109;
+input  [31:0] srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_110;
 input  [31:0] p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_17_s;
 input  [31:0] p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_25_s;
-input  [31:0] srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_857;
+input  [31:0] srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_111;
 input  [31:0] p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_10_s;
 input  [31:0] p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_18_s;
 input  [31:0] p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_26_s;
-input  [31:0] srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_858;
-input  [31:0] srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_b2_loc_52;
+input  [31:0] srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_112;
+input  [31:0] srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_b2_loc_74;
 input  [31:0] p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_19_s;
 input  [31:0] p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_27_s;
-input  [31:0] srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_859;
+input  [31:0] srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_113;
 input  [31:0] p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_12_s;
 input  [31:0] p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_20_s;
 input  [31:0] p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_28_s;
-input  [31:0] srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_860;
+input  [31:0] srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_114;
 input  [31:0] p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_13_s;
-input  [31:0] srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_b2_loc_53;
+input  [31:0] srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_b2_loc_75;
 input  [31:0] p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_29_s;
-input  [31:0] srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_861;
+input  [31:0] srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_115;
 input  [31:0] p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_14_s;
 input  [31:0] p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_22_s;
 input  [31:0] p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_30_s;
-input  [31:0] srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_862;
+input  [31:0] srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_116;
 input  [31:0] p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_15_s;
 input  [31:0] p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_23_s;
 input  [31:0] srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_b2_loc;
@@ -236,8 +236,8 @@ srcnn_mux_25_5_32_1_1 #(
     .din24_WIDTH( 32 ),
     .din25_WIDTH( 5 ),
     .dout_WIDTH( 32 ))
-mux_25_5_32_1_1_U148(
-    .din0(srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_853),
+mux_25_5_32_1_1_U292(
+    .din0(srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_107),
     .din1(32'd0),
     .din2(32'd0),
     .din3(32'd0),
@@ -245,7 +245,7 @@ mux_25_5_32_1_1_U148(
     .din5(32'd0),
     .din6(32'd0),
     .din7(32'd0),
-    .din8(srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_854),
+    .din8(srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_108),
     .din9(32'd0),
     .din10(32'd0),
     .din11(32'd0),
@@ -296,8 +296,8 @@ srcnn_mux_25_5_32_1_1 #(
     .din24_WIDTH( 32 ),
     .din25_WIDTH( 5 ),
     .dout_WIDTH( 32 ))
-mux_25_5_32_1_1_U149(
-    .din0(srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_855),
+mux_25_5_32_1_1_U293(
+    .din0(srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_109),
     .din1(32'd0),
     .din2(32'd0),
     .din3(32'd0),
@@ -305,7 +305,7 @@ mux_25_5_32_1_1_U149(
     .din5(32'd0),
     .din6(32'd0),
     .din7(32'd0),
-    .din8(srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_856),
+    .din8(srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_110),
     .din9(32'd0),
     .din10(32'd0),
     .din11(32'd0),
@@ -356,8 +356,8 @@ srcnn_mux_25_5_32_1_1 #(
     .din24_WIDTH( 32 ),
     .din25_WIDTH( 5 ),
     .dout_WIDTH( 32 ))
-mux_25_5_32_1_1_U150(
-    .din0(srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_857),
+mux_25_5_32_1_1_U294(
+    .din0(srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_111),
     .din1(32'd0),
     .din2(32'd0),
     .din3(32'd0),
@@ -416,8 +416,8 @@ srcnn_mux_25_5_32_1_1 #(
     .din24_WIDTH( 32 ),
     .din25_WIDTH( 5 ),
     .dout_WIDTH( 32 ))
-mux_25_5_32_1_1_U151(
-    .din0(srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_858),
+mux_25_5_32_1_1_U295(
+    .din0(srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_112),
     .din1(32'd0),
     .din2(32'd0),
     .din3(32'd0),
@@ -425,7 +425,7 @@ mux_25_5_32_1_1_U151(
     .din5(32'd0),
     .din6(32'd0),
     .din7(32'd0),
-    .din8(srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_b2_loc_52),
+    .din8(srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_b2_loc_74),
     .din9(32'd0),
     .din10(32'd0),
     .din11(32'd0),
@@ -476,8 +476,8 @@ srcnn_mux_25_5_32_1_1 #(
     .din24_WIDTH( 32 ),
     .din25_WIDTH( 5 ),
     .dout_WIDTH( 32 ))
-mux_25_5_32_1_1_U152(
-    .din0(srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_859),
+mux_25_5_32_1_1_U296(
+    .din0(srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_113),
     .din1(32'd0),
     .din2(32'd0),
     .din3(32'd0),
@@ -536,8 +536,8 @@ srcnn_mux_25_5_32_1_1 #(
     .din24_WIDTH( 32 ),
     .din25_WIDTH( 5 ),
     .dout_WIDTH( 32 ))
-mux_25_5_32_1_1_U153(
-    .din0(srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_860),
+mux_25_5_32_1_1_U297(
+    .din0(srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_114),
     .din1(32'd0),
     .din2(32'd0),
     .din3(32'd0),
@@ -553,7 +553,7 @@ mux_25_5_32_1_1_U153(
     .din13(32'd0),
     .din14(32'd0),
     .din15(32'd0),
-    .din16(srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_b2_loc_53),
+    .din16(srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_b2_loc_75),
     .din17(32'd0),
     .din18(32'd0),
     .din19(32'd0),
@@ -596,8 +596,8 @@ srcnn_mux_25_5_32_1_1 #(
     .din24_WIDTH( 32 ),
     .din25_WIDTH( 5 ),
     .dout_WIDTH( 32 ))
-mux_25_5_32_1_1_U154(
-    .din0(srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_861),
+mux_25_5_32_1_1_U298(
+    .din0(srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_115),
     .din1(32'd0),
     .din2(32'd0),
     .din3(32'd0),
@@ -656,8 +656,8 @@ srcnn_mux_25_5_32_1_1 #(
     .din24_WIDTH( 32 ),
     .din25_WIDTH( 5 ),
     .dout_WIDTH( 32 ))
-mux_25_5_32_1_1_U155(
-    .din0(srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_862),
+mux_25_5_32_1_1_U299(
+    .din0(srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_116),
     .din1(32'd0),
     .din2(32'd0),
     .din3(32'd0),

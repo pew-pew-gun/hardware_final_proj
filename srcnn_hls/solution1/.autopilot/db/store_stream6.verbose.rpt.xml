@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'store_stream6'" level="0">
-<item name = "Date">Mon Oct 27 19:18:59 2025
+<item name = "Date">Mon Oct 27 20:05:31 2025
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -79,19 +79,19 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln732_fu_229_p2">+, 0, 0, 15, 8, 1</column>
-<column name="add_ln734_fu_313_p2">+, 0, 0, 15, 8, 1</column>
-<column name="add_ln962_fu_160_p2">+, 0, 0, 16, 9, 5</column>
-<column name="empty_66_fu_283_p2">+, 0, 0, 71, 64, 64</column>
+<column name="add_ln733_fu_229_p2">+, 0, 0, 15, 8, 1</column>
+<column name="add_ln735_fu_313_p2">+, 0, 0, 15, 8, 1</column>
+<column name="add_ln978_fu_160_p2">+, 0, 0, 16, 9, 5</column>
+<column name="empty_88_fu_283_p2">+, 0, 0, 71, 64, 64</column>
 <column name="empty_fu_235_p2">+, 0, 0, 17, 10, 10</column>
 <column name="tmp_fu_274_p2">+, 0, 0, 29, 22, 22</column>
-<column name="empty_65_fu_264_p2">-, 0, 0, 28, 21, 21</column>
+<column name="empty_87_fu_264_p2">-, 0, 0, 28, 21, 21</column>
 <column name="ap_block_state4">and, 0, 0, 2, 1, 1</column>
-<column name="icmp_ln732_fu_224_p2">icmp, 0, 0, 15, 8, 8</column>
-<column name="icmp_ln734_fu_308_p2">icmp, 0, 0, 15, 8, 8</column>
+<column name="icmp_ln733_fu_224_p2">icmp, 0, 0, 15, 8, 8</column>
+<column name="icmp_ln735_fu_308_p2">icmp, 0, 0, 15, 8, 8</column>
 <column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
 <column name="th_eff_fu_184_p3">select, 0, 0, 8, 1, 8</column>
-<column name="xor_ln962_fu_178_p2">xor, 0, 0, 8, 8, 2</column>
+<column name="xor_ln978_fu_178_p2">xor, 0, 0, 8, 8, 2</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
@@ -112,8 +112,8 @@
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="add_ln732_reg_363">8, 0, 8, 0</column>
-<column name="add_ln734_reg_377">8, 0, 8, 0</column>
+<column name="add_ln733_reg_363">8, 0, 8, 0</column>
+<column name="add_ln735_reg_377">8, 0, 8, 0</column>
 <column name="ap_CS_fsm">10, 0, 10, 0</column>
 <column name="ap_done_reg">1, 0, 1, 0</column>
 <column name="gmem_out_addr_reg_368">64, 0, 64, 0</column>
@@ -123,9 +123,9 @@
 <column name="tw_eff_reg_335">8, 0, 8, 0</column>
 <column name="x_reg_149">8, 0, 8, 0</column>
 <column name="y_fu_100">8, 0, 8, 0</column>
-<column name="zext_ln732_1_reg_350">8, 0, 22, 14</column>
-<column name="zext_ln732_2_reg_355">8, 0, 32, 24</column>
-<column name="zext_ln732_reg_345">9, 0, 10, 1</column>
+<column name="zext_ln733_1_reg_350">8, 0, 22, 14</column>
+<column name="zext_ln733_2_reg_355">8, 0, 32, 24</column>
+<column name="zext_ln733_reg_345">9, 0, 10, 1</column>
 </table>
 </item>
 </section>
@@ -143,8 +143,8 @@
 <column name="ap_idle">out, 1, ap_ctrl_hs, store_stream6, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, store_stream6, return value</column>
 <column name="s_out_i_dout">in, 32, ap_fifo, s_out_i, pointer</column>
-<column name="s_out_i_num_data_valid">in, 11, ap_fifo, s_out_i, pointer</column>
-<column name="s_out_i_fifo_cap">in, 11, ap_fifo, s_out_i, pointer</column>
+<column name="s_out_i_num_data_valid">in, 9, ap_fifo, s_out_i, pointer</column>
+<column name="s_out_i_fifo_cap">in, 9, ap_fifo, s_out_i, pointer</column>
 <column name="s_out_i_empty_n">in, 1, ap_fifo, s_out_i, pointer</column>
 <column name="s_out_i_read">out, 1, ap_fifo, s_out_i, pointer</column>
 <column name="m_axi_gmem_out_AWVALID">out, 1, m_axi, gmem_out, pointer</column>

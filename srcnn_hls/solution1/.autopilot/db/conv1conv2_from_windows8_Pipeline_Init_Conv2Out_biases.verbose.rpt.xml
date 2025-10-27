@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv1conv2_from_windows8_Pipeline_Init_Conv2Out_biases'" level="0">
-<item name = "Date">Mon Oct 27 19:18:39 2025
+<item name = "Date">Mon Oct 27 20:05:11 2025
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -62,14 +62,14 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="mux_25_5_32_1_1_U148">mux_25_5_32_1_1, 0, 0, 0, 125, 0</column>
-<column name="mux_25_5_32_1_1_U149">mux_25_5_32_1_1, 0, 0, 0, 125, 0</column>
-<column name="mux_25_5_32_1_1_U150">mux_25_5_32_1_1, 0, 0, 0, 125, 0</column>
-<column name="mux_25_5_32_1_1_U151">mux_25_5_32_1_1, 0, 0, 0, 125, 0</column>
-<column name="mux_25_5_32_1_1_U152">mux_25_5_32_1_1, 0, 0, 0, 125, 0</column>
-<column name="mux_25_5_32_1_1_U153">mux_25_5_32_1_1, 0, 0, 0, 125, 0</column>
-<column name="mux_25_5_32_1_1_U154">mux_25_5_32_1_1, 0, 0, 0, 125, 0</column>
-<column name="mux_25_5_32_1_1_U155">mux_25_5_32_1_1, 0, 0, 0, 125, 0</column>
+<column name="mux_25_5_32_1_1_U292">mux_25_5_32_1_1, 0, 0, 0, 125, 0</column>
+<column name="mux_25_5_32_1_1_U293">mux_25_5_32_1_1, 0, 0, 0, 125, 0</column>
+<column name="mux_25_5_32_1_1_U294">mux_25_5_32_1_1, 0, 0, 0, 125, 0</column>
+<column name="mux_25_5_32_1_1_U295">mux_25_5_32_1_1, 0, 0, 0, 125, 0</column>
+<column name="mux_25_5_32_1_1_U296">mux_25_5_32_1_1, 0, 0, 0, 125, 0</column>
+<column name="mux_25_5_32_1_1_U297">mux_25_5_32_1_1, 0, 0, 0, 125, 0</column>
+<column name="mux_25_5_32_1_1_U298">mux_25_5_32_1_1, 0, 0, 0, 125, 0</column>
+<column name="mux_25_5_32_1_1_U299">mux_25_5_32_1_1, 0, 0, 0, 125, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -116,8 +116,8 @@
 <column name="ap_done">out, 1, ap_ctrl_hs, conv1conv2_from_windows8_Pipeline_Init_Conv2Out_biases, return value</column>
 <column name="ap_idle">out, 1, ap_ctrl_hs, conv1conv2_from_windows8_Pipeline_Init_Conv2Out_biases, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, conv1conv2_from_windows8_Pipeline_Init_Conv2Out_biases, return value</column>
-<column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_853">in, 32, ap_stable, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_853, scalar</column>
-<column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_854">in, 32, ap_stable, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_854, scalar</column>
+<column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_107">in, 32, ap_stable, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_107, scalar</column>
+<column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_108">in, 32, ap_stable, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_108, scalar</column>
 <column name="p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_16_s">in, 32, ap_stable, p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_16_s, scalar</column>
 <column name="p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_24_s">in, 32, ap_stable, p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_24_s, scalar</column>
 <column name="acc2_address0">out, 2, ap_memory, acc2, array</column>
@@ -148,31 +148,31 @@
 <column name="acc2_6_ce0">out, 1, ap_memory, acc2_6, array</column>
 <column name="acc2_6_we0">out, 1, ap_memory, acc2_6, array</column>
 <column name="acc2_6_d0">out, 32, ap_memory, acc2_6, array</column>
-<column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_855">in, 32, ap_stable, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_855, scalar</column>
-<column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_856">in, 32, ap_stable, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_856, scalar</column>
+<column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_109">in, 32, ap_stable, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_109, scalar</column>
+<column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_110">in, 32, ap_stable, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_110, scalar</column>
 <column name="p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_17_s">in, 32, ap_stable, p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_17_s, scalar</column>
 <column name="p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_25_s">in, 32, ap_stable, p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_25_s, scalar</column>
-<column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_857">in, 32, ap_stable, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_857, scalar</column>
+<column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_111">in, 32, ap_stable, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_111, scalar</column>
 <column name="p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_10_s">in, 32, ap_stable, p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_10_s, scalar</column>
 <column name="p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_18_s">in, 32, ap_stable, p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_18_s, scalar</column>
 <column name="p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_26_s">in, 32, ap_stable, p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_26_s, scalar</column>
-<column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_858">in, 32, ap_stable, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_858, scalar</column>
-<column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_b2_loc_52">in, 32, ap_stable, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_b2_loc_52, scalar</column>
+<column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_112">in, 32, ap_stable, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_112, scalar</column>
+<column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_b2_loc_74">in, 32, ap_stable, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_b2_loc_74, scalar</column>
 <column name="p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_19_s">in, 32, ap_stable, p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_19_s, scalar</column>
 <column name="p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_27_s">in, 32, ap_stable, p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_27_s, scalar</column>
-<column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_859">in, 32, ap_stable, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_859, scalar</column>
+<column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_113">in, 32, ap_stable, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_113, scalar</column>
 <column name="p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_12_s">in, 32, ap_stable, p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_12_s, scalar</column>
 <column name="p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_20_s">in, 32, ap_stable, p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_20_s, scalar</column>
 <column name="p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_28_s">in, 32, ap_stable, p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_28_s, scalar</column>
-<column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_860">in, 32, ap_stable, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_860, scalar</column>
+<column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_114">in, 32, ap_stable, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_114, scalar</column>
 <column name="p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_13_s">in, 32, ap_stable, p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_13_s, scalar</column>
-<column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_b2_loc_53">in, 32, ap_stable, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_b2_loc_53, scalar</column>
+<column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_b2_loc_75">in, 32, ap_stable, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_b2_loc_75, scalar</column>
 <column name="p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_29_s">in, 32, ap_stable, p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_29_s, scalar</column>
-<column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_861">in, 32, ap_stable, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_861, scalar</column>
+<column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_115">in, 32, ap_stable, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_115, scalar</column>
 <column name="p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_14_s">in, 32, ap_stable, p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_14_s, scalar</column>
 <column name="p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_22_s">in, 32, ap_stable, p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_22_s, scalar</column>
 <column name="p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_30_s">in, 32, ap_stable, p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_30_s, scalar</column>
-<column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_862">in, 32, ap_stable, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_862, scalar</column>
+<column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_116">in, 32, ap_stable, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_116, scalar</column>
 <column name="p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_15_s">in, 32, ap_stable, p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_15_s, scalar</column>
 <column name="p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_23_s">in, 32, ap_stable, p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_23_s, scalar</column>
 <column name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_b2_loc">in, 32, ap_stable, srcnn_float_255_255_float_1_9_9_float_float_64_1_1_float_float_32_5_5_float_float_255_255_int_b2_loc, scalar</column>

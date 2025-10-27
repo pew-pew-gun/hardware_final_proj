@@ -68,8 +68,8 @@ port (
     w0 : IN STD_LOGIC_VECTOR (7 downto 0);
     p_read : IN STD_LOGIC_VECTOR (7 downto 0);
     s_pix_i_din : OUT STD_LOGIC_VECTOR (31 downto 0);
-    s_pix_i_num_data_valid : IN STD_LOGIC_VECTOR (10 downto 0);
-    s_pix_i_fifo_cap : IN STD_LOGIC_VECTOR (10 downto 0);
+    s_pix_i_num_data_valid : IN STD_LOGIC_VECTOR (9 downto 0);
+    s_pix_i_fifo_cap : IN STD_LOGIC_VECTOR (9 downto 0);
     s_pix_i_full_n : IN STD_LOGIC;
     s_pix_i_write : OUT STD_LOGIC;
     tw_eff_loc_i_c2_din : OUT STD_LOGIC_VECTOR (7 downto 0);
@@ -183,10 +183,10 @@ attribute shreg_extract : string;
     signal px_reg_189 : STD_LOGIC_VECTOR (8 downto 0);
     signal sext_ln113_fu_488_p1 : STD_LOGIC_VECTOR (63 downto 0);
     signal py_fu_118 : STD_LOGIC_VECTOR (8 downto 0);
-    signal add_ln962_fu_200_p2 : STD_LOGIC_VECTOR (8 downto 0);
-    signal trunc_ln961_fu_214_p1 : STD_LOGIC_VECTOR (7 downto 0);
+    signal add_ln978_fu_200_p2 : STD_LOGIC_VECTOR (8 downto 0);
+    signal trunc_ln977_fu_214_p1 : STD_LOGIC_VECTOR (7 downto 0);
     signal tmp_fu_206_p3 : STD_LOGIC_VECTOR (0 downto 0);
-    signal xor_ln962_fu_218_p2 : STD_LOGIC_VECTOR (7 downto 0);
+    signal xor_ln978_fu_218_p2 : STD_LOGIC_VECTOR (7 downto 0);
     signal th_eff_fu_224_p3 : STD_LOGIC_VECTOR (7 downto 0);
     signal th_eff_cast_fu_240_p1 : STD_LOGIC_VECTOR (8 downto 0);
     signal h0_cast4_i_fu_236_p1 : STD_LOGIC_VECTOR (9 downto 0);
@@ -221,7 +221,7 @@ attribute shreg_extract : string;
     signal add_ln113_fu_464_p2 : STD_LOGIC_VECTOR (19 downto 0);
     signal sext_ln113_1_fu_469_p1 : STD_LOGIC_VECTOR (63 downto 0);
     signal add_ln113_1_fu_473_p2 : STD_LOGIC_VECTOR (63 downto 0);
-    signal trunc_ln7_fu_478_p4 : STD_LOGIC_VECTOR (61 downto 0);
+    signal trunc_ln6_fu_478_p4 : STD_LOGIC_VECTOR (61 downto 0);
     signal ap_NS_fsm : STD_LOGIC_VECTOR (12 downto 0);
     signal ap_ST_fsm_state1_blk : STD_LOGIC;
     signal ap_ST_fsm_state2_blk : STD_LOGIC;
@@ -413,7 +413,7 @@ begin
     add_ln110_fu_260_p2 <= std_logic_vector(unsigned(w0_cast_fu_232_p1) + unsigned(ap_const_lv9_1FA));
     add_ln113_1_fu_473_p2 <= std_logic_vector(signed(sext_ln113_1_fu_469_p1) + signed(input_ftmap));
     add_ln113_fu_464_p2 <= std_logic_vector(signed(sext_ln109_reg_552) + signed(zext_ln113_2_fu_460_p1));
-    add_ln962_fu_200_p2 <= std_logic_vector(unsigned(h0) + unsigned(ap_const_lv9_10));
+    add_ln978_fu_200_p2 <= std_logic_vector(unsigned(h0) + unsigned(ap_const_lv9_10));
     ap_CS_fsm_state1 <= ap_CS_fsm(0);
     ap_CS_fsm_state12 <= ap_CS_fsm(11);
     ap_CS_fsm_state13 <= ap_CS_fsm(12);
@@ -649,7 +649,7 @@ begin
 
         sext_ln113_1_fu_469_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(add_ln113_fu_464_p2),64));
 
-        sext_ln113_fu_488_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(trunc_ln7_fu_478_p4),64));
+        sext_ln113_fu_488_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(trunc_ln6_fu_478_p4),64));
 
     shl_ln113_1_fu_367_p3 <= (iy_2_fu_347_p3 & ap_const_lv2_0);
     shl_ln113_2_fu_452_p3 <= (select_ln112_fu_444_p3 & ap_const_lv2_0);
@@ -657,15 +657,15 @@ begin
     sub_ln113_fu_379_p2 <= std_logic_vector(unsigned(zext_ln113_fu_363_p1) - unsigned(zext_ln113_1_fu_375_p1));
     th_eff_cast_fu_240_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(th_eff_fu_224_p3),9));
     th_eff_fu_224_p3 <= 
-        xor_ln962_fu_218_p2 when (tmp_fu_206_p3(0) = '1') else 
+        xor_ln978_fu_218_p2 when (tmp_fu_206_p3(0) = '1') else 
         ap_const_lv8_10;
     tmp_5_fu_321_p3 <= iy_fu_311_p2(10 downto 10);
     tmp_6_fu_418_p3 <= ix_fu_408_p2(10 downto 10);
-    tmp_fu_206_p3 <= add_ln962_fu_200_p2(8 downto 8);
+    tmp_fu_206_p3 <= add_ln978_fu_200_p2(8 downto 8);
     trunc_ln104_fu_337_p1 <= iy_1_fu_329_p3(8 - 1 downto 0);
     trunc_ln113_fu_440_p1 <= ix_1_fu_426_p3(8 - 1 downto 0);
-    trunc_ln7_fu_478_p4 <= add_ln113_1_fu_473_p2(63 downto 2);
-    trunc_ln961_fu_214_p1 <= h0(8 - 1 downto 0);
+    trunc_ln6_fu_478_p4 <= add_ln113_1_fu_473_p2(63 downto 2);
+    trunc_ln977_fu_214_p1 <= h0(8 - 1 downto 0);
 
     tw_eff_loc_i_c2_blk_n_assign_proc : process(ap_start, ap_done_reg, ap_CS_fsm_state1, tw_eff_loc_i_c2_full_n)
     begin
@@ -709,7 +709,7 @@ begin
     end process;
 
     w0_cast_fu_232_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(w0),9));
-    xor_ln962_fu_218_p2 <= (trunc_ln961_fu_214_p1 xor ap_const_lv8_FF);
+    xor_ln978_fu_218_p2 <= (trunc_ln977_fu_214_p1 xor ap_const_lv8_FF);
     zext_ln103_fu_292_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(py_fu_118),11));
     zext_ln104_fu_307_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(py_fu_118),10));
     zext_ln109_fu_389_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(px_reg_189),11));

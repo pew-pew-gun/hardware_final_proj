@@ -97,8 +97,8 @@ set portList {
 	{ w0 sc_in sc_lv 8 signal 3 } 
 	{ p_read sc_in sc_lv 8 signal 4 } 
 	{ s_pix_i_din sc_out sc_lv 32 signal 5 } 
-	{ s_pix_i_num_data_valid sc_in sc_lv 11 signal 5 } 
-	{ s_pix_i_fifo_cap sc_in sc_lv 11 signal 5 } 
+	{ s_pix_i_num_data_valid sc_in sc_lv 10 signal 5 } 
+	{ s_pix_i_fifo_cap sc_in sc_lv 10 signal 5 } 
 	{ s_pix_i_full_n sc_in sc_logic 1 signal 5 } 
 	{ s_pix_i_write sc_out sc_logic 1 signal 5 } 
 	{ tw_eff_loc_i_c2_din sc_out sc_lv 8 signal 6 } 
@@ -176,8 +176,8 @@ set NewPortList {[
  	{ "name": "w0", "direction": "in", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "w0", "role": "default" }} , 
  	{ "name": "p_read", "direction": "in", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "p_read", "role": "default" }} , 
  	{ "name": "s_pix_i_din", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "s_pix_i", "role": "din" }} , 
- 	{ "name": "s_pix_i_num_data_valid", "direction": "in", "datatype": "sc_lv", "bitwidth":11, "type": "signal", "bundle":{"name": "s_pix_i", "role": "num_data_valid" }} , 
- 	{ "name": "s_pix_i_fifo_cap", "direction": "in", "datatype": "sc_lv", "bitwidth":11, "type": "signal", "bundle":{"name": "s_pix_i", "role": "fifo_cap" }} , 
+ 	{ "name": "s_pix_i_num_data_valid", "direction": "in", "datatype": "sc_lv", "bitwidth":10, "type": "signal", "bundle":{"name": "s_pix_i", "role": "num_data_valid" }} , 
+ 	{ "name": "s_pix_i_fifo_cap", "direction": "in", "datatype": "sc_lv", "bitwidth":10, "type": "signal", "bundle":{"name": "s_pix_i", "role": "fifo_cap" }} , 
  	{ "name": "s_pix_i_full_n", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "s_pix_i", "role": "full_n" }} , 
  	{ "name": "s_pix_i_write", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "s_pix_i", "role": "write" }} , 
  	{ "name": "tw_eff_loc_i_c2_din", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "tw_eff_loc_i_c2", "role": "din" }} , 
@@ -220,7 +220,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "h0", "Type" : "None", "Direction" : "I"},
 			{"Name" : "w0", "Type" : "None", "Direction" : "I"},
 			{"Name" : "p_read", "Type" : "None", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "2", "DependentChanType" : "1"},
-			{"Name" : "s_pix_i", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["0","0"], "DependentChan" : "0", "DependentChanDepth" : "1024", "DependentChanType" : "0",
+			{"Name" : "s_pix_i", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["0","0"], "DependentChan" : "0", "DependentChanDepth" : "512", "DependentChanType" : "0",
 				"BlockSignal" : [
 					{"Name" : "s_pix_i_blk_n", "Type" : "RtlSignal"}]},
 			{"Name" : "tw_eff_loc_i_c2", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["0","0"], "DependentChan" : "0", "DependentChanDepth" : "2", "DependentChanType" : "2",
@@ -267,7 +267,7 @@ set Spec2ImplPortList {
 	h0 { ap_none {  { h0 in_data 0 9 } } }
 	w0 { ap_none {  { w0 in_data 0 8 } } }
 	p_read { ap_none {  { p_read in_data 0 8 } } }
-	s_pix_i { ap_fifo {  { s_pix_i_din fifo_port_we 1 32 }  { s_pix_i_num_data_valid fifo_status_num_data_valid 0 11 }  { s_pix_i_fifo_cap fifo_update 0 11 }  { s_pix_i_full_n fifo_status 0 1 }  { s_pix_i_write fifo_data 1 1 } } }
+	s_pix_i { ap_fifo {  { s_pix_i_din fifo_port_we 1 32 }  { s_pix_i_num_data_valid fifo_status_num_data_valid 0 10 }  { s_pix_i_fifo_cap fifo_update 0 10 }  { s_pix_i_full_n fifo_status 0 1 }  { s_pix_i_write fifo_data 1 1 } } }
 	tw_eff_loc_i_c2 { ap_fifo {  { tw_eff_loc_i_c2_din fifo_port_we 1 8 }  { tw_eff_loc_i_c2_num_data_valid fifo_status_num_data_valid 0 2 }  { tw_eff_loc_i_c2_fifo_cap fifo_update 0 2 }  { tw_eff_loc_i_c2_full_n fifo_status 0 1 }  { tw_eff_loc_i_c2_write fifo_data 1 1 } } }
 	w0_c4 { ap_fifo {  { w0_c4_din fifo_port_we 1 8 }  { w0_c4_num_data_valid fifo_status_num_data_valid 0 3 }  { w0_c4_fifo_cap fifo_update 0 3 }  { w0_c4_full_n fifo_status 0 1 }  { w0_c4_write fifo_data 1 1 } } }
 	h0_c6 { ap_fifo {  { h0_c6_din fifo_port_we 1 9 }  { h0_c6_num_data_valid fifo_status_num_data_valid 0 2 }  { h0_c6_fifo_cap fifo_update 0 2 }  { h0_c6_full_n fifo_status 0 1 }  { h0_c6_write fifo_data 1 1 } } }

@@ -50,8 +50,8 @@ input   ap_continue;
 output   ap_idle;
 output   ap_ready;
 input  [31:0] s_pix_i_dout;
-input  [10:0] s_pix_i_num_data_valid;
-input  [10:0] s_pix_i_fifo_cap;
+input  [9:0] s_pix_i_num_data_valid;
+input  [9:0] s_pix_i_fifo_cap;
 input   s_pix_i_empty_n;
 output   s_pix_i_read;
 output  [2592:0] s_win_i_din;
@@ -86,306 +86,66 @@ wire    ap_CS_fsm_state1;
 reg    h0_c_blk_n;
 reg    tw_eff_loc_i_c_blk_n;
 reg    ap_block_state1;
-wire   [8:0] PH_fu_181_p2;
-reg   [8:0] PH_reg_216;
-wire   [8:0] PW_fu_190_p2;
-reg   [8:0] PW_reg_222;
+wire   [8:0] PH_fu_131_p2;
+reg   [8:0] PH_reg_166;
+wire   [8:0] PW_fu_140_p2;
+reg   [8:0] PW_reg_172;
 wire    ap_CS_fsm_state2;
-wire   [16:0] mul_ln145_fu_204_p2;
-reg   [16:0] mul_ln145_reg_227;
-wire   [31:0] lb1_q0;
-wire   [31:0] lb1_1_q0;
-wire   [31:0] lb1_2_q0;
-wire   [31:0] lb1_3_q0;
-wire   [31:0] lb1_4_q0;
-wire   [31:0] lb1_5_q0;
-wire   [31:0] lb1_6_q0;
-wire   [31:0] lb1_7_q0;
-wire    grp_make_win97_Pipeline_win9x9_read_pix_fu_126_ap_start;
-wire    grp_make_win97_Pipeline_win9x9_read_pix_fu_126_ap_done;
-wire    grp_make_win97_Pipeline_win9x9_read_pix_fu_126_ap_idle;
-wire    grp_make_win97_Pipeline_win9x9_read_pix_fu_126_ap_ready;
-wire    grp_make_win97_Pipeline_win9x9_read_pix_fu_126_s_pix_i_read;
-wire   [2592:0] grp_make_win97_Pipeline_win9x9_read_pix_fu_126_s_win_i_din;
-wire    grp_make_win97_Pipeline_win9x9_read_pix_fu_126_s_win_i_write;
-wire   [4:0] grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_7_address0;
-wire    grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_7_ce0;
-wire   [4:0] grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_7_address1;
-wire    grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_7_ce1;
-wire    grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_7_we1;
-wire   [31:0] grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_7_d1;
-wire   [4:0] grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_6_address0;
-wire    grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_6_ce0;
-wire   [4:0] grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_6_address1;
-wire    grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_6_ce1;
-wire    grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_6_we1;
-wire   [31:0] grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_6_d1;
-wire   [4:0] grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_5_address0;
-wire    grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_5_ce0;
-wire   [4:0] grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_5_address1;
-wire    grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_5_ce1;
-wire    grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_5_we1;
-wire   [31:0] grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_5_d1;
-wire   [4:0] grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_4_address0;
-wire    grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_4_ce0;
-wire   [4:0] grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_4_address1;
-wire    grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_4_ce1;
-wire    grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_4_we1;
-wire   [31:0] grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_4_d1;
-wire   [4:0] grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_3_address0;
-wire    grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_3_ce0;
-wire   [4:0] grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_3_address1;
-wire    grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_3_ce1;
-wire    grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_3_we1;
-wire   [31:0] grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_3_d1;
-wire   [4:0] grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_2_address0;
-wire    grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_2_ce0;
-wire   [4:0] grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_2_address1;
-wire    grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_2_ce1;
-wire    grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_2_we1;
-wire   [31:0] grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_2_d1;
-wire   [4:0] grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_1_address0;
-wire    grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_1_ce0;
-wire   [4:0] grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_1_address1;
-wire    grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_1_ce1;
-wire    grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_1_we1;
-wire   [31:0] grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_1_d1;
-wire   [4:0] grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_address0;
-wire    grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_ce0;
-wire   [4:0] grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_address1;
-wire    grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_ce1;
-wire    grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_we1;
-wire   [31:0] grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_d1;
-reg    grp_make_win97_Pipeline_win9x9_read_pix_fu_126_ap_start_reg;
+wire   [16:0] mul_ln145_fu_154_p2;
+reg   [16:0] mul_ln145_reg_177;
+wire    grp_make_win97_Pipeline_win9x9_read_pix_fu_84_ap_start;
+wire    grp_make_win97_Pipeline_win9x9_read_pix_fu_84_ap_done;
+wire    grp_make_win97_Pipeline_win9x9_read_pix_fu_84_ap_idle;
+wire    grp_make_win97_Pipeline_win9x9_read_pix_fu_84_ap_ready;
+wire    grp_make_win97_Pipeline_win9x9_read_pix_fu_84_s_pix_i_read;
+wire   [2592:0] grp_make_win97_Pipeline_win9x9_read_pix_fu_84_s_win_i_din;
+wire    grp_make_win97_Pipeline_win9x9_read_pix_fu_84_s_win_i_write;
+reg    grp_make_win97_Pipeline_win9x9_read_pix_fu_84_ap_start_reg;
 wire    ap_CS_fsm_state3;
-wire   [8:0] add_ln962_fu_145_p2;
-wire   [7:0] trunc_ln961_fu_159_p1;
-wire   [0:0] tmp_fu_151_p3;
-wire   [7:0] xor_ln962_fu_163_p2;
-wire   [7:0] th_eff_fu_169_p3;
-wire   [8:0] th_eff_cast_i_fu_177_p1;
-wire   [8:0] p_read_cast_fu_187_p1;
-wire   [8:0] mul_ln145_fu_204_p0;
-wire   [8:0] mul_ln145_fu_204_p1;
+wire   [8:0] add_ln978_fu_95_p2;
+wire   [7:0] trunc_ln977_fu_109_p1;
+wire   [0:0] tmp_fu_101_p3;
+wire   [7:0] xor_ln978_fu_113_p2;
+wire   [7:0] th_eff_fu_119_p3;
+wire   [8:0] th_eff_cast_i_fu_127_p1;
+wire   [8:0] p_read_cast_fu_137_p1;
+wire   [8:0] mul_ln145_fu_154_p0;
+wire   [8:0] mul_ln145_fu_154_p1;
 reg   [2:0] ap_NS_fsm;
 reg    ap_ST_fsm_state1_blk;
 wire    ap_ST_fsm_state2_blk;
 reg    ap_ST_fsm_state3_blk;
-wire   [16:0] mul_ln145_fu_204_p00;
-wire   [16:0] mul_ln145_fu_204_p10;
+wire   [16:0] mul_ln145_fu_154_p00;
+wire   [16:0] mul_ln145_fu_154_p10;
 wire    ap_ce_reg;
 
 // power-on initialization
 initial begin
 #0 ap_done_reg = 1'b0;
 #0 ap_CS_fsm = 3'd1;
-#0 grp_make_win97_Pipeline_win9x9_read_pix_fu_126_ap_start_reg = 1'b0;
+#0 grp_make_win97_Pipeline_win9x9_read_pix_fu_84_ap_start_reg = 1'b0;
 end
 
-srcnn_make_win97_lb1_RAM_2P_BRAM_1R1W #(
-    .DataWidth( 32 ),
-    .AddressRange( 28 ),
-    .AddressWidth( 5 ))
-lb1_U(
-    .clk(ap_clk),
-    .reset(ap_rst),
-    .address0(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_address0),
-    .ce0(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_ce0),
-    .q0(lb1_q0),
-    .address1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_address1),
-    .ce1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_ce1),
-    .we1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_we1),
-    .d1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_d1)
-);
-
-srcnn_make_win97_lb1_RAM_2P_BRAM_1R1W #(
-    .DataWidth( 32 ),
-    .AddressRange( 28 ),
-    .AddressWidth( 5 ))
-lb1_1_U(
-    .clk(ap_clk),
-    .reset(ap_rst),
-    .address0(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_1_address0),
-    .ce0(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_1_ce0),
-    .q0(lb1_1_q0),
-    .address1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_1_address1),
-    .ce1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_1_ce1),
-    .we1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_1_we1),
-    .d1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_1_d1)
-);
-
-srcnn_make_win97_lb1_RAM_2P_BRAM_1R1W #(
-    .DataWidth( 32 ),
-    .AddressRange( 28 ),
-    .AddressWidth( 5 ))
-lb1_2_U(
-    .clk(ap_clk),
-    .reset(ap_rst),
-    .address0(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_2_address0),
-    .ce0(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_2_ce0),
-    .q0(lb1_2_q0),
-    .address1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_2_address1),
-    .ce1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_2_ce1),
-    .we1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_2_we1),
-    .d1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_2_d1)
-);
-
-srcnn_make_win97_lb1_RAM_2P_BRAM_1R1W #(
-    .DataWidth( 32 ),
-    .AddressRange( 28 ),
-    .AddressWidth( 5 ))
-lb1_3_U(
-    .clk(ap_clk),
-    .reset(ap_rst),
-    .address0(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_3_address0),
-    .ce0(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_3_ce0),
-    .q0(lb1_3_q0),
-    .address1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_3_address1),
-    .ce1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_3_ce1),
-    .we1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_3_we1),
-    .d1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_3_d1)
-);
-
-srcnn_make_win97_lb1_RAM_2P_BRAM_1R1W #(
-    .DataWidth( 32 ),
-    .AddressRange( 28 ),
-    .AddressWidth( 5 ))
-lb1_4_U(
-    .clk(ap_clk),
-    .reset(ap_rst),
-    .address0(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_4_address0),
-    .ce0(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_4_ce0),
-    .q0(lb1_4_q0),
-    .address1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_4_address1),
-    .ce1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_4_ce1),
-    .we1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_4_we1),
-    .d1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_4_d1)
-);
-
-srcnn_make_win97_lb1_RAM_2P_BRAM_1R1W #(
-    .DataWidth( 32 ),
-    .AddressRange( 28 ),
-    .AddressWidth( 5 ))
-lb1_5_U(
-    .clk(ap_clk),
-    .reset(ap_rst),
-    .address0(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_5_address0),
-    .ce0(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_5_ce0),
-    .q0(lb1_5_q0),
-    .address1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_5_address1),
-    .ce1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_5_ce1),
-    .we1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_5_we1),
-    .d1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_5_d1)
-);
-
-srcnn_make_win97_lb1_RAM_2P_BRAM_1R1W #(
-    .DataWidth( 32 ),
-    .AddressRange( 28 ),
-    .AddressWidth( 5 ))
-lb1_6_U(
-    .clk(ap_clk),
-    .reset(ap_rst),
-    .address0(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_6_address0),
-    .ce0(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_6_ce0),
-    .q0(lb1_6_q0),
-    .address1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_6_address1),
-    .ce1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_6_ce1),
-    .we1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_6_we1),
-    .d1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_6_d1)
-);
-
-srcnn_make_win97_lb1_RAM_2P_BRAM_1R1W #(
-    .DataWidth( 32 ),
-    .AddressRange( 28 ),
-    .AddressWidth( 5 ))
-lb1_7_U(
-    .clk(ap_clk),
-    .reset(ap_rst),
-    .address0(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_7_address0),
-    .ce0(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_7_ce0),
-    .q0(lb1_7_q0),
-    .address1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_7_address1),
-    .ce1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_7_ce1),
-    .we1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_7_we1),
-    .d1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_7_d1)
-);
-
-srcnn_make_win97_Pipeline_win9x9_read_pix grp_make_win97_Pipeline_win9x9_read_pix_fu_126(
+srcnn_make_win97_Pipeline_win9x9_read_pix grp_make_win97_Pipeline_win9x9_read_pix_fu_84(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst),
-    .ap_start(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_ap_start),
-    .ap_done(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_ap_done),
-    .ap_idle(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_ap_idle),
-    .ap_ready(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_ap_ready),
+    .ap_start(grp_make_win97_Pipeline_win9x9_read_pix_fu_84_ap_start),
+    .ap_done(grp_make_win97_Pipeline_win9x9_read_pix_fu_84_ap_done),
+    .ap_idle(grp_make_win97_Pipeline_win9x9_read_pix_fu_84_ap_idle),
+    .ap_ready(grp_make_win97_Pipeline_win9x9_read_pix_fu_84_ap_ready),
     .s_pix_i_dout(s_pix_i_dout),
-    .s_pix_i_num_data_valid(11'd0),
-    .s_pix_i_fifo_cap(11'd0),
+    .s_pix_i_num_data_valid(10'd0),
+    .s_pix_i_fifo_cap(10'd0),
     .s_pix_i_empty_n(s_pix_i_empty_n),
-    .s_pix_i_read(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_s_pix_i_read),
-    .s_win_i_din(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_s_win_i_din),
+    .s_pix_i_read(grp_make_win97_Pipeline_win9x9_read_pix_fu_84_s_pix_i_read),
+    .s_win_i_din(grp_make_win97_Pipeline_win9x9_read_pix_fu_84_s_win_i_din),
     .s_win_i_num_data_valid(7'd0),
     .s_win_i_fifo_cap(7'd0),
     .s_win_i_full_n(s_win_i_full_n),
-    .s_win_i_write(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_s_win_i_write),
-    .empty(mul_ln145_reg_227),
-    .zext_ln125(PW_reg_222),
-    .lb1_7_address0(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_7_address0),
-    .lb1_7_ce0(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_7_ce0),
-    .lb1_7_q0(lb1_7_q0),
-    .lb1_7_address1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_7_address1),
-    .lb1_7_ce1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_7_ce1),
-    .lb1_7_we1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_7_we1),
-    .lb1_7_d1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_7_d1),
-    .lb1_6_address0(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_6_address0),
-    .lb1_6_ce0(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_6_ce0),
-    .lb1_6_q0(lb1_6_q0),
-    .lb1_6_address1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_6_address1),
-    .lb1_6_ce1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_6_ce1),
-    .lb1_6_we1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_6_we1),
-    .lb1_6_d1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_6_d1),
-    .lb1_5_address0(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_5_address0),
-    .lb1_5_ce0(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_5_ce0),
-    .lb1_5_q0(lb1_5_q0),
-    .lb1_5_address1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_5_address1),
-    .lb1_5_ce1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_5_ce1),
-    .lb1_5_we1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_5_we1),
-    .lb1_5_d1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_5_d1),
-    .lb1_4_address0(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_4_address0),
-    .lb1_4_ce0(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_4_ce0),
-    .lb1_4_q0(lb1_4_q0),
-    .lb1_4_address1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_4_address1),
-    .lb1_4_ce1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_4_ce1),
-    .lb1_4_we1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_4_we1),
-    .lb1_4_d1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_4_d1),
-    .lb1_3_address0(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_3_address0),
-    .lb1_3_ce0(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_3_ce0),
-    .lb1_3_q0(lb1_3_q0),
-    .lb1_3_address1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_3_address1),
-    .lb1_3_ce1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_3_ce1),
-    .lb1_3_we1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_3_we1),
-    .lb1_3_d1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_3_d1),
-    .lb1_2_address0(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_2_address0),
-    .lb1_2_ce0(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_2_ce0),
-    .lb1_2_q0(lb1_2_q0),
-    .lb1_2_address1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_2_address1),
-    .lb1_2_ce1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_2_ce1),
-    .lb1_2_we1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_2_we1),
-    .lb1_2_d1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_2_d1),
-    .lb1_1_address0(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_1_address0),
-    .lb1_1_ce0(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_1_ce0),
-    .lb1_1_q0(lb1_1_q0),
-    .lb1_1_address1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_1_address1),
-    .lb1_1_ce1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_1_ce1),
-    .lb1_1_we1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_1_we1),
-    .lb1_1_d1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_1_d1),
-    .lb1_address0(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_address0),
-    .lb1_ce0(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_ce0),
-    .lb1_q0(lb1_q0),
-    .lb1_address1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_address1),
-    .lb1_ce1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_ce1),
-    .lb1_we1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_we1),
-    .lb1_d1(grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_d1),
-    .zext_ln124(PH_reg_216)
+    .s_win_i_write(grp_make_win97_Pipeline_win9x9_read_pix_fu_84_s_win_i_write),
+    .empty(mul_ln145_reg_177),
+    .zext_ln125(PW_reg_172),
+    .zext_ln124(PH_reg_166)
 );
 
 srcnn_mul_9ns_9ns_17_1_1 #(
@@ -394,10 +154,10 @@ srcnn_mul_9ns_9ns_17_1_1 #(
     .din0_WIDTH( 9 ),
     .din1_WIDTH( 9 ),
     .dout_WIDTH( 17 ))
-mul_9ns_9ns_17_1_1_U139(
-    .din0(mul_ln145_fu_204_p0),
-    .din1(mul_ln145_fu_204_p1),
-    .dout(mul_ln145_fu_204_p2)
+mul_9ns_9ns_17_1_1_U284(
+    .din0(mul_ln145_fu_154_p0),
+    .din1(mul_ln145_fu_154_p1),
+    .dout(mul_ln145_fu_154_p2)
 );
 
 always @ (posedge ap_clk) begin
@@ -414,7 +174,7 @@ always @ (posedge ap_clk) begin
     end else begin
         if ((ap_continue == 1'b1)) begin
             ap_done_reg <= 1'b0;
-        end else if (((1'b1 == ap_CS_fsm_state3) & (grp_make_win97_Pipeline_win9x9_read_pix_fu_126_ap_done == 1'b1))) begin
+        end else if (((grp_make_win97_Pipeline_win9x9_read_pix_fu_84_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state3))) begin
             ap_done_reg <= 1'b1;
         end
     end
@@ -422,26 +182,26 @@ end
 
 always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
-        grp_make_win97_Pipeline_win9x9_read_pix_fu_126_ap_start_reg <= 1'b0;
+        grp_make_win97_Pipeline_win9x9_read_pix_fu_84_ap_start_reg <= 1'b0;
     end else begin
         if ((1'b1 == ap_CS_fsm_state2)) begin
-            grp_make_win97_Pipeline_win9x9_read_pix_fu_126_ap_start_reg <= 1'b1;
-        end else if ((grp_make_win97_Pipeline_win9x9_read_pix_fu_126_ap_ready == 1'b1)) begin
-            grp_make_win97_Pipeline_win9x9_read_pix_fu_126_ap_start_reg <= 1'b0;
+            grp_make_win97_Pipeline_win9x9_read_pix_fu_84_ap_start_reg <= 1'b1;
+        end else if ((grp_make_win97_Pipeline_win9x9_read_pix_fu_84_ap_ready == 1'b1)) begin
+            grp_make_win97_Pipeline_win9x9_read_pix_fu_84_ap_start_reg <= 1'b0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((~((ap_start == 1'b0) | (tw_eff_loc_i_c_full_n == 1'b0) | (h0_c_full_n == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
-        PH_reg_216 <= PH_fu_181_p2;
+        PH_reg_166 <= PH_fu_131_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state2)) begin
-        PW_reg_222 <= PW_fu_190_p2;
-        mul_ln145_reg_227 <= mul_ln145_fu_204_p2;
+        PW_reg_172 <= PW_fu_140_p2;
+        mul_ln145_reg_177 <= mul_ln145_fu_154_p2;
     end
 end
 
@@ -456,7 +216,7 @@ end
 assign ap_ST_fsm_state2_blk = 1'b0;
 
 always @ (*) begin
-    if ((grp_make_win97_Pipeline_win9x9_read_pix_fu_126_ap_done == 1'b0)) begin
+    if ((grp_make_win97_Pipeline_win9x9_read_pix_fu_84_ap_done == 1'b0)) begin
         ap_ST_fsm_state3_blk = 1'b1;
     end else begin
         ap_ST_fsm_state3_blk = 1'b0;
@@ -464,7 +224,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state3) & (grp_make_win97_Pipeline_win9x9_read_pix_fu_126_ap_done == 1'b1))) begin
+    if (((grp_make_win97_Pipeline_win9x9_read_pix_fu_84_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state3))) begin
         ap_done = 1'b1;
     end else begin
         ap_done = ap_done_reg;
@@ -480,7 +240,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state3) & (grp_make_win97_Pipeline_win9x9_read_pix_fu_126_ap_done == 1'b1))) begin
+    if (((grp_make_win97_Pipeline_win9x9_read_pix_fu_84_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state3))) begin
         ap_ready = 1'b1;
     end else begin
         ap_ready = 1'b0;
@@ -505,7 +265,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state3)) begin
-        s_pix_i_read = grp_make_win97_Pipeline_win9x9_read_pix_fu_126_s_pix_i_read;
+        s_pix_i_read = grp_make_win97_Pipeline_win9x9_read_pix_fu_84_s_pix_i_read;
     end else begin
         s_pix_i_read = 1'b0;
     end
@@ -513,7 +273,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state3)) begin
-        s_win_i_write = grp_make_win97_Pipeline_win9x9_read_pix_fu_126_s_win_i_write;
+        s_win_i_write = grp_make_win97_Pipeline_win9x9_read_pix_fu_84_s_win_i_write;
     end else begin
         s_win_i_write = 1'b0;
     end
@@ -548,7 +308,7 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state3;
         end
         ap_ST_fsm_state3 : begin
-            if (((1'b1 == ap_CS_fsm_state3) & (grp_make_win97_Pipeline_win9x9_read_pix_fu_126_ap_done == 1'b1))) begin
+            if (((grp_make_win97_Pipeline_win9x9_read_pix_fu_84_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state3))) begin
                 ap_NS_fsm = ap_ST_fsm_state1;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state3;
@@ -560,11 +320,11 @@ always @ (*) begin
     endcase
 end
 
-assign PH_fu_181_p2 = (th_eff_cast_i_fu_177_p1 + 9'd12);
+assign PH_fu_131_p2 = (th_eff_cast_i_fu_127_p1 + 9'd12);
 
-assign PW_fu_190_p2 = (p_read_cast_fu_187_p1 + 9'd12);
+assign PW_fu_140_p2 = (p_read_cast_fu_137_p1 + 9'd12);
 
-assign add_ln962_fu_145_p2 = (h0 + 9'd16);
+assign add_ln978_fu_95_p2 = (h0 + 9'd16);
 
 assign ap_CS_fsm_state1 = ap_CS_fsm[32'd0];
 
@@ -576,32 +336,32 @@ always @ (*) begin
     ap_block_state1 = ((ap_start == 1'b0) | (tw_eff_loc_i_c_full_n == 1'b0) | (h0_c_full_n == 1'b0) | (ap_done_reg == 1'b1));
 end
 
-assign grp_make_win97_Pipeline_win9x9_read_pix_fu_126_ap_start = grp_make_win97_Pipeline_win9x9_read_pix_fu_126_ap_start_reg;
+assign grp_make_win97_Pipeline_win9x9_read_pix_fu_84_ap_start = grp_make_win97_Pipeline_win9x9_read_pix_fu_84_ap_start_reg;
 
 assign h0_c_din = h0;
 
-assign mul_ln145_fu_204_p0 = mul_ln145_fu_204_p00;
+assign mul_ln145_fu_154_p0 = mul_ln145_fu_154_p00;
 
-assign mul_ln145_fu_204_p00 = PH_reg_216;
+assign mul_ln145_fu_154_p00 = PH_reg_166;
 
-assign mul_ln145_fu_204_p1 = mul_ln145_fu_204_p10;
+assign mul_ln145_fu_154_p1 = mul_ln145_fu_154_p10;
 
-assign mul_ln145_fu_204_p10 = PW_fu_190_p2;
+assign mul_ln145_fu_154_p10 = PW_fu_140_p2;
 
-assign p_read_cast_fu_187_p1 = p_read;
+assign p_read_cast_fu_137_p1 = p_read;
 
-assign s_win_i_din = grp_make_win97_Pipeline_win9x9_read_pix_fu_126_s_win_i_din;
+assign s_win_i_din = grp_make_win97_Pipeline_win9x9_read_pix_fu_84_s_win_i_din;
 
-assign th_eff_cast_i_fu_177_p1 = th_eff_fu_169_p3;
+assign th_eff_cast_i_fu_127_p1 = th_eff_fu_119_p3;
 
-assign th_eff_fu_169_p3 = ((tmp_fu_151_p3[0:0] == 1'b1) ? xor_ln962_fu_163_p2 : 8'd16);
+assign th_eff_fu_119_p3 = ((tmp_fu_101_p3[0:0] == 1'b1) ? xor_ln978_fu_113_p2 : 8'd16);
 
-assign tmp_fu_151_p3 = add_ln962_fu_145_p2[32'd8];
+assign tmp_fu_101_p3 = add_ln978_fu_95_p2[32'd8];
 
-assign trunc_ln961_fu_159_p1 = h0[7:0];
+assign trunc_ln977_fu_109_p1 = h0[7:0];
 
 assign tw_eff_loc_i_c_din = p_read;
 
-assign xor_ln962_fu_163_p2 = (trunc_ln961_fu_159_p1 ^ 8'd255);
+assign xor_ln978_fu_113_p2 = (trunc_ln977_fu_109_p1 ^ 8'd255);
 
 endmodule //srcnn_make_win97

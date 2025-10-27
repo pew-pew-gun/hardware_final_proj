@@ -1,25 +1,25 @@
 set ModuleHierarchy {[{
 "Name" : "srcnn","ID" : "0","Type" : "sequential",
 "SubInsts" : [
-	{"Name" : "grp_srcnn_Pipeline_CopyW3_inft_CopyW3_ky_CopyW3_kx_fu_1081","ID" : "1","Type" : "sequential",
+	{"Name" : "grp_srcnn_Pipeline_CopyW3_inft_CopyW3_ky_CopyW3_kx_fu_1383","ID" : "1","Type" : "sequential",
 		"SubLoops" : [
 		{"Name" : "CopyW3_inft_CopyW3_ky_CopyW3_kx","ID" : "2","Type" : "pipeline"},]},],
 "SubLoops" : [
 	{"Name" : "CopyW1_outft","ID" : "3","Type" : "no",
 	"SubInsts" : [
-	{"Name" : "grp_srcnn_Pipeline_CopyW1_ky_CopyW1_kx_fu_884","ID" : "4","Type" : "sequential",
+	{"Name" : "grp_srcnn_Pipeline_CopyW1_ky_CopyW1_kx_fu_1186","ID" : "4","Type" : "sequential",
 			"SubLoops" : [
 			{"Name" : "CopyW1_ky_CopyW1_kx","ID" : "5","Type" : "pipeline"},]},]},
 	{"Name" : "CopyW2_outft","ID" : "6","Type" : "no",
 	"SubInsts" : [
-	{"Name" : "grp_srcnn_Pipeline_CopyW2_inft_fu_1055","ID" : "7","Type" : "sequential",
+	{"Name" : "grp_srcnn_Pipeline_CopyW2_inft_fu_1357","ID" : "7","Type" : "sequential",
 			"SubLoops" : [
 			{"Name" : "CopyW2_inft","ID" : "8","Type" : "pipeline"},]},]},
 	{"Name" : "IT_h0","ID" : "9","Type" : "no",
 	"SubLoops" : [
 	{"Name" : "IT_w0","ID" : "10","Type" : "no",
 		"SubInsts" : [
-		{"Name" : "grp_dataflow_in_loop_IT_w0_1_fu_1104","ID" : "11","Type" : "dataflow",
+		{"Name" : "grp_dataflow_in_loop_IT_w0_1_fu_1710","ID" : "11","Type" : "dataflow",
 				"SubInsts" : [
 				{"Name" : "tw_eff_loc_i_c3_channel_U","ID" : "12","Type" : "sequential"},
 				{"Name" : "load_tile_to_stream3_U0","ID" : "13","Type" : "sequential",
@@ -32,7 +32,7 @@ set ModuleHierarchy {[{
 					{"Name" : "tw_eff_loc_i_tmp_channel_U","ID" : "17","Type" : "sequential"},
 					{"Name" : "make_win97_U0","ID" : "18","Type" : "sequential",
 						"SubInsts" : [
-						{"Name" : "grp_make_win97_Pipeline_win9x9_read_pix_fu_126","ID" : "19","Type" : "sequential",
+						{"Name" : "grp_make_win97_Pipeline_win9x9_read_pix_fu_84","ID" : "19","Type" : "sequential",
 							"SubLoops" : [
 							{"Name" : "win9x9_read_pix","ID" : "20","Type" : "pipeline"},]},]},
 					{"Name" : "conv1conv2_from_windows8_U0","ID" : "21","Type" : "sequential",

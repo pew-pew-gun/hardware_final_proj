@@ -370,7 +370,7 @@ static void load_tile_to_stream(
 {
 #pragma HLS INLINE off
 #pragma HLS PIPELINE II=1
-#pragma HLS STREAM variable=s_pix depth=1024
+#pragma HLS STREAM variable=s_pix depth=512
  const int PH = th_eff + 2*((9/2) + (1/2) + (5/2));
   const int PW = tw_eff + 2*((9/2) + (1/2) + (5/2));
 
@@ -404,7 +404,7 @@ static void make_win9(
 
 
   ftmap_t lb1[9 -1][16 + 2*((9/2) + (1/2) + (5/2))];
-#pragma HLS BIND_STORAGE variable=lb1 type=ram_2p impl=bram
+
 #pragma HLS ARRAY_PARTITION variable=lb1 complete dim=1
 
 
@@ -531,8 +531,8 @@ Conv12_oy:
  param_t sum1 = 0;
         Conv1_ky:
         for (int ky = 0; ky < 9; ++ky) {
-
-          Conv1_kx:
+#pragma HLS UNROLL
+ Conv1_kx:
           for (int kx = 0; kx < 9; ++kx) {
 #pragma HLS UNROLL
  sum1 += w1[c1][0][ky][kx] * w.a[ky][kx];
@@ -593,20 +593,13 @@ static void conv1conv2_stream(
  {
 #pragma HLS INLINE off
 #pragma HLS PIPELINE II=1
-#pragma HLS STREAM variable=s_out depth=1024
+
+#pragma HLS STREAM variable=s_out depth=256
  const int C2H = th_eff + 2*(5/2);
    const int C2W = tw_eff + 2*(5/2);
+# 621 "src/srcnn.cpp"
+   conv2_pixel_t lb2[5 -1][16 + 2*(5/2)];
 
-#pragma HLS ALLOCATION instances=mul limit=32 operation
-#pragma HLS ALLOCATION instances=fmul limit=32 operation
-
-
-
-
-
-
- conv2_pixel_t lb2[5 -1][16 + 2*(5/2)];
-#pragma HLS BIND_STORAGE variable=lb2 type=ram_2p impl=bram
 #pragma HLS ARRAY_PARTITION variable=lb2 complete dim=1
 
 
@@ -666,12 +659,12 @@ static void conv1conv2_stream(
 
          Conv3_kx:
          for (int kx=0; kx<5; ++kx) {
+#pragma HLS UNROLL
 
-
-           Conv3_inv8_dot:
+ Conv3_inv8_dot:
            for (int n2=0; n2<32; n2 += 8) {
-
-             param_t ps = 0;
+#pragma HLS UNROLL
+ param_t ps = 0;
              Conv3_inner_dot:
              for (int u=0; u<8; ++u) {
 #pragma HLS UNROLL
@@ -698,7 +691,7 @@ static void conv1conv2_stream(
      }
    }
  }
-# 723 "src/srcnn.cpp"
+# 724 "src/srcnn.cpp"
 static void store_stream(
   hls::stream<ftmap_t> &s_out,
   ftmap_t out[1][255][255],
@@ -731,13 +724,13 @@ __attribute__((sdx_kernel("srcnn", 0))) void srcnn(
 {
 #line 27 "D:/HAC/hardware_final_proj/srcnn_hls/solution1/csynth.tcl"
 #pragma HLSDIRECTIVE TOP name=srcnn
-# 752 "src/srcnn.cpp"
+# 753 "src/srcnn.cpp"
 
 #line 7 "D:/HAC/hardware_final_proj/srcnn_hls/solution1/directives.tcl"
 #pragma HLSDIRECTIVE TOP name=srcnn
-# 752 "src/srcnn.cpp"
+# 753 "src/srcnn.cpp"
 
-# 764 "src/srcnn.cpp"
+# 765 "src/srcnn.cpp"
 #pragma HLS INTERFACE s_axilite port=return bundle=ctrl
 
 #pragma HLS INTERFACE s_axilite port=reload_weights bundle=ctrl
@@ -786,27 +779,34 @@ __attribute__((sdx_kernel("srcnn", 0))) void srcnn(
   static param_t b2_loc[32];
   static param_t w3_loc[1][32][5][5];
   static param_t b3_loc[1];
-# 823 "src/srcnn.cpp"
+# 824 "src/srcnn.cpp"
 #pragma HLS RESOURCE variable=w1_loc core=RAM_1P_LUTRAM
-#pragma HLS ARRAY_PARTITION variable=w1_loc cyclic factor=9 dim=4
-# 834 "src/srcnn.cpp"
+#pragma HLS ARRAY_PARTITION variable=w1_loc complete dim=4
+#pragma HLS ARRAY_PARTITION variable=w1_loc cyclic factor=9 dim=3
+# 836 "src/srcnn.cpp"
 #pragma HLS RESOURCE variable=w2_loc core=RAM_1P_LUTRAM
 
 
 
 
 #pragma HLS ARRAY_PARTITION variable=w2_loc cyclic factor=8 dim=1
-# 857 "src/srcnn.cpp"
-#pragma HLS BIND_STORAGE variable=w3_loc type=ram_2p impl=bram
-#pragma HLS ARRAY_PARTITION variable=w3_loc cyclic factor=8 dim=2
-# 868 "src/srcnn.cpp"
+# 875 "src/srcnn.cpp"
+#pragma HLS RESOURCE variable=w3_loc core=RAM_1P_LUTRAM
+
+#pragma HLS ARRAY_PARTITION variable=w3_loc complete dim=2
+#pragma HLS ARRAY_PARTITION variable=w3_loc cyclic factor=5 dim=4
+
+
+
+
+
 #pragma HLS ARRAY_PARTITION variable=b1_loc complete dim=1
 #pragma HLS ARRAY_PARTITION variable=b2_loc complete dim=1
 #pragma HLS ARRAY_PARTITION variable=b3_loc complete dim=1
 #pragma HLS RESOURCE variable=b1_loc core=RAM_1P_LUTRAM
 #pragma HLS RESOURCE variable=b2_loc core=RAM_1P_LUTRAM
 #pragma HLS RESOURCE variable=b3_loc core=RAM_1P_LUTRAM
-# 888 "src/srcnn.cpp"
+# 904 "src/srcnn.cpp"
  static bool weights_loaded = false;
 
 

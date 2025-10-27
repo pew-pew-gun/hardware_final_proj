@@ -158,8 +158,8 @@ input  [8:0] h0;
 input  [7:0] w0;
 input  [7:0] p_read;
 output  [31:0] s_pix_i_din;
-input  [10:0] s_pix_i_num_data_valid;
-input  [10:0] s_pix_i_fifo_cap;
+input  [9:0] s_pix_i_num_data_valid;
+input  [9:0] s_pix_i_fifo_cap;
 input   s_pix_i_full_n;
 output   s_pix_i_write;
 output  [7:0] tw_eff_loc_i_c2_din;
@@ -228,10 +228,10 @@ reg   [31:0] gmem_in_addr_read_reg_571;
 reg   [8:0] px_reg_189;
 wire  signed [63:0] sext_ln113_fu_488_p1;
 reg   [8:0] py_fu_118;
-wire   [8:0] add_ln962_fu_200_p2;
-wire   [7:0] trunc_ln961_fu_214_p1;
+wire   [8:0] add_ln978_fu_200_p2;
+wire   [7:0] trunc_ln977_fu_214_p1;
 wire   [0:0] tmp_fu_206_p3;
-wire   [7:0] xor_ln962_fu_218_p2;
+wire   [7:0] xor_ln978_fu_218_p2;
 wire   [7:0] th_eff_fu_224_p3;
 wire   [8:0] th_eff_cast_fu_240_p1;
 wire   [9:0] h0_cast4_i_fu_236_p1;
@@ -266,7 +266,7 @@ wire   [19:0] zext_ln113_2_fu_460_p1;
 wire   [19:0] add_ln113_fu_464_p2;
 wire  signed [63:0] sext_ln113_1_fu_469_p1;
 wire   [63:0] add_ln113_1_fu_473_p2;
-wire   [61:0] trunc_ln7_fu_478_p4;
+wire   [61:0] trunc_ln6_fu_478_p4;
 reg   [12:0] ap_NS_fsm;
 reg    ap_ST_fsm_state1_blk;
 wire    ap_ST_fsm_state2_blk;
@@ -623,7 +623,7 @@ assign add_ln113_1_fu_473_p2 = ($signed(sext_ln113_1_fu_469_p1) + $signed(input_
 
 assign add_ln113_fu_464_p2 = ($signed(sext_ln109_reg_552) + $signed(zext_ln113_2_fu_460_p1));
 
-assign add_ln962_fu_200_p2 = (h0 + 9'd16);
+assign add_ln978_fu_200_p2 = (h0 + 9'd16);
 
 assign ap_CS_fsm_state1 = ap_CS_fsm[32'd0];
 
@@ -743,7 +743,7 @@ assign sext_ln110_fu_280_p1 = add_ln110_fu_260_p2;
 
 assign sext_ln113_1_fu_469_p1 = $signed(add_ln113_fu_464_p2);
 
-assign sext_ln113_fu_488_p1 = $signed(trunc_ln7_fu_478_p4);
+assign sext_ln113_fu_488_p1 = $signed(trunc_ln6_fu_478_p4);
 
 assign shl_ln113_1_fu_367_p3 = {{iy_2_fu_347_p3}, {2'd0}};
 
@@ -755,21 +755,21 @@ assign sub_ln113_fu_379_p2 = (zext_ln113_fu_363_p1 - zext_ln113_1_fu_375_p1);
 
 assign th_eff_cast_fu_240_p1 = th_eff_fu_224_p3;
 
-assign th_eff_fu_224_p3 = ((tmp_fu_206_p3[0:0] == 1'b1) ? xor_ln962_fu_218_p2 : 8'd16);
+assign th_eff_fu_224_p3 = ((tmp_fu_206_p3[0:0] == 1'b1) ? xor_ln978_fu_218_p2 : 8'd16);
 
 assign tmp_5_fu_321_p3 = iy_fu_311_p2[32'd10];
 
 assign tmp_6_fu_418_p3 = ix_fu_408_p2[32'd10];
 
-assign tmp_fu_206_p3 = add_ln962_fu_200_p2[32'd8];
+assign tmp_fu_206_p3 = add_ln978_fu_200_p2[32'd8];
 
 assign trunc_ln104_fu_337_p1 = iy_1_fu_329_p3[7:0];
 
 assign trunc_ln113_fu_440_p1 = ix_1_fu_426_p3[7:0];
 
-assign trunc_ln7_fu_478_p4 = {{add_ln113_1_fu_473_p2[63:2]}};
+assign trunc_ln6_fu_478_p4 = {{add_ln113_1_fu_473_p2[63:2]}};
 
-assign trunc_ln961_fu_214_p1 = h0[7:0];
+assign trunc_ln977_fu_214_p1 = h0[7:0];
 
 assign tw_eff_loc_i_c2_din = p_read;
 
@@ -777,7 +777,7 @@ assign w0_c4_din = w0;
 
 assign w0_cast_fu_232_p1 = w0;
 
-assign xor_ln962_fu_218_p2 = (trunc_ln961_fu_214_p1 ^ 8'd255);
+assign xor_ln978_fu_218_p2 = (trunc_ln977_fu_214_p1 ^ 8'd255);
 
 assign zext_ln103_fu_292_p1 = py_fu_118;
 

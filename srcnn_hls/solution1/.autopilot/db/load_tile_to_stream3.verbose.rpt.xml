@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'load_tile_to_stream3'" level="0">
-<item name = "Date">Mon Oct 27 19:18:38 2025
+<item name = "Date">Mon Oct 27 20:05:10 2025
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -87,7 +87,7 @@
 <column name="add_ln110_fu_260_p2">+, 0, 0, 16, 9, 4</column>
 <column name="add_ln113_1_fu_473_p2">+, 0, 0, 71, 64, 64</column>
 <column name="add_ln113_fu_464_p2">+, 0, 0, 27, 20, 20</column>
-<column name="add_ln962_fu_200_p2">+, 0, 0, 16, 9, 5</column>
+<column name="add_ln978_fu_200_p2">+, 0, 0, 16, 9, 5</column>
 <column name="ix_fu_408_p2">+, 0, 0, 18, 11, 11</column>
 <column name="iy_fu_311_p2">+, 0, 0, 18, 11, 11</column>
 <column name="px_1_fu_398_p2">+, 0, 0, 16, 9, 1</column>
@@ -103,7 +103,7 @@
 <column name="iy_2_fu_347_p3">select, 0, 0, 8, 1, 3</column>
 <column name="select_ln112_fu_444_p3">select, 0, 0, 8, 1, 3</column>
 <column name="th_eff_fu_224_p3">select, 0, 0, 8, 1, 8</column>
-<column name="xor_ln962_fu_218_p2">xor, 0, 0, 8, 8, 2</column>
+<column name="xor_ln978_fu_218_p2">xor, 0, 0, 8, 8, 2</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
@@ -204,8 +204,8 @@
 <column name="w0">in, 8, ap_none, w0, scalar</column>
 <column name="p_read">in, 8, ap_none, p_read, scalar</column>
 <column name="s_pix_i_din">out, 32, ap_fifo, s_pix_i, pointer</column>
-<column name="s_pix_i_num_data_valid">in, 11, ap_fifo, s_pix_i, pointer</column>
-<column name="s_pix_i_fifo_cap">in, 11, ap_fifo, s_pix_i, pointer</column>
+<column name="s_pix_i_num_data_valid">in, 10, ap_fifo, s_pix_i, pointer</column>
+<column name="s_pix_i_fifo_cap">in, 10, ap_fifo, s_pix_i, pointer</column>
 <column name="s_pix_i_full_n">in, 1, ap_fifo, s_pix_i, pointer</column>
 <column name="s_pix_i_write">out, 1, ap_fifo, s_pix_i, pointer</column>
 <column name="tw_eff_loc_i_c2_din">out, 8, ap_fifo, tw_eff_loc_i_c2, pointer</column>

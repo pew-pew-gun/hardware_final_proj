@@ -1966,7 +1966,7 @@ for.body71.split.i:120 %tmp_15 = fcmp_ogt  i32 %t2_7, i32 0
 
 <Node id="20" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0">
 <![CDATA[
-for.body71.split.i:2 %specpipeline_ln385 = specpipeline void @_ssdm_op_SpecPipeline, i32 4, i32 0, i32 0, i32 0, void @empty_21
+for.body71.split.i:2 %specpipeline_ln385 = specpipeline void @_ssdm_op_SpecPipeline, i32 4, i32 0, i32 0, i32 0, void @empty_25
 
 ]]></Node>
 <StgValue><ssdm name="specpipeline_ln385"/></StgValue>
@@ -1996,7 +1996,7 @@ for.body71.split.i:3 %speclooptripcount_ln384 = speclooptripcount void @_ssdm_op
 
 <Node id="22" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.body71.split.i:4 %specloopname_ln384 = specloopname void @_ssdm_op_SpecLoopName, void @empty_5
+for.body71.split.i:4 %specloopname_ln384 = specloopname void @_ssdm_op_SpecLoopName, void @empty_27
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln384"/></StgValue>

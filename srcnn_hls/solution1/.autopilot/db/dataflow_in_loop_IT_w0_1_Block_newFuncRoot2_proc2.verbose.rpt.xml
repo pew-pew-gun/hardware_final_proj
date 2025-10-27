@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'dataflow_in_loop_IT_w0_1_Block_newFuncRoot2_proc2'" level="0">
-<item name = "Date">Mon Oct 27 19:18:38 2025
+<item name = "Date">Mon Oct 27 20:05:10 2025
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -77,10 +77,10 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln965_fu_24_p2">+, 0, 0, 16, 9, 5</column>
+<column name="add_ln981_fu_24_p2">+, 0, 0, 16, 9, 5</column>
 <column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
 <column name="tw_eff_fu_44_p3">select, 0, 0, 8, 1, 8</column>
-<column name="xor_ln965_fu_38_p2">xor, 0, 0, 8, 8, 2</column>
+<column name="xor_ln981_fu_38_p2">xor, 0, 0, 8, 8, 2</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">

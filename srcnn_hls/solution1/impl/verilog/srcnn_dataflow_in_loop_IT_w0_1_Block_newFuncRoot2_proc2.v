@@ -40,9 +40,9 @@ reg    ap_done_reg;
 wire    ap_CS_fsm_state1;
 reg    ap_block_state1;
 wire   [8:0] w0_cast_fu_20_p1;
-wire   [8:0] add_ln965_fu_24_p2;
+wire   [8:0] add_ln981_fu_24_p2;
 wire   [0:0] tmp_fu_30_p3;
-wire   [7:0] xor_ln965_fu_38_p2;
+wire   [7:0] xor_ln981_fu_38_p2;
 wire   [7:0] tw_eff_fu_44_p3;
 reg   [7:0] ap_return_preg;
 reg   [0:0] ap_NS_fsm;
@@ -137,7 +137,7 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln965_fu_24_p2 = (w0_cast_fu_20_p1 + 9'd16);
+assign add_ln981_fu_24_p2 = (w0_cast_fu_20_p1 + 9'd16);
 
 assign ap_CS_fsm_state1 = ap_CS_fsm[32'd0];
 
@@ -145,12 +145,12 @@ always @ (*) begin
     ap_block_state1 = ((ap_start == 1'b0) | (ap_done_reg == 1'b1));
 end
 
-assign tmp_fu_30_p3 = add_ln965_fu_24_p2[32'd8];
+assign tmp_fu_30_p3 = add_ln981_fu_24_p2[32'd8];
 
-assign tw_eff_fu_44_p3 = ((tmp_fu_30_p3[0:0] == 1'b1) ? xor_ln965_fu_38_p2 : 8'd16);
+assign tw_eff_fu_44_p3 = ((tmp_fu_30_p3[0:0] == 1'b1) ? xor_ln981_fu_38_p2 : 8'd16);
 
 assign w0_cast_fu_20_p1 = w0;
 
-assign xor_ln965_fu_38_p2 = (w0 ^ 8'd255);
+assign xor_ln981_fu_38_p2 = (w0 ^ 8'd255);
 
 endmodule //srcnn_dataflow_in_loop_IT_w0_1_Block_newFuncRoot2_proc2

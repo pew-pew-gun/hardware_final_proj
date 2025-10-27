@@ -95,7 +95,7 @@ static void load_tile_to_stream(
 {
 #pragma HLS INLINE off
 #pragma HLS PIPELINE II=TEST_II
-#pragma HLS STREAM variable=s_pix depth=1024 // currently using 1024, arbitrarily chosen - can change later
+#pragma HLS STREAM variable=s_pix depth=512 // currently using 1024, arbitrarily chosen - can change later
   const int PH = th_eff + 2*R_TOTAL;
   const int PW = tw_eff + 2*R_TOTAL;
 
@@ -129,7 +129,7 @@ static void make_win9(
   // To try alleviate BRAM reads from in_tile, we will use a 9x9 sliding window/buffer:
   // line buffers for Conv1 (store previous F1-1 rows)
   ftmap_t lb1[F1-1][TW + 2*R_TOTAL];
-  #pragma HLS BIND_STORAGE    variable=lb1 type=ram_2p impl=bram
+  // #pragma HLS BIND_STORAGE    variable=lb1 type=ram_2p impl=bram
   #pragma HLS ARRAY_PARTITION variable=lb1 complete dim=1
 
   // 9x9 window
@@ -353,7 +353,7 @@ Conv12_oy:
         param_t sum1 = 0;
         Conv1_ky:
         for (int ky = 0; ky < F1; ++ky) {
-          // #pragma HLS UNROLL
+          #pragma HLS UNROLL
           Conv1_kx:
           for (int kx = 0; kx < F1; ++kx) {
             #pragma HLS UNROLL
@@ -605,12 +605,13 @@ static void conv1conv2_stream(
  {
  #pragma HLS INLINE off
  #pragma HLS PIPELINE II=TEST_II
- #pragma HLS STREAM variable=s_out depth=1024
+//  #pragma HLS STREAM variable=s_out depth=1024
+#pragma HLS STREAM variable=s_out depth=256
    const int C2H = th_eff + 2*R3;
    const int C2W = tw_eff + 2*R3;
 
-#pragma HLS ALLOCATION instances=mul limit=32 operation
-#pragma HLS ALLOCATION instances=fmul limit=32 operation
+// #pragma HLS ALLOCATION instances=mul limit=32 operation
+// #pragma HLS ALLOCATION instances=fmul limit=32 operation
 
 
 
@@ -618,7 +619,7 @@ static void conv1conv2_stream(
    // line buffers: previous F3-1 rows of N2-vectors
 
    conv2_pixel_t lb2[F3-1][TW + 2*R3];
-   #pragma HLS BIND_STORAGE    variable=lb2 type=ram_2p impl=bram
+  //  #pragma HLS BIND_STORAGE    variable=lb2 type=ram_2p impl=bram
    #pragma HLS ARRAY_PARTITION variable=lb2 complete dim=1
 
    // 5x5 window of N2-vectors in registers
@@ -678,11 +679,11 @@ static void conv1conv2_stream(
         //  #pragma HLS UNROLL
          Conv3_kx:
          for (int kx=0; kx<F3; ++kx) {
-          //  #pragma HLS UNROLL
+           #pragma HLS UNROLL
            // accumulate dot( w3[0][_][ky][kx], win2[ky][kx].v[_] )
            Conv3_inv8_dot:
            for (int n2=0; n2<N2; n2 += UF_N2) { // for each bank in the w3 BRAM
-            //  #pragma HLS UNROLL
+             #pragma HLS UNROLL
              param_t ps = 0;
              Conv3_inner_dot:
              for (int u=0; u<UF_N2; ++u) { // for each element in a bank in the w3 BRAM
@@ -821,8 +822,9 @@ void srcnn(
   // After (area-lean):
   // #pragma HLS BIND_STORAGE variable=w1_loc type=ram_1p impl=bram
   #pragma HLS RESOURCE        variable=w1_loc core=RAM_1P_LUTRAM  // use LUTs/BRAM mix
-  #pragma HLS ARRAY_PARTITION variable=w1_loc cyclic factor=F1 dim=4
-
+  #pragma HLS ARRAY_PARTITION variable=w1_loc complete dim=4
+  #pragma HLS ARRAY_PARTITION variable=w1_loc cyclic factor=F1 dim=3
+  // #pragma HLS ARRAY_PARTITION variable=w1_loc cyclic factor=F1 dim=4
 
 
 
@@ -854,12 +856,26 @@ void srcnn(
 
   //-------- Reducing conv3 parallel MACs-------------------------------
   // After (area-lean):
-  #pragma HLS BIND_STORAGE variable=w3_loc type=ram_2p impl=bram
-  #pragma HLS ARRAY_PARTITION variable=w3_loc cyclic factor=UF_N2 dim=2   // keep only N2 banked by UF
-//#pragma HLS ARRAY_PARTITION variable=w3_loc cyclic factor=UF_N2 dim=3
-// #pragma HLS ARRAY_PARTITION variable=w3_loc cyclic factor=UF_N2 dim=4
+//  #pragma HLS BIND_STORAGE variable=w3_loc type=ram_2p impl=bram
+  // #pragma HLS RESOURCE        variable=w3_loc core=RAM_1P_LUTRAM
+//  #pragma HLS ARRAY_PARTITION variable=w3_loc cyclic factor=UF_N2 dim=2   // keep only N2 banked by UF
+  // #pragma HLS ARRAY_PARTITION variable=w3_loc complete dim=3   // ky
+  // #pragma HLS ARRAY_PARTITION variable=w3_loc complete dim=4   // kx
+
+  //#pragma HLS ARRAY_PARTITION variable=w3_loc cyclic factor=UF_N2 dim=3
+  // #pragma HLS ARRAY_PARTITION variable=w3_loc cyclic factor=UF_N2 dim=4
   // remove complete partitions on ky/kx
 
+
+
+//  #pragma HLS BIND_STORAGE variable=w3_loc type=ram_2p impl=bram
+//  #pragma HLS ARRAY_PARTITION variable=w3_loc cyclic factor=UF_N2 dim=2   // keep only N2 banked by UF
+
+
+  #pragma HLS RESOURCE        variable=w3_loc core=RAM_1P_LUTRAM
+  // #pragma HLS ARRAY_PARTITION variable=w3_loc cyclic factor=UF_N2 dim=2   // keep only N2 banked by UF
+  #pragma HLS ARRAY_PARTITION variable=w3_loc complete dim=2   // keep only N2 banked by UF
+  #pragma HLS ARRAY_PARTITION variable=w3_loc cyclic factor=F3 dim=4
 
 
 

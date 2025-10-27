@@ -9,39 +9,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>612</integer>
-      <key>column</key>
-      <integer>34</integer>
-      <key>message</key>
-      <string>unexpected pragma argument &apos;mul&apos;, expects function/operation</string>
-      <key>ID</key>
-      <integer>5559</integer>
-      <key>WarningOption</key>
-      <string>invalid-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/srcnn.cpp</string>
-      <key>line</key>
-      <integer>613</integer>
-      <key>column</key>
-      <integer>34</integer>
-      <key>message</key>
-      <string>unexpected pragma argument &apos;fmul&apos;, expects function/operation</string>
-      <key>ID</key>
-      <integer>5559</integer>
-      <key>WarningOption</key>
-      <string>invalid-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/srcnn.cpp</string>
-      <key>line</key>
-      <integer>823</integer>
+      <integer>824</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -57,7 +25,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>834</integer>
+      <integer>836</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -73,7 +41,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>871</integer>
+      <integer>875</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -89,7 +57,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>872</integer>
+      <integer>887</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -105,7 +73,23 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>873</integer>
+      <integer>888</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>&apos;Resource pragma&apos; is deprecated, use &apos;bind_op/bind_storage pragma&apos; instead</string>
+      <key>ID</key>
+      <integer>5531</integer>
+      <key>WarningOption</key>
+      <string>ignored-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>src/srcnn.cpp</string>
+      <key>line</key>
+      <integer>889</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>

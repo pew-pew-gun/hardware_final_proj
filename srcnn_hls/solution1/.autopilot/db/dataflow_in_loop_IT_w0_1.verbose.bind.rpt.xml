@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'dataflow_in_loop_IT_w0_1'" level="0">
-<item name = "Date">Mon Oct 27 19:18:33 2025
+<item name = "Date">Mon Oct 27 20:05:04 2025
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 7.794 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 7.793 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -31,12 +31,12 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="tw_eff_loc_i_c3_channel_dataflow_in_loop_IT_w0_1_Block_newFuncRoot2_proc2_fu_558">dataflow_in_loop_IT_w0_1_Block_newFuncRoot2_proc2, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
-<column name="grp_load_tile_to_stream3_fu_564">load_tile_to_stream3, ?, ?, ?, ?, ?, ?, no</column>
-<column name="grp_conv1conv2_stream4_fu_582">conv1conv2_stream4, 10438, 43736818, 0.104 ms, 0.437 sec, 10437, 43736817, dataflow</column>
-<column name="grp_conv3_stream5_fu_962">conv3_stream5, 785, 32534286, 7.850 us, 0.325 sec, 785, 32534286, no</column>
-<column name="call_ln0_entry_proc16_fu_992">entry_proc16, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
-<column name="grp_store_stream6_fu_999">store_stream6, ?, ?, ?, ?, ?, ?, no</column>
+<column name="tw_eff_loc_i_c3_channel_dataflow_in_loop_IT_w0_1_Block_newFuncRoot2_proc2_fu_864">dataflow_in_loop_IT_w0_1_Block_newFuncRoot2_proc2, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
+<column name="grp_load_tile_to_stream3_fu_870">load_tile_to_stream3, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_conv1conv2_stream4_fu_888">conv1conv2_stream4, 10438, 43736818, 0.104 ms, 0.437 sec, 10437, 43736817, dataflow</column>
+<column name="grp_conv3_stream5_fu_1268">conv3_stream5, 97, 29716884, 0.970 us, 0.297 sec, 97, 29716884, no</column>
+<column name="call_ln0_entry_proc16_fu_1602">entry_proc16, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
+<column name="grp_store_stream6_fu_1609">store_stream6, ?, ?, ?, ?, ?, ?, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
