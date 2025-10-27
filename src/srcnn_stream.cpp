@@ -5,7 +5,6 @@
 #define UF_N2 8                 // unroll across N2 lanes (32 out chs)
 #endif
 
-#define TEST_II 5
 
 // image dimensions
 #define W  255          // image width
@@ -27,10 +26,10 @@ typedef float param_t;  // parameters
 
 // Tile sizes (tune for BRAM and timing)
 #ifndef TH
-#define TH 8
+#define TH 16
 #endif
 #ifndef TW
-#define TW 8
+#define TW 16
 #endif
 
 // Radii and halo (SRCNN 9x9, 1x1, 5x5)
@@ -88,7 +87,7 @@ static void conv1conv2_stream(
   int th_eff, int tw_eff)
 {
 #pragma HLS INLINE off
-#pragma HLS PIPELINE II=TEST_II
+// #pragma HLS PIPELINE II=1
 #pragma HLS STREAM variable=s_f2 depth=(R1*TW + 64) // should it be (2*R1 + 1)*TW?
 
   const int PH = th_eff + 2*R_TOTAL;
@@ -112,7 +111,7 @@ static void conv1conv2_stream(
   // Read PH*PW pixels/the input tile from the stream:
   win9x9_read_pix:
   for (int t=0; t<PH*PW; ++t) {
-//    #pragma HLS PIPELINE II=1
+    #pragma HLS PIPELINE II=1
     ftmap_t pix = s_pix.read();
 
     // shift 9x9 window left by 1 col, insert rightmost col from lb1 + current pix
@@ -319,7 +318,7 @@ static void conv3_stream(
   int h0, int w0, int th_eff, int tw_eff)
 {
 #pragma HLS INLINE off
-#pragma HLS PIPELINE II=TEST_II
+#pragma HLS PIPELINE II=1
 #pragma HLS STREAM variable=s_out depth=1024
   const int C2H = th_eff + 2*R3;
   const int C2W = tw_eff + 2*R3;
@@ -328,7 +327,7 @@ static void conv3_stream(
 
   // line buffers: previous F3-1 rows of N2-vectors
   conv2_pixel lb2[F3-1][TW + 2*R3];
-//  #pragma HLS BIND_STORAGE    variable=lb2 type=ram_2p impl=bram
+  #pragma HLS BIND_STORAGE    variable=lb2 type=ram_2p impl=bram
   #pragma HLS ARRAY_PARTITION variable=lb2 complete dim=1
 
   // 5x5 window of N2-vectors in registers
@@ -550,8 +549,8 @@ void srcnn(
   // 2) CONV2 weights (bank across N2 to feed UF_N2 lanes)
 //  #pragma HLS BIND_STORAGE    variable=w2_loc type=ram_1p impl=bram
   #pragma HLS RESOURCE        variable=w2_loc core=RAM_1P_LUTRAM
-  #pragma HLS ARRAY_PARTITION variable=w2_loc cyclic factor=UF_N2 dim=1
-//  #pragma HLS ARRAY_PARTITION variable=w2_loc complete dim=1
+//  #pragma HLS ARRAY_PARTITION variable=w2_loc cyclic factor=UF_N2 dim=1
+  #pragma HLS ARRAY_PARTITION variable=w2_loc complete dim=1
 
   //// 3) CONV3 weights
   #pragma HLS RESOURCE        variable=w3_loc core=RAM_1P_LUTRAM
