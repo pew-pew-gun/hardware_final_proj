@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'load_tile_to_stream3'
 ================================================================
-* Date:           Mon Oct 27 21:38:59 2025
+* Date:           Tue Oct 28 00:02:05 2025
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -222,7 +222,7 @@ The critical path consists of the following:
  <State 2>: 3.243ns
 The critical path consists of the following:
 	'load' operation ('py', src/srcnn.cpp:103->src/srcnn.cpp:690->src/srcnn.cpp:677) on local variable 'py' [43]  (0.000 ns)
-	'add' operation ('add_ln104_2', src/srcnn.cpp:104->src/srcnn.cpp:690->src/srcnn.cpp:677) [52]  (0.787 ns)
+	'add' operation ('iy', src/srcnn.cpp:104->src/srcnn.cpp:690->src/srcnn.cpp:677) [51]  (0.787 ns)
 	'select' operation ('iy', src/srcnn.cpp:105->src/srcnn.cpp:690->src/srcnn.cpp:677) [54]  (0.403 ns)
 	'icmp' operation ('icmp_ln106', src/srcnn.cpp:106->src/srcnn.cpp:690->src/srcnn.cpp:677) [56]  (0.787 ns)
 	'select' operation ('iy', src/srcnn.cpp:106->src/srcnn.cpp:690->src/srcnn.cpp:677) [57]  (0.393 ns)

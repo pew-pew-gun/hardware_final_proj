@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1761561916571">
-  <ports id="1" name="s_pix_i" type="PortType" originalName="s_pix" coreId="540876904" bitwidth="32" iftype="IfTypeRom">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1761570272280">
+  <ports id="1" name="s_pix_i" type="PortType" originalName="s_pix" coreId="4294967295" bitwidth="32" iftype="IfTypeRom">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="2" name="s_win_i" type="PortType" coreId="1953845052" bitwidth="2593" direction="DirOut" iftype="IfTypeRom">
+  <ports id="2" name="s_win_i" type="PortType" coreId="171855169" bitwidth="2593" direction="DirOut" iftype="IfTypeRom">
     <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="3" name="h0" type="PortType" coreId="775041897" bitwidth="9">
+  <ports id="3" name="h0" type="PortType" coreId="1852142702" bitwidth="9">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="4" name="p_read" type="PortType" originalName="tw_eff" coreId="171855169" bitwidth="8">
+  <ports id="4" name="p_read" type="PortType" originalName="tw_eff" coreId="1852142702" bitwidth="8">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="5" name="h0_c" type="PortType" coreName="FIFO_SRL" coreId="543716464" bitwidth="9" direction="DirOut" iftype="IfTypeRom">
+  <ports id="5" name="h0_c" type="PortType" coreName="FIFO_SRL" coreId="1952671084" bitwidth="9" direction="DirOut" iftype="IfTypeRom">
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="6" name="tw_eff_loc_i_c" type="PortType" coreName="FIFO_SRL" coreId="1953656656" bitwidth="8" direction="DirOut" iftype="IfTypeRom">
+  <ports id="6" name="tw_eff_loc_i_c" type="PortType" coreName="FIFO_SRL" coreId="540876904" bitwidth="8" direction="DirOut" iftype="IfTypeRom">
     <dataInputObjs>write</dataInputObjs>
   </ports>
   <edges id="33" source_obj="//@ports.3" sink_obj="//@blocks.0/@node_objs.0"/>
@@ -74,13 +74,13 @@
       <dataOutputObjs>bitselect</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="tmp" lineNumber="670" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="tmp_fu_101_p3" coreId="1804902176" contextFuncName="srcnn" bitwidth="1" opcode="bitselect" m_display="0" m_topoIndex="6" m_clusterGroupNumber="1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="tmp" lineNumber="670" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="tmp_fu_101_p3" coreId="2901703008" contextFuncName="srcnn" bitwidth="1" opcode="bitselect" m_display="0" m_topoIndex="6" m_clusterGroupNumber="1">
       <inlineStackInfo fileName="src/srcnn.cpp" linenumber="670" fileDirectory="D:\HAC\hardware_final_proj" functionName="srcnn"/>
       <dataInputObjs>add</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="trunc_ln669" lineNumber="669" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="trunc_ln669_fu_109_p1" coreId="1805272800" contextFuncName="srcnn" bitwidth="8" opcode="trunc" m_display="0" m_topoIndex="7" m_clusterGroupNumber="1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="trunc_ln669" lineNumber="669" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="trunc_ln669_fu_109_p1" coreId="2900027776" contextFuncName="srcnn" bitwidth="8" opcode="trunc" m_display="0" m_topoIndex="7" m_clusterGroupNumber="1">
       <inlineStackInfo fileName="src/srcnn.cpp" linenumber="669" fileDirectory="D:\HAC\hardware_final_proj" functionName="srcnn"/>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>xor</dataOutputObjs>
@@ -98,11 +98,11 @@
       <dataOutputObjs>zext</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="p_read_cast" rtlName="p_read_cast_fu_137_p1" coreId="1804924416" bitwidth="9" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="p_read_cast" rtlName="p_read_cast_fu_137_p1" coreId="2900093856" bitwidth="9" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="th_eff_cast_i" lineNumber="670" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="th_eff_cast_i_fu_127_p1" coreId="1799391840" contextFuncName="srcnn" bitwidth="9" opcode="zext" m_display="0" m_topoIndex="10" m_clusterGroupNumber="1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="th_eff_cast_i" lineNumber="670" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="th_eff_cast_i_fu_127_p1" coreId="2899876816" contextFuncName="srcnn" bitwidth="9" opcode="zext" m_display="0" m_topoIndex="10" m_clusterGroupNumber="1">
       <inlineStackInfo fileName="src/srcnn.cpp" linenumber="670" fileDirectory="D:\HAC\hardware_final_proj" functionName="srcnn"/>
       <dataInputObjs>select</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
@@ -127,7 +127,7 @@
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="zext_ln146" lineNumber="146" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="mul_ln146_fu_154_p00" coreId="1805278048" contextFuncName="make_win9" bitwidth="17" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="zext_ln146" lineNumber="146" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="mul_ln146_fu_154_p00" coreId="2901533248" contextFuncName="make_win9" bitwidth="17" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="src/srcnn.cpp" linenumber="691" fileDirectory="D:\HAC\hardware_final_proj" functionName="_Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i_for.body126"/>
       <inlineStackInfo fileName="src/srcnn.cpp" linenumber="314" fileDirectory="D:\HAC\hardware_final_proj" functionName="conv1conv2_stream"/>
       <inlineStackInfo fileName="src/srcnn.cpp" linenumber="146" fileDirectory="D:\HAC\hardware_final_proj" functionName="make_win9"/>
@@ -135,7 +135,7 @@
       <dataInputObjs>add</dataInputObjs>
       <dataOutputObjs>mul</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="zext_ln146_1" lineNumber="146" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="mul_ln146_fu_154_p10" coreId="1805288544" contextFuncName="make_win9" bitwidth="17" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="zext_ln146_1" lineNumber="146" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="mul_ln146_fu_154_p10" coreId="2901783376" contextFuncName="make_win9" bitwidth="17" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="src/srcnn.cpp" linenumber="691" fileDirectory="D:\HAC\hardware_final_proj" functionName="_Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i_for.body126"/>
       <inlineStackInfo fileName="src/srcnn.cpp" linenumber="314" fileDirectory="D:\HAC\hardware_final_proj" functionName="conv1conv2_stream"/>
       <inlineStackInfo fileName="src/srcnn.cpp" linenumber="146" fileDirectory="D:\HAC\hardware_final_proj" functionName="make_win9"/>
@@ -152,8 +152,8 @@
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="empty" coreId="1799393504" bitwidth="32" opcode="wait" nodeLabel="1.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1"/>
-    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="_ln146" lineNumber="146" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="grp_make_win97_Pipeline_win9x9_read_pix_fu_84" coreId="1804946896" contextFuncName="make_win9" opcode="call" nodeLabel="1.0" nodeLatency="1" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="empty" coreId="2901718928" bitwidth="32" opcode="wait" nodeLabel="1.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="_ln146" lineNumber="146" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="grp_make_win97_Pipeline_win9x9_read_pix_fu_84" coreId="2899984576" contextFuncName="make_win9" opcode="call" nodeLabel="1.0" nodeLatency="1" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="src/srcnn.cpp" linenumber="691" fileDirectory="D:\HAC\hardware_final_proj" functionName="_Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i_for.body126"/>
       <inlineStackInfo fileName="src/srcnn.cpp" linenumber="314" fileDirectory="D:\HAC\hardware_final_proj" functionName="conv1conv2_stream"/>
       <inlineStackInfo fileName="src/srcnn.cpp" linenumber="146" fileDirectory="D:\HAC\hardware_final_proj" functionName="make_win9"/>
@@ -165,7 +165,7 @@
       <dataOutputObjs>s_win_i</dataOutputObjs>
       <constName>make_win97_Pipeline_win9x9_read_pix</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="_ln314" lineNumber="314" fileName="src/srcnn.cpp" fileDirectory="../." coreId="1805286688" contextFuncName="conv1conv2_stream" opcode="ret" nodeLabel="2.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="_ln314" lineNumber="314" fileName="src/srcnn.cpp" fileDirectory="../." coreId="2901831616" contextFuncName="conv1conv2_stream" opcode="ret" nodeLabel="2.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="src/srcnn.cpp" linenumber="691" fileDirectory="D:\HAC\hardware_final_proj" functionName="_Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i_for.body126"/>
       <inlineStackInfo fileName="src/srcnn.cpp" linenumber="314" fileDirectory="D:\HAC\hardware_final_proj" functionName="conv1conv2_stream"/>
       <inlineStackInfo fileName="src/srcnn.cpp" linenumber="677" fileDirectory="D:\HAC\hardware_final_proj" functionName="srcnn"/>

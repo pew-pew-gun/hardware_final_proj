@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1761561903620">
-  <ports id="1" name="gmem_w2" type="PortType" coreId="100" bitwidth="32" iftype="IfTypeFifo">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1761570266978">
+  <ports id="1" name="gmem_w2" type="PortType" coreId="1852142702" bitwidth="32" iftype="IfTypeFifo">
     <dataOutputObjs>getelementptr</dataOutputObjs>
   </ports>
   <ports id="2" name="zext_ln630_1" type="PortType" coreId="1852142702" bitwidth="9">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="3" name="zext_ln620_1" type="PortType" coreId="0" bitwidth="11">
+  <ports id="3" name="zext_ln620_1" type="PortType" coreId="556" bitwidth="11">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="4" name="sext_ln620" type="PortType" coreId="4294967295" bitwidth="62">
+  <ports id="4" name="sext_ln620" type="PortType" coreId="14" bitwidth="62">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="5" name="trunc_ln620_3" type="PortType" coreId="1852142702" bitwidth="2">
+  <ports id="5" name="trunc_ln620_3" type="PortType" coreId="100" bitwidth="2">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="6" name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_68" type="PortType" coreName="RAM_1P_BRAM" coreId="0" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="512">
+  <ports id="6" name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_68" type="PortType" coreName="RAM_1P_BRAM" coreId="4294967295" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="512">
     <dataInputObjs>getelementptr</dataInputObjs>
   </ports>
-  <ports id="7" name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_67" type="PortType" coreName="RAM_1P_BRAM" coreId="14" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="512">
+  <ports id="7" name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_67" type="PortType" coreName="RAM_1P_BRAM" coreId="100" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="512">
     <dataInputObjs>getelementptr</dataInputObjs>
   </ports>
-  <ports id="8" name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_66" type="PortType" coreName="RAM_1P_BRAM" coreId="100" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="512">
+  <ports id="8" name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_66" type="PortType" coreName="RAM_1P_BRAM" coreId="32" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="512">
     <dataInputObjs>getelementptr</dataInputObjs>
   </ports>
-  <ports id="9" name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_65" type="PortType" coreName="RAM_1P_BRAM" coreId="0" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="512">
+  <ports id="9" name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_65" type="PortType" coreName="RAM_1P_BRAM" coreId="129" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="512">
     <dataInputObjs>getelementptr</dataInputObjs>
   </ports>
   <edges id="73" source_obj="//@ports.4" sink_obj="//@blocks.0/@node_objs.1"/>
@@ -103,25 +103,25 @@
   <edges id="246" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.6/@node_objs.0"/>
   <blocks id="24" name="newFuncRoot" type="BlockType">
     <controlOutputObjs>for.inc69</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="i2" originalName="i2" coreId="1734439968" bitwidth="7" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="i2" originalName="i2" coreId="1851876457" bitwidth="7" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="trunc_ln620_3_read" coreId="1629513582" bitwidth="2" opcode="read" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="trunc_ln620_3_read" coreId="1852793632" bitwidth="2" opcode="read" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
       <dataInputObjs>trunc_ln620_3</dataInputObjs>
       <dataOutputObjs>switch</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="sext_ln620_read" coreId="1597208174" bitwidth="62" opcode="read" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="sext_ln620_read" coreId="1432309588" bitwidth="62" opcode="read" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
       <dataInputObjs>sext_ln620</dataInputObjs>
       <dataOutputObjs>sext</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="zext_ln620_1_read" coreId="1668444968" bitwidth="11" opcode="read" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="zext_ln620_1_read" coreId="1597395814" bitwidth="11" opcode="read" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
       <dataInputObjs>zext_ln620_1</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="zext_ln630_1_read" coreId="1668444975" bitwidth="9" opcode="read" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="zext_ln630_1_read" coreId="1885548142" bitwidth="9" opcode="read" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
       <dataInputObjs>zext_ln630_1</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
@@ -129,22 +129,22 @@
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="zext_ln620_1_cast" rtlName="zext_ln620_1_cast_fu_180_p1" coreId="2037672306" bitwidth="12" opcode="zext" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="zext_ln620_1_cast" rtlName="zext_ln620_1_cast_fu_180_p1" coreId="1668444975" bitwidth="12" opcode="zext" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="i2_write_ln0" coreId="1528955000" opcode="store" m_display="0" m_delay="0.42" m_topoIndex="8" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="i2_write_ln0" coreId="1668444975" opcode="store" m_display="0" m_delay="0.42" m_topoIndex="8" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="br_ln0" coreId="778989155" opcode="br" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="br_ln0" coreId="775107120" opcode="br" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
       <controlInputObjs>for.inc69</controlInputObjs>
     </node_objs>
   </blocks>
   <blocks id="68" name="for.inc78.exitStub" type="BlockType">
     <controlInputObjs>for.inc69</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="67" name="_ln0" coreId="1668444975" opcode="ret" nodeLabel="9.0" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="67" name="_ln0" coreId="1931944046" opcode="ret" nodeLabel="9.0" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1"/>
   </blocks>
   <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" iiViolation="" id="238" pipe_depth="11" RegionName="CopyW2_inft">
     <basic_blocks id="30" name="for.inc69" type="BlockType">
@@ -154,7 +154,7 @@
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>for.inc78.exitStub</controlOutputObjs>
       <controlOutputObjs>for.inc69.split</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="25" name="i2_1" lineNumber="624" originalName="i2" fileName="src/srcnn.cpp" fileDirectory="../." coreId="1668444975" contextFuncName="srcnn" bitwidth="7" opcode="load" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="25" name="i2_1" lineNumber="624" originalName="i2" fileName="src/srcnn.cpp" fileDirectory="../." coreId="2036625250" contextFuncName="srcnn" bitwidth="7" opcode="load" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/srcnn.cpp" linenumber="624" fileDirectory="D:\HAC\hardware_final_proj" functionName="srcnn"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataOutputObjs>icmp</dataOutputObjs>
@@ -174,7 +174,7 @@
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="29" name="br_ln624" lineNumber="624" fileName="src/srcnn.cpp" fileDirectory="../." coreId="2020173413" contextFuncName="srcnn" opcode="br" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="29" name="br_ln624" lineNumber="624" fileName="src/srcnn.cpp" fileDirectory="../." coreId="1627401849" contextFuncName="srcnn" opcode="br" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/srcnn.cpp" linenumber="624" fileDirectory="D:\HAC\hardware_final_proj" functionName="srcnn"/>
         <dataInputObjs>icmp</dataInputObjs>
         <controlInputObjs>for.inc69.split</controlInputObjs>
@@ -191,12 +191,12 @@
       <controlOutputObjs>arrayidx6812.case.0</controlOutputObjs>
       <controlOutputObjs>arrayidx6812.case.1</controlOutputObjs>
       <controlOutputObjs>arrayidx6812.case.2</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="31" name="zext_ln624" lineNumber="624" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="zext_ln624_fu_204_p1" coreId="1668444975" contextFuncName="srcnn" bitwidth="12" opcode="zext" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="31" name="zext_ln624" lineNumber="624" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="zext_ln624_fu_204_p1" coreId="662203231" contextFuncName="srcnn" bitwidth="12" opcode="zext" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/srcnn.cpp" linenumber="624" fileDirectory="D:\HAC\hardware_final_proj" functionName="srcnn"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>add</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="32" name="zext_ln630_2" lineNumber="630" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="zext_ln630_2_fu_243_p1" coreId="1668444975" contextFuncName="srcnn" bitwidth="9" opcode="zext" nodeLabel="10.0" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="32" name="zext_ln630_2" lineNumber="630" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="zext_ln630_2_fu_243_p1" coreId="1965060709" contextFuncName="srcnn" bitwidth="9" opcode="zext" nodeLabel="10.0" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/srcnn.cpp" linenumber="630" fileDirectory="D:\HAC\hardware_final_proj" functionName="srcnn"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>add</dataOutputObjs>
@@ -207,7 +207,7 @@
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>zext</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="34" name="zext_ln630_3" lineNumber="630" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="zext_ln630_3_fu_251_p1" coreId="1668444975" contextFuncName="srcnn" bitwidth="64" opcode="zext" nodeLabel="10.0" m_display="0" m_topoIndex="29" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="34" name="zext_ln630_3" lineNumber="630" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="zext_ln630_3_fu_251_p1" coreId="1599296852" contextFuncName="srcnn" bitwidth="64" opcode="zext" nodeLabel="10.0" m_display="0" m_topoIndex="29" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/srcnn.cpp" linenumber="630" fileDirectory="D:\HAC\hardware_final_proj" functionName="srcnn"/>
         <dataInputObjs>add</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
@@ -215,28 +215,28 @@
         <dataOutputObjs>getelementptr</dataOutputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="35" name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_90" lineNumber="630" fileName="src/srcnn.cpp" fileDirectory="../." coreId="1330926913" contextFuncName="srcnn" bitwidth="9" opcode="getelementptr" nodeLabel="10.0" m_display="0" m_topoIndex="30" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="35" name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_90" lineNumber="630" fileName="src/srcnn.cpp" fileDirectory="../." coreId="1919841568" contextFuncName="srcnn" bitwidth="9" opcode="getelementptr" nodeLabel="10.0" m_display="0" m_topoIndex="30" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/srcnn.cpp" linenumber="630" fileDirectory="D:\HAC\hardware_final_proj" functionName="srcnn"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <dataOutputObjs>srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_68</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="36" name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_91" lineNumber="630" fileName="src/srcnn.cpp" fileDirectory="../." coreId="151666223" contextFuncName="srcnn" bitwidth="9" opcode="getelementptr" nodeLabel="10.0" m_display="0" m_topoIndex="31" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="36" name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_91" lineNumber="630" fileName="src/srcnn.cpp" fileDirectory="../." coreId="1869182069" contextFuncName="srcnn" bitwidth="9" opcode="getelementptr" nodeLabel="10.0" m_display="0" m_topoIndex="31" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/srcnn.cpp" linenumber="630" fileDirectory="D:\HAC\hardware_final_proj" functionName="srcnn"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_67</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="37" name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_92" lineNumber="630" fileName="src/srcnn.cpp" fileDirectory="../." coreId="1936484413" contextFuncName="srcnn" bitwidth="9" opcode="getelementptr" nodeLabel="10.0" m_display="0" m_topoIndex="32" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="37" name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_92" lineNumber="630" fileName="src/srcnn.cpp" fileDirectory="../." coreId="758395186" contextFuncName="srcnn" bitwidth="9" opcode="getelementptr" nodeLabel="10.0" m_display="0" m_topoIndex="32" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/srcnn.cpp" linenumber="630" fileDirectory="D:\HAC\hardware_final_proj" functionName="srcnn"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_66</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="38" name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_93" lineNumber="630" fileName="src/srcnn.cpp" fileDirectory="../." coreId="1953391981" contextFuncName="srcnn" bitwidth="9" opcode="getelementptr" nodeLabel="10.0" m_display="0" m_topoIndex="33" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="38" name="srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_93" lineNumber="630" fileName="src/srcnn.cpp" fileDirectory="../." coreId="1668444975" contextFuncName="srcnn" bitwidth="9" opcode="getelementptr" nodeLabel="10.0" m_display="0" m_topoIndex="33" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/srcnn.cpp" linenumber="630" fileDirectory="D:\HAC\hardware_final_proj" functionName="srcnn"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_65</dataOutputObjs>
@@ -249,7 +249,7 @@
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>zext</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="43" name="zext_ln630" lineNumber="630" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="zext_ln630_fu_214_p1" coreId="1668444975" contextFuncName="srcnn" bitwidth="63" opcode="zext" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="43" name="zext_ln630" lineNumber="630" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="zext_ln630_fu_214_p1" coreId="1629513582" contextFuncName="srcnn" bitwidth="63" opcode="zext" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/srcnn.cpp" linenumber="630" fileDirectory="D:\HAC\hardware_final_proj" functionName="srcnn"/>
         <dataInputObjs>add</dataInputObjs>
         <dataOutputObjs>add</dataOutputObjs>
@@ -260,12 +260,12 @@
         <dataInputObjs>sext</dataInputObjs>
         <dataOutputObjs>sext</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="45" name="sext_ln630" lineNumber="630" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="sext_ln630_fu_224_p1" coreId="1869182069" contextFuncName="srcnn" bitwidth="64" opcode="sext" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="45" name="sext_ln630" lineNumber="630" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="sext_ln630_fu_224_p1" coreId="1597208174" contextFuncName="srcnn" bitwidth="64" opcode="sext" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/srcnn.cpp" linenumber="630" fileDirectory="D:\HAC\hardware_final_proj" functionName="srcnn"/>
         <dataInputObjs>add</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="46" name="gmem_w2_addr" lineNumber="630" fileName="src/srcnn.cpp" fileDirectory="../." coreId="1952869993" contextFuncName="srcnn" bitwidth="32" opcode="getelementptr" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="46" name="gmem_w2_addr" lineNumber="630" fileName="src/srcnn.cpp" fileDirectory="../." coreId="1881145423" contextFuncName="srcnn" bitwidth="32" opcode="getelementptr" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/srcnn.cpp" linenumber="630" fileDirectory="D:\HAC\hardware_final_proj" functionName="srcnn"/>
         <dataInputObjs>gmem_w2</dataInputObjs>
         <dataInputObjs>sext</dataInputObjs>
@@ -290,7 +290,7 @@
         <dataOutputObjs>store</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="50" name="_ln630" lineNumber="630" fileName="src/srcnn.cpp" fileDirectory="../." coreId="1668444975" contextFuncName="srcnn" opcode="switch" m_display="0" m_delay="0.73" m_topoIndex="20" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="50" name="_ln630" lineNumber="630" fileName="src/srcnn.cpp" fileDirectory="../." coreId="1528955000" contextFuncName="srcnn" opcode="switch" m_display="0" m_delay="0.73" m_topoIndex="20" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/srcnn.cpp" linenumber="630" fileDirectory="D:\HAC\hardware_final_proj" functionName="srcnn"/>
         <dataInputObjs>read</dataInputObjs>
         <controlInputObjs>arrayidx6812.case.3</controlInputObjs>
@@ -313,7 +313,7 @@
         <dataInputObjs>bitcast</dataInputObjs>
         <dataInputObjs>getelementptr</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="53" name="br_ln630" lineNumber="630" fileName="src/srcnn.cpp" fileDirectory="../." coreId="1931944046" contextFuncName="srcnn" opcode="br" nodeLabel="10.0" m_display="0" m_topoIndex="35" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="53" name="br_ln630" lineNumber="630" fileName="src/srcnn.cpp" fileDirectory="../." coreId="151666223" contextFuncName="srcnn" opcode="br" nodeLabel="10.0" m_display="0" m_topoIndex="35" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/srcnn.cpp" linenumber="630" fileDirectory="D:\HAC\hardware_final_proj" functionName="srcnn"/>
         <controlInputObjs>arrayidx6812.exit</controlInputObjs>
       </node_objs>
@@ -347,7 +347,7 @@
         <dataInputObjs>bitcast</dataInputObjs>
         <dataInputObjs>getelementptr</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="59" name="br_ln630" lineNumber="630" fileName="src/srcnn.cpp" fileDirectory="../." coreId="1881145423" contextFuncName="srcnn" opcode="br" nodeLabel="10.0" m_display="0" m_topoIndex="39" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="59" name="br_ln630" lineNumber="630" fileName="src/srcnn.cpp" fileDirectory="../." coreId="1634956133" contextFuncName="srcnn" opcode="br" nodeLabel="10.0" m_display="0" m_topoIndex="39" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/srcnn.cpp" linenumber="630" fileDirectory="D:\HAC\hardware_final_proj" functionName="srcnn"/>
         <controlInputObjs>arrayidx6812.exit</controlInputObjs>
       </node_objs>
@@ -364,7 +364,7 @@
         <dataInputObjs>bitcast</dataInputObjs>
         <dataInputObjs>getelementptr</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="62" name="br_ln630" lineNumber="630" fileName="src/srcnn.cpp" fileDirectory="../." coreId="2036625250" contextFuncName="srcnn" opcode="br" nodeLabel="10.0" m_display="0" m_topoIndex="41" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="62" name="br_ln630" lineNumber="630" fileName="src/srcnn.cpp" fileDirectory="../." coreId="1769239916" contextFuncName="srcnn" opcode="br" nodeLabel="10.0" m_display="0" m_topoIndex="41" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/srcnn.cpp" linenumber="630" fileDirectory="D:\HAC\hardware_final_proj" functionName="srcnn"/>
         <controlInputObjs>arrayidx6812.exit</controlInputObjs>
       </node_objs>
@@ -382,12 +382,12 @@
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>for.inc69</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="64" name="i2_write_ln624" lineNumber="624" fileName="src/srcnn.cpp" fileDirectory="../." coreId="1597395814" contextFuncName="srcnn" opcode="store" m_display="0" m_delay="0.42" m_topoIndex="21" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="64" name="i2_write_ln624" lineNumber="624" fileName="src/srcnn.cpp" fileDirectory="../." coreId="893022320" contextFuncName="srcnn" opcode="store" m_display="0" m_delay="0.42" m_topoIndex="21" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/srcnn.cpp" linenumber="624" fileDirectory="D:\HAC\hardware_final_proj" functionName="srcnn"/>
         <dataInputObjs>add</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="65" name="br_ln624" lineNumber="624" fileName="src/srcnn.cpp" fileDirectory="../." coreId="1851876457" contextFuncName="srcnn" opcode="br" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="65" name="br_ln624" lineNumber="624" fileName="src/srcnn.cpp" fileDirectory="../." coreId="1852795252" contextFuncName="srcnn" opcode="br" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/srcnn.cpp" linenumber="624" fileDirectory="D:\HAC\hardware_final_proj" functionName="srcnn"/>
         <controlInputObjs>for.inc69</controlInputObjs>
       </node_objs>

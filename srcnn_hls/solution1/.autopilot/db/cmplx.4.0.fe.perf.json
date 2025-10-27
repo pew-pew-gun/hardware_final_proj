@@ -1,7 +1,7 @@
 {
   "0": {
     "basicblocks": 1828,
-    "calls": "4",
+    "calls": "6",
     "file": "srcnn.cpp",
     "fileloc": 473,
     "instructions": 5370,
@@ -16,28 +16,28 @@
     "total_instructions": 15309
   },
   "1": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "srcnn.cpp",
+    "fileloc": 91,
+    "instructions": 45,
+    "loads": {
+      "L": 1
+    },
+    "name": "load_tile_to_stream",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 45
+  },
+  "2": {
     "basicblocks": 1,
-    "calls": "2 3",
+    "calls": "5 3",
     "file": "srcnn.cpp",
     "fileloc": 299,
     "instructions": 9,
     "name": "conv1conv2_stream",
     "total_instructions": 2542
-  },
-  "2": {
-    "basicblocks": 6,
-    "calls": "",
-    "file": "srcnn.cpp",
-    "fileloc": 119,
-    "instructions": 848,
-    "loads": {
-      "L": 9
-    },
-    "name": "make_win9",
-    "stores": {
-      "L": 9
-    },
-    "total_instructions": 848
   },
   "3": {
     "basicblocks": 16,
@@ -56,30 +56,6 @@
     "total_instructions": 1685
   },
   "4": {
-    "basicblocks": 1,
-    "calls": "5 1 6 7",
-    "file": "srcnn.cpp",
-    "fileloc": 0,
-    "instructions": 25,
-    "name": "_Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i_for.body126",
-    "total_instructions": 9939
-  },
-  "5": {
-    "basicblocks": 7,
-    "calls": "",
-    "file": "srcnn.cpp",
-    "fileloc": 91,
-    "instructions": 45,
-    "loads": {
-      "L": 1
-    },
-    "name": "load_tile_to_stream",
-    "stores": {
-      "L": 1
-    },
-    "total_instructions": 45
-  },
-  "6": {
     "basicblocks": 10,
     "calls": "",
     "file": "srcnn.cpp",
@@ -94,6 +70,30 @@
       "L": 769
     },
     "total_instructions": 7289
+  },
+  "5": {
+    "basicblocks": 6,
+    "calls": "",
+    "file": "srcnn.cpp",
+    "fileloc": 119,
+    "instructions": 848,
+    "loads": {
+      "L": 9
+    },
+    "name": "make_win9",
+    "stores": {
+      "L": 9
+    },
+    "total_instructions": 848
+  },
+  "6": {
+    "basicblocks": 1,
+    "calls": "1 2 4 7",
+    "file": "srcnn.cpp",
+    "fileloc": 0,
+    "instructions": 25,
+    "name": "_Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i_for.body126",
+    "total_instructions": 9939
   },
   "7": {
     "basicblocks": 7,

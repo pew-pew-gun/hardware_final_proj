@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'srcnn'
 ================================================================
-* Date:           Mon Oct 27 21:44:56 2025
+* Date:           Tue Oct 28 00:04:23 2025
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -2486,7 +2486,7 @@ The critical path consists of the following:
  <State 11>: 7.300ns
 The critical path consists of the following:
 	bus read operation ('gmem_w1_addr_read', src/srcnn.cpp:607) on port 'gmem_w1' (src/srcnn.cpp:607) [1954]  (7.300 ns)
-	'store' operation ('store_ln607', src/srcnn.cpp:607) of variable 'bitcast_ln607', src/srcnn.cpp:607 on static variable 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_33' [2045]  (0.000 ns)
+	'store' operation ('store_ln607', src/srcnn.cpp:607) of variable 'bitcast_ln607', src/srcnn.cpp:607 on static variable 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b1_loc_61' [1961]  (0.000 ns)
 
  <State 12>: 0.427ns
 The critical path consists of the following:
@@ -2539,7 +2539,7 @@ The critical path consists of the following:
  <State 24>: 7.300ns
 The critical path consists of the following:
 	bus read operation ('gmem_w2_addr_read', src/srcnn.cpp:622) on port 'gmem_w2' (src/srcnn.cpp:622) [2179]  (7.300 ns)
-	'store' operation ('store_ln622', src/srcnn.cpp:622) of variable 'bitcast_ln622', src/srcnn.cpp:622 on static variable 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_16' [2225]  (0.000 ns)
+	'store' operation ('store_ln622', src/srcnn.cpp:622) of variable 'bitcast_ln622', src/srcnn.cpp:622 on static variable 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6b2_loc_28' [2189]  (0.000 ns)
 
  <State 25>: 0.427ns
 The critical path consists of the following:

@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'srcnn_Pipeline_CopyW1_ky_CopyW1_kx'
 ================================================================
-* Date:           Mon Oct 27 21:38:45 2025
+* Date:           Tue Oct 28 00:01:59 2025
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -573,7 +573,7 @@ The critical path consists of the following:
 
  <State 11>: 1.237ns
 The critical path consists of the following:
-	'store' operation ('store_ln614', src/srcnn.cpp:614) of variable 'bitcast_ln614', src/srcnn.cpp:614 on array 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_2_8' [481]  (1.237 ns)
+	'store' operation ('store_ln614', src/srcnn.cpp:614) of variable 'bitcast_ln614', src/srcnn.cpp:614 on array 'p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_7_5' [308]  (1.237 ns)
 
 
 ============================================================

@@ -1,28 +1,42 @@
 <pragmas>
-<pragma file="src/srcnn.cpp" line="96" pragmaType="inline" parentfunction="load_tile_to_stream" off="1" region="0" recursive="0"/>
-<pragma file="src/srcnn.cpp" line="97" pragmaType="pipeline" parentfunction="load_tile_to_stream" off="0" ii="1" style=""/>
-<pragma file="src/srcnn.cpp" line="98" pragmaType="stream" parentfunction="load_tile_to_stream" depth="512" type="fifo" variable="s_pix"/>
-<pragma file="src/srcnn.cpp" line="455" pragmaType="inline" parentfunction="store_stream" off="1" region="0" recursive="0"/>
-<pragma file="src/srcnn.cpp" line="456" pragmaType="pipeline" parentfunction="store_stream" off="0" ii="1" style=""/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="src/srcnn.cpp" line="222" pragmaType="inline" parentfunction="conv1conv2_from_windows" off="1" region="0" recursive="0"/>
+<pragma file="src/srcnn.cpp" line="242" pragmaType="unroll" parentfunction="conv1conv2_from_windows" factor="4" skip_exit_check="0"/>
+<pragma file="src/srcnn.cpp" line="250" pragmaType="pipeline" parentfunction="conv1conv2_from_windows" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="src/srcnn.cpp" line="287" pragmaType="unroll" parentfunction="conv1conv2_from_windows" factor="4" skip_exit_check="0"/>
+<pragma file="src/srcnn.cpp" line="286" pragmaType="pipeline" parentfunction="conv1conv2_from_windows" off="0" ii="4" rewind="0" style=""/>
+<pragma file="src/srcnn.cpp" line="257" pragmaType="unroll" parentfunction="conv1conv2_from_windows" factor="-1" skip_exit_check="0"/>
+<pragma file="src/srcnn.cpp" line="277" pragmaType="unroll" parentfunction="conv1conv2_from_windows" factor="4" skip_exit_check="0"/>
+<pragma file="src/srcnn.cpp" line="260" pragmaType="unroll" parentfunction="conv1conv2_from_windows" factor="-1" skip_exit_check="0"/>
+<pragma file="src/srcnn.cpp" line="237" pragmaType="array_partition" parentfunction="conv1conv2_from_windows" dim="1" factor="4" mode="cyclic" dynamic="0" variable="acc2"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<win9_t, 0>::stream()" off="0" region="0" recursive="0"/>
+<pragma file="src/srcnn.cpp" line="147" pragmaType="pipeline" parentfunction="make_win9" off="0" ii="1" rewind="0" style=""/>
+<pragma file="src/srcnn.cpp" line="154" pragmaType="unroll" parentfunction="make_win9" factor="-1" skip_exit_check="0"/>
+<pragma file="src/srcnn.cpp" line="165" pragmaType="unroll" parentfunction="make_win9" factor="-1" skip_exit_check="0"/>
+<pragma file="src/srcnn.cpp" line="174" pragmaType="unroll" parentfunction="make_win9" factor="-1" skip_exit_check="0"/>
+<pragma file="src/srcnn.cpp" line="185" pragmaType="unroll" parentfunction="make_win9" factor="-1" skip_exit_check="0"/>
+<pragma file="src/srcnn.cpp" line="157" pragmaType="unroll" parentfunction="make_win9" factor="-1" skip_exit_check="0"/>
+<pragma file="src/srcnn.cpp" line="187" pragmaType="unroll" parentfunction="make_win9" factor="-1" skip_exit_check="0"/>
+<pragma file="src/srcnn.cpp" line="133" pragmaType="array_partition" parentfunction="make_win9" dim="1" factor="0" mode="complete" dynamic="0" variable="lb1"/>
+<pragma file="src/srcnn.cpp" line="138" pragmaType="array_partition" parentfunction="make_win9" dim="1" factor="9" mode="cyclic" dynamic="0" variable="win1"/>
+<pragma file="src/srcnn.cpp" line="139" pragmaType="array_partition" parentfunction="make_win9" dim="2" factor="9" mode="cyclic" dynamic="0" variable="win1"/>
+<pragma file="src/srcnn.cpp" line="183" pragmaType="array_partition" parentfunction="make_win9" dim="0" factor="0" mode="complete" dynamic="0" variable="a"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<c1_word, 0>::stream()" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
 <pragma file="src/srcnn.cpp" line="306" pragmaType="inline" parentfunction="conv1conv2_stream" off="1" region="0" recursive="0"/>
 <pragma file="src/srcnn.cpp" line="307" pragmaType="dataflow" parentfunction="conv1conv2_stream" disable_start_propagation="0"/>
 <pragma file="src/srcnn.cpp" line="310" pragmaType="stream" parentfunction="conv1conv2_stream" depth="64" type="fifo" variable="s_win"/>
 <pragma file="src/srcnn.cpp" line="312" pragmaType="stream" parentfunction="conv1conv2_stream" depth="64" type="fifo" variable="s_c1"/>
+<pragma file="src/srcnn.cpp" line="455" pragmaType="inline" parentfunction="store_stream" off="1" region="0" recursive="0"/>
+<pragma file="src/srcnn.cpp" line="456" pragmaType="pipeline" parentfunction="store_stream" off="0" ii="1" style=""/>
 <pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
-<pragma file="src/srcnn.cpp" line="335" pragmaType="inline" parentfunction="conv3_stream" off="1" region="0" recursive="0"/>
-<pragma file="src/srcnn.cpp" line="336" pragmaType="pipeline" parentfunction="conv3_stream" off="0" ii="1" style=""/>
-<pragma file="src/srcnn.cpp" line="368" pragmaType="unroll" parentfunction="conv3_stream" factor="-1" skip_exit_check="0"/>
-<pragma file="src/srcnn.cpp" line="379" pragmaType="unroll" parentfunction="conv3_stream" factor="-1" skip_exit_check="0"/>
-<pragma file="src/srcnn.cpp" line="389" pragmaType="unroll" parentfunction="conv3_stream" factor="-1" skip_exit_check="0"/>
-<pragma file="src/srcnn.cpp" line="405" pragmaType="unroll" parentfunction="conv3_stream" factor="-1" skip_exit_check="0"/>
-<pragma file="src/srcnn.cpp" line="371" pragmaType="unroll" parentfunction="conv3_stream" factor="-1" skip_exit_check="0"/>
-<pragma file="src/srcnn.cpp" line="408" pragmaType="unroll" parentfunction="conv3_stream" factor="-1" skip_exit_check="0"/>
-<pragma file="src/srcnn.cpp" line="412" pragmaType="unroll" parentfunction="conv3_stream" factor="-1" skip_exit_check="0"/>
-<pragma file="src/srcnn.cpp" line="416" pragmaType="unroll" parentfunction="conv3_stream" factor="-1" skip_exit_check="0"/>
-<pragma file="src/srcnn.cpp" line="338" pragmaType="stream" parentfunction="conv3_stream" depth="256" type="fifo" variable="s_out"/>
-<pragma file="src/srcnn.cpp" line="348" pragmaType="array_partition" parentfunction="conv3_stream" dim="1" factor="0" mode="complete" dynamic="0" variable="lb2"/>
-<pragma file="src/srcnn.cpp" line="353" pragmaType="array_partition" parentfunction="conv3_stream" dim="1" factor="5" mode="cyclic" dynamic="0" variable="win2"/>
-<pragma file="src/srcnn.cpp" line="354" pragmaType="array_partition" parentfunction="conv3_stream" dim="2" factor="5" mode="cyclic" dynamic="0" variable="win2"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<float, 0>::stream()" off="0" region="0" recursive="0"/>
 <pragma file="src/srcnn.cpp" line="689" pragmaType="dataflow" parentfunction="srcnn" disable_start_propagation="0"/>
 <pragma file="src/srcnn.cpp" line="621" pragmaType="pipeline" parentfunction="srcnn" off="1" ii="0" rewind="0" style=""/>
 <pragma file="src/srcnn.cpp" line="625" pragmaType="pipeline" parentfunction="srcnn" off="0" ii="-1" rewind="0" style=""/>
@@ -73,36 +87,22 @@
 <pragma file="src/srcnn.cpp" line="683" pragmaType="stream" parentfunction="srcnn" depth="512" type="fifo" variable="s_pix"/>
 <pragma file="src/srcnn.cpp" line="684" pragmaType="stream" parentfunction="srcnn" depth="128" type="fifo" variable="s_f2"/>
 <pragma file="src/srcnn.cpp" line="685" pragmaType="stream" parentfunction="srcnn" depth="256" type="fifo" variable="s_out"/>
-<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<float, 0>::stream()" off="0" region="0" recursive="0"/>
 <pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<conv2_pixel_t, 0>::stream()" off="0" region="0" recursive="0"/>
-<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
-<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
-<pragma file="src/srcnn.cpp" line="222" pragmaType="inline" parentfunction="conv1conv2_from_windows" off="1" region="0" recursive="0"/>
-<pragma file="src/srcnn.cpp" line="242" pragmaType="unroll" parentfunction="conv1conv2_from_windows" factor="4" skip_exit_check="0"/>
-<pragma file="src/srcnn.cpp" line="250" pragmaType="pipeline" parentfunction="conv1conv2_from_windows" off="0" ii="-1" rewind="0" style=""/>
-<pragma file="src/srcnn.cpp" line="287" pragmaType="unroll" parentfunction="conv1conv2_from_windows" factor="4" skip_exit_check="0"/>
-<pragma file="src/srcnn.cpp" line="286" pragmaType="pipeline" parentfunction="conv1conv2_from_windows" off="0" ii="4" rewind="0" style=""/>
-<pragma file="src/srcnn.cpp" line="257" pragmaType="unroll" parentfunction="conv1conv2_from_windows" factor="-1" skip_exit_check="0"/>
-<pragma file="src/srcnn.cpp" line="277" pragmaType="unroll" parentfunction="conv1conv2_from_windows" factor="4" skip_exit_check="0"/>
-<pragma file="src/srcnn.cpp" line="260" pragmaType="unroll" parentfunction="conv1conv2_from_windows" factor="-1" skip_exit_check="0"/>
-<pragma file="src/srcnn.cpp" line="237" pragmaType="array_partition" parentfunction="conv1conv2_from_windows" dim="1" factor="4" mode="cyclic" dynamic="0" variable="acc2"/>
-<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
-<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
-<pragma file="src/srcnn.cpp" line="147" pragmaType="pipeline" parentfunction="make_win9" off="0" ii="1" rewind="0" style=""/>
-<pragma file="src/srcnn.cpp" line="154" pragmaType="unroll" parentfunction="make_win9" factor="-1" skip_exit_check="0"/>
-<pragma file="src/srcnn.cpp" line="165" pragmaType="unroll" parentfunction="make_win9" factor="-1" skip_exit_check="0"/>
-<pragma file="src/srcnn.cpp" line="174" pragmaType="unroll" parentfunction="make_win9" factor="-1" skip_exit_check="0"/>
-<pragma file="src/srcnn.cpp" line="185" pragmaType="unroll" parentfunction="make_win9" factor="-1" skip_exit_check="0"/>
-<pragma file="src/srcnn.cpp" line="157" pragmaType="unroll" parentfunction="make_win9" factor="-1" skip_exit_check="0"/>
-<pragma file="src/srcnn.cpp" line="187" pragmaType="unroll" parentfunction="make_win9" factor="-1" skip_exit_check="0"/>
-<pragma file="src/srcnn.cpp" line="133" pragmaType="array_partition" parentfunction="make_win9" dim="1" factor="0" mode="complete" dynamic="0" variable="lb1"/>
-<pragma file="src/srcnn.cpp" line="138" pragmaType="array_partition" parentfunction="make_win9" dim="1" factor="9" mode="cyclic" dynamic="0" variable="win1"/>
-<pragma file="src/srcnn.cpp" line="139" pragmaType="array_partition" parentfunction="make_win9" dim="2" factor="9" mode="cyclic" dynamic="0" variable="win1"/>
-<pragma file="src/srcnn.cpp" line="183" pragmaType="array_partition" parentfunction="make_win9" dim="0" factor="0" mode="complete" dynamic="0" variable="a"/>
-<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<win9_t, 0>::stream()" off="0" region="0" recursive="0"/>
-<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
-<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
-<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<c1_word, 0>::stream()" off="0" region="0" recursive="0"/>
-<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
-<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="src/srcnn.cpp" line="96" pragmaType="inline" parentfunction="load_tile_to_stream" off="1" region="0" recursive="0"/>
+<pragma file="src/srcnn.cpp" line="97" pragmaType="pipeline" parentfunction="load_tile_to_stream" off="0" ii="1" style=""/>
+<pragma file="src/srcnn.cpp" line="98" pragmaType="stream" parentfunction="load_tile_to_stream" depth="512" type="fifo" variable="s_pix"/>
+<pragma file="src/srcnn.cpp" line="335" pragmaType="inline" parentfunction="conv3_stream" off="1" region="0" recursive="0"/>
+<pragma file="src/srcnn.cpp" line="336" pragmaType="pipeline" parentfunction="conv3_stream" off="0" ii="1" style=""/>
+<pragma file="src/srcnn.cpp" line="368" pragmaType="unroll" parentfunction="conv3_stream" factor="-1" skip_exit_check="0"/>
+<pragma file="src/srcnn.cpp" line="379" pragmaType="unroll" parentfunction="conv3_stream" factor="-1" skip_exit_check="0"/>
+<pragma file="src/srcnn.cpp" line="389" pragmaType="unroll" parentfunction="conv3_stream" factor="-1" skip_exit_check="0"/>
+<pragma file="src/srcnn.cpp" line="405" pragmaType="unroll" parentfunction="conv3_stream" factor="-1" skip_exit_check="0"/>
+<pragma file="src/srcnn.cpp" line="371" pragmaType="unroll" parentfunction="conv3_stream" factor="-1" skip_exit_check="0"/>
+<pragma file="src/srcnn.cpp" line="408" pragmaType="unroll" parentfunction="conv3_stream" factor="-1" skip_exit_check="0"/>
+<pragma file="src/srcnn.cpp" line="412" pragmaType="unroll" parentfunction="conv3_stream" factor="-1" skip_exit_check="0"/>
+<pragma file="src/srcnn.cpp" line="416" pragmaType="unroll" parentfunction="conv3_stream" factor="-1" skip_exit_check="0"/>
+<pragma file="src/srcnn.cpp" line="338" pragmaType="stream" parentfunction="conv3_stream" depth="256" type="fifo" variable="s_out"/>
+<pragma file="src/srcnn.cpp" line="348" pragmaType="array_partition" parentfunction="conv3_stream" dim="1" factor="0" mode="complete" dynamic="0" variable="lb2"/>
+<pragma file="src/srcnn.cpp" line="353" pragmaType="array_partition" parentfunction="conv3_stream" dim="1" factor="5" mode="cyclic" dynamic="0" variable="win2"/>
+<pragma file="src/srcnn.cpp" line="354" pragmaType="array_partition" parentfunction="conv3_stream" dim="2" factor="5" mode="cyclic" dynamic="0" variable="win2"/>
 </pragmas>

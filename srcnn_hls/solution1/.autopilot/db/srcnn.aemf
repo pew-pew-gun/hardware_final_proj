@@ -1,49 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1761562099250">
-  <ports id="1" name="gmem_in" type="PortType" coreId="1095786294" bitwidth="32" iftype="IfTypeFifo">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1761570342379">
+  <ports id="1" name="gmem_in" type="PortType" coreId="1852142702" bitwidth="32" iftype="IfTypeFifo">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="2" name="gmem_w1" type="PortType" coreId="1597587807" bitwidth="32" iftype="IfTypeFifo">
+  <ports id="2" name="gmem_w1" type="PortType" coreId="1717920800" bitwidth="32" iftype="IfTypeFifo">
     <dataOutputObjs>getelementptr</dataOutputObjs>
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="3" name="gmem_w2" type="PortType" coreId="1635147636" bitwidth="32" iftype="IfTypeFifo">
+  <ports id="3" name="gmem_w2" type="PortType" coreId="1717920800" bitwidth="32" iftype="IfTypeFifo">
     <dataOutputObjs>getelementptr</dataOutputObjs>
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="4" name="gmem_w3" type="PortType" coreId="1852793695" bitwidth="32" iftype="IfTypeFifo">
+  <ports id="4" name="gmem_w3" type="PortType" coreId="1095786294" bitwidth="32" iftype="IfTypeFifo">
     <dataOutputObjs>getelementptr</dataOutputObjs>
     <dataOutputObjs>getelementptr</dataOutputObjs>
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="5" name="gmem_out" type="PortType" coreId="1852142702" bitwidth="32" direction="DirOut" iftype="IfTypeFifo">
+  <ports id="5" name="gmem_out" type="PortType" coreId="1920152922" bitwidth="32" direction="DirOut" iftype="IfTypeFifo">
     <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="6" name="input_ftmap" type="PortType" originalName="input_ftmap" coreId="1698970656" bitwidth="64">
+  <ports id="6" name="input_ftmap" type="PortType" originalName="input_ftmap" coreId="544433525" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="7" name="conv1_weights" type="PortType" originalName="conv1_weights" coreId="1635147636" bitwidth="64">
+  <ports id="7" name="conv1_weights" type="PortType" originalName="conv1_weights" coreId="1920152922" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="8" name="conv1_biases" type="PortType" originalName="conv1_biases" coreId="1008746040" bitwidth="64">
+  <ports id="8" name="conv1_biases" type="PortType" originalName="conv1_biases" coreId="1021" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="9" name="conv2_weights" type="PortType" originalName="conv2_weights" coreId="4294967247" bitwidth="64">
+  <ports id="9" name="conv2_weights" type="PortType" originalName="conv2_weights" coreId="1852142702" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="10" name="conv2_biases" type="PortType" originalName="conv2_biases" coreId="774905917" bitwidth="64">
+  <ports id="10" name="conv2_biases" type="PortType" originalName="conv2_biases" coreId="1852793695" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="11" name="conv3_weights" type="PortType" originalName="conv3_weights" coreId="1095786294" bitwidth="64">
+  <ports id="11" name="conv3_weights" type="PortType" originalName="conv3_weights" coreId="4294967295" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="12" name="conv3_biases" type="PortType" originalName="conv3_biases" coreId="1920152922" bitwidth="64">
+  <ports id="12" name="conv3_biases" type="PortType" originalName="conv3_biases" coreId="1852142702" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
   <ports id="13" name="output_ftmap" type="PortType" originalName="output_ftmap" coreId="1852142702" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="14" name="reload_weights" type="PortType" originalName="reload_weights" coreId="1852142702" bitwidth="32">
+  <ports id="14" name="reload_weights" type="PortType" originalName="reload_weights" coreId="1021" bitwidth="32">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
   <edges id="3311" source_obj="//@ports.13" sink_obj="//@blocks.0/@node_objs.0"/>
