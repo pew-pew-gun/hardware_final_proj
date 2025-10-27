@@ -19,7 +19,7 @@ set SynModuleInfo {
   }
   {SRCNAME conv1conv2_from_windows8_Pipeline_Init_Conv2Out_biases MODELNAME conv1conv2_from_windows8_Pipeline_Init_Conv2Out_biases RTLNAME srcnn_conv1conv2_from_windows8_Pipeline_Init_Conv2Out_biases
     SUBMODULES {
-      {MODELNAME srcnn_mux_29_5_32_1_1 RTLNAME srcnn_mux_29_5_32_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
+      {MODELNAME srcnn_mux_25_5_32_1_1 RTLNAME srcnn_mux_25_5_32_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
     }
   }
   {SRCNAME conv1conv2_from_windows8_Pipeline_Conv1_outftmaps MODELNAME conv1conv2_from_windows8_Pipeline_Conv1_outftmaps RTLNAME srcnn_conv1conv2_from_windows8_Pipeline_Conv1_outftmaps
@@ -49,9 +49,10 @@ set SynModuleInfo {
   }
   {SRCNAME conv3_stream5 MODELNAME conv3_stream5 RTLNAME srcnn_conv3_stream5
     SUBMODULES {
-      {MODELNAME srcnn_mul_9ns_9ns_18_1_1 RTLNAME srcnn_mul_9ns_9ns_18_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
       {MODELNAME srcnn_mux_5_3_32_1_1 RTLNAME srcnn_mux_5_3_32_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
-      {MODELNAME srcnn_conv3_stream5_lb2_0_RAM_AUTO_1R1W RTLNAME srcnn_conv3_stream5_lb2_0_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME srcnn_mul_9ns_9ns_18_1_1 RTLNAME srcnn_mul_9ns_9ns_18_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
+      {MODELNAME srcnn_conv3_stream5_lb2_RAM_2P_BRAM_1R1W RTLNAME srcnn_conv3_stream5_lb2_RAM_2P_BRAM_1R1W BINDTYPE storage TYPE ram_2p IMPL bram LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME srcnn_conv3_stream5_win2_0_RAM_AUTO_1R1W RTLNAME srcnn_conv3_stream5_win2_0_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
     }
   }
   {SRCNAME store_stream6 MODELNAME store_stream6 RTLNAME srcnn_store_stream6}
@@ -76,7 +77,8 @@ set SynModuleInfo {
   {SRCNAME srcnn MODELNAME srcnn RTLNAME srcnn IS_TOP 1
     SUBMODULES {
       {MODELNAME srcnn_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_locbkb RTLNAME srcnn_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_locbkb BINDTYPE storage TYPE ram_1p IMPL lutram LATENCY 2 ALLOW_PRAGMA 1}
-      {MODELNAME srcnn_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locbQq RTLNAME srcnn_p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w3_locbQq BINDTYPE storage TYPE ram_1p IMPL lutram LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME srcnn_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_15_RAM_1P_LUTRAM_1R1W RTLNAME srcnn_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_15_RAM_1P_LUTRAM_1R1W BINDTYPE storage TYPE ram_1p IMPL lutram LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME srcnn_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_7_RAM_2P_BRAM_1R1W RTLNAME srcnn_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_7_RAM_2P_BRAM_1R1W BINDTYPE storage TYPE ram_2p IMPL bram LATENCY 2 ALLOW_PRAGMA 1}
       {MODELNAME srcnn_gmem_in_m_axi RTLNAME srcnn_gmem_in_m_axi BINDTYPE interface TYPE adapter IMPL m_axi}
       {MODELNAME srcnn_gmem_w1_m_axi RTLNAME srcnn_gmem_w1_m_axi BINDTYPE interface TYPE adapter IMPL m_axi}
       {MODELNAME srcnn_gmem_w2_m_axi RTLNAME srcnn_gmem_w2_m_axi BINDTYPE interface TYPE adapter IMPL m_axi}

@@ -18,14 +18,14 @@ set C_modelArgList {
 	{ empty int 17 regular  }
 	{ zext_ln125 int 9 regular  }
 	{ s_pix_i int 32 regular {fifo 0 volatile }  }
-	{ lb1_7 float 32 regular {array 20 { 1 0 } 1 1 }  }
-	{ lb1_6 float 32 regular {array 20 { 1 0 } 1 1 }  }
-	{ lb1_5 float 32 regular {array 20 { 1 0 } 1 1 }  }
-	{ lb1_4 float 32 regular {array 20 { 1 0 } 1 1 }  }
-	{ lb1_3 float 32 regular {array 20 { 1 0 } 1 1 }  }
-	{ lb1_2 float 32 regular {array 20 { 1 0 } 1 1 }  }
-	{ lb1_1 float 32 regular {array 20 { 1 0 } 1 1 }  }
-	{ lb1 float 32 regular {array 20 { 1 0 } 1 1 }  }
+	{ lb1_7 float 32 regular {array 28 { 1 0 } 1 1 }  }
+	{ lb1_6 float 32 regular {array 28 { 1 0 } 1 1 }  }
+	{ lb1_5 float 32 regular {array 28 { 1 0 } 1 1 }  }
+	{ lb1_4 float 32 regular {array 28 { 1 0 } 1 1 }  }
+	{ lb1_3 float 32 regular {array 28 { 1 0 } 1 1 }  }
+	{ lb1_2 float 32 regular {array 28 { 1 0 } 1 1 }  }
+	{ lb1_1 float 32 regular {array 28 { 1 0 } 1 1 }  }
+	{ lb1 float 32 regular {array 28 { 1 0 } 1 1 }  }
 	{ zext_ln124 int 9 regular  }
 	{ s_win_i int 2593 regular {fifo 1 volatile }  }
 }

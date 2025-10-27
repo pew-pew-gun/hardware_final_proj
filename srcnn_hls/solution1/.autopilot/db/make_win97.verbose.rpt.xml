@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'make_win97'" level="0">
-<item name = "Date">Mon Oct 27 18:08:53 2025
+<item name = "Date">Mon Oct 27 19:18:39 2025
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -63,7 +63,7 @@
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="grp_make_win97_Pipeline_win9x9_read_pix_fu_126">make_win97_Pipeline_win9x9_read_pix, 0, 0, 3227, 1431, 0</column>
-<column name="mul_9ns_9ns_17_1_1_U254">mul_9ns_9ns_17_1_1, 0, 0, 0, 50, 0</column>
+<column name="mul_9ns_9ns_17_1_1_U139">mul_9ns_9ns_17_1_1, 0, 0, 0, 50, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -72,14 +72,14 @@
 </item>
 <item name = "Memory"><table name="" hasTotal="1">
 <keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
-<column name="lb1_U">make_win97_lb1_RAM_2P_BRAM_1R1W, 1, 0, 0, 0, 20, 32, 1, 640</column>
-<column name="lb1_1_U">make_win97_lb1_RAM_2P_BRAM_1R1W, 1, 0, 0, 0, 20, 32, 1, 640</column>
-<column name="lb1_2_U">make_win97_lb1_RAM_2P_BRAM_1R1W, 1, 0, 0, 0, 20, 32, 1, 640</column>
-<column name="lb1_3_U">make_win97_lb1_RAM_2P_BRAM_1R1W, 1, 0, 0, 0, 20, 32, 1, 640</column>
-<column name="lb1_4_U">make_win97_lb1_RAM_2P_BRAM_1R1W, 1, 0, 0, 0, 20, 32, 1, 640</column>
-<column name="lb1_5_U">make_win97_lb1_RAM_2P_BRAM_1R1W, 1, 0, 0, 0, 20, 32, 1, 640</column>
-<column name="lb1_6_U">make_win97_lb1_RAM_2P_BRAM_1R1W, 1, 0, 0, 0, 20, 32, 1, 640</column>
-<column name="lb1_7_U">make_win97_lb1_RAM_2P_BRAM_1R1W, 1, 0, 0, 0, 20, 32, 1, 640</column>
+<column name="lb1_U">make_win97_lb1_RAM_2P_BRAM_1R1W, 1, 0, 0, 0, 28, 32, 1, 896</column>
+<column name="lb1_1_U">make_win97_lb1_RAM_2P_BRAM_1R1W, 1, 0, 0, 0, 28, 32, 1, 896</column>
+<column name="lb1_2_U">make_win97_lb1_RAM_2P_BRAM_1R1W, 1, 0, 0, 0, 28, 32, 1, 896</column>
+<column name="lb1_3_U">make_win97_lb1_RAM_2P_BRAM_1R1W, 1, 0, 0, 0, 28, 32, 1, 896</column>
+<column name="lb1_4_U">make_win97_lb1_RAM_2P_BRAM_1R1W, 1, 0, 0, 0, 28, 32, 1, 896</column>
+<column name="lb1_5_U">make_win97_lb1_RAM_2P_BRAM_1R1W, 1, 0, 0, 0, 28, 32, 1, 896</column>
+<column name="lb1_6_U">make_win97_lb1_RAM_2P_BRAM_1R1W, 1, 0, 0, 0, 28, 32, 1, 896</column>
+<column name="lb1_7_U">make_win97_lb1_RAM_2P_BRAM_1R1W, 1, 0, 0, 0, 28, 32, 1, 896</column>
 </table>
 </item>
 <item name = "FIFO"><table name="" hasTotal="1">
@@ -90,10 +90,10 @@
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
 <column name="PH_fu_181_p2">+, 0, 0, 16, 9, 4</column>
 <column name="PW_fu_190_p2">+, 0, 0, 16, 9, 4</column>
-<column name="add_ln917_fu_145_p2">+, 0, 0, 16, 9, 4</column>
+<column name="add_ln962_fu_145_p2">+, 0, 0, 16, 9, 5</column>
 <column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
 <column name="th_eff_fu_169_p3">select, 0, 0, 8, 1, 8</column>
-<column name="xor_ln917_fu_163_p2">xor, 0, 0, 8, 8, 2</column>
+<column name="xor_ln962_fu_163_p2">xor, 0, 0, 8, 8, 2</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
@@ -113,7 +113,7 @@
 <column name="ap_CS_fsm">3, 0, 3, 0</column>
 <column name="ap_done_reg">1, 0, 1, 0</column>
 <column name="grp_make_win97_Pipeline_win9x9_read_pix_fu_126_ap_start_reg">1, 0, 1, 0</column>
-<column name="mul_ln144_reg_227">17, 0, 17, 0</column>
+<column name="mul_ln145_reg_227">17, 0, 17, 0</column>
 </table>
 </item>
 </section>

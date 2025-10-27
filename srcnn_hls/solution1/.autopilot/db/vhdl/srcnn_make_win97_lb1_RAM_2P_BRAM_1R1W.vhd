@@ -13,7 +13,7 @@ entity srcnn_make_win97_lb1_RAM_2P_BRAM_1R1W is
         MEM_TYPE        : string    := "block"; 
         DataWidth       : integer   := 32; 
         AddressWidth    : integer   := 5;
-        AddressRange    : integer   := 20
+        AddressRange    : integer   := 28
     ); 
     port (
         address0    : in std_logic_vector(AddressWidth-1 downto 0); 

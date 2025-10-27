@@ -7,61 +7,66 @@ Diagnostics:
     FilePath:        'D:\HAC\hardware_final_proj\src\srcnn.cpp'
     Replacements:    
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_182_1:  '
-    FileOffset:      182
+    Message:         'Added loop label VITIS_LOOP_183_1:  '
+    FileOffset:      183
     FilePath:        'D:\HAC\hardware_final_proj\src\srcnn.cpp'
     Replacements:    
       - FilePath:        'D:\HAC\hardware_final_proj\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
-        Offset:          16652
+        Offset:          16662
         Length:          0
-        ReplacementText: 'VITIS_LOOP_182_1: '
+        ReplacementText: 'VITIS_LOOP_183_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_184_2:  '
-    FileOffset:      184
+    Message:         'Added loop label VITIS_LOOP_185_2:  '
+    FileOffset:      185
     FilePath:        'D:\HAC\hardware_final_proj\src\srcnn.cpp'
     Replacements:    
       - FilePath:        'D:\HAC\hardware_final_proj\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
-        Offset:          16701
+        Offset:          16711
         Length:          0
-        ReplacementText: 'VITIS_LOOP_184_2: '
+        ReplacementText: 'VITIS_LOOP_185_2: '
   - DiagnosticName:  clang-diagnostic-error
     Message:         'Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
-    FileOffset:      786
+    FileOffset:      621
     FilePath:        'D:\HAC\hardware_final_proj\src\srcnn.cpp'
     Replacements:    
   - DiagnosticName:  clang-diagnostic-error
     Message:         'Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
-    FileOffset:      787
+    FileOffset:      796
+    FilePath:        'D:\HAC\hardware_final_proj\src\srcnn.cpp'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      797
     FilePath:        'D:\HAC\hardware_final_proj\src\srcnn.cpp'
     Replacements:    
   - DiagnosticName:  clang-diagnostic-error
     Message:         'Resource with core_name: RAM_1P_LUTRAM pragma is ignored, because this core doesn''t exist at all '
-    FileOffset:      809
+    FileOffset:      823
     FilePath:        'D:\HAC\hardware_final_proj\src\srcnn.cpp'
     Replacements:    
   - DiagnosticName:  clang-diagnostic-error
     Message:         'Resource with core_name: RAM_1P_LUTRAM pragma is ignored, because this core doesn''t exist at all '
-    FileOffset:      813
+    FileOffset:      834
+    FilePath:        'D:\HAC\hardware_final_proj\src\srcnn.cpp'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      857
     FilePath:        'D:\HAC\hardware_final_proj\src\srcnn.cpp'
     Replacements:    
   - DiagnosticName:  clang-diagnostic-error
     Message:         'Resource with core_name: RAM_1P_LUTRAM pragma is ignored, because this core doesn''t exist at all '
-    FileOffset:      818
+    FileOffset:      871
     FilePath:        'D:\HAC\hardware_final_proj\src\srcnn.cpp'
     Replacements:    
   - DiagnosticName:  clang-diagnostic-error
     Message:         'Resource with core_name: RAM_1P_LUTRAM pragma is ignored, because this core doesn''t exist at all '
-    FileOffset:      828
+    FileOffset:      872
     FilePath:        'D:\HAC\hardware_final_proj\src\srcnn.cpp'
     Replacements:    
   - DiagnosticName:  clang-diagnostic-error
     Message:         'Resource with core_name: RAM_1P_LUTRAM pragma is ignored, because this core doesn''t exist at all '
-    FileOffset:      829
-    FilePath:        'D:\HAC\hardware_final_proj\src\srcnn.cpp'
-    Replacements:    
-  - DiagnosticName:  clang-diagnostic-error
-    Message:         'Resource with core_name: RAM_1P_LUTRAM pragma is ignored, because this core doesn''t exist at all '
-    FileOffset:      830
+    FileOffset:      873
     FilePath:        'D:\HAC\hardware_final_proj\src\srcnn.cpp'
     Replacements:    
 ...

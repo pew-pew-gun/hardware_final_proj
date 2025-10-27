@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1761548932076">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1761553118099">
   <ports id="1" name="w0" type="PortType" coreId="0" bitwidth="8">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
@@ -16,64 +16,64 @@
   <edges id="29" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.0/@node_objs.6"/>
   <edges source_obj="//@blocks.0/@node_objs.6" sink_obj="//@ports.1"/>
   <blocks id="9" name="dataflow_in_loop_IT_w0.1_Block_newFuncRoot2_proc2" type="BlockType">
-    <node_objs xsi:type="cdfg:CdfgNode" id="2" name="w0_read" coreId="0" bitwidth="8" opcode="read" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="2" name="w0_read" coreId="1635000354" bitwidth="8" opcode="read" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
       <dataInputObjs>w0</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
       <dataOutputObjs>xor</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="3" name="w0_cast" rtlName="w0_cast_fu_20_p1" coreId="0" bitwidth="9" opcode="zext" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="3" name="w0_cast" rtlName="w0_cast_fu_20_p1" coreId="1936683105" bitwidth="9" opcode="zext" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="4" name="add_ln920" lineNumber="920" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="add_ln920_fu_24_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="srcnn" bitwidth="9" opcode="add" m_display="0" m_delay="0.76" m_topoIndex="3" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="src/srcnn.cpp" linenumber="920" fileDirectory="D:\HAC\hardware_final_proj" functionName="srcnn"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="4" name="add_ln965" lineNumber="965" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="add_ln965_fu_24_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="srcnn" bitwidth="9" opcode="add" m_display="0" m_delay="0.76" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/srcnn.cpp" linenumber="965" fileDirectory="D:\HAC\hardware_final_proj" functionName="srcnn"/>
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>bitselect</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="5" name="tmp" lineNumber="920" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="tmp_fu_30_p3" coreId="1819310149" contextFuncName="p_Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i_for_body126" bitwidth="1" opcode="bitselect" m_display="0" m_topoIndex="4" m_clusterGroupNumber="1">
-      <inlineStackInfo fileName="src/srcnn.cpp" linenumber="920" fileDirectory="D:\HAC\hardware_final_proj" functionName="_Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i_for.body126"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="5" name="tmp" lineNumber="965" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="tmp_fu_30_p3" coreId="1953067621" contextFuncName="p_Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i_for_body126" bitwidth="1" opcode="bitselect" m_display="0" m_topoIndex="4" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="src/srcnn.cpp" linenumber="965" fileDirectory="D:\HAC\hardware_final_proj" functionName="_Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i_for.body126"/>
       <dataInputObjs>add</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="xor_ln920" lineNumber="920" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="xor_ln920_fu_38_p2" coreName="LogicGate" implIndex="auto" control="no" opType="xor" coreId="74" contextFuncName="p_Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i_for_body126" bitwidth="8" opcode="xor" m_display="0" m_topoIndex="5" m_clusterGroupNumber="1">
-      <inlineStackInfo fileName="src/srcnn.cpp" linenumber="920" fileDirectory="D:\HAC\hardware_final_proj" functionName="_Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i_for.body126"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="xor_ln965" lineNumber="965" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="xor_ln965_fu_38_p2" coreName="LogicGate" implIndex="auto" control="no" opType="xor" coreId="74" contextFuncName="p_Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i_for_body126" bitwidth="8" opcode="xor" m_display="0" m_topoIndex="5" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="src/srcnn.cpp" linenumber="965" fileDirectory="D:\HAC\hardware_final_proj" functionName="_Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i_for.body126"/>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="tw_eff" lineNumber="920" originalName="tw_eff" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="tw_eff_fu_44_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="p_Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i_for_body126" bitwidth="8" opcode="select" m_display="0" m_delay="0.39" m_topoIndex="6" m_clusterGroupNumber="1">
-      <inlineStackInfo fileName="src/srcnn.cpp" linenumber="920" fileDirectory="D:\HAC\hardware_final_proj" functionName="_Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i_for.body126"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="tw_eff" lineNumber="965" originalName="tw_eff" fileName="src/srcnn.cpp" fileDirectory="../." rtlName="tw_eff_fu_44_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="p_Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i_for_body126" bitwidth="8" opcode="select" m_display="0" m_delay="0.39" m_topoIndex="6" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="src/srcnn.cpp" linenumber="965" fileDirectory="D:\HAC\hardware_final_proj" functionName="_Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i_for.body126"/>
       <dataInputObjs>bitselect</dataInputObjs>
       <dataInputObjs>xor</dataInputObjs>
       <dataOutputObjs>ret</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="_ln920" lineNumber="920" fileName="src/srcnn.cpp" fileDirectory="../." coreId="1162363731" contextFuncName="p_Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i_for_body126" opcode="ret" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="src/srcnn.cpp" linenumber="920" fileDirectory="D:\HAC\hardware_final_proj" functionName="_Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i_for.body126"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="_ln965" lineNumber="965" fileName="src/srcnn.cpp" fileDirectory="../." coreId="1126185531" contextFuncName="p_Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i_for_body126" opcode="ret" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/srcnn.cpp" linenumber="965" fileDirectory="D:\HAC\hardware_final_proj" functionName="_Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i_for.body126"/>
       <dataInputObjs>select</dataInputObjs>
       <dataOutputObjs>ap_return</dataOutputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="src/srcnn.cpp">
-      <validLinenumbers>920</validLinenumbers>
+      <validLinenumbers>965</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
   <ScheduleInfo time="0"/>
   <expressionNodes realName="w0_cast_fu_20">
     <nodeIds>3</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="xor_ln920_fu_38">
+  <expressionNodes realName="xor_ln965_fu_38">
     <nodeIds>6</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="add_ln920_fu_24">
-    <nodeIds>4</nodeIds>
   </expressionNodes>
   <expressionNodes realName="tw_eff_fu_44">
     <nodeIds>7</nodeIds>
   </expressionNodes>
   <expressionNodes realName="tmp_fu_30">
     <nodeIds>5</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln965_fu_24">
+    <nodeIds>4</nodeIds>
   </expressionNodes>
   <ioNodes realName="w0_read_read_fu_14">
     <nodeIds>2</nodeIds>

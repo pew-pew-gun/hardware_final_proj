@@ -8,7 +8,7 @@
 
 `timescale 1ns/1ps
 
-module srcnn_mux_29_5_32_1_1 #(
+module srcnn_mux_25_5_32_1_1 #(
 parameter
     ID                = 0,
     NUM_STAGE         = 1,
@@ -37,11 +37,7 @@ parameter
     din22_WIDTH       = 32,
     din23_WIDTH       = 32,
     din24_WIDTH       = 32,
-    din25_WIDTH       = 32,
-    din26_WIDTH       = 32,
-    din27_WIDTH       = 32,
-    din28_WIDTH       = 32,
-    din29_WIDTH         = 32,
+    din25_WIDTH         = 32,
     dout_WIDTH            = 32
 )(
     input  [31 : 0]     din0,
@@ -69,11 +65,7 @@ parameter
     input  [31 : 0]     din22,
     input  [31 : 0]     din23,
     input  [31 : 0]     din24,
-    input  [31 : 0]     din25,
-    input  [31 : 0]     din26,
-    input  [31 : 0]     din27,
-    input  [31 : 0]     din28,
-    input  [4 : 0]    din29,
+    input  [4 : 0]    din25,
     output [31 : 0]   dout);
 
 // puts internal signals
@@ -92,8 +84,6 @@ wire [31 : 0]         mux_1_9;
 wire [31 : 0]         mux_1_10;
 wire [31 : 0]         mux_1_11;
 wire [31 : 0]         mux_1_12;
-wire [31 : 0]         mux_1_13;
-wire [31 : 0]         mux_1_14;
 // level 2 signals
 wire [31 : 0]         mux_2_0;
 wire [31 : 0]         mux_2_1;
@@ -102,7 +92,6 @@ wire [31 : 0]         mux_2_3;
 wire [31 : 0]         mux_2_4;
 wire [31 : 0]         mux_2_5;
 wire [31 : 0]         mux_2_6;
-wire [31 : 0]         mux_2_7;
 // level 3 signals
 wire [31 : 0]         mux_3_0;
 wire [31 : 0]         mux_3_1;
@@ -114,7 +103,7 @@ wire [31 : 0]         mux_4_1;
 // level 5 signals
 wire [31 : 0]         mux_5_0;
 
-assign sel = din29;
+assign sel = din25;
 
 // Generate level 1 logic
 assign mux_1_0 = (sel[0] == 0)? din0 : din1;
@@ -129,9 +118,7 @@ assign mux_1_8 = (sel[0] == 0)? din16 : din17;
 assign mux_1_9 = (sel[0] == 0)? din18 : din19;
 assign mux_1_10 = (sel[0] == 0)? din20 : din21;
 assign mux_1_11 = (sel[0] == 0)? din22 : din23;
-assign mux_1_12 = (sel[0] == 0)? din24 : din25;
-assign mux_1_13 = (sel[0] == 0)? din26 : din27;
-assign mux_1_14 = din28;
+assign mux_1_12 = din24;
 
 // Generate level 2 logic
 assign mux_2_0 = (sel[1] == 0)? mux_1_0 : mux_1_1;
@@ -140,14 +127,13 @@ assign mux_2_2 = (sel[1] == 0)? mux_1_4 : mux_1_5;
 assign mux_2_3 = (sel[1] == 0)? mux_1_6 : mux_1_7;
 assign mux_2_4 = (sel[1] == 0)? mux_1_8 : mux_1_9;
 assign mux_2_5 = (sel[1] == 0)? mux_1_10 : mux_1_11;
-assign mux_2_6 = (sel[1] == 0)? mux_1_12 : mux_1_13;
-assign mux_2_7 = mux_1_14;
+assign mux_2_6 = mux_1_12;
 
 // Generate level 3 logic
 assign mux_3_0 = (sel[2] == 0)? mux_2_0 : mux_2_1;
 assign mux_3_1 = (sel[2] == 0)? mux_2_2 : mux_2_3;
 assign mux_3_2 = (sel[2] == 0)? mux_2_4 : mux_2_5;
-assign mux_3_3 = (sel[2] == 0)? mux_2_6 : mux_2_7;
+assign mux_3_3 = mux_2_6;
 
 // Generate level 4 logic
 assign mux_4_0 = (sel[3] == 0)? mux_3_0 : mux_3_1;

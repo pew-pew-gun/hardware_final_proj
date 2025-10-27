@@ -18,7 +18,7 @@
 <PipelineType>no</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>7.300</EstimatedClockPeriod>
+<EstimatedClockPeriod>7.794</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
@@ -52,7 +52,7 @@
 </CopyW2_outft>
 <IT_h0>
 <Slack>7.30</Slack>
-<TripCount>32</TripCount>
+<TripCount>16</TripCount>
 <Latency>undef</Latency>
 <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
 <IterationLatency>undef</IterationLatency>
@@ -60,7 +60,7 @@
 </InstanceList>
 <IT_w0>
 <Slack>7.30</Slack>
-<TripCount>32</TripCount>
+<TripCount>16</TripCount>
 <Latency>undef</Latency>
 <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
 <IterationLatency>undef</IterationLatency>
@@ -73,10 +73,10 @@
 
 <AreaEstimates>
 <Resources>
-<BRAM_18K>236</BRAM_18K>
-<DSP>2991</DSP>
-<FF>322019</FF>
-<LUT>258744</LUT>
+<BRAM_18K>260</BRAM_18K>
+<DSP>188</DSP>
+<FF>86539</FF>
+<LUT>82269</LUT>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>

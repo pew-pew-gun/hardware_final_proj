@@ -18,7 +18,7 @@ module srcnn_make_win97_lb1_RAM_2P_BRAM_1R1W (
 
 parameter DataWidth = 32;
 parameter AddressWidth = 5;
-parameter AddressRange = 20;
+parameter AddressRange = 28;
  
 input[AddressWidth-1:0] address0;
 input ce0;

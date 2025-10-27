@@ -34,7 +34,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1025538401</coreId>
+						<coreId>1953845052</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -70,7 +70,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1008746034</coreId>
+						<coreId>1867529248</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>2593</bitwidth>
@@ -106,7 +106,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>775041897</coreId>
+						<coreId>1953391988</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -142,7 +142,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1698970656</coreId>
+						<coreId>775041897</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -178,7 +178,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>807419168</coreId>
+						<coreId>1396449342</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -214,7 +214,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>540160873</coreId>
+						<coreId>1953391988</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -297,7 +297,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1609</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -384,7 +384,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1771</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -429,14 +429,14 @@
 											<first>src/srcnn.cpp</first>
 											<second>_Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i_for.body126</second>
 										</first>
-										<second>938</second>
+										<second>983</second>
 									</item>
 									<item>
 										<first>
 											<first>src/srcnn.cpp</first>
 											<second>conv1conv2_stream</second>
 										</first>
-										<second>405</second>
+										<second>413</second>
 									</item>
 									<item>
 										<first>
@@ -450,7 +450,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>924</second>
+										<second>969</second>
 									</item>
 								</second>
 							</item>
@@ -506,14 +506,14 @@
 											<first>src/srcnn.cpp</first>
 											<second>_Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i_for.body126</second>
 										</first>
-										<second>938</second>
+										<second>983</second>
 									</item>
 									<item>
 										<first>
 											<first>src/srcnn.cpp</first>
 											<second>conv1conv2_stream</second>
 										</first>
-										<second>405</second>
+										<second>413</second>
 									</item>
 									<item>
 										<first>
@@ -527,7 +527,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>924</second>
+										<second>969</second>
 									</item>
 								</second>
 							</item>
@@ -540,7 +540,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4294967294</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -583,14 +583,14 @@
 											<first>src/srcnn.cpp</first>
 											<second>_Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i_for.body126</second>
 										</first>
-										<second>938</second>
+										<second>983</second>
 									</item>
 									<item>
 										<first>
 											<first>src/srcnn.cpp</first>
 											<second>conv1conv2_stream</second>
 										</first>
-										<second>405</second>
+										<second>413</second>
 									</item>
 									<item>
 										<first>
@@ -604,7 +604,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>924</second>
+										<second>969</second>
 									</item>
 								</second>
 							</item>
@@ -617,7 +617,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>38</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -660,14 +660,14 @@
 											<first>src/srcnn.cpp</first>
 											<second>_Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i_for.body126</second>
 										</first>
-										<second>938</second>
+										<second>983</second>
 									</item>
 									<item>
 										<first>
 											<first>src/srcnn.cpp</first>
 											<second>conv1conv2_stream</second>
 										</first>
-										<second>405</second>
+										<second>413</second>
 									</item>
 									<item>
 										<first>
@@ -681,7 +681,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>924</second>
+										<second>969</second>
 									</item>
 								</second>
 							</item>
@@ -694,7 +694,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4294967294</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -737,14 +737,14 @@
 											<first>src/srcnn.cpp</first>
 											<second>_Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i_for.body126</second>
 										</first>
-										<second>938</second>
+										<second>983</second>
 									</item>
 									<item>
 										<first>
 											<first>src/srcnn.cpp</first>
 											<second>conv1conv2_stream</second>
 										</first>
-										<second>405</second>
+										<second>413</second>
 									</item>
 									<item>
 										<first>
@@ -758,7 +758,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>924</second>
+										<second>969</second>
 									</item>
 								</second>
 							</item>
@@ -814,14 +814,14 @@
 											<first>src/srcnn.cpp</first>
 											<second>_Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i_for.body126</second>
 										</first>
-										<second>938</second>
+										<second>983</second>
 									</item>
 									<item>
 										<first>
 											<first>src/srcnn.cpp</first>
 											<second>conv1conv2_stream</second>
 										</first>
-										<second>405</second>
+										<second>413</second>
 									</item>
 									<item>
 										<first>
@@ -835,7 +835,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>924</second>
+										<second>969</second>
 									</item>
 								</second>
 							</item>
@@ -848,7 +848,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2169</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -891,14 +891,14 @@
 											<first>src/srcnn.cpp</first>
 											<second>_Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i_for.body126</second>
 										</first>
-										<second>938</second>
+										<second>983</second>
 									</item>
 									<item>
 										<first>
 											<first>src/srcnn.cpp</first>
 											<second>conv1conv2_stream</second>
 										</first>
-										<second>405</second>
+										<second>413</second>
 									</item>
 									<item>
 										<first>
@@ -912,7 +912,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>924</second>
+										<second>969</second>
 									</item>
 								</second>
 							</item>
@@ -925,7 +925,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4294967294</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -968,14 +968,14 @@
 											<first>src/srcnn.cpp</first>
 											<second>_Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i_for.body126</second>
 										</first>
-										<second>938</second>
+										<second>983</second>
 									</item>
 									<item>
 										<first>
 											<first>src/srcnn.cpp</first>
 											<second>conv1conv2_stream</second>
 										</first>
-										<second>405</second>
+										<second>413</second>
 									</item>
 									<item>
 										<first>
@@ -989,7 +989,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>924</second>
+										<second>969</second>
 									</item>
 								</second>
 							</item>
@@ -1002,7 +1002,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1911</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1026,10 +1026,10 @@
 					<Obj>
 						<type>0</type>
 						<id>21</id>
-						<name>add_ln917</name>
+						<name>add_ln962</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>917</lineNumber>
+						<lineNumber>962</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -1045,7 +1045,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>917</second>
+										<second>962</second>
 									</item>
 								</second>
 							</item>
@@ -1058,7 +1058,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4294967294</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -1086,7 +1086,7 @@
 						<name>tmp</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>917</lineNumber>
+						<lineNumber>962</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -1102,7 +1102,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>917</second>
+										<second>962</second>
 									</item>
 								</second>
 							</item>
@@ -1115,7 +1115,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4294967294</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -1141,10 +1141,10 @@
 					<Obj>
 						<type>0</type>
 						<id>23</id>
-						<name>trunc_ln916</name>
+						<name>trunc_ln961</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>916</lineNumber>
+						<lineNumber>961</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -1160,7 +1160,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>916</second>
+										<second>961</second>
 									</item>
 								</second>
 							</item>
@@ -1197,10 +1197,10 @@
 					<Obj>
 						<type>0</type>
 						<id>24</id>
-						<name>xor_ln917</name>
+						<name>xor_ln962</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>917</lineNumber>
+						<lineNumber>962</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -1216,7 +1216,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>917</second>
+										<second>962</second>
 									</item>
 								</second>
 							</item>
@@ -1257,7 +1257,7 @@
 						<name>th_eff</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>917</lineNumber>
+						<lineNumber>962</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -1273,7 +1273,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>917</second>
+										<second>962</second>
 									</item>
 								</second>
 							</item>
@@ -1330,7 +1330,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4294967294</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -1357,7 +1357,7 @@
 						<name>th_eff_cast_i</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>917</lineNumber>
+						<lineNumber>962</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -1373,7 +1373,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>917</second>
+										<second>962</second>
 									</item>
 								</second>
 							</item>
@@ -1386,7 +1386,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4294967294</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -1429,14 +1429,14 @@
 											<first>src/srcnn.cpp</first>
 											<second>_Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i_for.body126</second>
 										</first>
-										<second>938</second>
+										<second>983</second>
 									</item>
 									<item>
 										<first>
 											<first>src/srcnn.cpp</first>
 											<second>conv1conv2_stream</second>
 										</first>
-										<second>405</second>
+										<second>413</second>
 									</item>
 									<item>
 										<first>
@@ -1450,7 +1450,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>924</second>
+										<second>969</second>
 									</item>
 								</second>
 							</item>
@@ -1507,14 +1507,14 @@
 											<first>src/srcnn.cpp</first>
 											<second>_Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i_for.body126</second>
 										</first>
-										<second>938</second>
+										<second>983</second>
 									</item>
 									<item>
 										<first>
 											<first>src/srcnn.cpp</first>
 											<second>conv1conv2_stream</second>
 										</first>
-										<second>405</second>
+										<second>413</second>
 									</item>
 									<item>
 										<first>
@@ -1528,7 +1528,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>924</second>
+										<second>969</second>
 									</item>
 								</second>
 							</item>
@@ -1541,7 +1541,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2523</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -1566,10 +1566,10 @@
 					<Obj>
 						<type>0</type>
 						<id>40</id>
-						<name>zext_ln144</name>
+						<name>zext_ln145</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>144</lineNumber>
+						<lineNumber>145</lineNumber>
 						<contextFuncName>make_win9</contextFuncName>
 						<contextNormFuncName>make_win9</contextNormFuncName>
 						<inlineStackInfo>
@@ -1585,28 +1585,28 @@
 											<first>src/srcnn.cpp</first>
 											<second>_Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i_for.body126</second>
 										</first>
-										<second>938</second>
+										<second>983</second>
 									</item>
 									<item>
 										<first>
 											<first>src/srcnn.cpp</first>
 											<second>conv1conv2_stream</second>
 										</first>
-										<second>405</second>
+										<second>413</second>
 									</item>
 									<item>
 										<first>
 											<first>src/srcnn.cpp</first>
 											<second>make_win9</second>
 										</first>
-										<second>144</second>
+										<second>145</second>
 									</item>
 									<item>
 										<first>
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>924</second>
+										<second>969</second>
 									</item>
 								</second>
 							</item>
@@ -1619,7 +1619,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3697</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>17</bitwidth>
@@ -1643,10 +1643,10 @@
 					<Obj>
 						<type>0</type>
 						<id>41</id>
-						<name>zext_ln144_1</name>
+						<name>zext_ln145_1</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>144</lineNumber>
+						<lineNumber>145</lineNumber>
 						<contextFuncName>make_win9</contextFuncName>
 						<contextNormFuncName>make_win9</contextNormFuncName>
 						<inlineStackInfo>
@@ -1662,28 +1662,28 @@
 											<first>src/srcnn.cpp</first>
 											<second>_Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i_for.body126</second>
 										</first>
-										<second>938</second>
+										<second>983</second>
 									</item>
 									<item>
 										<first>
 											<first>src/srcnn.cpp</first>
 											<second>conv1conv2_stream</second>
 										</first>
-										<second>405</second>
+										<second>413</second>
 									</item>
 									<item>
 										<first>
 											<first>src/srcnn.cpp</first>
 											<second>make_win9</second>
 										</first>
-										<second>144</second>
+										<second>145</second>
 									</item>
 									<item>
 										<first>
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>924</second>
+										<second>969</second>
 									</item>
 								</second>
 							</item>
@@ -1720,10 +1720,10 @@
 					<Obj>
 						<type>0</type>
 						<id>42</id>
-						<name>mul_ln144</name>
+						<name>mul_ln145</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>144</lineNumber>
+						<lineNumber>145</lineNumber>
 						<contextFuncName>make_win9</contextFuncName>
 						<contextNormFuncName>make_win9</contextNormFuncName>
 						<inlineStackInfo>
@@ -1739,28 +1739,28 @@
 											<first>src/srcnn.cpp</first>
 											<second>_Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i_for.body126</second>
 										</first>
-										<second>938</second>
+										<second>983</second>
 									</item>
 									<item>
 										<first>
 											<first>src/srcnn.cpp</first>
 											<second>conv1conv2_stream</second>
 										</first>
-										<second>405</second>
+										<second>413</second>
 									</item>
 									<item>
 										<first>
 											<first>src/srcnn.cpp</first>
 											<second>make_win9</second>
 										</first>
-										<second>144</second>
+										<second>145</second>
 									</item>
 									<item>
 										<first>
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>924</second>
+										<second>969</second>
 									</item>
 								</second>
 							</item>
@@ -1773,7 +1773,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4228300630</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>17</bitwidth>
@@ -1816,7 +1816,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>41</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1844,10 +1844,10 @@
 					<Obj>
 						<type>0</type>
 						<id>44</id>
-						<name>_ln144</name>
+						<name>_ln145</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>144</lineNumber>
+						<lineNumber>145</lineNumber>
 						<contextFuncName>make_win9</contextFuncName>
 						<contextNormFuncName>make_win9</contextNormFuncName>
 						<inlineStackInfo>
@@ -1863,28 +1863,28 @@
 											<first>src/srcnn.cpp</first>
 											<second>_Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i_for.body126</second>
 										</first>
-										<second>938</second>
+										<second>983</second>
 									</item>
 									<item>
 										<first>
 											<first>src/srcnn.cpp</first>
 											<second>conv1conv2_stream</second>
 										</first>
-										<second>405</second>
+										<second>413</second>
 									</item>
 									<item>
 										<first>
 											<first>src/srcnn.cpp</first>
 											<second>make_win9</second>
 										</first>
-										<second>144</second>
+										<second>145</second>
 									</item>
 									<item>
 										<first>
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>924</second>
+										<second>969</second>
 									</item>
 								</second>
 							</item>
@@ -1935,10 +1935,10 @@
 					<Obj>
 						<type>0</type>
 						<id>45</id>
-						<name>_ln405</name>
+						<name>_ln413</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>405</lineNumber>
+						<lineNumber>413</lineNumber>
 						<contextFuncName>conv1conv2_stream</contextFuncName>
 						<contextNormFuncName>conv1conv2_stream</contextNormFuncName>
 						<inlineStackInfo>
@@ -1954,21 +1954,21 @@
 											<first>src/srcnn.cpp</first>
 											<second>_Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i_for.body126</second>
 										</first>
-										<second>938</second>
+										<second>983</second>
 									</item>
 									<item>
 										<first>
 											<first>src/srcnn.cpp</first>
 											<second>conv1conv2_stream</second>
 										</first>
-										<second>405</second>
+										<second>413</second>
 									</item>
 									<item>
 										<first>
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>924</second>
+										<second>969</second>
 									</item>
 								</second>
 							</item>
@@ -2026,7 +2026,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1852142702</coreId>
+						<coreId>1698970656</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -2057,13 +2057,13 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1698970656</coreId>
+						<coreId>1953391988</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>8</content>
+				<content>16</content>
 			</item>
 			<item class_id_reference="16" object_id="_36">
 				<Value>
@@ -2088,7 +2088,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1852142702</coreId>
+						<coreId>1346117694</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2119,7 +2119,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1952671084</coreId>
+						<coreId>1346117694</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -2150,13 +2150,13 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1702045472</coreId>
+						<coreId>540160873</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>8</content>
+				<content>16</content>
 			</item>
 			<item class_id_reference="16" object_id="_39">
 				<Value>
@@ -2181,7 +2181,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1346117694</coreId>
+						<coreId>540160873</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -2212,7 +2212,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1349809487</coreId>
+						<coreId>1867529248</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -2246,7 +2246,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>4294967295</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>

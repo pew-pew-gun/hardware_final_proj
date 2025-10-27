@@ -10,7 +10,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.NUMERIC_STD.all;
 
-entity srcnn_mux_29_5_32_1_1 is
+entity srcnn_mux_25_5_32_1_1 is
 generic (
     ID            :integer := 0;
     NUM_STAGE     :integer := 1;
@@ -40,10 +40,6 @@ generic (
     din23_WIDTH       :integer := 32;
     din24_WIDTH       :integer := 32;
     din25_WIDTH       :integer := 32;
-    din26_WIDTH       :integer := 32;
-    din27_WIDTH       :integer := 32;
-    din28_WIDTH       :integer := 32;
-    din29_WIDTH       :integer := 32;
     dout_WIDTH        :integer := 32);
 port (
     din0   :in  std_logic_vector(31 downto 0);
@@ -71,15 +67,11 @@ port (
     din22   :in  std_logic_vector(31 downto 0);
     din23   :in  std_logic_vector(31 downto 0);
     din24   :in  std_logic_vector(31 downto 0);
-    din25   :in  std_logic_vector(31 downto 0);
-    din26   :in  std_logic_vector(31 downto 0);
-    din27   :in  std_logic_vector(31 downto 0);
-    din28   :in  std_logic_vector(31 downto 0);
-    din29   :in  std_logic_vector(4 downto 0);
+    din25   :in  std_logic_vector(4 downto 0);
     dout     :out std_logic_vector(31 downto 0));
 end entity;
 
-architecture rtl of srcnn_mux_29_5_32_1_1 is
+architecture rtl of srcnn_mux_25_5_32_1_1 is
     -- puts internal signals
     signal sel    : std_logic_vector(4 downto 0);
     -- level 1 signals
@@ -96,8 +88,6 @@ architecture rtl of srcnn_mux_29_5_32_1_1 is
     signal mux_1_10    : std_logic_vector(31 downto 0);
     signal mux_1_11    : std_logic_vector(31 downto 0);
     signal mux_1_12    : std_logic_vector(31 downto 0);
-    signal mux_1_13    : std_logic_vector(31 downto 0);
-    signal mux_1_14    : std_logic_vector(31 downto 0);
     -- level 2 signals
     signal mux_2_0    : std_logic_vector(31 downto 0);
     signal mux_2_1    : std_logic_vector(31 downto 0);
@@ -106,7 +96,6 @@ architecture rtl of srcnn_mux_29_5_32_1_1 is
     signal mux_2_4    : std_logic_vector(31 downto 0);
     signal mux_2_5    : std_logic_vector(31 downto 0);
     signal mux_2_6    : std_logic_vector(31 downto 0);
-    signal mux_2_7    : std_logic_vector(31 downto 0);
     -- level 3 signals
     signal mux_3_0    : std_logic_vector(31 downto 0);
     signal mux_3_1    : std_logic_vector(31 downto 0);
@@ -119,7 +108,7 @@ architecture rtl of srcnn_mux_29_5_32_1_1 is
     signal mux_5_0    : std_logic_vector(31 downto 0);
 begin
 
-sel <= din29;
+sel <= din25;
 
 -- Generate level 1 logic
 mux_1_0 <= din0 when sel(0) = '0' else din1;
@@ -134,9 +123,7 @@ mux_1_8 <= din16 when sel(0) = '0' else din17;
 mux_1_9 <= din18 when sel(0) = '0' else din19;
 mux_1_10 <= din20 when sel(0) = '0' else din21;
 mux_1_11 <= din22 when sel(0) = '0' else din23;
-mux_1_12 <= din24 when sel(0) = '0' else din25;
-mux_1_13 <= din26 when sel(0) = '0' else din27;
-mux_1_14 <= din28;
+mux_1_12 <= din24;
 
 -- Generate level 2 logic
 mux_2_0 <= mux_1_0 when sel(1) = '0' else mux_1_1;
@@ -145,14 +132,13 @@ mux_2_2 <= mux_1_4 when sel(1) = '0' else mux_1_5;
 mux_2_3 <= mux_1_6 when sel(1) = '0' else mux_1_7;
 mux_2_4 <= mux_1_8 when sel(1) = '0' else mux_1_9;
 mux_2_5 <= mux_1_10 when sel(1) = '0' else mux_1_11;
-mux_2_6 <= mux_1_12 when sel(1) = '0' else mux_1_13;
-mux_2_7 <= mux_1_14;
+mux_2_6 <= mux_1_12;
 
 -- Generate level 3 logic
 mux_3_0 <= mux_2_0 when sel(2) = '0' else mux_2_1;
 mux_3_1 <= mux_2_2 when sel(2) = '0' else mux_2_3;
 mux_3_2 <= mux_2_4 when sel(2) = '0' else mux_2_5;
-mux_3_3 <= mux_2_6 when sel(2) = '0' else mux_2_7;
+mux_3_3 <= mux_2_6;
 
 -- Generate level 4 logic
 mux_4_0 <= mux_3_0 when sel(3) = '0' else mux_3_1;

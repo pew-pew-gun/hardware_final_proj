@@ -168,7 +168,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "win9x9_read_pix", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter1", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter2", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter2", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
 	{"ID" : "10", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_make_win97_Pipeline_win9x9_read_pix_fu_126.flow_control_loop_pipe_sequential_init_U", "Parent" : "9"},
-	{"ID" : "11", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_9ns_9ns_17_1_1_U254", "Parent" : "0"}]}
+	{"ID" : "11", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_9ns_9ns_17_1_1_U139", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {

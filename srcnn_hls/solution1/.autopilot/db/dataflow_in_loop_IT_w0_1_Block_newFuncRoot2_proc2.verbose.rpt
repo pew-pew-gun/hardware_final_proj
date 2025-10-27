@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'dataflow_in_loop_IT_w0_1_Block_newFuncRoot2_proc2'
 ================================================================
-* Date:           Mon Oct 27 18:08:52 2025
+* Date:           Mon Oct 27 19:18:38 2025
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -80,12 +80,12 @@
     +--------------------+----------+----+---+----+------------+------------+
     |    Variable Name   | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +--------------------+----------+----+---+----+------------+------------+
-    |add_ln920_fu_24_p2  |         +|   0|  0|  16|           9|           4|
+    |add_ln965_fu_24_p2  |         +|   0|  0|  16|           9|           5|
     |ap_block_state1     |        or|   0|  0|   2|           1|           1|
     |tw_eff_fu_44_p3     |    select|   0|  0|   8|           1|           8|
-    |xor_ln920_fu_38_p2  |       xor|   0|  0|   8|           8|           2|
+    |xor_ln965_fu_38_p2  |       xor|   0|  0|   8|           8|           2|
     +--------------------+----------+----+---+----+------------+------------+
-    |Total               |          |   0|  0|  34|          19|          15|
+    |Total               |          |   0|  0|  34|          19|          16|
     +--------------------+----------+----+---+----+------------+------------+
 
     * Multiplexer: 
@@ -167,11 +167,11 @@ IsGatedGlobalClock: 0
 State 1 <SV = 0> <Delay = 1.15>
 ST_1 : Operation 2 [1/1] (0.00ns)   --->   "%w0_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %w0"   --->   Operation 2 'read' 'w0_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%w0_cast = zext i8 %w0_read"   --->   Operation 3 'zext' 'w0_cast' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 4 [1/1] (0.76ns)   --->   "%add_ln920 = add i9 %w0_cast, i9 8" [src/srcnn.cpp:920]   --->   Operation 4 'add' 'add_ln920' <Predicate = true> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 5 [1/1] (0.00ns) (grouped into LUT with out node tw_eff)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i9.i32, i9 %add_ln920, i32 8" [src/srcnn.cpp:920]   --->   Operation 5 'bitselect' 'tmp' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 6 [1/1] (0.00ns) (grouped into LUT with out node tw_eff)   --->   "%xor_ln920 = xor i8 %w0_read, i8 255" [src/srcnn.cpp:920]   --->   Operation 6 'xor' 'xor_ln920' <Predicate = (tmp)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 7 [1/1] (0.39ns) (out node of the LUT)   --->   "%tw_eff = select i1 %tmp, i8 %xor_ln920, i8 8" [src/srcnn.cpp:920]   --->   Operation 7 'select' 'tw_eff' <Predicate = true> <Delay = 0.39> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.39> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%ret_ln920 = ret i8 %tw_eff" [src/srcnn.cpp:920]   --->   Operation 8 'ret' 'ret_ln920' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.76ns)   --->   "%add_ln965 = add i9 %w0_cast, i9 16" [src/srcnn.cpp:965]   --->   Operation 4 'add' 'add_ln965' <Predicate = true> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 5 [1/1] (0.00ns) (grouped into LUT with out node tw_eff)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i9.i32, i9 %add_ln965, i32 8" [src/srcnn.cpp:965]   --->   Operation 5 'bitselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns) (grouped into LUT with out node tw_eff)   --->   "%xor_ln965 = xor i8 %w0_read, i8 255" [src/srcnn.cpp:965]   --->   Operation 6 'xor' 'xor_ln965' <Predicate = (tmp)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 7 [1/1] (0.39ns) (out node of the LUT)   --->   "%tw_eff = select i1 %tmp, i8 %xor_ln965, i8 16" [src/srcnn.cpp:965]   --->   Operation 7 'select' 'tw_eff' <Predicate = true> <Delay = 0.39> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.39> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%ret_ln965 = ret i8 %tw_eff" [src/srcnn.cpp:965]   --->   Operation 8 'ret' 'ret_ln965' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
@@ -194,11 +194,11 @@ Port [ w0]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=
 <method=bitvector/>
 w0_read   (read     ) [ 00]
 w0_cast   (zext     ) [ 00]
-add_ln920 (add      ) [ 00]
+add_ln965 (add      ) [ 00]
 tmp       (bitselect) [ 01]
-xor_ln920 (xor      ) [ 00]
+xor_ln965 (xor      ) [ 00]
 tw_eff    (select   ) [ 00]
-ret_ln920 (ret      ) [ 00]
+ret_ln965 (ret      ) [ 00]
 </LifeTime>
 
 <model>
@@ -290,15 +290,15 @@ ret_ln920 (ret      ) [ 00]
 </bind>
 </comp>
 
-<comp id="24" class="1004" name="add_ln920_fu_24">
+<comp id="24" class="1004" name="add_ln965_fu_24">
 <pin_list>
 <pin id="25" dir="0" index="0" bw="8" slack="0"/>
-<pin id="26" dir="0" index="1" bw="5" slack="0"/>
+<pin id="26" dir="0" index="1" bw="6" slack="0"/>
 <pin id="27" dir="1" index="2" bw="9" slack="0"/>
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="add_ln920/1 "/>
+<opset="add_ln965/1 "/>
 </bind>
 </comp>
 
@@ -315,7 +315,7 @@ ret_ln920 (ret      ) [ 00]
 </bind>
 </comp>
 
-<comp id="38" class="1004" name="xor_ln920_fu_38">
+<comp id="38" class="1004" name="xor_ln965_fu_38">
 <pin_list>
 <pin id="39" dir="0" index="0" bw="8" slack="0"/>
 <pin id="40" dir="0" index="1" bw="8" slack="0"/>
@@ -323,7 +323,7 @@ ret_ln920 (ret      ) [ 00]
 </pin_list>
 <bind>
 <opcode="xor(25) " fcode="xor"/>
-<opset="xor_ln920/1 "/>
+<opset="xor_ln965/1 "/>
 </bind>
 </comp>
 
@@ -380,10 +380,10 @@ ret_ln920 (ret      ) [ 00]
 	Port: dataflow_in_loop_IT_w0.1_Block_newFuncRoot2_proc2 : w0 | {1 }
   - Chain level:
 	State 1
-		add_ln920 : 1
+		add_ln965 : 1
 		tmp : 2
 		tw_eff : 3
-		ret_ln920 : 4
+		ret_ln965 : 4
 
 
 ============================================================
@@ -394,9 +394,9 @@ ret_ln920 (ret      ) [ 00]
 |----------|--------------------|---------|---------|
 | Operation|   Functional Unit  |    FF   |   LUT   |
 |----------|--------------------|---------|---------|
-|    add   |   add_ln920_fu_24  |    0    |    15   |
+|    add   |   add_ln965_fu_24  |    0    |    15   |
 |----------|--------------------|---------|---------|
-|    xor   |   xor_ln920_fu_38  |    0    |    8    |
+|    xor   |   xor_ln965_fu_38  |    0    |    8    |
 |----------|--------------------|---------|---------|
 |  select  |    tw_eff_fu_44    |    0    |    8    |
 |----------|--------------------|---------|---------|

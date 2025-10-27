@@ -89,11 +89,11 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>137</integer>
+      <integer>138</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=make_win9_XLX_SEP_ PragmaOptions=variable=win1 complete dim=0_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=make_win9_XLX_SEP_ PragmaOptions=variable=win1 complete dim=2_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -105,7 +105,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>145</integer>
+      <integer>146</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -121,7 +121,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>152</integer>
+      <integer>153</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -137,7 +137,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>155</integer>
+      <integer>156</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -153,7 +153,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>163</integer>
+      <integer>164</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -169,7 +169,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>172</integer>
+      <integer>173</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -185,7 +185,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>181</integer>
+      <integer>182</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -201,7 +201,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>183</integer>
+      <integer>184</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -217,7 +217,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>185</integer>
+      <integer>186</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -233,7 +233,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>316</integer>
+      <integer>317</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -249,27 +249,11 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>321</integer>
-      <key>column</key>
-      <integer>34</integer>
-      <key>message</key>
-      <string>unexpected pragma argument &apos;mul&apos;, expects function/operation</string>
-      <key>ID</key>
-      <integer>5559</integer>
-      <key>WarningOption</key>
-      <string>invalid-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/srcnn.cpp</string>
-      <key>line</key>
-      <integer>321</integer>
+      <integer>336</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=0_XLX_SEP_ PragmaType=allocation_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv1conv2_from_windows_XLX_SEP_ PragmaOptions=instances=mul_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv1conv2_from_windows_XLX_SEP_ PragmaOptions=variable=acc2 cyclic factor=8 dim=1_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -281,27 +265,11 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>322</integer>
-      <key>column</key>
-      <integer>34</integer>
-      <key>message</key>
-      <string>unexpected pragma argument &apos;fmul&apos;, expects function/operation</string>
-      <key>ID</key>
-      <integer>5559</integer>
-      <key>WarningOption</key>
-      <string>invalid-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/srcnn.cpp</string>
-      <key>line</key>
-      <integer>322</integer>
+      <integer>341</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=0_XLX_SEP_ PragmaType=allocation_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv1conv2_from_windows_XLX_SEP_ PragmaOptions=instances=fmul_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv1conv2_from_windows_XLX_SEP_ PragmaOptions=factor=8_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -313,11 +281,11 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>335</integer>
+      <integer>349</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv1conv2_from_windows_XLX_SEP_ PragmaOptions=variable=acc2 cyclic factor=4 dim=1_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv1conv2_from_windows_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -329,39 +297,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>340</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv1conv2_from_windows_XLX_SEP_ PragmaOptions=factor=4_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/srcnn.cpp</string>
-      <key>line</key>
-      <integer>347</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv1conv2_from_windows_XLX_SEP_ PragmaOptions=II=3_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/srcnn.cpp</string>
-      <key>line</key>
-      <integer>354</integer>
+      <integer>359</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -377,11 +313,11 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>357</integer>
+      <integer>376</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv1conv2_from_windows_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv1conv2_from_windows_XLX_SEP_ PragmaOptions=factor=8_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -393,23 +329,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>368</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv1conv2_from_windows_XLX_SEP_ PragmaOptions=factor=4_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/srcnn.cpp</string>
-      <key>line</key>
-      <integer>377</integer>
+      <integer>385</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -425,11 +345,11 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>378</integer>
+      <integer>386</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv1conv2_from_windows_XLX_SEP_ PragmaOptions=factor=4_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv1conv2_from_windows_XLX_SEP_ PragmaOptions=factor=8_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -441,7 +361,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>397</integer>
+      <integer>405</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -457,7 +377,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>398</integer>
+      <integer>406</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -473,7 +393,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>401</integer>
+      <integer>409</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -489,7 +409,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>403</integer>
+      <integer>411</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -505,7 +425,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>599</integer>
+      <integer>606</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -521,7 +441,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>600</integer>
+      <integer>607</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -537,7 +457,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>601</integer>
+      <integer>608</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -553,7 +473,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>605</integer>
+      <integer>612</integer>
       <key>column</key>
       <integer>34</integer>
       <key>message</key>
@@ -569,7 +489,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>605</integer>
+      <integer>612</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -585,7 +505,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>606</integer>
+      <integer>613</integer>
       <key>column</key>
       <integer>34</integer>
       <key>message</key>
@@ -601,7 +521,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>606</integer>
+      <integer>613</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -617,7 +537,23 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>616</integer>
+      <integer>621</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=bind_storage_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv3_stream_XLX_SEP_ PragmaOptions=variable=lb2 type=ram_2p impl=bram_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>src/srcnn.cpp</string>
+      <key>line</key>
+      <integer>622</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -633,11 +569,11 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>619</integer>
+      <integer>627</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv3_stream_XLX_SEP_ PragmaOptions=variable=win2 complete dim=0_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv3_stream_XLX_SEP_ PragmaOptions=variable=win2 complete dim=2_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -649,23 +585,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>631</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv3_stream_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/srcnn.cpp</string>
-      <key>line</key>
-      <integer>634</integer>
+      <integer>641</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -681,7 +601,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>642</integer>
+      <integer>644</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -713,7 +633,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>668</integer>
+      <integer>662</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -729,7 +649,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>671</integer>
+      <integer>689</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -745,39 +665,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>675</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv3_stream_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/srcnn.cpp</string>
-      <key>line</key>
-      <integer>679</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv3_stream_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/srcnn.cpp</string>
-      <key>line</key>
-      <integer>718</integer>
+      <integer>728</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -793,7 +681,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>719</integer>
+      <integer>729</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -841,7 +729,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>754</integer>
+      <integer>764</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -857,7 +745,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>756</integer>
+      <integer>766</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -873,7 +761,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>759</integer>
+      <integer>769</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -889,7 +777,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>760</integer>
+      <integer>770</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -905,7 +793,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>761</integer>
+      <integer>771</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -921,7 +809,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>762</integer>
+      <integer>772</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -937,7 +825,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>765</integer>
+      <integer>775</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -953,7 +841,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>766</integer>
+      <integer>776</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -969,7 +857,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>767</integer>
+      <integer>777</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -985,7 +873,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>768</integer>
+      <integer>778</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -1001,7 +889,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>770</integer>
+      <integer>780</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -1017,7 +905,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>771</integer>
+      <integer>781</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -1033,7 +921,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>772</integer>
+      <integer>782</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -1049,7 +937,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>773</integer>
+      <integer>783</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -1065,7 +953,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>775</integer>
+      <integer>785</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -1081,7 +969,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>776</integer>
+      <integer>786</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -1097,7 +985,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>777</integer>
+      <integer>787</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -1113,7 +1001,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>778</integer>
+      <integer>788</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -1129,7 +1017,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>786</integer>
+      <integer>796</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -1145,7 +1033,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>787</integer>
+      <integer>797</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -1161,7 +1049,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>789</integer>
+      <integer>799</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -1177,7 +1065,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>790</integer>
+      <integer>800</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -1193,39 +1081,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>807</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=variable=w1_loc complete dim=3_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/srcnn.cpp</string>
-      <key>line</key>
-      <integer>808</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=variable=w1_loc complete dim=4_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/srcnn.cpp</string>
-      <key>line</key>
-      <integer>809</integer>
+      <integer>823</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -1241,7 +1097,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>809</integer>
+      <integer>823</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -1257,7 +1113,23 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>813</integer>
+      <integer>824</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=variable=w1_loc cyclic factor=9 dim=4_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>src/srcnn.cpp</string>
+      <key>line</key>
+      <integer>834</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -1273,7 +1145,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>813</integer>
+      <integer>834</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -1289,11 +1161,11 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>815</integer>
+      <integer>839</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=variable=w2_loc complete dim=1_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=variable=w2_loc cyclic factor=8 dim=1_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -1305,27 +1177,11 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>818</integer>
+      <integer>857</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>&apos;Resource pragma&apos; is deprecated, use &apos;bind_op/bind_storage pragma&apos; instead</string>
-      <key>ID</key>
-      <integer>5531</integer>
-      <key>WarningOption</key>
-      <string>ignored-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/srcnn.cpp</string>
-      <key>line</key>
-      <integer>818</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=resource_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=variable=w3_loc core=RAM_1P_LUTRAM_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=bind_storage_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=variable=w3_loc type=ram_2p impl=bram_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -1337,203 +1193,11 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>820</integer>
+      <integer>858</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=variable=w3_loc complete dim=3_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/srcnn.cpp</string>
-      <key>line</key>
-      <integer>821</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=variable=w3_loc complete dim=4_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/srcnn.cpp</string>
-      <key>line</key>
-      <integer>822</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=variable=w3_loc cyclic factor=4 dim=2_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/srcnn.cpp</string>
-      <key>line</key>
-      <integer>825</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=variable=b1_loc complete dim=1_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/srcnn.cpp</string>
-      <key>line</key>
-      <integer>826</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=variable=b2_loc complete dim=1_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/srcnn.cpp</string>
-      <key>line</key>
-      <integer>827</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=variable=b3_loc complete dim=1_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/srcnn.cpp</string>
-      <key>line</key>
-      <integer>828</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>&apos;Resource pragma&apos; is deprecated, use &apos;bind_op/bind_storage pragma&apos; instead</string>
-      <key>ID</key>
-      <integer>5531</integer>
-      <key>WarningOption</key>
-      <string>ignored-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/srcnn.cpp</string>
-      <key>line</key>
-      <integer>828</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=resource_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=variable=b1_loc core=RAM_1P_LUTRAM_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/srcnn.cpp</string>
-      <key>line</key>
-      <integer>829</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>&apos;Resource pragma&apos; is deprecated, use &apos;bind_op/bind_storage pragma&apos; instead</string>
-      <key>ID</key>
-      <integer>5531</integer>
-      <key>WarningOption</key>
-      <string>ignored-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/srcnn.cpp</string>
-      <key>line</key>
-      <integer>829</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=resource_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=variable=b2_loc core=RAM_1P_LUTRAM_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/srcnn.cpp</string>
-      <key>line</key>
-      <integer>830</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>&apos;Resource pragma&apos; is deprecated, use &apos;bind_op/bind_storage pragma&apos; instead</string>
-      <key>ID</key>
-      <integer>5531</integer>
-      <key>WarningOption</key>
-      <string>ignored-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/srcnn.cpp</string>
-      <key>line</key>
-      <integer>830</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=resource_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=variable=b3_loc core=RAM_1P_LUTRAM_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/srcnn.cpp</string>
-      <key>line</key>
-      <integer>846</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=reset_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=variable=weights_loaded_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=variable=w3_loc cyclic factor=8 dim=2_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -1549,7 +1213,71 @@
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=off_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=variable=b1_loc complete dim=1_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>src/srcnn.cpp</string>
+      <key>line</key>
+      <integer>869</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=variable=b2_loc complete dim=1_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>src/srcnn.cpp</string>
+      <key>line</key>
+      <integer>870</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=variable=b3_loc complete dim=1_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>src/srcnn.cpp</string>
+      <key>line</key>
+      <integer>871</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>&apos;Resource pragma&apos; is deprecated, use &apos;bind_op/bind_storage pragma&apos; instead</string>
+      <key>ID</key>
+      <integer>5531</integer>
+      <key>WarningOption</key>
+      <string>ignored-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>src/srcnn.cpp</string>
+      <key>line</key>
+      <integer>871</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=resource_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=variable=b1_loc core=RAM_1P_LUTRAM_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -1565,6 +1293,102 @@
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
+      <string>&apos;Resource pragma&apos; is deprecated, use &apos;bind_op/bind_storage pragma&apos; instead</string>
+      <key>ID</key>
+      <integer>5531</integer>
+      <key>WarningOption</key>
+      <string>ignored-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>src/srcnn.cpp</string>
+      <key>line</key>
+      <integer>872</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=resource_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=variable=b2_loc core=RAM_1P_LUTRAM_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>src/srcnn.cpp</string>
+      <key>line</key>
+      <integer>873</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>&apos;Resource pragma&apos; is deprecated, use &apos;bind_op/bind_storage pragma&apos; instead</string>
+      <key>ID</key>
+      <integer>5531</integer>
+      <key>WarningOption</key>
+      <string>ignored-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>src/srcnn.cpp</string>
+      <key>line</key>
+      <integer>873</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=resource_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=variable=b3_loc core=RAM_1P_LUTRAM_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>src/srcnn.cpp</string>
+      <key>line</key>
+      <integer>891</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=reset_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=variable=weights_loaded_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>src/srcnn.cpp</string>
+      <key>line</key>
+      <integer>913</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=off_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>src/srcnn.cpp</string>
+      <key>line</key>
+      <integer>917</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
       <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
@@ -1577,7 +1401,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>904</integer>
+      <integer>949</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -1593,7 +1417,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>905</integer>
+      <integer>950</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -1609,7 +1433,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>906</integer>
+      <integer>951</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -1625,7 +1449,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>907</integer>
+      <integer>952</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -1641,7 +1465,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>908</integer>
+      <integer>953</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -1657,7 +1481,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>909</integer>
+      <integer>954</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -1673,7 +1497,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>930</integer>
+      <integer>975</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -1689,7 +1513,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>931</integer>
+      <integer>976</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -1705,7 +1529,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>932</integer>
+      <integer>977</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -1721,7 +1545,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>936</integer>
+      <integer>981</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>

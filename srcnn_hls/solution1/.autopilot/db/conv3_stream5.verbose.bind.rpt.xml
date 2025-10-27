@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv3_stream5'" level="0">
-<item name = "Date">Mon Oct 27 18:08:42 2025
+<item name = "Date">Mon Oct 27 19:18:29 2025
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 7.278 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 7.794 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">57, 55140591, 0.570 us, 0.551 sec, 57, 55140591, no</column>
+<column name="">785, 32534286, 7.850 us, 0.325 sec, 785, 32534286, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- win5x5_read_pix">48, 55140582, 3 ~ 822, -, -, 16 ~ 67081, no</column>
+<column name="- win5x5_read_pix">784, 32534285, 49 ~ 485, -, -, 16 ~ 67081, no</column>
 </table>
 </item>
 </section>

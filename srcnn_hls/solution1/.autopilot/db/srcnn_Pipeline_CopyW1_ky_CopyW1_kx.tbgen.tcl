@@ -16,9 +16,9 @@ set C_modelName {srcnn_Pipeline_CopyW1_ky_CopyW1_kx}
 set C_modelType { void 0 }
 set C_modelArgList {
 	{ gmem_w1 int 32 regular {axi_master 0}  }
-	{ zext_ln852_2 int 6 regular  }
-	{ sext_ln852 int 62 regular  }
-	{ zext_ln852_3 int 13 regular  }
+	{ zext_ln897_2 int 6 regular  }
+	{ sext_ln897 int 62 regular  }
+	{ zext_ln897_3 int 13 regular  }
 	{ p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_0 float 32 regular {array 64 { 0 } 0 1 stable  } {global 1}  }
 	{ p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_1 float 32 regular {array 64 { 0 } 0 1 stable  } {global 1}  }
 	{ p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_2 float 32 regular {array 64 { 0 } 0 1 stable  } {global 1}  }
@@ -104,9 +104,9 @@ set C_modelArgList {
 set hasAXIMCache 0
 set C_modelArgMapList {[ 
 	{ "Name" : "gmem_w1", "interface" : "axi_master", "bitwidth" : 32, "direction" : "READONLY", "bitSlice":[ {"cElement": [{"cName": "conv1_weights","offset": { "type": "dynamic","port_name": "conv1_weights","bundle": "ctrl"},"direction": "READONLY"},{"cName": "conv1_biases","offset": { "type": "dynamic","port_name": "conv1_biases","bundle": "ctrl"},"direction": "READONLY"}]}]} , 
- 	{ "Name" : "zext_ln852_2", "interface" : "wire", "bitwidth" : 6, "direction" : "READONLY"} , 
- 	{ "Name" : "sext_ln852", "interface" : "wire", "bitwidth" : 62, "direction" : "READONLY"} , 
- 	{ "Name" : "zext_ln852_3", "interface" : "wire", "bitwidth" : 13, "direction" : "READONLY"} , 
+ 	{ "Name" : "zext_ln897_2", "interface" : "wire", "bitwidth" : 6, "direction" : "READONLY"} , 
+ 	{ "Name" : "sext_ln897", "interface" : "wire", "bitwidth" : 62, "direction" : "READONLY"} , 
+ 	{ "Name" : "zext_ln897_3", "interface" : "wire", "bitwidth" : 13, "direction" : "READONLY"} , 
  	{ "Name" : "p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_0", "interface" : "memory", "bitwidth" : 32, "direction" : "WRITEONLY", "extern" : 0} , 
  	{ "Name" : "p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_1", "interface" : "memory", "bitwidth" : 32, "direction" : "WRITEONLY", "extern" : 0} , 
  	{ "Name" : "p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_2", "interface" : "memory", "bitwidth" : 32, "direction" : "WRITEONLY", "extern" : 0} , 
@@ -243,9 +243,9 @@ set portList {
 	{ m_axi_gmem_w1_BRESP sc_in sc_lv 2 signal 0 } 
 	{ m_axi_gmem_w1_BID sc_in sc_lv 1 signal 0 } 
 	{ m_axi_gmem_w1_BUSER sc_in sc_lv 1 signal 0 } 
-	{ zext_ln852_2 sc_in sc_lv 6 signal 1 } 
-	{ sext_ln852 sc_in sc_lv 62 signal 2 } 
-	{ zext_ln852_3 sc_in sc_lv 13 signal 3 } 
+	{ zext_ln897_2 sc_in sc_lv 6 signal 1 } 
+	{ sext_ln897 sc_in sc_lv 62 signal 2 } 
+	{ zext_ln897_3 sc_in sc_lv 13 signal 3 } 
 	{ p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_0_address0 sc_out sc_lv 6 signal 4 } 
 	{ p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_0_ce0 sc_out sc_logic 1 signal 4 } 
 	{ p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_0_we0 sc_out sc_logic 1 signal 4 } 
@@ -624,9 +624,9 @@ set NewPortList {[
  	{ "name": "m_axi_gmem_w1_BRESP", "direction": "in", "datatype": "sc_lv", "bitwidth":2, "type": "signal", "bundle":{"name": "gmem_w1", "role": "BRESP" }} , 
  	{ "name": "m_axi_gmem_w1_BID", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "gmem_w1", "role": "BID" }} , 
  	{ "name": "m_axi_gmem_w1_BUSER", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "gmem_w1", "role": "BUSER" }} , 
- 	{ "name": "zext_ln852_2", "direction": "in", "datatype": "sc_lv", "bitwidth":6, "type": "signal", "bundle":{"name": "zext_ln852_2", "role": "default" }} , 
- 	{ "name": "sext_ln852", "direction": "in", "datatype": "sc_lv", "bitwidth":62, "type": "signal", "bundle":{"name": "sext_ln852", "role": "default" }} , 
- 	{ "name": "zext_ln852_3", "direction": "in", "datatype": "sc_lv", "bitwidth":13, "type": "signal", "bundle":{"name": "zext_ln852_3", "role": "default" }} , 
+ 	{ "name": "zext_ln897_2", "direction": "in", "datatype": "sc_lv", "bitwidth":6, "type": "signal", "bundle":{"name": "zext_ln897_2", "role": "default" }} , 
+ 	{ "name": "sext_ln897", "direction": "in", "datatype": "sc_lv", "bitwidth":62, "type": "signal", "bundle":{"name": "sext_ln897", "role": "default" }} , 
+ 	{ "name": "zext_ln897_3", "direction": "in", "datatype": "sc_lv", "bitwidth":13, "type": "signal", "bundle":{"name": "zext_ln897_3", "role": "default" }} , 
  	{ "name": "p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_0_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":6, "type": "signal", "bundle":{"name": "p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_0", "role": "address0" }} , 
  	{ "name": "p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_0_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_0", "role": "ce0" }} , 
  	{ "name": "p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_0_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_0", "role": "we0" }} , 
@@ -972,9 +972,9 @@ set RtlHierarchyInfo {[
 				"BlockSignal" : [
 					{"Name" : "gmem_w1_blk_n_AR", "Type" : "RtlSignal"},
 					{"Name" : "gmem_w1_blk_n_R", "Type" : "RtlSignal"}]},
-			{"Name" : "zext_ln852_2", "Type" : "None", "Direction" : "I"},
-			{"Name" : "sext_ln852", "Type" : "None", "Direction" : "I"},
-			{"Name" : "zext_ln852_3", "Type" : "None", "Direction" : "I"},
+			{"Name" : "zext_ln897_2", "Type" : "None", "Direction" : "I"},
+			{"Name" : "sext_ln897", "Type" : "None", "Direction" : "I"},
+			{"Name" : "zext_ln897_3", "Type" : "None", "Direction" : "I"},
 			{"Name" : "p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_0", "Type" : "Memory", "Direction" : "O"},
 			{"Name" : "p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_1", "Type" : "Memory", "Direction" : "O"},
 			{"Name" : "p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_2", "Type" : "Memory", "Direction" : "O"},
@@ -1065,9 +1065,9 @@ set RtlHierarchyInfo {[
 set ArgLastReadFirstWriteLatency {
 	srcnn_Pipeline_CopyW1_ky_CopyW1_kx {
 		gmem_w1 {Type I LastRead 9 FirstWrite -1}
-		zext_ln852_2 {Type I LastRead 0 FirstWrite -1}
-		sext_ln852 {Type I LastRead 0 FirstWrite -1}
-		zext_ln852_3 {Type I LastRead 0 FirstWrite -1}
+		zext_ln897_2 {Type I LastRead 0 FirstWrite -1}
+		sext_ln897 {Type I LastRead 0 FirstWrite -1}
+		zext_ln897_3 {Type I LastRead 0 FirstWrite -1}
 		p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_0 {Type O LastRead -1 FirstWrite 10}
 		p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_1 {Type O LastRead -1 FirstWrite 10}
 		p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_2 {Type O LastRead -1 FirstWrite 10}
@@ -1163,9 +1163,9 @@ set PipelineEnableSignalInfo {[
 
 set Spec2ImplPortList { 
 	 { m_axi {  { m_axi_gmem_w1_AWVALID VALID 1 1 }  { m_axi_gmem_w1_AWREADY READY 0 1 }  { m_axi_gmem_w1_AWADDR ADDR 1 64 }  { m_axi_gmem_w1_AWID ID 1 1 }  { m_axi_gmem_w1_AWLEN SIZE 1 32 }  { m_axi_gmem_w1_AWSIZE BURST 1 3 }  { m_axi_gmem_w1_AWBURST LOCK 1 2 }  { m_axi_gmem_w1_AWLOCK CACHE 1 2 }  { m_axi_gmem_w1_AWCACHE PROT 1 4 }  { m_axi_gmem_w1_AWPROT QOS 1 3 }  { m_axi_gmem_w1_AWQOS REGION 1 4 }  { m_axi_gmem_w1_AWREGION USER 1 4 }  { m_axi_gmem_w1_AWUSER DATA 1 1 }  { m_axi_gmem_w1_WVALID VALID 1 1 }  { m_axi_gmem_w1_WREADY READY 0 1 }  { m_axi_gmem_w1_WDATA FIFONUM 1 32 }  { m_axi_gmem_w1_WSTRB STRB 1 4 }  { m_axi_gmem_w1_WLAST LAST 1 1 }  { m_axi_gmem_w1_WID ID 1 1 }  { m_axi_gmem_w1_WUSER DATA 1 1 }  { m_axi_gmem_w1_ARVALID VALID 1 1 }  { m_axi_gmem_w1_ARREADY READY 0 1 }  { m_axi_gmem_w1_ARADDR ADDR 1 64 }  { m_axi_gmem_w1_ARID ID 1 1 }  { m_axi_gmem_w1_ARLEN SIZE 1 32 }  { m_axi_gmem_w1_ARSIZE BURST 1 3 }  { m_axi_gmem_w1_ARBURST LOCK 1 2 }  { m_axi_gmem_w1_ARLOCK CACHE 1 2 }  { m_axi_gmem_w1_ARCACHE PROT 1 4 }  { m_axi_gmem_w1_ARPROT QOS 1 3 }  { m_axi_gmem_w1_ARQOS REGION 1 4 }  { m_axi_gmem_w1_ARREGION USER 1 4 }  { m_axi_gmem_w1_ARUSER DATA 1 1 }  { m_axi_gmem_w1_RVALID VALID 0 1 }  { m_axi_gmem_w1_RREADY READY 1 1 }  { m_axi_gmem_w1_RDATA FIFONUM 0 32 }  { m_axi_gmem_w1_RLAST LAST 0 1 }  { m_axi_gmem_w1_RID ID 0 1 }  { m_axi_gmem_w1_RFIFONUM LEN 0 9 }  { m_axi_gmem_w1_RUSER DATA 0 1 }  { m_axi_gmem_w1_RRESP RESP 0 2 }  { m_axi_gmem_w1_BVALID VALID 0 1 }  { m_axi_gmem_w1_BREADY READY 1 1 }  { m_axi_gmem_w1_BRESP RESP 0 2 }  { m_axi_gmem_w1_BID ID 0 1 }  { m_axi_gmem_w1_BUSER DATA 0 1 } } }
-	zext_ln852_2 { ap_none {  { zext_ln852_2 in_data 0 6 } } }
-	sext_ln852 { ap_none {  { sext_ln852 in_data 0 62 } } }
-	zext_ln852_3 { ap_none {  { zext_ln852_3 in_data 0 13 } } }
+	zext_ln897_2 { ap_none {  { zext_ln897_2 in_data 0 6 } } }
+	sext_ln897 { ap_none {  { sext_ln897 in_data 0 62 } } }
+	zext_ln897_3 { ap_none {  { zext_ln897_3 in_data 0 13 } } }
 	p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_0 { ap_memory {  { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_0_address0 mem_address 1 6 }  { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_0_ce0 mem_ce 1 1 }  { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_0_we0 mem_we 1 1 }  { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_0_d0 mem_din 1 32 } } }
 	p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_1 { ap_memory {  { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_1_address0 mem_address 1 6 }  { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_1_ce0 mem_ce 1 1 }  { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_1_we0 mem_we 1 1 }  { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_1_d0 mem_din 1 32 } } }
 	p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_2 { ap_memory {  { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_2_address0 mem_address 1 6 }  { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_2_ce0 mem_ce 1 1 }  { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_2_we0 mem_we 1 1 }  { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_iE6w1_loc_0_2_d0 mem_din 1 32 } } }

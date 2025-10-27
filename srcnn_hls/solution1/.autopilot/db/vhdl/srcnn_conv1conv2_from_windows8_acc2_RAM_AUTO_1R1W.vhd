@@ -12,8 +12,8 @@ entity srcnn_conv1conv2_from_windows8_acc2_RAM_AUTO_1R1W is
     generic(
         MEM_TYPE        : string    := "auto"; 
         DataWidth       : integer   := 32; 
-        AddressWidth    : integer   := 3;
-        AddressRange    : integer   := 8
+        AddressWidth    : integer   := 2;
+        AddressRange    : integer   := 4
     ); 
     port (
         address0    : in std_logic_vector(AddressWidth-1 downto 0); 

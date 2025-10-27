@@ -74,7 +74,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1635000354</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -117,7 +117,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1936683105</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -141,10 +141,10 @@
 					<Obj>
 						<type>0</type>
 						<id>4</id>
-						<name>add_ln920</name>
+						<name>add_ln965</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>920</lineNumber>
+						<lineNumber>965</lineNumber>
 						<contextFuncName>srcnn</contextFuncName>
 						<contextNormFuncName>srcnn</contextNormFuncName>
 						<inlineStackInfo>
@@ -160,7 +160,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>srcnn</second>
 										</first>
-										<second>920</second>
+										<second>965</second>
 									</item>
 								</second>
 							</item>
@@ -201,7 +201,7 @@
 						<name>tmp</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>920</lineNumber>
+						<lineNumber>965</lineNumber>
 						<contextFuncName>_Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i_for.body126</contextFuncName>
 						<contextNormFuncName>p_Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i_for_body126</contextNormFuncName>
 						<inlineStackInfo>
@@ -217,7 +217,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>_Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i_for.body126</second>
 										</first>
-										<second>920</second>
+										<second>965</second>
 									</item>
 								</second>
 							</item>
@@ -230,7 +230,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1819310149</coreId>
+						<coreId>1953067621</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -256,10 +256,10 @@
 					<Obj>
 						<type>0</type>
 						<id>6</id>
-						<name>xor_ln920</name>
+						<name>xor_ln965</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>920</lineNumber>
+						<lineNumber>965</lineNumber>
 						<contextFuncName>_Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i_for.body126</contextFuncName>
 						<contextNormFuncName>p_Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i_for_body126</contextNormFuncName>
 						<inlineStackInfo>
@@ -275,7 +275,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>_Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i_for.body126</second>
 										</first>
-										<second>920</second>
+										<second>965</second>
 									</item>
 								</second>
 							</item>
@@ -316,7 +316,7 @@
 						<name>tw_eff</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>920</lineNumber>
+						<lineNumber>965</lineNumber>
 						<contextFuncName>_Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i_for.body126</contextFuncName>
 						<contextNormFuncName>p_Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i_for_body126</contextNormFuncName>
 						<inlineStackInfo>
@@ -332,7 +332,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>_Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i_for.body126</second>
 										</first>
-										<second>920</second>
+										<second>965</second>
 									</item>
 								</second>
 							</item>
@@ -371,10 +371,10 @@
 					<Obj>
 						<type>0</type>
 						<id>8</id>
-						<name>_ln920</name>
+						<name>_ln965</name>
 						<fileName>src/srcnn.cpp</fileName>
 						<fileDirectory>D:\HAC\hardware_final_proj</fileDirectory>
-						<lineNumber>920</lineNumber>
+						<lineNumber>965</lineNumber>
 						<contextFuncName>_Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i_for.body126</contextFuncName>
 						<contextNormFuncName>p_Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i_for_body126</contextNormFuncName>
 						<inlineStackInfo>
@@ -390,7 +390,7 @@
 											<first>src/srcnn.cpp</first>
 											<second>_Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_i_for.body126</second>
 										</first>
-										<second>920</second>
+										<second>965</second>
 									</item>
 								</second>
 							</item>
@@ -403,7 +403,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1162363731</coreId>
+						<coreId>1126185531</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -449,13 +449,13 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1852142702</coreId>
+						<coreId>101</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>8</content>
+				<content>16</content>
 			</item>
 			<item class_id_reference="16" object_id="_10">
 				<Value>
@@ -480,7 +480,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1852142702</coreId>
+						<coreId>1931485194</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -511,7 +511,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>572538144</coreId>
+						<coreId>1953391988</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
@@ -542,13 +542,13 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>101</coreId>
+						<coreId>1953391988</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>8</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>8</content>
+				<content>16</content>
 			</item>
 		</consts>
 		<blocks class_id="17" tracking_level="0" version="0">
@@ -576,7 +576,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>4294967295</coreId>
+					<coreId>86</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -885,7 +885,7 @@
 		<count>5</count>
 		<item_version>0</item_version>
 		<item class_id="42" tracking_level="0" version="0">
-			<first>add_ln920_fu_24</first>
+			<first>add_ln965_fu_24</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -917,7 +917,7 @@
 			</second>
 		</item>
 		<item>
-			<first>xor_ln920_fu_38</first>
+			<first>xor_ln965_fu_38</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>

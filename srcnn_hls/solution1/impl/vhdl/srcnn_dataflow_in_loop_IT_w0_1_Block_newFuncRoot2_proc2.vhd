@@ -27,10 +27,10 @@ architecture behav of srcnn_dataflow_in_loop_IT_w0_1_Block_newFuncRoot2_proc2 is
     constant ap_const_logic_0 : STD_LOGIC := '0';
     constant ap_ST_fsm_state1 : STD_LOGIC_VECTOR (0 downto 0) := "1";
     constant ap_const_lv32_0 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000000";
-    constant ap_const_lv9_8 : STD_LOGIC_VECTOR (8 downto 0) := "000001000";
+    constant ap_const_lv9_10 : STD_LOGIC_VECTOR (8 downto 0) := "000010000";
     constant ap_const_lv32_8 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000001000";
     constant ap_const_lv8_FF : STD_LOGIC_VECTOR (7 downto 0) := "11111111";
-    constant ap_const_lv8_8 : STD_LOGIC_VECTOR (7 downto 0) := "00001000";
+    constant ap_const_lv8_10 : STD_LOGIC_VECTOR (7 downto 0) := "00010000";
     constant ap_const_lv8_0 : STD_LOGIC_VECTOR (7 downto 0) := "00000000";
     constant ap_const_boolean_1 : BOOLEAN := true;
 
@@ -43,9 +43,9 @@ attribute shreg_extract : string;
     attribute fsm_encoding of ap_CS_fsm_state1 : signal is "none";
     signal ap_block_state1 : BOOLEAN;
     signal w0_cast_fu_20_p1 : STD_LOGIC_VECTOR (8 downto 0);
-    signal add_ln920_fu_24_p2 : STD_LOGIC_VECTOR (8 downto 0);
+    signal add_ln965_fu_24_p2 : STD_LOGIC_VECTOR (8 downto 0);
     signal tmp_fu_30_p3 : STD_LOGIC_VECTOR (0 downto 0);
-    signal xor_ln920_fu_38_p2 : STD_LOGIC_VECTOR (7 downto 0);
+    signal xor_ln965_fu_38_p2 : STD_LOGIC_VECTOR (7 downto 0);
     signal tw_eff_fu_44_p3 : STD_LOGIC_VECTOR (7 downto 0);
     signal ap_return_preg : STD_LOGIC_VECTOR (7 downto 0) := "00000000";
     signal ap_NS_fsm : STD_LOGIC_VECTOR (0 downto 0);
@@ -109,7 +109,7 @@ begin
                 ap_NS_fsm <= "X";
         end case;
     end process;
-    add_ln920_fu_24_p2 <= std_logic_vector(unsigned(w0_cast_fu_20_p1) + unsigned(ap_const_lv9_8));
+    add_ln965_fu_24_p2 <= std_logic_vector(unsigned(w0_cast_fu_20_p1) + unsigned(ap_const_lv9_10));
     ap_CS_fsm_state1 <= ap_CS_fsm(0);
 
     ap_ST_fsm_state1_blk_assign_proc : process(ap_start, ap_done_reg)
@@ -167,10 +167,10 @@ begin
         end if; 
     end process;
 
-    tmp_fu_30_p3 <= add_ln920_fu_24_p2(8 downto 8);
+    tmp_fu_30_p3 <= add_ln965_fu_24_p2(8 downto 8);
     tw_eff_fu_44_p3 <= 
-        xor_ln920_fu_38_p2 when (tmp_fu_30_p3(0) = '1') else 
-        ap_const_lv8_8;
+        xor_ln965_fu_38_p2 when (tmp_fu_30_p3(0) = '1') else 
+        ap_const_lv8_10;
     w0_cast_fu_20_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(w0),9));
-    xor_ln920_fu_38_p2 <= (w0 xor ap_const_lv8_FF);
+    xor_ln965_fu_38_p2 <= (w0 xor ap_const_lv8_FF);
 end behav;
