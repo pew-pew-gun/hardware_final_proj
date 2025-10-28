@@ -359,7 +359,7 @@ static void conv1conv2_stream(
        // conv3
        Conv3_ky:
        for (int ky=0; ky<F3; ++ky) {
-//         #pragma HLS UNROLL
+        // #pragma HLS UNROLL
 #pragma HLS PIPELINE // I changed this
          Conv3_kx:
          for (int kx=0; kx<F3; ++kx) {
@@ -367,9 +367,13 @@ static void conv1conv2_stream(
            // accumulate dot( w3[0][_][ky][kx], win2[ky][kx].v[_] )
            Conv3_inv8_dot:
            for (int n2=0; n2<N2; n2 += UF_N2) { // for each bank in the w3 BRAM
-            //  #pragma HLS UNROLL
-            #pragma HLS PIPELINE // I changed this
+             #pragma HLS UNROLL
+            // #pragma HLS PIPELINE // I changed this
         	   acc3_t ps = 0;
+
+
+            //  #pragma HLS BIND_OP op=add impl=dsp
+            //  #pragma HLS BIND_OP op=mul impl=dsp
              Conv3_inner_dot:
              for (int u=0; u<UF_N2; ++u) { // for each element in a bank in the w3 BRAM
                #pragma HLS UNROLL
@@ -380,6 +384,7 @@ static void conv1conv2_stream(
 
                ps += w3[0][n2+u][ky][kx] * win2[ky][kx].v[n2+u];
              }
+            //  #pragma HLS BIND_OP op=add impl=dsp
              acc += ps;
            }
          }
@@ -493,7 +498,9 @@ void srcnn(
   // #pragma HLS RESOURCE        variable=w1_loc core=RAM_1P_LUTRAM  // use LUTs/BRAM mix
   #pragma HLS ARRAY_PARTITION variable=w1_loc complete dim=3  // ky
   #pragma HLS ARRAY_PARTITION variable=w1_loc complete dim=4  // kx
-  #pragma HLS RESOURCE        variable=w1_loc core=RAM_1P_LUTRAM
+//  #pragma HLS RESOURCE        variable=w1_loc core=RAM_1P_LUTRAM
+#pragma HLS BIND_STORAGE variable=w1_loc type=ram_1p impl=lutram
+
 
   // 2) CONV2 weights (bank across N2 to feed UF_N2 lanes)
   #pragma HLS BIND_STORAGE    variable=w2_loc type=ram_1p impl=bram

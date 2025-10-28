@@ -16,10 +16,10 @@ set C_modelName {srcnn_Pipeline_CopyW2_inft}
 set C_modelType { void 0 }
 set C_modelArgList {
 	{ gmem_w2 int 32 regular {axi_master 0}  }
-	{ zext_ln569_7 int 8 regular  }
-	{ zext_ln559_1 int 11 regular  }
-	{ sext_ln559 int 62 regular  }
-	{ trunc_ln559_3 int 3 regular  }
+	{ zext_ln576_7 int 8 regular  }
+	{ zext_ln566_1 int 11 regular  }
+	{ sext_ln566 int 62 regular  }
+	{ trunc_ln566_3 int 3 regular  }
 	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_7 int 16 regular {array 256 { 0 } 0 1 stable  } {global 1}  }
 	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_6 int 16 regular {array 256 { 0 } 0 1 stable  } {global 1}  }
 	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_5 int 16 regular {array 256 { 0 } 0 1 stable  } {global 1}  }
@@ -32,10 +32,10 @@ set C_modelArgList {
 set hasAXIMCache 0
 set C_modelArgMapList {[ 
 	{ "Name" : "gmem_w2", "interface" : "axi_master", "bitwidth" : 32, "direction" : "READONLY", "bitSlice":[ {"cElement": [{"cName": "conv2_weights","offset": { "type": "dynamic","port_name": "conv2_weights","bundle": "ctrl"},"direction": "READONLY"},{"cName": "conv2_biases","offset": { "type": "dynamic","port_name": "conv2_biases","bundle": "ctrl"},"direction": "READONLY"}]}]} , 
- 	{ "Name" : "zext_ln569_7", "interface" : "wire", "bitwidth" : 8, "direction" : "READONLY"} , 
- 	{ "Name" : "zext_ln559_1", "interface" : "wire", "bitwidth" : 11, "direction" : "READONLY"} , 
- 	{ "Name" : "sext_ln559", "interface" : "wire", "bitwidth" : 62, "direction" : "READONLY"} , 
- 	{ "Name" : "trunc_ln559_3", "interface" : "wire", "bitwidth" : 3, "direction" : "READONLY"} , 
+ 	{ "Name" : "zext_ln576_7", "interface" : "wire", "bitwidth" : 8, "direction" : "READONLY"} , 
+ 	{ "Name" : "zext_ln566_1", "interface" : "wire", "bitwidth" : 11, "direction" : "READONLY"} , 
+ 	{ "Name" : "sext_ln566", "interface" : "wire", "bitwidth" : 62, "direction" : "READONLY"} , 
+ 	{ "Name" : "trunc_ln566_3", "interface" : "wire", "bitwidth" : 3, "direction" : "READONLY"} , 
  	{ "Name" : "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_7", "interface" : "memory", "bitwidth" : 16, "direction" : "WRITEONLY", "extern" : 0} , 
  	{ "Name" : "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_6", "interface" : "memory", "bitwidth" : 16, "direction" : "WRITEONLY", "extern" : 0} , 
  	{ "Name" : "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_5", "interface" : "memory", "bitwidth" : 16, "direction" : "WRITEONLY", "extern" : 0} , 
@@ -99,10 +99,10 @@ set portList {
 	{ m_axi_gmem_w2_BRESP sc_in sc_lv 2 signal 0 } 
 	{ m_axi_gmem_w2_BID sc_in sc_lv 1 signal 0 } 
 	{ m_axi_gmem_w2_BUSER sc_in sc_lv 1 signal 0 } 
-	{ zext_ln569_7 sc_in sc_lv 8 signal 1 } 
-	{ zext_ln559_1 sc_in sc_lv 11 signal 2 } 
-	{ sext_ln559 sc_in sc_lv 62 signal 3 } 
-	{ trunc_ln559_3 sc_in sc_lv 3 signal 4 } 
+	{ zext_ln576_7 sc_in sc_lv 8 signal 1 } 
+	{ zext_ln566_1 sc_in sc_lv 11 signal 2 } 
+	{ sext_ln566 sc_in sc_lv 62 signal 3 } 
+	{ trunc_ln566_3 sc_in sc_lv 3 signal 4 } 
 	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_7_address0 sc_out sc_lv 8 signal 5 } 
 	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_7_ce0 sc_out sc_logic 1 signal 5 } 
 	{ srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_7_we0 sc_out sc_logic 1 signal 5 } 
@@ -192,10 +192,10 @@ set NewPortList {[
  	{ "name": "m_axi_gmem_w2_BRESP", "direction": "in", "datatype": "sc_lv", "bitwidth":2, "type": "signal", "bundle":{"name": "gmem_w2", "role": "BRESP" }} , 
  	{ "name": "m_axi_gmem_w2_BID", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "gmem_w2", "role": "BID" }} , 
  	{ "name": "m_axi_gmem_w2_BUSER", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "gmem_w2", "role": "BUSER" }} , 
- 	{ "name": "zext_ln569_7", "direction": "in", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "zext_ln569_7", "role": "default" }} , 
- 	{ "name": "zext_ln559_1", "direction": "in", "datatype": "sc_lv", "bitwidth":11, "type": "signal", "bundle":{"name": "zext_ln559_1", "role": "default" }} , 
- 	{ "name": "sext_ln559", "direction": "in", "datatype": "sc_lv", "bitwidth":62, "type": "signal", "bundle":{"name": "sext_ln559", "role": "default" }} , 
- 	{ "name": "trunc_ln559_3", "direction": "in", "datatype": "sc_lv", "bitwidth":3, "type": "signal", "bundle":{"name": "trunc_ln559_3", "role": "default" }} , 
+ 	{ "name": "zext_ln576_7", "direction": "in", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "zext_ln576_7", "role": "default" }} , 
+ 	{ "name": "zext_ln566_1", "direction": "in", "datatype": "sc_lv", "bitwidth":11, "type": "signal", "bundle":{"name": "zext_ln566_1", "role": "default" }} , 
+ 	{ "name": "sext_ln566", "direction": "in", "datatype": "sc_lv", "bitwidth":62, "type": "signal", "bundle":{"name": "sext_ln566", "role": "default" }} , 
+ 	{ "name": "trunc_ln566_3", "direction": "in", "datatype": "sc_lv", "bitwidth":3, "type": "signal", "bundle":{"name": "trunc_ln566_3", "role": "default" }} , 
  	{ "name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_7_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_7", "role": "address0" }} , 
  	{ "name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_7_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_7", "role": "ce0" }} , 
  	{ "name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_7_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_7", "role": "we0" }} , 
@@ -252,10 +252,10 @@ set RtlHierarchyInfo {[
 				"BlockSignal" : [
 					{"Name" : "gmem_w2_blk_n_AR", "Type" : "RtlSignal"},
 					{"Name" : "gmem_w2_blk_n_R", "Type" : "RtlSignal"}]},
-			{"Name" : "zext_ln569_7", "Type" : "None", "Direction" : "I"},
-			{"Name" : "zext_ln559_1", "Type" : "None", "Direction" : "I"},
-			{"Name" : "sext_ln559", "Type" : "None", "Direction" : "I"},
-			{"Name" : "trunc_ln559_3", "Type" : "None", "Direction" : "I"},
+			{"Name" : "zext_ln576_7", "Type" : "None", "Direction" : "I"},
+			{"Name" : "zext_ln566_1", "Type" : "None", "Direction" : "I"},
+			{"Name" : "sext_ln566", "Type" : "None", "Direction" : "I"},
+			{"Name" : "trunc_ln566_3", "Type" : "None", "Direction" : "I"},
 			{"Name" : "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_7", "Type" : "Memory", "Direction" : "O"},
 			{"Name" : "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_6", "Type" : "Memory", "Direction" : "O"},
 			{"Name" : "srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_5", "Type" : "Memory", "Direction" : "O"},
@@ -273,10 +273,10 @@ set RtlHierarchyInfo {[
 set ArgLastReadFirstWriteLatency {
 	srcnn_Pipeline_CopyW2_inft {
 		gmem_w2 {Type I LastRead 9 FirstWrite -1}
-		zext_ln569_7 {Type I LastRead 0 FirstWrite -1}
-		zext_ln559_1 {Type I LastRead 0 FirstWrite -1}
-		sext_ln559 {Type I LastRead 0 FirstWrite -1}
-		trunc_ln559_3 {Type I LastRead 0 FirstWrite -1}
+		zext_ln576_7 {Type I LastRead 0 FirstWrite -1}
+		zext_ln566_1 {Type I LastRead 0 FirstWrite -1}
+		sext_ln566 {Type I LastRead 0 FirstWrite -1}
+		trunc_ln566_3 {Type I LastRead 0 FirstWrite -1}
 		srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_7 {Type O LastRead -1 FirstWrite 12}
 		srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_6 {Type O LastRead -1 FirstWrite 12}
 		srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_5 {Type O LastRead -1 FirstWrite 12}
@@ -299,10 +299,10 @@ set PipelineEnableSignalInfo {[
 
 set Spec2ImplPortList { 
 	 { m_axi {  { m_axi_gmem_w2_AWVALID VALID 1 1 }  { m_axi_gmem_w2_AWREADY READY 0 1 }  { m_axi_gmem_w2_AWADDR ADDR 1 64 }  { m_axi_gmem_w2_AWID ID 1 1 }  { m_axi_gmem_w2_AWLEN SIZE 1 32 }  { m_axi_gmem_w2_AWSIZE BURST 1 3 }  { m_axi_gmem_w2_AWBURST LOCK 1 2 }  { m_axi_gmem_w2_AWLOCK CACHE 1 2 }  { m_axi_gmem_w2_AWCACHE PROT 1 4 }  { m_axi_gmem_w2_AWPROT QOS 1 3 }  { m_axi_gmem_w2_AWQOS REGION 1 4 }  { m_axi_gmem_w2_AWREGION USER 1 4 }  { m_axi_gmem_w2_AWUSER DATA 1 1 }  { m_axi_gmem_w2_WVALID VALID 1 1 }  { m_axi_gmem_w2_WREADY READY 0 1 }  { m_axi_gmem_w2_WDATA FIFONUM 1 32 }  { m_axi_gmem_w2_WSTRB STRB 1 4 }  { m_axi_gmem_w2_WLAST LAST 1 1 }  { m_axi_gmem_w2_WID ID 1 1 }  { m_axi_gmem_w2_WUSER DATA 1 1 }  { m_axi_gmem_w2_ARVALID VALID 1 1 }  { m_axi_gmem_w2_ARREADY READY 0 1 }  { m_axi_gmem_w2_ARADDR ADDR 1 64 }  { m_axi_gmem_w2_ARID ID 1 1 }  { m_axi_gmem_w2_ARLEN SIZE 1 32 }  { m_axi_gmem_w2_ARSIZE BURST 1 3 }  { m_axi_gmem_w2_ARBURST LOCK 1 2 }  { m_axi_gmem_w2_ARLOCK CACHE 1 2 }  { m_axi_gmem_w2_ARCACHE PROT 1 4 }  { m_axi_gmem_w2_ARPROT QOS 1 3 }  { m_axi_gmem_w2_ARQOS REGION 1 4 }  { m_axi_gmem_w2_ARREGION USER 1 4 }  { m_axi_gmem_w2_ARUSER DATA 1 1 }  { m_axi_gmem_w2_RVALID VALID 0 1 }  { m_axi_gmem_w2_RREADY READY 1 1 }  { m_axi_gmem_w2_RDATA FIFONUM 0 32 }  { m_axi_gmem_w2_RLAST LAST 0 1 }  { m_axi_gmem_w2_RID ID 0 1 }  { m_axi_gmem_w2_RFIFONUM LEN 0 9 }  { m_axi_gmem_w2_RUSER DATA 0 1 }  { m_axi_gmem_w2_RRESP RESP 0 2 }  { m_axi_gmem_w2_BVALID VALID 0 1 }  { m_axi_gmem_w2_BREADY READY 1 1 }  { m_axi_gmem_w2_BRESP RESP 0 2 }  { m_axi_gmem_w2_BID ID 0 1 }  { m_axi_gmem_w2_BUSER DATA 0 1 } } }
-	zext_ln569_7 { ap_none {  { zext_ln569_7 in_data 0 8 } } }
-	zext_ln559_1 { ap_none {  { zext_ln559_1 in_data 0 11 } } }
-	sext_ln559 { ap_none {  { sext_ln559 in_data 0 62 } } }
-	trunc_ln559_3 { ap_none {  { trunc_ln559_3 in_data 0 3 } } }
+	zext_ln576_7 { ap_none {  { zext_ln576_7 in_data 0 8 } } }
+	zext_ln566_1 { ap_none {  { zext_ln566_1 in_data 0 11 } } }
+	sext_ln566 { ap_none {  { sext_ln566 in_data 0 62 } } }
+	trunc_ln566_3 { ap_none {  { trunc_ln566_3 in_data 0 3 } } }
 	srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_7 { ap_memory {  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_7_address0 mem_address 1 8 }  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_7_ce0 mem_ce 1 1 }  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_7_we0 mem_we 1 1 }  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_7_d0 mem_din 1 16 } } }
 	srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_6 { ap_memory {  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_6_address0 mem_address 1 8 }  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_6_ce0 mem_ce 1 1 }  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_6_we0 mem_we 1 1 }  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_6_d0 mem_din 1 16 } } }
 	srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_5 { ap_memory {  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_5_address0 mem_address 1 8 }  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_5_ce0 mem_ce 1 1 }  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_5_we0 mem_we 1 1 }  { srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_5_d0 mem_din 1 16 } } }

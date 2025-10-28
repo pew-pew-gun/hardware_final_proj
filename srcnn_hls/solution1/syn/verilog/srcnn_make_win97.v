@@ -158,10 +158,10 @@ wire    grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_we1;
 wire   [15:0] grp_make_win97_Pipeline_win9x9_read_pix_fu_126_lb1_d1;
 reg    grp_make_win97_Pipeline_win9x9_read_pix_fu_126_ap_start_reg;
 wire    ap_CS_fsm_state3;
-wire   [8:0] add_ln609_fu_145_p2;
-wire   [7:0] trunc_ln608_fu_159_p1;
+wire   [8:0] add_ln616_fu_145_p2;
+wire   [7:0] trunc_ln615_fu_159_p1;
 wire   [0:0] tmp_fu_151_p3;
-wire   [7:0] xor_ln609_fu_163_p2;
+wire   [7:0] xor_ln616_fu_163_p2;
 wire   [7:0] th_eff_fu_169_p3;
 wire   [8:0] th_eff_cast_i_fu_177_p1;
 wire   [8:0] p_read_cast_fu_187_p1;
@@ -564,7 +564,7 @@ assign PH_fu_181_p2 = (th_eff_cast_i_fu_177_p1 + 9'd12);
 
 assign PW_fu_190_p2 = (p_read_cast_fu_187_p1 + 9'd12);
 
-assign add_ln609_fu_145_p2 = (h0 + 9'd16);
+assign add_ln616_fu_145_p2 = (h0 + 9'd16);
 
 assign ap_CS_fsm_state1 = ap_CS_fsm[32'd0];
 
@@ -594,14 +594,14 @@ assign s_win_i_din = grp_make_win97_Pipeline_win9x9_read_pix_fu_126_s_win_i_din;
 
 assign th_eff_cast_i_fu_177_p1 = th_eff_fu_169_p3;
 
-assign th_eff_fu_169_p3 = ((tmp_fu_151_p3[0:0] == 1'b1) ? xor_ln609_fu_163_p2 : 8'd16);
+assign th_eff_fu_169_p3 = ((tmp_fu_151_p3[0:0] == 1'b1) ? xor_ln616_fu_163_p2 : 8'd16);
 
-assign tmp_fu_151_p3 = add_ln609_fu_145_p2[32'd8];
+assign tmp_fu_151_p3 = add_ln616_fu_145_p2[32'd8];
 
-assign trunc_ln608_fu_159_p1 = h0[7:0];
+assign trunc_ln615_fu_159_p1 = h0[7:0];
 
 assign tw_eff_loc_i_c_din = p_read;
 
-assign xor_ln609_fu_163_p2 = (trunc_ln608_fu_159_p1 ^ 8'd255);
+assign xor_ln616_fu_163_p2 = (trunc_ln615_fu_159_p1 ^ 8'd255);
 
 endmodule //srcnn_make_win97

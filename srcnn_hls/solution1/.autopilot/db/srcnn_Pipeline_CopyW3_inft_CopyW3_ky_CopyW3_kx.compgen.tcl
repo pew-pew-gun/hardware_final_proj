@@ -786,14 +786,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 103 \
-    name sext_ln579 \
+    name sext_ln586 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_sext_ln579 \
+    corename dc_sext_ln586 \
     op interface \
-    ports { sext_ln579 { I 62 vector } } \
+    ports { sext_ln586 { I 62 vector } } \
 } "
 }
 

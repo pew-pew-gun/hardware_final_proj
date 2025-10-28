@@ -866,10 +866,10 @@ entry:45 %outpix = alloca i64 1
 
 <Node id="236" bw="9" op_0_bw="9" op_1_bw="9">
 <![CDATA[
-entry:46 %add_ln609 = add i9 %h0_read, i9 16
+entry:46 %add_ln616 = add i9 %h0_read, i9 16
 
 ]]></Node>
-<StgValue><ssdm name="add_ln609"/></StgValue>
+<StgValue><ssdm name="add_ln616"/></StgValue>
 </operation>
 
 <operation id="77" st_id="1" stage="1" lat="1">
@@ -881,7 +881,7 @@ entry:46 %add_ln609 = add i9 %h0_read, i9 16
 
 <Node id="237" bw="1" op_0_bw="1" op_1_bw="9" op_2_bw="32">
 <![CDATA[
-entry:47 %tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i9.i32, i9 %add_ln609, i32 8
+entry:47 %tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i9.i32, i9 %add_ln616, i32 8
 
 ]]></Node>
 <StgValue><ssdm name="tmp"/></StgValue>
@@ -896,10 +896,10 @@ entry:47 %tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i9.i32, i9 %add_ln609, i32 8
 
 <Node id="238" bw="8" op_0_bw="9">
 <![CDATA[
-entry:48 %trunc_ln608 = trunc i9 %h0_read
+entry:48 %trunc_ln615 = trunc i9 %h0_read
 
 ]]></Node>
-<StgValue><ssdm name="trunc_ln608"/></StgValue>
+<StgValue><ssdm name="trunc_ln615"/></StgValue>
 </operation>
 
 <operation id="79" st_id="1" stage="1" lat="1">
@@ -911,10 +911,10 @@ entry:48 %trunc_ln608 = trunc i9 %h0_read
 
 <Node id="239" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-entry:49 %xor_ln609 = xor i8 %trunc_ln608, i8 255
+entry:49 %xor_ln616 = xor i8 %trunc_ln615, i8 255
 
 ]]></Node>
-<StgValue><ssdm name="xor_ln609"/></StgValue>
+<StgValue><ssdm name="xor_ln616"/></StgValue>
 </operation>
 
 <operation id="80" st_id="1" stage="1" lat="1">
@@ -926,10 +926,10 @@ entry:49 %xor_ln609 = xor i8 %trunc_ln608, i8 255
 
 <Node id="240" bw="8" op_0_bw="1" op_1_bw="8" op_2_bw="8">
 <![CDATA[
-entry:50 %select_ln609 = select i1 %tmp, i8 %xor_ln609, i8 16
+entry:50 %select_ln616 = select i1 %tmp, i8 %xor_ln616, i8 16
 
 ]]></Node>
-<StgValue><ssdm name="select_ln609"/></StgValue>
+<StgValue><ssdm name="select_ln616"/></StgValue>
 </operation>
 
 <operation id="81" st_id="1" stage="1" lat="1">
@@ -941,10 +941,10 @@ entry:50 %select_ln609 = select i1 %tmp, i8 %xor_ln609, i8 16
 
 <Node id="492" bw="9" op_0_bw="8">
 <![CDATA[
-entry:302 %select_ln609_cast = zext i8 %select_ln609
+entry:302 %select_ln616_cast = zext i8 %select_ln616
 
 ]]></Node>
-<StgValue><ssdm name="select_ln609_cast"/></StgValue>
+<StgValue><ssdm name="select_ln616_cast"/></StgValue>
 </operation>
 
 <operation id="82" st_id="1" stage="1" lat="1">
@@ -956,7 +956,7 @@ entry:302 %select_ln609_cast = zext i8 %select_ln609
 
 <Node id="493" bw="9" op_0_bw="9" op_1_bw="9">
 <![CDATA[
-entry:303 %add_ln200 = add i9 %select_ln609_cast, i9 4
+entry:303 %add_ln200 = add i9 %select_ln616_cast, i9 4
 
 ]]></Node>
 <StgValue><ssdm name="add_ln200"/></StgValue>

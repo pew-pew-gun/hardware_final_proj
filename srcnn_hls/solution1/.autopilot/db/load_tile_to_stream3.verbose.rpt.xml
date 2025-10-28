@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'load_tile_to_stream3'" level="0">
-<item name = "Date">Tue Oct 28 17:30:16 2025
+<item name = "Date">Tue Oct 28 18:17:18 2025
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -80,7 +80,7 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln609_fu_269_p2">+, 0, 0, 16, 9, 5</column>
+<column name="add_ln616_fu_269_p2">+, 0, 0, 16, 9, 5</column>
 <column name="add_ln76_1_fu_343_p2">+, 0, 0, 16, 9, 4</column>
 <column name="add_ln76_fu_313_p2">+, 0, 0, 16, 9, 4</column>
 <column name="add_ln77_2_fu_385_p2">+, 0, 0, 17, 10, 10</column>
@@ -178,7 +178,7 @@
 <column name="select_ln86_fu_627_p3">select, 0, 0, 52, 1, 54</column>
 <column name="th_eff_fu_293_p3">select, 0, 0, 8, 1, 8</column>
 <column name="shl_ln86_fu_1042_p2">shl, 0, 0, 35, 16, 16</column>
-<column name="xor_ln609_fu_287_p2">xor, 0, 0, 8, 8, 2</column>
+<column name="xor_ln616_fu_287_p2">xor, 0, 0, 8, 8, 2</column>
 <column name="xor_ln86_1_fu_1106_p2">xor, 0, 0, 2, 1, 2</column>
 <column name="xor_ln86_2_fu_1167_p2">xor, 0, 0, 2, 2, 1</column>
 <column name="xor_ln86_3_fu_1173_p2">xor, 0, 0, 2, 1, 2</column>

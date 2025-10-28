@@ -1,117 +1,14 @@
 {
     "1": {
-        "name": "srcnn_Pipeline_CopyW3_inft_CopyW3_ky_CopyW3_kx",
+        "name": "make_win97",
         "file": "srcnn.cpp",
         "fileloc": "0",
-        "instructions": "368",
-        "total_instructions": "368",
-        "calls": "",
-        "basicblocks": "61",
-        "loads": {
-            "L": "5"
-        },
-        "stores": {
-            "G": "40",
-            "L": "10"
-        },
-        "loops": {
-            "L": "1"
-        }
+        "instructions": "39",
+        "total_instructions": "414",
+        "calls": "3",
+        "basicblocks": "1"
     },
     "2": {
-        "name": "dataflow_in_loop_IT_w0.1",
-        "file": "srcnn.cpp",
-        "fileloc": "0",
-        "instructions": "47",
-        "total_instructions": "16467",
-        "calls": "7 9 8 17 16 6",
-        "basicblocks": "1"
-    },
-    "3": {
-        "name": "conv1conv2_from_windows8_Pipeline_Conv1_outftmaps",
-        "file": "srcnn.cpp",
-        "fileloc": "0",
-        "instructions": "4868",
-        "total_instructions": "4868",
-        "calls": "",
-        "basicblocks": "4",
-        "loads": {
-            "G": "113",
-            "L": "65"
-        },
-        "stores": {
-            "L": "66"
-        },
-        "loops": {
-            "L": "1"
-        }
-    },
-    "4": {
-        "name": "srcnn_Pipeline_CopyW1_ky_CopyW1_kx",
-        "file": "srcnn.cpp",
-        "fileloc": "0",
-        "instructions": "527",
-        "total_instructions": "527",
-        "calls": "",
-        "basicblocks": "104",
-        "loads": {
-            "L": "3"
-        },
-        "stores": {
-            "G": "81",
-            "L": "6"
-        },
-        "loops": {
-            "L": "1"
-        }
-    },
-    "5": {
-        "name": "conv1conv2_from_windows8_Pipeline_Init_Conv2Out_biases",
-        "file": "srcnn.cpp",
-        "fileloc": "0",
-        "instructions": "88",
-        "total_instructions": "88",
-        "calls": "",
-        "basicblocks": "4",
-        "loads": {
-            "L": "1"
-        },
-        "stores": {
-            "L": "10"
-        },
-        "loops": {
-            "L": "1"
-        }
-    },
-    "6": {
-        "name": "store_stream6",
-        "file": "srcnn.cpp",
-        "fileloc": "0",
-        "instructions": "106",
-        "total_instructions": "106",
-        "calls": "",
-        "basicblocks": "7",
-        "loads": {
-            "L": "1"
-        },
-        "stores": {
-            "L": "2"
-        },
-        "loops": {
-            "L": "1",
-            "N": "1"
-        }
-    },
-    "7": {
-        "name": "entry_proc16",
-        "file": "srcnn.cpp",
-        "fileloc": "0",
-        "instructions": "4",
-        "total_instructions": "4",
-        "calls": "",
-        "basicblocks": "1"
-    },
-    "8": {
         "name": "load_tile_to_stream3",
         "file": "srcnn.cpp",
         "fileloc": "0",
@@ -130,74 +27,62 @@
             "N": "1"
         }
     },
-    "9": {
-        "name": "dataflow_in_loop_IT_w0.1_Block_newFuncRoot2_proc2",
+    "3": {
+        "name": "make_win97_Pipeline_win9x9_read_pix",
         "file": "srcnn.cpp",
         "fileloc": "0",
-        "instructions": "7",
-        "total_instructions": "7",
+        "instructions": "375",
+        "total_instructions": "375",
         "calls": "",
-        "basicblocks": "1"
-    },
-    "10": {
-        "name": "conv1conv2_from_windows8",
-        "file": "srcnn.cpp",
-        "fileloc": "0",
-        "instructions": "537",
-        "total_instructions": "5684",
-        "calls": "5 3 18",
-        "basicblocks": "4",
+        "basicblocks": "6",
         "loads": {
-            "G": "96",
-            "L": "97"
+            "L": "99"
         },
         "stores": {
-            "L": "34"
+            "L": "118"
         },
         "loops": {
             "L": "1"
         }
     },
-    "0": {
-        "name": "srcnn",
-        "file": "srcnn.cpp",
-        "fileloc": "423",
-        "instructions": "1074",
-        "total_instructions": "18632",
-        "calls": "4 15 1 2",
-        "basicblocks": "114",
-        "loads": {
-            "G": "1",
-            "L": "4"
-        },
-        "stores": {
-            "G": "98",
-            "L": "8"
-        },
-        "loops": {
-            "L": "3",
-            "N": "1"
-        }
-    },
-    "11": {
-        "name": "make_win97",
+    "4": {
+        "name": "dataflow_in_loop_IT_w0.1",
         "file": "srcnn.cpp",
         "fileloc": "0",
-        "instructions": "39",
-        "total_instructions": "414",
-        "calls": "14",
+        "instructions": "47",
+        "total_instructions": "16467",
+        "calls": "6 12 2 15 8 11",
         "basicblocks": "1"
     },
-    "12": {
-        "name": "entry_proc",
+    "5": {
+        "name": "srcnn_Pipeline_CopyW1_ky_CopyW1_kx",
         "file": "srcnn.cpp",
         "fileloc": "0",
-        "instructions": "10",
-        "total_instructions": "10",
+        "instructions": "527",
+        "total_instructions": "527",
+        "calls": "",
+        "basicblocks": "104",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "G": "81",
+            "L": "6"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "6": {
+        "name": "entry_proc16",
+        "file": "srcnn.cpp",
+        "fileloc": "0",
+        "instructions": "4",
+        "total_instructions": "4",
         "calls": "",
         "basicblocks": "1"
     },
-    "13": {
+    "7": {
         "name": "conv3_stream5_Pipeline_Conv3_ky",
         "file": "srcnn.cpp",
         "fileloc": "0",
@@ -216,25 +101,158 @@
             "L": "1"
         }
     },
-    "14": {
-        "name": "make_win97_Pipeline_win9x9_read_pix",
+    "8": {
+        "name": "conv3_stream5",
         "file": "srcnn.cpp",
         "fileloc": "0",
-        "instructions": "375",
-        "total_instructions": "375",
-        "calls": "",
+        "instructions": "2564",
+        "total_instructions": "9974",
+        "calls": "7",
         "basicblocks": "6",
         "loads": {
-            "L": "99"
+            "G": "1",
+            "L": "805"
         },
         "stores": {
-            "L": "118"
+            "L": "774"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "9": {
+        "name": "conv1conv2_from_windows8_Pipeline_Push_conv2pix_out",
+        "file": "srcnn.cpp",
+        "fileloc": "0",
+        "instructions": "191",
+        "total_instructions": "191",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "9"
+        },
+        "stores": {
+            "L": "10"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "10": {
+        "name": "conv1conv2_from_windows8_Pipeline_Init_Conv2Out_biases",
+        "file": "srcnn.cpp",
+        "fileloc": "0",
+        "instructions": "88",
+        "total_instructions": "88",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "10"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "11": {
+        "name": "store_stream6",
+        "file": "srcnn.cpp",
+        "fileloc": "0",
+        "instructions": "106",
+        "total_instructions": "106",
+        "calls": "",
+        "basicblocks": "7",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1",
+            "N": "1"
+        }
+    },
+    "12": {
+        "name": "dataflow_in_loop_IT_w0.1_Block_newFuncRoot2_proc2",
+        "file": "srcnn.cpp",
+        "fileloc": "0",
+        "instructions": "7",
+        "total_instructions": "7",
+        "calls": "",
+        "basicblocks": "1"
+    },
+    "13": {
+        "name": "conv1conv2_from_windows8_Pipeline_Conv1_outftmaps",
+        "file": "srcnn.cpp",
+        "fileloc": "0",
+        "instructions": "4868",
+        "total_instructions": "4868",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "G": "113",
+            "L": "65"
+        },
+        "stores": {
+            "L": "66"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "14": {
+        "name": "conv1conv2_from_windows8",
+        "file": "srcnn.cpp",
+        "fileloc": "0",
+        "instructions": "537",
+        "total_instructions": "5684",
+        "calls": "10 13 9",
+        "basicblocks": "4",
+        "loads": {
+            "G": "96",
+            "L": "97"
+        },
+        "stores": {
+            "L": "34"
         },
         "loops": {
             "L": "1"
         }
     },
     "15": {
+        "name": "conv1conv2_stream4",
+        "file": "srcnn.cpp",
+        "fileloc": "0",
+        "instructions": "21",
+        "total_instructions": "6129",
+        "calls": "18 1 14",
+        "basicblocks": "1"
+    },
+    "0": {
+        "name": "srcnn",
+        "file": "srcnn.cpp",
+        "fileloc": "428",
+        "instructions": "1074",
+        "total_instructions": "18632",
+        "calls": "5 16 17 4",
+        "basicblocks": "114",
+        "loads": {
+            "G": "1",
+            "L": "4"
+        },
+        "stores": {
+            "G": "98",
+            "L": "8"
+        },
+        "loops": {
+            "L": "3",
+            "N": "1"
+        }
+    },
+    "16": {
         "name": "srcnn_Pipeline_CopyW2_inft",
         "file": "srcnn.cpp",
         "fileloc": "0",
@@ -253,50 +271,32 @@
             "L": "1"
         }
     },
-    "16": {
-        "name": "conv3_stream5",
-        "file": "srcnn.cpp",
-        "fileloc": "0",
-        "instructions": "2564",
-        "total_instructions": "9974",
-        "calls": "13",
-        "basicblocks": "6",
-        "loads": {
-            "G": "1",
-            "L": "805"
-        },
-        "stores": {
-            "L": "774"
-        },
-        "loops": {
-            "L": "1"
-        }
-    },
     "17": {
-        "name": "conv1conv2_stream4",
+        "name": "srcnn_Pipeline_CopyW3_inft_CopyW3_ky_CopyW3_kx",
         "file": "srcnn.cpp",
         "fileloc": "0",
-        "instructions": "21",
-        "total_instructions": "6129",
-        "calls": "12 11 10",
-        "basicblocks": "1"
-    },
-    "18": {
-        "name": "conv1conv2_from_windows8_Pipeline_Push_conv2pix_out",
-        "file": "srcnn.cpp",
-        "fileloc": "0",
-        "instructions": "191",
-        "total_instructions": "191",
+        "instructions": "368",
+        "total_instructions": "368",
         "calls": "",
-        "basicblocks": "4",
+        "basicblocks": "61",
         "loads": {
-            "L": "9"
+            "L": "5"
         },
         "stores": {
+            "G": "40",
             "L": "10"
         },
         "loops": {
             "L": "1"
         }
+    },
+    "18": {
+        "name": "entry_proc",
+        "file": "srcnn.cpp",
+        "fileloc": "0",
+        "instructions": "10",
+        "total_instructions": "10",
+        "calls": "",
+        "basicblocks": "1"
     }
 }

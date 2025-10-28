@@ -143,10 +143,10 @@ attribute shreg_extract : string;
     signal grp_make_win97_Pipeline_win9x9_read_pix_fu_126_ap_start_reg : STD_LOGIC := '0';
     signal ap_CS_fsm_state3 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state3 : signal is "none";
-    signal add_ln609_fu_145_p2 : STD_LOGIC_VECTOR (8 downto 0);
-    signal trunc_ln608_fu_159_p1 : STD_LOGIC_VECTOR (7 downto 0);
+    signal add_ln616_fu_145_p2 : STD_LOGIC_VECTOR (8 downto 0);
+    signal trunc_ln615_fu_159_p1 : STD_LOGIC_VECTOR (7 downto 0);
     signal tmp_fu_151_p3 : STD_LOGIC_VECTOR (0 downto 0);
-    signal xor_ln609_fu_163_p2 : STD_LOGIC_VECTOR (7 downto 0);
+    signal xor_ln616_fu_163_p2 : STD_LOGIC_VECTOR (7 downto 0);
     signal th_eff_fu_169_p3 : STD_LOGIC_VECTOR (7 downto 0);
     signal th_eff_cast_i_fu_177_p1 : STD_LOGIC_VECTOR (8 downto 0);
     signal p_read_cast_fu_187_p1 : STD_LOGIC_VECTOR (8 downto 0);
@@ -580,7 +580,7 @@ begin
     end process;
     PH_fu_181_p2 <= std_logic_vector(unsigned(th_eff_cast_i_fu_177_p1) + unsigned(ap_const_lv9_C));
     PW_fu_190_p2 <= std_logic_vector(unsigned(p_read_cast_fu_187_p1) + unsigned(ap_const_lv9_C));
-    add_ln609_fu_145_p2 <= std_logic_vector(unsigned(h0) + unsigned(ap_const_lv9_10));
+    add_ln616_fu_145_p2 <= std_logic_vector(unsigned(h0) + unsigned(ap_const_lv9_10));
     ap_CS_fsm_state1 <= ap_CS_fsm(0);
     ap_CS_fsm_state2 <= ap_CS_fsm(1);
     ap_CS_fsm_state3 <= ap_CS_fsm(2);
@@ -691,10 +691,10 @@ begin
 
     th_eff_cast_i_fu_177_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(th_eff_fu_169_p3),9));
     th_eff_fu_169_p3 <= 
-        xor_ln609_fu_163_p2 when (tmp_fu_151_p3(0) = '1') else 
+        xor_ln616_fu_163_p2 when (tmp_fu_151_p3(0) = '1') else 
         ap_const_lv8_10;
-    tmp_fu_151_p3 <= add_ln609_fu_145_p2(8 downto 8);
-    trunc_ln608_fu_159_p1 <= h0(8 - 1 downto 0);
+    tmp_fu_151_p3 <= add_ln616_fu_145_p2(8 downto 8);
+    trunc_ln615_fu_159_p1 <= h0(8 - 1 downto 0);
 
     tw_eff_loc_i_c_blk_n_assign_proc : process(ap_start, ap_done_reg, ap_CS_fsm_state1, tw_eff_loc_i_c_full_n)
     begin
@@ -716,5 +716,5 @@ begin
         end if; 
     end process;
 
-    xor_ln609_fu_163_p2 <= (trunc_ln608_fu_159_p1 xor ap_const_lv8_FF);
+    xor_ln616_fu_163_p2 <= (trunc_ln615_fu_159_p1 xor ap_const_lv8_FF);
 end behav;

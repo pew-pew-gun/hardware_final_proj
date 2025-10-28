@@ -40,3 +40,8 @@ monarch        27.9674             27.9822                    24.5799           
 pepper         33.4585             33.4745                    32.0454             0.00044792     0.000447919                
 ppt3           29.3386             29.4367                    26.6842             0.0011378      0.0011378                  
 zebra          27.4292             27.6649                    24.7423             0.00171135     0.00171134                 
+***** SRCNN Golden Reference *****
+  - Butterfly MSE: 3.31194e-006
+  - PSNR GT vs HR (dB): 27.4838
+
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 784

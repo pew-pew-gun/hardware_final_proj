@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'make_win97'" level="0">
-<item name = "Date">Tue Oct 28 17:30:18 2025
+<item name = "Date">Tue Oct 28 18:17:20 2025
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -90,10 +90,10 @@
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
 <column name="PH_fu_181_p2">+, 0, 0, 16, 9, 4</column>
 <column name="PW_fu_190_p2">+, 0, 0, 16, 9, 4</column>
-<column name="add_ln609_fu_145_p2">+, 0, 0, 16, 9, 5</column>
+<column name="add_ln616_fu_145_p2">+, 0, 0, 16, 9, 5</column>
 <column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
 <column name="th_eff_fu_169_p3">select, 0, 0, 8, 1, 8</column>
-<column name="xor_ln609_fu_163_p2">xor, 0, 0, 8, 8, 2</column>
+<column name="xor_ln616_fu_163_p2">xor, 0, 0, 8, 8, 2</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">

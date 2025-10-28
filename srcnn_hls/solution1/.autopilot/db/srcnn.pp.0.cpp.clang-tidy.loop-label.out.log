@@ -39,24 +39,24 @@ C:\Users\redre\Desktop\HAC\FinalProject\golden\srcnn_hls\solution1\.autopilot\db
 C:\Users\redre\Desktop\HAC\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:6143:44: error: Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
 #pragma HLS BIND_STORAGE variable=lb2 type=ram_2p impl=bram
                                            ^
-C:\Users\redre\Desktop\HAC\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:6308:46: error: Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+C:\Users\redre\Desktop\HAC\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:6313:46: error: Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
 #pragma HLS BIND_STORAGE variable=inbuf type=ram_2p impl=bram
                                              ^
-C:\Users\redre\Desktop\HAC\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:6331:9: error: Resource with core_name: RAM_1P_LUTRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
-#pragma HLS RESOURCE variable=w1_loc core=RAM_1P_LUTRAM
-        ^
-C:\Users\redre\Desktop\HAC\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:6334:47: error: Invalid Directive: for current device, ram_1p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+C:\Users\redre\Desktop\HAC\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:6337:47: error: Invalid Directive: for current device, ram_1p + lutram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=w1_loc type=ram_1p impl=lutram
+                                              ^
+C:\Users\redre\Desktop\HAC\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:6341:47: error: Invalid Directive: for current device, ram_1p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
 #pragma HLS BIND_STORAGE variable=w2_loc type=ram_1p impl=bram
                                               ^
-C:\Users\redre\Desktop\HAC\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:6341:47: error: Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+C:\Users\redre\Desktop\HAC\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:6348:47: error: Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
 #pragma HLS BIND_STORAGE variable=w3_loc type=ram_2p impl=bram
                                               ^
-C:\Users\redre\Desktop\HAC\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:6355:9: error: Resource with core_name: RAM_1P_LUTRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
+C:\Users\redre\Desktop\HAC\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:6362:9: error: Resource with core_name: RAM_1P_LUTRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
 #pragma HLS RESOURCE variable=b1_loc core=RAM_1P_LUTRAM
         ^
-C:\Users\redre\Desktop\HAC\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:6356:9: error: Resource with core_name: RAM_1P_LUTRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
+C:\Users\redre\Desktop\HAC\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:6363:9: error: Resource with core_name: RAM_1P_LUTRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
 #pragma HLS RESOURCE variable=b2_loc core=RAM_1P_LUTRAM
         ^
-C:\Users\redre\Desktop\HAC\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:6357:9: error: Resource with core_name: RAM_1P_LUTRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
+C:\Users\redre\Desktop\HAC\FinalProject\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:6364:9: error: Resource with core_name: RAM_1P_LUTRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
 #pragma HLS RESOURCE variable=b3_loc core=RAM_1P_LUTRAM
         ^

@@ -14,4 +14,5 @@ volatile void* conv2_weights,
 volatile void* conv2_biases,
 volatile void* conv3_weights,
 volatile void* conv3_biases,
-volatile void* output_ftmap);
+volatile void* output_ftmap,
+char reload_weights);

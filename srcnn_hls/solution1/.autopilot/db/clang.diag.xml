@@ -9,7 +9,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>496</integer>
+      <integer>527</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -25,7 +25,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>520</integer>
+      <integer>528</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -41,23 +41,7 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>521</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>&apos;Resource pragma&apos; is deprecated, use &apos;bind_op/bind_storage pragma&apos; instead</string>
-      <key>ID</key>
-      <integer>5531</integer>
-      <key>WarningOption</key>
-      <string>ignored-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/srcnn.cpp</string>
-      <key>line</key>
-      <integer>522</integer>
+      <integer>529</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>

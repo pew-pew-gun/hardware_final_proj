@@ -6204,9 +6204,13 @@ static void conv1conv2_stream(
 
  Conv3_inv8_dot:
            for (int n2=0; n2<32; n2 += 8) {
+#pragma HLS UNROLL
 
-#pragma HLS PIPELINE
  acc3_t ps = 0;
+
+
+
+
              Conv3_inner_dot:
              for (int u=0; u<8; ++u) {
 #pragma HLS UNROLL
@@ -6217,6 +6221,7 @@ static void conv1conv2_stream(
 
  ps += w3[0][n2+u][ky][kx] * win2[ky][kx].v[n2+u];
              }
+
              acc += ps;
            }
          }
@@ -6266,13 +6271,13 @@ __attribute__((sdx_kernel("srcnn", 0))) void srcnn(
 {
 #line 27 "C:/Users/redre/Desktop/HAC/FinalProject/golden/srcnn_hls/solution1/csynth.tcl"
 #pragma HLSDIRECTIVE TOP name=srcnn
-# 429 "src/srcnn.cpp"
+# 434 "src/srcnn.cpp"
 
 #line 7 "C:/Users/redre/Desktop/HAC/FinalProject/golden/srcnn_hls/solution1/directives.tcl"
 #pragma HLSDIRECTIVE TOP name=srcnn
-# 429 "src/srcnn.cpp"
+# 434 "src/srcnn.cpp"
 
-# 441 "src/srcnn.cpp"
+# 446 "src/srcnn.cpp"
 #pragma HLS INTERFACE s_axilite port=return bundle=ctrl
 
 #pragma HLS INTERFACE s_axilite port=reload_weights bundle=ctrl
@@ -6328,7 +6333,9 @@ __attribute__((sdx_kernel("srcnn", 0))) void srcnn(
 
 #pragma HLS ARRAY_PARTITION variable=w1_loc complete dim=3
 #pragma HLS ARRAY_PARTITION variable=w1_loc complete dim=4
-#pragma HLS RESOURCE variable=w1_loc core=RAM_1P_LUTRAM
+
+#pragma HLS BIND_STORAGE variable=w1_loc type=ram_1p impl=lutram
+
 
 
 #pragma HLS BIND_STORAGE variable=w2_loc type=ram_1p impl=bram
@@ -6355,7 +6362,7 @@ __attribute__((sdx_kernel("srcnn", 0))) void srcnn(
 #pragma HLS RESOURCE variable=b1_loc core=RAM_1P_LUTRAM
 #pragma HLS RESOURCE variable=b2_loc core=RAM_1P_LUTRAM
 #pragma HLS RESOURCE variable=b3_loc core=RAM_1P_LUTRAM
-# 535 "src/srcnn.cpp"
+# 542 "src/srcnn.cpp"
  static bool weights_loaded = false;
 
 

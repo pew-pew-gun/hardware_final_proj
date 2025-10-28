@@ -5,29 +5,29 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // 
 // ==============================================================
-# 1 "C:/Users/redre/Desktop/Hardware_Accelerated_Computing/FinalProject/golden/test/csim.cpp"
+# 1 "C:/Users/redre/Desktop/HAC/FinalProject/golden/test/csim.cpp"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "C:/Users/redre/Desktop/Hardware_Accelerated_Computing/FinalProject/golden/test/csim.cpp"
+# 1 "C:/Users/redre/Desktop/HAC/FinalProject/golden/test/csim.cpp"
 
-void tb_conv1();
+
 void tb_srcnn();
-void tb_set14();
+
 
 
 #ifndef HLS_FASTSIM
-# 6 "C:/Users/redre/Desktop/Hardware_Accelerated_Computing/FinalProject/golden/test/csim.cpp"
+# 6 "C:/Users/redre/Desktop/HAC/FinalProject/golden/test/csim.cpp"
 int main()
 {
 
-    tb_conv1();
+
     tb_srcnn();
 
 
-    tb_set14();
+
 
     return 0;
 }
 #endif
-# 16 "C:/Users/redre/Desktop/Hardware_Accelerated_Computing/FinalProject/golden/test/csim.cpp"
+# 16 "C:/Users/redre/Desktop/HAC/FinalProject/golden/test/csim.cpp"
 

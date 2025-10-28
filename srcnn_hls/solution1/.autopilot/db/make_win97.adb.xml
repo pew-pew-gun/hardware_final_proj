@@ -219,10 +219,10 @@ entry:13 %lb1_7 = alloca i64 1
 
 <Node id="21" bw="9" op_0_bw="9" op_1_bw="9">
 <![CDATA[
-entry:14 %add_ln609 = add i9 %h0_read, i9 16
+entry:14 %add_ln616 = add i9 %h0_read, i9 16
 
 ]]></Node>
-<StgValue><ssdm name="add_ln609"/></StgValue>
+<StgValue><ssdm name="add_ln616"/></StgValue>
 </operation>
 
 <operation id="17" st_id="1" stage="1" lat="1">
@@ -234,7 +234,7 @@ entry:14 %add_ln609 = add i9 %h0_read, i9 16
 
 <Node id="22" bw="1" op_0_bw="1" op_1_bw="9" op_2_bw="32">
 <![CDATA[
-entry:15 %tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i9.i32, i9 %add_ln609, i32 8
+entry:15 %tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i9.i32, i9 %add_ln616, i32 8
 
 ]]></Node>
 <StgValue><ssdm name="tmp"/></StgValue>
@@ -249,10 +249,10 @@ entry:15 %tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i9.i32, i9 %add_ln609, i32 8
 
 <Node id="23" bw="8" op_0_bw="9">
 <![CDATA[
-entry:16 %trunc_ln608 = trunc i9 %h0_read
+entry:16 %trunc_ln615 = trunc i9 %h0_read
 
 ]]></Node>
-<StgValue><ssdm name="trunc_ln608"/></StgValue>
+<StgValue><ssdm name="trunc_ln615"/></StgValue>
 </operation>
 
 <operation id="19" st_id="1" stage="1" lat="1">
@@ -264,10 +264,10 @@ entry:16 %trunc_ln608 = trunc i9 %h0_read
 
 <Node id="24" bw="8" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-entry:17 %xor_ln609 = xor i8 %trunc_ln608, i8 255
+entry:17 %xor_ln616 = xor i8 %trunc_ln615, i8 255
 
 ]]></Node>
-<StgValue><ssdm name="xor_ln609"/></StgValue>
+<StgValue><ssdm name="xor_ln616"/></StgValue>
 </operation>
 
 <operation id="20" st_id="1" stage="1" lat="1">
@@ -279,7 +279,7 @@ entry:17 %xor_ln609 = xor i8 %trunc_ln608, i8 255
 
 <Node id="25" bw="8" op_0_bw="1" op_1_bw="8" op_2_bw="8">
 <![CDATA[
-entry:18 %th_eff = select i1 %tmp, i8 %xor_ln609, i8 16
+entry:18 %th_eff = select i1 %tmp, i8 %xor_ln616, i8 16
 
 ]]></Node>
 <StgValue><ssdm name="th_eff"/></StgValue>
@@ -698,25 +698,25 @@ entry:38 %ret_ln276 = ret
 </dataflow>
 <dataflow id="74" from="StgValue_66" to="lb1_7" fromId="66" toId="15">
 </dataflow>
-<dataflow id="75" from="h0_read" to="add_ln609" fromId="5" toId="16">
+<dataflow id="75" from="h0_read" to="add_ln616" fromId="5" toId="16">
 </dataflow>
-<dataflow id="77" from="StgValue_76" to="add_ln609" fromId="76" toId="16">
+<dataflow id="77" from="StgValue_76" to="add_ln616" fromId="76" toId="16">
 </dataflow>
 <dataflow id="79" from="_ssdm_op_BitSelect.i1.i9.i32" to="tmp" fromId="78" toId="17">
 </dataflow>
-<dataflow id="80" from="add_ln609" to="tmp" fromId="16" toId="17">
+<dataflow id="80" from="add_ln616" to="tmp" fromId="16" toId="17">
 </dataflow>
 <dataflow id="82" from="StgValue_81" to="tmp" fromId="81" toId="17">
 </dataflow>
-<dataflow id="83" from="h0_read" to="trunc_ln608" fromId="5" toId="18">
+<dataflow id="83" from="h0_read" to="trunc_ln615" fromId="5" toId="18">
 </dataflow>
-<dataflow id="84" from="trunc_ln608" to="xor_ln609" fromId="18" toId="19">
+<dataflow id="84" from="trunc_ln615" to="xor_ln616" fromId="18" toId="19">
 </dataflow>
-<dataflow id="86" from="StgValue_85" to="xor_ln609" fromId="85" toId="19">
+<dataflow id="86" from="StgValue_85" to="xor_ln616" fromId="85" toId="19">
 </dataflow>
 <dataflow id="87" from="tmp" to="th_eff" fromId="17" toId="20">
 </dataflow>
-<dataflow id="88" from="xor_ln609" to="th_eff" fromId="19" toId="20">
+<dataflow id="88" from="xor_ln616" to="th_eff" fromId="19" toId="20">
 </dataflow>
 <dataflow id="90" from="StgValue_89" to="th_eff" fromId="89" toId="20">
 </dataflow>

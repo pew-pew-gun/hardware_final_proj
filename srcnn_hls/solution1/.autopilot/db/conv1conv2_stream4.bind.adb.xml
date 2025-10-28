@@ -385,10 +385,10 @@ entry:19 %call_ln277 = call void @conv1conv2_from_windows8, i1297 %s_win_i, i512
 
 <Node id="212" bw="0">
 <![CDATA[
-entry:20 %ret_ln630 = ret
+entry:20 %ret_ln637 = ret
 
 ]]></Node>
-<StgValue><ssdm name="ret_ln630"/></StgValue>
+<StgValue><ssdm name="ret_ln637"/></StgValue>
 </operation>
 </state>
 </state_list>

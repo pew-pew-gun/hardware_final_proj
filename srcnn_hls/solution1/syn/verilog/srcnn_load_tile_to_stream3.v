@@ -265,10 +265,10 @@ reg   [8:0] px_reg_255;
 wire  signed [63:0] sext_ln86_fu_557_p1;
 reg   [8:0] py_fu_184;
 wire   [31:0] grp_fu_266_p0;
-wire   [8:0] add_ln609_fu_269_p2;
-wire   [7:0] trunc_ln608_fu_283_p1;
+wire   [8:0] add_ln616_fu_269_p2;
+wire   [7:0] trunc_ln615_fu_283_p1;
 wire   [0:0] tmp_fu_275_p3;
-wire   [7:0] xor_ln609_fu_287_p2;
+wire   [7:0] xor_ln616_fu_287_p2;
 wire   [7:0] th_eff_fu_293_p3;
 wire   [8:0] th_eff_cast_fu_309_p1;
 wire   [9:0] h0_cast4_i_fu_305_p1;
@@ -789,7 +789,7 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln609_fu_269_p2 = (h0 + 9'd16);
+assign add_ln616_fu_269_p2 = (h0 + 9'd16);
 
 assign add_ln76_1_fu_343_p2 = (p_read_cast_fu_339_p1 + 9'd12);
 
@@ -1101,7 +1101,7 @@ assign sub_ln86_fu_448_p2 = (zext_ln86_fu_432_p1 - zext_ln86_1_fu_444_p1);
 
 assign th_eff_cast_fu_309_p1 = th_eff_fu_293_p3;
 
-assign th_eff_fu_293_p3 = ((tmp_fu_275_p3[0:0] == 1'b1) ? xor_ln609_fu_287_p2 : 8'd16);
+assign th_eff_fu_293_p3 = ((tmp_fu_275_p3[0:0] == 1'b1) ? xor_ln616_fu_287_p2 : 8'd16);
 
 assign tmp_73_fu_390_p3 = iy_fu_380_p2[32'd10];
 
@@ -1125,13 +1125,13 @@ assign tmp_82_fu_823_p3 = add_ln86_6_fu_801_p2[32'd11];
 
 assign tmp_83_fu_897_p3 = add_ln86_7_fu_811_p2[32'd11];
 
-assign tmp_fu_275_p3 = add_ln609_fu_269_p2[32'd8];
+assign tmp_fu_275_p3 = add_ln616_fu_269_p2[32'd8];
 
 assign tmp_i_fu_591_p4 = {{bitcast_ln724_fu_575_p1[62:52]}};
 
 assign tobool_i_i_fu_843_p3 = select_ln86_fu_627_p3[sext_ln86_4_fu_807_p1];
 
-assign trunc_ln608_fu_283_p1 = h0[7:0];
+assign trunc_ln615_fu_283_p1 = h0[7:0];
 
 assign trunc_ln77_fu_406_p1 = iy_1_fu_398_p3[7:0];
 
@@ -1159,7 +1159,7 @@ assign w0_c_din = w0;
 
 assign w0_cast_fu_301_p1 = w0;
 
-assign xor_ln609_fu_287_p2 = (trunc_ln608_fu_283_p1 ^ 8'd255);
+assign xor_ln616_fu_287_p2 = (trunc_ln615_fu_283_p1 ^ 8'd255);
 
 assign xor_ln86_1_fu_1106_p2 = (icmp_ln86_2_reg_1384 ^ 1'd1);
 

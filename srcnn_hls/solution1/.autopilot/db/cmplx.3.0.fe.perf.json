@@ -1,9 +1,9 @@
 {
   "0": {
     "basicblocks": 475,
-    "calls": "3 6 2 4",
+    "calls": "4 3 6 5",
     "file": "srcnn.cpp",
-    "fileloc": 423,
+    "fileloc": 428,
     "instructions": 2355,
     "loads": {
       "G": 1,
@@ -32,43 +32,6 @@
     "total_instructions": 7435
   },
   "2": {
-    "basicblocks": 330,
-    "calls": "",
-    "file": "srcnn.cpp",
-    "fileloc": 285,
-    "instructions": 9856,
-    "loads": {
-      "G": 161,
-      "L": 128
-    },
-    "name": "conv3_stream",
-    "stores": {
-      "L": 128
-    },
-    "total_instructions": 10048
-  },
-  "3": {
-    "basicblocks": 37,
-    "calls": "",
-    "file": "srcnn.cpp",
-    "fileloc": 64,
-    "instructions": 181,
-    "loads": {
-      "L": 1
-    },
-    "name": "load_tile_to_stream",
-    "total_instructions": 181
-  },
-  "4": {
-    "basicblocks": 17,
-    "calls": "",
-    "file": "srcnn.cpp",
-    "fileloc": 405,
-    "instructions": 88,
-    "name": "store_stream",
-    "total_instructions": 88
-  },
-  "5": {
     "basicblocks": 6,
     "calls": "",
     "file": "srcnn.cpp",
@@ -83,13 +46,50 @@
     },
     "total_instructions": 822
   },
-  "6": {
+  "3": {
     "basicblocks": 1,
-    "calls": "5 1",
+    "calls": "2 1",
     "file": "srcnn.cpp",
     "fileloc": 263,
     "instructions": 6,
     "name": "conv1conv2_stream",
     "total_instructions": 8263
+  },
+  "4": {
+    "basicblocks": 37,
+    "calls": "",
+    "file": "srcnn.cpp",
+    "fileloc": 64,
+    "instructions": 181,
+    "loads": {
+      "L": 1
+    },
+    "name": "load_tile_to_stream",
+    "total_instructions": 181
+  },
+  "5": {
+    "basicblocks": 17,
+    "calls": "",
+    "file": "srcnn.cpp",
+    "fileloc": 410,
+    "instructions": 88,
+    "name": "store_stream",
+    "total_instructions": 88
+  },
+  "6": {
+    "basicblocks": 330,
+    "calls": "",
+    "file": "srcnn.cpp",
+    "fileloc": 285,
+    "instructions": 9856,
+    "loads": {
+      "G": 161,
+      "L": 128
+    },
+    "name": "conv3_stream",
+    "stores": {
+      "L": 128
+    },
+    "total_instructions": 10048
   }
 }

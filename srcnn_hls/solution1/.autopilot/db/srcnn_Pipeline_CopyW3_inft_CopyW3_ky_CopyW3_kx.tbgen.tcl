@@ -16,7 +16,7 @@ set C_modelName {srcnn_Pipeline_CopyW3_inft_CopyW3_ky_CopyW3_kx}
 set C_modelType { void 0 }
 set C_modelArgList {
 	{ gmem_w3 int 32 regular {axi_master 0}  }
-	{ sext_ln579 int 62 regular  }
+	{ sext_ln586 int 62 regular  }
 	{ p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_bE6w3_loc_0_0 int 16 regular {array 20 { 3 0 } 0 1 stable  } {global 1}  }
 	{ p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_bE6w3_loc_0_1 int 16 regular {array 20 { 3 0 } 0 1 stable  } {global 1}  }
 	{ p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_bE6w3_loc_0_2 int 16 regular {array 20 { 3 0 } 0 1 stable  } {global 1}  }
@@ -61,7 +61,7 @@ set C_modelArgList {
 set hasAXIMCache 0
 set C_modelArgMapList {[ 
 	{ "Name" : "gmem_w3", "interface" : "axi_master", "bitwidth" : 32, "direction" : "READONLY", "bitSlice":[ {"cElement": [{"cName": "conv3_weights","offset": { "type": "dynamic","port_name": "conv3_weights","bundle": "ctrl"},"direction": "READONLY"},{"cName": "conv3_biases","offset": { "type": "dynamic","port_name": "conv3_biases","bundle": "ctrl"},"direction": "READONLY"}]}]} , 
- 	{ "Name" : "sext_ln579", "interface" : "wire", "bitwidth" : 62, "direction" : "READONLY"} , 
+ 	{ "Name" : "sext_ln586", "interface" : "wire", "bitwidth" : 62, "direction" : "READONLY"} , 
  	{ "Name" : "p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_bE6w3_loc_0_0", "interface" : "memory", "bitwidth" : 16, "direction" : "WRITEONLY", "extern" : 0} , 
  	{ "Name" : "p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_bE6w3_loc_0_1", "interface" : "memory", "bitwidth" : 16, "direction" : "WRITEONLY", "extern" : 0} , 
  	{ "Name" : "p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_bE6w3_loc_0_2", "interface" : "memory", "bitwidth" : 16, "direction" : "WRITEONLY", "extern" : 0} , 
@@ -157,7 +157,7 @@ set portList {
 	{ m_axi_gmem_w3_BRESP sc_in sc_lv 2 signal 0 } 
 	{ m_axi_gmem_w3_BID sc_in sc_lv 1 signal 0 } 
 	{ m_axi_gmem_w3_BUSER sc_in sc_lv 1 signal 0 } 
-	{ sext_ln579 sc_in sc_lv 62 signal 1 } 
+	{ sext_ln586 sc_in sc_lv 62 signal 1 } 
 	{ p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_bE6w3_loc_0_0_address1 sc_out sc_lv 5 signal 2 } 
 	{ p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_bE6w3_loc_0_0_ce1 sc_out sc_logic 1 signal 2 } 
 	{ p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_bE6w3_loc_0_0_we1 sc_out sc_logic 1 signal 2 } 
@@ -375,7 +375,7 @@ set NewPortList {[
  	{ "name": "m_axi_gmem_w3_BRESP", "direction": "in", "datatype": "sc_lv", "bitwidth":2, "type": "signal", "bundle":{"name": "gmem_w3", "role": "BRESP" }} , 
  	{ "name": "m_axi_gmem_w3_BID", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "gmem_w3", "role": "BID" }} , 
  	{ "name": "m_axi_gmem_w3_BUSER", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "gmem_w3", "role": "BUSER" }} , 
- 	{ "name": "sext_ln579", "direction": "in", "datatype": "sc_lv", "bitwidth":62, "type": "signal", "bundle":{"name": "sext_ln579", "role": "default" }} , 
+ 	{ "name": "sext_ln586", "direction": "in", "datatype": "sc_lv", "bitwidth":62, "type": "signal", "bundle":{"name": "sext_ln586", "role": "default" }} , 
  	{ "name": "p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_bE6w3_loc_0_0_address1", "direction": "out", "datatype": "sc_lv", "bitwidth":5, "type": "signal", "bundle":{"name": "p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_bE6w3_loc_0_0", "role": "address1" }} , 
  	{ "name": "p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_bE6w3_loc_0_0_ce1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_bE6w3_loc_0_0", "role": "ce1" }} , 
  	{ "name": "p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_bE6w3_loc_0_0_we1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_bE6w3_loc_0_0", "role": "we1" }} , 
@@ -559,7 +559,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "gmem_w3", "Type" : "MAXI", "Direction" : "I",
 				"BlockSignal" : [
 					{"Name" : "gmem_w3_blk_n_R", "Type" : "RtlSignal"}]},
-			{"Name" : "sext_ln579", "Type" : "None", "Direction" : "I"},
+			{"Name" : "sext_ln586", "Type" : "None", "Direction" : "I"},
 			{"Name" : "p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_bE6w3_loc_0_0", "Type" : "Memory", "Direction" : "O"},
 			{"Name" : "p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_bE6w3_loc_0_1", "Type" : "Memory", "Direction" : "O"},
 			{"Name" : "p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_bE6w3_loc_0_2", "Type" : "Memory", "Direction" : "O"},
@@ -609,7 +609,7 @@ set RtlHierarchyInfo {[
 set ArgLastReadFirstWriteLatency {
 	srcnn_Pipeline_CopyW3_inft_CopyW3_ky_CopyW3_kx {
 		gmem_w3 {Type I LastRead 1 FirstWrite -1}
-		sext_ln579 {Type I LastRead 0 FirstWrite -1}
+		sext_ln586 {Type I LastRead 0 FirstWrite -1}
 		p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_bE6w3_loc_0_0 {Type O LastRead -1 FirstWrite 4}
 		p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_bE6w3_loc_0_1 {Type O LastRead -1 FirstWrite 4}
 		p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_bE6w3_loc_0_2 {Type O LastRead -1 FirstWrite 4}
@@ -664,7 +664,7 @@ set PipelineEnableSignalInfo {[
 
 set Spec2ImplPortList { 
 	 { m_axi {  { m_axi_gmem_w3_AWVALID VALID 1 1 }  { m_axi_gmem_w3_AWREADY READY 0 1 }  { m_axi_gmem_w3_AWADDR ADDR 1 64 }  { m_axi_gmem_w3_AWID ID 1 1 }  { m_axi_gmem_w3_AWLEN SIZE 1 32 }  { m_axi_gmem_w3_AWSIZE BURST 1 3 }  { m_axi_gmem_w3_AWBURST LOCK 1 2 }  { m_axi_gmem_w3_AWLOCK CACHE 1 2 }  { m_axi_gmem_w3_AWCACHE PROT 1 4 }  { m_axi_gmem_w3_AWPROT QOS 1 3 }  { m_axi_gmem_w3_AWQOS REGION 1 4 }  { m_axi_gmem_w3_AWREGION USER 1 4 }  { m_axi_gmem_w3_AWUSER DATA 1 1 }  { m_axi_gmem_w3_WVALID VALID 1 1 }  { m_axi_gmem_w3_WREADY READY 0 1 }  { m_axi_gmem_w3_WDATA FIFONUM 1 32 }  { m_axi_gmem_w3_WSTRB STRB 1 4 }  { m_axi_gmem_w3_WLAST LAST 1 1 }  { m_axi_gmem_w3_WID ID 1 1 }  { m_axi_gmem_w3_WUSER DATA 1 1 }  { m_axi_gmem_w3_ARVALID VALID 1 1 }  { m_axi_gmem_w3_ARREADY READY 0 1 }  { m_axi_gmem_w3_ARADDR ADDR 1 64 }  { m_axi_gmem_w3_ARID ID 1 1 }  { m_axi_gmem_w3_ARLEN SIZE 1 32 }  { m_axi_gmem_w3_ARSIZE BURST 1 3 }  { m_axi_gmem_w3_ARBURST LOCK 1 2 }  { m_axi_gmem_w3_ARLOCK CACHE 1 2 }  { m_axi_gmem_w3_ARCACHE PROT 1 4 }  { m_axi_gmem_w3_ARPROT QOS 1 3 }  { m_axi_gmem_w3_ARQOS REGION 1 4 }  { m_axi_gmem_w3_ARREGION USER 1 4 }  { m_axi_gmem_w3_ARUSER DATA 1 1 }  { m_axi_gmem_w3_RVALID VALID 0 1 }  { m_axi_gmem_w3_RREADY READY 1 1 }  { m_axi_gmem_w3_RDATA FIFONUM 0 32 }  { m_axi_gmem_w3_RLAST LAST 0 1 }  { m_axi_gmem_w3_RID ID 0 1 }  { m_axi_gmem_w3_RFIFONUM LEN 0 9 }  { m_axi_gmem_w3_RUSER DATA 0 1 }  { m_axi_gmem_w3_RRESP RESP 0 2 }  { m_axi_gmem_w3_BVALID VALID 0 1 }  { m_axi_gmem_w3_BREADY READY 1 1 }  { m_axi_gmem_w3_BRESP RESP 0 2 }  { m_axi_gmem_w3_BID ID 0 1 }  { m_axi_gmem_w3_BUSER DATA 0 1 } } }
-	sext_ln579 { ap_none {  { sext_ln579 in_data 0 62 } } }
+	sext_ln586 { ap_none {  { sext_ln586 in_data 0 62 } } }
 	p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_bE6w3_loc_0_0 { ap_memory {  { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_bE6w3_loc_0_0_address1 MemPortADDR2 1 5 }  { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_bE6w3_loc_0_0_ce1 MemPortCE2 1 1 }  { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_bE6w3_loc_0_0_we1 MemPortWE2 1 1 }  { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_bE6w3_loc_0_0_d1 MemPortDIN2 1 16 } } }
 	p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_bE6w3_loc_0_1 { ap_memory {  { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_bE6w3_loc_0_1_address1 MemPortADDR2 1 5 }  { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_bE6w3_loc_0_1_ce1 MemPortCE2 1 1 }  { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_bE6w3_loc_0_1_we1 MemPortWE2 1 1 }  { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_bE6w3_loc_0_1_d1 MemPortDIN2 1 16 } } }
 	p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_bE6w3_loc_0_2 { ap_memory {  { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_bE6w3_loc_0_2_address1 MemPortADDR2 1 5 }  { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_bE6w3_loc_0_2_ce1 MemPortCE2 1 1 }  { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_bE6w3_loc_0_2_we1 MemPortWE2 1 1 }  { p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_bE6w3_loc_0_2_d1 MemPortDIN2 1 16 } } }

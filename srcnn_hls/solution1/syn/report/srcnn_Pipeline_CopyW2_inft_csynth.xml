@@ -669,8 +669,8 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>zext_ln569_7</name>
-<Object>zext_ln569_7</Object>
+<name>zext_ln576_7</name>
+<Object>zext_ln576_7</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
@@ -680,8 +680,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>zext_ln559_1</name>
-<Object>zext_ln559_1</Object>
+<name>zext_ln566_1</name>
+<Object>zext_ln566_1</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
@@ -691,8 +691,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>sext_ln559</name>
-<Object>sext_ln559</Object>
+<name>sext_ln566</name>
+<Object>sext_ln566</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
@@ -702,8 +702,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>trunc_ln559_3</name>
-<Object>trunc_ln559_3</Object>
+<name>trunc_ln566_3</name>
+<Object>trunc_ln566_3</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>

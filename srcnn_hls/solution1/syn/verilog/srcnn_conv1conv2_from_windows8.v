@@ -1416,11 +1416,11 @@ wire    ap_CS_fsm_state11;
 wire    ap_CS_fsm_state12;
 wire    ap_CS_fsm_state7;
 wire    ap_CS_fsm_state15;
-wire   [8:0] add_ln609_fu_2018_p2;
-wire   [7:0] trunc_ln608_fu_2032_p1;
+wire   [8:0] add_ln616_fu_2018_p2;
+wire   [7:0] trunc_ln615_fu_2032_p1;
 wire   [0:0] tmp_fu_2024_p3;
-wire   [7:0] xor_ln609_fu_2036_p2;
-wire   [7:0] select_ln609_fu_2042_p3;
+wire   [7:0] xor_ln616_fu_2036_p2;
+wire   [7:0] select_ln616_fu_2042_p3;
 wire   [8:0] tw_eff_loc_i_load_cast_fu_2054_p1;
 wire   [8:0] add_ln200_1_fu_2058_p2;
 wire   [17:0] indvar_flatten_cast_fu_2460_p1;
@@ -3707,7 +3707,7 @@ assign add_ln200_1_fu_2058_p2 = (tw_eff_loc_i_load_cast_fu_2054_p1 + 9'd4);
 
 assign add_ln200_2_fu_2469_p2 = (indvar_flatten_fu_832 + 17'd1);
 
-assign add_ln609_fu_2018_p2 = (h0_dout + 9'd16);
+assign add_ln616_fu_2018_p2 = (h0_dout + 9'd16);
 
 assign ap_CS_fsm_state1 = ap_CS_fsm[32'd0];
 
@@ -3783,7 +3783,7 @@ assign grp_conv1conv2_from_windows8_Pipeline_Push_conv2pix_out_fu_2005_ap_start 
 
 assign grp_fu_3532_p0 = grp_fu_3532_p00;
 
-assign grp_fu_3532_p00 = select_ln609_fu_2042_p3;
+assign grp_fu_3532_p00 = select_ln616_fu_2042_p3;
 
 assign grp_fu_3532_p1 = 9'd4;
 
@@ -4121,7 +4121,7 @@ assign p_ZZ5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_bE6w1
 
 assign s_f2_i_din = {{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{outpix_q0}, {outpix_q1}}, {outpix_load_29_reg_5070}}, {outpix_load_28_reg_5065}}, {outpix_load_27_reg_5060}}, {outpix_load_26_reg_5055}}, {outpix_load_25_reg_5050}}, {outpix_load_24_reg_5045}}, {outpix_load_23_reg_5040}}, {outpix_load_22_reg_5035}}, {outpix_load_21_reg_5030}}, {outpix_load_20_reg_5025}}, {outpix_load_19_reg_5020}}, {outpix_load_18_reg_5015}}, {outpix_load_17_reg_5010}}, {outpix_load_16_reg_5005}}, {outpix_load_15_reg_5000}}, {outpix_load_14_reg_4995}}, {outpix_load_13_reg_4990}}, {outpix_load_12_reg_4985}}, {outpix_load_11_reg_4980}}, {outpix_load_10_reg_4975}}, {outpix_load_9_reg_4970}}, {outpix_load_8_reg_4965}}, {outpix_load_7_reg_4960}}, {outpix_load_6_reg_4955}}, {outpix_load_5_reg_4950}}, {outpix_load_4_reg_4945}}, {outpix_load_3_reg_4940}}, {outpix_load_2_reg_4935}}, {outpix_load_1_reg_4930}}, {outpix_load_reg_4925}};
 
-assign select_ln609_fu_2042_p3 = ((tmp_fu_2024_p3[0:0] == 1'b1) ? xor_ln609_fu_2036_p2 : 8'd16);
+assign select_ln616_fu_2042_p3 = ((tmp_fu_2024_p3[0:0] == 1'b1) ? xor_ln616_fu_2036_p2 : 8'd16);
 
 assign srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_1_address0 = grp_conv1conv2_from_windows8_Pipeline_Conv1_outftmaps_fu_1598_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_1_address0;
 
@@ -4155,14 +4155,14 @@ assign srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_address0 = grp_conv1
 
 assign srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_ce0 = grp_conv1conv2_from_windows8_Pipeline_Conv1_outftmaps_fu_1598_srcnn_float_255_255_float_1_9_9_float_float_64_1_1_f_ce0;
 
-assign tmp_fu_2024_p3 = add_ln609_fu_2018_p2[32'd8];
+assign tmp_fu_2024_p3 = add_ln616_fu_2018_p2[32'd8];
 
-assign trunc_ln608_fu_2032_p1 = h0_dout[7:0];
+assign trunc_ln615_fu_2032_p1 = h0_dout[7:0];
 
 assign tw_eff_loc_i_load_cast_fu_2054_p1 = tw_eff_loc_i_dout;
 
 assign w_a_fu_2480_p1 = s_win_i_dout[15:0];
 
-assign xor_ln609_fu_2036_p2 = (trunc_ln608_fu_2032_p1 ^ 8'd255);
+assign xor_ln616_fu_2036_p2 = (trunc_ln615_fu_2032_p1 ^ 8'd255);
 
 endmodule //srcnn_conv1conv2_from_windows8

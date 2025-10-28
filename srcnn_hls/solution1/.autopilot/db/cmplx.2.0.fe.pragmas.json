@@ -1,9 +1,9 @@
 {
   "0": {
     "basicblocks": 69,
-    "calls": "1 5 2 3",
+    "calls": "4 3 2 1",
     "file": "srcnn.cpp",
-    "fileloc": 423,
+    "fileloc": 428,
     "instructions": 302,
     "loads": {
       "G": 8,
@@ -17,16 +17,16 @@
     "total_instructions": 38025
   },
   "1": {
-    "basicblocks": 19,
+    "basicblocks": 28,
     "calls": "",
     "file": "srcnn.cpp",
-    "fileloc": 64,
-    "instructions": 58,
-    "loads": {
-      "L": 2
+    "fileloc": 410,
+    "instructions": 100,
+    "name": "store_stream",
+    "stores": {
+      "L": 1
     },
-    "name": "load_tile_to_stream",
-    "total_instructions": 298
+    "total_instructions": 100
   },
   "2": {
     "basicblocks": 8082,
@@ -45,18 +45,42 @@
     "total_instructions": 21369
   },
   "3": {
-    "basicblocks": 28,
-    "calls": "",
+    "basicblocks": 1,
+    "calls": "5 6",
     "file": "srcnn.cpp",
-    "fileloc": 405,
-    "instructions": 100,
-    "name": "store_stream",
-    "stores": {
-      "L": 1
-    },
-    "total_instructions": 100
+    "fileloc": 263,
+    "instructions": 12,
+    "name": "conv1conv2_stream",
+    "total_instructions": 14396
   },
   "4": {
+    "basicblocks": 19,
+    "calls": "",
+    "file": "srcnn.cpp",
+    "fileloc": 64,
+    "instructions": 58,
+    "loads": {
+      "L": 2
+    },
+    "name": "load_tile_to_stream",
+    "total_instructions": 298
+  },
+  "5": {
+    "basicblocks": 40,
+    "calls": "",
+    "file": "srcnn.cpp",
+    "fileloc": 92,
+    "instructions": 1005,
+    "loads": {
+      "L": 249
+    },
+    "name": "make_win9",
+    "stores": {
+      "L": 170
+    },
+    "total_instructions": 1005
+  },
+  "6": {
     "basicblocks": 5795,
     "calls": "",
     "file": "srcnn.cpp",
@@ -71,29 +95,5 @@
       "L": 272
     },
     "total_instructions": 13379
-  },
-  "5": {
-    "basicblocks": 1,
-    "calls": "6 4",
-    "file": "srcnn.cpp",
-    "fileloc": 263,
-    "instructions": 12,
-    "name": "conv1conv2_stream",
-    "total_instructions": 14396
-  },
-  "6": {
-    "basicblocks": 40,
-    "calls": "",
-    "file": "srcnn.cpp",
-    "fileloc": 92,
-    "instructions": 1005,
-    "loads": {
-      "L": 249
-    },
-    "name": "make_win9",
-    "stores": {
-      "L": 170
-    },
-    "total_instructions": 1005
   }
 }

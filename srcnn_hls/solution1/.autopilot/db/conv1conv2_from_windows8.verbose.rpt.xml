@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv1conv2_from_windows8'" level="0">
-<item name = "Date">Tue Oct 28 17:30:33 2025
+<item name = "Date">Tue Oct 28 18:17:34 2025
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -96,11 +96,11 @@
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
 <column name="add_ln200_1_fu_2058_p2">+, 0, 0, 16, 9, 3</column>
 <column name="add_ln200_2_fu_2469_p2">+, 0, 0, 24, 17, 1</column>
-<column name="add_ln609_fu_2018_p2">+, 0, 0, 16, 9, 5</column>
+<column name="add_ln616_fu_2018_p2">+, 0, 0, 16, 9, 5</column>
 <column name="icmp_ln200_fu_2464_p2">icmp, 0, 0, 25, 18, 18</column>
 <column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
-<column name="select_ln609_fu_2042_p3">select, 0, 0, 8, 1, 8</column>
-<column name="xor_ln609_fu_2036_p2">xor, 0, 0, 8, 8, 2</column>
+<column name="select_ln616_fu_2042_p3">select, 0, 0, 8, 1, 8</column>
+<column name="xor_ln616_fu_2036_p2">xor, 0, 0, 8, 8, 2</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
