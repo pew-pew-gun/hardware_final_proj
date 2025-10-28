@@ -1,58 +1,95 @@
 {
   "0": {
-    "basicblocks": 436,
-    "calls": "2 1 3 2 1 3",
+    "basicblocks": 475,
+    "calls": "3 6 2 4",
     "file": "srcnn.cpp",
-    "fileloc": 426,
-    "instructions": 4203,
+    "fileloc": 423,
+    "instructions": 2355,
     "loads": {
-      "G": 2081,
+      "G": 1,
       "T": 1
     },
     "name": "srcnn",
     "stores": {
-      "G": 309
+      "G": 227
     },
-    "total_instructions": 17045
+    "total_instructions": 20935
   },
   "1": {
-    "basicblocks": 320,
+    "basicblocks": 295,
     "calls": "",
     "file": "srcnn.cpp",
-    "fileloc": 69,
-    "instructions": 4653,
+    "fileloc": 181,
+    "instructions": 6706,
     "loads": {
-      "G": 313,
-      "L": 448
+      "G": 209,
+      "L": 72
     },
-    "name": "compute_tile",
+    "name": "conv1conv2_from_windows",
     "stores": {
-      "L": 512
+      "L": 48
     },
-    "total_instructions": 4653
+    "total_instructions": 7435
   },
   "2": {
-    "basicblocks": 848,
+    "basicblocks": 330,
     "calls": "",
     "file": "srcnn.cpp",
-    "fileloc": 29,
-    "instructions": 1724,
+    "fileloc": 285,
+    "instructions": 9856,
+    "loads": {
+      "G": 161,
+      "L": 128
+    },
+    "name": "conv3_stream",
+    "stores": {
+      "L": 128
+    },
+    "total_instructions": 10048
+  },
+  "3": {
+    "basicblocks": 37,
+    "calls": "",
+    "file": "srcnn.cpp",
+    "fileloc": 64,
+    "instructions": 181,
     "loads": {
       "L": 1
     },
-    "name": "load_tile_mm",
-    "stores": {
-      "L": 784
-    },
-    "total_instructions": 1724
+    "name": "load_tile_to_stream",
+    "total_instructions": 181
   },
-  "3": {
-    "basicblocks": 8,
+  "4": {
+    "basicblocks": 17,
     "calls": "",
     "file": "srcnn.cpp",
-    "fileloc": 404,
-    "instructions": 44,
-    "name": "store_tile_mm",
-    "total_instructions": 44
+    "fileloc": 405,
+    "instructions": 88,
+    "name": "store_stream",
+    "total_instructions": 88
+  },
+  "5": {
+    "basicblocks": 6,
+    "calls": "",
+    "file": "srcnn.cpp",
+    "fileloc": 92,
+    "instructions": 232,
+    "loads": {
+      "L": 8
+    },
+    "name": "make_win9",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 822
+  },
+  "6": {
+    "basicblocks": 1,
+    "calls": "5 1",
+    "file": "srcnn.cpp",
+    "fileloc": 263,
+    "instructions": 6,
+    "name": "conv1conv2_stream",
+    "total_instructions": 8263
   }
 }

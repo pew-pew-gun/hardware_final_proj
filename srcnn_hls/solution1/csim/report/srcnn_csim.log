@@ -1,4 +1,10 @@
 INFO: [SIM 2] *************** CSIM start ***************
 INFO: [SIM 4] CSIM will launch GCC as the compiler.
-   Compiling ../../../../src/srcnn.cpp in debug mode
+   Compiling ../../../../test/util.cpp in release mode
+   Compiling ../../../../test/tb_set14.cpp in release mode
+   Compiling ../../../../test/tb_conv1.cpp in release mode
+   Compiling ../../../../test/tb_srcnn.cpp in release mode
+   Compiling ../../../../test/csim.cpp in release mode
+   Compiling ../../../../src/conv1.cpp in release mode
+   Compiling ../../../../src/srcnn.cpp in release mode
    Generating csim.exe

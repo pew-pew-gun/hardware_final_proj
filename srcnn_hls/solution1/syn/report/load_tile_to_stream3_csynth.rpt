@@ -1,0 +1,351 @@
+
+
+================================================================
+== Vitis HLS Report for 'load_tile_to_stream3'
+================================================================
+* Date:           Tue Oct 28 17:30:16 2025
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        srcnn_hls
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xck26-sfvc784-2LV-c
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.300 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+---------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  |   Trip  |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  |  Count  | Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+---------+----------+
+        |- InputTileHread   |        ?|        ?|  2 ~ 3473|          -|          -|        ?|        no|
+        | + InputTileWread  |        0|     3471|        13|          -|          -|  0 ~ 267|        no|
+        +-------------------+---------+---------+----------+-----------+-----------+---------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|    2131|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|       -|       -|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|     146|    -|
+|Register         |        -|     -|     321|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|     321|    2277|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |      288|  1248|  234240|  117120|   64|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|       1|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +-------------------------------+--------------------------+---------+----+---+----+-----+
+    |            Instance           |          Module          | BRAM_18K| DSP| FF| LUT| URAM|
+    +-------------------------------+--------------------------+---------+----+---+----+-----+
+    |fpext_32ns_64_2_no_dsp_1_U147  |fpext_32ns_64_2_no_dsp_1  |        0|   0|  0|   0|    0|
+    +-------------------------------+--------------------------+---------+----+---+----+-----+
+    |Total                          |                          |        0|   0|  0|   0|    0|
+    +-------------------------------+--------------------------+---------+----+---+----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------+----------+----+---+-----+------------+------------+
+    |       Variable Name       | Operation| DSP| FF| LUT | Bitwidth P0| Bitwidth P1|
+    +---------------------------+----------+----+---+-----+------------+------------+
+    |add_ln609_fu_269_p2        |         +|   0|  0|   16|           9|           5|
+    |add_ln76_1_fu_343_p2       |         +|   0|  0|   16|           9|           4|
+    |add_ln76_fu_313_p2         |         +|   0|  0|   16|           9|           4|
+    |add_ln77_2_fu_385_p2       |         +|   0|  0|   17|          10|          10|
+    |add_ln77_fu_319_p2         |         +|   0|  0|   17|          10|           4|
+    |add_ln83_2_fu_482_p2       |         +|   0|  0|   17|          10|          10|
+    |add_ln83_fu_329_p2         |         +|   0|  0|   16|           9|           4|
+    |add_ln86_1_fu_542_p2       |         +|   0|  0|   71|          64|          64|
+    |add_ln86_2_fu_657_p2       |         +|   0|  0|   19|          12|           5|
+    |add_ln86_3_fu_709_p2       |         +|   0|  0|   18|          11|           5|
+    |add_ln86_4_fu_747_p2       |         +|   0|  0|   19|          12|           6|
+    |add_ln86_5_fu_1080_p2      |         +|   0|  0|   23|          16|          16|
+    |add_ln86_6_fu_801_p2       |         +|   0|  0|   19|          12|           2|
+    |add_ln86_7_fu_811_p2       |         +|   0|  0|   19|          12|           2|
+    |add_ln86_8_fu_869_p2       |         +|   0|  0|   13|           6|           2|
+    |add_ln86_fu_533_p2         |         +|   0|  0|   27|          20|          20|
+    |ix_fu_477_p2               |         +|   0|  0|   18|          11|          11|
+    |iy_fu_380_p2               |         +|   0|  0|   18|          11|          11|
+    |px_1_fu_467_p2             |         +|   0|  0|   16|           9|           1|
+    |py_2_fu_370_p2             |         +|   0|  0|   16|           9|           1|
+    |sub_ln86_1_fu_621_p2       |         -|   0|  0|   61|           1|          54|
+    |sub_ln86_2_fu_641_p2       |         -|   0|  0|   19|          11|          12|
+    |sub_ln86_3_fu_663_p2       |         -|   0|  0|   19|           4|          12|
+    |sub_ln86_4_fu_759_p2       |         -|   0|  0|   13|           3|           6|
+    |sub_ln86_fu_448_p2         |         -|   0|  0|   26|          19|          19|
+    |and_ln86_10_fu_851_p2      |       and|   0|  0|    2|           1|           1|
+    |and_ln86_11_fu_1178_p2     |       and|   0|  0|    2|           1|           1|
+    |and_ln86_12_fu_1184_p2     |       and|   0|  0|    2|           1|           1|
+    |and_ln86_13_fu_1189_p2     |       and|   0|  0|    2|           1|           1|
+    |and_ln86_14_fu_1193_p2     |       and|   0|  0|    2|           1|           1|
+    |and_ln86_15_fu_1213_p2     |       and|   0|  0|    2|           1|           1|
+    |and_ln86_16_fu_783_p2      |       and|   0|  0|   54|          54|          54|
+    |and_ln86_1_fu_1052_p2      |       and|   0|  0|    2|           1|           1|
+    |and_ln86_2_fu_919_p2       |       and|   0|  0|    2|           1|           1|
+    |and_ln86_3_fu_925_p2       |       and|   0|  0|    2|           1|           1|
+    |and_ln86_4_fu_943_p2       |       and|   0|  0|    2|           1|           1|
+    |and_ln86_5_fu_1162_p2      |       and|   0|  0|    2|           1|           1|
+    |and_ln86_6_fu_1111_p2      |       and|   0|  0|    2|           1|           1|
+    |and_ln86_7_fu_1124_p2      |       and|   0|  0|    2|           1|           1|
+    |and_ln86_8_fu_1136_p2      |       and|   0|  0|    2|           1|           1|
+    |and_ln86_9_fu_1142_p2      |       and|   0|  0|    2|           1|           1|
+    |and_ln86_fu_1070_p2        |       and|   0|  0|    2|           1|           1|
+    |ashr_ln86_fu_1017_p2       |      ashr|   0|  0|  159|          54|          54|
+    |icmp_ln76_fu_365_p2        |      icmp|   0|  0|   16|           9|           9|
+    |icmp_ln79_fu_410_p2        |      icmp|   0|  0|   17|          10|           8|
+    |icmp_ln82_fu_462_p2        |      icmp|   0|  0|   16|           9|           9|
+    |icmp_ln85_fu_503_p2        |      icmp|   0|  0|   17|          10|           8|
+    |icmp_ln86_10_fu_817_p2     |      icmp|   0|  0|   19|          12|           6|
+    |icmp_ln86_11_fu_837_p2     |      icmp|   0|  0|   19|          12|           6|
+    |icmp_ln86_12_fu_857_p2     |      icmp|   0|  0|   19|          12|           6|
+    |icmp_ln86_13_fu_863_p2     |      icmp|   0|  0|   19|          12|           6|
+    |icmp_ln86_14_fu_891_p2     |      icmp|   0|  0|   61|          54|          54|
+    |icmp_ln86_15_fu_937_p2     |      icmp|   0|  0|   61|          54|           1|
+    |icmp_ln86_16_fu_949_p2     |      icmp|   0|  0|   19|          12|           6|
+    |icmp_ln86_1_fu_651_p2      |      icmp|   0|  0|   19|          12|           4|
+    |icmp_ln86_2_fu_677_p2      |      icmp|   0|  0|   19|          12|           4|
+    |icmp_ln86_3_fu_990_p2      |      icmp|   0|  0|   19|          12|           6|
+    |icmp_ln86_4_fu_687_p2      |      icmp|   0|  0|   19|          12|           6|
+    |icmp_ln86_5_fu_703_p2      |      icmp|   0|  0|   15|           8|           1|
+    |icmp_ln86_6_fu_737_p2      |      icmp|   0|  0|   15|           8|           1|
+    |icmp_ln86_7_fu_753_p2      |      icmp|   0|  0|   19|          12|           6|
+    |icmp_ln86_8_fu_789_p2      |      icmp|   0|  0|   61|          54|           1|
+    |icmp_ln86_9_fu_795_p2      |      icmp|   0|  0|   19|          12|           4|
+    |icmp_ln86_fu_635_p2        |      icmp|   0|  0|   70|          63|           1|
+    |lshr_ln86_1_fu_885_p2      |      lshr|   0|  0|  159|           2|          54|
+    |lshr_ln86_2_fu_777_p2      |      lshr|   0|  0|  159|           2|          54|
+    |lshr_ln86_fu_879_p2        |      lshr|   0|  0|  159|          54|          54|
+    |ap_block_state1            |        or|   0|  0|    2|           1|           1|
+    |or_ln86_1_fu_1244_p2       |        or|   0|  0|    2|           1|           1|
+    |or_ln86_2_fu_1227_p2       |        or|   0|  0|    2|           1|           1|
+    |or_ln86_3_fu_1233_p2       |        or|   0|  0|    2|           1|           1|
+    |or_ln86_fu_1064_p2         |        or|   0|  0|    2|           1|           1|
+    |ix_1_fu_495_p3             |    select|   0|  0|   10|           1|           1|
+    |iy_1_fu_398_p3             |    select|   0|  0|   10|           1|           1|
+    |iy_2_fu_416_p3             |    select|   0|  0|    8|           1|           3|
+    |s_pix_i_din                |    select|   0|  0|   16|           1|           1|
+    |select_ln85_fu_513_p3      |    select|   0|  0|    8|           1|           3|
+    |select_ln86_10_fu_1116_p3  |    select|   0|  0|   16|           1|          16|
+    |select_ln86_11_fu_1128_p3  |    select|   0|  0|   16|           1|          16|
+    |select_ln86_12_fu_911_p3   |    select|   0|  0|    2|           1|           1|
+    |select_ln86_13_fu_971_p3   |    select|   0|  0|    2|           1|           1|
+    |select_ln86_14_fu_979_p3   |    select|   0|  0|    2|           1|           1|
+    |select_ln86_15_fu_1199_p3  |    select|   0|  0|    2|           1|           1|
+    |select_ln86_16_fu_1219_p3  |    select|   0|  0|    2|           1|           1|
+    |select_ln86_18_fu_765_p3   |    select|   0|  0|    6|           1|           1|
+    |select_ln86_19_fu_1250_p3  |    select|   0|  0|    2|           1|           2|
+    |select_ln86_1_fu_669_p3    |    select|   0|  0|   11|           1|          12|
+    |select_ln86_2_fu_1026_p3   |    select|   0|  0|   16|           1|          16|
+    |select_ln86_3_fu_1002_p3   |    select|   0|  0|    2|           1|           2|
+    |select_ln86_4_fu_955_p3    |    select|   0|  0|    2|           1|           1|
+    |select_ln86_5_fu_963_p3    |    select|   0|  0|    2|           1|           1|
+    |select_ln86_6_fu_1156_p3   |    select|   0|  0|    2|           1|           1|
+    |select_ln86_7_fu_1258_p3   |    select|   0|  0|   16|           1|          16|
+    |select_ln86_8_fu_1047_p3   |    select|   0|  0|    2|           1|           1|
+    |select_ln86_9_fu_1100_p3   |    select|   0|  0|   16|           1|          16|
+    |select_ln86_fu_627_p3      |    select|   0|  0|   52|           1|          54|
+    |th_eff_fu_293_p3           |    select|   0|  0|    8|           1|           8|
+    |shl_ln86_fu_1042_p2        |       shl|   0|  0|   35|          16|          16|
+    |xor_ln609_fu_287_p2        |       xor|   0|  0|    8|           8|           2|
+    |xor_ln86_1_fu_1106_p2      |       xor|   0|  0|    2|           1|           2|
+    |xor_ln86_2_fu_1167_p2      |       xor|   0|  0|    2|           2|           1|
+    |xor_ln86_3_fu_1173_p2      |       xor|   0|  0|    2|           1|           2|
+    |xor_ln86_4_fu_1207_p2      |       xor|   0|  0|    2|           1|           2|
+    |xor_ln86_5_fu_1238_p2      |       xor|   0|  0|    2|           1|           2|
+    |xor_ln86_6_fu_1094_p2      |       xor|   0|  0|    2|           1|           2|
+    |xor_ln86_7_fu_831_p2       |       xor|   0|  0|    2|           1|           2|
+    |xor_ln86_8_fu_905_p2       |       xor|   0|  0|    2|           1|           2|
+    |xor_ln86_fu_931_p2         |       xor|   0|  0|    2|           2|           1|
+    +---------------------------+----------+----+---+-----+------------+------------+
+    |Total                      |          |   0|  0| 2131|         967|         945|
+    +---------------------------+----------+----+---+-----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------+----+-----------+-----+-----------+
+    |          Name         | LUT| Input Size| Bits| Total Bits|
+    +-----------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm              |  65|         16|    1|         16|
+    |ap_done                |   9|          2|    1|          2|
+    |gmem_in_blk_n_AR       |   9|          2|    1|          2|
+    |gmem_in_blk_n_R        |   9|          2|    1|          2|
+    |h0_c5_blk_n            |   9|          2|    1|          2|
+    |px_reg_255             |   9|          2|    9|         18|
+    |py_fu_184              |   9|          2|    9|         18|
+    |s_pix_i_blk_n          |   9|          2|    1|          2|
+    |tw_eff_loc_i_c2_blk_n  |   9|          2|    1|          2|
+    |w0_c_blk_n             |   9|          2|    1|          2|
+    +-----------------------+----+-----------+-----+-----------+
+    |Total                  | 146|         34|   26|         66|
+    +-----------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------+----+----+-----+-----------+
+    |            Name            | FF | LUT| Bits| Const Bits|
+    +----------------------------+----+----+-----+-----------+
+    |add_ln76_1_reg_1306         |   9|   0|    9|          0|
+    |add_ln76_reg_1286           |   9|   0|    9|          0|
+    |add_ln77_reg_1291           |  10|   0|   10|          0|
+    |ap_CS_fsm                   |  15|   0|   15|          0|
+    |ap_done_reg                 |   1|   0|    1|          0|
+    |bit_select59_i_i_reg_1406   |   1|   0|    1|          0|
+    |gmem_in_addr_read_reg_1343  |  32|   0|   32|          0|
+    |gmem_in_addr_reg_1337       |  64|   0|   64|          0|
+    |icmp_ln86_10_reg_1426       |   1|   0|    1|          0|
+    |icmp_ln86_1_reg_1372        |   1|   0|    1|          0|
+    |icmp_ln86_2_reg_1384        |   1|   0|    1|          0|
+    |icmp_ln86_4_reg_1396        |   1|   0|    1|          0|
+    |icmp_ln86_5_reg_1401        |   1|   0|    1|          0|
+    |icmp_ln86_6_reg_1411        |   1|   0|    1|          0|
+    |icmp_ln86_8_reg_1416        |   1|   0|    1|          0|
+    |icmp_ln86_9_reg_1421        |   1|   0|    1|          0|
+    |icmp_ln86_reg_1367          |   1|   0|    1|          0|
+    |px_1_reg_1332               |   9|   0|    9|          0|
+    |px_reg_255                  |   9|   0|    9|          0|
+    |py_2_reg_1319               |   9|   0|    9|          0|
+    |py_fu_184                   |   9|   0|    9|          0|
+    |select_ln86_13_reg_1432     |   1|   0|    1|          0|
+    |select_ln86_14_reg_1438     |   1|   0|    1|          0|
+    |select_ln86_1_reg_1377      |  12|   0|   12|          0|
+    |select_ln86_reg_1362        |  54|   0|   54|          0|
+    |sext_ln76_reg_1301          |  11|   0|   11|          0|
+    |sext_ln77_reg_1296          |  11|   0|   11|          0|
+    |sext_ln82_reg_1324          |  18|   0|   20|          2|
+    |sext_ln83_reg_1311          |  10|   0|   10|          0|
+    |tmp_75_reg_1354             |   1|   0|    1|          0|
+    |trunc_ln86_4_reg_1390       |  16|   0|   16|          0|
+    +----------------------------+----+----+-----+-----------+
+    |Total                       | 321|   0|  323|          2|
+    +----------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------------+-----+-----+------------+----------------------+--------------+
+|            RTL Ports           | Dir | Bits|  Protocol  |     Source Object    |    C Type    |
++--------------------------------+-----+-----+------------+----------------------+--------------+
+|ap_clk                          |   in|    1|  ap_ctrl_hs|  load_tile_to_stream3|  return value|
+|ap_rst                          |   in|    1|  ap_ctrl_hs|  load_tile_to_stream3|  return value|
+|ap_start                        |   in|    1|  ap_ctrl_hs|  load_tile_to_stream3|  return value|
+|ap_done                         |  out|    1|  ap_ctrl_hs|  load_tile_to_stream3|  return value|
+|ap_continue                     |   in|    1|  ap_ctrl_hs|  load_tile_to_stream3|  return value|
+|ap_idle                         |  out|    1|  ap_ctrl_hs|  load_tile_to_stream3|  return value|
+|ap_ready                        |  out|    1|  ap_ctrl_hs|  load_tile_to_stream3|  return value|
+|m_axi_gmem_in_AWVALID           |  out|    1|       m_axi|               gmem_in|       pointer|
+|m_axi_gmem_in_AWREADY           |   in|    1|       m_axi|               gmem_in|       pointer|
+|m_axi_gmem_in_AWADDR            |  out|   64|       m_axi|               gmem_in|       pointer|
+|m_axi_gmem_in_AWID              |  out|    1|       m_axi|               gmem_in|       pointer|
+|m_axi_gmem_in_AWLEN             |  out|   32|       m_axi|               gmem_in|       pointer|
+|m_axi_gmem_in_AWSIZE            |  out|    3|       m_axi|               gmem_in|       pointer|
+|m_axi_gmem_in_AWBURST           |  out|    2|       m_axi|               gmem_in|       pointer|
+|m_axi_gmem_in_AWLOCK            |  out|    2|       m_axi|               gmem_in|       pointer|
+|m_axi_gmem_in_AWCACHE           |  out|    4|       m_axi|               gmem_in|       pointer|
+|m_axi_gmem_in_AWPROT            |  out|    3|       m_axi|               gmem_in|       pointer|
+|m_axi_gmem_in_AWQOS             |  out|    4|       m_axi|               gmem_in|       pointer|
+|m_axi_gmem_in_AWREGION          |  out|    4|       m_axi|               gmem_in|       pointer|
+|m_axi_gmem_in_AWUSER            |  out|    1|       m_axi|               gmem_in|       pointer|
+|m_axi_gmem_in_WVALID            |  out|    1|       m_axi|               gmem_in|       pointer|
+|m_axi_gmem_in_WREADY            |   in|    1|       m_axi|               gmem_in|       pointer|
+|m_axi_gmem_in_WDATA             |  out|   32|       m_axi|               gmem_in|       pointer|
+|m_axi_gmem_in_WSTRB             |  out|    4|       m_axi|               gmem_in|       pointer|
+|m_axi_gmem_in_WLAST             |  out|    1|       m_axi|               gmem_in|       pointer|
+|m_axi_gmem_in_WID               |  out|    1|       m_axi|               gmem_in|       pointer|
+|m_axi_gmem_in_WUSER             |  out|    1|       m_axi|               gmem_in|       pointer|
+|m_axi_gmem_in_ARVALID           |  out|    1|       m_axi|               gmem_in|       pointer|
+|m_axi_gmem_in_ARREADY           |   in|    1|       m_axi|               gmem_in|       pointer|
+|m_axi_gmem_in_ARADDR            |  out|   64|       m_axi|               gmem_in|       pointer|
+|m_axi_gmem_in_ARID              |  out|    1|       m_axi|               gmem_in|       pointer|
+|m_axi_gmem_in_ARLEN             |  out|   32|       m_axi|               gmem_in|       pointer|
+|m_axi_gmem_in_ARSIZE            |  out|    3|       m_axi|               gmem_in|       pointer|
+|m_axi_gmem_in_ARBURST           |  out|    2|       m_axi|               gmem_in|       pointer|
+|m_axi_gmem_in_ARLOCK            |  out|    2|       m_axi|               gmem_in|       pointer|
+|m_axi_gmem_in_ARCACHE           |  out|    4|       m_axi|               gmem_in|       pointer|
+|m_axi_gmem_in_ARPROT            |  out|    3|       m_axi|               gmem_in|       pointer|
+|m_axi_gmem_in_ARQOS             |  out|    4|       m_axi|               gmem_in|       pointer|
+|m_axi_gmem_in_ARREGION          |  out|    4|       m_axi|               gmem_in|       pointer|
+|m_axi_gmem_in_ARUSER            |  out|    1|       m_axi|               gmem_in|       pointer|
+|m_axi_gmem_in_RVALID            |   in|    1|       m_axi|               gmem_in|       pointer|
+|m_axi_gmem_in_RREADY            |  out|    1|       m_axi|               gmem_in|       pointer|
+|m_axi_gmem_in_RDATA             |   in|   32|       m_axi|               gmem_in|       pointer|
+|m_axi_gmem_in_RLAST             |   in|    1|       m_axi|               gmem_in|       pointer|
+|m_axi_gmem_in_RID               |   in|    1|       m_axi|               gmem_in|       pointer|
+|m_axi_gmem_in_RFIFONUM          |   in|    9|       m_axi|               gmem_in|       pointer|
+|m_axi_gmem_in_RUSER             |   in|    1|       m_axi|               gmem_in|       pointer|
+|m_axi_gmem_in_RRESP             |   in|    2|       m_axi|               gmem_in|       pointer|
+|m_axi_gmem_in_BVALID            |   in|    1|       m_axi|               gmem_in|       pointer|
+|m_axi_gmem_in_BREADY            |  out|    1|       m_axi|               gmem_in|       pointer|
+|m_axi_gmem_in_BRESP             |   in|    2|       m_axi|               gmem_in|       pointer|
+|m_axi_gmem_in_BID               |   in|    1|       m_axi|               gmem_in|       pointer|
+|m_axi_gmem_in_BUSER             |   in|    1|       m_axi|               gmem_in|       pointer|
+|input_ftmap                     |   in|   64|     ap_none|           input_ftmap|        scalar|
+|h0                              |   in|    9|     ap_none|                    h0|        scalar|
+|w0                              |   in|    8|     ap_none|                    w0|        scalar|
+|p_read                          |   in|    8|     ap_none|                p_read|        scalar|
+|s_pix_i_din                     |  out|   16|     ap_fifo|               s_pix_i|       pointer|
+|s_pix_i_num_data_valid          |   in|   11|     ap_fifo|               s_pix_i|       pointer|
+|s_pix_i_fifo_cap                |   in|   11|     ap_fifo|               s_pix_i|       pointer|
+|s_pix_i_full_n                  |   in|    1|     ap_fifo|               s_pix_i|       pointer|
+|s_pix_i_write                   |  out|    1|     ap_fifo|               s_pix_i|       pointer|
+|tw_eff_loc_i_c2_din             |  out|    8|     ap_fifo|       tw_eff_loc_i_c2|       pointer|
+|tw_eff_loc_i_c2_num_data_valid  |   in|    2|     ap_fifo|       tw_eff_loc_i_c2|       pointer|
+|tw_eff_loc_i_c2_fifo_cap        |   in|    2|     ap_fifo|       tw_eff_loc_i_c2|       pointer|
+|tw_eff_loc_i_c2_full_n          |   in|    1|     ap_fifo|       tw_eff_loc_i_c2|       pointer|
+|tw_eff_loc_i_c2_write           |  out|    1|     ap_fifo|       tw_eff_loc_i_c2|       pointer|
+|w0_c_din                        |  out|    8|     ap_fifo|                  w0_c|       pointer|
+|w0_c_num_data_valid             |   in|    3|     ap_fifo|                  w0_c|       pointer|
+|w0_c_fifo_cap                   |   in|    3|     ap_fifo|                  w0_c|       pointer|
+|w0_c_full_n                     |   in|    1|     ap_fifo|                  w0_c|       pointer|
+|w0_c_write                      |  out|    1|     ap_fifo|                  w0_c|       pointer|
+|h0_c5_din                       |  out|    9|     ap_fifo|                 h0_c5|       pointer|
+|h0_c5_num_data_valid            |   in|    2|     ap_fifo|                 h0_c5|       pointer|
+|h0_c5_fifo_cap                  |   in|    2|     ap_fifo|                 h0_c5|       pointer|
+|h0_c5_full_n                    |   in|    1|     ap_fifo|                 h0_c5|       pointer|
+|h0_c5_write                     |  out|    1|     ap_fifo|                 h0_c5|       pointer|
++--------------------------------+-----+-----+------------+----------------------+--------------+
+

@@ -350,8 +350,8 @@ class AESL_RUNTIME_BC {
     string mName;
 };
 using hls::sim::Byte;
-extern "C" void srcnn(Byte<4>*, Byte<4>*, Byte<4>*, Byte<4>*, Byte<4>*, int, int, int, int, int, int, int, int, int);
-extern "C" void apatb_srcnn_hw(volatile void * __xlx_apatb_param_input_ftmap, volatile void * __xlx_apatb_param_conv1_weights, volatile void * __xlx_apatb_param_conv1_biases, volatile void * __xlx_apatb_param_conv2_weights, volatile void * __xlx_apatb_param_conv2_biases, volatile void * __xlx_apatb_param_conv3_weights, volatile void * __xlx_apatb_param_conv3_biases, volatile void * __xlx_apatb_param_output_ftmap, int __xlx_apatb_param_reload_weights) {
+extern "C" void srcnn(Byte<4>*, Byte<4>*, Byte<4>*, Byte<4>*, Byte<4>*, int, int, int, int, int, int, int, int, char);
+extern "C" void apatb_srcnn_hw(volatile void * __xlx_apatb_param_input_ftmap, volatile void * __xlx_apatb_param_conv1_weights, volatile void * __xlx_apatb_param_conv1_biases, volatile void * __xlx_apatb_param_conv2_weights, volatile void * __xlx_apatb_param_conv2_biases, volatile void * __xlx_apatb_param_conv3_weights, volatile void * __xlx_apatb_param_conv3_biases, volatile void * __xlx_apatb_param_output_ftmap, char __xlx_apatb_param_reload_weights) {
 using hls::sim::createStream;
   // Collect __xlx_input_ftmap__tmp_vec
 std::vector<Byte<4>> __xlx_input_ftmap__tmp_vec;

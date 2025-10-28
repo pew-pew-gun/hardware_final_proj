@@ -1,73 +1,99 @@
 {
   "0": {
-    "basicblocks": 41,
-    "calls": "3 2 4",
+    "basicblocks": 69,
+    "calls": "1 5 2 3",
     "file": "srcnn.cpp",
-    "fileloc": 426,
-    "instructions": 197,
+    "fileloc": 423,
+    "instructions": 302,
     "loads": {
-      "G": 1,
+      "G": 8,
+      "L": 6,
       "T": 6
     },
     "name": "srcnn",
     "stores": {
-      "G": 7
+      "G": 14
     },
-    "total_instructions": 2906
+    "total_instructions": 38025
   },
   "1": {
-    "basicblocks": 7,
-    "calls": "",
-    "file": "srcnn.cpp",
-    "fileloc": 24,
-    "instructions": 11,
-    "name": "clampi",
-    "total_instructions": 11
-  },
-  "2": {
-    "basicblocks": 95,
-    "calls": "1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1",
-    "file": "srcnn.cpp",
-    "fileloc": 69,
-    "instructions": 2073,
-    "loads": {
-      "G": 51,
-      "L": 355
-    },
-    "name": "compute_tile",
-    "stores": {
-      "L": 310
-    },
-    "total_instructions": 2623
-  },
-  "3": {
     "basicblocks": 19,
     "calls": "",
     "file": "srcnn.cpp",
-    "fileloc": 29,
-    "instructions": 53,
+    "fileloc": 64,
+    "instructions": 58,
     "loads": {
-      "L": 1
+      "L": 2
     },
-    "name": "load_tile_mm",
-    "stores": {
-      "L": 1
-    },
-    "total_instructions": 53
+    "name": "load_tile_to_stream",
+    "total_instructions": 298
   },
-  "4": {
-    "basicblocks": 11,
+  "2": {
+    "basicblocks": 8082,
     "calls": "",
     "file": "srcnn.cpp",
-    "fileloc": 404,
-    "instructions": 33,
+    "fileloc": 285,
+    "instructions": 21369,
     "loads": {
-      "L": 1
+      "G": 163,
+      "L": 1024
     },
-    "name": "store_tile_mm",
+    "name": "conv3_stream",
+    "stores": {
+      "L": 928
+    },
+    "total_instructions": 21369
+  },
+  "3": {
+    "basicblocks": 28,
+    "calls": "",
+    "file": "srcnn.cpp",
+    "fileloc": 405,
+    "instructions": 100,
+    "name": "store_stream",
     "stores": {
       "L": 1
     },
-    "total_instructions": 33
+    "total_instructions": 100
+  },
+  "4": {
+    "basicblocks": 5795,
+    "calls": "",
+    "file": "srcnn.cpp",
+    "fileloc": 181,
+    "instructions": 13379,
+    "loads": {
+      "G": 140,
+      "L": 136
+    },
+    "name": "conv1conv2_from_windows",
+    "stores": {
+      "L": 272
+    },
+    "total_instructions": 13379
+  },
+  "5": {
+    "basicblocks": 1,
+    "calls": "6 4",
+    "file": "srcnn.cpp",
+    "fileloc": 263,
+    "instructions": 12,
+    "name": "conv1conv2_stream",
+    "total_instructions": 14396
+  },
+  "6": {
+    "basicblocks": 40,
+    "calls": "",
+    "file": "srcnn.cpp",
+    "fileloc": 92,
+    "instructions": 1005,
+    "loads": {
+      "L": 249
+    },
+    "name": "make_win9",
+    "stores": {
+      "L": 170
+    },
+    "total_instructions": 1005
   }
 }

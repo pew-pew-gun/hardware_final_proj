@@ -289,13 +289,13 @@ static void conv1conv2_stream(
    int h0, int w0, int th_eff, int tw_eff)
  {
  #pragma HLS INLINE off
- #pragma HLS PIPELINE II=TEST_II
+//  #pragma HLS PIPELINE II=TEST_II // WARNING: [SCHED 204-65] Unable to satisfy pipeline directive for function 'conv3_stream5': contains subloop(s) that are not unrolled.
  #pragma HLS STREAM variable=s_out depth=1024
    const int C2H = th_eff + 2*R3;
    const int C2W = tw_eff + 2*R3;
 
-#pragma HLS ALLOCATION instances=mul limit=32 operation
-#pragma HLS ALLOCATION instances=fmul limit=32 operation
+// #pragma HLS ALLOCATION instances=mul limit=32 operation
+// #pragma HLS ALLOCATION instances=fmul limit=32 operation
 
 
 
@@ -303,9 +303,8 @@ static void conv1conv2_stream(
    // line buffers: previous F3-1 rows of N2-vectors
 
    conv2_pixel_t lb2[F3-1][TW + 2*R3];
- //  #pragma HLS BIND_STORAGE    variable=lb2 type=ram_2p impl=bram
-
-   #pragma HLS ARRAY_PARTITION variable=lb2 complete dim=1
+   #pragma HLS BIND_STORAGE    variable=lb2 type=ram_2p impl=bram
+   #pragma HLS ARRAY_PARTITION variable=lb2 complete dim=1 // split the 4 rows
    // 5x5 window of N2-vectors in registers
    conv2_pixel_t win2[F3][F3];
    #pragma HLS ARRAY_PARTITION variable=win2 complete dim=0
@@ -315,6 +314,9 @@ static void conv1conv2_stream(
    // Read C2H*C2W pixels/the input from the stream:
    win5x5_read_pix:
    for (int t=0; t<C2H*C2W; ++t) {
+    /*********************************************** */
+    // #pragma HLS PIPELINE
+/******************************************************* */
      conv2_pixel_t v = s_f2.read();
      // shift 5x5 window left, insert rightmost column from lb2 + v
      Shift_win5x5_row:
@@ -358,23 +360,25 @@ static void conv1conv2_stream(
        Conv3_ky:
        for (int ky=0; ky<F3; ++ky) {
 //         #pragma HLS UNROLL
-#pragma HLS PIPELINE
+#pragma HLS PIPELINE // I changed this
          Conv3_kx:
          for (int kx=0; kx<F3; ++kx) {
            #pragma HLS UNROLL
            // accumulate dot( w3[0][_][ky][kx], win2[ky][kx].v[_] )
            Conv3_inv8_dot:
            for (int n2=0; n2<N2; n2 += UF_N2) { // for each bank in the w3 BRAM
-             #pragma HLS UNROLL
+            //  #pragma HLS UNROLL
+            #pragma HLS PIPELINE // I changed this
         	   acc3_t ps = 0;
              Conv3_inner_dot:
              for (int u=0; u<UF_N2; ++u) { // for each element in a bank in the w3 BRAM
                #pragma HLS UNROLL
                // Clamp window coordinates
-               int wy = clampi(ky, 3*R3-(h0+y), 3*R3-(h0+y)+H-1);
-               int wx = clampi(kx, 3*R3-(w0+x), 3*R3-(w0+x)+W-1);
+              //  int wy = clampi(ky, 3*R3-(h0+y), 3*R3-(h0+y)+H-1);
+              //  int wx = clampi(kx, 3*R3-(w0+x), 3*R3-(w0+x)+W-1);
+              //  ps += w3[0][n2+u][ky][kx] * win2[wy][wx].v[n2+u];
 
-               ps += w3[0][n2+u][ky][kx] * win2[wy][wx].v[n2+u];
+               ps += w3[0][n2+u][ky][kx] * win2[ky][kx].v[n2+u];
              }
              acc += ps;
            }
@@ -504,9 +508,10 @@ void srcnn(
 //  #pragma HLS ARRAY_PARTITION variable=w3_loc complete dim=4   // kx
 
 //  #pragma HLS BIND_STORAGE    variable=w3_loc type=ram_1p impl=bram
-//  #pragma HLS ARRAY_PARTITION variable=w3_loc cyclic factor=F1 dim=3   // ky
-  #pragma HLS ARRAY_PARTITION variable=w3_loc cyclic factor=F3 dim=4   // kx
-  #pragma HLS ARRAY_PARTITION variable=w3_loc cyclic factor=UF_N2 dim=2  // N2
+//  #pragma HLS ARRAY_PARTITION variable=w3_loc cyclic factor=F1 dim=3   // ky (no partition, pipeline)
+  #pragma HLS ARRAY_PARTITION variable=w3_loc cyclic factor=F3 dim=4   // kx banks: 5
+  #pragma HLS ARRAY_PARTITION variable=w3_loc cyclic factor=UF_N2 dim=2  // N2 banks: UF_N2 = 8
+// static weights_t w3_loc[N3][N2][F3][F3];    // conv3_weights
 
   // Biases: keep in regs/LUTRAM
   #pragma HLS ARRAY_PARTITION variable=b1_loc complete dim=1

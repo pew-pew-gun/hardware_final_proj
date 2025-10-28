@@ -1162,10 +1162,10 @@ namespace hls::sim
 
 
 extern "C"
-void srcnn_hw_stub_wrapper(void*, void*, void*, void*, void*, void*, void*, void*, hls::sim::Byte<4>);
+void srcnn_hw_stub_wrapper(void*, void*, void*, void*, void*, void*, void*, void*, hls::sim::Byte<1>);
 
 extern "C"
-void apatb_srcnn_hw(void* __xlx_apatb_param_input_ftmap, void* __xlx_apatb_param_conv1_weights, void* __xlx_apatb_param_conv1_biases, void* __xlx_apatb_param_conv2_weights, void* __xlx_apatb_param_conv2_biases, void* __xlx_apatb_param_conv3_weights, void* __xlx_apatb_param_conv3_biases, void* __xlx_apatb_param_output_ftmap, hls::sim::Byte<4> __xlx_apatb_param_reload_weights)
+void apatb_srcnn_hw(void* __xlx_apatb_param_input_ftmap, void* __xlx_apatb_param_conv1_weights, void* __xlx_apatb_param_conv1_biases, void* __xlx_apatb_param_conv2_weights, void* __xlx_apatb_param_conv2_biases, void* __xlx_apatb_param_conv3_weights, void* __xlx_apatb_param_conv3_biases, void* __xlx_apatb_param_output_ftmap, hls::sim::Byte<1> __xlx_apatb_param_reload_weights)
 {
   hls::sim::Byte<4> __xlx_offset_byte_param_input_ftmap;
   static hls::sim::Register port0 {
@@ -1265,7 +1265,7 @@ void apatb_srcnn_hw(void* __xlx_apatb_param_input_ftmap, void* __xlx_apatb_param
 
   static hls::sim::Register port8 {
     .name = "reload_weights",
-    .width = 32,
+    .width = 1,
 #ifdef POST_CHECK
 #else
     .owriter = nullptr,
